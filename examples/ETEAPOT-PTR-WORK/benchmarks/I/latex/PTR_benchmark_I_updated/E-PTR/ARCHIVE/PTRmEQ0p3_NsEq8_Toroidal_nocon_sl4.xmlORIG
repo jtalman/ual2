@@ -1,0 +1,168 @@
+<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:saxon="http://icl.com/saxon"
+    xmlns:math="http://exslt.org/math" extension-element-prefixes="saxon math">
+    <xsi:elements>
+        <element name="mbegin" type="marker"/>
+        <element name="mend" type="marker"/>
+        <element name="mSlice" type="marker"/>
+        <element name="mDQfend" type="marker"/>
+        <element name="mQDcM" type="marker"/>
+        <element name="mQDcE" type="marker"/>
+        <element name="mQFcM" type="marker"/>
+        <element name="mQFcE" type="marker"/>
+        <element name="mPlMi" type="marker"/>
+        <element name="mMiPl" type="marker"/>
+        <element name="mQuadrBeg" type="marker"/>
+        <element name="mQuadrEnd" type="marker"/>
+        <element name="mHalf" type="marker"/>
+
+        <element name="Dllshsl" type="drift" l="$llshsl"/>
+        <element name="DlQch" type="drift" l="$lQch"/>
+               
+        <element name="QFcMh" type="quadrupole" l="$lQcM">
+            <mfield a="0" b="$qFcMh"/>
+        </element>
+        <element name="QFcE" type="quadrupole" l="$lQcE">
+            <mfield a="0" b="$qFcE"/>
+        </element>
+        <element name="QDcMh" type="quadrupole" l="$lQcM">
+            <mfield a="0" b="$qDcMh"/>
+        </element>
+        <element name="QDcE" type="quadrupole" l="$lQcE">
+            <mfield a="0" b="$qDcE"/>
+        </element>
+
+        <element name="SBPlhsl" type="sbend" l="$lehsl">
+            <mfield a="0" b="$etaE*$thetahsl"/>
+        </element>
+        <element name="SBMihsl" type="sbend" l="$lehsl">
+            <mfield a="0" b="$etaE*$thetahsl"/>
+        </element>
+
+        <element name="RF1" type="rfcavity" l="$tiny">
+            <mfield volt="$rfvolt" harmon="$rfharmon" lag='$rflag'/>
+        </element> 
+ 
+    </xsi:elements>
+    <!--  -->
+    <xsi:sectors>
+        <sector name="lsh_QDcE">
+            <frame ref="Dllshsl"/>
+            <frame ref="mSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mDQfend"/>
+            <frame ref="QDcMh"/>
+            <frame ref="mQDcM"/>
+            <frame ref="QDcMh"/>
+            <frame ref="DlQch"/>
+            <frame ref="QDcE"/>
+            <frame ref="mQDcE"/>
+        </sector>
+        <sector name="QDcE_lsh">
+            <frame ref="mQDcE"/>
+            <frame ref="QDcE"/>
+            <frame ref="DlQch"/>
+            <frame ref="QDcMh"/>
+            <frame ref="mQDcM"/>
+            <frame ref="QDcMh"/>
+            <frame ref="mDQfend"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mSlice"/>
+            <frame ref="Dllshsl"/>
+        </sector>
+        <sector name="lsh_QFEc">
+            <frame ref="Dllshsl"/>
+            <frame ref="mSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mDQfend"/>
+            <frame ref="QFcMh"/>
+            <frame ref="mQFcM"/>
+            <frame ref="QFcMh"/>
+            <frame ref="DlQch"/>
+            <frame ref="QFcEh"/>
+            <frame ref="mQFcE"/>
+        </sector>
+        <sector name="QFcE_lsh">
+            <frame ref="mQFcE"/>
+            <frame ref="QFcE"/>
+            <frame ref="DlQch"/>
+            <frame ref="QFcMh"/>
+            <frame ref="mQFcM"/>
+            <frame ref="QFcMh"/>
+            <frame ref="mDQfend"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mSlice"/>
+            <frame ref="Dllshsl"/>
+        </sector>
+
+        <sector name="BhPlsl">
+            <frame ref="SBPlhsl"/>
+        </sector>
+        <sector name="BhMisl">
+            <frame ref="SBMihsl"/>
+        </sector>
+
+        <sector name="bendPlMi">
+            <frame ref="BhPlsl"/>
+            <frame ref="BhPlsl"/>
+            <frame ref="BhPlsl"/>
+            <frame ref="BhPlsl"/>
+            <frame ref="mPlMi"/>
+            <frame ref="BhMisl"/>
+            <frame ref="BhMisl"/>
+            <frame ref="BhMisl"/>
+            <frame ref="BhMisl"/>
+        </sector>
+        <sector name="bendMiPl">
+            <frame ref="BhMisl"/>
+            <frame ref="BhMisl"/>
+            <frame ref="BhMisl"/>
+            <frame ref="BhMisl"/>
+            <frame ref="mMiPl"/>
+            <frame ref="BhPlsl"/>
+            <frame ref="BhPlsl"/>
+            <frame ref="BhPlsl"/>
+            <frame ref="BhPlsl"/>
+        </sector>
+
+       <sector name="quadrant">
+            <frame ref="mQuadrBeg"/>
+            <frame ref="QDcE_lsh"/>
+            <frame ref="bendPlMi"/>
+            <frame ref="bendMiPl"/>
+            <frame ref="lsh_QFEc"/>
+            <frame ref="QFcE_lsh"/>
+            <frame ref="bendPlMi"/>
+            <frame ref="bendMiPl"/>
+            <frame ref="lsh_QDcE"/>
+            <frame ref="mQuadrEnd"/>
+        </sector>
+
+        <sector name="ring">
+            <frame ref="mbegin"/>
+            <frame ref="RF1"/> 
+            <frame ref="quadrant"/>
+            <frame ref="quadrant"/>
+            <frame ref="mhalf"/>
+            <frame ref="quadrant"/>
+            <frame ref="quadrant"/>
+            <frame ref="mend"/>
+        </sector>
+    </xsi:sectors>
+</xsl:transform>

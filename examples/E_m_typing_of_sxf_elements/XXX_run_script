@@ -1,0 +1,25 @@
+#!/bin/tcsh -f
+
+\cp PacElemBucket.h $UAL/codes/PAC/src/SMF/
+pushd $UAL/codes/PAC/
+ll ./lib/linux/
+make clean
+ll ./lib/linux/
+make
+ll ./lib/linux/
+popd
+
+pushd $UAL/codes/E_m/
+ll ./lib/linux/
+make clean
+ll ./lib/linux/
+make
+ll ./lib/linux/
+popd
+
+\cp working.sxf_entry_and_middle_exit working.sxf
+
+make clean
+make
+
+./E_m_Survey++ 1.25

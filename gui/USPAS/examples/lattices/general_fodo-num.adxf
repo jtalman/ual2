@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adxf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/home/ualusr/USPAS/ual1/doc/adxf-cesr/adxf.xsd">
+    <constants>
+        <constant name="pi" value="3.1415926536"/>
+        <constant name="twopi" value="6.2831853072"/>
+        <constant name="c" value="299792458"/>
+        <constant name="nhalf" value="20"/>
+        <constant name="scale" value="0.05"/>
+        <constant name="dipfrac" value="0.9994"/>
+        <constant name="quadfrac" value="0.0002"/>
+        <constant name="sextfrac" value="0.0001"/>
+        <constant name="nuxfrac" value="0.25"/>
+        <constant name="nuyfrac" value="0.25"/>
+        <constant name="celltnxi" value="0.2"/>
+        <constant name="celltnyi" value="0.1"/>
+        <constant name="lhalf" value="1"/>
+        <constant name="ld" value="0.9994"/>
+        <constant name="ldh" value="0.4997"/>
+        <constant name="lq" value="0.0002"/>
+        <constant name="ls" value="0.0001"/>
+        <constant name="nux" value="2.25"/>
+        <constant name="nuy" value="1.25"/>
+        <constant name="deltheta" value="0.31415926536"/>
+        <constant name="deltheth" value="0.15707963268"/>
+        <constant name="cellmux" value="1.4137166941200001"/>
+        <constant name="cellmuy" value="0.7853981634"/>
+        <constant name="sxby2" value="0.64944804833193"/>
+        <constant name="syby2" value="0.3826834323662685"/>
+        <constant name="ss2bar" value="0.2841146884448907"/>
+        <constant name="delss2" value="-0.06883403951863112"/>
+        <constant name="sqrterm" value="0.5374502892745925"/>
+        <constant name="q2lt" value="-0.4686162497559614"/>
+        <constant name="q2t" value="-0.4686162497559614"/>
+        <constant name="q1lt" value="0.6062843287932236"/>
+        <constant name="q1t" value="0.6062843287932236"/>
+        <constant name="ratx1t" value="3.7301442567792926"/>
+        <constant name="raty1t" value="0.33081549805273824"/>
+        <constant name="ratx2t" value="0.26808614658335683"/>
+        <constant name="raty2t" value="3.0228329866231998"/>
+        <constant name="betax1t" value="2.9738454720847853"/>
+        <constant name="betay1t" value="1.5029802128357586"/>
+        <constant name="betax2t" value="0.7972467731455738"/>
+        <constant name="betay2t" value="4.543258165601888"/>
+        <constant name="fact1" value="0.568158679247526"/>
+        <constant name="fact2" value="0.33081549805273824"/>
+        <constant name="q1" value="0.5501756495731421"/>
+        <constant name="q1l" value="0.5501756495731421"/>
+        <constant name="kq1" value="2750.8782478657104"/>
+        <constant name="q2" value="-0.45005462909468885"/>
+        <constant name="q2l" value="-0.45005462909468885"/>
+        <constant name="kq2" value="-2250.273145473444"/>
+        <constant name="ratx1" value="3.2236018964261697"/>
+        <constant name="raty1" value="0.3547632625094741"/>
+        <constant name="ratx2" value="0.3102120026386152"/>
+        <constant name="raty2" value="2.8187811582471696"/>
+        <constant name="betax1" value="2.7645616886475564"/>
+        <constant name="betay1" value="1.5564302376169075"/>
+        <constant name="betax2" value="0.8576002178533504"/>
+        <constant name="betay2" value="4.387236227920703"/>
+        <constant name="eta1" value="0.9124452463563767"/>
+        <constant name="eta2" value="0.5399411592253038"/>
+        <constant name="s1" value="0.602968399221906"/>
+        <constant name="s2" value="-0.8335253229081808"/>
+        <constant name="ks1" value="6029.68399221906"/>
+        <constant name="ks2" value="-8335.253229081807"/>
+        <constant name="tanhalf" value="0.1583844403250594"/>
+        <constant name="delta" value="0.0010"/>
+        <constant name="rhozero" value="3.183098861827565"/>
+        <constant name="denom1" value="1.0000795098056914"/>
+        <constant name="sd1" value="0.5042577554234118"/>
+        <constant name="xd1" value="0.0006593777956997245"/>
+        <constant name="c11" value="1.0085156378515743"/>
+        <constant name="denom2" value="0.9999615121029733"/>
+        <constant name="sd2" value="0.5042582578481078"/>
+        <constant name="xd2" value="0.000662456655808905"/>
+        <constant name="c12" value="1.0085165454628016"/>
+        <constant name="c1" value="2.0170321833143756"/>
+        <constant name="c10" value="2.01661332691957"/>
+        <constant name="gamsq" value="4.814569747359503"/>
+        <!--  -->
+    </constants>
+    <elements>
+        <monitor name="mbegin"/>
+        <marker name="mk1"/>
+        <marker name="mend"/>
+        <hmonitor name="mkb"/>
+        <hmonitor name="bpm"/>
+        <kicker name="kickerp"/>
+        <quadrupole name="quadhf" l="0.0002" k1="2750.8782478657104"/>
+        <quadrupole name="quadvf" l="0.0002" k1="-2250.273145473444"/>
+        <sbend name="bendh" l="0.4997" angle="0.15707963268"/>
+        <sextupole name="sext1" l="0.0001" k2="6029.68399221906"/>
+        <sextupole name="sext2" l="0.0001" k2="-8335.253229081807"/>
+    </elements>
+    <!--  -->
+    <sectors>
+        <sector name="bend" line="bendh mkb bendh"/>
+        <sector name="fullcell" line="mk1 bpm quadhf sext1 bend sext2 quadvf bpm quadvf sext2 bend sext1 quadhf mk1"/>
+        <sector name="ring" line="mbegin kickerp fullcell fullcell fullcell fullcell fullcell fullcell fullcell fullcell fullcell fullcell mend"/>
+    </sectors>
+</adxf>

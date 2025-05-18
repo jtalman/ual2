@@ -1,0 +1,29 @@
+// bend file
+void traverseSplitBendExactly(int ip){
+  std::cout << scientific << left << showpos << std::setw(10) << std::setprecision(10) << "enter void traverseSplitBendExactly(int ip)\n";
+ PAC::Position& p   = *pacPmy;
+//#include "ETEAPOT2/Integrator/bendMethods/rotate.insert"
+ Vector3 rOutVnewMP = get_rOutV_rot();
+ Vector3 pOutVnewMP = get_pOutV_rot();
+
+  std::cout << scientific << left << showpos << std::setw(10) << std::setprecision(10) << "get_dr() " << get_dr() << "\n";
+  p[0]             += get_dr();
+//if(isnan(p[0]))p[0]=0;
+//if(isinf(p[0]))p[0]=0;
+  if(!isfinite(p[0]))p[0]=0;
+std::cout << "DEBUG bnd " << bnd << " get_dr() " << get_dr() << "\n";
+  p[1]             += get_dpxBypDc();   //   "Del_dpdz" in ETEAPOT_MltTurn::DipoleAlgorithm.icc +210
+//p[1]              = pxOutp/pDc;
+//p[2]              = yOutp;
+//p[2]              = rOutV_rot[1];
+  p[2]              = rOutVnewMP[1];
+  p[3]              = pOutVnewMP[1]/pDc;
+//p[3]              = pOutV_rot[1]/pDc;
+//p[3]              = pyOutp/pDc;
+//p[4]             += get_dt();
+  p[4]             += get_dt_xi();
+/*
+  p[5] unchanged except in RF Cavities
+*/
+  std::cout << scientific << left << showpos << std::setw(10) << std::setprecision(10) << "leave void traverseSplitBendExactly(int ip)\n";
+}

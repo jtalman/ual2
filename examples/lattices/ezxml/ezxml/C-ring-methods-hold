@@ -1,0 +1,7 @@
+void octantDF(){
+ printf("   %s\n","octantDF");
+}
+
+void octantFD(){
+ printf("   %s\n","octantFD");
+}

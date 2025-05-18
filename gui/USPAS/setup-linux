@@ -1,0 +1,51 @@
+########################################################
+# Qt
+########################################################
+
+# setenv QTDIR /usr/lib/qt-3.1
+setenv QTDIR /home/ualusr/USPAS/tools/qt
+set path = ($QTDIR/bin $path)
+setenv MANPATH $QTDIR/doc/man
+setenv LD_LIBRARY_PATH $QTDIR/lib:$LD_LIBRARY_PATH
+
+########################################################
+# Coin 3D
+########################################################
+
+setenv SIMAGE $USPAS/tools/simage
+set path = ($SIMAGE/bin $path)
+setenv LD_LIBRARY_PATH $SIMAGE/lib:$LD_LIBRARY_PATH
+
+setenv COIN3D $USPAS/tools/Coin
+set path = ($COIN3D/bin $path)
+setenv LD_LIBRARY_PATH $COIN3D/lib:$LD_LIBRARY_PATH
+
+setenv SOQT $USPAS/tools/SoQt
+set path = ($SOQT/bin $path)
+setenv LD_LIBRARY_PATH $SOQT/lib:$LD_LIBRARY_PATH
+
+setenv COIN_FULL_INDIRECT_RENDERING 1
+
+########################################################
+# ROOT
+########################################################
+
+setenv ROOTSYS $USPAS/tools/root
+set path = ($ROOTSYS/bin $path)
+setenv LD_LIBRARY_PATH $ROOTSYS/lib:$LD_LIBRARY_PATH
+setenv LD_LIBRARY_PATH $USPAS/tools/qtgui:$LD_LIBRARY_PATH
+setenv IVROOT $COIN3D
+
+
+########################################################
+# UAL 
+########################################################
+
+setenv UAL        $USPAS/ual1
+setenv UAL_USPAS  $USPAS/examples
+
+source $UAL/setup-linux-ual
+
+
+
+

@@ -1,0 +1,34 @@
+#include <time.h>
+#include "Teapot/Teapot.hh"
+
+main()
+{
+  ENERGY = 100.;
+
+  Teapot rhic("fort.7");
+
+  Particle p;
+  for(int i=1; i <= 4;   i++) p[i] = 0.0;
+  
+  for(int j=1; j <= 100; j++) p = rhic*p;
+
+  cerr << p << "\n";
+
+
+/*
+
+  time_t now;   
+
+  cerr << "DA Runge-Kutta integrator \n";
+  now = time(NULL), printf("%s", ctime(&now));
+
+  now = time(NULL), printf("%s", ctime(&now));
+  cerr << "End\n";
+
+  ofstream daFile("simpleHelix.out");
+  daFile << map << "\n";
+  daFile.close();
+*/
+
+  return(1);
+}

@@ -1,0 +1,13 @@
+/* This is file is automatically generated */
+#define BUILD_ARCH "linuxx8664gcc"
+#define BUILD_NODE "Linux X201-9 3.10.0-957.el7.x86_64 #1 SMP Tue Oct 30 14:13:26 CDT 2018 x86_64 x86_64 x86_64 GNU/Linux" 
+#define COMPILER "g++ is /usr/bin/g++" 
+#define MAKESHAREDLIB  "cd $BuildDir ; g++ -c $Opt -fpermissive -pipe -Wall -m64 -fPIC -Iinclude  -pthread $IncludePath $SourceFiles ;  g++ $ObjectFiles -shared -Wl,-soname,$LibName.so -m64 -O2  $LinkedLibs -o $SharedLib"
+#define MAKEEXE "cd $BuildDir ; g++ -c  -fpermissive -pipe -Wall -m64 -fPIC -Iinclude  -pthread $IncludePath $SourceFiles; g++ $ObjectFiles -m64 -O2  -o $ExeName $LinkedLibs -lm -ldl  -pthread -rdynamic"
+#define CXXOPT "-O2"
+#define CXXDEBUG "-g"
+#define ROOTBUILD ""
+#define LINKEDLIBS "-L$ROOTSYS/lib -lCore -lCint -lHist -lGraf -lGraf3d -lGpad -lTree -lMatrix -lRint "
+#define INCLUDEPATH "-I$ROOTSYS/include"
+#define OBJEXT "o" 
+#define SOEXT "so" 

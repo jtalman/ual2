@@ -1,0 +1,78 @@
+#include <time.h>
+#include "RKIntegrator/RKIntegrator.hh"
+#include "LieMap/LieMap.hh"
+#include "Field/Field.hh"
+#include "VectorA/VectorA.hh"
+
+main()
+{
+
+  BEAM_DIM   = 4;
+  ZLIB_ORDER = 4;
+
+// mltParameters
+
+  double mltParameters[6];    //  2*mltOrder+2
+
+  mltParameters[0] = 5.;      // 2*mltOrder+1 - number of parameters
+  mltParameters[1] = 1.;      // Length
+
+  for(int i=2; i <= mltParameters[0]; i++) mltParameters[i] = 1.;
+
+// Initial coordinates
+
+  Particle testParticle; testParticle[1] = 0.00001;
+
+  ZMap     map;
+  time_t   now;
+
+// Standard Runge-Kutta integrator
+
+  RKIntegrator<double, Particle> rkIntegrator(mltField, mltParameters, 0.01);
+
+  cerr << rkIntegrator*testParticle << "\n";
+
+// DA Runge-Kutta integrator
+
+  map = 1.;
+  cerr << "DA Runge-Kutta integrator \n";
+  now = time(NULL), printf("%s", ctime(&now));
+
+  RKIntegrator<ZSeries, ZMap> daIntegrator(mltField, mltParameters, 0.01);
+
+  map = daIntegrator*map;
+  now = time(NULL), printf("%s", ctime(&now));
+  cerr << "End\n";
+
+  ofstream daFile("daInt.out");
+  daFile << map << "\n";
+  daFile.close();
+
+// Lie Transformation
+
+  map = 1.;
+  cerr << "Lie Transformation \n";
+  now = time(NULL), printf("%s", ctime(&now));
+
+  LieMap lieMap(mltVectorA, mltParameters);
+
+  map = lieMap(20)*map;
+  now = time(NULL), printf("%s", ctime(&now));
+  cerr << "End\n";
+
+  ofstream lieFile("lieInt.out");
+  lieFile << map << "\n";
+  lieFile.close();
+
+// Just time test
+
+  cerr << "Just time test \n";
+  now = time(NULL), printf("%s", ctime(&now));
+
+  for(int j = 1; j <= 20; j++) map *= map;
+
+  now = time(NULL), printf("%s", ctime(&now));
+  cerr << "End\n";
+
+  return(1);
+}

@@ -1,0 +1,228 @@
+Previously this file was
+-rw-rw-r--. 1 4.5K Apr 10 19:37 COSY-Vera-mx06-mx07.data
+========================================
+[ualusr2011@x201-5 chromefitWithTeapot_regex-RT]$ ./chromefitWithTeapot 0 0
+0 154
+0 175
+----------------------------------------------------------
+fitting of chromaticity by varying cell sextupole strengths 
+desired chromaticities are 0 0
+chromaticities are : -29.9451 20.6899
+----------------------------------------------------------
+old loop dkx, dky: 1 0.230401 0.682808
+r(i, j): 47.975 259.366 -171.71 -132.448
+chromaticities are : -0.000169458 0.000164538
+----------------------------------------------------------
+old loop dkx, dky: 2 3.32929e-06 3.48935e-06
+r(i, j): 47.9735 259.365 -171.708 -132.447
+chromaticities are : 2.10525e-09 -7.91759e-09
+3 steps, final chromaticities are 2.10525e-09 -7.91759e-09
+----------------------------------------------------------
+
+ring.sxf
+----------
+  mx06
+     sextupole {
+         tag = mx06
+         l = 0.243
+         at = 63.342199
+         body = {
+                 kl = [ 0 0 -1.0]
+                }
+         };
+ mx07
+     sextupole {
+         tag = mx07
+         l = 0.328
+         at = 69.7053
+         body = {
+                 kl = [ 0 0 -1.0]
+                }
+         };
+
+line #  TeapotChromService.cc
+           --------------------------------
+ 156     qk1x = getBf();    -0.5     ->    -0.26959936867346879 x 2 = −0.539198736
+ 157     qk1y = getBd();   -0.5      ->     0.18280818478014615 x 2 =    0.3656163690
+ 158 
+ 159     qk1xref = qk1x;
+ 160     qk1yref = qk1y;
+ 161 
+ 162     qk1x += stepx;
+ 163     qk1y += stepy;
+ 164 
+
+  mx06
+     sextupole {
+         tag = mx06
+         l = 0.243
+         at = 63.342199
+         body = {
+                 kl = [ 0 0 -0.5]
+                }
+         };
+ mx07
+     sextupole {
+         tag = mx07
+         l = 0.328
+         at = 69.7053
+         body = {
+                 kl = [ 0 0 0.4]
+                }
+         };
+[ualusr2011@x201-5 chromefitWithTeapot_regex-RT]$ ./chromefitWithTeapot 0 0
+0 154
+0 175
+
+========================================
+fitting of chromaticity by varying cell sextupole strengths 
+desired chromaticities are 0 0
+chromaticities are : 0.859139 -0.897848
+----------------------------------------------------------
+old loop dkx, dky: 1 -0.0195961 -0.0171883
+r(i, j): 47.9733 259.365 -171.708 -132.447
+chromaticities are : -3.18424e-08 2.89695e-07
+2 steps, final chromaticities are -3.18424e-08 2.89695e-07
+----------------------------------------------------------
+ 156     qk1x = getBf();
+ 157     qk1y = getBd();
+ 158 
+ 159     qk1xref = qk1x;
+ 160     qk1yref = qk1y;
+ 161 
+ 162     qk1x += stepx;    -0.25     ->     -0.26959605134351378 x 2 = −0.539192103
+ 163     qk1y += stepy;     0.20     ->       0.18281167552444499 x2 =    0.365623351
+ 164 
+ 165     qk1xref = multiplyBfs(qk1x/qk1xref);
+ 166     qk1yref = multiplyBds(qk1y/qk1yref);
+
+-----------------------------------------------------------------------------------------------------
+March 21, 2020, chromefitWithTeapot_regex-RT]
+---------------------
+COSY-Vera-mx06-mx07.sxf
+
+$ ddd ./chromefitWithTeapot &
+desired chromaticities are 0 0
+chromaticities are : -29.9451 20.6899
+----------------------------------------------------------
+old loop dkx, dky: 1 0.230401 0.682808
+r(i, j): 47.975 259.366 -171.71 -132.448
+
+-----------------------------------------------------------------------------------------------------
+April 10, 2020, chromefitWithTeapot_regex-RT]
+COSY-Vera-mx06-mx07.sxf
+
+  mx06
+     sextupole {
+         tag = mx06
+         l = 0.243
+         at = 63.342199
+         body = {
+                 kl = [ 0 0 −0.53918]
+                }
+         };
+
+ mx07
+     sextupole {
+         tag = mx07
+         l = 0.328
+         at = 69.7053
+         body = {
+                 kl = [ 0 0 0.36562]
+                }
+         };
+----------------------------------------------------------
+stop at line 165 in "TeapotChromService.cc"
+
+    xi_x     xi_y     nit         qk1x             qk1y    
+      0         0         0          -0.5              -0.5 
+                            1     -0.269599     0.182808
+                            2     -0.269596     0.1828116
+3 steps, final chromaticities are 2.10525e-09 -7.91759e-09
+      1         1         0          -0.5              -0.5 
+                            1      -0.3340767   0.2189598
+                            2      -0.3340736   0.2189630
+3 steps, final chromaticities are 1 1
+      5.40       5.44       0          -0.5              -0.5 
+                                  1   -0.619484     0.378342
+                                  2   -0.619482     0.378344
+
+=====================================
+Sat May 16 08:17:54 EDT 2020
+
+COSY-opposite-Sfz-Sdz.sxf
+-----------------------------------
+ring.sxf -> COSY-opposite-Sfz-Sdz.sxf
+$ ./chromefitWithTeapot 0 0
+
+chromaticities are : -6.50492 -3.48956
+    xi_x     xi_y     nit         qk1x             qk1y    
+      0         0         0           0                   0
+                            1    -0.743286      -0.21466
+                            2    -0.743287      -0.21426
+
+COSY-opposite-Sf-m0p74-Sd-m0p21.sxf
+----------------------------------------------------
+ring.sxf -> COSY-opposite-Sf-m0p74-Sd-m0p21.sxf
+
+         tag = mx10
+         l = 0.243
+         at = 101.981259
+         body = { kl = [ 0 0  Sf = -6.5]       
+
+         tag = mx06
+         l = 0.243
+         at = 63.342199
+         body = {  kl = [ 0 0  Sd=-0.21]
+
+$ ./chromefitWithTeapot 0 0
+
+     xi_x     xi_y     nit         qk1x             qk1y    
+      0         0         0       -3.25              -0.105
+                            1        -0.7433         -0.2147
+                            2        -0.7432         -0.2146
+3 steps, final chromaticities are -6.27692e-10 1.96927e-10
+
+Conclusions:  
+              1.          qk1x = Sf/2
+                           qk1y = Sd/2
+               2. To edit an SXF file to match the calculated TEAPOT chromaticity qk1x and qk1y
+                   values, the sextupole strength entries in the SXF file are Sf=2*qk1x, Sd=2*qk1y
+               3. Conversely: to run TEAPOT to check an FFT run for which the SXF file settings
+                   are Sf and Sd,  the TEAPOT-expected  values are qk1x=Sf/2,  qk1y=Sd/2
+               4. No matter what the Sd and Sf sextupole strengths in an SXF file are, they 
+                   need to be replaced in a revised SXF file  by Sd=2*q1kx, Sf=2*q1ky in 
+                   in order to produce the TEAPOT-calculated chromaticity values
+               5. STARTING TODAY, Sat May 16 08:17:54 EDT 2020, SXF file names will encode
+                   qk1x and qk1y values (rather than Sf and Sd values)
+
+COSY-opposite-tpot-achromatic.sxf
+----------------------------------------------
+ ring.sxf -> COSY-opposite-tpot-achromatic.sxf  
+                  same as COSY-opposite-kq1x-m0p7432-kq1y-m0p2146.sxf
+
+          tag = mx10
+         l = 0.243
+         at = 101.981259
+         body = { kl = [ 0 0 -0.7432 ]
+
+         tag = mx06
+         l = 0.243
+         at = 63.342199
+         body = { kl = [ 0 0 -0.2146]
+  
+        $ ./chromefitWithTeapot 0 0
+[ualusr2011@x201-5 chromefitWithTeapot_regex-RT]$ ./chromefitWithTeapot 0 0
+0 242
+0 142
+
+----------------------------------------------------------
+fitting of chromaticity by varying cell sextupole strengths 
+desired chromaticities are 0 0
+chromaticities are : -3.25274 -1.74558
+----------------------------------------------------------
+old loop dkx, dky: 1 -0.371684 -0.107368
+r(i, j): -62.2427 25.1196 20.5576 -173.318
+chromaticities are : 4.62225e-06 -1.34179e-06
+2 steps, final chromaticities are 4.62225e-06 -1.34179e-06
+----------------------------------------------------------

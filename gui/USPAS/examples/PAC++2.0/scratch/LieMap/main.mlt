@@ -1,0 +1,54 @@
+#include <time.h>
+#include "RKIntegrator/RKIntegrator.hh"
+#include "LieMap/LieMap.hh"
+#include "Field/Field.hh"
+#include "VectorA/VectorA.hh"
+
+main()
+{
+  int i;
+  BEAM_DIM   = 4;
+  ZLIB_ORDER = 4;
+
+// mltParameters
+
+  double length  = 1.;
+  int    nPieces = 100;
+
+  double mltParameters[6]; 
+
+  mltParameters[0] = 5.;                  // number of parameters
+  mltParameters[1] = length;              // Length
+  for(i=2; i <= mltParameters[0]; i++) mltParameters[i] =1.;
+
+// Initial coordinates
+
+  Particle p;
+
+  ZMap     map;
+  time_t   now;
+
+
+// Lie Transformation
+
+  map = 1.;
+  LieMap lieMap(mltVectorA, mltParameters);
+  cerr << lieMap(20)*map;
+
+  cerr << "Lie Transformation \n";
+  now = time(NULL), printf("%s", ctime(&now));
+
+  mltParameters[1] = length/nPieces;
+  for(i=1; i <= nPieces; i++){
+      map = lieMap(mltVectorA,mltParameters,20)*map;
+  }
+
+  now = time(NULL), printf("%s", ctime(&now));
+  cerr << "End\n";
+
+  ofstream daFile("mlt.out");
+  daFile << map << "\n";
+  daFile.close();
+
+  return(1);
+}

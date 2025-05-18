@@ -1,0 +1,90 @@
+This is the development directory. A new adxf file must be identified.
+
+Useful utilities for working with this adxf file, and generally, are in ../ezxml/. ../ezxml/notes may be of interest. Possibly interesting legacy info is also in ../ezxml/.
+
+The current working program directory for adxf file PTR_m_nomEQ0p0.32349_sl4.adxf is in ../Ring/
+________________________________________________________________________
+
+A current adxf file must be identified.
+
+      A <constants> "tree" of some adxf files (e.g. ff_sext_latnat.adxf) exist.
+      Representative file constants.xml (for ff_sext_latnat.adxf) is in ../ezxml/
+      Program ../ezxml/constants.c manipulates this tree.
+ 
+      gcc constants.c ./ezxml.o -o constants
+      ll constants
+            ... 31600 Oct 26 09:13 constants
+ 
+      An <elements> "tree" of some adxf files (e.g. PTR_m_nomEQ0p0.32349_sl4.adxf) exist.
+      Representative file elements.xml (for PTR_m_nomEQ0p0.32349_sl4.adxf) is in ../ezxml/
+      Program ../ezxml/elements.c manipulates this tree.
+
+      gcc elements.c ./ezxml.o -o elements
+      ll elements
+            ... 31600 Oct 26 09:05 elements
+ 
+      A <sectors> "tree" of some adxf files (e.g. PTR_m_nomEQ0p0.32349_sl4.adxf) exist.
+      Representative file sectors.xml (for PTR_m_nomEQ0p0.32349_sl4.adxf) is in ../ezxml/
+      Program ../ezxml/sectors.c manipulates this tree.
+
+      gcc sectors.c  ./ezxml.o -o sectors
+      ll sectors
+            ... 31648 Oct 26 09:09 sectors
+________________________________________________________________
+
+("VERBOSE"): Create source file ring.c:
+   Discussion:
+      cp Ring-template.c Ring.c
+
+      New file Ring.c now has 1 static user include files
+         C-element-tracking-methods
+      that already exists. This include file has "minimal" structure for
+         - markers
+         - drifts
+         - quadrupole
+         - sbend
+         - rfcavity
+      that applies to all UAL rings.
+
+      It has 3 lattice dependent user include files
+         touch C-lattice-elements
+         touch C-sector-methods
+         touch C-Ring
+      that must eventually be populated.
+      Alernatively,
+         ./cp-C
+      does the equivalent.
+
+      The above gives a quick spot check compilation.
+            gcc Ring.c 
+            ./a.out 
+RING:
+   INJECT    :AT:: +0.000000e+00 +1.000000e-06 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00
+
+_______________________________________________________________________
+
+("TEMPLATE"): Create source file ring.c:
+      cp Ring-template.c Ring.c
+
+      New file Ring.c with one typically static user include files
+         C-element-tracking-methods
+      and three lattice dependent user include files
+         touch C-lattice-elements
+         touch C-sector-methods
+         touch C-Ring
+      that have previously been populated.
+      Based on an existing adxf file, this/they are likely to be obsolete.
+
+      The following gives a quick template.
+            cp Ring-template.c Ring.c
+            ./cp-C
+            gcc Ring.c 
+            ./a.out 
+Ring:
+   INJECT    :AT:: +0.000000e+00 +1.000000e-06 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00
+
+      ll a.out 
+      4582432 -rwxrwxr-x. 1 rtalman rtalman 8856 Oct 30 11:46 a.out
+
+
+

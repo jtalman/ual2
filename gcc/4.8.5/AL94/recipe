@@ -1,0 +1,60 @@
+KUDOS to:
+          https://stackoverflow.com/questions/78777082/how-to-build-and-install-compiler-g-4-8-5-on-ubuntu-24-04-from-source-code
+
+setenv LD_PRELOAD /usr/lib64/libxml2.so.2.9.13
+          might or might not be necessary
+
+________________________________________________________________________________
+THIS IS ALREADY DONE:
+wget http://ftp.gnu.org/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.gz
+tar xvfz gcc-4.8.5.tar.gz
+cd gcc-4.8.5
+
+rm -rf libada
+rm -rf libgfortran
+rm -rf libava
+rm -rf libobc
+
+vi gcc/reload1.c
+           replace "spill_indirect_levels++" AS "spill_indirect_levels = 1"
+
+sed -i -e 's/__attribute__/\/\/__attribute__/g' gcc/cp/cfns.h
+
+sed -i 's/struct ucontext/ucontext_t/g' libgcc/config/i386/linux-unwind.h
+
+sed -i '/#include <pthread.h>/a #include <signal.h>' libsanitizer/asan/asan_linux.cc
+
+vi libsanitizer/tsan/tsan_platform_linux.cc
+          replace the below line: "__res_state statp = ( __res_state)state;" AS "struct __res_state statp = (struct __res_state)state;"
+
+vi libitm/config/linux/rwlock.cc
+          replace "typeof" AS "__typeof__" in the whole file
+
+cd ..
+tar cvfz gcc-4.8.5_min_mods.tar.gz ./gcc-4.8.5
+          88,100,708
+                    can upload to git
+
+PREAMBLE STOPS HERE
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+
+RECIPE starts HERE:
+
+pushd ~/gcc/
+
+rm -rf gcc-4.8.5
+
+cp $UAL/gcc/4.8.5/AL94/gcc-4.8.5_min_mods.tar.gz .
+
+tar xvfz gcc-4.8.5_min_mods.tar.gz
+cd gcc-4.8.5
+
+./contrib/download_prerequisites
+
+./configure --prefix=/home/talman/gcc/INSTALL-4.8.5 --enable-languages=c,c++ --disable-multilib --disable-bootstrap
+make
+make install
+          no root involved

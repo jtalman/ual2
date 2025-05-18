@@ -1,0 +1,89 @@
+ string sip10 = "out/TWISS/StndrdPrtcl10";
+//      sip10+=m;
+ cerr << "sip10 " << sip10 << "\n";
+ fstream filestrTEN_IN;
+ filestrTEN_IN.open (sip10.c_str(), fstream::in );
+  for(i=0;i<sElems ;i++){
+   filestrTEN_IN >> name[i] >> s[i] >> p10[i][0] >> p10[i][1] >> p10[i][2] >> p10[i][3] >> p10[i][4] >> p10[i][5] >> dummy[i] >> alp;
+  }
+ filestrTEN_IN.close();
+
+ string sop10 = "out/VERIF/StndrdPrtcl10_m=";
+        sop10+=m;
+ cerr << "sop10 " << sop10       << "\n";
+ fstream filestrTEN_OUT;
+ filestrTEN_OUT.open (sop10.c_str(), fstream::out | fstream::app );
+ filestrTEN_OUT << setiosflags( ios::showpos    );
+ filestrTEN_OUT << setiosflags( ios::uppercase  );
+ filestrTEN_OUT << setiosflags( ios::scientific );
+ filestrTEN_OUT << setfill( ' ' );
+ filestrTEN_OUT << setiosflags( ios::left );
+ filestrTEN_OUT << setprecision(13) ;
+
+ for(i=0;i<sElems ;i++){
+  if( name[i].length()==1 ){
+   filestrTEN_OUT << name[i] << "            ";
+  }
+  if( name[i].length()==2 ){
+   filestrTEN_OUT << name[i] << "           ";
+  }
+  if( name[i].length()==3 ){
+   filestrTEN_OUT << name[i] << "          ";
+  }
+  if( name[i].length()==4 ){
+   filestrTEN_OUT << name[i] << "         ";
+  }
+  if( name[i].length()==5 ){
+   filestrTEN_OUT << name[i] << "        ";
+  }
+  if( name[i].length()==6 ){
+   filestrTEN_OUT << name[i] << "       ";
+  }
+  if( name[i].length()==7 ){
+   filestrTEN_OUT << name[i] << "      ";
+  }
+  if( name[i].length()==8 ){
+   filestrTEN_OUT << name[i] << "     ";
+  }
+  if( name[i].length()==9 ){
+   filestrTEN_OUT << name[i] << "    ";
+  }
+  if( name[i].length()==10 ){
+   filestrTEN_OUT << name[i] << "   ";
+  }
+  if( name[i].length()==11 ){
+   filestrTEN_OUT << name[i] << "  ";
+  }
+   filestrTEN_OUT << s[i] << " " << p10[i][0] << " " << p10[i][1] << " " << p10[i][2] << " " << p10[i][3] << " " << p10[i][4] << " " << p10[i][5] << " " << dummy[i];
+// filestrTEN_OUT << s[i] << " " << p10[i][0] << " " << p10[i][1] << " " << p10[i][2] << " " << p10[i][3] << " " << p10[i][4] << " " << p10[i][5] << " " << dummy[i] << "    " << alp << "\n";
+  if( dummy[i].length()==6 ){
+   filestrTEN_OUT << "    ";
+  }
+  if( dummy[i].length()==7 ){
+   filestrTEN_OUT << "   ";
+  }
+  if( dummy[i].length()==8 ){
+   filestrTEN_OUT << "  ";
+  }
+  if( dummy[i].length()==9 ){
+   filestrTEN_OUT << " ";
+  }
+
+  filestrTEN_OUT << alp;
+
+  if( alp.length()==3 ){
+   filestrTEN_OUT << "   ";
+  }
+  if( alp.length()==4 ){
+   filestrTEN_OUT << "  ";
+  }
+  if( alp.length()==5 ){
+   filestrTEN_OUT << " ";
+  }
+  if( alp.length()==6 ){
+   filestrTEN_OUT << "";
+  }
+  filestrTEN_OUT << "\n";
+
+ }
+ filestrTEN_OUT.close();

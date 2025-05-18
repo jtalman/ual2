@@ -1,0 +1,172 @@
+<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:saxon="http://icl.com/saxon"
+    xmlns:math="http://exslt.org/math" extension-element-prefixes="saxon math">
+    <xsi:elements>
+        <element name="mbegin" type="marker"/>
+        <element name="mend" type="marker"/>
+        <element name="mQDcM" type="marker"/>
+        <element name="mQDcE" type="marker"/>
+        <element name="mQFcM" type="marker"/>
+        <element name="mQFcE" type="marker"/>
+        <element name="mSBPlMi" type="marker"/>
+        <element name="mSixteenth" type="marker"/>
+        <element name="mSBMiPl" type="marker"/>
+        <element name="mHalf" type="marker"/>
+        <element name="mQuarter" type="marker"/>
+        <element name="mQcend" type="marker"/>
+        <element name="mllshnom" type="marker"/>
+
+        <element name="mNullSlice" type="quadrupole" l="$n0_length">
+            <mfield a="0" b="0.00000000001"/>
+        </element>
+
+        <element name="Dllshsl" type="drift" l="$llshsl"/>
+        <element name="DlQch" type="drift" l="$lQch"/>
+
+        <element name="QFcMh" type="quadrupole" l="$lQcM">
+            <mfield a="0" b="$qFcMh"/>
+        </element>
+        <element name="QFcE" type="quadrupole" l="$lQcE">
+            <mfield a="0" b="$qFcE"/>
+        </element>
+        <element name="QDcMh" type="quadrupole" l="$lQcM">
+            <mfield a="0" b="$qDcMh"/>
+        </element>
+        <element name="QDcE" type="quadrupole" l="$lQcE">
+            <mfield a="0" b="$qDcE"/>
+        </element>
+
+        <element name="SBPlhsl" type="sbend" l="$Bend_unit_length">
+            <mfield a="0" b="$etaE*$Bend_unit_angle"/>
+        </element>
+        <element name="SBMihsl" type="sbend" l="$Bend_unit_length">
+            <mfield a="0" b="$etaE*$Bend_unit_angle"/>
+        </element>
+
+        <element name="RF1" type="rfcavity" l="$tiny">
+            <mfield volt="$rfvolt" harmon="$rfharmon" lag='$rflag'/>
+        </element> 
+    </xsi:elements>
+    <!--  -->
+    <xsi:sectors>
+        <sector name="lsh_QDcE">
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mQcend"/>
+            <frame ref="QDcMh"/>
+            <frame ref="mQDcM"/>
+            <frame ref="QDcMh"/>
+            <frame ref="DlQch"/>
+            <frame ref="QDcE"/>
+            <frame ref="mQDcE"/>
+        </sector>
+        <sector name="QDcE_lsh">
+            <frame ref="mQDcE"/>
+            <frame ref="QDcE"/>
+            <frame ref="DlQch"/>
+            <frame ref="QDcMh"/>
+            <frame ref="mQDcM"/>
+            <frame ref="QDcMh"/>
+            <frame ref="mQcend"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+        </sector>
+        <sector name="lsh_QFEc">
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mQcend"/>
+            <frame ref="QFcMh"/>
+            <frame ref="mQFcM"/>
+            <frame ref="QFcMh"/>
+            <frame ref="DlQch"/>
+            <frame ref="QFcEh"/>
+            <frame ref="mQFcE"/>
+        </sector>
+        <sector name="QFcE_lsh">
+            <frame ref="mQFcE"/>
+            <frame ref="QFcE"/>
+            <frame ref="DlQch"/>
+            <frame ref="QFcMh"/>
+            <frame ref="mQFcM"/>
+            <frame ref="QFcMh"/>
+            <frame ref="mQcend"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+        </sector>
+
+        <sector name="SBPl">
+            <frame ref="SBPlhsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="SBPlhsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="SBPlhsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="SBPlhsl"/>
+        </sector>
+        <sector name="SBMi">
+            <frame ref="SBMihsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="SBMihsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="SBMihsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="SBMihsl"/>
+        </sector>
+
+        <sector name="octantDF">
+            <frame ref="QDcE_lsh"/>
+            <frame ref="SBPl"/>
+            <frame ref="mSBPlMi"/>
+            <frame ref="mSixteenth"/>
+            <frame ref="SBMi"/>
+            <frame ref="lsh_QFEc"/>
+        </sector>
+
+        <sector name="octantFD">
+            <frame ref="QFcE_lsh"/>
+            <frame ref="SBMi"/>
+            <frame ref="mSBMiPl"/>
+            <frame ref="mSixteenth"/>
+            <frame ref="SBPl"/>
+            <frame ref="lsh_QDEc"/>
+        </sector>
+
+        <sector name="ring">
+            <frame ref="mbegin"/>
+            <frame ref="RF1"/> 
+            <frame ref="octantDF"/>
+            <frame ref="octantFD"/>
+            <frame ref="mQuarter"/>
+            <frame ref="octantDF"/>
+            <frame ref="octantFD"/>
+            <frame ref="mHalf"/>
+            <frame ref="octantDF"/>
+            <frame ref="octantFD"/>
+            <frame ref="mQuarter"/>
+            <frame ref="octantDF"/>
+            <frame ref="octantFD"/>
+            <frame ref="mend"/>
+        </sector>
+    </xsi:sectors>
+</xsl:transform>

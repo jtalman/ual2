@@ -1,0 +1,1 @@
+mysql/src/TMySQLResult.d mysql/src/TMySQLResult.o: include/TMySQLResult.h include/TSQLResult.h include/TObject.h include/Rtypes.h include/RConfig.h include/RVersion.h include/DllImport.h include/Rtypeinfo.h include/TGenericClassInfo.h include/Varargs.h include/TStorage.h include/Riosfwd.h include/TBuffer.h include/Bytes.h include/TMySQLRow.h include/TSQLRow.h

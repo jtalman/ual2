@@ -1,0 +1,12 @@
+rm -rf gcc-4.8.5_min_mods
+tar xvfz gcc-4.8.5_min_mods-ca-ORIG.tar.gz
+cd gcc-4.8.5_min_mods
+./contrib/download_prerequisites
+mkdir objdir
+cd objdir
+../configure --prefix=/home/ualusr2011/git-gui-2/ual2/legacy-gcc-compiler/INSTALL-4.8.5 --enable-languages=c,c++ --disable-multilib --disable-bootstrap
+make >&! make.log
+make install
+
+ll /home/ualusr2011/git-gui-2/ual2/legacy-gcc-compiler/INSTALL-4.8.5/bin/gcc
+ll /home/ualusr2011/git-gui-2/ual2/legacy-gcc-compiler/INSTALL-4.8.5/bin/g++

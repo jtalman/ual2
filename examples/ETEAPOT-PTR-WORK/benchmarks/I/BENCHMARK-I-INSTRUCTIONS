@@ -1,0 +1,61 @@
+ETEAPOT-benchmarks/I  Instructions, 3 Dec. 2022, later, 3 August, 2023
+-------------------------------
+1. Assume git download and build have been completed, and environment variables
+   correctly set.
+2. These examples (tediously, several minute long) produce a great deal of print-out as example of one way 
+producing debugging information rather than using a debugger, such as "ddd" or "gdb".   Later one introduced PTR
+to replace ORIG files (in ORIG-BM-runExamples) by PTR files {\bf with the same names} (in PTR-BM-runExamples)
+with changed m_nom values as well as changed radius (30->11) which is, in any case, just a "dummy" input
+This also required duplication of all the benchmark gnuplot files
+    $ cd $UAL/examples/ETEAPOT-benchmarks/I
+    $ ll run*  #  produces  
+                                           runExample_Figure_3
+                                           runExample_Figure_2
+                                           runExample_Figure_3-Z-sl-ORIGonly
+                                           runExample_Figure_4
+                                           runExample_Figure_3-Z-sl-modQ-ORIGonly
+for which these first five of the scripts are needed only to reproduce ORIGINAL benchmark runs, and
+                                          runExample_Figure-p19
+                                          runExample_Figure-p29
+                                          runExample_Figure-p32
+                                          runExample_Figure-p39
+3. In each these four cases cut and paste from each entire file---they are all run scripts--- each concluding by opening 
+"gnuplot" waiting for a gnuplot script to produce plots.   Unstable lattices produce error messages and no plots.
+
+4. The following produced pdf files (saved in /pdf directory) are originally  EDM ring, later PTR.  
+                                                 Fig-p39-b.pdf
+                                                 Fig-p39-t.pdf
+                                                 Fig-p32-b.pdf
+                                                 Fig-p32-t.pdf
+                                                 Fig-p29-b.pdf
+                                                 Fig-p29-t.pdf
+                                                 Fig-p19-b.pdf
+                                                 Fig-p19t.pdf
+This will have produced most of the files eventually required to be present in this directory
+
+5.  The matching gnuplot files (in ".../gnuplot and already used)  are  
+                           PTR-BM-I_Figure-p19.gnuplot
+                           PTR-BM-I_Figure-p29.gnuplot
+                           PTR-BM-I_Figure-p32.gnuplot
+                           PTR-BM-I_Figure-p39.gnuplot
+
+6. The latex directory contains files
+         latex/E_benchmark_I.tar
+         E_benchmark_I-updated.pdf
+   and (possibly) directory 
+         E_benchmark_I_updated/
+   If not present, this directory can be regenerated using "E_benchmark_I.tar" 
+   in step 7.  Otherwise proceed to step 8. 
+
+7.      $ cd latex
+         $ tar xvf E_benchmark_I.tar
+   produces latex production directory
+         E_benchmark_I_updated/
+  including 
+         E_benchmark_I_updated/pdf
+
+8. The pdf files produced in step 4 are presumed to have been 
+    copied to directory "latex/E_benchmark_I_updated/pdf ../latex/PTR_benchmark_I_updated/pdf" before issuing
+         $ cd E_benchmark_I_updated
+         $ pdflatex E_benchmark_I-updated.tex
+   to produce chapter "E_benchmark-I.pdf".

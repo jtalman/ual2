@@ -1,0 +1,11 @@
+prefix=/home/ualusr2011/ual1220/ual1/tools
+exec_prefix=${prefix}
+libdir=/home/ualusr2011/ual1220/ual1/tools/lib/linux
+includedir=${prefix}/include
+
+Name: muParser
+Description: Mathematical expressions parser library
+Version: 1.34
+Requires:
+Libs: -L${libdir} -lmuparser
+Cflags: -I${includedir}

@@ -1,0 +1,7 @@
+ls -l $UAL/examples/SXF_TRACKER/data/PTR_m_nom=0.32349_sl4-vary-ORIG.sxf
+ls -l $UAL/examples/SXF_TRACKER/data/PTR_m_nom=0.32349_sl4_ORIG.sxf
+ls -l $UAL/examples/SXF_TRACKER/data/PTR_m_nom=0.39447_sl4.sxf
+ls -l $UAL/examples/SXF_TRACKER/data/PTR_m_nom=0.32349_sl4.sxf
+ls -l $UAL/examples/SXF_TRACKER/data/PTR_m_nom=0.29447_sl4.sxf
+ls -l $UAL/examples/SXF_TRACKER/data/PTR_m_nom=0.19447_sl4.sxf
+ls -l /home/rtalman/Desktop/GIT/ual1/examples/SXF_TRACKER/data/PTR_m_nom=0.19447_sl4.sxf

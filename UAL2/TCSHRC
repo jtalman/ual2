@@ -1,0 +1,11 @@
+cd
+cd git-gui-2/
+cd ual2/
+
+setenv UAL `pwd`
+source setup-linux-ual
+
+alias lm 'ls -ialt | more'
+alias h  'history'
+
+alias m  'make clean; make >&! make.log'

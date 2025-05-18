@@ -1,0 +1,99 @@
+closedOrbit(PAC::Position& p, const PacVTps& map, int order)
+{
+//std::cerr << __LINE__ << " enter void TeapotClOrbitService::closedOrbit\n";
+/*
+std::cerr << __LINE__ << " map ";
+for(int i=0;i<6;i++){
+ for(int j=0;j<6;j++){
+  std::cerr << map(i,j) << " ";
+ }
+ std::cerr << "\n";
+}
+std::cerr << "\n";
+*/
+  int i, size = TeapotClOrbitService_Dim;
+
+  TeapotMatrix matrix(size, size);
+  TeapotVector delta(size), tmp(size);
+
+  // 1./(matrix - 1)
+
+/*
+std::cerr << __LINE__ << " map\n";
+for(int i=0;i<6;i++){
+ for(int j=0;j<6;j++){
+  std::cerr << map(i,j) << " ";
+ }
+ std::cerr << "\n";
+}
+std::cerr << "\n";
+*/
+  closedMatrix(matrix, map);
+/*
+std::cerr << __LINE__ << " map\n";
+for(int i=0;i<6;i++){
+ for(int j=0;j<6;j++){
+  std::cerr << map(i,j) << " ";
+ }
+ std::cerr << "\n";
+}
+std::cerr << "\n";
+*/
+
+  // Linear approximation
+  
+  for(i = 0; i < size; i++) { tmp[i] = delta[i] = map(i, 0); }
+
+  delta = matrix * delta;
+
+  // cerr << "\nclosed orbit from first order matrix is \n";
+  // for(i = 0; i < size; i++) { cerr << delta[i]; }
+  // cerr << "\n";
+
+  if(order < 2) {
+/*
+std::cerr << __LINE__ << "order < 2 - map ";
+for(int i=0;i<6;i++){
+ for(int j=0;j<6;j++){
+  std::cerr << map(i,j) << " ";
+ }
+ std::cerr << "\n";
+}
+std::cerr << "\n";
+*/
+    for(i = 0; i < size; i++) { p[i] = delta[i];} 
+    return;
+  }
+
+  // Second-order approximation
+
+  int index, dim = map.size();
+
+  for(i = 0; i < size; i++) {
+    index = dim; 
+    for(int l = 0; l < dim; l++)
+      for(int m = l;  m < dim; m++){
+	  index++;
+	  if(l < size && m < size) tmp[i] += map(i, index)*delta[l]*delta[m];
+      }
+  }
+
+  delta = matrix * tmp; 
+
+  // cerr << "\nclosed orbit including second order terms is \n";
+  // for(i = 0; i < size; i++) { cerr << delta[i]; }
+  // cerr << "\n"; 
+
+  for(i = 0; i < size; i++) { p[i] = delta[i];}
+/*
+std::cerr << __LINE__ << " map ";
+for(int i=0;i<6;i++){
+ for(int j=0;j<6;j++){
+  std::cerr << map(i,j) << " ";
+ }
+ std::cerr << "\n";
+}
+std::cerr << "\n";
+*/
+//std::cerr << __LINE__ << " leave void TeapotClOrbitService::closedOrbit\n";
+}

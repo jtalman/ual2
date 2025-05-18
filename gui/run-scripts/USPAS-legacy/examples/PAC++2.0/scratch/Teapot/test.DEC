@@ -1,0 +1,20 @@
+Particle variables
+
+            x         px/p0             y         py/p0          -cdt        dE/p0c 
+-6.107042e-04  3.410482e-04 -6.842973e-05  3.740847e-03  5.619160e-06  0.000000e+00 
+
+Reference variables 
+
+    Energy (Gev) Momentum (Gev/c)  Velocity (v0/c)    Mass (Gev/c2)
+    5.000000e+00     5.000000e+00     1.000000e+00     5.110340e-04
+
+Particle variables
+
+            x         px/p0             y         py/p0          -cdt        dE/p0c 
+-6.117688e-04  3.394541e-04 -6.814511e-05  3.763973e-03 -8.133611e-04  1.000000e-04 
+
+Reference variables 
+
+    Energy (Gev) Momentum (Gev/c)  Velocity (v0/c)    Mass (Gev/c2)
+    5.000000e+00     5.000000e+00     1.000000e+00     5.110340e-04
+

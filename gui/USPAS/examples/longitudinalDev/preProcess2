@@ -1,0 +1,11 @@
+#!/bin/tcsh
+#
+
+echo "UAL"
+echo $UAL
+
+pushd $UAL/gui/QT
+ ll lib/linux/
+ make clean
+ make
+popd

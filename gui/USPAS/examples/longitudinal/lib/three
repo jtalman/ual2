@@ -1,0 +1,389 @@
+./linux/run ring ../../lattices/general_fodo.sxf  $UAL/gui/USPAS/examples/project/apdf/eteapot.apdf
+base/src/TROOT.cxx 283 enter TROOT::TROOT(const char *name, const char *title, VoidFuncPtr_t *initfunc)
+284
+340
+base/src/TROOT.cxx 475 leave TROOT::TROOT(const char *name, const char *title, VoidFuncPtr_t *initfunc)
+4
+Declare Qt, ROOT, DA, UAL environment.
+base/src/TApplication.cxx 95 enter TApplication::TApplication(const char *appClassName,Int_t *argc, char **argv, void *options,Int_t numOptions)
+96
+155
+base/src/TApplication.cxx 533 enter void TApplication::LoadGraphicsLibs()
+534
+578
+583 typeid(gVirtualX).name() P9TVirtualX
+589 typeid(gGuiFactory).name() P11TGuiFactory
+base/src/TApplication.cxx 591 leave void TApplication::LoadGraphicsLibs()
+157
+Warning in <TGClient::GetFontByName>: couldn't retrieve font -adobe-helvetica-medium-r-*-*-12-*-*-*-*-*-iso8859-1, using "fixed"
+Warning in <TGClient::GetFontByName>: couldn't retrieve font -adobe-helvetica-bold-r-*-*-12-*-*-*-*-*-iso8859-1, using "fixed"
+Warning in <TGClient::GetFontByName>: couldn't retrieve font -adobe-courier-medium-r-*-*-12-*-*-*-*-*-iso8859-1, using "fixed"
+Warning in <TGClient::GetFontByName>: couldn't retrieve font -adobe-helvetica-medium-r-*-*-10-*-*-*-*-*-iso8859-1, using "fixed"
+base/src/TApplication.cxx 224 leave TApplication::TApplication(const char *appClassName,Int_t *argc, char **argv, void *options,Int_t numOptions)
+rint/src/TRint.cxx 115 enter TRint::TRint(const char *appClassName, Int_t *argc, char **argv, void *options,Int_t numOptions, Bool_t noLogo)
+116
+122
+124
+126
+128
+130
+133
+135
+rint/src/TRint.cxx 292 enter void TRint::PrintLogo()
+  *******************************************
+  *                                         *
+  *        W E L C O M E  to  R O O T       *
+  *                                         *
+  *   Version   4.04/02      29 June 2020   *
+  *                                         *
+  *  You are welcome to visit our Web site  *
+  *          http://root.cern.ch            *
+  *                                         *
+  *******************************************
+
+FreeType Engine v2.1.3 used to render TrueType fonts.
+Compiled for linuxx8664gcc with thread support.
+
+CINT/ROOT C/C++ Interpreter version 5.15.169, Mar 14 2005
+Type ? for help. Commands must be C++ statements.
+Enclose multiple statements between { }.
+rint/src/TRint.cxx 344 leave void TRint::PrintLogo()
+rint/src/TRint.cxx 202 leave TRint::TRint(const char *appClassName, Int_t *argc, char **argv, void *options,Int_t numOptions, Bool_t noLogo)
+Read the lattice file.
+echo file ./echo.sxf
+Split elements.
+Select a lattice.
+Set beam attributes.
+Set RF.
+Read the APDF file (propagator description).
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 0.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 0.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 1.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 1.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 2.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 2.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 3.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 3.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 4.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 4.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 5.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 5.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 6.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 6.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 7.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 7.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 8.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 8.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 9.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 9.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 10.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 10.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 11.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 11.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 12.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 12.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 13.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 13.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 14.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 14.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 15.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 15.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 16.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 16.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 17.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 17.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 18.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 18.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 19.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 19.5
+Generate a bunch distribution.
+Open the Player application.
+BasicPlayer.cc: 51enter void UAL::USPAS::BasicPlayer::setShell
+UAL::QT::PlayerShell::initRun(): 
+UAL::QT::PlayerShell::initRun(): update separatrix  
+gauss distribution 
+UAL::QT::PlayerShell::initRun(): update propagator  
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 0.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 0.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 1.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 1.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 2.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 2.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 3.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 3.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 4.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 4.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 5.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 5.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 6.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 6.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 7.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 7.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 8.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 8.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 9.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 9.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 10.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 10.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 11.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 11.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 12.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 12.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 13.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 13.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 14.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 14.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 15.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 15.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 16.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 16.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 17.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 17.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 18.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 18.5
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 19.0003
+TDJ - server side - File DipoleTracker.cc line 53 enter method void ETEAPOT::DipoleTracker::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)
+TDJ - server side - File DipoleTracker.cc line 61 enter method void ETEAPOT::DipoleTracker::setLatticeElement(const PacLattElement& e)
+e.getName()  e.getPosition() 19.5
+BasicPlayer.cc: 59enter void UAL::USPAS::BasicPlayer::initPlayer
+BasicPlayer.cc: 129leave void UAL::USPAS::BasicPlayer::initPlayer
+BasicPlayer.cc: 54leave void UAL::USPAS::BasicPlayer::setShell
+BasicPlayer.cc 134 enter void UAL::USPAS::BasicPlayer::showPage(QListViewItem* item)
+212
+215
+219
+223
+qt/src/TQtWidget.cxx 123 enter TQtWidget::TQtWidget(QWidget* parent, const char* name, WFlags
+127
+129
+143
+145
+147
+149
+qt/src/TGQt.cxx 760 enter Int_t  TGQt::RegisterWid(QPaintDevice *wid)
+762
+765
+770
+qt/src/TGQt.cxx 771 leave Int_t  TGQt::RegisterWid(QPaintDevice *wid)
+gpad/src/TCanvas.cxx 163 enter TCanvas::TCanvas(const char *name, Int_t ww, Int_t wh, Int_t winid)
+164
+169
+gpad/src/TCanvas.cxx 420 enter void TCanvas::Init()
+421
+430
+440
+447
+450
+gpad/src/TCanvas.cxx 463 leave void TCanvas::Init()
+171
+184
+185 gBatchGuiFactory 0x1f02c20
+187 typeid(fCanvasImp).name() P10TCanvasImp
+188
+190
+gpad/src/TCanvas.cxx 469 enter void TCanvas::Build()
+470
+478
+480
+fXsizeReal 5
+fYsizeReal 20
+487
+489
+490 gVirtualX 0x25b6730
+491 fCanvasID 0
+492 typeid(gVirtualX).name() P9TVirtualX
+495
+497
+499
+501
+503
+506
+
+ *** Break *** segmentation violation
+ Generating stack trace...
+ 0x00007f890e42e918 in TCanvas::TCanvas(char const*, int, int, int) + 0x2e8 from /home/talman/Desktop/GIT/download/ual1/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libGpad.so
+ 0x00007f890b8c5f6e in TQtWidget::TQtWidget(QWidget*, char const*, unsigned int, bool) + 0x29e from /home/talman/Desktop/GIT/download/ual1/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libGQt.so
+ 0x00007f890bdaed2e in UAL::ROOT::BasicViewer::BasicViewer() + 0x78 from ../../../../ROOT/lib/linux/libUalRootViewers.so
+ 0x00007f890bdc1009 in UAL::ROOT::TwissViewer::TwissViewer(UAL::QT::BasicPlayer*, std::vector<double, std::allocator<double> >&, std::vector<PacTwissData, std::allocator<PacTwissData> >&) + 0x27 from ../../../../ROOT/lib/linux/libUalRootViewers.so
+ 0x00007f8910cc2b5d in UAL::USPAS::BasicPlayer::showPage(QListViewItem*) at /home/talman/Desktop/GIT/download/ual1/gui/USPAS/examples/player/src/BasicPlayer.cc:224 (discriminat from /home/talman/Desktop/GIT/download/ual1/gui/USPAS/examples/player//lib/linux//libUspasPlayer.so
+ 0x00007f890c82388c in MainPlayerUI::qt_invoke(int, QUObject*) at /home/talman/Desktop/GIT/download/ual1/gui/QT/src/UAL/QT/Player/moc_MainPlayerUI.cc:102 from ../../../../QT/lib/linux/libUalQt.so
+ 0x00007f890c82efcb in UAL::QT::BasicPlayer::qt_invoke(int, QUObject*) at /home/talman/Desktop/GIT/download/ual1/gui/QT/src/UAL/QT/Player/moc_BasicPlayer.cc:99 from ../../../../QT/lib/linux/libUalQt.so
+ 0x00007f8910cc58b4 in UAL::USPAS::BasicPlayer::qt_invoke(int, QUObject*) at /home/talman/Desktop/GIT/download/ual1/gui/USPAS/examples/player/src/moc_BasicPlayer.cc:78 from /home/talman/Desktop/GIT/download/ual1/gui/USPAS/examples/player//lib/linux//libUspasPlayer.so
+ 0x00007f8910602ed2 in QObject::activate_signal(QConnectionList*, QUObject*) + 0x132 from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f891088ad9b in QListView::doubleClicked(QListViewItem*) + 0x7b from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f89106a9c4b in QListView::contentsMouseDoubleClickEvent(QMouseEvent*) + 0x15b from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f89106d40b3 in QScrollView::viewportMouseDoubleClickEvent(QMouseEvent*) + 0x73 from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f89106d454e in QScrollView::eventFilter(QObject*, QEvent*) + 0xfe from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f89106b743e in QListView::eventFilter(QObject*, QEvent*) + 0x9e from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f89106011bf in QObject::activate_filters(QEvent*) + 0x4f from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8910601217 in QObject::event(QEvent*) + 0x27 from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f891062a985 in QWidget::event(QEvent*) + 0x15 from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f89105b848b in QApplication::internalNotify(QObject*, QEvent*) + 0x7b from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f89105b881f in QApplication::notify(QObject*, QEvent*) + 0x28f from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f891056eb3b in QETWidget::translateMouseEvent(_XEvent const*) + 0x8ab from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f891056d8fa in QApplication::x11ProcessEvent(_XEvent*) + 0x61a from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f891057aee6 in QEventLoop::processEvents(unsigned int) + 0x396 from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f89105c94f1 in QEventLoop::enterLoop() + 0x31 from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f89105c9462 in QEventLoop::exec() + 0x22 from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x0000000000406814 in main + 0xf77 from ./linux/run
+ 0x00007f890a5f93d5 in __libc_start_main + 0xf5 from /lib64/libc.so.6
+ 0x00000000004057d9 in <unknown> from ./linux/run
+Abort (core dumped)

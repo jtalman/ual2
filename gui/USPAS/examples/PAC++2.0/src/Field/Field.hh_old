@@ -1,0 +1,22 @@
+#ifndef FIELD_H
+#define FIELD_H
+
+#include "Map/Map.hh"
+
+void mltField(double x, double* y, double* bF, double* eF, double* param);
+void mltField(double x, Series* y, Series* bF, Series* eF, double* param);
+
+void simpleHelixField(double x, double* y, double* bF, double* eF, double* param);
+void simpleHelixField(double x, Series* y, Series* bF, Series* eF, double* param);
+
+extern int BESSI_PSEUDO_NUMBER;
+
+double  bessiPseudo(double  r, int n);
+Series& bessiPseudo(Series& r, int n);
+
+void helixField(double x, double* y, double* bF, double* eF, double* param);
+void helixField(double x, Series* y, Series* bF, Series* eF, double* param);
+
+extern int SH_NUMBER;
+
+#endif

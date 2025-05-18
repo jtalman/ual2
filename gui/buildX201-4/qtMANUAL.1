@@ -1,0 +1,27 @@
+cd $UAL/gui/
+
+setenv QTLIB           $UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/
+setenv QTDIR           $UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/
+setenv QTINC           $UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/
+setenv ROOTSYS         $UAL/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/
+setenv LD_LIBRARY_PATH $UAL/gui/libxml2-2.9.7/.libs/:$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/:$UAL/tools/sxf/lib/linux/:$UAL/tools/lib/linux/:$UAL/ext/ADXF/lib/linux/:$UAL/ext/SXF/lib/linux/:$UAL/ext/UI/lib/linux/:$UAL/ext/ROOT/lib/linux/:$UAL/ext/ALE/lib/linux/:$UAL/codes/SIMBAD/lib/linux/:$UAL/codes/AIM/lib/linux/:$UAL/codes/TIBETAN/lib/linux/:$UAL/codes/SPINK/lib/linux/:$UAL/codes/ACCSIM/lib/linux/:$UAL/codes/ETEAPOT_MltTurn/lib/linux/:$UAL/codes/ETEAPOT2/lib/linux/:$UAL/codes/ETEAPOT/lib/linux/:$UAL/codes/TEAPOT/lib/linux/:$UAL/codes/PAC/lib/linux/:$UAL/codes/ZLIB/lib/linux/:$UAL/codes/UAL/lib/linux/
+
+rm -rf qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod
+tar xvfz qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod.tar.gz
+cd       qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod
+./configure -thread -no-xft -qt-gif -no-exceptions
+\cp ../qt-src-Makefile src/Makefile
+\cp ../qt-plugins-src-imageformats-jpeg-Makefile ./plugins/src/imageformats/jpeg/Makefile
+\cp ../qt-plugins-src-imageformats-mng-Makefile ./plugins/src/imageformats/mng/Makefile
+\cp ../qt-tools-designer-uic-Makefile ./tools/designer/uic/Makefile
+\cp ../qt-tools-designer-uilib-Makefile ./tools/designer/uilib/Makefile
+\cp ../qt-tools-designer-app-Makefile ./tools/designer/app/Makefile
+\cp ../qt-tools-designer-plugins-wizards-Makefile ./tools/designer/plugins/wizards/Makefile
+\cp ../qt-tools-designer-plugins-cppeditor-Makefile ./tools/designer/plugins/cppeditor/Makefile
+echo "begin make all"
+make all
+echo "finish make all"
+
+stat --format=%s:%n:%y ./lib/libqt-mt.so.3.3.4
+echo "9590800"
+popd

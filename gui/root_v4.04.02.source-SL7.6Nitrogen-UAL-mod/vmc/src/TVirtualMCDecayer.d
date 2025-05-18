@@ -1,0 +1,1 @@
+vmc/src/TVirtualMCDecayer.d vmc/src/TVirtualMCDecayer.o: include/TVirtualMCDecayer.h include/TObject.h include/Rtypes.h include/RConfig.h include/RVersion.h include/DllImport.h include/Rtypeinfo.h include/TGenericClassInfo.h include/Varargs.h include/TStorage.h include/Riosfwd.h include/TBuffer.h include/Bytes.h

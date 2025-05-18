@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adxf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/home/ualusr/USPAS/ual1/doc/adxf/adxf.xsd">
+    <constants>
+        <constant name="pi" value="3.1415926536"/>
+        <constant name="twopi" value="2.0*pi"/>
+        <constant name="c" value="299792458.0"/>
+        <constant name="energy" value="2.9"/>
+        <constant name="ltiny" value="0.000001"/>
+        <constant name="k1qt" value="-0.004729114/ltiny"/>
+        <constant name="lhctw" value="1.87/12"/>
+        <constant name="k1big" value="-0.065/ltiny"/>
+        <constant name="hctwang" value="0.261799/12"/>
+    </constants>
+    <elements>
+        <drift name="drift1" l="0.25"/>
+        <drift name="drift1b" l="0.357"/>
+        <drift name="drift2" l="0.534"/>
+        <drift name="drift3" l="0.312"/>
+        <drift name="drift4" l="0.407"/>
+        <drift name="drift5" l="0.3125"/>
+        <drift name="drift6" l="0.1695"/>
+        <drift name="drift7" l="0.3975"/>
+        <drift name="drift8" l="0.322"/>
+        <quadrupole name="quad1" l="0.18" k1="1.77982"/>
+        <quadrupole name="quadt" l="ltiny" k1="k1qt"/>
+        <quadrupole name="quad2" l="0.18" k1="1.71791"/>
+        <quadrupole name="quad3" l="0.26" k1="2.0403"/>
+        <quadrupole name="M1HC" l="ltiny" k1="k1big"/>
+        <marker name="mbegin"/>
+        <marker name="mend"/>
+        <marker name="BendEdge"/>
+        <marker name="mquadin"/>
+        <marker name="mquadout"/>
+        <marker name="Mb"/>
+        <marker name="CellEnd"/>
+        <marker name="Me"/>
+        <sextupole name="S1" l="0.192" k2="-26.0494"/>
+        <sextupole name="S2" l="0.192" k2="39.8364"/>
+        <sbend name="bendin" l="lhctw" angle="hctwang" e1="0.105"/>
+        <sbend name="bend" l="lhctw" angle="hctwang"/>
+        <sbend name="bendout" l="lhctw" angle="hctwang" e2="0.105"/>
+
+        <!--  <rfcavity name="CAV" volt="2.4" lag="1.7"/> -->
+        <drift name="CAV" l="0.0"/>
+        <monitor name="MON"/>
+        <hkicker name="hkick"/>
+        <vkicker name="vkick"/>
+    </elements>
+    <sectors>
+        <sector name="HC" line="BendEdge bendin M1HC bend M1HC bend M1HC bend M1HC bend M1HC bend M1HC bend M1HC bend M1HC bend M1HC bend M1HC bend M1HC bendout BendEdge"/>
+        <sector name="CELL" line="Mb drift1 drift1 drift1 drift1 drift1 drift1 drift1 drift1 drift1 drift1b mquadin quad1 quadt drift2 quad2 quadt drift3 HC drift4 S1 drift5 quad3 quadt drift6 S2 drift6 quadt quad3 drift7 S1 drift8 HC drift3 quadt quad2 drift2 quadt quad1 mquadout drift1b drift1 drift1 drift1 drift1 drift1 drift1 drift1 drift1 drift1 CellEnd"/>
+        <sector name="CELLt12" line="CELL CELL CELL CELL CELL CELL CELL CELL CELL CELL CELL CELL"/>
+        <sector name="ring" line="mbegin CELLt12 CAV mend"/>
+    </sectors>
+</adxf>

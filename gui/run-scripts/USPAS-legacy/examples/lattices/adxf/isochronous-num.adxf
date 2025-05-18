@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adxf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="file:/home/ualusr/USPAS/ual1/doc/adxf-cesr/adxf.xsd">
+    <constants>
+        <!--   ! If nhalf is changed, # of cells must be changed in "ring", and also 
+    ! requested tunes must be changed in "tune" and "tunethin". See !***! 
+    -->
+        <constant name="pi" value="3.14159265359"/>
+        <constant name="twopi" value="6.28318530718"/>
+        <constant name="c" value="299792458"/>
+        <constant name="nhalf" value="104"/>
+        <!--    ! bends are to be removed from the 
+    ! 20 half-cells making up the 2 long
+    ! straight sections
+    ! 2arcs, 7 triplecells/arc, 6half-cell per triplecell + 20 = 104 
+    -->
+        <constant name="scale" value="0.0879725085910653"/>
+        <constant name="dipfrac" value="0.9994"/>
+        <constant name="quadfrac" value="0.0002"/>
+        <constant name="sextfrac" value="0.0001"/>
+        <constant name="nuxfrac" value="0.25"/>
+        <constant name="nuyfrac" value="0.25"/>
+        <constant name="celltunxi" value="0.2"/>
+        <constant name="celltunyi" value="0.2"/>
+        <!-- x tune adv./cell. (int. pt.) 0.2->72deg
+         !  y tune adv./cell. (int. pt.) 
+    -->
+        <constant name="lhalf" value="9.149140893470792"/>
+        <constant name="ld" value="9.143651408934709"/>
+        <constant name="ldh" value="4.571825704467354"/>
+        <constant name="lq" value="0.0018298281786941584"/>
+        <constant name="ls" value="0.0009149140893470792"/>
+        <constant name="nux" value="10.65"/>
+        <constant name="nuy" value="10.65"/>
+        <constant name="nhbend" value="84"/>
+        <constant name="deltheta" value="0.0747998250854762"/>
+        <constant name="deltheth" value="0.0373999125427381"/>
+        <constant name="cellmux" value="1.2868446831051348"/>
+        <constant name="cellmuy" value="1.2868446831051348"/>
+        <constant name="sxby2" value="0.5999369843462081"/>
+        <constant name="syby2" value="0.5999369843462081"/>
+        <constant name="ss2bar" value="0.3599243851864224"/>
+        <constant name="delss2" value="0"/>
+        <constant name="sqrterm" value="0.5999369843462081"/>
+        <constant name="q2lt" value="-0.5999369843462081"/>
+        <constant name="q2t" value="-0.06557304028122993"/>
+        <constant name="q1lt" value="0.5999369843462081"/>
+        <constant name="q1t" value="0.06557304028122993"/>
+        <constant name="ratx1t" value="3.99921242840095"/>
+        <constant name="raty1t" value="0.25004923291855274"/>
+        <constant name="ratx2t" value="0.25004923291855274"/>
+        <constant name="raty2t" value="3.99921242840095"/>
+        <constant name="betax1t" value="30.497336845002398"/>
+        <constant name="betay1t" value="7.625835684151565"/>
+        <constant name="betax2t" value="7.625835684151565"/>
+        <constant name="betay2t" value="30.497336845002398"/>
+        <constant name="fact1" value="0.5333998530171395"/>
+        <constant name="fact2" value="0.25004923291855274"/>
+        <constant name="q1" value="0.06524665212155689"/>
+        <constant name="q1l" value="0.5999369843462082"/>
+        <constant name="kq1" value="36.09763274497967"/>
+        <constant name="q2" value="-0.06549142717227"/>
+        <constant name="q2l" value="-0.5999369843462082"/>
+        <constant name="kq2" value="-36.283446864923256"/>
+        <constant name="ratx1" value="3.9992124284009507"/>
+        <constant name="raty1" value="0.2500492329185527"/>
+        <constant name="ratx2" value="0.2500492329185527"/>
+        <constant name="raty2" value="3.9992124284009507"/>
+        <constant name="betax1" value="30.497336845002405"/>
+        <constant name="betay1" value="7.625835684151564"/>
+        <constant name="betax2" value="7.625835684151564"/>
+        <constant name="betay2" value="30.497336845002405"/>
+        <constant name="eta1" value="2.4717381043678697"/>
+        <constant name="eta2" value="1.331028069196793"/>
+        <constant name="s1" value="0.02639707338178665"/>
+        <constant name="s2" value="-0.04920364092080395"/>
+        <constant name="ks1" value="36.69047274043105"/>
+        <constant name="ks2" value="-69.18977169876223"/>
+        <constant name="tanhalf" value="0.037417360057046746"/>
+        <constant name="delta" value="0.0010"/>
+        <constant name="rhozero" value="122.31500385215836"/>
+        <constant name="denom1" value="1.0000060343962973"/>
+        <constant name="sd1" value="4.576769407389521"/>
+        <constant name="xd1" value="0.0017336453519727164"/>
+        <constant name="c11" value="9.153538933810799"/>
+        <constant name="denom2" value="0.9999967382940058"/>
+        <constant name="sd2" value="4.576769271147546"/>
+        <constant name="xd2" value="0.0017299849517185386"/>
+        <constant name="c12" value="9.153538577072155"/>
+        <constant name="c1" value="18.307077510882955"/>
+        <constant name="c10" value="18.306818158061077"/>
+        <constant name="gamsq" value="70.5865393153007"/>
+        <constant name="kq1s" value="-55.95133075471849"/>
+        <constant name="kq2s" value="48.9826532676464"/>
+        <constant name="kq1w" value="-7.219526548995932"/>
+        <constant name="kq2w" value="7.25668937298465"/>
+        <constant name="q1s" value="-0.10238132165042098"/>
+        <constant name="q2s" value="0.08962983921634488"/>
+        <constant name="q1w" value="-0.01321049311618335"/>
+        <constant name="q2w" value="0.013278494698717756"/>
+        <constant name="delaug" value="0.762"/>
+        <constant name="delthmi" value="0.008901179185171667"/>
+        <constant name="delthpl" value="0.06589864590030453"/>
+        <constant name="dsangle" value="-0.1495996501709524"/>
+        <!--  -->
+    </constants>
+    <elements>
+        <marker name="mk1"/>
+        <marker name="mkst"/>
+        <marker name="mkb"/>
+        <marker name="mtrip"/>
+        <marker name="mbegin"/>
+        <marker name="mend"/>
+        <quadrupole name="quadhf" l="0.0018298281786941584" k1="36.09763274497967"/>
+        <quadrupole name="quadvf" l="0.0018298281786941584" k1="-36.283446864923256"/>
+        <quadrupole name="quadhfs" l="0.0018298281786941584" k1="-55.95133075471849"/>
+        <quadrupole name="quadvfs" l="0.0018298281786941584" k1="48.9826532676464"/>
+        <quadrupole name="quadhfw" l="0.0018298281786941584" k1="-7.219526548995932"/>
+        <quadrupole name="quadvfw" l="0.0018298281786941584" k1="7.25668937298465"/>
+        <sbend name="bendh" l="4.571825704467354" angle="0.0373999125427381"/>
+        <sbend name="bendhpl" l="4.571825704467354" angle="0.06589864590030453"/>
+        <sbend name="bendhmi" l="4.571825704467354" angle="0.008901179185171667"/>
+        <sbend name="dsbendh" l="4.571825704467354" angle="-0.1495996501709524"/>
+        <drift name="nobend" l="9.143651408934709"/>
+        <sextupole name="sext1" l="0.0009149140893470792" k2="36.69047274043105"/>
+        <sextupole name="sext2" l="0.0009149140893470792" k2="-69.18977169876223"/>
+    </elements>
+    <!--  -->
+    <sectors>
+        <sector name="bend" line="bendh mkb bendh"/>
+        <sector name="dsbend" line="dsbendh mkb dsbendh"/>
+        <sector name="bendpl" line="bendhpl mkb bendhpl"/>
+        <sector name="bendmi" line="bendhmi mkb bendhmi"/>
+        <sector name="threecel" line="mtrip quadhfs sext1 bendhmi mkb bendhmi sext2 quadvfs quadvfs sext2 bendhmi mkb bendhpl sext1 quadhfs quadhfw sext1 bendhpl mkb bendhpl sext2 quadvfw quadvfw sext2 bendhpl mkb bendhpl sext1 quadhfw quadhfs sext1 bendhpl mkb bendhmi sext2 quadvfs quadvfs sext2 bendhmi mkb bendhmi sext1 quadhfs mtrip"/>
+        <sector name="arc" line="threecel threecel threecel threecel threecel threecel threecel"/>
+        <sector name="dscelw" line="mk1 quadhfw dsbend quadvfw quadvfw dsbend quadhfw"/>
+        <sector name="dscels" line="mk1 quadhfs dsbend quadvfs quadvfs dsbend quadhfs"/>
+        <sector name="threeds" line="mtrip dscels dscelw dscels mtrip"/>
+        <sector name="ring" line="mbegin mkst arc mkst arc mkst mend"/>
+    </sectors>
+</adxf>

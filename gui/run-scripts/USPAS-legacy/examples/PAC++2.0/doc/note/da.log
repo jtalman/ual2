@@ -1,0 +1,158 @@
+This is TeX, Version 3.141 (C version d) (format=lplain 93.6.25)  27 DEC 1994 09:51
+**da
+(da.tex
+LaTeX Version 2.09 <25 March 1992>
+(/usr2/local/lib/tex/macros/article.sty
+Document Style `article' <16 Mar 88>.
+(/usr2/local/lib/tex/macros/art10.sty)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+) (da.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
+
+
+\hbox(0.0+0.0)x345.0
+.\glue(\rightskip) 0.0
+
+[1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 95--104
+
+
+\hbox(0.0+0.0)x320.0
+.\penalty -10000
+.\glue(\rightskip) 0.0
+
+[2]
+Overfull \hbox (2.56822pt too wide) in alignment at lines 106--111
+ [] [] [] [] 
+
+\hbox(0.0+0.0)x320.0
+.\glue(\tabskip) 0.0 plus 1000.0
+.\unsetbox(0.0+0.0)x0.0
+.\glue(\tabskip) 0.0
+.\unsetbox(0.0+0.0)x10.0
+.\glue(\tabskip) 0.0
+.etc.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--134
+
+
+\hbox(0.0+0.0)x320.0
+.\penalty -10000
+.\glue(\rightskip) 0.0
+
+
+Overfull \hbox (43.68826pt too wide) in paragraph at lines 117--134
+\tenrm with the over-loaded mul-ti-plica-tive op-er-a-tor $\tenmi Target \tenrm
+ :: \tenmi operator \tensy ^^C \tenrm (\tenmi Particle\tenrm & \tenmi particle\
+tenrm )$: 
+
+\hbox(7.5+2.5)x320.0, glue set - 1.0
+.\tenrm w
+.\tenrm i
+.\tenrm t
+.\tenrm h
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+
+Overfull \hbox (2.85475pt too wide) in alignment at lines 134--139
+ [] [] [] [] 
+
+\hbox(0.0+0.0)x320.0
+.\glue(\tabskip) 0.0 plus 1000.0
+.\unsetbox(0.0+0.0)x0.0
+.\glue(\tabskip) 0.0
+.\unsetbox(0.0+0.0)x10.0
+.\glue(\tabskip) 0.0
+.etc.
+
+[3]
+! Please use \mathaccent for accents in math mode.
+\~#1->{\accent 
+               "7E #1}
+l.180 B_x & = & \~{B}
+                     _r x - \~{B}_{\phi} y       \nonumber \\
+? 
+! Please use \mathaccent for accents in math mode.
+\~#1->{\accent 
+               "7E #1}
+l.180 B_x & = & \~{B}_r x - \~{B}
+                                 _{\phi} y       \nonumber \\
+? 
+! Please use \mathaccent for accents in math mode.
+\~#1->{\accent 
+               "7E #1}
+l.183 B_y & = & \~{B}
+                     _r y + \~{B}_{\phi} x       \nonumber \\
+? 
+! Please use \mathaccent for accents in math mode.
+\~#1->{\accent 
+               "7E #1}
+l.183 B_y & = & \~{B}_r y + \~{B}
+                                 _{\phi} x       \nonumber \\
+? 
+! Please use \mathaccent for accents in math mode.
+\~#1->{\accent 
+               "7E #1}
+l.186 B_z & = & - k\~{B}
+                        _{\phi} r^{2} \nonumber \\
+? 
+! Please use \mathaccent for accents in math mode.
+\~#1->{\accent 
+               "7E #1}
+l.192 \~{B}
+           _r & = &  -8 \sum_{m=1} (km/2)^{m+2}
+? 
+! Please use \mathaccent for accents in math mode.
+\~#1->{\accent 
+               "7E #1}
+l.193 (\~{I}
+            _{m-1}(mkr) - \frac{m}{2}\~{I}_{m}(mkr))\\
+? 
+! Please use \mathaccent for accents in math mode.
+\~#1->{\accent 
+               "7E #1}
+l.193 (\~{I}_{m-1}(mkr) - \frac{m}{2}\~{I}
+                                          _{m}(mkr))\\
+? 
+! Please use \mathaccent for accents in math mode.
+\~#1->{\accent 
+               "7E #1}
+l.195 \~{B}
+           _{\phi} & = & -\frac{8}{k} \sum_{m=1} (km/2)^{m+3} \~{I}_m(mkr) \\
+? 
+! Please use \mathaccent for accents in math mode.
+\~#1->{\accent 
+               "7E #1}
+l.195 ...\frac{8}{k} \sum_{m=1} (km/2)^{m+3} \~{I}
+                                                  _m(mkr) \\
+? 
+[4]
+! Please use \mathaccent for accents in math mode.
+\~#1->{\accent 
+               "7E #1}
+l.200 \~{I}
+           _m(z)   =  \sum_{i=1}^{\infty}\frac{(z/2)^{2(i-1)}}{4\,i!\,(m+i)!...
+
+? 
+[5] [6] (da.aux) ) 
+Here is how much of TeX's memory you used:
+ 158 strings out of 11979
+ 1455 string characters out of 87189
+ 33799 words of memory out of 262141
+ 2115 multiletter control sequences out of 9500
+ 18996 words of font info for 72 fonts, out of 100000 for 255
+ 14 hyphenation exceptions out of 607
+ 13i,9n,15p,156b,164s stack positions out of 300i,40n,60p,3000b,4000s
+
+Output written on da.dvi (6 pages, 16504 bytes).

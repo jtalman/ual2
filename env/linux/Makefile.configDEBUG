@@ -1,0 +1,27 @@
+MAKE     = make
+PERL     = perl
+
+LEX      = flex
+YACC     = bison
+YACC_LIB = -lfl -lm
+
+GPERF    = gperf
+
+cc       = gcc
+CC       = g++                                    # Compiler
+#CCFLAGS = -O -fpic -ansi -frepo -pedantic -Wall  # Compilation flags
+#CCFLAGS  = -O -fpic  -Wall  -Wno-deprecated      # Compilation flags
+#CCFLAGS  = -g -fpic  -Wall  -Wno-deprecated      # Compilation flags
+ CCFLAGS  = -g -fpic  -O0 -fno-inline -Wall  -Wno-deprecated      # Compilation flags
+
+DLD      = g++                                    # Dynamic linker
+DLDFLAGS = -shared                                # Dynamic linker flags
+LD       = g++                                    # Linker
+LDFLAGS  =                                        # Linker flags
+
+
+AR       = ar
+ARFLAGS  = crdiff
+RANLIB   = ranlib
+
+#USE_GPU  = FALSE

@@ -1,0 +1,3425 @@
+// SXF version 2.0
+ring sequence
+ {
+   clock6
+     marker {
+         tag = clock6
+         at = 0
+         };
+   hstar1
+     solenoid {
+         tag = hstar1
+         l = 0.750001
+         at = 0.3750005
+         };
+   ap6p9g
+     marker {
+         tag = ap6p9g
+         at = 0.750001
+         };
+   hstar2
+     solenoid {
+         tag = hstar2
+         l = 2.349999
+         at = 1.9250005
+         };
+   ap6p10g
+     marker {
+         tag = ap6p10g
+         at = 4.038599
+         };
+   ap6p11g
+     marker {
+         tag = ap6p11g
+         at = 4.352797
+         };
+   ap6p12g
+     marker {
+         tag = ap6p12g
+         at = 7.142352
+         };
+   ap6p13g
+     marker {
+         tag = ap6p13g
+         at = 7.4121
+         };
+   ap6p14g
+     marker {
+         tag = ap6p14g
+         at = 7.802625
+         };
+   bpmh
+     hmonitor {
+         tag = bpmh
+         at = 7.993125
+         };
+   cplmon
+     monitor {
+         tag = cplmon
+         at = 7.993125
+         };
+   bpmv
+     vmonitor {
+         tag = bpmv
+         at = 7.993125
+         };
+   ap6p15g
+     marker {
+         tag = ap6p15g
+         at = 8.183625
+         };
+   ap6p16g
+     marker {
+         tag = ap6p16g
+         at = 8.516873
+         };
+   mvalve
+     marker {
+         tag = mvalve
+         at = 8.565623
+         };
+   ap6p17g
+     marker {
+         tag = ap6p17g
+         at = 8.614374
+         };
+   eldxmp06
+     multipole {
+         tag = eldxmp06
+         at = 9.8
+         body = {
+                 kl = [ 0 0]
+                }
+         };
+   dxmp06
+     sbend {
+         tag = dxmp06
+         arc = 3.70021937559
+         at = 11.6501096878
+         body = {
+                 kl = [ -0.0188607907827]
+                }
+         };
+   erdxmp06
+     multipole {
+         tag = erdxmp06
+         at = 13.5002193756
+         body = {
+                 kl = [ 0 -9.61487901076e-05]
+                }
+         };
+   mvalve.2
+     marker {
+         tag = mvalve
+         at = 19.5742869765
+         };
+   erd0pp06
+     multipole {
+         tag = erd0pp06
+         at = 20.5071131745
+         };
+   d0pp06
+     sbend {
+         tag = d0pp06
+         arc = 3.58896623069
+         at = 22.3015962899
+         body = {
+                 kl = [ 0.0151862520728]
+                }
+         };
+   eld0pp06
+     multipole {
+         tag = eld0pp06
+         at = 24.0960794052
+         };
+   bpmv.2
+     vmonitor {
+         tag = bpmv
+         at = 25.0237831666
+         };
+   cplmon.2
+     monitor {
+         tag = cplmon
+         at = 25.0237831666
+         };
+   bpmh.2
+     hmonitor {
+         tag = bpmh
+         at = 25.0237831666
+         };
+   er06b01
+     multipole {
+         tag = er06b01
+         at = 25.3607279666
+         };
+   q1o6
+     quadrupole {
+         tag = q1o6
+         l = 1.44
+         at = 26.0807279666
+         body = {
+                 kl = [ 0 -0.0830284298192]
+                }
+         };
+   el06b01
+     multipole {
+         tag = el06b01
+         at = 26.8007279666
+         };
+   kickh
+     hkicker {
+         tag = kickh
+         at = 27.9831559666
+         };
+   b3m06c1b
+     multipole {
+         tag = b3m06c1b
+         at = 27.9831559666
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   b4m06c1b
+     multipole {
+         tag = b4m06c1b
+         at = 27.9831559666
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   b5m06c1b
+     multipole {
+         tag = b5m06c1b
+         at = 27.9831559666
+         body = {
+                 kl = [ 0 0 0 0 0 0]
+                }
+         };
+   er06b02
+     multipole {
+         tag = er06b02
+         at = 28.4773594666
+         };
+   q2o6
+     quadrupole {
+         tag = q2o6
+         l = 3.391633
+         at = 30.1731759666
+         body = {
+                 kl = [ 0 0.190342470921]
+                }
+         };
+   el06b02
+     multipole {
+         tag = el06b02
+         at = 31.8689924666
+         };
+   a5m06c2b
+     multipole {
+         tag = a5m06c2b
+         at = 33.2399539666
+         };
+   a3m06c2b
+     multipole {
+         tag = a3m06c2b
+         at = 33.2399539666
+         };
+   a2m06c2b
+     multipole {
+         tag = a2m06c2b
+         at = 33.2399539666
+         };
+   sq06c2b
+     quadrupole {
+         tag = sq06c2b
+         l = 1e-06
+         at = 33.2399544666
+         };
+   el06b03
+     multipole {
+         tag = el06b03
+         at = 33.7297319666
+         };
+   q3o6
+     quadrupole {
+         tag = q3o6
+         l = 2.100484
+         at = 34.7799739666
+         body = {
+                 kl = [ 0 -0.118050518188]
+                }
+         };
+   er06b03
+     multipole {
+         tag = er06b03
+         at = 35.8302159666
+         };
+   kickv
+     vkicker {
+         tag = kickv
+         at = 36.4281839666
+         };
+   b2m06c3b
+     multipole {
+         tag = b2m06c3b
+         at = 36.4281839666
+         body = {
+                 kl = [ 0 0 0]
+                }
+         };
+   b3m06c3b
+     multipole {
+         tag = b3m06c3b
+         at = 36.4281839666
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   b5m06c3b
+     multipole {
+         tag = b5m06c3b
+         at = 36.4281839666
+         body = {
+                 kl = [ 0 0 0 0 0 0]
+                }
+         };
+   bpmv.3
+     vmonitor {
+         tag = bpmv
+         at = 36.8996122266
+         };
+   cplmon.3
+     monitor {
+         tag = cplmon
+         at = 36.8996122266
+         };
+   bpmh.3
+     hmonitor {
+         tag = bpmh
+         at = 36.8996122266
+         };
+   mvalve.3
+     marker {
+         tag = mvalve
+         at = 38.4871022266
+         };
+   ap6p0b
+     marker {
+         tag = ap6p0b
+         at = 38.5358522266
+         };
+   ap6p1b
+     marker {
+         tag = ap6p1b
+         at = 38.7306702266
+         };
+   ap6p2b
+     marker {
+         tag = ap6p2b
+         at = 39.0639182266
+         };
+   ap6p3b
+     marker {
+         tag = ap6p3b
+         at = 39.3565262266
+         };
+   kfbhl
+     hkicker {
+         tag = kfbhl
+         l = 1.2637
+         at = 40.0067192266
+         };
+   ap6p4b
+     marker {
+         tag = ap6p4b
+         at = 44.5527822266
+         };
+   ap6p5b
+     marker {
+         tag = ap6p5b
+         at = 47.6797762266
+         };
+   ap6p6b
+     marker {
+         tag = ap6p6b
+         at = 47.9723842266
+         };
+   ap6p7b
+     marker {
+         tag = ap6p7b
+         at = 48.3056322266
+         };
+   ap6p8b
+     marker {
+         tag = ap6p8b
+         at = 48.5982402266
+         };
+   ap6p9b
+     marker {
+         tag = ap6p9b
+         at = 53.7944962266
+         };
+   ap6p10b
+     marker {
+         tag = ap6p10b
+         at = 54.7076262266
+         };
+   ap6p11b
+     marker {
+         tag = ap6p11b
+         at = 55.0002342266
+         };
+   ap6p12b
+     marker {
+         tag = ap6p12b
+         at = 55.2415342266
+         };
+   rp
+     instrument {
+         tag = rp
+         at = 55.4955342266
+         };
+   ap6p13b
+     marker {
+         tag = ap6p13b
+         at = 55.7495342266
+         };
+   ap6p14b
+     marker {
+         tag = ap6p14b
+         at = 55.9908342266
+         };
+   ap6p15b
+     marker {
+         tag = ap6p15b
+         at = 56.2834422266
+         };
+   ap6p16b
+     marker {
+         tag = ap6p16b
+         at = 57.7076202266
+         };
+   ap6p17b
+     marker {
+         tag = ap6p17b
+         at = 58.0002282266
+         };
+   ap6p18b
+     marker {
+         tag = ap6p18b
+         at = 58.2415282266
+         };
+   rp.2
+     instrument {
+         tag = rp
+         at = 58.4955282266
+         };
+   ap6p19b
+     marker {
+         tag = ap6p19b
+         at = 58.7495282266
+         };
+   ap6p20b
+     marker {
+         tag = ap6p20b
+         at = 58.9908282266
+         };
+   ap6p21b
+     marker {
+         tag = ap6p21b
+         at = 59.2834362266
+         };
+   ap6p22b
+     marker {
+         tag = ap6p22b
+         at = 59.6166842266
+         };
+   ap6p23b
+     marker {
+         tag = ap6p23b
+         at = 59.7975322266
+         };
+   ap6p24b
+     marker {
+         tag = ap6p24b
+         at = 60.0134322266
+         };
+   mvalve.4
+     marker {
+         tag = mvalve
+         at = 60.0559332496
+         };
+   ap6p25b
+     marker {
+         tag = ap6p25b
+         at = 60.0984342496
+         };
+   erhlx
+     multipole {
+         tag = erhlx
+         at = 61.4083732496
+         };
+   elhlx
+     multipole {
+         tag = elhlx
+         at = 63.8083732496
+         };
+   elhlx.2
+     multipole {
+         tag = elhlx
+         at = 64.0203732496
+         };
+   erhlx.2
+     multipole {
+         tag = erhlx
+         at = 66.4203732496
+         };
+   bpmv.4
+     vmonitor {
+         tag = bpmv
+         at = 66.6443732496
+         };
+   bpmh.4
+     hmonitor {
+         tag = bpmh
+         at = 66.6443732496
+         };
+   erhlx.3
+     multipole {
+         tag = erhlx
+         at = 66.8683732496
+         };
+   elhlx.3
+     multipole {
+         tag = elhlx
+         at = 69.2683732496
+         };
+   elhlx.4
+     multipole {
+         tag = elhlx
+         at = 69.4803732496
+         };
+   erhlx.4
+     multipole {
+         tag = erhlx
+         at = 71.8803732496
+         };
+   bpmv.5
+     vmonitor {
+         tag = bpmv
+         at = 73.1987416496
+         };
+   cplmon.4
+     monitor {
+         tag = cplmon
+         at = 73.1987416496
+         };
+   bpmh.5
+     hmonitor {
+         tag = bpmh
+         at = 73.1987416496
+         };
+   q4ot6
+     quadrupole {
+         tag = q4ot6
+         l = 0.75
+         at = 73.7999812496
+         body = {
+                 kl = [ 0 0.0265146340615]
+                }
+         };
+   erq4op
+     multipole {
+         tag = erq4op
+         at = 74.3050567496
+         };
+   q4o6
+     quadrupole {
+         tag = q4o6
+         l = 1.811949
+         at = 75.2110312496
+         body = {
+                 kl = [ 0 0.167480707266]
+                }
+         };
+   elq4op
+     multipole {
+         tag = elq4op
+         at = 76.1170057496
+         };
+   kickh.2
+     hkicker {
+         tag = kickh
+         at = 76.6612812496
+         };
+   oct
+     multipole {
+         tag = oct
+         at = 76.6612812496
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec
+     multipole {
+         tag = dec
+         at = 76.6612812496
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   sqsk
+     quadrupole {
+         tag = sqsk
+         l = 1e-06
+         at = 76.6612817496
+         };
+   bpmv.6
+     vmonitor {
+         tag = bpmv
+         at = 81.0287536496
+         };
+   q5ot6
+     quadrupole {
+         tag = q5ot6
+         l = 0.75
+         at = 81.6299812496
+         body = {
+                 kl = [ 0 0.0112859962144]
+                }
+         };
+   erq5op
+     multipole {
+         tag = erq5op
+         at = 82.1360312496
+         };
+   q5o6
+     quadrupole {
+         tag = q5o6
+         l = 1.11
+         at = 82.6910312496
+         body = {
+                 kl = [ 0 -0.102269257542]
+                }
+         };
+   elq5op
+     multipole {
+         tag = elq5op
+         at = 83.2460312496
+         };
+   kickv.2
+     vkicker {
+         tag = kickv
+         at = 83.7912812496
+         };
+   oct.2
+     multipole {
+         tag = oct
+         at = 83.7912812496
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.2
+     multipole {
+         tag = dec
+         at = 83.7912812496
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   sqsk.2
+     quadrupole {
+         tag = sqsk
+         l = 1e-06
+         at = 83.7912817496
+         };
+   erd5o
+     multipole {
+         tag = erd5o
+         at = 85.7541071577
+         };
+   d5o
+     sbend {
+         tag = d5o
+         arc = 8.69844937519
+         at = 90.1033318453
+         body = {
+                 kl = [ 0.0358638929647]
+                }
+         };
+   eld5o
+     multipole {
+         tag = eld5o
+         at = 94.4525565329
+         };
+   bpmh.6
+     hmonitor {
+         tag = bpmh
+         at = 95.8533547921
+         };
+   q6ot6
+     quadrupole {
+         tag = q6ot6
+         l = 0.75
+         at = 96.4545823921
+         body = {
+                 kl = [ 0 -0.00825559076078]
+                }
+         };
+   erq6op
+     multipole {
+         tag = erq6op
+         at = 96.9606323921
+         };
+   q6o6
+     quadrupole {
+         tag = q6o6
+         l = 1.11
+         at = 97.5156323921
+         body = {
+                 kl = [ 0 0.102269257542]
+                }
+         };
+   elq6op
+     multipole {
+         tag = elq6op
+         at = 98.0706323921
+         };
+   kickh.3
+     hkicker {
+         tag = kickh
+         at = 98.6158823921
+         };
+   oct.3
+     multipole {
+         tag = oct
+         at = 98.6158823921
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.3
+     multipole {
+         tag = dec
+         at = 98.6158823921
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   qgtto
+     quadrupole {
+         tag = qgtto
+         l = 1e-06
+         at = 98.6158828921
+         };
+   erds
+     multipole {
+         tag = erds
+         at = 106.69800564
+         };
+   ds
+     sbend {
+         tag = ds
+         arc = 2.94942686017
+         at = 108.17271907
+         body = {
+                 kl = [ 0.0121605500771]
+                }
+         };
+   elds
+     multipole {
+         tag = elds
+         at = 109.647432501
+         };
+   kickv.3
+     vkicker {
+         tag = kickv
+         at = 111.231901839
+         };
+   oct.4
+     multipole {
+         tag = oct
+         at = 111.231901839
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.4
+     multipole {
+         tag = dec
+         at = 111.231901839
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   sqsk6
+     quadrupole {
+         tag = sqsk6
+         l = 1e-06
+         at = 111.231902339
+         };
+   elq7om
+     multipole {
+         tag = elq7om
+         at = 111.777279839
+         };
+   q7o6
+     quadrupole {
+         tag = q7o6
+         l = 0.929744
+         at = 112.242151839
+         body = {
+                 kl = [ 0 -0.0787487087766]
+                }
+         };
+   erq7om
+     multipole {
+         tag = erq7om
+         at = 112.707023839
+         };
+   bpmv.7
+     vmonitor {
+         tag = bpmv
+         at = 113.003110439
+         };
+   cplmon.5
+     monitor {
+         tag = cplmon
+         at = 113.003110439
+         };
+   bpmh.7
+     hmonitor {
+         tag = bpmh
+         at = 113.003110439
+         };
+   mvalve.5
+     marker {
+         tag = mvalve
+         at = 113.710000439
+         };
+   xend
+     marker {
+         tag = xend
+         at = 124.194849549
+         };
+   mvalve.6
+     marker {
+         tag = mvalve
+         at = 125.500000335
+         };
+   bpmv.8
+     vmonitor {
+         tag = bpmv
+         at = 126.112197335
+         };
+   cplmon.6
+     monitor {
+         tag = cplmon
+         at = 126.112197335
+         };
+   bpmh.8
+     hmonitor {
+         tag = bpmh
+         at = 126.112197335
+         };
+   erqfbp
+     multipole {
+         tag = erqfbp
+         at = 126.408198935
+         };
+   qfb6
+     quadrupole {
+         tag = qfb6
+         l = 1.11
+         at = 126.963198935
+         body = {
+                 kl = [ 0 0.0974539778453]
+                }
+         };
+   elqfbp
+     multipole {
+         tag = elqfbp
+         at = 127.518198935
+         };
+   kickh.4
+     hkicker {
+         tag = kickh
+         at = 128.063448935
+         };
+   oct.5
+     multipole {
+         tag = oct
+         at = 128.063448935
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.5
+     multipole {
+         tag = dec
+         at = 128.063448935
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   qgtto.2
+     quadrupole {
+         tag = qgtto
+         l = 1e-06
+         at = 128.063449435
+         };
+   erd
+     multipole {
+         tag = erd
+         at = 129.657154084
+         };
+   d
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 134.377482084
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld
+     multipole {
+         tag = eld
+         at = 139.097810084
+         };
+   kickv.4
+     vkicker {
+         tag = kickv
+         at = 140.691515234
+         };
+   oct.6
+     multipole {
+         tag = oct
+         at = 140.691515234
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.6
+     multipole {
+         tag = dec
+         at = 140.691515234
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   sqsk6.2
+     quadrupole {
+         tag = sqsk6
+         l = 1e-06
+         at = 140.691515734
+         };
+   elqdam
+     multipole {
+         tag = elqdam
+         at = 141.236765234
+         };
+   qda6
+     quadrupole {
+         tag = qda6
+         l = 1.11
+         at = 141.791765234
+         body = {
+                 kl = [ 0 -0.100103094263]
+                }
+         };
+   erqdam
+     multipole {
+         tag = erqdam
+         at = 142.346765234
+         };
+   bpmv.9
+     vmonitor {
+         tag = bpmv
+         at = 142.642766834
+         };
+   mvalve.7
+     marker {
+         tag = mvalve
+         at = 143.322946026
+         };
+   xki1
+     sbend {
+         tag = xki1
+         arc = 0.8
+         at = 144.444020026
+         };
+   xki2
+     sbend {
+         tag = xki2
+         arc = 0.8
+         at = 145.900162579
+         };
+   xki3
+     sbend {
+         tag = xki3
+         arc = 0.8
+         at = 147.356305133
+         };
+   xki4
+     sbend {
+         tag = xki4
+         arc = 0.8
+         at = 148.812447686
+         };
+   mvalve.8
+     marker {
+         tag = mvalve
+         at = 149.933521686
+         };
+   erds.2
+     multipole {
+         tag = erds
+         at = 150.974138482
+         };
+   ds.2
+     sbend {
+         tag = ds
+         arc = 2.94942686017
+         at = 152.448851912
+         body = {
+                 kl = [ 0.0121605500771]
+                }
+         };
+   elds.2
+     multipole {
+         tag = elds
+         at = 153.923565342
+         };
+   bpmh.9
+     hmonitor {
+         tag = bpmh
+         at = 154.946007081
+         };
+   sfpo
+     sextupole {
+         tag = sfpo
+         l = 0.75
+         at = 155.547234681
+         body = {
+                 kl = [ 0 0 0.216146999047]
+                }
+         };
+   erqfp
+     multipole {
+         tag = erqfp
+         at = 156.053284681
+         };
+   qf
+     quadrupole {
+         tag = qf
+         l = 1.11
+         at = 156.608284681
+         body = {
+                 kl = [ 0 0.0904699917251]
+                }
+         };
+   elqfp
+     multipole {
+         tag = elqfp
+         at = 157.163284681
+         };
+   kickh.5
+     hkicker {
+         tag = kickh
+         at = 157.708534681
+         };
+   oct.7
+     multipole {
+         tag = oct
+         at = 157.708534681
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.7
+     multipole {
+         tag = dec
+         at = 157.708534681
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   sqsk6.3
+     quadrupole {
+         tag = sqsk6
+         l = 1e-06
+         at = 157.708535181
+         };
+   sqsk6lc
+     quadrupole {
+         tag = sqsk6lc
+         l = 1e-06
+         at = 157.708536181
+         };
+   erd.2
+     multipole {
+         tag = erd
+         at = 159.30223983
+         };
+   d.2
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 164.02256783
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.2
+     multipole {
+         tag = eld
+         at = 168.74289583
+         };
+   bpmv.10
+     vmonitor {
+         tag = bpmv
+         at = 169.77457338
+         };
+   sdpo
+     sextupole {
+         tag = sdpo
+         l = 0.75
+         at = 170.37580098
+         body = {
+                 kl = [ 0 0 -0.395364067667]
+                }
+         };
+   erqdp
+     multipole {
+         tag = erqdp
+         at = 170.88185098
+         };
+   qd
+     quadrupole {
+         tag = qd
+         l = 1.11
+         at = 171.43685098
+         body = {
+                 kl = [ 0 -0.0936550956257]
+                }
+         };
+   elqdp
+     multipole {
+         tag = elqdp
+         at = 171.99185098
+         };
+   kickv.5
+     vkicker {
+         tag = kickv
+         at = 172.53710098
+         };
+   oct.8
+     multipole {
+         tag = oct
+         at = 172.53710098
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.8
+     multipole {
+         tag = dec
+         at = 172.53710098
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   sqsk6.4
+     quadrupole {
+         tag = sqsk6
+         l = 1e-06
+         at = 172.53710148
+         };
+   erd.3
+     multipole {
+         tag = erd
+         at = 174.13080613
+         };
+   d.3
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 178.85113413
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.3
+     multipole {
+         tag = eld
+         at = 183.57146213
+         };
+   bpmh.10
+     hmonitor {
+         tag = bpmh
+         at = 184.60313968
+         };
+   sfmo
+     sextupole {
+         tag = sfmo
+         l = 0.75
+         at = 185.20436728
+         body = {
+                 kl = [ 0 0 0.216146999047]
+                }
+         };
+   erqfp.2
+     multipole {
+         tag = erqfp
+         at = 185.71041728
+         };
+   qf.2
+     quadrupole {
+         tag = qf
+         l = 1.11
+         at = 186.26541728
+         body = {
+                 kl = [ 0 0.0904699917251]
+                }
+         };
+   elqfp.2
+     multipole {
+         tag = elqfp
+         at = 186.82041728
+         };
+   kickh.6
+     hkicker {
+         tag = kickh
+         at = 187.36566728
+         };
+   oct.9
+     multipole {
+         tag = oct
+         at = 187.36566728
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.9
+     multipole {
+         tag = dec
+         at = 187.36566728
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   qgtjo
+     quadrupole {
+         tag = qgtjo
+         l = 1e-06
+         at = 187.36566778
+         };
+   erd.4
+     multipole {
+         tag = erd
+         at = 188.959372429
+         };
+   d.4
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 193.679700429
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.4
+     multipole {
+         tag = eld
+         at = 198.400028429
+         };
+   bpmv.11
+     vmonitor {
+         tag = bpmv
+         at = 199.431705979
+         };
+   sdmo
+     sextupole {
+         tag = sdmo
+         l = 0.75
+         at = 200.032933579
+         body = {
+                 kl = [ 0 0 -0.395364067667]
+                }
+         };
+   erqdp.2
+     multipole {
+         tag = erqdp
+         at = 200.538983579
+         };
+   qd.2
+     quadrupole {
+         tag = qd
+         l = 1.11
+         at = 201.093983579
+         body = {
+                 kl = [ 0 -0.0936550956257]
+                }
+         };
+   elqdp.2
+     multipole {
+         tag = elqdp
+         at = 201.648983579
+         };
+   kickv.6
+     vkicker {
+         tag = kickv
+         at = 202.194233579
+         };
+   oct.10
+     multipole {
+         tag = oct
+         at = 202.194233579
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.10
+     multipole {
+         tag = dec
+         at = 202.194233579
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   sqsk.3
+     quadrupole {
+         tag = sqsk
+         l = 1e-06
+         at = 202.194234079
+         };
+   erd.5
+     multipole {
+         tag = erd
+         at = 203.787938729
+         };
+   d.5
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 208.508266729
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.5
+     multipole {
+         tag = eld
+         at = 213.228594729
+         };
+   bpmh.11
+     hmonitor {
+         tag = bpmh
+         at = 214.260272279
+         };
+   sfpo.2
+     sextupole {
+         tag = sfpo
+         l = 0.75
+         at = 214.861499879
+         body = {
+                 kl = [ 0 0 0.216146999047]
+                }
+         };
+   erqfp.3
+     multipole {
+         tag = erqfp
+         at = 215.367549879
+         };
+   qf.3
+     quadrupole {
+         tag = qf
+         l = 1.11
+         at = 215.922549879
+         body = {
+                 kl = [ 0 0.0904699917251]
+                }
+         };
+   elqfp.3
+     multipole {
+         tag = elqfp
+         at = 216.477549879
+         };
+   kickh.7
+     hkicker {
+         tag = kickh
+         at = 217.022799879
+         };
+   oct.11
+     multipole {
+         tag = oct
+         at = 217.022799879
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.11
+     multipole {
+         tag = dec
+         at = 217.022799879
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   qgtjo.2
+     quadrupole {
+         tag = qgtjo
+         l = 1e-06
+         at = 217.022800379
+         };
+   erd.6
+     multipole {
+         tag = erd
+         at = 218.616505028
+         };
+   d.6
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 223.336833028
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.6
+     multipole {
+         tag = eld
+         at = 228.057161028
+         };
+   bpmv.12
+     vmonitor {
+         tag = bpmv
+         at = 229.088838578
+         };
+   sdpo.2
+     sextupole {
+         tag = sdpo
+         l = 0.75
+         at = 229.690066178
+         body = {
+                 kl = [ 0 0 -0.395364067667]
+                }
+         };
+   erqdp.3
+     multipole {
+         tag = erqdp
+         at = 230.196116178
+         };
+   qd.3
+     quadrupole {
+         tag = qd
+         l = 1.11
+         at = 230.751116178
+         body = {
+                 kl = [ 0 -0.0936550956257]
+                }
+         };
+   elqdp.3
+     multipole {
+         tag = elqdp
+         at = 231.306116178
+         };
+   kickv.7
+     vkicker {
+         tag = kickv
+         at = 231.851366178
+         };
+   oct.12
+     multipole {
+         tag = oct
+         at = 231.851366178
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.12
+     multipole {
+         tag = dec
+         at = 231.851366178
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   sqsk.4
+     quadrupole {
+         tag = sqsk
+         l = 1e-06
+         at = 231.851366678
+         };
+   erd.7
+     multipole {
+         tag = erd
+         at = 233.445071328
+         };
+   d.7
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 238.165399328
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.7
+     multipole {
+         tag = eld
+         at = 242.885727328
+         };
+   bpmh.12
+     hmonitor {
+         tag = bpmh
+         at = 243.917404877
+         };
+   sfmo.2
+     sextupole {
+         tag = sfmo
+         l = 0.75
+         at = 244.518632477
+         body = {
+                 kl = [ 0 0 0.216146999047]
+                }
+         };
+   erqfp.4
+     multipole {
+         tag = erqfp
+         at = 245.024682477
+         };
+   qf.4
+     quadrupole {
+         tag = qf
+         l = 1.11
+         at = 245.579682477
+         body = {
+                 kl = [ 0 0.0904699917251]
+                }
+         };
+   elqfp.4
+     multipole {
+         tag = elqfp
+         at = 246.134682477
+         };
+   kickh.8
+     hkicker {
+         tag = kickh
+         at = 246.679932477
+         };
+   oct.13
+     multipole {
+         tag = oct
+         at = 246.679932477
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.13
+     multipole {
+         tag = dec
+         at = 246.679932477
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   qgtjo.3
+     quadrupole {
+         tag = qgtjo
+         l = 1e-06
+         at = 246.679932977
+         };
+   erd.8
+     multipole {
+         tag = erd
+         at = 248.273637627
+         };
+   d.8
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 252.993965627
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.8
+     multipole {
+         tag = eld
+         at = 257.714293627
+         };
+   bpmv.13
+     vmonitor {
+         tag = bpmv
+         at = 258.745971177
+         };
+   sdmo.2
+     sextupole {
+         tag = sdmo
+         l = 0.75
+         at = 259.347198777
+         body = {
+                 kl = [ 0 0 -0.395364067667]
+                }
+         };
+   erqdp.4
+     multipole {
+         tag = erqdp
+         at = 259.853248777
+         };
+   qd.4
+     quadrupole {
+         tag = qd
+         l = 1.11
+         at = 260.408248777
+         body = {
+                 kl = [ 0 -0.0936550956257]
+                }
+         };
+   elqdp.4
+     multipole {
+         tag = elqdp
+         at = 260.963248777
+         };
+   kickv.8
+     vkicker {
+         tag = kickv
+         at = 261.508498777
+         };
+   oct.14
+     multipole {
+         tag = oct
+         at = 261.508498777
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.14
+     multipole {
+         tag = dec
+         at = 261.508498777
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   sqsk.5
+     quadrupole {
+         tag = sqsk
+         l = 1e-06
+         at = 261.508499277
+         };
+   erd.9
+     multipole {
+         tag = erd
+         at = 263.102203927
+         };
+   d.9
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 267.822531927
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.9
+     multipole {
+         tag = eld
+         at = 272.542859927
+         };
+   bpmh.13
+     hmonitor {
+         tag = bpmh
+         at = 273.574537476
+         };
+   sfpo.3
+     sextupole {
+         tag = sfpo
+         l = 0.75
+         at = 274.175765076
+         body = {
+                 kl = [ 0 0 0.216146999047]
+                }
+         };
+   erqfp.5
+     multipole {
+         tag = erqfp
+         at = 274.681815076
+         };
+   qf.5
+     quadrupole {
+         tag = qf
+         l = 1.11
+         at = 275.236815076
+         body = {
+                 kl = [ 0 0.0904699917251]
+                }
+         };
+   elqfp.5
+     multipole {
+         tag = elqfp
+         at = 275.791815076
+         };
+   kickh.9
+     hkicker {
+         tag = kickh
+         at = 276.337065076
+         };
+   oct.15
+     multipole {
+         tag = oct
+         at = 276.337065076
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.15
+     multipole {
+         tag = dec
+         at = 276.337065076
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   qgtjo.4
+     quadrupole {
+         tag = qgtjo
+         l = 1e-06
+         at = 276.337065576
+         };
+   erd.10
+     multipole {
+         tag = erd
+         at = 277.930770226
+         };
+   d.10
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 282.651098226
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.10
+     multipole {
+         tag = eld
+         at = 287.371426226
+         };
+   bpmv.14
+     vmonitor {
+         tag = bpmv
+         at = 288.403103776
+         };
+   sdpo.3
+     sextupole {
+         tag = sdpo
+         l = 0.75
+         at = 289.004331376
+         body = {
+                 kl = [ 0 0 -0.395364067667]
+                }
+         };
+   erqdp.5
+     multipole {
+         tag = erqdp
+         at = 289.510381376
+         };
+   qd.5
+     quadrupole {
+         tag = qd
+         l = 1.11
+         at = 290.065381376
+         body = {
+                 kl = [ 0 -0.0936550956257]
+                }
+         };
+   elqdp.5
+     multipole {
+         tag = elqdp
+         at = 290.620381376
+         };
+   kickv.9
+     vkicker {
+         tag = kickv
+         at = 291.165631376
+         };
+   erd.11
+     multipole {
+         tag = erd
+         at = 292.759336526
+         };
+   d.11
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 297.479664526
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.11
+     multipole {
+         tag = eld
+         at = 302.199992526
+         };
+   bpmh.14
+     hmonitor {
+         tag = bpmh
+         at = 303.231670075
+         };
+   sfmo.3
+     sextupole {
+         tag = sfmo
+         l = 0.75
+         at = 303.832897675
+         body = {
+                 kl = [ 0 0 0.216146999047]
+                }
+         };
+   erqfp.6
+     multipole {
+         tag = erqfp
+         at = 304.338947675
+         };
+   qf.6
+     quadrupole {
+         tag = qf
+         l = 1.11
+         at = 304.893947675
+         body = {
+                 kl = [ 0 0.0904699917251]
+                }
+         };
+   elqfp.6
+     multipole {
+         tag = elqfp
+         at = 305.448947675
+         };
+   kickh.10
+     hkicker {
+         tag = kickh
+         at = 305.994197675
+         };
+   erd.12
+     multipole {
+         tag = erd
+         at = 307.587902825
+         };
+   d.12
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 312.308230825
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.12
+     multipole {
+         tag = eld
+         at = 317.028558825
+         };
+   bpmv.15
+     vmonitor {
+         tag = bpmv
+         at = 318.060236375
+         };
+   sdmo.3
+     sextupole {
+         tag = sdmo
+         l = 0.75
+         at = 318.661463975
+         body = {
+                 kl = [ 0 0 -0.395364067667]
+                }
+         };
+   erqdp.6
+     multipole {
+         tag = erqdp
+         at = 319.167513975
+         };
+   qd.6
+     quadrupole {
+         tag = qd
+         l = 1.11
+         at = 319.722513975
+         body = {
+                 kl = [ 0 -0.0936550956257]
+                }
+         };
+   elqdp.6
+     multipole {
+         tag = elqdp
+         at = 320.277513975
+         };
+   kickv.10
+     vkicker {
+         tag = kickv
+         at = 320.822763975
+         };
+   erd.13
+     multipole {
+         tag = erd
+         at = 322.416469125
+         };
+   d.13
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 327.136797125
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.13
+     multipole {
+         tag = eld
+         at = 331.857125125
+         };
+   bpmh.15
+     hmonitor {
+         tag = bpmh
+         at = 332.888802674
+         };
+   sfpo.4
+     sextupole {
+         tag = sfpo
+         l = 0.75
+         at = 333.490030274
+         body = {
+                 kl = [ 0 0 0.216146999047]
+                }
+         };
+   erqfp.7
+     multipole {
+         tag = erqfp
+         at = 333.996080274
+         };
+   qf.7
+     quadrupole {
+         tag = qf
+         l = 1.11
+         at = 334.551080274
+         body = {
+                 kl = [ 0 0.0904699917251]
+                }
+         };
+   elqfp.7
+     multipole {
+         tag = elqfp
+         at = 335.106080274
+         };
+   kickh.11
+     hkicker {
+         tag = kickh
+         at = 335.651330274
+         };
+   erd.14
+     multipole {
+         tag = erd
+         at = 337.245035424
+         };
+   d.14
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 341.965363424
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.14
+     multipole {
+         tag = eld
+         at = 346.685691424
+         };
+   bpmv.16
+     vmonitor {
+         tag = bpmv
+         at = 347.717368974
+         };
+   sdpo.4
+     sextupole {
+         tag = sdpo
+         l = 0.75
+         at = 348.318596574
+         body = {
+                 kl = [ 0 0 -0.395364067667]
+                }
+         };
+   erqdp.7
+     multipole {
+         tag = erqdp
+         at = 348.824646574
+         };
+   qd.7
+     quadrupole {
+         tag = qd
+         l = 1.11
+         at = 349.379646574
+         body = {
+                 kl = [ 0 -0.0936550956257]
+                }
+         };
+   elqdp.7
+     multipole {
+         tag = elqdp
+         at = 349.934646574
+         };
+   kickv.11
+     vkicker {
+         tag = kickv
+         at = 350.479896574
+         };
+   erd.15
+     multipole {
+         tag = erd
+         at = 352.073601723
+         };
+   d.15
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 356.793929723
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.15
+     multipole {
+         tag = eld
+         at = 361.514257723
+         };
+   bpmh.16
+     hmonitor {
+         tag = bpmh
+         at = 362.545935273
+         };
+   sfmo.4
+     sextupole {
+         tag = sfmo
+         l = 0.75
+         at = 363.147162873
+         body = {
+                 kl = [ 0 0 0.216146999047]
+                }
+         };
+   erqfp.8
+     multipole {
+         tag = erqfp
+         at = 363.653212873
+         };
+   qf.8
+     quadrupole {
+         tag = qf
+         l = 1.11
+         at = 364.208212873
+         body = {
+                 kl = [ 0 0.0904699917251]
+                }
+         };
+   elqfp.8
+     multipole {
+         tag = elqfp
+         at = 364.763212873
+         };
+   kickh.12
+     hkicker {
+         tag = kickh
+         at = 365.308462873
+         };
+   erd.16
+     multipole {
+         tag = erd
+         at = 366.902168023
+         };
+   d.16
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 371.622496023
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.16
+     multipole {
+         tag = eld
+         at = 376.342824023
+         };
+   bpmv.17
+     vmonitor {
+         tag = bpmv
+         at = 377.374501573
+         };
+   sdmo.4
+     sextupole {
+         tag = sdmo
+         l = 0.75
+         at = 377.975729173
+         body = {
+                 kl = [ 0 0 -0.395364067667]
+                }
+         };
+   erqdp.8
+     multipole {
+         tag = erqdp
+         at = 378.481779173
+         };
+   qd.8
+     quadrupole {
+         tag = qd
+         l = 1.11
+         at = 379.036779173
+         body = {
+                 kl = [ 0 -0.0936550956257]
+                }
+         };
+   elqdp.8
+     multipole {
+         tag = elqdp
+         at = 379.591779173
+         };
+   kickv.12
+     vkicker {
+         tag = kickv
+         at = 380.137029173
+         };
+   erd.17
+     multipole {
+         tag = erd
+         at = 381.730734322
+         };
+   d.17
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 386.451062322
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.17
+     multipole {
+         tag = eld
+         at = 391.171390322
+         };
+   bpmh.17
+     hmonitor {
+         tag = bpmh
+         at = 392.203067872
+         };
+   sfpo.5
+     sextupole {
+         tag = sfpo
+         l = 0.75
+         at = 392.804295472
+         body = {
+                 kl = [ 0 0 0.216146999047]
+                }
+         };
+   erqfp.9
+     multipole {
+         tag = erqfp
+         at = 393.310345472
+         };
+   qf.9
+     quadrupole {
+         tag = qf
+         l = 1.11
+         at = 393.865345472
+         body = {
+                 kl = [ 0 0.0904699917251]
+                }
+         };
+   elqfp.9
+     multipole {
+         tag = elqfp
+         at = 394.420345472
+         };
+   kickh.13
+     hkicker {
+         tag = kickh
+         at = 394.965595472
+         };
+   erd.18
+     multipole {
+         tag = erd
+         at = 396.559300622
+         };
+   d.18
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 401.279628622
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.18
+     multipole {
+         tag = eld
+         at = 405.999956622
+         };
+   bpmv.18
+     vmonitor {
+         tag = bpmv
+         at = 407.031634172
+         };
+   sdpo.5
+     sextupole {
+         tag = sdpo
+         l = 0.75
+         at = 407.632861772
+         body = {
+                 kl = [ 0 0 -0.395364067667]
+                }
+         };
+   erqdp.9
+     multipole {
+         tag = erqdp
+         at = 408.138911772
+         };
+   qd.9
+     quadrupole {
+         tag = qd
+         l = 1.11
+         at = 408.693911772
+         body = {
+                 kl = [ 0 -0.0936550956257]
+                }
+         };
+   elqdp.9
+     multipole {
+         tag = elqdp
+         at = 409.248911772
+         };
+   kickv.13
+     vkicker {
+         tag = kickv
+         at = 409.794161772
+         };
+   erd.19
+     multipole {
+         tag = erd
+         at = 411.387866921
+         };
+   d.19
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 416.108194921
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.19
+     multipole {
+         tag = eld
+         at = 420.828522921
+         };
+   bpmh.18
+     hmonitor {
+         tag = bpmh
+         at = 421.860200471
+         };
+   sfmo.5
+     sextupole {
+         tag = sfmo
+         l = 0.75
+         at = 422.461428071
+         body = {
+                 kl = [ 0 0 0.216146999047]
+                }
+         };
+   erqfp.10
+     multipole {
+         tag = erqfp
+         at = 422.967478071
+         };
+   qf.10
+     quadrupole {
+         tag = qf
+         l = 1.11
+         at = 423.522478071
+         body = {
+                 kl = [ 0 0.0904699917251]
+                }
+         };
+   elqfp.10
+     multipole {
+         tag = elqfp
+         at = 424.077478071
+         };
+   kickh.14
+     hkicker {
+         tag = kickh
+         at = 424.622728071
+         };
+   erd.20
+     multipole {
+         tag = erd
+         at = 426.216433221
+         };
+   d.20
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 430.936761221
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.20
+     multipole {
+         tag = eld
+         at = 435.657089221
+         };
+   bpmv.19
+     vmonitor {
+         tag = bpmv
+         at = 436.688766771
+         };
+   sdmo.5
+     sextupole {
+         tag = sdmo
+         l = 0.75
+         at = 437.289994371
+         body = {
+                 kl = [ 0 0 -0.395364067667]
+                }
+         };
+   erqdp.10
+     multipole {
+         tag = erqdp
+         at = 437.796044371
+         };
+   qd.10
+     quadrupole {
+         tag = qd
+         l = 1.11
+         at = 438.351044371
+         body = {
+                 kl = [ 0 -0.0936550956257]
+                }
+         };
+   elqdp.10
+     multipole {
+         tag = elqdp
+         at = 438.906044371
+         };
+   kickv.14
+     vkicker {
+         tag = kickv
+         at = 439.451294371
+         };
+   erd.21
+     multipole {
+         tag = erd
+         at = 441.04499952
+         };
+   d.21
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 445.76532752
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.21
+     multipole {
+         tag = eld
+         at = 450.48565552
+         };
+   bpmh.19
+     hmonitor {
+         tag = bpmh
+         at = 451.51733307
+         };
+   sfpo.6
+     sextupole {
+         tag = sfpo
+         l = 0.75
+         at = 452.11856067
+         body = {
+                 kl = [ 0 0 0.216146999047]
+                }
+         };
+   erqfp.11
+     multipole {
+         tag = erqfp
+         at = 452.62461067
+         };
+   qf.11
+     quadrupole {
+         tag = qf
+         l = 1.11
+         at = 453.17961067
+         body = {
+                 kl = [ 0 0.0904699917251]
+                }
+         };
+   elqfp.11
+     multipole {
+         tag = elqfp
+         at = 453.73461067
+         };
+   kickh.15
+     hkicker {
+         tag = kickh
+         at = 454.27986067
+         };
+   erd.22
+     multipole {
+         tag = erd
+         at = 455.87356582
+         };
+   d.22
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 460.59389382
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.22
+     multipole {
+         tag = eld
+         at = 465.31422182
+         };
+   bpmv.20
+     vmonitor {
+         tag = bpmv
+         at = 466.345899369
+         };
+   sdpo.6
+     sextupole {
+         tag = sdpo
+         l = 0.75
+         at = 466.947126969
+         body = {
+                 kl = [ 0 0 -0.395364067667]
+                }
+         };
+   erqdp.11
+     multipole {
+         tag = erqdp
+         at = 467.453176969
+         };
+   qd.11
+     quadrupole {
+         tag = qd
+         l = 1.11
+         at = 468.008176969
+         body = {
+                 kl = [ 0 -0.0936550956257]
+                }
+         };
+   elqdp.11
+     multipole {
+         tag = elqdp
+         at = 468.563176969
+         };
+   kickv.15
+     vkicker {
+         tag = kickv
+         at = 469.108426969
+         };
+   erd.23
+     multipole {
+         tag = erd
+         at = 470.702132119
+         };
+   d.23
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 475.422460119
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.23
+     multipole {
+         tag = eld
+         at = 480.142788119
+         };
+   bpmh.20
+     hmonitor {
+         tag = bpmh
+         at = 481.174465669
+         };
+   sfmo.6
+     sextupole {
+         tag = sfmo
+         l = 0.75
+         at = 481.775693269
+         body = {
+                 kl = [ 0 0 0.216146999047]
+                }
+         };
+   erqfp.12
+     multipole {
+         tag = erqfp
+         at = 482.281743269
+         };
+   qf.12
+     quadrupole {
+         tag = qf
+         l = 1.11
+         at = 482.836743269
+         body = {
+                 kl = [ 0 0.0904699917251]
+                }
+         };
+   elqfp.12
+     multipole {
+         tag = elqfp
+         at = 483.391743269
+         };
+   kickh.16
+     hkicker {
+         tag = kickh
+         at = 483.936993269
+         };
+   oct.16
+     multipole {
+         tag = oct
+         at = 483.936993269
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.16
+     multipole {
+         tag = dec
+         at = 483.936993269
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   sqsk8
+     quadrupole {
+         tag = sqsk8
+         l = 1e-06
+         at = 483.936993769
+         };
+   sqsk7lc
+     quadrupole {
+         tag = sqsk7lc
+         l = 1e-06
+         at = 483.936994769
+         };
+   erds.3
+     multipole {
+         tag = erds
+         at = 485.521462607
+         };
+   ds.3
+     sbend {
+         tag = ds
+         arc = 2.94942686017
+         at = 486.996176037
+         body = {
+                 kl = [ 0.0121605500771]
+                }
+         };
+   elds.3
+     multipole {
+         tag = elds
+         at = 488.470889467
+         };
+   bpmv.21
+     vmonitor {
+         tag = bpmv
+         at = 495.990985116
+         };
+   sdmo.6
+     sextupole {
+         tag = sdmo
+         l = 0.75
+         at = 496.592212716
+         body = {
+                 kl = [ 0 0 -0.395364067667]
+                }
+         };
+   erqdap
+     multipole {
+         tag = erqdap
+         at = 497.098262716
+         };
+   qda8
+     quadrupole {
+         tag = qda8
+         l = 1.11
+         at = 497.653262716
+         body = {
+                 kl = [ 0 -0.100103094263]
+                }
+         };
+   elqdap
+     multipole {
+         tag = elqdap
+         at = 498.208262716
+         };
+   kickv.16
+     vkicker {
+         tag = kickv
+         at = 498.753512716
+         };
+   oct.17
+     multipole {
+         tag = oct
+         at = 498.753512716
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.17
+     multipole {
+         tag = dec
+         at = 498.753512716
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   sqsk8.2
+     quadrupole {
+         tag = sqsk8
+         l = 1e-06
+         at = 498.753513216
+         };
+   erd.24
+     multipole {
+         tag = erd
+         at = 500.347217865
+         };
+   d.24
+     sbend {
+         tag = d
+         arc = 9.440656
+         at = 505.067545865
+         body = {
+                 kl = [ 0.0389240267658]
+                }
+         };
+   eld.24
+     multipole {
+         tag = eld
+         at = 509.787873865
+         };
+   kickh.17
+     hkicker {
+         tag = kickh
+         at = 511.381579015
+         };
+   oct.18
+     multipole {
+         tag = oct
+         at = 511.381579015
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.18
+     multipole {
+         tag = dec
+         at = 511.381579015
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   qgtto.3
+     quadrupole {
+         tag = qgtto
+         l = 1e-06
+         at = 511.381579515
+         };
+   elqfbm
+     multipole {
+         tag = elqfbm
+         at = 511.926829015
+         };
+   qfb8
+     quadrupole {
+         tag = qfb8
+         l = 1.11
+         at = 512.481829015
+         body = {
+                 kl = [ 0 0.0974539778453]
+                }
+         };
+   erqfbm
+     multipole {
+         tag = erqfbm
+         at = 513.036829015
+         };
+   bpmv.22
+     vmonitor {
+         tag = bpmv
+         at = 513.332934615
+         };
+   cplmon.7
+     monitor {
+         tag = cplmon
+         at = 513.332934615
+         };
+   bpmh.21
+     hmonitor {
+         tag = bpmh
+         at = 513.332934615
+         };
+   bpmv.23
+     vmonitor {
+         tag = bpmv
+         at = 526.441770511
+         };
+   cplmon.8
+     monitor {
+         tag = cplmon
+         at = 526.441770511
+         };
+   bpmh.22
+     hmonitor {
+         tag = bpmh
+         at = 526.441770511
+         };
+   erq7op
+     multipole {
+         tag = erq7op
+         at = 526.738004111
+         };
+   q7o8
+     quadrupole {
+         tag = q7o8
+         l = 0.929744
+         at = 527.202876111
+         body = {
+                 kl = [ 0 -0.0787487087766]
+                }
+         };
+   elq7op
+     multipole {
+         tag = elq7op
+         at = 527.667748111
+         };
+   kickv.17
+     vkicker {
+         tag = kickv
+         at = 528.213126111
+         };
+   oct.19
+     multipole {
+         tag = oct
+         at = 528.213126111
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.19
+     multipole {
+         tag = dec
+         at = 528.213126111
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   sqsk8.3
+     quadrupole {
+         tag = sqsk8
+         l = 1e-06
+         at = 528.213126611
+         };
+   erds.4
+     multipole {
+         tag = erds
+         at = 529.797595449
+         };
+   ds.4
+     sbend {
+         tag = ds
+         arc = 2.94942686017
+         at = 531.272308879
+         body = {
+                 kl = [ 0.0121605500771]
+                }
+         };
+   elds.4
+     multipole {
+         tag = elds
+         at = 532.747022309
+         };
+   kickh.18
+     hkicker {
+         tag = kickh
+         at = 540.829145557
+         };
+   oct.20
+     multipole {
+         tag = oct
+         at = 540.829145557
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.20
+     multipole {
+         tag = dec
+         at = 540.829145557
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   qgtto.4
+     quadrupole {
+         tag = qgtto
+         l = 1e-06
+         at = 540.829146057
+         };
+   elq6om
+     multipole {
+         tag = elq6om
+         at = 541.374395557
+         };
+   q6o8
+     quadrupole {
+         tag = q6o8
+         l = 1.11
+         at = 541.929395557
+         body = {
+                 kl = [ 0 0.102269257542]
+                }
+         };
+   erq6om
+     multipole {
+         tag = erq6om
+         at = 542.484395557
+         };
+   q6ot8
+     quadrupole {
+         tag = q6ot8
+         l = 0.75
+         at = 542.990445557
+         body = {
+                 kl = [ 0 -0.00825559076078]
+                }
+         };
+   bpmh.23
+     hmonitor {
+         tag = bpmh
+         at = 543.591673157
+         };
+   erd5o.2
+     multipole {
+         tag = erd5o
+         at = 544.992471417
+         };
+   d5o.2
+     sbend {
+         tag = d5o
+         arc = 8.69844937519
+         at = 549.341696104
+         body = {
+                 kl = [ 0.0358638929647]
+                }
+         };
+   eld5o.2
+     multipole {
+         tag = eld5o
+         at = 553.690920792
+         };
+   kickv.18
+     vkicker {
+         tag = kickv
+         at = 555.6537467
+         };
+   oct.21
+     multipole {
+         tag = oct
+         at = 555.6537467
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.21
+     multipole {
+         tag = dec
+         at = 555.6537467
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   sqsk.6
+     quadrupole {
+         tag = sqsk
+         l = 1e-06
+         at = 555.6537472
+         };
+   elq5om
+     multipole {
+         tag = elq5om
+         at = 556.1989967
+         };
+   q5o8
+     quadrupole {
+         tag = q5o8
+         l = 1.11
+         at = 556.7539967
+         body = {
+                 kl = [ 0 -0.102269257542]
+                }
+         };
+   erq5om
+     multipole {
+         tag = erq5om
+         at = 557.3089967
+         };
+   q5ot8
+     quadrupole {
+         tag = q5ot8
+         l = 0.75
+         at = 557.8150467
+         body = {
+                 kl = [ 0 0.0112859962144]
+                }
+         };
+   bpmv.24
+     vmonitor {
+         tag = bpmv
+         at = 558.4162743
+         };
+   kickh.19
+     hkicker {
+         tag = kickh
+         at = 562.7837467
+         };
+   oct.22
+     multipole {
+         tag = oct
+         at = 562.7837467
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   dec.22
+     multipole {
+         tag = dec
+         at = 562.7837467
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   sqsk.7
+     quadrupole {
+         tag = sqsk
+         l = 1e-06
+         at = 562.7837472
+         };
+   elq4om
+     multipole {
+         tag = elq4om
+         at = 563.3280222
+         };
+   q4o8
+     quadrupole {
+         tag = q4o8
+         l = 1.811949
+         at = 564.2339967
+         body = {
+                 kl = [ 0 0.167480707266]
+                }
+         };
+   erq4om
+     multipole {
+         tag = erq4om
+         at = 565.1399712
+         };
+   q4ot8
+     quadrupole {
+         tag = q4ot8
+         l = 0.75
+         at = 565.6450467
+         body = {
+                 kl = [ 0 0.0265146340615]
+                }
+         };
+   bpmv.25
+     vmonitor {
+         tag = bpmv
+         at = 566.2462863
+         };
+   cplmon.9
+     monitor {
+         tag = cplmon
+         at = 566.2462863
+         };
+   bpmh.24
+     hmonitor {
+         tag = bpmh
+         at = 566.2462863
+         };
+   erhlx.5
+     multipole {
+         tag = erhlx
+         at = 567.5646547
+         };
+   elhlx.5
+     multipole {
+         tag = elhlx
+         at = 569.9646547
+         };
+   elhlx.6
+     multipole {
+         tag = elhlx
+         at = 570.1766547
+         };
+   erhlx.6
+     multipole {
+         tag = erhlx
+         at = 572.5766547
+         };
+   bpmv.26
+     vmonitor {
+         tag = bpmv
+         at = 572.8006547
+         };
+   bpmh.25
+     hmonitor {
+         tag = bpmh
+         at = 572.8006547
+         };
+   erhlx.7
+     multipole {
+         tag = erhlx
+         at = 573.0246547
+         };
+   elhlx.7
+     multipole {
+         tag = elhlx
+         at = 575.4246547
+         };
+   elhlx.8
+     multipole {
+         tag = elhlx
+         at = 575.6366547
+         };
+   erhlx.8
+     multipole {
+         tag = erhlx
+         at = 578.0366547
+         };
+   ap7p15b
+     marker {
+         tag = ap7p15b
+         at = 579.3465937
+         };
+   mvalve.9
+     marker {
+         tag = mvalve
+         at = 579.3890947
+         };
+   ap7p14b
+     marker {
+         tag = ap7p14b
+         at = 579.4315947
+         };
+   ap7p13b
+     marker {
+         tag = ap7p13b
+         at = 579.6474947
+         };
+   ap7p12b
+     marker {
+         tag = ap7p12b
+         at = 579.8283427
+         };
+   ap7p11b
+     marker {
+         tag = ap7p11b
+         at = 580.1615907
+         };
+   ap7p10b
+     marker {
+         tag = ap7p10b
+         at = 580.4541987
+         };
+   ap7p9b
+     marker {
+         tag = ap7p9b
+         at = 585.6504547
+         };
+   ap7p8b
+     marker {
+         tag = ap7p8b
+         at = 590.8467107
+         };
+   ap7p7b
+     marker {
+         tag = ap7p7b
+         at = 591.1393187
+         };
+   ap7p6b
+     marker {
+         tag = ap7p6b
+         at = 591.4725667
+         };
+   ap7p5b
+     marker {
+         tag = ap7p5b
+         at = 591.7651747
+         };
+   ap7p4b
+     marker {
+         tag = ap7p4b
+         at = 594.8919657
+         };
+   kfbhs
+     hkicker {
+         tag = kfbhs
+         l = 1.188
+         at = 599.2860007
+         };
+   ap7p3b
+     marker {
+         tag = ap7p3b
+         at = 600.0882217
+         };
+   ap7p2b
+     marker {
+         tag = ap7p2b
+         at = 600.3808297
+         };
+   ap7p1b
+     marker {
+         tag = ap7p1b
+         at = 600.7140777
+         };
+   ap7p0b
+     marker {
+         tag = ap7p0b
+         at = 600.9088957
+         };
+   mvalve.10
+     marker {
+         tag = mvalve
+         at = 600.957645723
+         };
+   bpmv.27
+     vmonitor {
+         tag = bpmv
+         at = 602.545415723
+         };
+   cplmon.10
+     monitor {
+         tag = cplmon
+         at = 602.545415723
+         };
+   bpmh.26
+     hmonitor {
+         tag = bpmh
+         at = 602.545415723
+         };
+   kickv.19
+     vkicker {
+         tag = kickv
+         at = 603.016843983
+         };
+   b2m07c3b
+     multipole {
+         tag = b2m07c3b
+         at = 603.016843983
+         body = {
+                 kl = [ 0 0 0]
+                }
+         };
+   b3m07c3b
+     multipole {
+         tag = b3m07c3b
+         at = 603.016843983
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   b5m07c3b
+     multipole {
+         tag = b5m07c3b
+         at = 603.016843983
+         body = {
+                 kl = [ 0 0 0 0 0 0]
+                }
+         };
+   er07b03
+     multipole {
+         tag = er07b03
+         at = 603.614811983
+         };
+   q3o8
+     quadrupole {
+         tag = q3o8
+         l = 2.100484
+         at = 604.665053983
+         body = {
+                 kl = [ 0 -0.118050518188]
+                }
+         };
+   el07b03
+     multipole {
+         tag = el07b03
+         at = 605.715295983
+         };
+   a5m07c2b
+     multipole {
+         tag = a5m07c2b
+         at = 606.205073983
+         };
+   a3m07c2b
+     multipole {
+         tag = a3m07c2b
+         at = 606.205073983
+         };
+   a2m07c2b
+     multipole {
+         tag = a2m07c2b
+         at = 606.205073983
+         };
+   sq07c2b
+     quadrupole {
+         tag = sq07c2b
+         l = 1e-06
+         at = 606.205074483
+         };
+   el07b02
+     multipole {
+         tag = el07b02
+         at = 607.576035483
+         };
+   q2o8
+     quadrupole {
+         tag = q2o8
+         l = 3.391633
+         at = 609.271851983
+         body = {
+                 kl = [ 0 0.190342470921]
+                }
+         };
+   er07b02
+     multipole {
+         tag = er07b02
+         at = 610.967668483
+         };
+   kickh.20
+     hkicker {
+         tag = kickh
+         at = 611.461871983
+         };
+   b3m07c1b
+     multipole {
+         tag = b3m07c1b
+         at = 611.461871983
+         body = {
+                 kl = [ 0 0 0 0]
+                }
+         };
+   b4m07c1b
+     multipole {
+         tag = b4m07c1b
+         at = 611.461871983
+         body = {
+                 kl = [ 0 0 0 0 0]
+                }
+         };
+   b5m07c1b
+     multipole {
+         tag = b5m07c1b
+         at = 611.461871983
+         body = {
+                 kl = [ 0 0 0 0 0 0]
+                }
+         };
+   el07b01
+     multipole {
+         tag = el07b01
+         at = 612.644299983
+         };
+   q1o8
+     quadrupole {
+         tag = q1o8
+         l = 1.44
+         at = 613.364299983
+         body = {
+                 kl = [ 0 -0.0830284298192]
+                }
+         };
+   er07b01
+     multipole {
+         tag = er07b01
+         at = 614.084299983
+         };
+   bpmv.28
+     vmonitor {
+         tag = bpmv
+         at = 614.421244783
+         };
+   cplmon.11
+     monitor {
+         tag = cplmon
+         at = 614.421244783
+         };
+   bpmh.27
+     hmonitor {
+         tag = bpmh
+         at = 614.421244783
+         };
+   eld0pm07
+     multipole {
+         tag = eld0pm07
+         at = 615.348948544
+         };
+   d0pm07
+     sbend {
+         tag = d0pm07
+         arc = 3.58896623069
+         at = 617.14343166
+         body = {
+                 kl = [ 0.0151862520728]
+                }
+         };
+   erd0pm07
+     multipole {
+         tag = erd0pm07
+         at = 618.937914775
+         };
+   mvalve.11
+     marker {
+         tag = mvalve
+         at = 619.870740973
+         };
+   erdxmm07
+     multipole {
+         tag = erdxmm07
+         at = 625.944808574
+         body = {
+                 kl = [ 0 -9.61487901076e-05]
+                }
+         };
+   dxmm07
+     sbend {
+         tag = dxmm07
+         arc = 3.70021937559
+         at = 627.794918262
+         body = {
+                 kl = [ -0.0188607907827]
+                }
+         };
+   eldxmm07
+     multipole {
+         tag = eldxmm07
+         at = 629.64502795
+         body = {
+                 kl = [ 0 0]
+                }
+         };
+   ap8p0g
+     marker {
+         tag = ap8p0g
+         at = 630.83065395
+         };
+   mvalve.12
+     marker {
+         tag = mvalve
+         at = 630.87940395
+         };
+   ap8p1g
+     marker {
+         tag = ap8p1g
+         at = 630.92815395
+         };
+   bpmh.28
+     hmonitor {
+         tag = bpmh
+         at = 631.11865395
+         };
+   cplmon.12
+     monitor {
+         tag = cplmon
+         at = 631.11865395
+         };
+   bpmv.29
+     vmonitor {
+         tag = bpmv
+         at = 631.11865395
+         };
+   ap8p2g
+     marker {
+         tag = ap8p2g
+         at = 631.30915395
+         };
+   ap8p3g
+     marker {
+         tag = ap8p3g
+         at = 631.69967895
+         };
+   ap8p4g
+     marker {
+         tag = ap8p4g
+         at = 632.03292695
+         };
+   ap8p5g
+     marker {
+         tag = ap8p5g
+         at = 632.30267495
+         };
+   ap8p6g
+     marker {
+         tag = ap8p6g
+         at = 637.28297995
+         };
+   phnxff1
+     solenoid {
+         tag = phnxff1
+         l = 0.15215
+         at = 637.52110295
+         };
+   ap8p7g
+     marker {
+         tag = ap8p7g
+         at = 637.59717795
+         };
+   phnxff2
+     solenoid {
+         tag = phnxff2
+         l = 0.64785
+         at = 637.92110295
+         };
+   ap8p8g
+     marker {
+         tag = ap8p8g
+         at = 638.69501695
+         };
+   hphenix
+     solenoid {
+         tag = hphenix
+         l = 0.6
+         at = 639.14502795
+         };
+   clock8
+     marker {
+         tag = clock8
+         at = 639.44502795
+         };
+   mend
+     marker {
+         tag = mend
+         at = 639.44502795
+         };
+ endsequence at = 639.44502795
+}
+// SXF end
+
+

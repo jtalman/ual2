@@ -1,0 +1,38 @@
+Benchmark-VI Instructions, 4 Jan. 2022
+---------------------------------------
+1. Assume git download and build have been completed, and 
+   environment variables correctly set.
+
+2. $ cd $UAL/examples/ETEAPOT-benchmarks/VI
+   $ ll run*   // provides list (at least one)
+          runExample_E-PTR2-0p5-COSY-sl4
+          runExample_E-PTR2-0p75-COSY-sl4
+          runExample_E-PTR2-1p0-COSY-sl4
+
+3. Copy and paste from entire file (one after another)
+
+4. (Joining some existing files) the produced pdf files 
+   (in ./pdf directory) are
+         E-PTR2-0p5-COSY-sl4-Fig_II-11-ETEAPOT.pdf
+         E-PTR2-0p5-COSY-sl4-Fig_II-9-ETEAPOT.pdf
+         E-PTR2-1p0-COSY-sl4-Fig_II-11-ETEAPOT.pdf
+         E-PTR2-1p0-COSY-sl4-Fig_II-9-ETEAPOT.pdf
+         E-PTR2-0p75-COSY-sl4-Fig_II-11-ETEAPOT.pdf
+         E-PTR2-0p75-COSY-sl4-Fig_II-9-ETEAPOT.pdf
+
+5. The /latex directory contains tar file
+         latex/E_benchmark_VI.tar
+   (possibly along with other files or directory)
+         latex/E_benchmark_VI_updated/
+
+6. (If not present) a latex/E_benchmark_VI_updated/ directory 
+   can be regenerated using "E_benchmark_III.tar", to enable
+   documentation explaining the simulation to be generated.
+   (Regrettably) complete rgeneration requires renaming and
+   editing certain ".gnuplot" files in a "./gnuplot" directory.
+   
+7. ".pdf" files produced in step 4 should be 
+   copied to directory "latex/E_benchmark_VI_updated/pdf" before issuing
+         $ cd latex/E_benchmark_VI_updated
+         $ pdflatex E_benchmark_VI-updated.tex (or some other ".tex" name)
+   to produce chapter with name "E_benchmark-VI.pdf" (or matching name).

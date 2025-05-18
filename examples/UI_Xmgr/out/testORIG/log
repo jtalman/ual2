@@ -1,0 +1,38 @@
+
+reads the MAD input file ./data/CLS.mad
+start = 1445108140
+end   = 1445108140
+
+writes the SMF data into the FTPOT file 
+
+ start           . 1445108140
+
+ end             . 1445108140
+
+survey 
+start = 1445108140
+end   = 1445108140
+
+twiss 
+start = 1445108140
+end   = 1445108141
+
+analysis
+
+  closed orbit     1445108141
+
+  twiss parameters 1445108141
+
+  end            . 1445108141
+
+make map 
+start = 1445108141
+end   = 1445108141
+
+run 
+start = 1445108141
+
+_revfreq
+ suml                   = 14.2400527248264
+ excess circumference   = 2.08043243231021e-18
+ revfreq                = 20723355.0565328end   = 1445108141

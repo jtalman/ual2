@@ -1,0 +1,75 @@
+bh       : sbend      , l = 3.14159265359, angle = 0.07853981633975
+dh       : drift      , l = 1e-10
+marcin   : marker     
+marcout  : marker     
+mbegin   : marker     
+mcellcenter : marker     
+mcellin  : marker     
+mcellout : marker     
+mend     : marker     
+q        : quadrupole , l = 1e-10, k1 = -100000
+
+
+ring : line = ( & 
+  mbegin  , marcin  , mcellin , dh      , q       , bh       & 
+, mcellcenter, bh      , q       , dh      , mcellout, mcellin  & 
+, dh      , q       , bh      , mcellcenter, bh      , q        & 
+, dh      , mcellout, mcellin , dh      , q       , bh       & 
+, mcellcenter, bh      , q       , dh      , mcellout, mcellin  & 
+, dh      , q       , bh      , mcellcenter, bh      , q        & 
+, dh      , mcellout, mcellin , dh      , q       , bh       & 
+, mcellcenter, bh      , q       , dh      , mcellout, mcellin  & 
+, dh      , q       , bh      , mcellcenter, bh      , q        & 
+, dh      , mcellout, mcellin , dh      , q       , bh       & 
+, mcellcenter, bh      , q       , dh      , mcellout, mcellin  & 
+, dh      , q       , bh      , mcellcenter, bh      , q        & 
+, dh      , mcellout, mcellin , dh      , q       , bh       & 
+, mcellcenter, bh      , q       , dh      , mcellout, mcellin  & 
+, dh      , q       , bh      , mcellcenter, bh      , q        & 
+, dh      , mcellout, mcellin , dh      , q       , bh       & 
+, mcellcenter, bh      , q       , dh      , mcellout, mcellin  & 
+, dh      , q       , bh      , mcellcenter, bh      , q        & 
+, dh      , mcellout, mcellin , dh      , q       , bh       & 
+, mcellcenter, bh      , q       , dh      , mcellout, mcellin  & 
+, dh      , q       , bh      , mcellcenter, bh      , q        & 
+, dh      , mcellout, mcellin , dh      , q       , bh       & 
+, mcellcenter, bh      , q       , dh      , mcellout, mcellin  & 
+, dh      , q       , bh      , mcellcenter, bh      , q        & 
+, dh      , mcellout, mcellin , dh      , q       , bh       & 
+, mcellcenter, bh      , q       , dh      , mcellout, mcellin  & 
+, dh      , q       , bh      , mcellcenter, bh      , q        & 
+, dh      , mcellout, mcellin , dh      , q       , bh       & 
+, mcellcenter, bh      , q       , dh      , mcellout, mcellin  & 
+, dh      , q       , bh      , mcellcenter, bh      , q        & 
+, dh      , mcellout, marcout , marcin  , mcellin , dh       & 
+, q       , bh      , mcellcenter, bh      , q       , dh       & 
+, mcellout, mcellin , dh      , q       , bh      , mcellcenter & 
+, bh      , q       , dh      , mcellout, mcellin , dh       & 
+, q       , bh      , mcellcenter, bh      , q       , dh       & 
+, mcellout, mcellin , dh      , q       , bh      , mcellcenter & 
+, bh      , q       , dh      , mcellout, mcellin , dh       & 
+, q       , bh      , mcellcenter, bh      , q       , dh       & 
+, mcellout, mcellin , dh      , q       , bh      , mcellcenter & 
+, bh      , q       , dh      , mcellout, mcellin , dh       & 
+, q       , bh      , mcellcenter, bh      , q       , dh       & 
+, mcellout, mcellin , dh      , q       , bh      , mcellcenter & 
+, bh      , q       , dh      , mcellout, mcellin , dh       & 
+, q       , bh      , mcellcenter, bh      , q       , dh       & 
+, mcellout, mcellin , dh      , q       , bh      , mcellcenter & 
+, bh      , q       , dh      , mcellout, mcellin , dh       & 
+, q       , bh      , mcellcenter, bh      , q       , dh       & 
+, mcellout, mcellin , dh      , q       , bh      , mcellcenter & 
+, bh      , q       , dh      , mcellout, mcellin , dh       & 
+, q       , bh      , mcellcenter, bh      , q       , dh       & 
+, mcellout, mcellin , dh      , q       , bh      , mcellcenter & 
+, bh      , q       , dh      , mcellout, mcellin , dh       & 
+, q       , bh      , mcellcenter, bh      , q       , dh       & 
+, mcellout, mcellin , dh      , q       , bh      , mcellcenter & 
+, bh      , q       , dh      , mcellout, mcellin , dh       & 
+, q       , bh      , mcellcenter, bh      , q       , dh       & 
+, mcellout, mcellin , dh      , q       , bh      , mcellcenter & 
+, bh      , q       , dh      , mcellout, mcellin , dh       & 
+, q       , bh      , mcellcenter, bh      , q       , dh       & 
+, mcellout, mcellin , dh      , q       , bh      , mcellcenter & 
+, bh      , q       , dh      , mcellout, marcout , mend     & 
+) 

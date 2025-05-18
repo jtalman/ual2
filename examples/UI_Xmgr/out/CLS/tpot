@@ -1,0 +1,253 @@
+bend     : sbend      , l = 0.155833333333333, angle = 0.0218165833333333 & 
+   , type = ir2
+bendedge : marker     
+bendin   : sbend      , l = 0.155833333333333, angle = 0.0218165833333333 & 
+, e1 = 0.105
+bendout  : sbend      , l = 0.155833333333333, angle = 0.0218165833333333 & 
+, e2 = 0.105
+cav      : rfcavity   , volt = 0.0024, freq = 285
+cellend  : marker     
+drift1   : drift      , l = 0.25
+drift1b  : drift      , l = 0.357
+drift2   : drift      , l = 0.534
+drift3   : drift      , l = 0.312
+drift4   : drift      , l = 0.407
+drift5   : drift      , l = 0.3125
+drift6   : drift      , l = 0.1695
+drift7   : drift      , l = 0.3975
+drift8   : drift      , l = 0.322
+m1hc     : quadrupole , l = 1e-06, k1 = -64933.40936
+mb       : marker     
+quad1    : quadrupole , l = 0.18, k1 = 1.77982, &
+ type = ir2
+quad2    : quadrupole , l = 0.18, k1 = 1.71791, &
+ type = ir2
+quad3    : quadrupole , l = 0.26, k1 = 2.0403, &
+ type = ir2
+quadin   : marker     
+quadout  : marker     
+quadt    : quadrupole , l = 1e-06, k1 = -4733.9532
+s1       : sextupole  , l = 0.192, k2 = -26.0494, &
+ typeaper = 1,  xapsize = 0.035,  yapsize = 0.035
+s2       : sextupole  , l = 0.192, k2 = 39.8364, &
+ typeaper = 1,  xapsize = 0.035,  yapsize = 0.035
+testpoint1 : marker     
+testpoint2 : marker     
+
+
+ring : line = ( & 
+  mb      , drift1  , drift1  , drift1  , drift1  , drift1   & 
+, drift1  , drift1  , drift1  , drift1  , drift1b , quadin   & 
+, quad1   , quadt   , quadout , drift2  , quadin  , quad2    & 
+, quadt   , quadout , drift3  , bendedge, bendin  , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bendout , bendedge, drift4  , s1       & 
+, drift5  , quad3   , quadt   , quadout , drift6  , s2       & 
+, drift6  , quadt   , quad3   , quadout , drift7  , s1       & 
+, drift8  , bendedge, bendin  , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bendout , bendedge, drift3  , quadt   , quad2   , quadout  & 
+, drift2  , quadt   , quad1   , quadout , drift1b , drift1   & 
+, drift1  , testpoint1, drift1  , testpoint2, drift1  , drift1   & 
+, drift1  , drift1  , drift1  , drift1  , cellend , mb       & 
+, drift1  , drift1  , drift1  , drift1  , drift1  , drift1   & 
+, drift1  , drift1  , drift1  , drift1b , quadin  , quad1    & 
+, quadt   , quadout , drift2  , quadin  , quad2   , quadt    & 
+, quadout , drift3  , bendedge, bendin  , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bendout , bendedge, drift4  , s1      , drift5   & 
+, quad3   , quadt   , quadout , drift6  , s2      , drift6   & 
+, quadt   , quad3   , quadout , drift7  , s1      , drift8   & 
+, bendedge, bendin  , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bendout  & 
+, bendedge, drift3  , quadt   , quad2   , quadout , drift2   & 
+, quadt   , quad1   , quadout , drift1b , drift1  , drift1   & 
+, testpoint1, drift1  , testpoint2, drift1  , drift1  , drift1   & 
+, drift1  , drift1  , drift1  , cellend , mb      , drift1   & 
+, drift1  , drift1  , drift1  , drift1  , drift1  , drift1   & 
+, drift1  , drift1  , drift1b , quadin  , quad1   , quadt    & 
+, quadout , drift2  , quadin  , quad2   , quadt   , quadout  & 
+, drift3  , bendedge, bendin  , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bendout , bendedge, drift4  , s1      , drift5  , quad3    & 
+, quadt   , quadout , drift6  , s2      , drift6  , quadt    & 
+, quad3   , quadout , drift7  , s1      , drift8  , bendedge & 
+, bendin  , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bendout , bendedge & 
+, drift3  , quadt   , quad2   , quadout , drift2  , quadt    & 
+, quad1   , quadout , drift1b , drift1  , drift1  , testpoint1 & 
+, drift1  , testpoint2, drift1  , drift1  , drift1  , drift1   & 
+, drift1  , drift1  , cellend , mb      , drift1  , drift1   & 
+, drift1  , drift1  , drift1  , drift1  , drift1  , drift1   & 
+, drift1  , drift1b , quadin  , quad1   , quadt   , quadout  & 
+, drift2  , quadin  , quad2   , quadt   , quadout , drift3   & 
+, bendedge, bendin  , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bendout  & 
+, bendedge, drift4  , s1      , drift5  , quad3   , quadt    & 
+, quadout , drift6  , s2      , drift6  , quadt   , quad3    & 
+, quadout , drift7  , s1      , drift8  , bendedge, bendin   & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bendout , bendedge, drift3   & 
+, quadt   , quad2   , quadout , drift2  , quadt   , quad1    & 
+, quadout , drift1b , drift1  , drift1  , testpoint1, drift1   & 
+, testpoint2, drift1  , drift1  , drift1  , drift1  , drift1   & 
+, drift1  , cellend , mb      , drift1  , drift1  , drift1   & 
+, drift1  , drift1  , drift1  , drift1  , drift1  , drift1   & 
+, drift1b , quadin  , quad1   , quadt   , quadout , drift2   & 
+, quadin  , quad2   , quadt   , quadout , drift3  , bendedge & 
+, bendin  , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bendout , bendedge & 
+, drift4  , s1      , drift5  , quad3   , quadt   , quadout  & 
+, drift6  , s2      , drift6  , quadt   , quad3   , quadout  & 
+, drift7  , s1      , drift8  , bendedge, bendin  , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bendout , bendedge, drift3  , quadt    & 
+, quad2   , quadout , drift2  , quadt   , quad1   , quadout  & 
+, drift1b , drift1  , drift1  , testpoint1, drift1  , testpoint2 & 
+, drift1  , drift1  , drift1  , drift1  , drift1  , drift1   & 
+, cellend , mb      , drift1  , drift1  , drift1  , drift1   & 
+, drift1  , drift1  , drift1  , drift1  , drift1  , drift1b  & 
+, quadin  , quad1   , quadt   , quadout , drift2  , quadin   & 
+, quad2   , quadt   , quadout , drift3  , bendedge, bendin   & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bendout , bendedge, drift4   & 
+, s1      , drift5  , quad3   , quadt   , quadout , drift6   & 
+, s2      , drift6  , quadt   , quad3   , quadout , drift7   & 
+, s1      , drift8  , bendedge, bendin  , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bendout , bendedge, drift3  , quadt   , quad2    & 
+, quadout , drift2  , quadt   , quad1   , quadout , drift1b  & 
+, drift1  , drift1  , testpoint1, drift1  , testpoint2, drift1   & 
+, drift1  , drift1  , drift1  , drift1  , drift1  , cellend  & 
+, mb      , drift1  , drift1  , drift1  , drift1  , drift1   & 
+, drift1  , drift1  , drift1  , drift1  , drift1b , quadin   & 
+, quad1   , quadt   , quadout , drift2  , quadin  , quad2    & 
+, quadt   , quadout , drift3  , bendedge, bendin  , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bendout , bendedge, drift4  , s1       & 
+, drift5  , quad3   , quadt   , quadout , drift6  , s2       & 
+, drift6  , quadt   , quad3   , quadout , drift7  , s1       & 
+, drift8  , bendedge, bendin  , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bendout , bendedge, drift3  , quadt   , quad2   , quadout  & 
+, drift2  , quadt   , quad1   , quadout , drift1b , drift1   & 
+, drift1  , testpoint1, drift1  , testpoint2, drift1  , drift1   & 
+, drift1  , drift1  , drift1  , drift1  , cellend , mb       & 
+, drift1  , drift1  , drift1  , drift1  , drift1  , drift1   & 
+, drift1  , drift1  , drift1  , drift1b , quadin  , quad1    & 
+, quadt   , quadout , drift2  , quadin  , quad2   , quadt    & 
+, quadout , drift3  , bendedge, bendin  , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bendout , bendedge, drift4  , s1      , drift5   & 
+, quad3   , quadt   , quadout , drift6  , s2      , drift6   & 
+, quadt   , quad3   , quadout , drift7  , s1      , drift8   & 
+, bendedge, bendin  , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bendout  & 
+, bendedge, drift3  , quadt   , quad2   , quadout , drift2   & 
+, quadt   , quad1   , quadout , drift1b , drift1  , drift1   & 
+, testpoint1, drift1  , testpoint2, drift1  , drift1  , drift1   & 
+, drift1  , drift1  , drift1  , cellend , mb      , drift1   & 
+, drift1  , drift1  , drift1  , drift1  , drift1  , drift1   & 
+, drift1  , drift1  , drift1b , quadin  , quad1   , quadt    & 
+, quadout , drift2  , quadin  , quad2   , quadt   , quadout  & 
+, drift3  , bendedge, bendin  , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bendout , bendedge, drift4  , s1      , drift5  , quad3    & 
+, quadt   , quadout , drift6  , s2      , drift6  , quadt    & 
+, quad3   , quadout , drift7  , s1      , drift8  , bendedge & 
+, bendin  , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bendout , bendedge & 
+, drift3  , quadt   , quad2   , quadout , drift2  , quadt    & 
+, quad1   , quadout , drift1b , drift1  , drift1  , testpoint1 & 
+, drift1  , testpoint2, drift1  , drift1  , drift1  , drift1   & 
+, drift1  , drift1  , cellend , mb      , drift1  , drift1   & 
+, drift1  , drift1  , drift1  , drift1  , drift1  , drift1   & 
+, drift1  , drift1b , quadin  , quad1   , quadt   , quadout  & 
+, drift2  , quadin  , quad2   , quadt   , quadout , drift3   & 
+, bendedge, bendin  , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bendout  & 
+, bendedge, drift4  , s1      , drift5  , quad3   , quadt    & 
+, quadout , drift6  , s2      , drift6  , quadt   , quad3    & 
+, quadout , drift7  , s1      , drift8  , bendedge, bendin   & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bendout , bendedge, drift3   & 
+, quadt   , quad2   , quadout , drift2  , quadt   , quad1    & 
+, quadout , drift1b , drift1  , drift1  , testpoint1, drift1   & 
+, testpoint2, drift1  , drift1  , drift1  , drift1  , drift1   & 
+, drift1  , cellend , mb      , drift1  , drift1  , drift1   & 
+, drift1  , drift1  , drift1  , drift1  , drift1  , drift1   & 
+, drift1b , quadin  , quad1   , quadt   , quadout , drift2   & 
+, quadin  , quad2   , quadt   , quadout , drift3  , bendedge & 
+, bendin  , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bendout , bendedge & 
+, drift4  , s1      , drift5  , quad3   , quadt   , quadout  & 
+, drift6  , s2      , drift6  , quadt   , quad3   , quadout  & 
+, drift7  , s1      , drift8  , bendedge, bendin  , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bend    , m1hc    , bend    , m1hc     & 
+, bend    , m1hc    , bendout , bendedge, drift3  , quadt    & 
+, quad2   , quadout , drift2  , quadt   , quad1   , quadout  & 
+, drift1b , drift1  , drift1  , testpoint1, drift1  , testpoint2 & 
+, drift1  , drift1  , drift1  , drift1  , drift1  , drift1   & 
+, cellend , mb      , drift1  , drift1  , drift1  , drift1   & 
+, drift1  , drift1  , drift1  , drift1  , drift1  , drift1b  & 
+, quadin  , quad1   , quadt   , quadout , drift2  , quadin   & 
+, quad2   , quadt   , quadout , drift3  , bendedge, bendin   & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bendout , bendedge, drift4   & 
+, s1      , drift5  , quad3   , quadt   , quadout , drift6   & 
+, s2      , drift6  , quadt   , quad3   , quadout , drift7   & 
+, s1      , drift8  , bendedge, bendin  , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bend    , m1hc    , bend    , m1hc    , bend     & 
+, m1hc    , bendout , bendedge, drift3  , quadt   , quad2    & 
+, quadout , drift2  , quadt   , quad1   , quadout , drift1b  & 
+, drift1  , drift1  , testpoint1, drift1  , testpoint2, drift1   & 
+, drift1  , drift1  , drift1  , drift1  , drift1  , cellend  & 
+, cav     ) 

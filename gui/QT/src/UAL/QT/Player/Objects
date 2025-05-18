@@ -1,0 +1,30 @@
+OBJS +=	$(UAL)/gui/QT/lib/linux/obj/PlayerEvent.o \
+	$(UAL)/gui/QT/lib/linux/obj/TurnCounter.o \
+	$(UAL)/gui/QT/lib/linux/obj/PlayerWorker.o \
+	$(UAL)/gui/QT/lib/linux/obj/PlayerShell.o \
+	$(UAL)/gui/QT/lib/linux/obj/SeparatrixCalculator.o \
+	$(UAL)/gui/QT/lib/linux/obj/MainPlayerUI.o \
+	$(UAL)/gui/QT/lib/linux/obj/moc_MainPlayerUI.o \
+	$(UAL)/gui/QT/lib/linux/obj/PlayerUI.o \
+	$(UAL)/gui/QT/lib/linux/obj/moc_PlayerUI.o \
+	$(UAL)/gui/QT/lib/linux/obj/TablePageUI.o \
+ 	$(UAL)/gui/QT/lib/linux/obj/moc_TablePageUI.o \
+	$(UAL)/gui/QT/lib/linux/obj/RightAlignedTableItem.o \
+	$(UAL)/gui/QT/lib/linux/obj/TunefitEditor.o \
+ 	$(UAL)/gui/QT/lib/linux/obj/moc_TunefitEditor.o \
+	$(UAL)/gui/QT/lib/linux/obj/ChromfitEditor.o \
+ 	$(UAL)/gui/QT/lib/linux/obj/moc_ChromfitEditor.o \
+	$(UAL)/gui/QT/lib/linux/obj/BasicPlayer.o \
+ 	$(UAL)/gui/QT/lib/linux/obj/moc_BasicPlayer.o \
+	$(UAL)/gui/QT/lib/linux/obj/BasicViewer.o \
+ 	$(UAL)/gui/QT/lib/linux/obj/moc_BasicViewer.o \
+	$(UAL)/gui/QT/lib/linux/obj/BasicEditor.o \
+ 	$(UAL)/gui/QT/lib/linux/obj/moc_BasicEditor.o \
+	$(UAL)/gui/QT/lib/linux/obj/BeamEditor.o \
+ 	$(UAL)/gui/QT/lib/linux/obj/moc_BeamEditor.o \
+	$(UAL)/gui/QT/lib/linux/obj/RFEditor.o \
+ 	$(UAL)/gui/QT/lib/linux/obj/moc_RFEditor.o \
+	$(UAL)/gui/QT/lib/linux/obj/ParameterViewer.o \
+ 	$(UAL)/gui/QT/lib/linux/obj/moc_ParameterViewer.o \
+	$(UAL)/gui/QT/lib/linux/obj/PropagatorViewer.o \
+ 	$(UAL)/gui/QT/lib/linux/obj/moc_PropagatorViewer.o 

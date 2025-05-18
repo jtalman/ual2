@@ -1,0 +1,647 @@
+// 
+ring sequence { 
+  mbegin marker { tag = mbegin
+  };
+  mPeriod marker { tag = mPeriod
+  };
+  Qir1 quadrupole { tag = Qir1 at = 0.77 l = 0.419
+    body = { kl = [ 0 0.0050001234 ] kls = [ 0 0 ] 
+    }
+  };
+  Qir2 quadrupole { tag = Qir2 at = 1.3 l = 0.419
+    body = { kl = [ 0 -0.00490001234 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF marker { tag = mQF at = 4.4106
+  };
+  QFh quadrupole { tag = QFh at = 4.4731 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.2 marker { tag = mQF at = 4.5356
+  };
+  mQF.3 marker { tag = mQF at = 4.5356
+  };
+  QFh.2 quadrupole { tag = QFh at = 4.5981 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.4 marker { tag = mQF at = 4.6606
+  };
+  BhPlsl sbend { tag = BhPlsl at = 5.713326011 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.2 sbend { tag = BhPlsl at = 7.318778033 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.3 sbend { tag = BhPlsl at = 8.924230055 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.4 sbend { tag = BhPlsl at = 10.529682077 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl sbend { tag = BhMisl at = 12.135134099 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.2 sbend { tag = BhMisl at = 13.740586121 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.3 sbend { tag = BhMisl at = 15.346038143 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.4 sbend { tag = BhMisl at = 16.951490165 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD marker { tag = mQD at = 18.004216176
+  };
+  QDh quadrupole { tag = QDh at = 18.129216176 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.2 marker { tag = mQD at = 18.254216176
+  };
+  QDh.2 quadrupole { tag = QDh at = 18.379216176 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.3 marker { tag = mQD at = 18.504216176
+  };
+  mQD.4 marker { tag = mQD at = 18.504216176
+  };
+  QDh.3 quadrupole { tag = QDh at = 18.629216176 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.5 marker { tag = mQD at = 18.754216176
+  };
+  QDh.4 quadrupole { tag = QDh at = 18.879216176 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.6 marker { tag = mQD at = 19.004216176
+  };
+  BhMisl.5 sbend { tag = BhMisl at = 20.056942187 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.6 sbend { tag = BhMisl at = 21.662394209 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.7 sbend { tag = BhMisl at = 23.267846231 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.8 sbend { tag = BhMisl at = 24.873298253 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.5 sbend { tag = BhPlsl at = 26.478750275 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.6 sbend { tag = BhPlsl at = 28.084202297 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.7 sbend { tag = BhPlsl at = 29.689654319 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.8 sbend { tag = BhPlsl at = 31.295106341 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.5 marker { tag = mQF at = 32.347832352
+  };
+  QFh.3 quadrupole { tag = QFh at = 32.410332352 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.6 marker { tag = mQF at = 32.472832352
+  };
+  mQF.7 marker { tag = mQF at = 32.472832352
+  };
+  QFh.4 quadrupole { tag = QFh at = 32.535332352 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.8 marker { tag = mQF at = 32.597832352
+  };
+  Qir2.2 quadrupole { tag = Qir2 at = 35.708432352 l = 0.419
+    body = { kl = [ 0 -0.00490001234 ] kls = [ 0 0 ] 
+    }
+  };
+  Qir1.2 quadrupole { tag = Qir1 at = 36.238432352 l = 0.419
+    body = { kl = [ 0 0.0050001234 ] kls = [ 0 0 ] 
+    }
+  };
+  mPeriod.2 marker { tag = mPeriod at = 37.008432352
+  };
+  Qir1.3 quadrupole { tag = Qir1 at = 37.778432352 l = 0.419
+    body = { kl = [ 0 0.0050001234 ] kls = [ 0 0 ] 
+    }
+  };
+  Qir2.3 quadrupole { tag = Qir2 at = 38.308432352 l = 0.419
+    body = { kl = [ 0 -0.00490001234 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.9 marker { tag = mQF at = 41.419032352
+  };
+  QFh.5 quadrupole { tag = QFh at = 41.481532352 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.10 marker { tag = mQF at = 41.544032352
+  };
+  mQF.11 marker { tag = mQF at = 41.544032352
+  };
+  QFh.6 quadrupole { tag = QFh at = 41.606532352 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.12 marker { tag = mQF at = 41.669032352
+  };
+  BhPlsl.9 sbend { tag = BhPlsl at = 42.721758363 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.10 sbend { tag = BhPlsl at = 44.327210385 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.11 sbend { tag = BhPlsl at = 45.932662407 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.12 sbend { tag = BhPlsl at = 47.538114429 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.9 sbend { tag = BhMisl at = 49.143566451 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.10 sbend { tag = BhMisl at = 50.749018473 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.11 sbend { tag = BhMisl at = 52.354470495 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.12 sbend { tag = BhMisl at = 53.959922517 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.7 marker { tag = mQD at = 55.012648528
+  };
+  QDh.5 quadrupole { tag = QDh at = 55.137648528 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.8 marker { tag = mQD at = 55.262648528
+  };
+  QDh.6 quadrupole { tag = QDh at = 55.387648528 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.9 marker { tag = mQD at = 55.512648528
+  };
+  mQD.10 marker { tag = mQD at = 55.512648528
+  };
+  QDh.7 quadrupole { tag = QDh at = 55.637648528 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.11 marker { tag = mQD at = 55.762648528
+  };
+  QDh.8 quadrupole { tag = QDh at = 55.887648528 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.12 marker { tag = mQD at = 56.012648528
+  };
+  BhMisl.13 sbend { tag = BhMisl at = 57.065374539 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.14 sbend { tag = BhMisl at = 58.670826561 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.15 sbend { tag = BhMisl at = 60.276278583 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.16 sbend { tag = BhMisl at = 61.881730605 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.13 sbend { tag = BhPlsl at = 63.487182627 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.14 sbend { tag = BhPlsl at = 65.092634649 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.15 sbend { tag = BhPlsl at = 66.698086671 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.16 sbend { tag = BhPlsl at = 68.303538693 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.13 marker { tag = mQF at = 69.356264704
+  };
+  QFh.7 quadrupole { tag = QFh at = 69.418764704 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.14 marker { tag = mQF at = 69.481264704
+  };
+  mQF.15 marker { tag = mQF at = 69.481264704
+  };
+  QFh.8 quadrupole { tag = QFh at = 69.543764704 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.16 marker { tag = mQF at = 69.606264704
+  };
+  Qir2.4 quadrupole { tag = Qir2 at = 72.716864704 l = 0.419
+    body = { kl = [ 0 -0.00490001234 ] kls = [ 0 0 ] 
+    }
+  };
+  Qir1.4 quadrupole { tag = Qir1 at = 73.246864704 l = 0.419
+    body = { kl = [ 0 0.0050001234 ] kls = [ 0 0 ] 
+    }
+  };
+  mPeriod.3 marker { tag = mPeriod at = 74.016864704
+  };
+  mhalf marker { tag = mhalf at = 74.016864704
+  };
+  mPeriod.4 marker { tag = mPeriod at = 74.016864704
+  };
+  Qir1.5 quadrupole { tag = Qir1 at = 74.786864704 l = 0.419
+    body = { kl = [ 0 0.0050001234 ] kls = [ 0 0 ] 
+    }
+  };
+  Qir2.5 quadrupole { tag = Qir2 at = 75.316864704 l = 0.419
+    body = { kl = [ 0 -0.00490001234 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.17 marker { tag = mQF at = 78.427464704
+  };
+  QFh.9 quadrupole { tag = QFh at = 78.489964704 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.18 marker { tag = mQF at = 78.552464704
+  };
+  mQF.19 marker { tag = mQF at = 78.552464704
+  };
+  QFh.10 quadrupole { tag = QFh at = 78.614964704 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.20 marker { tag = mQF at = 78.677464704
+  };
+  BhPlsl.17 sbend { tag = BhPlsl at = 79.730190715 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.18 sbend { tag = BhPlsl at = 81.335642737 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.19 sbend { tag = BhPlsl at = 82.941094759 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.20 sbend { tag = BhPlsl at = 84.546546781 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.17 sbend { tag = BhMisl at = 86.151998803 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.18 sbend { tag = BhMisl at = 87.757450825 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.19 sbend { tag = BhMisl at = 89.362902847 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.20 sbend { tag = BhMisl at = 90.968354869 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.13 marker { tag = mQD at = 92.02108088
+  };
+  QDh.9 quadrupole { tag = QDh at = 92.14608088 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.14 marker { tag = mQD at = 92.27108088
+  };
+  QDh.10 quadrupole { tag = QDh at = 92.39608088 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.15 marker { tag = mQD at = 92.52108088
+  };
+  mQD.16 marker { tag = mQD at = 92.52108088
+  };
+  QDh.11 quadrupole { tag = QDh at = 92.64608088 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.17 marker { tag = mQD at = 92.77108088
+  };
+  QDh.12 quadrupole { tag = QDh at = 92.89608088 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.18 marker { tag = mQD at = 93.02108088
+  };
+  BhMisl.21 sbend { tag = BhMisl at = 94.073806891 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.22 sbend { tag = BhMisl at = 95.679258913 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.23 sbend { tag = BhMisl at = 97.284710935 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.24 sbend { tag = BhMisl at = 98.890162957 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.21 sbend { tag = BhPlsl at = 100.495614979 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.22 sbend { tag = BhPlsl at = 102.101067001 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.23 sbend { tag = BhPlsl at = 103.706519023 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.24 sbend { tag = BhPlsl at = 105.311971045 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.21 marker { tag = mQF at = 106.364697056
+  };
+  QFh.11 quadrupole { tag = QFh at = 106.427197056 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.22 marker { tag = mQF at = 106.489697056
+  };
+  mQF.23 marker { tag = mQF at = 106.489697056
+  };
+  QFh.12 quadrupole { tag = QFh at = 106.552197056 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.24 marker { tag = mQF at = 106.614697056
+  };
+  Qir2.6 quadrupole { tag = Qir2 at = 109.725297056 l = 0.419
+    body = { kl = [ 0 -0.00490001234 ] kls = [ 0 0 ] 
+    }
+  };
+  Qir1.6 quadrupole { tag = Qir1 at = 110.255297056 l = 0.419
+    body = { kl = [ 0 0.0050001234 ] kls = [ 0 0 ] 
+    }
+  };
+  mPeriod.5 marker { tag = mPeriod at = 111.025297056
+  };
+  Qir1.7 quadrupole { tag = Qir1 at = 111.795297056 l = 0.419
+    body = { kl = [ 0 0.0050001234 ] kls = [ 0 0 ] 
+    }
+  };
+  Qir2.7 quadrupole { tag = Qir2 at = 112.325297056 l = 0.419
+    body = { kl = [ 0 -0.00490001234 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.25 marker { tag = mQF at = 115.435897056
+  };
+  QFh.13 quadrupole { tag = QFh at = 115.498397056 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.26 marker { tag = mQF at = 115.560897056
+  };
+  mQF.27 marker { tag = mQF at = 115.560897056
+  };
+  QFh.14 quadrupole { tag = QFh at = 115.623397056 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.28 marker { tag = mQF at = 115.685897056
+  };
+  BhPlsl.25 sbend { tag = BhPlsl at = 116.738623067 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.26 sbend { tag = BhPlsl at = 118.344075089 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.27 sbend { tag = BhPlsl at = 119.949527111 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.28 sbend { tag = BhPlsl at = 121.554979133 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.25 sbend { tag = BhMisl at = 123.160431155 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.26 sbend { tag = BhMisl at = 124.765883177 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.27 sbend { tag = BhMisl at = 126.371335199 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.28 sbend { tag = BhMisl at = 127.976787221 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.19 marker { tag = mQD at = 129.029513232
+  };
+  QDh.13 quadrupole { tag = QDh at = 129.154513232 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.20 marker { tag = mQD at = 129.279513232
+  };
+  QDh.14 quadrupole { tag = QDh at = 129.404513232 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.21 marker { tag = mQD at = 129.529513232
+  };
+  mQD.22 marker { tag = mQD at = 129.529513232
+  };
+  QDh.15 quadrupole { tag = QDh at = 129.654513232 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.23 marker { tag = mQD at = 129.779513232
+  };
+  QDh.16 quadrupole { tag = QDh at = 129.904513232 l = 0.25
+    body = { kl = [ 0 0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQD.24 marker { tag = mQD at = 130.029513232
+  };
+  BhMisl.29 sbend { tag = BhMisl at = 131.082239243 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.30 sbend { tag = BhMisl at = 132.687691265 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.31 sbend { tag = BhMisl at = 134.293143287 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhMisl.32 sbend { tag = BhMisl at = 135.898595309 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.29 sbend { tag = BhPlsl at = 137.504047331 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.30 sbend { tag = BhPlsl at = 139.109499353 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.31 sbend { tag = BhPlsl at = 140.714951375 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  BhPlsl.32 sbend { tag = BhPlsl at = 142.320403397 l = 1.605452022
+    body = { kl = [ 0.09817477]}
+    body.dev = { kl = [ 0 -0.00019634954 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.29 marker { tag = mQF at = 143.373129408
+  };
+  QFh.15 quadrupole { tag = QFh at = 143.435629408 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.30 marker { tag = mQF at = 143.498129408
+  };
+  mQF.31 marker { tag = mQF at = 143.498129408
+  };
+  QFh.16 quadrupole { tag = QFh at = 143.560629408 l = 0.125
+    body = { kl = [ 0 -0.00611 ] kls = [ 0 0 ] 
+    }
+  };
+  mQF.32 marker { tag = mQF at = 143.623129408
+  };
+  Qir2.8 quadrupole { tag = Qir2 at = 146.733729408 l = 0.419
+    body = { kl = [ 0 -0.00490001234 ] kls = [ 0 0 ] 
+    }
+  };
+  Qir1.8 quadrupole { tag = Qir1 at = 147.263729408 l = 0.419
+    body = { kl = [ 0 0.0050001234 ] kls = [ 0 0 ] 
+    }
+  };
+  mPeriod.6 marker { tag = mPeriod at = 148.033729408
+  };
+  mend marker { tag = mend at = 148.033729408
+  };
+
+endsequence at = 148.033729408
+}

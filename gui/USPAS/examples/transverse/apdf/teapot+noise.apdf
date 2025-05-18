@@ -1,0 +1,12 @@
+<apdf>
+  <propagator id="teapot_noise" accelerator="ring">
+     <create>
+	<link algorithm="TEAPOT::DriftTracker"  types="Default" />
+        <link algorithm="TEAPOT::DriftTracker"  types="Marker|Drift" />
+        <link algorithm="TEAPOT::DipoleTracker" types="Sbend" />
+        <link algorithm="TEAPOT::MltTracker"    types="Quadrupole|Sextupole|Multipole|[VH]kicker|Kicker"/>
+        <link algorithm="UAL::USPAS::NoisyMonitor" types="[VH]monitor" />
+        <link algorithm="AIM::PoincareMonitor"     types="Monitor" />
+     </create>
+  </propagator>
+</apdf>

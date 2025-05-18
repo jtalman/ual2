@@ -1,0 +1,65 @@
+#setenv LD_LIBRARY_PATH
+setenv UALUSR `pwd` 
+
+cd UAL_GUI/ual1
+setenv UAL `pwd`
+source setup-linux-ual
+#echo $LD_LIBRARY_PATH
+
+setenv UAL_GUI   $UAL/gui
+setenv UAL_USPAS $UAL/gui/tools/USPAS
+
+setenv QTDIR $UAL/gui/qt-x11-free-3.3.4
+
+ setenv PATH /usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin:$UAL/gui/tools/qt/bin
+#setenv PATH /usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin:$UAL/gui/tools/qt/qmake
+#setenv PATH /usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin:$UAL/gui/tools/qt/qmake/qmake
+
+setenv ROOTSYS $UAL/gui/tools/root
+setenv ROOTSYSLIB $UAL/gui/tools/root/lib
+
+#setenv GR $UAL/gui/tools/USPAS/ual1/ext/UI/lib/linux/:$ROOTSYSLIB
+
+#setenv LD_LIBRARY_PATH $GR/:$LD_LIBRARY_PATH
+#setenv LD_LIBRARY_PATH $UAL/gui/tools/USPAS/ual1/ext/UI/lib/linux/:$LD_LIBRARY_PATH
+setenv LD_LIBRARY_PATH $ROOTSYSLIB/:$LD_LIBRARY_PATH
+setenv LD_LIBRARY_PATH $QTDIR/lib/:$LD_LIBRARY_PATH
+setenv LD_LIBRARY_PATH $UAL_USPAS/examples/player/src/:$LD_LIBRARY_PATH
+#setenv LD_LIBRARY_PATH /home/ualusr2007/UAL_GUI/ual1/gui/tools/USPAS/ual1/gui/QT/src/UAL/QT/Player/libPlayer.so.1:$LD_LIBRARY_PATH
+ setenv LD_LIBRARY_PATH /home/ualusr2007/UAL_GUI/ual1/gui/tools/USPAS/ual1/gui/QT/src/UAL/QT/Player/:$LD_LIBRARY_PATH
+
+setenv uspasPlayer $UAL/gui/tools/USPAS/examples/player/lib/linux
+
+cd gui
+#source llp
+echo $LD_LIBRARY_PATH
+
+alias gtUugQ 'pushd $UAL/gui/tools/USPAS/ual1/gui/QT'
+alias gtUe   'pushd $UAL/gui/tools/USPAS/examples'
+alias gtUueU 'pushd $UAL/gui/tools/USPAS/ual1/ext/UI'
+alias eu     'pushd $UAL/ext/UI'
+
+alias g 'pushd $UAL_USPAS/examples/transverse/linux'
+alias r './run ring ../../lattices/general_fodo.sxf ../apdf/teapot.apdf &'
+
+alias h 'history'
+alias ll 'ls -ialt'
+
+alias lep 'ls -ialt $UAL_USPAS/examples/player/lib/linux'
+alias let 'ls -ialt $UAL_USPAS/examples/transverse/lib/linux'
+
+alias lq 'ls -ialt $UAL_USPAS/ual1/gui/QT/lib/linux'
+alias lx 'ls -ialt $UAL_USPAS/ual1/ext/UI/lib/linux'
+alias lX 'ls -ialt            $UAL/ext/UI/lib/linux'
+
+alias lb 'ls -ialt /home/ualusr2007/UAL_GUI/ual1/gui/tools/USPAS/ual1/ext/UI/src/UAL/UI/BunchGenerator.hh'
+alias lB 'ls -ialt /home/ualusr2007/UAL_GUI/ual1/ext/UI/src/UAL/UI/BunchGenerator.hh'
+
+alias lR 'ls -ialt $UAL/gui/tools/USPAS/ual1/gui/ROOT/lib/linux/libUalRootViewers.so'
+
+alias le 'ls -ialt player/linux;transverse/linux'
+
+alias pe 'pushd $UAL_USPAS/examples'
+alias pq 'pushd $UAL_USPAS/ual1/gui/QT'
+alias px 'pushd $UAL_USPAS/ual1/ext/UI'
+alias pX 'pushd            $UAL/ext/UI'

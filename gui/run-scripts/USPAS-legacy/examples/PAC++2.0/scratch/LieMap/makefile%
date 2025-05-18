@@ -1,0 +1,22 @@
+CORE       = /home/cfsa/malitsky/PAC++2.0
+SRC        = $(CORE)/src
+LIB        = $(CORE)/lib
+
+INCLUDES   = -I$(SRC)
+
+CFLAGS     = $(INCLUDES)
+COMPILE    = g++ -c 
+
+LIBRARIES  = -L$(LIB) -lVectorA -lField -lLieMap -lZlib -lMonitor -lBeam \
+                      -lNumLib -lm
+LFLAGS     = $(LIBRARIES)
+LOAD       = g++  
+
+OBJ   = wiggler.o
+
+wiggler : $(OBJ) 
+	$(LOAD) -o wiggler $(OBJ) $(LFLAGS) 
+
+wiggler.o : wiggler.cc
+	$(COMPILE) $(CFLAGS)  wiggler.cc 
+

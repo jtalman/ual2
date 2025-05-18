@@ -1,0 +1,48 @@
+
+mbegin : marker
+mend : marker
+mcellin : marker
+mcellout : marker
+marcin : marker
+marcout : marker
+mcellcenter : marker
+Q : quadrupole, L = 0.0000000001, K1 = -100000
+Bh : sbend, L = 3.14159265359, ANGLE = 0.07853981633975
+Dh : drift, L = 0.0000000001
+            ! Sectors
+cell : LINE = ( mcellin, &
+                    Dh, &
+                    Q, &
+                    Bh, &
+                    mcellcenter, &
+                    Bh, &
+                    Q, &
+                    Dh, &
+                    mcellout )
+            harc : LINE = ( marcin, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    cell, &
+                    marcout )
+            ring : LINE = ( mbegin, &
+                    harc, &
+                    harc, &
+                    mend )
+              

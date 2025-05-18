@@ -1,0 +1,121 @@
+Context:
+   cd $UAL/examples/lattices/ezxml/
+   tar xvfz ezxml-0.8.6.tar.gz
+   cd ezxml
+   make
+________________________________________________________________
+
+Create source file ring.c:
+   Discussion:
+      cp ring-template.c ring.c
+
+      New file ring.c now has 1 static user include files
+         C-tracking-methods
+      that already exists.
+      It has 3 lattice dependent user include files
+         touch C-lattice-elements
+         touch C-ring-methods
+         touch C-ring-turn-sequence
+      that must eventually be populated.
+      The above gives a quick spot check compilation.
+
+      gcc ring.c
+      ./a.out
+
+      Create file C-lattice-elements
+      gcc elements.c ./ezxml.o
+      ./a.out > C-lattice-elements
+      vi C-lattice-elements
+             :1,$ s/(null)/0/g
+            "gather quadrupoles" (including mNullSlice)
+            manually separate the types
+                  markers
+                  drifts
+                  quadrupoles
+                  sbends
+                  rfcavity
+            manually strip leading "0sp" from quadrupole strength
+            put in the "+" in quadrupole strength
+
+      gcc ring.c
+      ./a.out
+
+      Create file C-ring-turn-sequence
+          gcc sectors.c  ./ezxml.o
+          ./a.out ring
+          HIT
+             mbegin:
+             RF1:
+             octantDF:
+             octantFD:
+             mQuarter:
+             octantDF:
+             octantFD:
+             mHalf:
+             octantDF:
+             octantFD:
+             mQuarter:
+             octantDF:
+             octantFD:
+             mend:        --->>>
+
+          C-ring-turn-sequence
+             mbegin.marker_track(&mbegin);
+             RF1.rfcavity_track(&RF1);
+             octantDF();
+             octantFD();
+             mQuarter.marker_track(&mQuarter);
+             octantDF();
+             octantFD();
+             mHalf.marker_track(&mHalf);
+             octantDF();
+             octantFD();
+             mQuarter.marker_track(&mQuarter);
+             octantDF();
+             octantFD();
+             mend.marker_track(&mend);
+
+      Create file C-ring-methods
+             void octantDF(){
+              printf("   %s\n","octantDF");
+             }
+
+             void octantFD(){
+              printf("   %s\n","octantFD");
+             }
+
+      gcc ring.c
+      ./a.out
+RING:
+   INJECT    :AT:: +0.000000e+00 +1.000000e-06 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00
+   mbegin:AT:: +0.000000e+00 +1.000000e-06 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00
+   RF1:AT:: +1.000000e-10 +1.000000e-06 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00
+      octantDF
+      octantFD
+   mQuarter:AT:: +1.000000e-10 +1.000000e-06 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00
+      octantDF
+      octantFD
+   mHalf:AT:: +1.000000e-10 +1.000000e-06 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00
+      octantDF
+      octantFD
+   mQuarter:AT:: +1.000000e-10 +1.000000e-06 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00
+      octantDF
+      octantFD
+   mend:AT:: +1.000000e-10 +1.000000e-06 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00 +0.000000e+00
+________________________________________________________________
+
+Create source file ring.c:
+   Discussion:
+      Pure template:
+         ./touch-C
+         cp ring-template.c ring.c
+         gcc ring.c
+         ./a.out
+
+      Halfway there:
+         ./touch-C
+         ./cp-C
+         cp ring-template.c ring.c
+         gcc ring.c
+         ./a.out
+ 

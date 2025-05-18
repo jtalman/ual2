@@ -1,0 +1,20 @@
+//void TeapotClOrbitService::closedMatrix(TeapotMatrix& matrix, const PacVTps& map)
+void closedMatrix(TeapotMatrix& matrix, const PacVTps& map)
+{ 
+  int dim = ( (int) (matrix.rows()/2.) );  
+
+  for(int i = 0; i < matrix.rows(); i++)
+    for(int j = 0; j < matrix.columns(); j++) 
+      matrix[i][j] = 0.0;
+
+  double rdetr;
+  for(int id = 0, x = 0, px = 1; id < dim; id ++, x += 2, px += 2) {
+
+    rdetr = 1./((1. - map(x, x+1))*(1. - map(px, px + 1)) - map(x, px + 1)*map(px, x + 1));
+    
+    matrix[x ][x ]  = (1. - map(px, px + 1))*rdetr;
+    matrix[x ][px]  = map(x, px + 1)*rdetr;
+    matrix[px][x ]  = map(px, x + 1)*rdetr;
+    matrix[px][px]  = (1. - map(x, x + 1))*rdetr;
+  }
+}

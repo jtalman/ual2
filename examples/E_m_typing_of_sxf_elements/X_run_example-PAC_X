@@ -1,0 +1,60 @@
+: !!!                                                                  !!!
+:       This "near script" alters "server side" code, $UAL/codes/PAC
+: !!!                                                                  !!!
+
+\cp PacElemBucket.h $UAL/codes/PAC/src/SMF/
+pushd $UAL/codes/PAC/
+ll ./lib/linux/
+make clean
+ll ./lib/linux/
+make
+ll ./lib/linux/
+popd
+
+pushd $UAL/codes/E_m/
+ll ./lib/linux/
+make clean
+ll ./lib/linux/
+make
+ll ./lib/linux/
+popd
+
+\cp working.sxf-CW3 working.sxf
+
+make clean
+make
+
+./E_m-Survey 1.25
+
+: sxf file
+: working.sxf-CW3
+: ...
+:    50 QBh
+:    51       quadrupole {
+:    52             tag = QBh
+:    53             at = 20.73296326805
+:    54             l = 0.15
+     55      body = {  kl = [ 999 1 4 18 96 600 4320]  kls = [ 0 ] }
+:    56   };
+: ...
+: maps to
+
+: !!!                                                                  !!!
+: kl of 0 *it._data[i]: 0                      syntax slightly off!!
+: kl of 1 *it._data[i]: 1
+: kl of 2 *it._data[i]: 2
+: kl of 3 *it._data[i]: 3
+: kl of 4 *it._data[i]: 4
+: kl of 5 *it._data[i]: 5
+: kl of 6 *it._data[i]: 6
+: !!!                                                                  !!!
+
+: !!!                                                                  !!!
+: 999   --->>>   0
+: 1     --->>>   1
+: 4     --->>>   2
+: 18    --->>>   3
+: 96    --->>>   4
+: 600   --->>>   5
+: 4320  --->>>   6
+: !!!                                                                  !!!

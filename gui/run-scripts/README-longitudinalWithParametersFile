@@ -1,0 +1,5 @@
+// Edit file "parameters"
+   vi $UAL/gui/run-scripts/USPAS-legacy/examples/longitudinalWithParametersFile/src/parameters
+
+// Execute
+./run-longitudinalWithParametersFile

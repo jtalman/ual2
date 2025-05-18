@@ -1,0 +1,10 @@
+printf("pi %e:\n", pi);
+printf("pmass %e:\n", pmass);
+printf("emass %e:\n", emass);
+printf("pg %e:\n", pg);
+printf("pG %e:\n", pG);
+printf("pFSG %e:\n", pFSG);
+printf("infinity %e:\n", infinity);
+printf("clight %e:\n", clight);
+printf("elemCharge %e:\n", elemCharge);
+printf("vcmPerm %e:\n", vcmPerm);

@@ -1,0 +1,6 @@
+int bunchSize   = 10000;   // ACTIVE - $UAL/gui/USPAS/examples/longitudinal_working/src/run.cc +126
+int turns       = 10000;   // ACTIVE
+int plotUpdates = 100;     // ACTIVE
+
+int nbins       = 10;      // NOT ACTIVE - hardwired in $UAL/gui/ROOT/src/UAL/ROOT/Viewers/MountainRangeViewer.hh
+int nsteps      = 10;      // NOT ACTIVE - hardwired in $UAL/gui/ROOT/src/UAL/ROOT/Viewers/MountainRangeViewer.cc

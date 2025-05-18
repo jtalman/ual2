@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adxf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file:/home/ualusr/USPAS/ual1/doc/adxf/adxf.xsd">
+    <constants>
+        <!--   ! If nhalf is changed, # of cells must be changed in "ring", and also 
+    ! requested tunes must be changed in "tune" and "tunethin". See !***! 
+    -->
+        <constant name="pi" value="3.14159265359"/>
+        <constant name="twopi" value="2*pi"/>
+        <constant name="c" value="299792458.0"/>
+        <constant name="nhalf" value="104"/>
+        <!--    ! bends are to be removed from the 
+    ! 20 half-cells making up the 2 long
+    ! straight sections
+    ! 2arcs, 7 triplecells/arc, 6half-cell per triplecell + 20 = 104 
+    -->
+        <constant name="scale" value="0.10*768 / 873"/>
+        <constant name="dipfrac" value="0.9994"/>
+        <constant name="quadfrac" value="0.0002"/>
+        <constant name="sextfrac" value="0.0001"/>
+        <constant name="nuxfrac" value="0.25"/>
+        <constant name="nuyfrac" value="0.25"/>
+        <constant name="celltunxi" value="0.2"/>
+        <constant name="celltunyi" value="0.2"/>
+        <!-- x tune adv./cell. (int. pt.) 0.2->72deg
+         !  y tune adv./cell. (int. pt.) 
+    -->
+        <constant name="lhalf" value="scale*nhalf"/>
+        <constant name="ld" value="dipfrac*lhalf"/>
+        <constant name="ldh" value="0.5*ld"/>
+        <constant name="lq" value="quadfrac*lhalf"/>
+        <constant name="ls" value="sextfrac*lhalf"/>
+        <constant name="nux" value="0.5*celltunxi*nhalf+nuxfrac"/>
+        <constant name="nuy" value="0.5*celltunyi*nhalf+nuyfrac"/>
+        <constant name="nhbend" value="nhalf - 20"/>
+        <constant name="deltheta" value="twopi / nhbend"/>
+        <constant name="deltheth" value="0.5*deltheta"/>
+        <constant name="cellmux" value="twopi*nux*2 / nhalf"/>
+        <constant name="cellmuy" value="twopi*nuy*2 / nhalf"/>
+        <constant name="sxby2" value="sin(0.5*cellmux)"/>
+        <constant name="syby2" value="sin(0.5*cellmuy)"/>
+        <constant name="ss2bar" value="0.5*(sxby2*sxby2 + syby2*syby2)"/>
+        <constant name="delss2" value="0.25*(syby2*syby2 - sxby2*sxby2)"/>
+        <constant name="sqrterm" value="sqrt(ss2bar + delss2*delss2)"/>
+        <constant name="q2lt" value="-sqrterm - delss2"/>
+        <constant name="q2t" value="q2lt / lhalf"/>
+        <constant name="q1lt" value="sqrterm - delss2"/>
+        <constant name="q1t" value="q1lt / lhalf"/>
+        <constant name="ratx1t" value="(1.0 -q2lt) / (1 -q1lt)"/>
+        <constant name="raty1t" value="(1.0+q2lt) / (1+q1lt)"/>
+        <constant name="ratx2t" value="(1.0 -q1lt) / (1 -q2lt)"/>
+        <constant name="raty2t" value="(1.0+q1lt) / (1+q2lt)"/>
+        <constant name="betax1t" value="sqrt(ratx1t)*lhalf / sxby2"/>
+        <constant name="betay1t" value="sqrt(raty1t)*lhalf / syby2"/>
+        <constant name="betax2t" value="sqrt(ratx2t)*lhalf / sxby2"/>
+        <constant name="betay2t" value="sqrt(raty2t)*lhalf / syby2"/>
+        <constant name="fact1" value="betay2t / (betax1t*betay2t - betay1t*betax2t) * lhalf / sxby2"/>
+        <constant name="fact2" value="betay1t / betay2t"/>
+        <constant name="q1" value="q1t - deltheta*deltheta / ld*fact1"/>
+        <constant name="q1l" value="q1t*lhalf"/>
+        <constant name="kq1" value="q1 / lq *0.12090116935 / 0.11942622381"/>
+        <constant name="q2" value="q2t + deltheta*deltheta / ld *fact1*fact2"/>
+        <constant name="q2l" value="q2t*lhalf"/>
+        <constant name="kq2" value="q2 / lq *0.12156969030 / 0.11991980566"/>
+        <constant name="ratx1" value="(1.0 -q2l) / (1 -q1l)"/>
+        <constant name="raty1" value="(1.0+q2l) / (1+q1l)"/>
+        <constant name="ratx2" value="(1.0 -q1l) / (1 -q2l)"/>
+        <constant name="raty2" value="(1.0+q1l) / (1+q2l)"/>
+        <constant name="betax1" value="sqrt(ratx1)*lhalf / sxby2"/>
+        <constant name="betay1" value="sqrt(raty1)*lhalf / syby2"/>
+        <constant name="betax2" value="sqrt(ratx2)*lhalf / sxby2"/>
+        <constant name="betay2" value="sqrt(raty2)*lhalf / syby2"/>
+        <constant name="eta1" value="(1.0 -q2l / 2) *lhalf*deltheta / sxby2 / sxby2"/>
+        <constant name="eta2" value="(1.0 -q1l / 2) *lhalf*deltheta / sxby2 / sxby2"/>
+        <constant name="s1" value="q1 / eta1"/>
+        <constant name="s2" value="q2 / eta2"/>
+        <constant name="ks1" value="q1 / eta1 / ls *0.53614807268 / 0.42160611935"/>
+        <constant name="ks2" value="q2 / eta2 / ls *1.0119731074 / 0.78658199073"/>
+        <constant name="tanhalf" value="sin(deltheta / 2.0) / cos(deltheta / 2.0)"/>
+        <constant name="delta" value="0.001"/>
+        <constant name="rhozero" value="lhalf / deltheta"/>
+        <constant name="denom1" value="1.0 + q1*eta1*delta*tanhalf"/>
+        <constant name="sd1" value="(rhozero+eta1*delta)*tanhalf / denom1"/>
+        <constant name="xd1" value="eta1*delta - q1*eta1*delta*rhozero*tanhalf / denom1"/>
+        <constant name="c11" value="2*sqrt((xd1 - delta*eta1)*(xd1 - delta*eta1) + sd1*sd1)"/>
+        <constant name="denom2" value="1.0 + q2*eta2*delta*tanhalf"/>
+        <constant name="sd2" value="(rhozero + eta2*delta)*tanhalf / denom2"/>
+        <constant name="xd2" value="eta2*delta - q2*eta2*delta*rhozero*tanhalf / denom2"/>
+        <constant name="c12" value="2*sqrt((xd2 - delta*eta2)*(xd2 - delta*eta2) + sd2*sd2)"/>
+        <constant name="c1" value="c11 + c12"/>
+        <constant name="c10" value="4.0*lhalf / deltheta*tanhalf"/>
+        <constant name="gamsq" value="delta / (c1 / c10 - 1.0)"/>
+        <constant name="kq1s" value="-kq1*(1 + 0.55)"/>
+        <constant name="kq2s" value="-kq2*(1 + 0.35)"/>
+        <constant name="kq1w" value="-kq1*(1 - 0.8)"/>
+        <constant name="kq2w" value="-kq2*(1 - 0.8)"/>
+        <constant name="q1s" value="kq1s*lq"/>
+        <constant name="q2s" value="kq2s*lq"/>
+        <constant name="q1w" value="kq1w*lq"/>
+        <constant name="q2w" value="kq2w*lq"/>
+        <constant name="delaug" value="0.762"/>
+        <constant name="delthmi" value="deltheth*(1 - delaug)"/>
+        <constant name="delthpl" value="deltheth*(1 + delaug)"/>
+        <constant name="dsangle" value="-2*deltheta"/>
+    </constants>
+    <!--  -->
+    <elements>
+        <marker name="mk1"/>
+        <marker name="mkst"/>
+        <marker name="mkb"/>
+        <marker name="mtrip"/>
+        <marker name="mbegin"/>
+        <marker name="mend"/>
+        <quadrupole name="quadhf" l="lq" k1="kq1"/>
+        <quadrupole name="quadvf" l="lq" k1="kq2"/>
+        <quadrupole name="quadhfs" l="lq" k1="kq1s"/>
+        <quadrupole name="quadvfs" l="lq" k1="kq2s"/>
+        <quadrupole name="quadhfw" l="lq" k1="kq1w"/>
+        <quadrupole name="quadvfw" l="lq" k1="kq2w"/>
+        <sbend name="bendh" l="ldh" angle="deltheth"/>
+        <sbend name="bendhpl" l="ldh" angle="delthpl"/>
+        <sbend name="bendhmi" l="ldh" angle="delthmi"/>
+        <sbend name="dsbendh" l="ldh" angle="dsangle"/>
+        <drift name="nobend" l="ld"/>
+        <sextupole name="sext1" l="ls" k2="ks1"/>
+        <sextupole name="sext2" l="ls" k2="ks2"/>
+    </elements>
+    <!--  -->
+    <sectors>
+        <sector name="bend" line="bendh mkb bendh" />
+        <sector name="dsbend" line="dsbendh mkb dsbendh" />
+        <sector name="bendpl" line="bendhpl mkb bendhpl" />
+        <sector name="bendmi" line="bendhmi mkb bendhmi" />
+        <sector name="threecel" line="mtrip 
+                                      quadhfs sext1 bendhmi mkb bendhmi sext2 quadvfs 
+                                      quadvfs sext2 bendhmi mkb bendhpl sext1 quadhfs
+                                      quadhfw sext1 bendhpl mkb bendhpl sext2 quadvfw
+                                      quadvfw sext2 bendhpl mkb bendhpl sext1 quadhfw
+                                      quadhfs sext1 bendhpl mkb bendhmi sext2 quadvfs
+                                      quadvfs sext2 bendhmi mkb bendhmi sext1 quadhfs 
+                                      mtrip" />
+        <sector name="arc" line="threecel threecel threecel threecel threecel threecel threecel" />
+        <sector name="dscelw" line="mk1 quadhfw dsbend quadvfw quadvfw dsbend quadhfw" />
+        <sector name="dscels" line="mk1 quadhfs dsbend quadvfs quadvfs dsbend quadhfs" />
+        <sector name="threeds" line="mtrip dscels dscelw dscels mtrip" />
+        <sector name="ring" line="mbegin mkst arc mkst arc mkst mend" />
+    </sectors>
+</adxf>

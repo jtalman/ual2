@@ -1,0 +1,1505 @@
+g++                        -g -fpic -ansi -Wall -Wextra -fpermissive      -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include -c positionPrinter.cc -o lib/linux/obj/positionPrinter.o
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/reference.inline:189:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:189,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from positionPrinter.cc:1:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/rotate.insert:1:0: warning: "PI" redefined [enabled by default]
+ #define PI 3.141592653589793
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/PAC/src/Survey/PacSurvey.h:13:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/PAC/src/Survey/PacSurveyData.h:13,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/DipoleData.hh:11,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:9,
+                 from positionPrinter.hh:9,
+                 from positionPrinter.cc:1:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/Survey/PacSurveyDef.h:18:0: note: this is the location of the previous definition
+ #define PI   3.1415926535898
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNode.hh:13:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh:10,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorSequence.hh:10,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/AcceleratorPropagator.hh:9,
+                 from /home/ualusr2011/ual1206/ual1/ext/UI/include/UAL/UI/Shell.hh:5,
+                 from positionPrinter.hh:8,
+                 from positionPrinter.cc:1:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorSequence.hh:10:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/AcceleratorPropagator.hh:9,
+                 from /home/ualusr2011/ual1206/ual1/ext/UI/include/UAL/UI/Shell.hh:5,
+                 from positionPrinter.hh:8,
+                 from positionPrinter.cc:1:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacElemPart.h:10,
+                 from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacGenElement.h:16,
+                 from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattElement.h:12,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/DipoleData.hh:10,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:9,
+                 from positionPrinter.hh:9,
+                 from positionPrinter.cc:1:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:204:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from positionPrinter.cc:1:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic: In member function ‘double DipoleAlgorithm<Coordinate, Coordinates>::t3h(double)’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic:46:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:3:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from positionPrinter.cc:1:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh: In static member function ‘static void ETEAPOT_MltTurn::MarkerTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  char * S[21] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+                                                                                                                                                                                                              ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:9: warning: unused variable ‘S’ [-Wunused-variable]
+  char * S[21] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+         ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MltTracker.hh:6:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:4,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from positionPrinter.cc:1:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattice.h: At global scope:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattice.h:40:53: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    UAL::AcceleratorNode* const  getNodeAt(int indx) const { return &(_ptr->_vector[indx]);}
+                                                     ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MltTracker.hh:53:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:4,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from positionPrinter.cc:1:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S: In static member function ‘static void ETEAPOT_MltTurn::MltTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY","21S","22S","23S","24S","25S","26S","27S","28S","29S","30S","31S","32S","33S","34S","35S","36S","37S","38S","39S","40S"};
+                                                                                                                                                                                                                                                                                                                                     ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:8: warning: unused variable ‘S’ [-Wunused-variable]
+ char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY","21S","22S","23S","24S","25S","26S","27S","28S","29S","30S","31S","32S","33S","34S","35S","36S","37S","38S","39S","40S"};
+        ^
+In file included from positionPrinter.hh:9:0,
+                 from positionPrinter.cc:1:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh: In static member function ‘static void ETEAPOT_MltTurn::DipoleTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+                                                                                                                                                                                                                  ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+In file included from positionPrinter.hh:9:0,
+                 from positionPrinter.cc:1:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:13: warning: unused variable ‘S’ [-Wunused-variable]
+      char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+             ^
+positionPrinter.cc: In member function ‘void positionPrinter::write(int, int, PAC::Bunch&)’:
+positionPrinter.cc:27:14: warning: unused variable ‘v’ [-Wunused-variable]
+       double v     = p/gam/energy*UAL::clight;
+              ^
+positionPrinter.cc:42:14: warning: unused variable ‘ew’ [-Wunused-variable]
+       double ew      = de * p + energy;
+              ^
+positionPrinter.cc:44:14: warning: unused variable ‘psp0’ [-Wunused-variable]
+       double psp0    = get_psp0(pos, v0byc);
+              ^
+g++                        -g -fpic -ansi -Wall -Wextra -fpermissive      -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include -c xmgracePrint.cc -o lib/linux/obj/xmgracePrint.o
+In file included from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNode.hh:13:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh:10,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorSequence.hh:10,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/AcceleratorPropagator.hh:9,
+                 from /home/ualusr2011/ual1206/ual1/ext/UI/include/UAL/UI/Shell.hh:5,
+                 from xmgracePrint.hh:8,
+                 from xmgracePrint.cc:1:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorSequence.hh:10:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/AcceleratorPropagator.hh:9,
+                 from /home/ualusr2011/ual1206/ual1/ext/UI/include/UAL/UI/Shell.hh:5,
+                 from xmgracePrint.hh:8,
+                 from xmgracePrint.cc:1:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+xmgracePrint.cc: In member function ‘void xmgracePrint::write(int, int, PAC::Bunch&)’:
+xmgracePrint.cc:27:14: warning: unused variable ‘v’ [-Wunused-variable]
+       double v     = p/gam/energy*UAL::clight;
+              ^
+xmgracePrint.cc:41:14: warning: unused variable ‘wp_time’ [-Wunused-variable]
+       double wp_time = t0 + (-ct /UAL::clight );
+              ^
+xmgracePrint.cc:42:14: warning: unused variable ‘ew’ [-Wunused-variable]
+       double ew      = de * p + energy;
+              ^
+xmgracePrint.cc:44:14: warning: unused variable ‘psp0’ [-Wunused-variable]
+       double psp0    = get_psp0(pos, v0byc);
+              ^
+g++                        -g -fpic -ansi -Wall -Wextra -fpermissive      -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include -c evolver.cc -o lib/linux/obj/evolver.o
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/reference.inline:189:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:189,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from evolver.cc:25:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/rotate.insert:1:0: warning: "PI" redefined [enabled by default]
+ #define PI 3.141592653589793
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/TEAPOT/src/Integrator/TeapotElement.h:11:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/TEAPOT/src/Main/Teapot.h:13,
+                 from evolver.cc:15:
+/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src/Main/TeapotDef.h:32:0: note: this is the location of the previous definition
+ #define PI   3.1415926535898
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APDF/APDF_Builder.hh:10:0,
+                 from evolver.cc:11:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorSequence.hh:10:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/AcceleratorPropagator.hh:9,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APDF/APDF_Builder.hh:11,
+                 from evolver.cc:11:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacElemKeys.h:4:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacSmf.h:10,
+                 from evolver.cc:13:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattices.h:6:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacSmf.h:14,
+                 from evolver.cc:13:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattice.h: At global scope:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattice.h:40:53: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    UAL::AcceleratorNode* const  getNodeAt(int indx) const { return &(_ptr->_vector[indx]);}
+                                                     ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:204:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from evolver.cc:25:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic: In member function ‘double DipoleAlgorithm<Coordinate, Coordinates>::t3h(double)’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic:46:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:3:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from evolver.cc:25:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh: In static member function ‘static void ETEAPOT_MltTurn::MarkerTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  char * S[21] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+                                                                                                                                                                                                              ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:9: warning: unused variable ‘S’ [-Wunused-variable]
+  char * S[21] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+         ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MltTracker.hh:53:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:4,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from evolver.cc:25:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S: In static member function ‘static void ETEAPOT_MltTurn::MltTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY","21S","22S","23S","24S","25S","26S","27S","28S","29S","30S","31S","32S","33S","34S","35S","36S","37S","38S","39S","40S"};
+                                                                                                                                                                                                                                                                                                                                     ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:8: warning: unused variable ‘S’ [-Wunused-variable]
+ char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY","21S","22S","23S","24S","25S","26S","27S","28S","29S","30S","31S","32S","33S","34S","35S","36S","37S","38S","39S","40S"};
+        ^
+In file included from positionPrinter.hh:9:0,
+                 from evolver.cc:25:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh: In static member function ‘static void ETEAPOT_MltTurn::DipoleTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+                                                                                                                                                                                                                  ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+In file included from positionPrinter.hh:9:0,
+                 from evolver.cc:25:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:13: warning: unused variable ‘S’ [-Wunused-variable]
+      char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+             ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/algorithm.hh:177:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/DipoleTracker.hh:17,
+                 from evolver.cc:28:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic: In member function ‘double algorithm<Coordinate, Coordinates>::t3h(double)’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic:46:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from evolver.cc:47:0:
+extractParameters.h: In function ‘int main(int, char**)’:
+extractParameters.h:23:6: warning: unused variable ‘splitForBends’ [-Wunused-variable]
+  int splitForBends = 0;    // new split specification
+      ^
+extractParameters.h:24:6: warning: unused variable ‘splitForQuads’ [-Wunused-variable]
+  int splitForQuads = 0;    // new split specification
+      ^
+extractParameters.h:25:6: warning: unused variable ‘splitForSexts’ [-Wunused-variable]
+  int splitForSexts = 0;    // new split specification
+      ^
+extractParameters.h:26:6: warning: unused variable ‘order’ [-Wunused-variable]
+  int order = 2;
+      ^
+extractParameters.h:27:6: warning: unused variable ‘turns’ [-Wunused-variable]
+  int turns;                // specified as 1 in trtrin (for post processing)
+      ^
+g++                        -o evolver   -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include ./lib/linux/obj/evolver.o ./lib/linux/obj/positionPrinter.o ./lib/linux/obj/xmgracePrint.o  -lgsl -L/home/ualusr2011/ual1206/ual1/ext/UI/lib/linux  	 -lUalUI -L/home/ualusr2011/ual1206/ual1/codes/TIBETAN/lib/linux  	 -lTibetan -L/home/ualusr2011/ual1206/ual1/ext/SXF/lib/linux 		 -lUalSXF2 -L/home/ualusr2011/ual1206/ual1/codes/ACCSIM/lib/linux 	 -lAccsim -L/home/ualusr2011/ual1206/ual1/codes/TEAPOT/lib/linux 	 -lTeapot -L/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/lib/linux 	 -lETeapot -L/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/lib/linux -lETEAPOT_MltTurn -L/home/ualusr2011/ual1206/ual1/codes/PAC/lib/linux  		 -lPacSMF -lPacOptics -lPac -lPacSurvey -L/home/ualusr2011/ual1206/ual1/codes/ZLIB/lib/linux 		 -lZTps -L/home/ualusr2011/ual1206/ual1/codes/UAL/lib/linux 	 -lUal -L/home/ualusr2011/ual1206/ual1/tools/sxf//lib/linux 		 -lSXF -L/home/ualusr2011/ual1206/ual1/tools/lib/linux 		 -lpcre -lxml2 -lrfftw -lfftw -lm
+g++                        -g -fpic -ansi -Wall -Wextra -fpermissive      -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include -c transferMatrix.cc -o lib/linux/obj/transferMatrix.o
+transferMatrix.cc: In function ‘int main(int, char**)’:
+transferMatrix.cc:11:6: warning: unused variable ‘ip’ [-Wunused-variable]
+  int ip=1;
+      ^
+transferMatrix.cc:12:6: warning: unused variable ‘bend’ [-Wunused-variable]
+  int bend=0;
+      ^
+In file included from transferMatrix.cc:32:0:
+sip2:5:14: warning: unused variable ‘dummyTWO’ [-Wunused-variable]
+  std::string dummyTWO[sElems];
+              ^
+In file included from transferMatrix.cc:43:0:
+probeDataForTwiss:4:23: warning: unused variable ‘x3typ’ [-Wunused-variable]
+ double y1typ  = TINY, x3typ  = TINY;
+                       ^
+probeDataForTwiss:5:23: warning: unused variable ‘x4typ’ [-Wunused-variable]
+ double y2typ  = TINY, x4typ  = TINY;
+                       ^
+probeDataForTwiss:6:8: warning: unused variable ‘x5typ’ [-Wunused-variable]
+ double x5typ  = TINY;
+        ^
+probeDataForTwiss:7:23: warning: unused variable ‘x6typ’ [-Wunused-variable]
+ double deltyp = TINY, x6typ  = TINY;
+                       ^
+transferMatrix.cc:76:9: warning: unused variable ‘xMu’ [-Wunused-variable]
+  double xMu=acos(xTrace/2);
+         ^
+transferMatrix.cc: At global scope:
+transferMatrix.cc:10:5: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main(int argc, char* argv[]){
+     ^
+g++                        -o transferMatrix   -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include ./lib/linux/obj/transferMatrix.o ./lib/linux/obj/positionPrinter.o ./lib/linux/obj/xmgracePrint.o  -lgsl -L/home/ualusr2011/ual1206/ual1/ext/UI/lib/linux  	 -lUalUI -L/home/ualusr2011/ual1206/ual1/codes/TIBETAN/lib/linux  	 -lTibetan -L/home/ualusr2011/ual1206/ual1/ext/SXF/lib/linux 		 -lUalSXF2 -L/home/ualusr2011/ual1206/ual1/codes/ACCSIM/lib/linux 	 -lAccsim -L/home/ualusr2011/ual1206/ual1/codes/TEAPOT/lib/linux 	 -lTeapot -L/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/lib/linux 	 -lETeapot -L/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/lib/linux -lETEAPOT_MltTurn -L/home/ualusr2011/ual1206/ual1/codes/PAC/lib/linux  		 -lPacSMF -lPacOptics -lPac -lPacSurvey -L/home/ualusr2011/ual1206/ual1/codes/ZLIB/lib/linux 		 -lZTps -L/home/ualusr2011/ual1206/ual1/codes/UAL/lib/linux 	 -lUal -L/home/ualusr2011/ual1206/ual1/tools/sxf//lib/linux 		 -lSXF -L/home/ualusr2011/ual1206/ual1/tools/lib/linux 		 -lpcre -lxml2 -lrfftw -lfftw -lm
+g++                        -g -fpic -ansi -Wall -Wextra -fpermissive      -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include -c determineTwiss.cc -o lib/linux/obj/determineTwiss.o
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/reference.inline:189:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:189,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from determineTwiss.cc:31:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/rotate.insert:1:0: warning: "PI" redefined [enabled by default]
+ #define PI 3.141592653589793
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/TEAPOT/src/Integrator/TeapotElement.h:11:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/TEAPOT/src/Main/Teapot.h:13,
+                 from determineTwiss.cc:19:
+/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src/Main/TeapotDef.h:32:0: note: this is the location of the previous definition
+ #define PI   3.1415926535898
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APDF/APDF_Builder.hh:10:0,
+                 from determineTwiss.cc:15:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorSequence.hh:10:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/AcceleratorPropagator.hh:9,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APDF/APDF_Builder.hh:11,
+                 from determineTwiss.cc:15:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacElemKeys.h:4:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacSmf.h:10,
+                 from determineTwiss.cc:17:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattices.h:6:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacSmf.h:14,
+                 from determineTwiss.cc:17:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattice.h: At global scope:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattice.h:40:53: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    UAL::AcceleratorNode* const  getNodeAt(int indx) const { return &(_ptr->_vector[indx]);}
+                                                     ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:204:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from determineTwiss.cc:31:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic: In member function ‘double DipoleAlgorithm<Coordinate, Coordinates>::t3h(double)’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic:46:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:3:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from determineTwiss.cc:31:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh: In static member function ‘static void ETEAPOT_MltTurn::MarkerTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  char * S[21] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+                                                                                                                                                                                                              ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:9: warning: unused variable ‘S’ [-Wunused-variable]
+  char * S[21] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+         ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MltTracker.hh:53:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:4,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from determineTwiss.cc:31:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S: In static member function ‘static void ETEAPOT_MltTurn::MltTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY","21S","22S","23S","24S","25S","26S","27S","28S","29S","30S","31S","32S","33S","34S","35S","36S","37S","38S","39S","40S"};
+                                                                                                                                                                                                                                                                                                                                     ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:8: warning: unused variable ‘S’ [-Wunused-variable]
+ char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY","21S","22S","23S","24S","25S","26S","27S","28S","29S","30S","31S","32S","33S","34S","35S","36S","37S","38S","39S","40S"};
+        ^
+In file included from positionPrinter.hh:9:0,
+                 from determineTwiss.cc:31:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh: In static member function ‘static void ETEAPOT_MltTurn::DipoleTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+                                                                                                                                                                                                                  ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+In file included from positionPrinter.hh:9:0,
+                 from determineTwiss.cc:31:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:13: warning: unused variable ‘S’ [-Wunused-variable]
+      char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+             ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/algorithm.hh:177:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/DipoleTracker.hh:17,
+                 from determineTwiss.cc:34:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic: In member function ‘double algorithm<Coordinate, Coordinates>::t3h(double)’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic:46:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+determineTwiss.cc: In function ‘int main(int, char**)’:
+determineTwiss.cc:59:26: warning: unused variable ‘edt’ [-Wunused-variable]
+  ETEAPOT::DipoleTracker* edt=new ETEAPOT::DipoleTracker();
+                          ^
+determineTwiss.cc:60:26: warning: unused variable ‘mdt’ [-Wunused-variable]
+  ETEAPOT::MltTracker*    mdt=new ETEAPOT::MltTracker();
+                          ^
+In file included from determineTwiss.cc:78:0:
+extractParameters.h:22:6: warning: unused variable ‘split’ [-Wunused-variable]
+  int split = 1;            // old split specification
+      ^
+extractParameters.h:27:6: warning: variable ‘turns’ set but not used [-Wunused-but-set-variable]
+  int turns;                // specified as 1 in trtrin (for post processing)
+      ^
+determineTwiss.cc:83:23: warning: unused variable ‘x3typ’ [-Wunused-variable]
+ double y1typ  = TINY, x3typ  = TINY;
+                       ^
+determineTwiss.cc:84:23: warning: unused variable ‘x4typ’ [-Wunused-variable]
+ double y2typ  = TINY, x4typ  = TINY;
+                       ^
+determineTwiss.cc:86:23: warning: unused variable ‘x6typ’ [-Wunused-variable]
+ double deltyp = TINY, x6typ  = TINY;
+                       ^
+In file included from determineTwiss.cc:88:0:
+simulatedProbeValues:12:8: warning: unused variable ‘dpz’ [-Wunused-variable]
+ double dpz     = 0.0; 
+        ^
+In file included from simulatedProbeValues:38:0,
+                 from determineTwiss.cc:88:
+printProbeValues:9:8: warning: unused variable ‘kMKSeER’ [-Wunused-variable]
+ double kMKSeER = q0*El0*IA*IA;
+        ^
+determineTwiss.cc:155:13: warning: unused variable ‘drft’ [-Wunused-variable]
+  int mltK=0,drft=0,bend=0,mark=0,RF=0;
+             ^
+determineTwiss.cc:289:9: warning: variable ‘a0x’ set but not used [-Wunused-but-set-variable]
+  double a0x=     (double)0;
+         ^
+determineTwiss.cc:290:9: warning: variable ‘b0x’ set but not used [-Wunused-but-set-variable]
+  double b0x=     (double)0;
+         ^
+determineTwiss.cc:291:9: warning: variable ‘mu_xTent’ set but not used [-Wunused-but-set-variable]
+  double mu_xTent=(double)0;
+         ^
+determineTwiss.cc:292:9: warning: variable ‘a0y’ set but not used [-Wunused-but-set-variable]
+  double a0y=     (double)0;
+         ^
+determineTwiss.cc:293:9: warning: variable ‘b0y’ set but not used [-Wunused-but-set-variable]
+  double b0y=     (double)0;
+         ^
+determineTwiss.cc:294:9: warning: variable ‘mu_yTent’ set but not used [-Wunused-but-set-variable]
+  double mu_yTent=(double)0;
+         ^
+In file included from determineTwiss.cc:321:0:
+trtrout:164:8: warning: variable ‘r’ set but not used [-Wunused-but-set-variable]
+ double r[5][5];
+        ^
+determineTwiss.cc:323:9: warning: unused variable ‘MX21’ [-Wunused-variable]
+  double MX21=rx[2][1];double MX22=rx[2][2];
+         ^
+determineTwiss.cc:353:9: warning: unused variable ‘MY21’ [-Wunused-variable]
+  double MY21=ry[2][1];double MY22=ry[2][2];
+         ^
+g++                        -o determineTwiss   -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include ./lib/linux/obj/determineTwiss.o ./lib/linux/obj/positionPrinter.o ./lib/linux/obj/xmgracePrint.o  -lgsl -L/home/ualusr2011/ual1206/ual1/ext/UI/lib/linux  	 -lUalUI -L/home/ualusr2011/ual1206/ual1/codes/TIBETAN/lib/linux  	 -lTibetan -L/home/ualusr2011/ual1206/ual1/ext/SXF/lib/linux 		 -lUalSXF2 -L/home/ualusr2011/ual1206/ual1/codes/ACCSIM/lib/linux 	 -lAccsim -L/home/ualusr2011/ual1206/ual1/codes/TEAPOT/lib/linux 	 -lTeapot -L/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/lib/linux 	 -lETeapot -L/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/lib/linux -lETEAPOT_MltTurn -L/home/ualusr2011/ual1206/ual1/codes/PAC/lib/linux  		 -lPacSMF -lPacOptics -lPac -lPacSurvey -L/home/ualusr2011/ual1206/ual1/codes/ZLIB/lib/linux 		 -lZTps -L/home/ualusr2011/ual1206/ual1/codes/UAL/lib/linux 	 -lUal -L/home/ualusr2011/ual1206/ual1/tools/sxf//lib/linux 		 -lSXF -L/home/ualusr2011/ual1206/ual1/tools/lib/linux 		 -lpcre -lxml2 -lrfftw -lfftw -lm
+g++                        -g -fpic -ansi -Wall -Wextra -fpermissive      -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include -c transferMatrices.cc -o lib/linux/obj/transferMatrices.o
+transferMatrices.cc: In function ‘int main(int, char**)’:
+transferMatrices.cc:21:6: warning: unused variable ‘ip’ [-Wunused-variable]
+  int ip=1;
+      ^
+transferMatrices.cc:22:6: warning: unused variable ‘bend’ [-Wunused-variable]
+  int bend=0;
+      ^
+In file included from transferMatrices.cc:42:0:
+sip2:5:14: warning: unused variable ‘dummyTWO’ [-Wunused-variable]
+  std::string dummyTWO[sElems];
+              ^
+transferMatrices.cc:56:9: warning: unused variable ‘muX_OfS’ [-Wunused-variable]
+  double muX_OfS;
+         ^
+transferMatrices.cc:57:9: warning: unused variable ‘xTrace’ [-Wunused-variable]
+  double xTrace;
+         ^
+transferMatrices.cc:58:9: warning: unused variable ‘xMu’ [-Wunused-variable]
+  double xMu;
+         ^
+transferMatrices.cc:64:9: warning: unused variable ‘muY_OfS’ [-Wunused-variable]
+  double muY_OfS;
+         ^
+transferMatrices.cc:65:9: warning: unused variable ‘yTrace’ [-Wunused-variable]
+  double yTrace;
+         ^
+transferMatrices.cc:66:9: warning: unused variable ‘yMu’ [-Wunused-variable]
+  double yMu;
+         ^
+In file included from transferMatrices.cc:78:0:
+probeDataForTwiss:4:23: warning: unused variable ‘x3typ’ [-Wunused-variable]
+ double y1typ  = TINY, x3typ  = TINY;
+                       ^
+probeDataForTwiss:5:23: warning: unused variable ‘x4typ’ [-Wunused-variable]
+ double y2typ  = TINY, x4typ  = TINY;
+                       ^
+probeDataForTwiss:6:8: warning: unused variable ‘x5typ’ [-Wunused-variable]
+ double x5typ  = TINY;
+        ^
+probeDataForTwiss:7:23: warning: unused variable ‘x6typ’ [-Wunused-variable]
+ double deltyp = TINY, x6typ  = TINY;
+                       ^
+g++                        -o transferMatrices   -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include ./lib/linux/obj/transferMatrices.o ./lib/linux/obj/positionPrinter.o ./lib/linux/obj/xmgracePrint.o  -lgsl -L/home/ualusr2011/ual1206/ual1/ext/UI/lib/linux  	 -lUalUI -L/home/ualusr2011/ual1206/ual1/codes/TIBETAN/lib/linux  	 -lTibetan -L/home/ualusr2011/ual1206/ual1/ext/SXF/lib/linux 		 -lUalSXF2 -L/home/ualusr2011/ual1206/ual1/codes/ACCSIM/lib/linux 	 -lAccsim -L/home/ualusr2011/ual1206/ual1/codes/TEAPOT/lib/linux 	 -lTeapot -L/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/lib/linux 	 -lETeapot -L/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/lib/linux -lETEAPOT_MltTurn -L/home/ualusr2011/ual1206/ual1/codes/PAC/lib/linux  		 -lPacSMF -lPacOptics -lPac -lPacSurvey -L/home/ualusr2011/ual1206/ual1/codes/ZLIB/lib/linux 		 -lZTps -L/home/ualusr2011/ual1206/ual1/codes/UAL/lib/linux 	 -lUal -L/home/ualusr2011/ual1206/ual1/tools/sxf//lib/linux 		 -lSXF -L/home/ualusr2011/ual1206/ual1/tools/lib/linux 		 -lpcre -lxml2 -lrfftw -lfftw -lm
+g++                        -g -fpic -ansi -Wall -Wextra -fpermissive      -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include -c orbitsWithSpin.cc -o lib/linux/obj/orbitsWithSpin.o
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/reference.inline:189:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:189,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from orbitsWithSpin.cc:31:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/rotate.insert:1:0: warning: "PI" redefined [enabled by default]
+ #define PI 3.141592653589793
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/TEAPOT/src/Integrator/TeapotElement.h:11:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/TEAPOT/src/Main/Teapot.h:13,
+                 from orbitsWithSpin.cc:19:
+/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src/Main/TeapotDef.h:32:0: note: this is the location of the previous definition
+ #define PI   3.1415926535898
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APDF/APDF_Builder.hh:10:0,
+                 from orbitsWithSpin.cc:15:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorSequence.hh:10:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/AcceleratorPropagator.hh:9,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APDF/APDF_Builder.hh:11,
+                 from orbitsWithSpin.cc:15:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacElemKeys.h:4:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacSmf.h:10,
+                 from orbitsWithSpin.cc:17:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattices.h:6:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacSmf.h:14,
+                 from orbitsWithSpin.cc:17:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattice.h: At global scope:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattice.h:40:53: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    UAL::AcceleratorNode* const  getNodeAt(int indx) const { return &(_ptr->_vector[indx]);}
+                                                     ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:204:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from orbitsWithSpin.cc:31:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic: In member function ‘double DipoleAlgorithm<Coordinate, Coordinates>::t3h(double)’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic:46:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:3:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from orbitsWithSpin.cc:31:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh: In static member function ‘static void ETEAPOT_MltTurn::MarkerTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  char * S[21] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+                                                                                                                                                                                                              ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:9: warning: unused variable ‘S’ [-Wunused-variable]
+  char * S[21] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+         ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MltTracker.hh:53:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:4,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from orbitsWithSpin.cc:31:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S: In static member function ‘static void ETEAPOT_MltTurn::MltTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY","21S","22S","23S","24S","25S","26S","27S","28S","29S","30S","31S","32S","33S","34S","35S","36S","37S","38S","39S","40S"};
+                                                                                                                                                                                                                                                                                                                                     ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:8: warning: unused variable ‘S’ [-Wunused-variable]
+ char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY","21S","22S","23S","24S","25S","26S","27S","28S","29S","30S","31S","32S","33S","34S","35S","36S","37S","38S","39S","40S"};
+        ^
+In file included from positionPrinter.hh:9:0,
+                 from orbitsWithSpin.cc:31:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh: In static member function ‘static void ETEAPOT_MltTurn::DipoleTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+                                                                                                                                                                                                                  ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+In file included from positionPrinter.hh:9:0,
+                 from orbitsWithSpin.cc:31:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:13: warning: unused variable ‘S’ [-Wunused-variable]
+      char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+             ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/algorithm.hh:177:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/DipoleTracker.hh:17,
+                 from orbitsWithSpin.cc:34:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic: In member function ‘double algorithm<Coordinate, Coordinates>::t3h(double)’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic:46:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+orbitsWithSpin.cc: In function ‘int main(int, char**)’:
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char * S[21] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+                                                                                                                                                                                                             ^
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:303:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+orbitsWithSpin.cc:60:26: warning: unused variable ‘edt’ [-Wunused-variable]
+  ETEAPOT::DipoleTracker* edt=new ETEAPOT::DipoleTracker();
+                          ^
+orbitsWithSpin.cc:61:26: warning: unused variable ‘mdt’ [-Wunused-variable]
+  ETEAPOT::MltTracker*    mdt=new ETEAPOT::MltTracker();
+                          ^
+In file included from orbitsWithSpin.cc:79:0:
+extractParameters.h:22:6: warning: unused variable ‘split’ [-Wunused-variable]
+  int split = 1;            // old split specification
+      ^
+extractParameters.h:27:6: warning: variable ‘turns’ set but not used [-Wunused-but-set-variable]
+  int turns;                // specified as 1 in trtrin (for post processing)
+      ^
+orbitsWithSpin.cc:84:23: warning: unused variable ‘x3typ’ [-Wunused-variable]
+ double y1typ  = TINY, x3typ  = TINY;
+                       ^
+orbitsWithSpin.cc:85:23: warning: unused variable ‘x4typ’ [-Wunused-variable]
+ double y2typ  = TINY, x4typ  = TINY;
+                       ^
+orbitsWithSpin.cc:87:23: warning: unused variable ‘x6typ’ [-Wunused-variable]
+ double deltyp = TINY, x6typ  = TINY;
+                       ^
+In file included from orbitsWithSpin.cc:90:0:
+simulatedProbeValues:12:8: warning: unused variable ‘dpz’ [-Wunused-variable]
+ double dpz     = 0.0; 
+        ^
+In file included from simulatedProbeValues:38:0,
+                 from orbitsWithSpin.cc:90:
+printProbeValues:9:8: warning: unused variable ‘kMKSeER’ [-Wunused-variable]
+ double kMKSeER = q0*El0*IA*IA;
+        ^
+orbitsWithSpin.cc:157:13: warning: unused variable ‘drft’ [-Wunused-variable]
+  int mltK=0,drft=0,bend=0,mark=0,RF=0;
+             ^
+orbitsWithSpin.cc:291:9: warning: unused variable ‘a0x’ [-Wunused-variable]
+  double a0x=     (double)0;
+         ^
+orbitsWithSpin.cc:292:9: warning: unused variable ‘b0x’ [-Wunused-variable]
+  double b0x=     (double)0;
+         ^
+orbitsWithSpin.cc:293:9: warning: unused variable ‘mu_xTent’ [-Wunused-variable]
+  double mu_xTent=(double)0;
+         ^
+orbitsWithSpin.cc:294:9: warning: unused variable ‘a0y’ [-Wunused-variable]
+  double a0y=     (double)0;
+         ^
+orbitsWithSpin.cc:295:9: warning: unused variable ‘b0y’ [-Wunused-variable]
+  double b0y=     (double)0;
+         ^
+orbitsWithSpin.cc:296:9: warning: unused variable ‘mu_yTent’ [-Wunused-variable]
+  double mu_yTent=(double)0;
+         ^
+g++                        -o orbitsWithSpin   -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include ./lib/linux/obj/orbitsWithSpin.o ./lib/linux/obj/positionPrinter.o ./lib/linux/obj/xmgracePrint.o  -lgsl -L/home/ualusr2011/ual1206/ual1/ext/UI/lib/linux  	 -lUalUI -L/home/ualusr2011/ual1206/ual1/codes/TIBETAN/lib/linux  	 -lTibetan -L/home/ualusr2011/ual1206/ual1/ext/SXF/lib/linux 		 -lUalSXF2 -L/home/ualusr2011/ual1206/ual1/codes/ACCSIM/lib/linux 	 -lAccsim -L/home/ualusr2011/ual1206/ual1/codes/TEAPOT/lib/linux 	 -lTeapot -L/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/lib/linux 	 -lETeapot -L/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/lib/linux -lETEAPOT_MltTurn -L/home/ualusr2011/ual1206/ual1/codes/PAC/lib/linux  		 -lPacSMF -lPacOptics -lPac -lPacSurvey -L/home/ualusr2011/ual1206/ual1/codes/ZLIB/lib/linux 		 -lZTps -L/home/ualusr2011/ual1206/ual1/codes/UAL/lib/linux 	 -lUal -L/home/ualusr2011/ual1206/ual1/tools/sxf//lib/linux 		 -lSXF -L/home/ualusr2011/ual1206/ual1/tools/lib/linux 		 -lpcre -lxml2 -lrfftw -lfftw -lm
+g++                        -g -fpic -ansi -Wall -Wextra -fpermissive      -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include -c ETEAPOT_MltTurn.cc -o lib/linux/obj/ETEAPOT_MltTurn.o
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/reference.inline:189:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:189,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from ETEAPOT_MltTurn.cc:33:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/rotate.insert:1:0: warning: "PI" redefined [enabled by default]
+ #define PI 3.141592653589793
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/TEAPOT/src/Integrator/TeapotElement.h:11:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/TEAPOT/src/Main/Teapot.h:13,
+                 from ETEAPOT_MltTurn.cc:21:
+/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src/Main/TeapotDef.h:32:0: note: this is the location of the previous definition
+ #define PI   3.1415926535898
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APDF/APDF_Builder.hh:10:0,
+                 from ETEAPOT_MltTurn.cc:17:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorSequence.hh:10:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/AcceleratorPropagator.hh:9,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APDF/APDF_Builder.hh:11,
+                 from ETEAPOT_MltTurn.cc:17:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacElemKeys.h:4:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacSmf.h:10,
+                 from ETEAPOT_MltTurn.cc:19:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattices.h:6:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacSmf.h:14,
+                 from ETEAPOT_MltTurn.cc:19:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattice.h: At global scope:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattice.h:40:53: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    UAL::AcceleratorNode* const  getNodeAt(int indx) const { return &(_ptr->_vector[indx]);}
+                                                     ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:204:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from ETEAPOT_MltTurn.cc:33:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic: In member function ‘double DipoleAlgorithm<Coordinate, Coordinates>::t3h(double)’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic:46:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:3:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from ETEAPOT_MltTurn.cc:33:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh: In static member function ‘static void ETEAPOT_MltTurn::MarkerTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  char * S[21] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+                                                                                                                                                                                                              ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:9: warning: unused variable ‘S’ [-Wunused-variable]
+  char * S[21] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+         ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MltTracker.hh:53:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:4,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from ETEAPOT_MltTurn.cc:33:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S: In static member function ‘static void ETEAPOT_MltTurn::MltTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY","21S","22S","23S","24S","25S","26S","27S","28S","29S","30S","31S","32S","33S","34S","35S","36S","37S","38S","39S","40S"};
+                                                                                                                                                                                                                                                                                                                                     ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:8: warning: unused variable ‘S’ [-Wunused-variable]
+ char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY","21S","22S","23S","24S","25S","26S","27S","28S","29S","30S","31S","32S","33S","34S","35S","36S","37S","38S","39S","40S"};
+        ^
+In file included from positionPrinter.hh:9:0,
+                 from ETEAPOT_MltTurn.cc:33:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh: In static member function ‘static void ETEAPOT_MltTurn::DipoleTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+                                                                                                                                                                                                                  ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+In file included from positionPrinter.hh:9:0,
+                 from ETEAPOT_MltTurn.cc:33:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:13: warning: unused variable ‘S’ [-Wunused-variable]
+      char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+             ^
+ETEAPOT_MltTurn.cc: In function ‘int main(int, char**)’:
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char * S[21] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+                                                                                                                                                                                                             ^
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ETEAPOT_MltTurn.cc:311:205: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+In file included from ETEAPOT_MltTurn.cc:321:0:
+verifyMarkerTrackerSpin:13:18: warning: name lookup of ‘iq’ changed for ISO ‘for’ scoping [-fpermissive]
+  markerSpin << S[iq] << " " << ETEAPOT_MltTurn::MarkerTracker::spin[iq][0] << " " << ETEAPOT_MltTurn::MarkerTracker::spin[iq][1] << " " << ETEAPOT_MltTurn::MarkerTracker::spin[iq][2];
+                  ^
+In file included from ETEAPOT_MltTurn.cc:321:0:
+verifyMarkerTrackerSpin:10:10: warning:   using obsolete binding at ‘iq’ [-fpermissive]
+  for(int iq=0;iq<=19;iq++){
+          ^
+ETEAPOT_MltTurn.cc:65:34: warning: unused variable ‘edt’ [-Wunused-variable]
+  ETEAPOT_MltTurn::DipoleTracker* edt=new ETEAPOT_MltTurn::DipoleTracker();
+                                  ^
+ETEAPOT_MltTurn.cc:66:34: warning: unused variable ‘mdt’ [-Wunused-variable]
+  ETEAPOT_MltTurn::MltTracker*    mdt=new ETEAPOT_MltTurn::MltTracker();
+                                  ^
+In file included from ETEAPOT_MltTurn.cc:86:0:
+extractParameters.h:22:6: warning: unused variable ‘split’ [-Wunused-variable]
+  int split = 1;            // old split specification
+      ^
+ETEAPOT_MltTurn.cc:91:23: warning: unused variable ‘x3typ’ [-Wunused-variable]
+ double y1typ  = TINY, x3typ  = TINY;
+                       ^
+ETEAPOT_MltTurn.cc:92:23: warning: unused variable ‘x4typ’ [-Wunused-variable]
+ double y2typ  = TINY, x4typ  = TINY;
+                       ^
+ETEAPOT_MltTurn.cc:94:23: warning: unused variable ‘x6typ’ [-Wunused-variable]
+ double deltyp = TINY, x6typ  = TINY;
+                       ^
+In file included from ETEAPOT_MltTurn.cc:97:0:
+simulatedProbeValues:12:8: warning: unused variable ‘dpz’ [-Wunused-variable]
+ double dpz     = 0.0; 
+        ^
+In file included from simulatedProbeValues:38:0,
+                 from ETEAPOT_MltTurn.cc:97:
+printProbeValues:9:8: warning: unused variable ‘kMKSeER’ [-Wunused-variable]
+ double kMKSeER = q0*El0*IA*IA;
+        ^
+ETEAPOT_MltTurn.cc:164:13: warning: unused variable ‘drft’ [-Wunused-variable]
+  int mltK=0,drft=0,bend=0,mark=0,RF=0;
+             ^
+ETEAPOT_MltTurn.cc:298:9: warning: unused variable ‘a0x’ [-Wunused-variable]
+  double a0x=     (double)0;
+         ^
+ETEAPOT_MltTurn.cc:299:9: warning: unused variable ‘b0x’ [-Wunused-variable]
+  double b0x=     (double)0;
+         ^
+ETEAPOT_MltTurn.cc:300:9: warning: unused variable ‘mu_xTent’ [-Wunused-variable]
+  double mu_xTent=(double)0;
+         ^
+ETEAPOT_MltTurn.cc:301:9: warning: unused variable ‘a0y’ [-Wunused-variable]
+  double a0y=     (double)0;
+         ^
+ETEAPOT_MltTurn.cc:302:9: warning: unused variable ‘b0y’ [-Wunused-variable]
+  double b0y=     (double)0;
+         ^
+ETEAPOT_MltTurn.cc:303:9: warning: unused variable ‘mu_yTent’ [-Wunused-variable]
+  double mu_yTent=(double)0;
+         ^
+g++                        -o ETEAPOT_MltTurn   -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include ./lib/linux/obj/ETEAPOT_MltTurn.o ./lib/linux/obj/positionPrinter.o ./lib/linux/obj/xmgracePrint.o  -lgsl -L/home/ualusr2011/ual1206/ual1/ext/UI/lib/linux  	 -lUalUI -L/home/ualusr2011/ual1206/ual1/codes/TIBETAN/lib/linux  	 -lTibetan -L/home/ualusr2011/ual1206/ual1/ext/SXF/lib/linux 		 -lUalSXF2 -L/home/ualusr2011/ual1206/ual1/codes/ACCSIM/lib/linux 	 -lAccsim -L/home/ualusr2011/ual1206/ual1/codes/TEAPOT/lib/linux 	 -lTeapot -L/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/lib/linux 	 -lETeapot -L/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/lib/linux -lETEAPOT_MltTurn -L/home/ualusr2011/ual1206/ual1/codes/PAC/lib/linux  		 -lPacSMF -lPacOptics -lPac -lPacSurvey -L/home/ualusr2011/ual1206/ual1/codes/ZLIB/lib/linux 		 -lZTps -L/home/ualusr2011/ual1206/ual1/codes/UAL/lib/linux 	 -lUal -L/home/ualusr2011/ual1206/ual1/tools/sxf//lib/linux 		 -lSXF -L/home/ualusr2011/ual1206/ual1/tools/lib/linux 		 -lpcre -lxml2 -lrfftw -lfftw -lm
+g++                        -g -fpic -ansi -Wall -Wextra -fpermissive      -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include -c spinOrbits.cc -o lib/linux/obj/spinOrbits.o
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/reference.inline:189:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:189,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from spinOrbits.cc:33:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/rotate.insert:1:0: warning: "PI" redefined [enabled by default]
+ #define PI 3.141592653589793
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/TEAPOT/src/Integrator/TeapotElement.h:11:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/TEAPOT/src/Main/Teapot.h:13,
+                 from spinOrbits.cc:21:
+/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src/Main/TeapotDef.h:32:0: note: this is the location of the previous definition
+ #define PI   3.1415926535898
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APDF/APDF_Builder.hh:10:0,
+                 from spinOrbits.cc:17:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorSequence.hh:10:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/AcceleratorPropagator.hh:9,
+                 from /home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APDF/APDF_Builder.hh:11,
+                 from spinOrbits.cc:17:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+/home/ualusr2011/ual1206/ual1/codes/UAL/include/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacElemKeys.h:4:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacSmf.h:10,
+                 from spinOrbits.cc:19:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattices.h:6:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacSmf.h:14,
+                 from spinOrbits.cc:19:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattice.h: At global scope:
+/home/ualusr2011/ual1206/ual1/codes/PAC/src/SMF/PacLattice.h:40:53: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    UAL::AcceleratorNode* const  getNodeAt(int indx) const { return &(_ptr->_vector[indx]);}
+                                                     ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:204:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from spinOrbits.cc:33:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic: In member function ‘double DipoleAlgorithm<Coordinate, Coordinates>::t3h(double)’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src/ETEAPOT/Integrator/timeViaHyperbolic:46:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:3:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from spinOrbits.cc:33:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh: In static member function ‘static void ETEAPOT_MltTurn::MarkerTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  char * S[21] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+                                                                                                                                                                                                              ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:206: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MarkerTracker.hh:67:9: warning: unused variable ‘S’ [-Wunused-variable]
+  char * S[21] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+         ^
+In file included from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/MltTracker.hh:53:0,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.icc:4,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleAlgorithm.hh:253,
+                 from /home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:14,
+                 from positionPrinter.hh:9,
+                 from spinOrbits.cc:33:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S: In static member function ‘static void ETEAPOT_MltTurn::MltTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY","21S","22S","23S","24S","25S","26S","27S","28S","29S","30S","31S","32S","33S","34S","35S","36S","37S","38S","39S","40S"};
+                                                                                                                                                                                                                                                                                                                                     ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/S:1:8: warning: unused variable ‘S’ [-Wunused-variable]
+ char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY","21S","22S","23S","24S","25S","26S","27S","28S","29S","30S","31S","32S","33S","34S","35S","36S","37S","38S","39S","40S"};
+        ^
+In file included from positionPrinter.hh:9:0,
+                 from spinOrbits.cc:33:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh: In static member function ‘static void ETEAPOT_MltTurn::DipoleTracker::initialize()’:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+                                                                                                                                                                                                                  ^
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:210: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+In file included from positionPrinter.hh:9:0,
+                 from spinOrbits.cc:33:
+/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src/ETEAPOT_MltTurn/Integrator/DipoleTracker.hh:62:13: warning: unused variable ‘S’ [-Wunused-variable]
+      char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY"};
+             ^
+In file included from spinOrbits.cc:317:0:
+S: In function ‘int main(int, char**)’:
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ char * S[41] = {"ZERO  ","ONE   ","TWO   ","THREE ","FOUR  ","FIVE  ","SIX   ","SEVEN ","EIGHT ","NINE  ","TEN   ","ELEVEN","TWELVE","THIRTN","FORTN ","FIFTN ","SIKTN ","SEVNTN","EGHTN ","NNETN ","TWENTY","21S","22S","23S","24S","25S","26S","27S","28S","29S","30S","31S","32S","33S","34S","35S","36S","37S","38S","39S","40S"};
+                                                                                                                                                                                                                                                                                                                                     ^
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+S:1:325: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+In file included from spinOrbits.cc:329:0:
+verifyDipoleTrackerSpin:13:18: warning: name lookup of ‘iq’ changed for ISO ‘for’ scoping [-fpermissive]
+  dipoleSpin << S[iq] << " " << ETEAPOT_MltTurn::DipoleTracker::spin[iq][0] << " " << ETEAPOT_MltTurn::DipoleTracker::spin[iq][1] << " " << ETEAPOT_MltTurn::DipoleTracker::spin[iq][2];
+                  ^
+In file included from spinOrbits.cc:329:0:
+verifyDipoleTrackerSpin:10:10: warning:   using obsolete binding at ‘iq’ [-fpermissive]
+  for(int iq=0;iq<=19;iq++){
+          ^
+spinOrbits.cc:67:34: warning: unused variable ‘edt’ [-Wunused-variable]
+  ETEAPOT_MltTurn::DipoleTracker* edt=new ETEAPOT_MltTurn::DipoleTracker();
+                                  ^
+spinOrbits.cc:68:34: warning: unused variable ‘mdt’ [-Wunused-variable]
+  ETEAPOT_MltTurn::MltTracker*    mdt=new ETEAPOT_MltTurn::MltTracker();
+                                  ^
+In file included from spinOrbits.cc:91:0:
+extractParameters.h:22:6: warning: unused variable ‘split’ [-Wunused-variable]
+  int split = 1;            // old split specification
+      ^
+spinOrbits.cc:96:23: warning: unused variable ‘x3typ’ [-Wunused-variable]
+ double y1typ  = TINY, x3typ  = TINY;
+                       ^
+spinOrbits.cc:97:23: warning: unused variable ‘x4typ’ [-Wunused-variable]
+ double y2typ  = TINY, x4typ  = TINY;
+                       ^
+spinOrbits.cc:99:23: warning: unused variable ‘x6typ’ [-Wunused-variable]
+ double deltyp = TINY, x6typ  = TINY;
+                       ^
+In file included from spinOrbits.cc:102:0:
+simulatedProbeValues:12:8: warning: unused variable ‘dpz’ [-Wunused-variable]
+ double dpz     = 0.0; 
+        ^
+In file included from simulatedProbeValues:38:0,
+                 from spinOrbits.cc:102:
+printProbeValues:9:8: warning: unused variable ‘kMKSeER’ [-Wunused-variable]
+ double kMKSeER = q0*El0*IA*IA;
+        ^
+spinOrbits.cc:169:13: warning: unused variable ‘drft’ [-Wunused-variable]
+  int mltK=0,drft=0,bend=0,mark=0,RF=0;
+             ^
+spinOrbits.cc:303:9: warning: unused variable ‘a0x’ [-Wunused-variable]
+  double a0x=     (double)0;
+         ^
+spinOrbits.cc:304:9: warning: unused variable ‘b0x’ [-Wunused-variable]
+  double b0x=     (double)0;
+         ^
+spinOrbits.cc:305:9: warning: unused variable ‘mu_xTent’ [-Wunused-variable]
+  double mu_xTent=(double)0;
+         ^
+spinOrbits.cc:306:9: warning: unused variable ‘a0y’ [-Wunused-variable]
+  double a0y=     (double)0;
+         ^
+spinOrbits.cc:307:9: warning: unused variable ‘b0y’ [-Wunused-variable]
+  double b0y=     (double)0;
+         ^
+spinOrbits.cc:308:9: warning: unused variable ‘mu_yTent’ [-Wunused-variable]
+  double mu_yTent=(double)0;
+         ^
+g++                        -o spinOrbits   -I. -I./src -I/home/ualusr2011/ual1206/ual1/ext/UI/include -I/home/ualusr2011/ual1206/ual1/ext/SXF/src -I/home/ualusr2011/ual1206/ual1/codes/ACCSIM/src -I/home/ualusr2011/ual1206/ual1/codes/TEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/src -I/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/src -I/home/ualusr2011/ual1206/ual1/codes/PAC/src -I/home/ualusr2011/ual1206/ual1/codes/UAL/include -I/home/ualusr2011/ual1206/ual1/codes/ZLIB/src -I/home/ualusr2011/ual1206/ual1/tools/include -I/home/ualusr2011/ual1206/ual1/tools/sxf//src -I/home/ual/tools/gsl/include ./lib/linux/obj/spinOrbits.o ./lib/linux/obj/positionPrinter.o ./lib/linux/obj/xmgracePrint.o  -lgsl -L/home/ualusr2011/ual1206/ual1/ext/UI/lib/linux  	 -lUalUI -L/home/ualusr2011/ual1206/ual1/codes/TIBETAN/lib/linux  	 -lTibetan -L/home/ualusr2011/ual1206/ual1/ext/SXF/lib/linux 		 -lUalSXF2 -L/home/ualusr2011/ual1206/ual1/codes/ACCSIM/lib/linux 	 -lAccsim -L/home/ualusr2011/ual1206/ual1/codes/TEAPOT/lib/linux 	 -lTeapot -L/home/ualusr2011/ual1206/ual1/codes/ETEAPOT/lib/linux 	 -lETeapot -L/home/ualusr2011/ual1206/ual1/codes/ETEAPOT_MltTurn/lib/linux -lETEAPOT_MltTurn -L/home/ualusr2011/ual1206/ual1/codes/PAC/lib/linux  		 -lPacSMF -lPacOptics -lPac -lPacSurvey -L/home/ualusr2011/ual1206/ual1/codes/ZLIB/lib/linux 		 -lZTps -L/home/ualusr2011/ual1206/ual1/codes/UAL/lib/linux 	 -lUal -L/home/ualusr2011/ual1206/ual1/tools/sxf//lib/linux 		 -lSXF -L/home/ualusr2011/ual1206/ual1/tools/lib/linux 		 -lpcre -lxml2 -lrfftw -lfftw -lm

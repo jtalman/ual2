@@ -1,0 +1,1 @@
+rpdutils/src/error.d rpdutils/src/error.o: include/snprintf.h include/RConfig.h include/RVersion.h include/rpderr.h include/NetErrors.h include/Rtypes.h include/DllImport.h include/Rtypeinfo.h include/TGenericClassInfo.h include/rpdp.h include/Varargs.h include/MessageTypes.h include/rpddefs.h include/AuthConst.h

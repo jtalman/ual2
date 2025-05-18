@@ -1,0 +1,72 @@
+--------------------------------------------------------------------------------------
+           AlmaLinux!!!
+        (9.4 and possibly 8.10)
+
+AlmaLinux:
+           GIT minimal download and build instructions
+
+           AlmaLinux!!!
+--------------------------------------------------------------------------------------
+
+Scientific Linux has it's own, similar, recipe:
+   https://github.com/jtalman/ual1/blob/master/minimal-download-and-build-instructions
+--------------------------------------------------------------------------------------
+
+You may already have a version of the bits in e.g. directory "~/UAL/ual1" (or something similar)
+If so, rm -rf them, or rename it.
+
+In e.g. directory "~/git-gui2" (or something similar), using SHELL tcsh, execute the following indented commands, one at a time
+
+--------------------------------------------------------------------------------------
+Get Bits (probably already done!):
+      git clone https://github.com/jtalman/ual1
+--------------------------------------------------------------------------------------
+Setup Environment:
+      cd ual1
+      setenv UAL `pwd`
+      source setup-linux-ual
+--------------------------------------------------------------------------------------
+"Patch for AlmaLinux":
+      \cp AlmaLinux/codes_PAC_src_Templates_PacRbTree.h codes/PAC/src/Templates/PacRbTree.h
+      \cp AlmaLinux/tools_sxf_src_sxf_Makefile tools/sxf/src/sxf/Makefile
+
+      \cp AlmaLinux/all gui/build/all
+      \cp AlmaLinux/libxml2-2.9.7-pre-configured.tar.gz gui/libxml2-git-snapshot.tar.gz
+      \cp AlmaLinux/gui_ROOT_src_UAL_ROOT_Viewers_TwissViewer.cc gui/ROOT/src/UAL/ROOT/Viewers/TwissViewer.cc
+--------------------------------------------------------------------------------------
+Build:
+      make clean
+      make >&! make.log
+--------------------------------------------------------------------------------------
+Verify:
+      emacs make.log
+              check for errors
+              (hopefully just
+                        two unimportant vestigial "html errors" that are ignored by make,
+              and
+                        five unimportant warnings that are ignored by make)
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+
+GUI:
+      identify user, e.g. ualusr2011
+      the following assumes that ualusr2011 is, in fact, the user
+
+      cd $UAL/gui/buildAL/ualusr2011
+            follow file recipe
+
+Documentation:
+      Online documentation is available. A README is in directory $UAL/doc/
+
+PERL:
+      A README / recipe is in directory $UAL/perl/
+
+Comment:
+      You'll likely fine tune this with familiarity.
+      A personalized ~/.tcshrc for example.
+
+--------------------------------------------------------------------------------------
+
+           AlmaLinux!!!
+--------------------------------------------------------------------------------------

@@ -1,0 +1,94 @@
+void lsh_QDcE(){
+ printf("%slsh_QDcE()\n",six);
+ Dllshsl.drift_track(&Dllshsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ Dllshsl.drift_track(&Dllshsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ Dllshsl.drift_track(&Dllshsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ Dllshsl.drift_track(&Dllshsl,nne);
+ mQcend.marker_track(&mQcend,nne);
+ QDcMh.quadrupole_track(&QDcMh,nne);
+ mQDcM.marker_track(&mQDcM,nne);
+ QDcMh.quadrupole_track(&QDcMh,nne);
+ DlQch.drift_track(&DlQch,nne);
+ QDcEh.quadrupole_track(&QDcEh,nne);
+ mQDcE.marker_track(&mQDcE,nne);
+}
+
+void QDcE_lsh(){
+ printf("%sQDcE_lsh()\n",six);
+ mQDcE.marker_track(&mQDcE,nne);
+ QDcEh.quadrupole_track(&QDcEh,nne);
+ DlQch.drift_track(&DlQch,nne);
+ QDcMh.quadrupole_track(&QDcMh,nne);
+ mQDcM.marker_track(&mQDcM,nne);
+ QDcMh.quadrupole_track(&QDcMh,nne);
+ mQcend.marker_track(&mQcend,nne);
+ Dllshsl.drift_track(&Dllshsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ Dllshsl.drift_track(&Dllshsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ Dllshsl.drift_track(&Dllshsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ Dllshsl.drift_track(&Dllshsl,nne);
+}
+
+void lsh_QFcE(){
+ printf("%slsh_QFcE()\n",six);
+ Dllshsl.drift_track(&Dllshsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ Dllshsl.drift_track(&Dllshsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ Dllshsl.drift_track(&Dllshsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ Dllshsl.drift_track(&Dllshsl,nne);
+ mQcend.marker_track(&mQcend,nne);
+ QFcMh.quadrupole_track(&QFcMh,nne);
+ mQFcM.marker_track(&mQFcM,nne);
+ QFcMh.quadrupole_track(&QFcMh,nne);
+ DlQch.drift_track(&DlQch,nne);
+ QFcEh.quadrupole_track(&QFcEh,nne);
+ mQFcE.marker_track(&mQFcE,nne);
+}
+
+void QFcE_lsh(){
+ printf("%sQFcE_lsh()\n",six);
+ mQFcE.marker_track(&mQFcE,nne);
+ QFcEh.quadrupole_track(&QFcEh,nne);
+ DlQch.drift_track(&DlQch,nne);
+ QFcMh.quadrupole_track(&QFcMh,nne);
+ mQFcM.marker_track(&mQFcM,nne);
+ QFcMh.quadrupole_track(&QFcMh,nne);
+ mQcend.marker_track(&mQcend,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ Dllshsl.drift_track(&Dllshsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ Dllshsl.drift_track(&Dllshsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ Dllshsl.drift_track(&Dllshsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ Dllshsl.drift_track(&Dllshsl,nne);
+}
+
+void SBPl(){
+ printf("%sSBPl()\n",six);
+ SBPlhsl.sbend_track(&SBPlhsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ SBPlhsl.sbend_track(&SBPlhsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ SBPlhsl.sbend_track(&SBPlhsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ SBPlhsl.sbend_track(&SBPlhsl,nne);
+}
+
+void SBMi(){
+ printf("%sSBMi()\n",six);
+ SBMihsl.sbend_track(&SBMihsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ SBMihsl.sbend_track(&SBMihsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ SBMihsl.sbend_track(&SBMihsl,nne);
+ mNullSlice.quadrupole_track(&mNullSlice,nne);
+ SBMihsl.sbend_track(&SBMihsl,nne);
+}

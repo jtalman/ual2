@@ -1,0 +1,244 @@
+%!PS-Adobe-2.0
+%%Title: a2ps listing
+%%Creator: a2ps 4.0(tml)
+%%CreationDate: Wed Nov 30 09:49:54 1994
+%%Pages: (atend)
+%%BoundingBox: 42 42 552 799
+%%DocumentFonts: Helvetica-Bold Helvetica Courier
+%%EndComments
+/a2ps-786206994 100 dict def
+% Initialize page description variables.
+a2ps-786206994 begin
+/inch {72 mul} bind def
+/landscape false def
+/sheetheight 11.6929 inch def
+/sheetwidth 8.26772 inch def
+/margin 0.590551 inch def
+/noborder false def
+/noheader false def
+/headersize 0.9 inch def
+/bodyfontsize 10.4856 def
+/lines 66 def
+/columns 80 def
+/date (Nov 30 1994 09:49:54) def
+%%BeginFile: /usr/local/lib/a2ps.prologue
+%  File: imag:/users/local/a2ps/header.ps
+%  Created: Tue Nov 29 12:14:02 1988 by miguel@imag (Miguel Santana)
+%  Version: 4.0
+%  Description: PostScript prolog for a2ps ascii to PostScript program.
+% 
+%  Edit History:
+%  - Original version by evan@csli (Evan Kirshenbaum).
+%  - Modified by miguel@imag to:
+%    1) Correct an overflow bug when printing page number 10 (operator
+%	cvs).
+%    2) Define two other variables (sheetwidth, sheetheight) describing
+%	the physical page (by default A4 format).
+%    3) Minor changes (reorganization, comments, etc).
+%  - Modified by tullemans@apolloway.prl.philips.nl
+%    1) Correct stack overflows with regard to operators cvs and copy.
+%       The resulting substrings where in some cases not popped off 
+%       the stack, what can result in a stack overflow.
+%    2) Replaced copypage and erasepage by showpage. Page througput
+%       degrades severely (see red book page 140) on our ps-printer
+%       after printing sheet 16 (i.e. page 8) of a file which was 
+%       actually bigger. For this purpose the definitions of startdoc
+%       and startpage are changed.
+%  - Modified by Tim Clark <T.Clark@uk.ac.warwick> to:
+%    1) Print one page per sheet (portrait) as an option.
+%    2) Reduce size of file name heading, if it's too big.
+%    3) Save and restore PostScript state at begining/end. It now uses
+%	conventional %%Page %%Trailer markers.
+%    4) Print one wide page per sheet in landscape mode as an option.
+%  - Modified by miguel@imag.fr to
+%    1) Add new option to print n copies of a file.
+%    2) Add new option to suppress heading printing.
+%    3) Add new option to suppress page surrounding border printing.
+%    4) Add new option to change font size. Number of lines and columns
+%	are now automatically adjusted, depending on font size and
+%	printing mode used.
+%    5) Minor changes (best layout, usage message, etc).
+%  - Modified heavily by tml@tik.vtt.fi:
+%    1) Simpified a lot (removed 2-up printing)
+%    2) Produce confirming PostScript
+
+% Copyright (c) 1988, Miguel Santana, miguel@imag.imag.fr
+%
+% Permission is granted to copy and distribute this file in modified
+% or unmodified form, for noncommercial use, provided (a) this copyright
+% notice is preserved, (b) no attempt is made to restrict redistribution
+% of this file, and (c) this file is not distributed as part of any
+% collection whose redistribution is restricted by a compilation copyright.
+%
+
+
+% General macros.
+/getfont {findfont exch scalefont} bind def
+
+% Page description variables and inch function are defined by a2ps program.
+
+% Character size for differents fonts.
+landscape
+   { /filenamefontsize 12 def }
+   { /filenamefontsize 16 def }
+ifelse
+/datefontsize filenamefontsize 0.8 mul def
+/headermargin filenamefontsize 0.25 mul def
+/bodymargin bodyfontsize 0.7 mul def
+
+% Font assignment to differents kinds of "objects"
+/filenamefontname /Helvetica-Bold def
+/stdfilenamefont filenamefontsize filenamefontname getfont def
+/datefont datefontsize /Helvetica getfont def
+/bodyfont bodyfontsize /Courier getfont def
+
+% Logical page attributes
+/pagewidth
+   bodyfont setfont (0) stringwidth pop columns mul bodymargin dup add add
+   def
+/pageheight
+   bodyfontsize lines mul bodymargin dup add add headersize add
+   def
+
+% Coordinates for upper corner of a logical page
+% Coordinates depend on format mode used.
+/rightmargin margin def
+/leftmargin margin def
+/topmargin margin def
+landscape
+{  % Landscape format
+   /uppery rightmargin pageheight add bodymargin add def
+   /upperx topmargin def
+}
+{  % Portrait format
+   /uppery topmargin pageheight add def
+   /upperx leftmargin def
+}
+ifelse
+
+% Strings used to make easy printing numbers
+/pnum 12 string def
+/empty 12 string def
+
+% Other initializations.
+/datewidth date stringwidth pop def
+/filenameroom
+         pagewidth
+	 filenamefontsize 4 mul datewidth add (Page 999) stringwidth pop add
+      sub
+   def
+
+
+% Function setfilename
+/setfilename
+    { /filename exch def
+      /filenamewidth filename stringwidth pop def
+      /filenamefont
+	 filenamewidth filenameroom gt
+	 {
+	       filenamefontsize filenameroom mul filenamewidth div
+	       filenamefontname
+	    getfont
+	 }
+	 {  stdfilenamefont }
+	 ifelse
+	 def
+    } bind def
+
+% Function startpage: prints page header and page border and initializes
+% printing of the file lines.
+/startpage
+    { landscape
+	{ sheetwidth 0 inch translate
+	  90 rotate
+	} if
+      noborder not { printborder } if
+      noheader not { printheader } if
+	 upperx bodymargin add
+	    uppery
+	    bodymargin bodyfontsize add  noheader {0} {headersize} ifelse  add
+	 sub
+      moveto
+      bodyfont setfont
+    } bind def
+
+% Function printheader: prints page header.
+/printheader
+    { upperx uppery headersize sub 1 add  moveto
+      datefont setfont
+      gsave
+        datefontsize headermargin rmoveto
+	date show					% date/hour
+      grestore
+      gsave
+	pagenum pnum cvs pop
+	   pagewidth (Page 999) stringwidth pop sub
+	   headermargin
+	rmoveto
+        (Page ) show pnum show				% page number
+      grestore
+      empty pnum copy pop
+      gsave
+        filenamefont setfont
+	      filenameroom filename stringwidth pop sub 2 div datewidth add
+	      bodymargin 2 mul 
+	   add 
+	   headermargin
+	rmoveto
+        filename show						% file name
+      grestore
+    } bind def
+
+% Function printborder: prints border page.
+/printborder 
+    { upperx uppery moveto
+      noheader not
+         { 0 headersize neg rmoveto pagewidth 0 rlineto stroke }
+      if
+    } bind def
+
+/epsilon 0.07 def
+
+% Function toggle: plus/minus epsilon
+/toggle { toggleval 1 lt
+	    { epsilon }
+	    { epsilon neg }
+	  ifelse
+	  dup /toggleval exch def
+} def
+/toggleval epsilon def
+
+% Function bs: backspace
+/bs { show (0) stringwidth pop neg toggle add 0 rmoveto } bind def
+
+% Function s: print a source line and newline
+/s  { show
+      grestore
+      0 bodyfontsize neg rmoveto
+    } bind def
+%%EndFile
+end
+%%EndProlog
+
+%%Page: 1 1
+a2ps-786206994 begin
+/pagenum 1 def
+() setfilename gsave startpage
+gsave ( // ZLIB++ Parameters) s
+gsave ( ) s
+gsave (   ZLIB_ORDER = 2;) s
+gsave ( ) s
+gsave ( // helixParameters) s
+gsave ( ) s
+gsave (   order  = 1;) s
+gsave ( ) s
+gsave (   length = 2.4;) s
+gsave (   k      = 2*PI/length;) s
+gsave ( ) s
+gsave (   a[1] = 0.0;     b[1] = -2.*1.458*\(0.3/27/PROTON\)/k; /* -2*B0/BR/k  */) s
+gsave (   a[2] = 0.0;     b[2] = 0.0;) s
+gsave (   a[3] = 0.0;     b[3] = 0.0;) s
+grestore end showpage
+
+%%Trailer
+%%Pages: 1

@@ -1,0 +1,34 @@
+Running
+      make clean
+      make
+in the root directory generates the
+      ./getTwissWithShell/getTwissWithShell,
+      ./getMapWithOpticsCalculator/getMapWithOpticsCalculator,
+and
+      ./getOrbitWithShell
+executables.
+
+These are all based on input file
+      ./working.sxf
+It may be set via e.g.
+      rm -f ./working.sxf
+      ln -s ../E2_Track/sxf/E_pEDM-rtr1-preMobius.RF.sxf ./working.sxf
+
+Running
+      ./getTwissWithShell/getTwissWithShell
+in the root directory generates
+      ./working.twiss
+
+Running
+      ./getMapWithOpticsCalculator/getMapWithOpticsCalculator
+in the root directory generates
+      ./working.map1
+
+Running
+      ./getOrbitWithShell/getOrbitWithShell dummy 646617.830 -1.2 0 1 0.02 10 > ./working.orbit
+in the root directory generates
+      ./working.orbit
+
+These can be archived/renamed as the user deems fit. Some care about not losing them in the clean is warranted.
+
+These also may rewrite some "server side" functionality. Recloning (and rebuilding) may be warranted.

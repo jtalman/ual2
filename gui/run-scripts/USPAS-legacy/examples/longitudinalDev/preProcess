@@ -1,0 +1,39 @@
+#!/bin/tcsh
+#
+
+echo "UAL"
+echo $UAL
+
+#CAUTION                   CAUTION
+pushd $UAL/codes/UAL
+pushd src/UAL/APF
+ \rm PropagatorFactory.hh
+ \ln -s PropagatorFactory_LOOSE.hh PropagatorFactory.hh
+popd
+make clean
+make
+popd
+#CAUTION                   CAUTION
+
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo "CAUTION################################################################################"
+echo "THIS IS NOW A GUI UAL"
+echo ""
+echo "CAUTION CAUTION########################################################################"
+echo "THIS IS NOW A GUI UAL THIS IS NOW A GUI UAL"
+echo ""
+echo "CAUTION CAUTION CAUTION################################################################"
+echo "THIS IS NOW A GUI UAL THIS IS NOW A GUI UAL THIS IS NOW A GUI UAL"
+echo ""
+echo "CAUTION CAUTION CAUTION CAUTION########################################################"
+echo "THIS IS NOW A GUI UAL THIS IS NOW A GUI UAL THIS IS NOW A GUI UAL THIS IS NOW A GUI UAL"
+echo ""

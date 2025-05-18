@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adxf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/home/ualusr/USPAS/ual1/doc/adxf-cesr/adxf.xsd">
+    <constants>
+        <!--  if nhalf is changed, # of cells must be changed in "lattice" -->
+        <constant name="pi" value="3.1415926536"/>
+        <constant name="twopi" value="6.2831853072"/>
+        <constant name="c" value="299792458"/>
+        <constant name="nhalf" value="20"/>
+        <constant name="scale" value="0.05"/>
+        <!--  	!  tamper with scale at your own risk. with scale=1.0/20, the half 
+         	!  cell length with 10 cells is 1 meter, circumference 20 m.
+         	!  to scale up the number of cells vary nhalf, leaving scale fixed.  
+         	!  this assumes  
+         	!     - momentum~(nhalf)^2
+         	!     - constant phase advance per cell
+         	!     - constant magnetic field
+         	!     - bend per dipole=2*pi/nhalf ~ ld/momentum ~ lhalf/momentum
+         	!     - therefore, lhalf~nhalf -->
+        <constant name="dipfrac" value="0.9994"/>
+        <constant name="quadfrac" value="0.0002"/>
+        <constant name="sextfrac" value="0.0001"/>
+        <constant name="nufrac" value="0.25"/>
+        <constant name="celltuni" value="0.2"/>
+        <constant name="lhalf" value="1"/>
+        <constant name="ld" value="0.9994"/>
+        <constant name="lq" value="0.0002"/>
+        <constant name="ls" value="0.0001"/>
+        <constant name="nu" value="2.25"/>
+        <!-- 	! derived parameters -->
+        <constant name="deltheta" value="0.31415926536"/>
+        <constant name="cellmu" value="1.4137166941200001"/>
+        <constant name="sby2" value="0.64944804833193"/>
+        <constant name="qp" value="0.64944804833193"/>
+        <constant name="q" value="0.64944804833193"/>
+        <constant name="kq" value="3247.24024165965"/>
+        <constant name="q1" value="0.64944804833193"/>
+        <constant name="q2" value="-0.64944804833193"/>
+        <constant name="kq1" value="3247.24024165965"/>
+        <constant name="kq2" value="-3247.24024165965"/>
+        <constant name="q1p" value="0.64944804833193"/>
+        <constant name="q2p" value="-0.64944804833193"/>
+        <!--	lattice parameters -->
+        <constant name="rat" value="4.705288447213544"/>
+        <constant name="ratinv" value="0.21252682194057554"/>
+        <constant name="betax1" value="3.340017251467897"/>
+        <constant name="betay1" value="0.7098432516811684"/>
+        <constant name="betax2" value="0.7098432516811684"/>
+        <constant name="betay2" value="3.340017251467897"/>
+        <constant name="eta1" value="0.9867030099904027"/>
+        <constant name="eta2" value="0.5029702985488947"/>
+        <constant name="s1" value="0.6582001288698278"/>
+        <constant name="s2" value="-1.2912254465236497"/>
+        <constant name="ks1" value="6582.001288698278"/>
+        <constant name="ks2" value="-12912.254465236496"/>
+        <!--  define magnetic elements -->
+    </constants>
+    <elements>
+        <monitor name="mbegin"/>
+        <marker name="mk1"/>
+        <marker name="mend"/>
+        <hmonitor name="bpm"/>
+        <kicker name="kickerp"/>
+        <sbend name="bend" l="0.9994" angle="0.31415926536"/>
+        <quadrupole name="quadhf" l="0.0002" k1="3247.24024165965"/>
+        <quadrupole name="quadvf" l="0.0002" k1="-3247.24024165965"/>
+        <sextupole name="sext1" l="0.0001" k2="6582.001288698278"/>
+        <sextupole name="sext2" l="0.0001" k2="-12912.254465236496"/>
+    </elements>
+    <sectors>
+        <sector name="fullcell" line="mk1 bpm quadhf sext1 bpm bend sext2 quadvf bpm quadvf sext2 bpm bend sext1 quadhf mk1"/>
+        <sector name="ring" line="mbegin kickerp fullcell fullcell fullcell fullcell fullcell fullcell fullcell fullcell fullcell fullcell mend"/>
+    </sectors>
+</adxf>

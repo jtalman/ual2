@@ -1,0 +1,559 @@
+// 
+ring sequence { 
+   marker { tag = mbegin
+  };
+   marker { tag = mkb
+  };
+   drift { tag = d3 at = 0.24 l = 0.48
+  };
+   quadrupole { tag = qv at = 0.63 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sv at = 0.78
+  };
+   drift { tag = d1 at = 1.065 l = 0.57
+  };
+   drift { tag = sh at = 1.35
+  };
+   quadrupole { tag = qh at = 1.635 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d2 at = 2.01 l = 0.18
+  };
+   drift { tag = nb at = 2.2125 l = 0.225
+  };
+   drift { tag = nb at = 2.4375 l = 0.225
+  };
+   drift { tag = nb at = 2.6625 l = 0.225
+  };
+   drift { tag = nb at = 2.8875 l = 0.225
+  };
+   marker { tag = mkc at = 3
+  };
+   drift { tag = nb at = 3.1125 l = 0.225
+  };
+   drift { tag = nb at = 3.3375 l = 0.225
+  };
+   drift { tag = nb at = 3.5625 l = 0.225
+  };
+   drift { tag = nb at = 3.7875 l = 0.225
+  };
+   drift { tag = d2 at = 3.99 l = 0.18
+  };
+   quadrupole { tag = qh at = 4.365 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sh at = 4.65
+  };
+   drift { tag = d1 at = 4.935 l = 0.57
+  };
+   drift { tag = sv at = 5.22
+  };
+   quadrupole { tag = qv at = 5.37 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d3 at = 5.76 l = 0.48
+  };
+   marker { tag = mke at = 6
+  };
+   drift { tag = d3 at = 6.24 l = 0.48
+  };
+   quadrupole { tag = qv at = 6.63 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sv at = 6.78
+  };
+   drift { tag = d1 at = 7.065 l = 0.57
+  };
+   drift { tag = sh at = 7.35
+  };
+   quadrupole { tag = qh at = 7.635 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d2 at = 8.01 l = 0.18
+  };
+   drift { tag = dsnob1 at = 8.36763 l = 0.53526
+  };
+   sbend { tag = bds at = 8.74776 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = bds at = 8.97276 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = bds at = 9.19776 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = bds at = 9.42276 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   drift { tag = dsnob2 at = 9.71763 l = 0.36474
+  };
+   drift { tag = d2 at = 9.99 l = 0.18
+  };
+   quadrupole { tag = qh at = 10.365 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sh at = 10.65
+  };
+   drift { tag = d1 at = 10.935 l = 0.57
+  };
+   drift { tag = sv at = 11.22
+  };
+   quadrupole { tag = qv at = 11.37 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d3 at = 11.76 l = 0.48
+  };
+   marker { tag = mkb at = 12
+  };
+   drift { tag = d3 at = 12.24 l = 0.48
+  };
+   quadrupole { tag = qv at = 12.63 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sv at = 12.78
+  };
+   drift { tag = d1 at = 13.065 l = 0.57
+  };
+   drift { tag = sh at = 13.35
+  };
+   quadrupole { tag = qh at = 13.635 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d2 at = 14.01 l = 0.18
+  };
+   sbend { tag = b at = 14.2125 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 14.4375 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 14.6625 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 14.8875 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   marker { tag = mkc at = 15
+  };
+   sbend { tag = b at = 15.1125 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 15.3375 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 15.5625 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 15.7875 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   drift { tag = d2 at = 15.99 l = 0.18
+  };
+   quadrupole { tag = qh at = 16.365 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sh at = 16.65
+  };
+   drift { tag = d1 at = 16.935 l = 0.57
+  };
+   drift { tag = sv at = 17.22
+  };
+   quadrupole { tag = qv at = 17.37 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d3 at = 17.76 l = 0.48
+  };
+   marker { tag = mke at = 18
+  };
+   marker { tag = mkb at = 18
+  };
+   drift { tag = d3 at = 18.24 l = 0.48
+  };
+   quadrupole { tag = qv at = 18.63 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sv at = 18.78
+  };
+   drift { tag = d1 at = 19.065 l = 0.57
+  };
+   drift { tag = sh at = 19.35
+  };
+   quadrupole { tag = qh at = 19.635 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d2 at = 20.01 l = 0.18
+  };
+   sbend { tag = b at = 20.2125 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 20.4375 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 20.6625 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 20.8875 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   marker { tag = mkc at = 21
+  };
+   sbend { tag = b at = 21.1125 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 21.3375 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 21.5625 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 21.7875 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   drift { tag = d2 at = 21.99 l = 0.18
+  };
+   quadrupole { tag = qh at = 22.365 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sh at = 22.65
+  };
+   drift { tag = d1 at = 22.935 l = 0.57
+  };
+   drift { tag = sv at = 23.22
+  };
+   quadrupole { tag = qv at = 23.37 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d3 at = 23.76 l = 0.48
+  };
+   marker { tag = mke at = 24
+  };
+   marker { tag = mkb at = 24
+  };
+   drift { tag = d3 at = 24.24 l = 0.48
+  };
+   quadrupole { tag = qv at = 24.63 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sv at = 24.78
+  };
+   drift { tag = d1 at = 25.065 l = 0.57
+  };
+   drift { tag = sh at = 25.35
+  };
+   quadrupole { tag = qh at = 25.635 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d2 at = 26.01 l = 0.18
+  };
+   sbend { tag = b at = 26.2125 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 26.4375 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 26.6625 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 26.8875 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   marker { tag = mkc at = 27
+  };
+   sbend { tag = b at = 27.1125 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 27.3375 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 27.5625 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 27.7875 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   drift { tag = d2 at = 27.99 l = 0.18
+  };
+   quadrupole { tag = qh at = 28.365 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sh at = 28.65
+  };
+   drift { tag = d1 at = 28.935 l = 0.57
+  };
+   drift { tag = sv at = 29.22
+  };
+   quadrupole { tag = qv at = 29.37 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d3 at = 29.76 l = 0.48
+  };
+   marker { tag = mke at = 30
+  };
+   marker { tag = mkb at = 30
+  };
+   drift { tag = d3 at = 30.24 l = 0.48
+  };
+   quadrupole { tag = qv at = 30.63 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sv at = 30.78
+  };
+   drift { tag = d1 at = 31.065 l = 0.57
+  };
+   drift { tag = sh at = 31.35
+  };
+   quadrupole { tag = qh at = 31.635 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d2 at = 32.01 l = 0.18
+  };
+   sbend { tag = b at = 32.2125 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 32.4375 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 32.6625 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 32.8875 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   marker { tag = mkc at = 33
+  };
+   sbend { tag = b at = 33.1125 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 33.3375 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 33.5625 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 33.7875 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   drift { tag = d2 at = 33.99 l = 0.18
+  };
+   quadrupole { tag = qh at = 34.365 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sh at = 34.65
+  };
+   drift { tag = d1 at = 34.935 l = 0.57
+  };
+   drift { tag = sv at = 35.22
+  };
+   quadrupole { tag = qv at = 35.37 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d3 at = 35.76 l = 0.48
+  };
+   marker { tag = mke at = 36
+  };
+   marker { tag = mkb at = 36
+  };
+   drift { tag = d3 at = 36.24 l = 0.48
+  };
+   quadrupole { tag = qv at = 36.63 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sv at = 36.78
+  };
+   drift { tag = d1 at = 37.065 l = 0.57
+  };
+   drift { tag = sh at = 37.35
+  };
+   quadrupole { tag = qh at = 37.635 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d2 at = 38.01 l = 0.18
+  };
+   sbend { tag = b at = 38.2125 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 38.4375 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 38.6625 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 38.8875 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   marker { tag = mkc at = 39
+  };
+   sbend { tag = b at = 39.1125 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 39.3375 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 39.5625 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = b at = 39.7875 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   drift { tag = d2 at = 39.99 l = 0.18
+  };
+   quadrupole { tag = qh at = 40.365 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sh at = 40.65
+  };
+   drift { tag = d1 at = 40.935 l = 0.57
+  };
+   drift { tag = sv at = 41.22
+  };
+   quadrupole { tag = qv at = 41.37 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d3 at = 41.76 l = 0.48
+  };
+   marker { tag = mke at = 42
+  };
+   drift { tag = d3 at = 42.24 l = 0.48
+  };
+   quadrupole { tag = qv at = 42.63 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sv at = 42.78
+  };
+   drift { tag = d1 at = 43.065 l = 0.57
+  };
+   drift { tag = sh at = 43.35
+  };
+   quadrupole { tag = qh at = 43.635 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d2 at = 44.01 l = 0.18
+  };
+   drift { tag = dsnob2 at = 44.28237 l = 0.36474
+  };
+   sbend { tag = bds at = 44.57724 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = bds at = 44.80224 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = bds at = 45.02724 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   sbend { tag = bds at = 45.25224 l = 0.225
+    body = { kl = [ 0.00713998330361]}
+  };
+   drift { tag = dsnob1 at = 45.63237 l = 0.53526
+  };
+   drift { tag = d2 at = 45.99 l = 0.18
+  };
+   quadrupole { tag = qh at = 46.365 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sh at = 46.65
+  };
+   drift { tag = d1 at = 46.935 l = 0.57
+  };
+   drift { tag = sv at = 47.22
+  };
+   quadrupole { tag = qv at = 47.37 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d3 at = 47.76 l = 0.48
+  };
+   marker { tag = mkb at = 48
+  };
+   drift { tag = d3 at = 48.24 l = 0.48
+  };
+   quadrupole { tag = qv at = 48.63 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sv at = 48.78
+  };
+   drift { tag = d1 at = 49.065 l = 0.57
+  };
+   drift { tag = sh at = 49.35
+  };
+   quadrupole { tag = qh at = 49.635 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d2 at = 50.01 l = 0.18
+  };
+   drift { tag = nb at = 50.2125 l = 0.225
+  };
+   drift { tag = nb at = 50.4375 l = 0.225
+  };
+   drift { tag = nb at = 50.6625 l = 0.225
+  };
+   drift { tag = nb at = 50.8875 l = 0.225
+  };
+   marker { tag = mkc at = 51
+  };
+   drift { tag = nb at = 51.1125 l = 0.225
+  };
+   drift { tag = nb at = 51.3375 l = 0.225
+  };
+   drift { tag = nb at = 51.5625 l = 0.225
+  };
+   drift { tag = nb at = 51.7875 l = 0.225
+  };
+   drift { tag = d2 at = 51.99 l = 0.18
+  };
+   quadrupole { tag = qh at = 52.365 l = 0.57
+    body = { kl = [ 0 1.337 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = sh at = 52.65
+  };
+   drift { tag = d1 at = 52.935 l = 0.57
+  };
+   drift { tag = sv at = 53.22
+  };
+   quadrupole { tag = qv at = 53.37 l = 0.3
+    body = { kl = [ 0 -0.664 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d3 at = 53.76 l = 0.48
+  };
+   marker { tag = mke at = 54
+  };
+   marker { tag = mend at = 54
+  };
+
+endsequence at = 54
+}

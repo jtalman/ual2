@@ -1,0 +1,50 @@
+#include "BeamBeam/Bunch.hh"
+
+Bunch::Bunch(double* parameters, int n, Particle& offset)
+{
+// parameters[0] - iseed
+// parameters[1] - sigma_x
+// parameters[2] - sigma_y
+// parameters[3] - sigma_z
+// parameters[4] - beta_x
+// parameters[5] - alpha_x
+// parameters[6] - beta_y
+// parameters[7] - alpha_y
+
+  if(n <= 0) {
+     cerr << "Error in Bunch::Bunch(...) : number(" << n << ") <= 0 \n";
+     exit(1);
+  }
+
+  number = n;
+  pls = new Particle[number];
+
+  double rho[4], phi[4];
+
+  srand((unsigned int) parameters[0]);
+  for(int i=0; i < number; i++){
+    for(int j=1; j <= BEAM_DIM/2; j++){
+      rho[j]  = sqrt(-2.0*parameters[j]*log(rand()/(RAND_MAX+1.0)));
+      phi[j]  = 2*PI*rand()/(RAND_MAX+1.0);
+
+      pls[i][2*j-1] = rho[j]*cos(phi[j]);
+      pls[i][2*j]   = rho[j]*sin(phi[j]);
+   
+      if(j < 3)
+	pls[i][2*j] = (pls[i][2*j] - parameters[2*j+3]*pls[i][2*j-1])/parameters[2*j+2]; 
+    }
+    for(int j=1; j <= BEAM_DIM; j++) pls[i][j] += offset[j];
+  } 
+    		      
+}
+
+Particle& Bunch::operator[](int index)
+{
+  if(index >=  number) {
+     cerr << "Error in Bunch::operator[](int index) : index(" << index << ") >= size("
+          << number << ") \n";
+     exit(1);
+  }
+  return pls[index];
+}
+

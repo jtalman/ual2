@@ -1,0 +1,59 @@
+
+#ifndef NM_MAPPER_HH
+#define NM_MAPPER_HH
+
+#include "UAL/Common/Def.hh"
+#include "UAL/APF/PropagatorComponent.hh"
+#include "SMF/PacLattice.h"
+#include "Optics/PacTMap.h"
+#include "Main/Teapot.h"
+#include "TEAPOT/Integrator/BasicTracker.hh"
+
+
+namespace NM {
+
+  /** Map-based tracker. */
+
+  class Mapper  {
+
+  public:
+
+    /** Constructor */
+    Mapper();
+
+    /** Copy Constructor */
+    Mapper(const Mapper& st);
+
+    /** Destructor */
+    ~Mapper();
+
+    /** Sets lattice elements and generates matrix (inherited from UAL::PropagatorNode) */
+    void setLatticeElements(const UAL::AcceleratorNode& lattice, int i0, int i1, 
+			    const UAL::AttributeSet& beamAttributes);
+
+    /** Propagates bunch (inherited from UAL::PropagatorNode) */
+    void propagate(UAL::Probe& probe);
+
+  protected:
+
+    void makeVelocity(ZLIB::VTps& p, ZLIB::VTps& tmp, double v0byc);
+    void makeRV(ZLIB::VTps& p, ZLIB::VTps& tmp,double e0, double p0,double m0);
+    void passDrift(double rlipl, ZLIB::VTps& p, ZLIB::VTps& tmp, double v0byc);
+
+  protected:
+
+    /** sector length */
+    double m_l;
+
+    /** map order */
+    int m_order;
+
+   /** Taylor map */
+    ZLIB::VTps m_map;
+
+  };
+
+
+  }
+
+#endif

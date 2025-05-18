@@ -1,0 +1,18 @@
+CORE       = /home/cfsa/malitsky/PAC++2.0
+SRC        = $(CORE)/src
+LIB        = $(CORE)/lib
+
+INCLUDES   = -I$(SRC) 
+CFLAGS     = $(INCLUDES)
+COMPILE    = g++ -c 
+
+
+OBJS =  Field.o     
+
+$(LIB)/libField.a : $(OBJS)
+	rm -f   $(LIB)/libField.a
+	ar cru  $(LIB)/libField.a $(OBJS)
+	ranlib  $(LIB)/libField.a
+
+Field.o : Field.cc Field.hh  
+	$(COMPILE) $(CFLAGS)  Field.cc 

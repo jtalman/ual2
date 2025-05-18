@@ -1,0 +1,33 @@
+Benchmark-IV Instructions, 4 Dec. 2019
+--------------------------
+1. Assume git download and build have been completed, and environment variables
+   correctly set.
+
+2. $ cd $UAL/examples/ETEAPOT-benchmarks/IV
+   (Necessary server-side modification may be applied in initial step.) 
+   $ ll runExample*   // provides list 
+          runExampleFor_ETEAPOT_BM-IV-MltTurn-BM-IV-Figure6
+          runExampleFor_ETEAPOT_BM-IV-MltTurn-BM-IV-Figure5r
+          runExampleFor_spinOrbits-BM-IV
+
+3. Copy and paste from each of these runExample* files to produce all required figures
+
+4. The produced pdf files (in /pdf directory) are
+          BM-IV_Figure1r.pdf (pre-calculated in II)
+          BM-IV_Figure2r.pdf (pre-calculated in II)
+          BM-IV_Figure5r.pdf
+          BM-IV_Figure5r-early.pdf
+          BM-IV_Figure6l.pdf
+          BM-IV_Figure6r.pdf
+          ValLebedevDec2013.pdf (pre-established)
+
+5. The /latex directory contains tar 
+         latex/E_benchmark_IV.tar
+   (possibly along with other files and a directory)
+         latex/E_benchmark_IV_updated/
+
+6. ".pdf" files produced in step 4 should be 
+   copied to directory "latex//E_benchmark_IV_updated/pdf" before issuing
+         $ cd latex/E_benchmark_IV_updated
+         $ pdflatex E_benchmark_IV.tex
+   to produce chapter "E_benchmark-IV.pdf".

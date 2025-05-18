@@ -1,0 +1,16 @@
+October 19, 2015,   Revised Procedure
+-------------------------------------
+At present the "xmgr" command file "xyzfft.com" looks for tracking output
+data in ./out/test.  But the new policy puts the tracking output in a 
+directory 
+              ./out/$jobname
+where "jobname" is the name of the lattice being tracked,
+for example "data/AlmostPureBend.mad"
+
+Therefore, before launching a PERL script, such as "shell_AlmostPureBend.pl", 
+it is necessary to make a soft link 
+                   test -> AlmostPureBend/
+in the 
+          /home/ualusrPERL/ual1220/ual1/examples/UI_Xmgr/out 
+directory  
+              

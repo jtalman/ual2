@@ -1,0 +1,38 @@
+#include "Bunch.hh"
+
+main()
+{
+  BEAM_DIM = 6;
+
+  double ps[8];
+  ps[0] = 0;    // iseed
+  ps[1] = 2.0;  // sigma_x
+  ps[2] = 3.0;  // sigma_y
+  ps[3] = 4.0;  // sigma_z
+  ps[4] = 1.0;  // beta_x
+  ps[5] =  0.0; // alpha_x
+  ps[6] = 1.0;  // beta_y
+  ps[7] =  0.0; // alpha_y
+
+  int nparts = 1000; 
+
+  Particle offset;
+  for(int j=1; j <= BEAM_DIM; j++) offset[j] = 0.0;
+
+  cerr << RAND_MAX << "\n";
+
+  Bunch b0, b1(ps, nparts, offset);
+
+// Check rms value
+
+  double rms[7];
+  for(int j=1; j <= BEAM_DIM; j++) rms[j] = 0.0;
+
+  for(int i=0; i < nparts; i++)
+    for(int j=1; j <= BEAM_DIM; j++)
+      rms[j] += b1[i][j]*b1[i][j]/nparts;
+
+  for(int j=1; j <= BEAM_DIM; j++)
+   cerr << j << " " << sqrt(rms[j]) << "\n";
+
+}

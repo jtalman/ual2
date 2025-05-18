@@ -1,0 +1,142 @@
+// compromise_quad file
+compromise_quad()
+  : UAL::PropagatorNode()
+{
+//initialize();
+  init();
+  m_ir = 0.0;
+}
+
+compromise_quad(const E_m::compromise_quad& mt) 
+  : UAL::PropagatorNode(mt)
+{
+  copy(mt);
+}
+
+~compromise_quad()
+{
+}
+
+compromise_quad* clone()
+{
+  return new compromise_quad(*this);
+}
+
+void setLatticeElements(const UAL::AcceleratorNode& sequence, 
+                                               int is0, 
+                                               int is1,
+                                               const UAL::AttributeSet& attSet)
+{
+//std::cout << "TDJ - server side - File " << __FILE__ << " line " << __LINE__ << " enter method void ETEAPOT2::bend::setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)\n"; 
+std::cout << __FILE__ << "enter void setLatticeElements(const UAL::AcceleratorNode& sequence,int is0,int is1,const UAL::AttributeSet& attSet)\n";
+
+  if(is0 < sequence.getNodeCount()) m_frontNode = 
+                                     *((PacLattElement*) sequence.getNodeAt(is0));
+  if(is1 < sequence.getNodeCount()) m_backNode  =   
+                                     *((PacLattElement*) sequence.getNodeAt(is1));
+   m_i0 = is0;
+   m_i1 = is1;
+
+// const PacLattice& lattice     = (PacLattice&) sequence;
+
+// UAL::PropagatorNode::setLatticeElements(sequence, is0, is1, attSet);  
+   const PacLattice& lattice     = (PacLattice&) sequence;
+   setLatticeElement(lattice[is0]);
+
+   m_l = (lattice[is0]).getLength();
+   m_n = (lattice[is0]).getLength();
+
+   m_s = lattice[is0].getPosition();
+   m_name=lattice[is0].getDesignName();
+}
+
+void setLatticeElement(const PacLattElement& e)
+{
+//std::cout << "TDJ - server side - File " << __FILE__ << " line " << __LINE__ << " enter method void ETEAPOT2::bend::setLatticeElement(const PacLattElement& e)\n";
+//std::cout << "e.getName() " << e.getName() << " e.getPosition() " << e.getPosition() << "\n";
+/*
+std::cout << __FILE__ << "enter void setLatticeElement(const PacLattElement& e)\n";
+std::cout << "e.getName() " << e.getName() << " e.getPosition() " << e.getPosition() << "\n";
+std::cout << "=========================================================\n";
+std::cout << "e.getType() " << e.getType() << "\n";
+std::cout << "=========================================================\n";
+*/
+PacElemAttributes* attributes = e.getBody();
+//std::cout << "attributes->size() " << attributes->size() << "\n";
+
+PacElemBend* bend;
+PacElemMultipole* mult;
+
+double m_angle;
+PacElemAttributes::iterator it;
+//std::cout << "typeid(it).name(): " << typeid(it).name() << "\n";
+double* data();
+
+  if(attributes){
+    for(it = attributes->begin(); it != attributes->end(); it++){
+/*
+for(int i=0;i<(*it)._size; i++){
+ std::cout << i << "(*it)._data[i]: " << (*it)._data[i] << "\n";
+}
+*/
+      switch((*it).key()){
+      case PAC_BEND:
+	bend = (PacElemBend*) &(*it);
+	m_angle = bend->angle();
+	break;
+
+        case PAC_MULTIPOLE:
+	mult = (PacElemMultipole*) &(*it);
+for(int i=0;i<(*it)._size; i++){
+ std::cout << i << "(*it)._data[i]: " << (*it)._data[i] << "\n";
+}
+for(int i=0;i<mult->_size; i++){
+ std::cout << i << "mult->kl[i]: " << mult->kl(i) << "\n";
+}
+	break;
+
+      default:
+	break;
+      }
+    }
+  }
+
+std::cout << "=========================================================\n";
+std::cout << "line: " << __LINE__  << "\n";
+//m_data.m_m=ETEAPOT2::bend::m_m;
+//m_data.setLatticeElement(e);
+std::cout << "line: " << __LINE__  << "\n";
+//m_edata.setLatticeElement(e);
+std::cout << "line: " << __LINE__  << "\n";
+m_q=mult->kl(1);
+std::cout << "line: " << __LINE__  << " m_q: " << m_q << "\n";
+}
+
+void init(){
+  m_ir=0;
+  m_ir = 0.0;
+}
+
+void copy(const E_m::compromise_quad& mt) 
+{
+  // m_l   = mt.m_l;
+  m_ir  = mt.m_ir;
+}
+
+/*
+const char*  getType(){
+  return "JDT:::E_m::compromise_quad";
+}
+*/
+
+bool isSequence() { return false; }
+
+UAL::AcceleratorNode& getFrontAcceleratorNode()
+{
+  return m_frontNode;
+}
+
+UAL::AcceleratorNode& getBackAcceleratorNode()
+{
+  return m_backNode;
+}

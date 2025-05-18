@@ -1,0 +1,51 @@
+<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:saxon="http://icl.com/saxon"
+    xmlns:math="http://exslt.org/math" extension-element-prefixes="saxon math">
+    <xsl:variable name="pi" select="3.14159265359"/>
+    <xsl:variable name="tiny" select="0.00000001"/>
+    <xsl:variable name="n0_length" select="0.000000000001"/>
+    <xsl:variable name="n0_strength" select="0.000000000001"/>
+    <xsl:variable name="m_pcsq" select="0.93827231"/>
+    <xsl:variable name="G_p" select="1.7928474"/>
+    <xsl:variable name="c" select="299792458.0"/>
+    <xsl:variable name="g_p" select="format-number(2.0*$G_p + 2.0,'####.#######')"/>
+    <xsl:variable name="etaE" select="1.0"/>
+    <xsl:variable name="etaM" select="(1.0-$etaE)"/>
+    <xsl:variable name="R_NOMINAL" select="11.0"/>
+    <xsl:variable name="GROSS_DIAMETER" select="32.0"/>
+    <xsl:variable name="L_LONG_STRAIGHT_NOM" select="4.142"/>
+    <xsl:variable name="llsnom" select="$L_LONG_STRAIGHT_NOM"/>
+    <xsl:variable name="N_SUPER" select="4.0"/>
+    <xsl:variable name="M_NOMINAL" select="0.3"/>
+    <xsl:variable name="m_incr" select="0.01"/>
+    <xsl:variable name="total_straight" select="8.0*$L_LONG_STRAIGHT_NOM"/>
+    <xsl:variable name="r0" select="$R_NOMINAL"/>    
+    <xsl:variable name="quadrant_length" select="format-number(0.5*$pi*$r0 + 2.0*$llsnom,'####.#######')"/>
+    <xsl:variable name="circumference" select="format-number(4.0*$quadrant_length,'####.#######')"/>
+    <xsl:variable name="lQc" select="0.4"/>
+    <xsl:variable name="lQch" select="0.5*$lQc"/>
+    <xsl:variable name="lQcM" select="$tiny"/>
+    <xsl:variable name="lQcE" select="$tiny"/>
+    <xsl:variable name="qFcMh" select="0.5*$tiny"/>
+    <xsl:variable name="qFcE" select="$tiny"/>
+    <xsl:variable name="qDcMh" select="0.5*$tiny"/>
+    <xsl:variable name="qDcE" select="$tiny"/>
+    <xsl:variable name="free_llsh" select="($L_LONG_STRAIGHT_NOM - $lQc) div 2"/>
+    <xsl:variable name="Nsl" select="4.0"/>
+    <xsl:variable name="Nsli" select="1.0 div $Nsl"/>
+    <xsl:variable name="llshsl" select="$Nsli*$free_llsh"/>
+    <xsl:variable name="Theta" select="format-number(2.0*$pi div 16.0,'####.#######')"/>
+    <xsl:variable name="Theta_sl" select="format-number($Nsli*$Theta,'####.#######')"/> 
+    <xsl:variable name="Bend_unit_angle" select="format-number($Theta_sl,'####.#######')"/>
+    <xsl:variable name="Bend_unit_length" select="format-number($r0*$Bend_unit_angle,'####.#######')"/>
+    <xsl:variable name="gBy2" select="0.04"/>
+    <xsl:variable name="rfvolt" select="0.000001"/>
+    <xsl:variable name="rfharmon" select="1.0"/>
+    <xsl:variable name="rflag" select="0.5"/>
+    <xsl:variable name="K0" select="0.030"/>
+    <xsl:variable name="Escr0" select="$m_pcsq + $K0"/>
+    <xsl:variable name="gamma0" select="format-number($Escr0 div $m_pcsq,'####.#######')"/>
+    <xsl:variable name="p0c" select="math:sqrt($Escr0*$Escr0 - $m_pcsq*$m_pcsq)"/>
+    <xsl:variable name="beta0" select="format-number($p0c div $Escr0,'####.#######')"/>  
+    <xsl:variable name="Trev0" select="format-number($circumference div $beta0 div $c,'####.###########')"/>
+    </xsl:transform>

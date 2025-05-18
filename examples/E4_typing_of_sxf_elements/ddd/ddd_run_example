@@ -1,0 +1,6 @@
+cp gdb/gdbinit ~/.gdbinit
+
+make clean
+make
+
+env SHELL=/bin/sh /home/ualusr2011/ddd-temp/INSTALL-ddd-3.4.0/bin/ddd -nx --debugger gdb ./typing_of_sxf_elements &

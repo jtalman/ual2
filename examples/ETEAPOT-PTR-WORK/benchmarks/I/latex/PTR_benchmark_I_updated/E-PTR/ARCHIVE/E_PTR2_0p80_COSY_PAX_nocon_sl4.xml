@@ -1,0 +1,188 @@
+<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:saxon="http://icl.com/saxon"
+    xmlns:math="http://exslt.org/math" extension-element-prefixes="saxon math">
+    <xsi:elements>
+        <element name="mbegin" type="marker"/>
+        <element name="mend" type="marker"/>
+        <element name="mPeriod" type="marker"/>
+        <element name="mhalf" type="marker"/>
+        <element name="mQD" type="marker"/>
+        <element name="mQF" type="marker"/>
+
+        <element name="RF1" type="rfcavity" l="$tiny">
+            <mfield volt="$rfvolt" harmon="$rfharmon" lag='$rflag'/>
+        </element> 
+        
+        <element name="Dlshsl" type="drift" l="$llshsl"/>
+        <element name="Dssq" type="drift" l="$lssq"/>
+         
+        <element name="Dir1" type="drift" l="$lir1"/>
+        <element name="Dir2" type="drift" l="$lir2"/>
+        <element name="Dir3" type="drift" l="$lir3"/>
+
+        <element name="QFh" type="quadrupole" l="$lqh">
+            <mfield a="0" b="$qFh"/>
+        </element>
+
+        <element name="Qir1" type="quadrupole" l="$lqir">
+            <mfield a="0" b="$qir1"/>
+        </element>
+        <element name="Qir2" type="quadrupole" l="$lqir">
+            <mfield a="0" b="$qir2"/>
+        </element>
+        
+        <element name="QDh" type="quadrupole" l="$lq">
+            <mfield a="0" b="$qDh"/>
+        </element>
+        
+        <element name="BhMisl" type="sbend" l="$lehsl">
+            <mfield a="0" b="concat($etaE*$thetahsl,' ',$m_in*$etaE*$thetahsl)"/>
+        </element>
+
+        <element name="BhPlsl" type="sbend" l="$lehsl">
+            <mfield a="0" b="concat($etaE*$thetahsl,' ',-$m_in*$etaE*$thetahsl)"/>   
+        </element>
+                
+    </xsi:elements>
+    <!--  -->
+    <xsi:sectors>
+
+        <sector name="lsirin">
+            <frame ref="Dir1"/>
+            <frame ref="Qir1"/>
+            <frame ref="Dir2"/>
+            <frame ref="Qir2"/>
+            <frame ref="Dir3"/>
+            <frame ref="mQF"/>
+            <frame ref="QFh"/>
+            <frame ref="mQF"/>
+            <frame ref="mQF"/>
+            <frame ref="QFh"/>
+            <frame ref="mQF"/>
+            <frame ref="Dssq"/>
+        </sector>
+
+        <sector name="lsin">
+            <frame ref="Dlshsl"/>
+            <frame ref="Dlshsl"/>
+            <frame ref="Dlshsl"/>
+            <frame ref="Dlshsl"/>
+            <frame ref="Dssq"/>
+            <frame ref="mQF"/>
+            <frame ref="QFh"/>
+            <frame ref="mQF"/>
+            <frame ref="mQF"/>
+            <frame ref="QFh"/>
+            <frame ref="mQF"/>
+            <frame ref="Dssq"/>
+        </sector>
+
+        <sector name="PM">
+            <frame ref="BhPlsl"/>
+            <frame ref="BhPlsl"/>
+            <frame ref="BhPlsl"/>
+            <frame ref="BhPlsl"/>
+            <frame ref="BhMisl"/>
+            <frame ref="BhMisl"/>
+            <frame ref="BhMisl"/>
+            <frame ref="BhMisl"/>
+        </sector>
+        
+        <sector name="QDQD">
+            <frame ref="Dssq"/>
+            <frame ref="mQD"/>
+            <frame ref="QDh"/>
+            <frame ref="mQD"/>
+            <frame ref="QDh"/>
+            <frame ref="mQD"/>
+            <frame ref="mQD"/>
+            <frame ref="QDh"/>
+            <frame ref="mQD"/>
+            <frame ref="QDh"/>
+            <frame ref="mQD"/>
+            <frame ref="Dssq"/>
+        </sector>
+
+        <sector name="MP">
+            <frame ref="BhMisl"/>
+            <frame ref="BhMisl"/>
+            <frame ref="BhMisl"/>
+            <frame ref="BhMisl"/>
+            <frame ref="BhPlsl"/>
+            <frame ref="BhPlsl"/>
+            <frame ref="BhPlsl"/>
+            <frame ref="BhPlsl"/>
+        </sector>
+
+      <sector name="lsout">
+            <frame ref="Dssq"/>
+            <frame ref="mQF"/>
+            <frame ref="QFh"/>
+            <frame ref="mQF"/>
+            <frame ref="mQF"/>
+            <frame ref="QFh"/>
+            <frame ref="mQF"/>
+            <frame ref="Dssq"/>
+            <frame ref="Dlshsl"/>
+            <frame ref="Dlshsl"/>
+            <frame ref="Dlshsl"/>
+            <frame ref="Dlshsl"/>
+      </sector>
+
+      <sector name="lsirout">
+            <frame ref="Dssq"/>
+            <frame ref="mQF"/>
+            <frame ref="QFh"/>
+            <frame ref="mQF"/>
+            <frame ref="mQF"/>
+            <frame ref="QFh"/>
+            <frame ref="mQF"/>
+            <frame ref="Dir3"/>
+            <frame ref="Qir2"/>
+            <frame ref="Dir2"/>
+            <frame ref="Qir1"/>
+            <frame ref="Dir1"/> 
+       </sector>
+
+        <sector name="irperiodin">
+            <frame ref="lsirin"/>
+            <frame ref="PM"/>
+            <frame ref="QDQD"/>
+            <frame ref="MP"/>
+            <frame ref="lsout"/>
+        </sector>
+
+        <sector name="period">
+            <frame ref="lsin"/>
+            <frame ref="PM"/>
+            <frame ref="QDQD"/>
+            <frame ref="MP"/>
+            <frame ref="lsout"/>
+        </sector>
+
+        <sector name="irperiodout">
+            <frame ref="lsin"/>
+            <frame ref="PM"/>
+            <frame ref="QDQD"/>
+            <frame ref="MP"/>
+            <frame ref="lsirout"/>
+        </sector>
+
+        <sector name="ring">
+            <frame ref="mbegin"/>
+            <frame ref="RF1"/> 
+            <frame ref="mPeriod"/>
+            <frame ref="irperiodin"/>
+            <frame ref="mPeriod"/>
+            <frame ref="period"/>
+            <frame ref="mPeriod"/>
+            <frame ref="mhalf"/>
+            <frame ref="mPeriod"/>
+            <frame ref="period"/>
+            <frame ref="mPeriod"/>
+            <frame ref="irperiodout"/>
+            <frame ref="mPeriod"/>
+            <frame ref="mend"/>
+        </sector>
+    </xsi:sectors>
+</xsl:transform>

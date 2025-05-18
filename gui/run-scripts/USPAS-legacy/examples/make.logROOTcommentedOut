@@ -1,0 +1,234 @@
+make[1]: Entering directory `/home/ualusr2007/tools/USPAS/examples/player'
+make[2]: Entering directory `/home/ualusr2007/tools/USPAS/examples/player/src'
+g++                                     -g -fpic  -Wall  -Wno-deprecated        -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT  -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include -c BasicPlayer.cc -o /home/ualusr2007/tools/USPAS/examples/player/lib/linux/obj/BasicPlayer.o
+/home/ualusr2007/tools/qt/include/qnetworkprotocol.h:58: warning: ‘class QNetworkProtocolFactoryBase’ has virtual functions but non-virtual destructor
+/home/ualusr2007/tools/qt/include/qfiledialog.h:78: warning: ‘class QFilePreview’ has virtual functions but non-virtual destructor
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorNode.hh:19: warning: ‘class UAL::PropagatorNode’ has virtual functions but non-virtual destructor
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorComponent.hh:16: warning: ‘class UAL::PropagatorComponent’ has virtual functions but non-virtual destructor
+BasicPlayer.cc: In member function ‘void UAL::USPAS::BasicPlayer::initPlayer()’:
+BasicPlayer.cc:68: warning: unused variable ‘adxfParameterItem’
+BasicPlayer.cc:69: warning: unused variable ‘propagatorsItem’
+BasicPlayer.cc:74: warning: unused variable ‘tunefitEditorItem’
+BasicPlayer.cc:75: warning: unused variable ‘chromfitEditorItem’
+BasicPlayer.cc:79: warning: unused variable ‘orbitItem’
+BasicPlayer.cc:80: warning: unused variable ‘twissItem’
+BasicPlayer.cc:85: warning: unused variable ‘poincareXPxItem’
+BasicPlayer.cc:86: warning: unused variable ‘poincareYPyItem’
+BasicPlayer.cc:87: warning: unused variable ‘poincareCtDeItem’
+BasicPlayer.cc:88: warning: unused variable ‘bunchXPxItem’
+BasicPlayer.cc:89: warning: unused variable ‘bunchYPyItem’
+BasicPlayer.cc:90: warning: unused variable ‘bunchCtDeItem’
+BasicPlayer.cc:91: warning: unused variable ‘mountainRangeItem’
+BasicPlayer.cc:92: warning: unused variable ‘bmpTBTItem’
+BasicPlayer.cc:96: warning: unused variable ‘fftItem’
+BasicPlayer.cc:97: warning: unused variable ‘svdXItem’
+g++                                     -g -fpic  -Wall  -Wno-deprecated        -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT  -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include -c moc_BasicPlayer.cc -o /home/ualusr2007/tools/USPAS/examples/player/lib/linux/obj/moc_BasicPlayer.o
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorNode.hh:19: warning: ‘class UAL::PropagatorNode’ has virtual functions but non-virtual destructor
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorComponent.hh:16: warning: ‘class UAL::PropagatorComponent’ has virtual functions but non-virtual destructor
+/home/ualusr2007/tools/qt/include/private/qucom_p.h:69: warning: ‘struct QUBuffer’ has virtual functions but non-virtual destructor
+/home/ualusr2007/tools/qt/include/private/qucom_p.h:77: warning: ‘struct QUType’ has virtual functions but non-virtual destructor
+/home/ualusr2007/tools/qt/include/private/qucom_p.h:104: warning: ‘struct QUType_Null’ has virtual functions but non-virtual destructor
+/home/ualusr2007/tools/qt/include/private/qucom_p.h:287: warning: ‘struct QUType_enum’ has virtual functions but non-virtual destructor
+/home/ualusr2007/tools/qt/include/private/qucom_p.h:307: warning: ‘struct QUType_ptr’ has virtual functions but non-virtual destructor
+/home/ualusr2007/tools/qt/include/private/qucom_p.h:326: warning: ‘struct QUType_iface’ has virtual functions but non-virtual destructor
+/home/ualusr2007/tools/qt/include/private/qucom_p.h:345: warning: ‘struct QUType_idisp’ has virtual functions but non-virtual destructor
+/home/ualusr2007/tools/qt/include/private/qucom_p.h:364: warning: ‘struct QUType_bool’ has virtual functions but non-virtual destructor
+/home/ualusr2007/tools/qt/include/private/qucom_p.h:383: warning: ‘struct QUType_int’ has virtual functions but non-virtual destructor
+/home/ualusr2007/tools/qt/include/private/qucom_p.h:403: warning: ‘struct QUType_double’ has virtual functions but non-virtual destructor
+/home/ualusr2007/tools/qt/include/private/qucom_p.h:423: warning: ‘struct QUType_charstar’ has virtual functions but non-virtual destructor
+/home/ualusr2007/tools/qt/include/private/qucom_p.h:444: warning: ‘struct QUType_QString’ has virtual functions but non-virtual destructor
+/home/ualusr2007/tools/qt/include/private/qucomextra_p.h:65: warning: ‘struct QUType_QVariant’ has virtual functions but non-virtual destructor
+/home/ualusr2007/tools/qt/include/private/qucomextra_p.h:87: warning: ‘struct QUType_varptr’ has virtual functions but non-virtual destructor
+g++                                     -shared                                 -Wl,-soname,/home/ualusr2007/tools/USPAS/examples/player/lib/linux/libUspasPlayer.so   -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include  -L/home/ualusr2007/ual1/gui/ROOT/lib/linux     -lUalRootViewers -L/home/ualusr2007/ual1/gui/QT/lib/linux       -lUalQt -L/home/ualusr2007/ual1/ext/ADXF/lib/linux -lUalADXF2 -L/home/ualusr2007/ual1/ext/UI/lib/linux   -lUalUI -L/home/ualusr2007/ual1/codes/TIBETAN/lib/linux  -lTibetan -L/home/ualusr2007/ual1/ext/SXF/lib/linux      -lUalSXF2 -L/home/ualusr2007/ual1/codes/AIM/lib/linux      -lAim -L/home/ualusr2007/ual1/codes/ACCSIM/lib/linux   -lAccsim -L/home/ualusr2007/ual1/codes/TEAPOT/lib/linux   -lTeapot  -L/home/ualusr2007/ual1/codes/PAC/lib/linux      -lPacSMF -lPacOptics -lPacSurvey -lPac -L/home/ualusr2007/ual1/codes/ZLIB/lib/linux     -lZTps -L/home/ualusr2007/ual1/codes/UAL/lib/linux     -lUal -L/home/ualusr2007/ual1/tools/sxf//lib/linux          -lSXF -L/home/ualusr2007/ual1/tools/lib/linux    -lpcre -lxml2 -lxerces-c -Wl,-rpath,/home/ualusr2007/tools/qt/lib -L/home/ualusr2007/tools/qt/lib -L/usr/X11R6/lib -lqt-mt -lXext -lX11   /home/ualusr2007/tools/USPAS/examples/player/lib/linux/obj/BasicPlayer.o /home/ualusr2007/tools/USPAS/examples/player/lib/linux/obj/moc_BasicPlayer.o    -o /home/ualusr2007/tools/USPAS/examples/player/lib/linux/libUspasPlayer.so
+rm /home/ualusr2007/tools/USPAS/examples/player/lib/linux/obj/BasicPlayer.o /home/ualusr2007/tools/USPAS/examples/player/lib/linux/obj/moc_BasicPlayer.o
+make[2]: Leaving directory `/home/ualusr2007/tools/USPAS/examples/player/src'
+make[1]: Leaving directory `/home/ualusr2007/tools/USPAS/examples/player'
+make[1]: Entering directory `/home/ualusr2007/tools/USPAS/examples/longitudinal'
+make[2]: Entering directory `/home/ualusr2007/tools/USPAS/examples/longitudinal/src'
+g++                                     -g -fpic  -Wall  -Wno-deprecated        -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT  -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include -I/home/ualusr2007/tools/USPAS/examples/player/src -c run.cc -o ../lib/linux/obj/run.o
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorNode.hh:19: warning: ‘class UAL::PropagatorNode’ has virtual functions but non-virtual destructor
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorComponent.hh:16: warning: ‘class UAL::PropagatorComponent’ has virtual functions but non-virtual destructor
+run.cc: In function ‘int main(int, char**)’:
+run.cc:43: warning: unused variable ‘rint’
+g++                                     -g -fpic  -Wall  -Wno-deprecated        -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT  -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include -I/home/ualusr2007/tools/USPAS/examples/player/src -c DampingTracker.cc -o ../lib/linux/obj/DampingTracker.o
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorNode.hh:19: warning: ‘class UAL::PropagatorNode’ has virtual functions but non-virtual destructor
+g++                                     -o ../linux/run  ../lib/linux/obj/run.o ../lib/linux/obj/DampingTracker.o   -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include  -L/home/ualusr2007/ual1/gui/ROOT/lib/linux     -lUalRootViewers -L/home/ualusr2007/ual1/gui/QT/lib/linux       -lUalQt -L/home/ualusr2007/ual1/ext/ADXF/lib/linux -lUalADXF2 -L/home/ualusr2007/ual1/ext/UI/lib/linux   -lUalUI -L/home/ualusr2007/ual1/codes/TIBETAN/lib/linux  -lTibetan -L/home/ualusr2007/ual1/ext/SXF/lib/linux      -lUalSXF2 -L/home/ualusr2007/ual1/codes/AIM/lib/linux      -lAim -L/home/ualusr2007/ual1/codes/ACCSIM/lib/linux   -lAccsim -L/home/ualusr2007/ual1/codes/TEAPOT/lib/linux   -lTeapot  -L/home/ualusr2007/ual1/codes/PAC/lib/linux      -lPacSMF -lPacOptics -lPacSurvey -lPac -L/home/ualusr2007/ual1/codes/ZLIB/lib/linux     -lZTps -L/home/ualusr2007/ual1/codes/UAL/lib/linux     -lUal -L/home/ualusr2007/ual1/tools/sxf//lib/linux          -lSXF -L/home/ualusr2007/ual1/tools/lib/linux    -lpcre -lxml2 -lxerces-c -Wl,-rpath,/home/ualusr2007/tools/qt/lib -L/home/ualusr2007/tools/qt/lib -L/usr/X11R6/lib -lqt-mt -lXext -lX11   -L/home/ualusr2007/tools/USPAS/examples/player/lib/linux -lUspasPlayer
+../lib/linux/obj/run.o: In function `main':
+/home/ualusr2007/tools/USPAS/examples/longitudinal/src/run.cc:43: undefined reference to `TRint::TRint(char const*, int*, char**, void*, int, bool)'
+/home/ualusr2007/tools/USPAS/examples/longitudinal/src/run.cc:44: undefined reference to `gStyle'
+/home/ualusr2007/tools/USPAS/examples/longitudinal/src/run.cc:44: undefined reference to `TStyle::SetPalette(int, int*)'
+/home/ualusr2007/tools/USPAS/examples/longitudinal/src/run.cc:43: undefined reference to `TObject::operator delete(void*)'
+../lib/linux/obj/run.o: In function `TApplicationImp::IsA() const':
+/home/ualusr2007/tools/root/include/TApplicationImp.h:52: undefined reference to `TApplicationImp::Class()'
+../lib/linux/obj/run.o: In function `~TApplicationImp':
+/home/ualusr2007/tools/root/include/TApplicationImp.h:39: undefined reference to `TString::~TString()'
+/home/ualusr2007/tools/root/include/TApplicationImp.h:39: undefined reference to `TString::~TString()'
+../lib/linux/obj/run.o: In function `TObject::operator new(unsigned int)':
+/home/ualusr2007/tools/root/include/TObject.h:155: undefined reference to `TStorage::ObjectAlloc(unsigned int)'
+../lib/linux/obj/run.o:(.data.rel.ro._ZTV15TApplicationImp[vtable for TApplicationImp]+0x3c): undefined reference to `TApplicationImp::ShowMembers(TMemberInspector&, char*)'
+../lib/linux/obj/run.o:(.data.rel.ro._ZTV15TApplicationImp[vtable for TApplicationImp]+0x40): undefined reference to `TApplicationImp::Streamer(TBuffer&)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TMultiGraph::TMultiGraph()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::TGraph()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TH1::GetYaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TCanvasImp::ShowMembers(TMemberInspector&, char*)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TH2F::TH2F(char const*, char const*, int, double, double, int, double, double)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TCanvasImp::Class()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::TGraph(int)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TMultiGraph::GetXaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TLegend::TLegend(double, double, double, double, char const*, char const*)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TVirtualPad::Pad()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TQtWidget::TQtWidget(QWidget*, char const*, unsigned int, bool)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::GetYaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::GetXaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TH1::GetXaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TLegend::AddEntry(TObject*, char const*, char const*)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TCanvasImp::Streamer(TBuffer&)'
+collect2: ld returned 1 exit status
+make[2]: *** [../linux/run] Error 1
+make[2]: Leaving directory `/home/ualusr2007/tools/USPAS/examples/longitudinal/src'
+make[1]: *** [compile] Error 2
+make[1]: Leaving directory `/home/ualusr2007/tools/USPAS/examples/longitudinal'
+make[1]: Entering directory `/home/ualusr2007/tools/USPAS/examples/transverse'
+make[2]: Entering directory `/home/ualusr2007/tools/USPAS/examples/transverse/src'
+g++                                     -g -fpic  -Wall  -Wno-deprecated        -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT  -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include -I/home/ualusr2007/tools/USPAS/examples/player/src -c run.cc -o ../lib/linux/obj/run.o
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorNode.hh:19: warning: ‘class UAL::PropagatorNode’ has virtual functions but non-virtual destructor
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorComponent.hh:16: warning: ‘class UAL::PropagatorComponent’ has virtual functions but non-virtual destructor
+run.cc: In function ‘int main(int, char**)’:
+run.cc:43: warning: unused variable ‘rint’
+g++                                     -g -fpic  -Wall  -Wno-deprecated        -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT  -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include -I/home/ualusr2007/tools/USPAS/examples/player/src -c NoisyMonitor.cc -o ../lib/linux/obj/NoisyMonitor.o
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorNode.hh:19: warning: ‘class UAL::PropagatorNode’ has virtual functions but non-virtual destructor
+g++                                     -g -fpic  -Wall  -Wno-deprecated        -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT  -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include -I/home/ualusr2007/tools/USPAS/examples/player/src -c DampingTracker.cc -o ../lib/linux/obj/DampingTracker.o
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorNode.hh:19: warning: ‘class UAL::PropagatorNode’ has virtual functions but non-virtual destructor
+g++                                     -g -fpic  -Wall  -Wno-deprecated        -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT  -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include -I/home/ualusr2007/tools/USPAS/examples/player/src -c DoNothingTracker.cc -o ../lib/linux/obj/DoNothingTracker.o
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorNode.hh:19: warning: ‘class UAL::PropagatorNode’ has virtual functions but non-virtual destructor
+g++                                     -o ../linux/run  ../lib/linux/obj/run.o  ../lib/linux/obj/NoisyMonitor.o ../lib/linux/obj/DampingTracker.o ../lib/linux/obj/DoNothingTracker.o   -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include  -L/home/ualusr2007/ual1/gui/ROOT/lib/linux     -lUalRootViewers -L/home/ualusr2007/ual1/gui/QT/lib/linux       -lUalQt -L/home/ualusr2007/ual1/ext/ADXF/lib/linux -lUalADXF2 -L/home/ualusr2007/ual1/ext/UI/lib/linux   -lUalUI -L/home/ualusr2007/ual1/codes/TIBETAN/lib/linux  -lTibetan -L/home/ualusr2007/ual1/ext/SXF/lib/linux      -lUalSXF2 -L/home/ualusr2007/ual1/codes/AIM/lib/linux      -lAim -L/home/ualusr2007/ual1/codes/ACCSIM/lib/linux   -lAccsim -L/home/ualusr2007/ual1/codes/TEAPOT/lib/linux   -lTeapot  -L/home/ualusr2007/ual1/codes/PAC/lib/linux      -lPacSMF -lPacOptics -lPacSurvey -lPac -L/home/ualusr2007/ual1/codes/ZLIB/lib/linux     -lZTps -L/home/ualusr2007/ual1/codes/UAL/lib/linux     -lUal -L/home/ualusr2007/ual1/tools/sxf//lib/linux          -lSXF -L/home/ualusr2007/ual1/tools/lib/linux    -lpcre -lxml2 -lxerces-c -Wl,-rpath,/home/ualusr2007/tools/qt/lib -L/home/ualusr2007/tools/qt/lib -L/usr/X11R6/lib -lqt-mt -lXext -lX11   -L/home/ualusr2007/tools/USPAS/examples/player/lib/linux -lUspasPlayer
+../lib/linux/obj/run.o: In function `main':
+/home/ualusr2007/tools/USPAS/examples/transverse/src/run.cc:43: undefined reference to `TRint::TRint(char const*, int*, char**, void*, int, bool)'
+/home/ualusr2007/tools/USPAS/examples/transverse/src/run.cc:44: undefined reference to `gStyle'
+/home/ualusr2007/tools/USPAS/examples/transverse/src/run.cc:44: undefined reference to `TStyle::SetPalette(int, int*)'
+/home/ualusr2007/tools/USPAS/examples/transverse/src/run.cc:43: undefined reference to `TObject::operator delete(void*)'
+../lib/linux/obj/run.o: In function `TApplicationImp::IsA() const':
+/home/ualusr2007/tools/root/include/TApplicationImp.h:52: undefined reference to `TApplicationImp::Class()'
+../lib/linux/obj/run.o: In function `~TApplicationImp':
+/home/ualusr2007/tools/root/include/TApplicationImp.h:39: undefined reference to `TString::~TString()'
+/home/ualusr2007/tools/root/include/TApplicationImp.h:39: undefined reference to `TString::~TString()'
+../lib/linux/obj/run.o: In function `TObject::operator new(unsigned int)':
+/home/ualusr2007/tools/root/include/TObject.h:155: undefined reference to `TStorage::ObjectAlloc(unsigned int)'
+../lib/linux/obj/run.o:(.data.rel.ro._ZTV15TApplicationImp[vtable for TApplicationImp]+0x3c): undefined reference to `TApplicationImp::ShowMembers(TMemberInspector&, char*)'
+../lib/linux/obj/run.o:(.data.rel.ro._ZTV15TApplicationImp[vtable for TApplicationImp]+0x40): undefined reference to `TApplicationImp::Streamer(TBuffer&)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TMultiGraph::TMultiGraph()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::TGraph()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TH1::GetYaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TCanvasImp::ShowMembers(TMemberInspector&, char*)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TH2F::TH2F(char const*, char const*, int, double, double, int, double, double)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TCanvasImp::Class()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::TGraph(int)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TMultiGraph::GetXaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TLegend::TLegend(double, double, double, double, char const*, char const*)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TVirtualPad::Pad()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TQtWidget::TQtWidget(QWidget*, char const*, unsigned int, bool)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::GetYaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::GetXaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TH1::GetXaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TLegend::AddEntry(TObject*, char const*, char const*)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TCanvasImp::Streamer(TBuffer&)'
+collect2: ld returned 1 exit status
+make[2]: *** [../linux/run] Error 1
+make[2]: Leaving directory `/home/ualusr2007/tools/USPAS/examples/transverse/src'
+make[1]: *** [compile] Error 2
+make[1]: Leaving directory `/home/ualusr2007/tools/USPAS/examples/transverse'
+make[1]: Entering directory `/home/ualusr2007/tools/USPAS/examples/decoherence'
+make[2]: Entering directory `/home/ualusr2007/tools/USPAS/examples/decoherence/src'
+g++                                     -g -fpic  -Wall  -Wno-deprecated        -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT  -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include -I/home/ualusr2007/tools/USPAS/examples/player/src -c run.cc -o ../lib/linux/obj/run.o
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorNode.hh:19: warning: ‘class UAL::PropagatorNode’ has virtual functions but non-virtual destructor
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorComponent.hh:16: warning: ‘class UAL::PropagatorComponent’ has virtual functions but non-virtual destructor
+run.cc: In function ‘int main(int, char**)’:
+run.cc:43: warning: unused variable ‘rint’
+g++                                     -g -fpic  -Wall  -Wno-deprecated        -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT  -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include -I/home/ualusr2007/tools/USPAS/examples/player/src -c OneTurnKicker.cc -o ../lib/linux/obj/OneTurnKicker.o
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorNode.hh:19: warning: ‘class UAL::PropagatorNode’ has virtual functions but non-virtual destructor
+g++                                     -o ../linux/run  ../lib/linux/obj/run.o ../lib/linux/obj/OneTurnKicker.o    -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include  -L/home/ualusr2007/ual1/gui/ROOT/lib/linux     -lUalRootViewers -L/home/ualusr2007/ual1/gui/QT/lib/linux       -lUalQt -L/home/ualusr2007/ual1/ext/ADXF/lib/linux -lUalADXF2 -L/home/ualusr2007/ual1/ext/UI/lib/linux   -lUalUI -L/home/ualusr2007/ual1/codes/TIBETAN/lib/linux  -lTibetan -L/home/ualusr2007/ual1/ext/SXF/lib/linux      -lUalSXF2 -L/home/ualusr2007/ual1/codes/AIM/lib/linux      -lAim -L/home/ualusr2007/ual1/codes/ACCSIM/lib/linux   -lAccsim -L/home/ualusr2007/ual1/codes/TEAPOT/lib/linux   -lTeapot  -L/home/ualusr2007/ual1/codes/PAC/lib/linux      -lPacSMF -lPacOptics -lPacSurvey -lPac -L/home/ualusr2007/ual1/codes/ZLIB/lib/linux     -lZTps -L/home/ualusr2007/ual1/codes/UAL/lib/linux     -lUal -L/home/ualusr2007/ual1/tools/sxf//lib/linux          -lSXF -L/home/ualusr2007/ual1/tools/lib/linux    -lpcre -lxml2 -lxerces-c -Wl,-rpath,/home/ualusr2007/tools/qt/lib -L/home/ualusr2007/tools/qt/lib -L/usr/X11R6/lib -lqt-mt -lXext -lX11   -L/home/ualusr2007/tools/USPAS/examples/player/lib/linux -lUspasPlayer
+../lib/linux/obj/run.o: In function `main':
+/home/ualusr2007/tools/USPAS/examples/decoherence/src/run.cc:43: undefined reference to `TRint::TRint(char const*, int*, char**, void*, int, bool)'
+/home/ualusr2007/tools/USPAS/examples/decoherence/src/run.cc:44: undefined reference to `gStyle'
+/home/ualusr2007/tools/USPAS/examples/decoherence/src/run.cc:44: undefined reference to `TStyle::SetPalette(int, int*)'
+/home/ualusr2007/tools/USPAS/examples/decoherence/src/run.cc:43: undefined reference to `TObject::operator delete(void*)'
+../lib/linux/obj/run.o: In function `TApplicationImp::IsA() const':
+/home/ualusr2007/tools/root/include/TApplicationImp.h:52: undefined reference to `TApplicationImp::Class()'
+../lib/linux/obj/run.o: In function `~TApplicationImp':
+/home/ualusr2007/tools/root/include/TApplicationImp.h:39: undefined reference to `TString::~TString()'
+/home/ualusr2007/tools/root/include/TApplicationImp.h:39: undefined reference to `TString::~TString()'
+../lib/linux/obj/run.o: In function `TObject::operator new(unsigned int)':
+/home/ualusr2007/tools/root/include/TObject.h:155: undefined reference to `TStorage::ObjectAlloc(unsigned int)'
+../lib/linux/obj/run.o:(.data.rel.ro._ZTV15TApplicationImp[vtable for TApplicationImp]+0x3c): undefined reference to `TApplicationImp::ShowMembers(TMemberInspector&, char*)'
+../lib/linux/obj/run.o:(.data.rel.ro._ZTV15TApplicationImp[vtable for TApplicationImp]+0x40): undefined reference to `TApplicationImp::Streamer(TBuffer&)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TMultiGraph::TMultiGraph()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::TGraph()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TH1::GetYaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TCanvasImp::ShowMembers(TMemberInspector&, char*)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TH2F::TH2F(char const*, char const*, int, double, double, int, double, double)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TCanvasImp::Class()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::TGraph(int)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TMultiGraph::GetXaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TLegend::TLegend(double, double, double, double, char const*, char const*)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TVirtualPad::Pad()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TQtWidget::TQtWidget(QWidget*, char const*, unsigned int, bool)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::GetYaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::GetXaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TH1::GetXaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TLegend::AddEntry(TObject*, char const*, char const*)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TCanvasImp::Streamer(TBuffer&)'
+collect2: ld returned 1 exit status
+make[2]: *** [../linux/run] Error 1
+make[2]: Leaving directory `/home/ualusr2007/tools/USPAS/examples/decoherence/src'
+make[1]: *** [compile] Error 2
+make[1]: Leaving directory `/home/ualusr2007/tools/USPAS/examples/decoherence'
+make[1]: Entering directory `/home/ualusr2007/tools/USPAS/examples/nonlinear'
+make[2]: Entering directory `/home/ualusr2007/tools/USPAS/examples/nonlinear/src'
+g++                                     -g -fpic  -Wall  -Wno-deprecated        -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT  -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include -I/home/ualusr2007/tools/USPAS/examples/player/src -c run.cc -o ../lib/linux/obj/run.o
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorNode.hh:19: warning: ‘class UAL::PropagatorNode’ has virtual functions but non-virtual destructor
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorComponent.hh:16: warning: ‘class UAL::PropagatorComponent’ has virtual functions but non-virtual destructor
+run.cc: In function ‘int main(int, char**)’:
+run.cc:43: warning: unused variable ‘rint’
+g++                                     -g -fpic  -Wall  -Wno-deprecated        -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT  -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include -I/home/ualusr2007/tools/USPAS/examples/player/src -c MapTracker.cc -o ../lib/linux/obj/MapTracker.o
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorNode.hh:19: warning: ‘class UAL::PropagatorNode’ has virtual functions but non-virtual destructor
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorComponent.hh:16: warning: ‘class UAL::PropagatorComponent’ has virtual functions but non-virtual destructor
+g++                                     -g -fpic  -Wall  -Wno-deprecated        -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT  -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include -I/home/ualusr2007/tools/USPAS/examples/player/src -c TuneRamper.cc -o ../lib/linux/obj/TuneRamper.o
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorNode.hh:19: warning: ‘class UAL::PropagatorNode’ has virtual functions but non-virtual destructor
+/home/ualusr2007/ual1/codes/UAL/include/UAL/APF/PropagatorComponent.hh:16: warning: ‘class UAL::PropagatorComponent’ has virtual functions but non-virtual destructor
+g++                                     -o ../linux/run  ../lib/linux/obj/run.o ../lib/linux/obj/MapTracker.o ../lib/linux/obj/TuneRamper.o   -I/home/ualusr2007/tools/qt-x11-free-3.3.4/mkspecs/default -I/home/ualusr2007/tools/qt/include -I/home/ualusr2007/ual1/gui/ROOT/src -I/home/ualusr2007/ual1/gui/QT/src -I/home/ualusr2007/ual1/ext/ADXF/include -I/home/ualusr2007/ual1/ext/UI/include -I/home/ualusr2007/ual1/ext/SXF/src  -I/home/ualusr2007/ual1/codes/TIBETAN/src  -I/home/ualusr2007/ual1/codes/AIM/src  -I/home/ualusr2007/ual1/codes/ACCSIM/src  -I/home/ualusr2007/ual1/codes/TEAPOT/src  -I/home/ualusr2007/ual1/codes/PAC/src  -I/home/ualusr2007/ual1/codes/UAL/include -I/home/ualusr2007/ual1/codes/ZLIB/src -I/home/ualusr2007/ual1/tools/include -I/home/ualusr2007/ual1/tools/include/libxml2 -I/home/ualusr2007/ual1/tools/sxf//src   -I/home/ualusr2007/tools/root/include  -L/home/ualusr2007/ual1/gui/ROOT/lib/linux     -lUalRootViewers -L/home/ualusr2007/ual1/gui/QT/lib/linux       -lUalQt -L/home/ualusr2007/ual1/ext/ADXF/lib/linux -lUalADXF2 -L/home/ualusr2007/ual1/ext/UI/lib/linux   -lUalUI -L/home/ualusr2007/ual1/codes/TIBETAN/lib/linux  -lTibetan -L/home/ualusr2007/ual1/ext/SXF/lib/linux      -lUalSXF2 -L/home/ualusr2007/ual1/codes/AIM/lib/linux      -lAim -L/home/ualusr2007/ual1/codes/ACCSIM/lib/linux   -lAccsim -L/home/ualusr2007/ual1/codes/TEAPOT/lib/linux   -lTeapot  -L/home/ualusr2007/ual1/codes/PAC/lib/linux      -lPacSMF -lPacOptics -lPacSurvey -lPac -L/home/ualusr2007/ual1/codes/ZLIB/lib/linux     -lZTps -L/home/ualusr2007/ual1/codes/UAL/lib/linux     -lUal -L/home/ualusr2007/ual1/tools/sxf//lib/linux          -lSXF -L/home/ualusr2007/ual1/tools/lib/linux    -lpcre -lxml2 -lxerces-c -Wl,-rpath,/home/ualusr2007/tools/qt/lib -L/home/ualusr2007/tools/qt/lib -L/usr/X11R6/lib -lqt-mt -lXext -lX11   -L/home/ualusr2007/tools/USPAS/examples/player/lib/linux -lUspasPlayer
+../lib/linux/obj/run.o: In function `main':
+/home/ualusr2007/tools/USPAS/examples/nonlinear/src/run.cc:43: undefined reference to `TRint::TRint(char const*, int*, char**, void*, int, bool)'
+/home/ualusr2007/tools/USPAS/examples/nonlinear/src/run.cc:44: undefined reference to `gStyle'
+/home/ualusr2007/tools/USPAS/examples/nonlinear/src/run.cc:44: undefined reference to `TStyle::SetPalette(int, int*)'
+/home/ualusr2007/tools/USPAS/examples/nonlinear/src/run.cc:43: undefined reference to `TObject::operator delete(void*)'
+../lib/linux/obj/run.o: In function `TApplicationImp::IsA() const':
+/home/ualusr2007/tools/root/include/TApplicationImp.h:52: undefined reference to `TApplicationImp::Class()'
+../lib/linux/obj/run.o: In function `~TApplicationImp':
+/home/ualusr2007/tools/root/include/TApplicationImp.h:39: undefined reference to `TString::~TString()'
+/home/ualusr2007/tools/root/include/TApplicationImp.h:39: undefined reference to `TString::~TString()'
+../lib/linux/obj/run.o: In function `TObject::operator new(unsigned int)':
+/home/ualusr2007/tools/root/include/TObject.h:155: undefined reference to `TStorage::ObjectAlloc(unsigned int)'
+../lib/linux/obj/run.o:(.data.rel.ro._ZTV15TApplicationImp[vtable for TApplicationImp]+0x3c): undefined reference to `TApplicationImp::ShowMembers(TMemberInspector&, char*)'
+../lib/linux/obj/run.o:(.data.rel.ro._ZTV15TApplicationImp[vtable for TApplicationImp]+0x40): undefined reference to `TApplicationImp::Streamer(TBuffer&)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TMultiGraph::TMultiGraph()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::TGraph()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TH1::GetYaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TCanvasImp::ShowMembers(TMemberInspector&, char*)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TH2F::TH2F(char const*, char const*, int, double, double, int, double, double)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TCanvasImp::Class()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::TGraph(int)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TMultiGraph::GetXaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TLegend::TLegend(double, double, double, double, char const*, char const*)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TVirtualPad::Pad()'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TQtWidget::TQtWidget(QWidget*, char const*, unsigned int, bool)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::GetYaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TGraph::GetXaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TH1::GetXaxis() const'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TLegend::AddEntry(TObject*, char const*, char const*)'
+/home/ualusr2007/ual1/gui/ROOT/lib/linux/libUalRootViewers.so: undefined reference to `TCanvasImp::Streamer(TBuffer&)'
+collect2: ld returned 1 exit status
+make[2]: *** [../linux/run] Error 1
+make[2]: Leaving directory `/home/ualusr2007/tools/USPAS/examples/nonlinear/src'
+make[1]: *** [compile] Error 2
+make[1]: Leaving directory `/home/ualusr2007/tools/USPAS/examples/nonlinear'
+make: *** [compile] Error 2

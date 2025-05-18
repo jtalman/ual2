@@ -1,0 +1,23 @@
+Directory
+	$UAL/doc/
+is built separately for the time being.
+
+A (the?) critical question is the availability of executable dot, e.g.
+	/home/rtalman/graphviz/INSTALL-10.0.1/bin/dot 22192
+on my SL7.9 box.
+
+Tar file
+	/home/rtalman/graphviz/graphviz-10.0.1.tar.gz 27286181
+is in $UAL/doc/tars/
+
+Executable dot has been built with it, and tested on my box.
+
+Of course it must be available via
+	$PATH
+for make
+	$UAL/doc/Makefile
+to execute successfully.
+
+One can then browse to e.g.
+	file:///home/rtalman/Desktop/GIT/download/ual1/doc/src/html/annotated.html
+on my box.

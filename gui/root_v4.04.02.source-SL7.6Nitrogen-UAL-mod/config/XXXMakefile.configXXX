@@ -1,0 +1,202 @@
+# -*- mode: makefile -*-
+#
+# Makefile definitions included by the top Makefile
+
+ARCH           := linuxx8664gcc
+
+USECONFIG      := FALSE
+MKLIBOPTIONS   := -v 4 04 02 
+
+EXTRA_CFLAGS   := -Iinclude 
+EXTRA_CXXFLAGS := -Iinclude 
+EXTRA_LDFLAGS  := 
+
+GLBPATCHFLAGS  := 
+EXTRA_AUTHFLAGS:=  -DR__KRB5  -DR__SSL
+
+BINDIR         := $(ROOTSYS)/bin
+LIBDIR         := $(ROOTSYS)/lib
+INCDIR         := $(ROOTSYS)/include
+ETCDIR         := $(ROOTSYS)/etc
+MANDIR         := $(ROOTSYS)/man/man1
+DATADIR        := $(ROOTSYS)
+ELISPDIR       := $(ROOTSYS)/build/misc
+TTFFONTDIR     := $(ROOTSYS)/fonts
+PROOFDATADIR   := $(ROOTSYS)/proof
+MACRODIR       := $(ROOTSYS)/macros
+SRCDIR         := $(ROOTSYS)/src
+ICONPATH       := $(ROOTSYS)/icons
+CINTINCDIR     := $(ROOTSYS)/cint
+DOCDIR         := $(ROOTSYS)
+TESTDIR        := $(ROOTSYS)/test
+TUTDIR         := $(ROOTSYS)/tutorials
+ACLOCALDIR     := $(ROOTSYS)/build/misc
+
+X11LIBDIR      := 
+XPMLIBDIR      := -L/lib64
+XPMLIB         := -lXpm
+
+EXCEPTIONS     := yes
+EXPLICITLINK   := no
+
+ENABLETHREAD   := yes
+OSTHREADFLAG   := -pthread
+OSTHREADLIBDIR := 
+OSTHREADLIB    := -pthread
+
+BUILTINFREETYPE:= yes
+
+BUILDGL        := yes
+OPENGLLIBDIR   := -L/lib64
+OPENGLULIB     := -lGLU
+OPENGLLIB      := -lGL
+OPENGLINCDIR   := $(filter-out /usr/include, /usr/include)
+
+BUILDHBOOK     := no
+CERNLIBDIR     := 
+CERNLIBS       := 
+
+BUILDLDAP      := no
+LDAPLIBDIR     := 
+LDAPCLILIB     := 
+LDAPINCDIR     := $(filter-out /usr/include, )
+
+BUILDMYSQL     := yes
+MYSQLLIBDIR    := -L/usr/lib64/mysql
+MYSQLCLILIB    := -lmysqlclient_r -lz
+MYSQLINCDIR    := $(filter-out /usr/include, /usr/include/mysql)
+
+BUILDORACLE    := no
+ORACLELIBDIR   := 
+ORACLECLILIB   :=  
+ORACLEINCDIR   := $(filter-out /usr/include, )
+
+BUILDPGSQL     := yes
+PGSQLLIBDIR    := -L/lib64
+PGSQLCLILIB    := -lpq
+PGSQLINCDIR    := $(filter-out /usr/include, /usr/include)
+
+BUILDSAPDB     := no
+SAPDBLIBDIR    := 
+SAPDBCLILIB    := 
+SAPDBINCDIR    := $(filter-out /usr/include, )
+
+BUILDQT        := yes
+QTLIBDIR       := 
+QTLIB          := ../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/
+QTINCDIR       := $(filter-out /usr/include, ../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/)
+QTMOCEXE       := ../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod//bin/moc
+
+BUILDSHIFT     := no
+SHIFTINCDIR    := $(filter-out /usr/include, )
+SHIFTLIBDIR    := 
+SHIFTLIB       := 
+
+BUILDDCAP      := no
+DCAPLIBDIR     := 
+DCAPLIB        := 
+DCAPINCDIR     := $(filter-out /usr/include, )
+
+BUILDCHIRP     := no
+CHIRPLIBDIR    := 
+CHIRPCLILIB    := 
+CHIRPINCDIR    := $(filter-out /usr/include, )
+
+BUILDALIEN     := no
+ALIENLIBDIR    := 
+ALIENCLILIB    := 
+ALIENINCDIR    := $(filter-out /usr/include, )
+
+BUILDASIMAGE   := yes
+BUILTINASIMAGE := yes
+ASEXTRALIB     :=  -ljpeg -ltiff -lpng -lz
+ASEXTRALIBDIR  :=  -L/lib64 -L/lib64 -L/lib64 -L/lib64
+ASJPEGINCDIR   := $(filter-out /usr/include, /usr/include)
+ASPNGINCDIR    := $(filter-out /usr/include, /usr/include)
+ASTIFFINCDIR   := $(filter-out /usr/include, /usr/include)
+ASGIFINCDIR    := $(filter-out /usr/include, )
+ASINCDIR       := $(filter-out /usr/include, )
+ASLIB          := 
+ASLIBDIR       := 
+
+BUILDFPYTHIA   := no
+FPYTHIALIBDIR  := 
+FPYTHIALIB     := 
+
+BUILDFPYTHIA6  := no
+FPYTHIA6LIBDIR := 
+FPYTHIA6LIB    := 
+
+BUILDFVENUS    := no
+FVENUSLIBDIR   := 
+FVENUSLIB      := 
+
+BUILDPYTHON    := no
+PYTHONLIBDIR   := 
+PYTHONLIB      := 
+PYTHONINCDIR   := $(filter-out /usr/include, )
+PYTHONLIBFLAGS := 
+
+BUILDRUBY      := no
+RUBYLIBDIR     := 
+RUBYLIB        := 
+RUBYINCDIR     := $(filter-out /usr/include, )
+
+BUILDXML       := yes
+XMLLIBDIR      := -L/lib64
+XMLCLILIB      := -lxml2 -lpthread
+XMLINCDIR      := $(filter-out /usr/include, /usr/include/libxml2)
+
+BUILDXRD       := yes
+
+SRPLIBDIR      := 
+SRPLIB         := 
+SRPINCDIR      := $(filter-out /usr/include, )
+
+BUILDSRPUTIL   := 
+SRPUTILLIBDIR  := 
+SRPUTILLIB     := 
+SRPUTILINCDIR  := $(filter-out /usr/include, )
+
+AFSLIB         := 
+AFSLIBDIR      := 
+
+BUILDKRB5      := yes
+KRB5LIB        := -lkrb5 -lk5crypto
+KRB5LIBDIR     :=  
+KRB5INCDIR     := $(filter-out /usr/include, /usr/include)
+
+COMERRLIB      := -lcom_err
+COMERRLIBDIR   := 
+
+RESOLVLIB      := -lresolv
+
+CRYPTOLIB      := 
+CRYPTOLIBDIR   := 
+
+BUILDGLOBUS    := no
+GLOBUSLIB      := 
+GLOBUSLIBDIR   := 
+GLOBUSINCDIR   := $(filter-out /usr/include, )
+
+SSLLIB         := -lssl -lcrypto
+SSLLIBDIR      := -L/lib64 -L/lib64
+SSLINCDIR      := $(filter-out /usr/include, /usr/include)
+
+SHADOWFLAGS    := -DR__SHADOWPW 
+SHADOWLIB      :=
+SHADOWLIBDIR   :=
+
+BUILDTABLE     := yes
+
+BUILDCLARENS   := no
+CLARENSINC     := $(filter-out -I/usr/include, )
+CLARENSLIBS    := 
+
+BUILDPEAC      := no
+
+INSTALL        := cp -dpR
+INSTALLDATA    := cp -dpR
+INSTALLDIR     := mkdir -p
+
+ROOTDRPMREL    := 1

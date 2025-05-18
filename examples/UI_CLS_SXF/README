@@ -1,0 +1,46 @@
+Description:
+------------------------------------------
+
+Starter example UI with the SXF file CLS.sxf (Canadian Light Source)
+
+Usage:
+------------------------------------------
+
+$ perl UI_CLS_SXF-256.pl       # to run full perl script
+$ perl -d UI_CLS_SXF-256.pl   # to step through perl script enter "n" (for next step)
+                                               # after that "n" or CR
+Structure:
+------------------------------------------
+
+CLS.pl     - Perl script 
+./data/CLS.sxf 
+./out/  - directory with output files 
+
+--------------------------------------------
+
+Comments concerning the graphical output and "xmgrace"
+------------
+1.  A common failure will be for all graphs produced in the final step of the perl 
+     scipt to be blank, except for the axes.
+2.  Essentially always, all previous perl steps will still be valid.
+3.  The error will probably have been caused by a change in the "xyzfft.com" 
+      file, which instructs "xmgrace" how to produce the graphs.
+4.  Though "xmgrace" is both powerful (e.g. it performs fft's on the fly) and
+      elegant (it's "xyzfft.com" file handles pictorial rearrangements) its learning
+      curve is steep.
+5.  As an aid to climbing this hill, several different  "xyzfft.com" scripts are 
+     available in the "xyzfft.com_dir" directory.
+6.  The only purpose for this (annoying) soft link redirection is to enable the 
+     user to correlate changes in the graphical appearance (e.g. presence or
+     absence of timestamp) with changes in "xyzfft.com" file.
+7.  More trivial cosmetic  "Console" warnings may still persist.
+
+Comments concerning UAL
+------------
+1.  All energies are measured in GEV
+2.  This includes electric field units being GeV/m
+3. "mass" is always mc^2, always in GeV units
+3.  "energy" is always "total energy"
+4.  i.e. E = mc^2 + K
+5. gamma = E/mc^2 > 1 for m>0.
+

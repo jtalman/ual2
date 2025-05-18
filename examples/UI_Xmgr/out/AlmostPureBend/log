@@ -1,0 +1,38 @@
+
+reads the MAD input file ./data/AlmostPureBend.mad
+start = 1445997524
+end   = 1445997524
+
+writes the SMF data into the FTPOT file 
+
+ start           . 1445997524
+
+ end             . 1445997524
+
+survey 
+start = 1445997524
+end   = 1445997524
+
+twiss 
+start = 1445997524
+end   = 1445997526
+
+analysis
+
+  closed orbit     1445997526
+
+  twiss parameters 1445997526
+
+  end            . 1445997526
+
+make map 
+start = 1445997526
+end   = 1445997526
+
+run 
+start = 1445997526
+
+_revfreq
+ suml                   = 251.456684865102
+ excess circumference   = 5.54108094399115e-14
+ revfreq                = 1173568.59611284end   = 1445997526

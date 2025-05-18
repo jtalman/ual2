@@ -1,0 +1,159 @@
+// VectorA.cc
+
+#include "Map/Map.hh"
+#include "Field/Field.hh"
+
+void mltVectorA(Map y, Series* a, double* param)
+{
+  int dim   = y.dimension();
+  int order = (int) ((param[0]-1)/2+1);
+
+  Series tmp[5];
+  for(int i=0; i <= 4; i++) tmp[i] = 0.;
+  tmp[1] = y[1];
+  if(dim > 2) tmp[3] = y[3];
+
+  for(i=order; i >= 0 ; i--)
+  {
+    tmp[0]  = tmp[1]*tmp[2];
+    tmp[0] -= tmp[3]*tmp[4];
+    tmp[4]  = tmp[1]*tmp[4];
+    tmp[4] += tmp[3]*tmp[2];
+    if(i > 1){
+      tmp[0] -= param[i]/i;
+      tmp[4] -= param[i+order-1]/i;
+    }
+    tmp[2]  = tmp[0];
+  }
+
+  for(i=0; i <=3; i++) a[i] = 0.;
+
+  a[3] = tmp[2];
+}
+
+void simpleHelixVectorA(Map y, Series* a, double* param)
+{
+  // param[1] - L
+  // param[2] - k
+  // param[3]
+  // param[4]
+  // param[5] - -2*B0/BR/k
+
+  for(int i=0; i <=3; i++) a[i] = 0.;
+
+  double cs, ss, k2;
+  double x2, y2, xy; 
+
+  cs = cos(param[3]);
+  ss = sin(param[3]);
+  k2 = param[2]*param[2];
+
+  x2 = y[1]*y[1];
+  xy = y[1]*y[3];
+  y2 = y[3]*y[3];
+  
+  a[2]  = 3*x2 + y2;
+  a[2] *= k2/8.; 
+  a[2] += 1.;
+  a[2] *= cs;
+  a[2] += xy*(k2*ss/4.);
+  a[2] *= param[5]/2.;
+
+  a[1]  = x2 + 3*y2;
+  a[1] *= k2/8.; 
+  a[1] += 1.;
+  a[1] *= ss;
+  a[1] += xy*(k2*cs/4.);
+  a[1] *= -param[5]/2.;
+
+}
+
+void helixVectorA(Map y, Series* a, double* param)
+{
+   int i, m, order;
+   double k, coeff;
+   double cosTmp, sinTmp, cTmp, fac;
+
+   Series rk2, bip, bipD, rcos[2], rsin[2];
+   Series bFm[4];
+   
+   order = (int) param[0];
+   order = (order-4)/2;
+   k     =  param[2];
+
+   for(i=0; i <= 3; i++) a[i] = 0.0;
+ 
+   rk2    = y[1]*y[1];
+   rk2   += y[3]*y[3];
+   rk2   *= k*k;
+
+   rcos[0] = 1.;
+   rsin[0] = 0.;
+
+   for(m=1; m <= order; m++){
+
+     bip   = rk2*m*m;
+     bipD  = bip;
+     bip   = bessiPseudo(bip,  m);
+     bipD  = bessiPseudo(bipD, m-1);
+     bipD -= bip*(m/2.);
+
+     rcos[1]  =  rcos[0]*y[1];
+     rcos[1] -=  rsin[0]*y[3];
+
+     rsin[1]  =  rsin[0]*y[1];
+     rsin[1] +=  rcos[0]*y[3];
+
+
+     coeff =  1;
+     fac   =  1;
+     cTmp  =  m*k/2.;
+     for(i=1; i < m; i++){
+        coeff *= cTmp;
+        fac   *= i;
+     }
+
+     cosTmp  = cos(m*param[3]);
+     sinTmp  = sin(m*param[3]);
+
+// A_r*kr as B_z
+     bFm[3]  = param[4+order+m]*(rcos[1]*cosTmp + rsin[1]*sinTmp);
+     bFm[3] += param[4+m]      *(rsin[1]*cosTmp - rcos[1]*sinTmp);
+// A_phi as -B_r
+     bFm[0]  = -param[4+order+m]*(rsin[1]*cosTmp - rcos[1]*sinTmp);
+     bFm[0] +=  param[4+m]      *(rcos[1]*cosTmp + rsin[1]*sinTmp);
+     bFm[0] *= m*coeff;
+     bFm[0] *= bipD;
+
+     bFm[3] *= m*coeff*cTmp;
+     bFm[3] *= bip;
+
+     bFm[1]  = -bFm[0]*y[3]*(m*k*k);
+     bFm[1] +=  bFm[3]*y[1]*(m*k); 
+
+     bFm[2]  =  bFm[0]*y[1]*(m*k*k);
+     bFm[2] +=  bFm[3]*y[3]*(m*k);
+
+     a[1]  +=  bFm[1];
+     a[2]  +=  bFm[2]; 
+
+// 
+
+     bFm[1]   = param[4+m]      *(rsin[0]*cosTmp - rcos[0]*sinTmp);
+     bFm[1]  += param[4+order+m]*(rcos[0]*cosTmp + rsin[0]*sinTmp);
+     bFm[1]  *= coeff*cTmp/fac/k/m;
+
+     bFm[2]   = param[4+m]      *( rcos[0]*cosTmp + rsin[0]*sinTmp);
+     bFm[2]  += param[4+order+m]*(-rsin[0]*cosTmp + rcos[0]*sinTmp);
+     bFm[2]  *= coeff*cTmp/fac/k/m;
+
+     a[1]  += bFm[1];
+     a[2]  += bFm[2];
+
+     rcos[0]  =  rcos[1];
+     rsin[0]  =  rsin[1];
+
+  }
+    
+}
+

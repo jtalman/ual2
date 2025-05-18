@@ -1,0 +1,14 @@
+source $UAL/setup-linux-ual
+setenv LD_LIBRARY_PATH $SXF/lib/$SXF_ARCH/:$LD_LIBRARY_PATH
+
+make clean
+\cp trtrin_Figures trtrin
+make
+
+./tracker ./data/PTR_m_nom=0.29447_sl4.sxf 11 0.29447 dummy | grep pOf0 | grep ONE   >&! PTR_m_nom=0.29447_sl4.sxf__plus_X
+./tracker ./data/PTR_m_nom=0.29447_sl4.sxf 11 0.29447 dummy | grep pOf0 | grep TWO   >&! PTR_m_nom=0.29447_sl4.sxf_minus_X
+./tracker ./data/PTR_m_nom=0.29447_sl4.sxf 11 0.29447 dummy | grep pOf2 | grep THREE >&! PTR_m_nom=0.29447_sl4.sxf__plus_Y
+./tracker ./data/PTR_m_nom=0.29447_sl4.sxf 11 0.29447 dummy | grep pOf2 | grep FOUR  >&!  PTR_m_nom=0.29447_sl4.sxf_minus_Y
+
+gnuplot
+   load "gnuplot/PTR-BM-I_Figure2.gnuplot"

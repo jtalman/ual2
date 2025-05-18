@@ -1,0 +1,100 @@
+[talman@X201-9 lib]$ ./linux/run ring ../../project/apdf/teapot.apdf ../../lattices/general_fodo.sxf
+4
+Declare Qt, ROOT, DA, UAL environment.
+Error in <TUnixSystem::ExpandFileName>: input: $ROOTSYS/fonts/arialbd.ttf, output: $ROOTSYS/fonts/arialbd.ttf
+  *******************************************
+  *                                         *
+  *        W E L C O M E  to  R O O T       *
+  *                                         *
+  *   Version   4.04/02       16 May 2020   *
+  *                                         *
+  *  You are welcome to visit our Web site  *
+  *          http://root.cern.ch            *
+  *                                         *
+  *******************************************
+
+Compiled for linuxx8664gcc with thread support.
+
+CINT/ROOT C/C++ Interpreter version 5.15.169, Mar 14 2005
+Type ? for help. Commands must be C++ statements.
+Enclose multiple statements between { }.
+Warning: environment variable ROOTSYS is not set. Standard include files ignored
+Error: cannot open /MAKEINFO
+!!! There are examples of MAKEINFO files under /platform/ !!!
+Please refer to these examples and create for your platform
+Error: cannot open file "iostream"  FILE:(tmpfile) LINE:2
+Error: cannot open /MAKEINFO
+!!! There are examples of MAKEINFO files under /platform/ !!!
+Please refer to these examples and create for your platform
+*** Interpreter error recovered ***
+Error: cannot open file "_string"  FILE:(tmpfile) LINE:2
+Error: cannot open /MAKEINFO
+!!! There are examples of MAKEINFO files under /platform/ !!!
+Please refer to these examples and create for your platform
+*** Interpreter error recovered ***
+Error: cannot open file "RtypesCint.h"  FILE:(tmpfile) LINE:2
+Error: cannot open /MAKEINFO
+!!! There are examples of MAKEINFO files under /platform/ !!!
+Please refer to these examples and create for your platform
+*** Interpreter error recovered ***
+Error in <TUnixSystem::DynamicPathName>: Minuit[.so | .sl | .dl | .a | .dll] does not exist in .:/usr/local/root/lib:/home/talman/Desktop/GIT/download/ual1/tools/sxf//lib/linux/:/home/talman/Desktop/GIT/download/ual1/tools/lib/linux/:/home/talman/Desktop/GIT/download/ual1/ext/ADXF/lib/linux/:/home/talman/Desktop/GIT/download/ual1/ext/SXF/lib/linux/:/home/talman/Desktop/GIT/download/ual1/ext/UI/lib/linux/:/home/talman/Desktop/GIT/download/ual1/ext/ROOT/lib/linux/:/home/talman/Desktop/GIT/download/ual1/ext/ALE/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/SIMBAD/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/AIM/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/TIBETAN/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/SPINK/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/ACCSIM/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/ETEAPOT_MltTurn/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/ETEAPOT2/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/ETEAPOT/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/TEAPOT/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/PAC/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/ZLIB/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/UAL/lib/linux/:
+Error in <TUnixSystem::DynamicPathName>: Html[.so | .sl | .dl | .a | .dll] does not exist in .:/usr/local/root/lib:/home/talman/Desktop/GIT/download/ual1/tools/sxf//lib/linux/:/home/talman/Desktop/GIT/download/ual1/tools/lib/linux/:/home/talman/Desktop/GIT/download/ual1/ext/ADXF/lib/linux/:/home/talman/Desktop/GIT/download/ual1/ext/SXF/lib/linux/:/home/talman/Desktop/GIT/download/ual1/ext/UI/lib/linux/:/home/talman/Desktop/GIT/download/ual1/ext/ROOT/lib/linux/:/home/talman/Desktop/GIT/download/ual1/ext/ALE/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/SIMBAD/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/AIM/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/TIBETAN/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/SPINK/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/ACCSIM/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/ETEAPOT_MltTurn/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/ETEAPOT2/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/ETEAPOT/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/TEAPOT/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/PAC/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/ZLIB/lib/linux/:/home/talman/Desktop/GIT/download/ual1/codes/UAL/lib/linux/:
+Read the lattice file.
+echo file ./echo.sxf
+Split elements.
+Select a lattice.
+There is no ring accelerator 
+Set beam attributes.
+Set RF.
+Read the APDF file (propagator description).
+../../lattices/general_fodo.sxf:1: parser error : Document is empty
+
+^
+../../lattices/general_fodo.sxf:1: parser error : Start tag expected, '<' not found
+
+^
+Accelerator Propagator has not been created 
+Generate a bunch distribution.
+Open the Player application.
+BasicPlayer.cc: 51enter void UAL::USPAS::BasicPlayer::setShell
+UAL::QT::PlayerShell::initRun(): 
+BasicPlayer.cc: 59enter void UAL::USPAS::BasicPlayer::initPlayer
+BasicPlayer.cc: 129leave void UAL::USPAS::BasicPlayer::initPlayer
+BasicPlayer.cc: 54leave void UAL::USPAS::BasicPlayer::setShell
+BasicPlayer.cc 134 enter void UAL::USPAS::BasicPlayer::showPage(QListViewItem* item)
+212
+215
+219
+223
+
+ *** Break *** segmentation violation
+ Generating stack trace...
+ 0x00007f03a7faaab6 in TQtWidget::TQtWidget(QWidget*, char const*, unsigned int, bool) + 0x156 from /home/talman/Desktop/GIT/download/ual1/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libGQt.so
+ 0x00007f03a8491d2e in UAL::ROOT::BasicViewer::BasicViewer() + 0x78 from ../../../../ROOT/lib/linux/libUalRootViewers.so
+ 0x00007f03a84a4009 in UAL::ROOT::TwissViewer::TwissViewer(UAL::QT::BasicPlayer*, std::vector<double, std::allocator<double> >&, std::vector<PacTwissData, std::allocator<PacTwissData> >&) + 0x27 from ../../../../ROOT/lib/linux/libUalRootViewers.so
+ 0x00007f03ad9d5b0d in UAL::USPAS::BasicPlayer::showPage(QListViewItem*) at /home/talman/Desktop/GIT/download/ual1/gui/USPAS/examples/player/src/BasicPlayer.cc:224 (discriminat from /home/talman/Desktop/GIT/download/ual1/gui/USPAS/examples/player//lib/linux//libUspasPlayer.so
+ 0x00007f03a8f0688c in MainPlayerUI::qt_invoke(int, QUObject*) at /home/talman/Desktop/GIT/download/ual1/gui/QT/src/UAL/QT/Player/moc_MainPlayerUI.cc:102 from ../../../../QT/lib/linux/libUalQt.so
+ 0x00007f03a8f11fcb in UAL::QT::BasicPlayer::qt_invoke(int, QUObject*) at /home/talman/Desktop/GIT/download/ual1/gui/QT/src/UAL/QT/Player/moc_BasicPlayer.cc:99 from ../../../../QT/lib/linux/libUalQt.so
+ 0x00007f03ad9d8864 in UAL::USPAS::BasicPlayer::qt_invoke(int, QUObject*) at /home/talman/Desktop/GIT/download/ual1/gui/USPAS/examples/player/src/moc_BasicPlayer.cc:78 from /home/talman/Desktop/GIT/download/ual1/gui/USPAS/examples/player//lib/linux//libUspasPlayer.so
+ 0x00007f03ad26c022 in QObject::activate_signal(QConnectionList*, QUObject*) + 0x152 from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x00007f03ad55d2bb in QListView::doubleClicked(QListViewItem*) + 0x9b from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x00007f03ad33017b in QListView::contentsMouseDoubleClickEvent(QMouseEvent*) + 0x17b from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x00007f03ad3607e2 in QScrollView::viewportMouseDoubleClickEvent(QMouseEvent*) + 0x82 from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x00007f03ad360de5 in QScrollView::eventFilter(QObject*, QEvent*) + 0x125 from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x00007f03ad33f68e in QListView::eventFilter(QObject*, QEvent*) + 0xae from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x00007f03ad26a12f in QObject::activate_filters(QEvent*) + 0x5f from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x00007f03ad26a1b7 in QObject::event(QEvent*) + 0x27 from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x00007f03ad29be55 in QWidget::event(QEvent*) + 0x25 from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x00007f03ad212dfb in QApplication::internalNotify(QObject*, QEvent*) + 0x8b from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x00007f03ad213183 in QApplication::notify(QObject*, QEvent*) + 0x273 from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x00007f03ad1bae70 in QETWidget::translateMouseEvent(_XEvent const*) + 0x190 from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x00007f03ad1ba9ca in QApplication::x11ProcessEvent(_XEvent*) + 0x10ba from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x00007f03ad1c9a87 in QEventLoop::processEvents(unsigned int) + 0x3d7 from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x00007f03ad227499 in QEventLoop::enterLoop() + 0x49 from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x00007f03ad2273c2 in QEventLoop::exec() + 0x22 from /usr/lib64/qt-3.3/lib/libqt-mt.so.3
+ 0x0000000000406774 in main + 0xf77 from ./linux/run
+ 0x00007f03a71743d5 in __libc_start_main + 0xf5 from /lib64/libc.so.6
+ 0x0000000000405739 in <unknown> from ./linux/run
+Abort (core dumped)
+[talman@X201-9 lib]$ 
+

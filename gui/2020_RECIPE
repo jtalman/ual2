@@ -1,0 +1,163 @@
+Each of these STEPS can be run standalone. This is intended to facilitate debugging.
+
+STEP                                                                  STEP
+(1) Build libxml, and spot check it:                                  (1) <<<<<<------
+      Copy and pastable, slow build:
+            cd $UAL/gui
+            source env2
+            rm -rf libxml2-2.9.7
+            tar xvfz libxml2-git-snapshot.tar.gz
+            cd libxml2-2.9.7/
+            ./configure
+            make
+            ll .libs/libxml2.so.2.9.7
+:           5402944
+
+(2) Build qt, and spot check it:                                      (2) <<<<<<------
+      NOT copy and pastable, slow build:
+            cd $UAL/gui
+            source env2
+            rm -rf qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod
+            tar xvfz qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod.tar.gz
+            cd       qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod
+:           ./configure --thread -no-xft -qt-gif --no-exceptions
+            ./configure -thread -no-xft -qt-gif -no-exceptions
+------>>>>>>      yes                                                 ENTERED MANUALLY!
+            make all >&! make.log
+            ll lib/libqt-mt.so.3.3.4
+:                 9590800
+Note the explicit license acceptance, yes.
+Note the possibly unfamiliar, make all, syntax!
+"qt" tends to use "make all".
+
+(3) Build root, and spot check it:                                    (3) <<<<<<------
+      Copy and pastable, slow build:
+            cd $UAL/gui
+            source env2
+            rm -rf root_v4.04.02.source-SL7.6Nitrogen-UAL-mod
+            tar xvfz root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz
+            cd       root_v4.04.02.source-SL7.6Nitrogen-UAL-mod
+            ./configure --with-qt-incdir=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/ --with-qt-libdir=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/
+:           make >&! make.log
+:           make rootlibs >&! make.log
+            make clean
+            rm ./lib/*
+            make all >&! make.log
+            cd lib
+            ln -s libRint.so libRint.so.4.04
+            cd ..
+            ll lib/libGQt.so
+:                 1092328
+:                 1097120
+:                 1092328
+Note the possibly unfamiliar, make all, syntax!
+No explicit license acceptance.
+
+(4) Build muParser, and spot check it:                                (4) <<<<<<------
+      Copy and pastable, quick:
+            cd $UAL/gui
+            source env2
+:           rm -rf muparser_v134
+            cd muparser_v134
+            ./configure
+            make
+            ll lib/libmuparser.so.0.0.0
+:                 366384 
+
+(5) Build UAL ROOT, and spot check it:                                (5) <<<<<<------
+      Copy and pastable, quick:
+            cd $UAL/gui
+            source env2
+:           rm -rf ROOT
+            cd ROOT
+            make clean
+            make >&! make.log
+            ll lib/linux/libUalRootViewers.so
+:                 661512
+
+(6) Build UAL QT, and spot check it:                                  (6) <<<<<<------
+      Copy and pastable, quick:
+            cd $UAL/gui
+            source env2
+:           rm -rf QT
+            cd QT
+            make clean
+            make >&! make.log
+            ll lib/linux/libUalQt.so
+:                 2668680 
+:                 2668656 
+:                 2665096 
+:                 2665120 
+:                 2665096 
+:                 2665120 
+:                 2666592 
+:                 2666272 
+:                 2664824 
+:                 2664888 
+
+(7) Build UAL QT example, spot check it, and try it:                  (7) <<<<<<------
+      Copy and pastable, quick:
+            cd $UAL/gui
+            source env2
+            cd qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/examples/Player
+            \cp XXXMakefileXXX Makefile
+            make clean
+            make all
+            ll Player
+:                 197928
+            setenv LD_LIBRARY_PATH ../../lib/:$LD_LIBRARY_PATH
+            ./Player
+A template GUI should popup.
+An error message
+      "...cannot open shared object file..."
+might appear. The above LD_LIBRARY_PATH mod is one such patch. It is not necessary on the verified box.
+Again, note the modified, make all, syntax.
+Again, this is in a "qt context".
+
+(8) Build UAL USPAS example player:                                   (8) <<<<<<------
+      Copy and pastable, quick:
+            cd $UAL/gui
+            source env2
+            cd USPAS/examples/player
+            make clean
+            make
+            ll lib/linux/run
+:                 230448
+            cd lib
+            ./linux/run ring ../../lattices/general_fodo.sxf ../../project/apdf/teapot.apdf
+Pops up a GUI, MainPlayerUI, on the verified machine.
+
+(9) Build UAL USPAS example transverse:                               (9) <<<<<<------
+      Copy and pastable, quick:
+            cd $UAL/gui
+            source env2
+            cd USPAS/examples/transverse
+            make clean
+            make
+            ll lib/linux/run
+:                 230448
+            cd lib
+            ./linux/run ring ../../lattices/general_fodo.sxf ../../project/apdf/teapot.apdf
+Pops up a GUI, MainPlayerUI, on the verified machine.
+
+(10) Build UAL USPAS example longitudinal, spot check, and try:       (10) <<<<<<------
+      Copy and pastable, quick:
+            cd $UAL/gui
+            source env2
+            cd $UAL/gui/USPAS/examples/longitudinal
+            make clean
+            make
+            ll lib/linux/run
+:                 230568
+:                 230560
+            cd lib
+            ./linux/run ring ../../lattices/general_fodo.sxf ../../project/apdf/teapot.apdf
+:           ./linux/run ring ../../project/apdf/teapot.apdf   ../../lattices/general_fodo.sxf
+:           ./linux/run ring ../../lattices/eq_tune_fodo.adxf ../../project/apdf/eteapot.apdf
+:           ./linux/run ring ../../lattices/eq_tune_fodo.adxf ../../project/apdf/teapot.apdf
+:           ./linux/run ring ../../lattices/general_fodo.sxf  ../../project/apdf/teapot.apdf
+:           ./linux/run ring ../../lattices/general_fodo.sxf  ../../project/apdf/eteapot.apdf
+:           ./linux/run ring ../../lattices/general_fodo.sxf  ../apdf/tibetan.apdf
+:           ./linux/run ring ../../lattices/general_fodo.sxf  $UAL/gui/USPAS/examples/project/apdf/eteapot.apdf
+:           ./linux/run ring ../../lattices/eq_tune_fodo.adxf ../../project/apdf/tibetan.apdf
+Pops up a GUI, MainPlayerUI, on the verified machine.

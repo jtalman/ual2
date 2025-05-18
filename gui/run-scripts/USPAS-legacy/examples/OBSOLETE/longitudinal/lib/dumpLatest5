@@ -1,0 +1,81 @@
+[talman@X201-9 lib]$             ./linux/run ring ../../project/apdf/teapot.apdf ../../lattices/general_fodo.sxf
+4
+Declare Qt, ROOT, DA, UAL environment.
+Warning in <TGClient::GetFontByName>: couldn't retrieve font -adobe-helvetica-medium-r-*-*-12-*-*-*-*-*-iso8859-1, using "fixed"
+Warning in <TGClient::GetFontByName>: couldn't retrieve font -adobe-helvetica-bold-r-*-*-12-*-*-*-*-*-iso8859-1, using "fixed"
+Warning in <TGClient::GetFontByName>: couldn't retrieve font -adobe-courier-medium-r-*-*-12-*-*-*-*-*-iso8859-1, using "fixed"
+Warning in <TGClient::GetFontByName>: couldn't retrieve font -adobe-helvetica-medium-r-*-*-10-*-*-*-*-*-iso8859-1, using "fixed"
+  *******************************************
+  *                                         *
+  *        W E L C O M E  to  R O O T       *
+  *                                         *
+  *   Version   4.04/02       4 June 2020   *
+  *                                         *
+  *  You are welcome to visit our Web site  *
+  *          http://root.cern.ch            *
+  *                                         *
+  *******************************************
+
+FreeType Engine v2.1.3 used to render TrueType fonts.
+Compiled for linuxx8664gcc with thread support.
+
+CINT/ROOT C/C++ Interpreter version 5.15.169, Mar 14 2005
+Type ? for help. Commands must be C++ statements.
+Enclose multiple statements between { }.
+Read the lattice file.
+echo file ./echo.sxf
+Split elements.
+Select a lattice.
+There is no ring accelerator 
+Set beam attributes.
+Set RF.
+Read the APDF file (propagator description).
+../../lattices/general_fodo.sxf:1: parser error : Document is empty
+
+^
+../../lattices/general_fodo.sxf:1: parser error : Start tag expected, '<' not found
+
+^
+Accelerator Propagator has not been created 
+Generate a bunch distribution.
+Open the Player application.
+BasicPlayer.cc: 51enter void UAL::USPAS::BasicPlayer::setShell
+UAL::QT::PlayerShell::initRun(): 
+BasicPlayer.cc: 59enter void UAL::USPAS::BasicPlayer::initPlayer
+BasicPlayer.cc: 129leave void UAL::USPAS::BasicPlayer::initPlayer
+BasicPlayer.cc: 54leave void UAL::USPAS::BasicPlayer::setShell
+BasicPlayer.cc 134 enter void UAL::USPAS::BasicPlayer::showPage(QListViewItem* item)
+212
+215
+219
+223
+
+ *** Break *** segmentation violation
+ Generating stack trace...
+ 0x00007f82fca96ac6 in TQtWidget::TQtWidget(QWidget*, char const*, unsigned int, bool) + 0x156 from /home/talman/Desktop/GIT/download/ual1/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libGQt.so
+ 0x00007f82fcf7dd2e in UAL::ROOT::BasicViewer::BasicViewer() + 0x78 from ../../../../ROOT/lib/linux/libUalRootViewers.so
+ 0x00007f82fcf90009 in UAL::ROOT::TwissViewer::TwissViewer(UAL::QT::BasicPlayer*, std::vector<double, std::allocator<double> >&, std::vector<PacTwissData, std::allocator<PacTwissData> >&) + 0x27 from ../../../../ROOT/lib/linux/libUalRootViewers.so
+ 0x00007f83023e7b0d in UAL::USPAS::BasicPlayer::showPage(QListViewItem*) at /home/talman/Desktop/GIT/download/ual1/gui/USPAS/examples/player/src/BasicPlayer.cc:224 (discriminat from /home/talman/Desktop/GIT/download/ual1/gui/USPAS/examples/player//lib/linux//libUspasPlayer.so
+ 0x00007f82fd9f288c in MainPlayerUI::qt_invoke(int, QUObject*) at /home/talman/Desktop/GIT/download/ual1/gui/QT/src/UAL/QT/Player/moc_MainPlayerUI.cc:102 from ../../../../QT/lib/linux/libUalQt.so
+ 0x00007f82fd9fdfcb in UAL::QT::BasicPlayer::qt_invoke(int, QUObject*) at /home/talman/Desktop/GIT/download/ual1/gui/QT/src/UAL/QT/Player/moc_BasicPlayer.cc:99 from ../../../../QT/lib/linux/libUalQt.so
+ 0x00007f83023ea864 in UAL::USPAS::BasicPlayer::qt_invoke(int, QUObject*) at /home/talman/Desktop/GIT/download/ual1/gui/USPAS/examples/player/src/moc_BasicPlayer.cc:78 from /home/talman/Desktop/GIT/download/ual1/gui/USPAS/examples/player//lib/linux//libUspasPlayer.so
+ 0x00007f8301d27ed2 in QObject::activate_signal(QConnectionList*, QUObject*) + 0x132 from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8301fafd9b in QListView::doubleClicked(QListViewItem*) + 0x7b from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8301dcec4b in QListView::contentsMouseDoubleClickEvent(QMouseEvent*) + 0x15b from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8301df90b3 in QScrollView::viewportMouseDoubleClickEvent(QMouseEvent*) + 0x73 from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8301df954e in QScrollView::eventFilter(QObject*, QEvent*) + 0xfe from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8301ddc43e in QListView::eventFilter(QObject*, QEvent*) + 0x9e from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8301d261bf in QObject::activate_filters(QEvent*) + 0x4f from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8301d26217 in QObject::event(QEvent*) + 0x27 from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8301d4f985 in QWidget::event(QEvent*) + 0x15 from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8301cdd48b in QApplication::internalNotify(QObject*, QEvent*) + 0x7b from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8301cdd81f in QApplication::notify(QObject*, QEvent*) + 0x28f from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8301c93b3b in QETWidget::translateMouseEvent(_XEvent const*) + 0x8ab from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8301c928fa in QApplication::x11ProcessEvent(_XEvent*) + 0x61a from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8301c9fee6 in QEventLoop::processEvents(unsigned int) + 0x396 from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8301cee4f1 in QEventLoop::enterLoop() + 0x31 from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x00007f8301cee462 in QEventLoop::exec() + 0x22 from /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3
+ 0x0000000000406774 in main + 0xf77 from ./linux/run
+ 0x00007f82fbc603d5 in __libc_start_main + 0xf5 from /lib64/libc.so.6
+ 0x0000000000405739 in <unknown> from ./linux/run
+Abort (core dumped)

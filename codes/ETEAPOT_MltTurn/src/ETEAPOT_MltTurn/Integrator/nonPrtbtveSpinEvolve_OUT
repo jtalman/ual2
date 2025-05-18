@@ -1,0 +1,68 @@
+{
+/*
+double yp_in_m  = p[3];
+
+// (290.2) - p page 71
+double pc_x_in  = xp_in_m*sqrt(pczsq_in_m);                                    // (251.3) page 64
+double pc_y_in  = yp_in_m*sqrt(pczsq_in_m);
+double pc_z_in  = sqrt(pczsq_in_p);                                            // (252.2) page 64
+// end pc notation used in e.g. timeOfFlightBendVariables
+
+double pp       = sqrt(pc_x_in*pc_x_in + pc_y_in*pc_y_in + pc_z_in*pc_z_in);   // p --->>> pp
+*/
+
+double p_x      = p[1]*p0;                                                     // syntax norming
+double p_y      = p[3]*p0;                                                     // p is pc
+double ee       = e0 + p[5]*p0;
+double pp       = sqrt(ee*ee - mpcsq);
+double p_z      = sqrt(pp*pp - p_x*p_x - p_y*p_y);
+/*
+std::cerr << "ee " << ee << "\n";
+std::cerr << "pp " << pp << "\n";
+std::cerr << "mpcsq " << mpcsq << "\n";
+std::cerr << "p_x " << p_x << "\n";
+std::cerr << "p_y " << p_y << "\n";
+std::cerr << "p_z " << p_z << "\n";
+int jnk;
+std::cin >> jnk;
+*/
+
+// (292.3)
+double a31      = p_x/pp;
+double a32      = p_y/pp;
+double a33      = p_z/pp;
+
+// (290.1) - r
+double r_x      = Rsxf + p[0];
+double r_y      = p[2];
+double r_z      = 0.;
+
+// (290.3) - L ( = r x p)
+double L_x      = r_y*p_z - r_z*p_y;                                           // L is Lc
+double L_y      = r_z*p_x - r_x*p_z;
+double L_z      = r_x*p_y - r_y*p_x;
+
+double LL       = sqrt(L_x*L_x + L_y*L_y + L_z*L_z);                           // L --->>> LL
+
+// (292.2)
+double a21      = L_x/(-LL);                                                   // CW
+double a22      = L_y/(-LL);                                                   // NOT CCW!
+double a23      = L_z/(-LL);                                                   // CCW has to be addressed
+
+// (292.1)
+double a11      = a22*a33 - a23*a32;
+double a12      = a23*a31 - a21*a33;
+double a13      = a21*a32 - a22*a31;
+
+Matrix3 R(a11,a12,a13,a21,a22,a23,a31,a32,a33);
+Matrix3 Rinv(a11,a12,a13,a21,a22,a23,a31,a32,a33);
+Rinv.invert();
+Matrix3 unitySB = R*Rinv;
+
+R_out     = R;
+R_out_INV = R;
+R_out_INV.invert();
+//
+// END SPIN R (Rout) MATRIX DETERMINATION
+
+}

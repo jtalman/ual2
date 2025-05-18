@@ -1,0 +1,63 @@
+Producing lattice plots using gnuplot, 5 January, 2022
+----------------------------------------------------------------------
+This augments "Readme.txt".
+
+1. To produce a lattice funtion plot for lattice, say,
+         SXF_TRACKER/data/sns.sxf
+this sxf file needs to start with the string "ring" 
+
+2. and be asssigned the conventional name "ring.sxf"
+   From the SXF_TRACKER diretory run
+       $ cp data/sns.sxf data/ring.sxf
+
+3. From the same directory run
+       $ ./tracker
+to produce 
+         out/cpp/ring.twiss
+(along, optionally, with other output files, such as
+"ring.map1",  "ring.map2", and echo of "ring.sxf")
+
+4. that need to have their correct names applied>
+From the SXF_TRACKER/out/cpp directory, run
+       $ mv ring.twiss  save-twiss/sns.twiss
+       $ mv ring.map1 save-map1/sns.map1
+       $ mv ring.map2 save-map2/sns.map2
+       $ mv ring.sxf save-sxf/sns.sxf
+
+5. Then, from the SXF_TRACKER/out/cpp directory, run
+       $ gnuplot
+       gnuplot> load "gnuplot/twiss/snsTwiss.gnuplot"
+which produces
+         pdf/snsTwiss.pdf, save-map2/sns.map2
+etc.
+
+6. They can be viewed (for example) by
+       $ evince save-twiss/snsTwiss.pdf 
+       $ emacs save-map2/sns.map2
+
+NOTES
+-----
+1. Missing names in column 2 of the ".twsss" file messes up the plots. Add a dummy
+name such as "-" to fix the problem. 
+
+2. pdfcairo does not handle "_" underscore symbol correctly in "enhanced" mode. 
+Either remove the "enhanced" argument or use a different gnuplot terminal or 
+rename the ".twiss" file, getting rid of the underscore symbol.
+
+3. For .sxf files with lattice identifier different from "ring", for 
+example, "muon" ( as in lattice files muon0.13_R5m-RFon.sxf or
+muon0.13_R5m.sxf) it is necessary to make the replacement (judiciously,
+because "muon" may not refer to the lattice name)
+         ring --> muon
+in "tracker.cc". Compare "tracker.cc" and "tracker-muon.cc". 
+
+4. I use "evince" to display ".pdf" files.
+
+5. There are bugs in 
+          E-ValLeb2-sl4.sxf
+          E-Protonium.sxf
+               void TeapotTwissService::define 
+               wrong map , cos(mu) =1 
+               see map in the map_wrong.out file 
+               STOP. TeapotTwissService. 
+

@@ -1,0 +1,66 @@
+<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:saxon="http://icl.com/saxon"
+    xmlns:math="http://exslt.org/math" extension-element-prefixes="saxon math">
+    <xsl:variable name="pi" select="3.14159265359"/>
+    <xsl:variable name="twopi" select="format-number(2*$pi,'####.#######')"/>
+    <xsl:variable name="tiny" select="0.0000000001"/>
+    <xsl:variable name="mcsq" select="0.93827231"/>
+    <xsl:variable name="G" select="1.7928474"/>
+    <xsl:variable name="c" select="299792458.0"/>
+    <xsl:variable name="g" select="format-number(2*$G + 2,'####.#######')"/>
+    <xsl:variable name="R_NOMINAL" select="13.50"/>
+    <xsl:variable name="L_LONG_STRAIGHT" select="1.104750*$R_NOMINAL"/>
+    <xsl:variable name="N_SUPER" select="4"/>
+    <xsl:variable name="M_NOMINAL" select="0.002"/>
+    <xsl:variable name="K0" select="0.030"/>
+    <xsl:variable name="Escr0" select="$mcsq + $K0"/>
+    <xsl:variable name="gamma0" select="format-number($Escr0 div $mcsq,'####.#######')"/>
+    <xsl:variable name="p0c" select="math:sqrt($Escr0*$Escr0 - $mcsq*$mcsq)"/>
+    <xsl:variable name="beta0" select="format-number($p0c div $Escr0,'####.#######')"/>  
+    <xsl:variable name="m_in" select="4*$M_NOMINAL div $N_SUPER"/>
+    <xsl:variable name="Nsl" select="4"/>
+    <xsl:variable name="thetah" select="format-number($pi div $N_SUPER div 2,'####.#######')"/>
+    <xsl:variable name="thetahsl" select="format-number($pi div $N_SUPER div 2 div $Nsl,'####.#######')"/>
+    <xsl:variable name="etaE" select="1.0"/>
+    <xsl:variable name="etaM" select="(1.0-$etaE)"/>
+    <xsl:variable name="r0" select="$R_NOMINAL"/>
+    <xsl:variable name="leh" select="format-number($thetah*$r0,'####.#######')"/>
+    <xsl:variable name="lehsl" select="format-number($thetah*$r0 div $Nsl,'####.#######')"/>
+    <xsl:variable name="lss" select="0.725"/>
+    <xsl:variable name="lssh" select="$lss div 2"/>
+    <xsl:variable name="lssq" select="$lss div 4"/>
+    <xsl:variable name="lq" select="$lss div 4"/>
+    <xsl:variable name="lqh" select="$lq div 2"/>
+    <xsl:variable name="llsnom" select="$L_LONG_STRAIGHT"/>
+    <xsl:variable name="llstot" select="$llsnom + $lq"/>
+    <xsl:variable name="lls" select="$llsnom - $lq"/>
+    <xsl:variable name="llsh" select="$lls div 2"/>
+    <xsl:variable name="llshsl" select="$llsh div 2 div 4"/>
+    <xsl:variable name="qFh" select="-0.03"/>
+    <xsl:variable name="qDh" select=" 0.03"/>
+    <xsl:variable name="gross_diam" select="format-number(2*$r0 + $llstot + 1.4142*$lss,'####.#######')"/>
+    <xsl:variable name="quadrant_length" select="format-number(0.5*$pi*$r0 + $llstot + $lss,'####.#######')"/>
+    <xsl:variable name="circumference" select="format-number($N_SUPER*$quadrant_length,'####.#######')"/>
+    <xsl:variable name="COSY_circ" select="183.472697"/>
+    <xsl:variable name="ratio" select="format-number($circumference div $COSY_circ,'####.#######')"/>
+    <xsl:variable name="gBy2" select="0.035"/>
+    <xsl:variable name="rfvolt" select="0.000001"/>
+    <xsl:variable name="rfharmon" select="1"/>
+    <xsl:variable name="rflag" select="0.5"/>
+    <xsl:variable name="Trev0" select="format-number($circumference div $beta0 div $c,'####.###########')"/>
+    <xsl:variable name="qfac" select="1.0"/>
+    <xsl:variable name="lqpax" select="0.419"/>
+    <xsl:variable name="lir1" select="1.85636"/>
+    <xsl:variable name="lir2" select="0.08048"/>
+    <xsl:variable name="lir3" select="4.73143"/>
+    <xsl:variable name="qir1" select="-0.000001234*$qfac"/>
+    <xsl:variable name="qir2" select=" 0.050001234*$qfac"/>
+    <xsl:variable name="lls_diff" select="($lir1 + $lqpax + $lir2 + $lqpax + $lir3)*2 - $lls"/>
+    <xsl:variable name="lMstr_in" select="$lir1 + $lqpax + $lir2 + $lqpax + $lir3 + $lq"/>
+    <xsl:variable name="lMEMP" select="$leh"/>
+    <xsl:variable name="lMEPM" select="$leh"/>
+    <xsl:variable name="lMQDQD" select="4*$lq"/>
+    <xsl:variable name="lMstr_out" select="$lq + $lir3 + $lqpax + $lir2 + $lqpax + $lir1"/>
+    <xsl:variable name="lPeriod" select="$lMstr_in + $lMEMP + $lMEPM + $lMQDQD + $lMEPM + $lMEMP + $lMstr_out"/>
+    <xsl:variable name="Period_diff" select="$lPeriod - $quadrant_length"/>
+</xsl:transform>

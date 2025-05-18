@@ -1,0 +1,1 @@
+g++ my-qt4.cpp -I../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/ ../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3.3.4
