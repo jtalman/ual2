@@ -41,7 +41,7 @@ Verify:
                         five unimportant warnings that are ignored by make)
 --------------------------------------------------------------------------------------
 Run:
-      cd examples/E4_typing_of_sxf_file
+      cd examples/E4_typing_of_sxf_elements
       source run_example
 
       confirm sxf file has been "transcribed" satisfactorily
