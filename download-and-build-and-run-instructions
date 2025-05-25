@@ -34,7 +34,7 @@ Build:
 --------------------------------------------------------------------------------------
 Verify:
       emacs make.log
-              check for errors
+              check for errors (search for "rror ")
               (hopefully just
                         two unimportant vestigial "html errors" that are ignored by make,
               and
@@ -44,7 +44,7 @@ Run:
       cd examples/E4_typing_of_sxf_elements
       source run_example
 
-      confirm sxf file has been "transcribed" satisfactorily
+(Comment) The ca 81 output should confirm that the sxf file has been "parsed" and/or "transcribed" satisfactorily
 --------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------
 
