@@ -8,4 +8,4 @@ source setup-linux-ual
 alias lm 'ls -ialt | more'
 alias h  'history'
 
-alias m  'make clean; make >&! make.log'
+alias m  'make clean; make >& make.log'
