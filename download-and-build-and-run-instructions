@@ -20,8 +20,12 @@ If so, remove them, or rename them.
 In directory "/home/ualusr2011/git-gui-2/", using SHELL tcsh, execute the following indented commands, one at a time
 
 --------------------------------------------------------------------------------------
-Get Bits (probably already done!):
+Get Bits (possibly already done!):
       git clone https://github.com/jtalman/ual2
+--------------------------------------------------------------------------------------
+
+(Comment) file $UAL/UAL2/TCSHRC can serve as ~/.tcshrc, and automate the "Setup Environment" and "Build" steps via key m
+
 --------------------------------------------------------------------------------------
 Setup Environment:
       cd ual2
@@ -44,7 +48,7 @@ Run:
       cd examples/E4_typing_of_sxf_elements
       source run_example
 
-(Comment) The ca 81 output should confirm that the sxf file has been "parsed" and/or "transcribed" satisfactorily
+(Comment) The ca 81 line output should confirm that the sxf file has been "parsed" and/or "transcribed" satisfactorily
 --------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------
 
