@@ -1,0 +1,7 @@
+cp ../../../../ual1.24/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/qt/src/TGQt.cxx .
+cp ../../../../ual1.24/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/rint/src/TRint.cxx .
+cp ../../../../ual1.24/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/qt/src/TQtWidget.cxx .
+cp ../../../../ual1.24/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/gpad/src/TCanvas.cxx .
+cp ../../../../ual1.24/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/base/src/TVirtualX.cxx .
+cp ../../../../ual1.24/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/base/src/TROOT.cxx .
+cp ../../../../ual1.24/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/base/src/TApplication.cxx .

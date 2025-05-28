@@ -1,0 +1,1 @@
+gl/src/TGLFrustum.d gl/src/TGLFrustum.o: include/TGLSceneObject.h include/TObject.h include/Rtypes.h include/RConfig.h include/RVersion.h include/DllImport.h include/Rtypeinfo.h include/TGenericClassInfo.h include/Varargs.h include/TStorage.h include/Riosfwd.h include/TBuffer.h include/Bytes.h include/Gtypes.h include/Htypes.h include/CsgOps.h include/TGLFrustum.h include/TMath.h

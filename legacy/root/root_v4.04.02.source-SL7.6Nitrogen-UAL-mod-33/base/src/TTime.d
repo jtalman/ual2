@@ -1,0 +1,1 @@
+base/src/TTime.d base/src/TTime.o: include/TTime.h include/Rtypes.h include/RConfig.h include/RVersion.h include/DllImport.h include/Rtypeinfo.h include/TGenericClassInfo.h include/TString.h include/TMath.h include/TRefCnt.h include/Riosfwd.h

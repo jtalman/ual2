@@ -1,0 +1,1 @@
+base/src/TStringLong.d base/src/TStringLong.o: include/TStringLong.h include/TString.h include/TMath.h include/Rtypes.h include/RConfig.h include/RVersion.h include/DllImport.h include/Rtypeinfo.h include/TGenericClassInfo.h include/TRefCnt.h include/Riosfwd.h include/TBuffer.h include/TObject.h include/Varargs.h include/TStorage.h include/Bytes.h

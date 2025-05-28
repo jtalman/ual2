@@ -1,0 +1,1 @@
+rpdutils/src/globus.d rpdutils/src/globus.o: include/rpdp.h include/Varargs.h include/MessageTypes.h include/rpderr.h include/NetErrors.h include/Rtypes.h include/RConfig.h include/RVersion.h include/DllImport.h include/Rtypeinfo.h include/TGenericClassInfo.h include/rpddefs.h include/AuthConst.h

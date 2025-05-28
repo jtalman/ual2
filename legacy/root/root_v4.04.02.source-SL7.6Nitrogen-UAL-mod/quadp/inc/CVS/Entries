@@ -1,0 +1,16 @@
+/LinkDef.h/1.1/Mon May 24 12:04:27 2004//
+/TGondzioSolver.h/1.3/Wed Jun  9 12:23:16 2004//
+/TMehrotraSolver.h/1.3/Wed Jun  9 12:23:16 2004//
+/TQpDataBase.h/1.2/Mon May 24 12:45:40 2004//
+/TQpDataDens.h/1.3/Fri Sep  3 13:41:34 2004//
+/TQpDataSparse.h/1.2/Mon May 24 12:45:40 2004//
+/TQpLinSolverBase.h/1.2/Mon May 24 12:45:40 2004//
+/TQpLinSolverDens.h/1.2/Mon May 24 12:45:40 2004//
+/TQpLinSolverSparse.h/1.2/Mon May 24 12:45:40 2004//
+/TQpProbBase.h/1.3/Wed Jun  9 12:23:16 2004//
+/TQpProbDens.h/1.3/Wed Jun  9 12:23:16 2004//
+/TQpProbSparse.h/1.3/Wed Jun  9 12:23:16 2004//
+/TQpResidual.h/1.2/Mon May 24 12:45:40 2004//
+/TQpSolverBase.h/1.2/Mon May 24 12:45:40 2004//
+/TQpVar.h/1.3/Fri Sep  3 13:41:34 2004//
+D

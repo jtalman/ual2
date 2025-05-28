@@ -1,0 +1,1 @@
+gui/src/TGText.d gui/src/TGText.o: include/TGText.h include/TString.h include/TMath.h include/Rtypes.h include/RConfig.h include/RVersion.h include/DllImport.h include/Rtypeinfo.h include/TGenericClassInfo.h include/TRefCnt.h include/Riosfwd.h include/TGDimension.h include/TObject.h include/Varargs.h include/TStorage.h include/TBuffer.h include/Bytes.h

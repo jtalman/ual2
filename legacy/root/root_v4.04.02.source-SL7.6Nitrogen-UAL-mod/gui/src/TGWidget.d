@@ -1,0 +1,1 @@
+gui/src/TGWidget.d gui/src/TGWidget.o: include/TGWidget.h include/GuiTypes.h include/Rtypes.h include/RConfig.h include/RVersion.h include/DllImport.h include/Rtypeinfo.h include/TGenericClassInfo.h include/TGString.h include/TString.h include/TMath.h include/TRefCnt.h include/Riosfwd.h include/WidgetMessageTypes.h
