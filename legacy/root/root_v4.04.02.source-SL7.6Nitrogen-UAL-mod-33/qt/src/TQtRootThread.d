@@ -1,1 +1,0 @@
-qt/src/TQtRootThread.d qt/src/TQtRootThread.o: include/TQtRootThread.h include/TQtRConfig.h include/RConfig.h include/RVersion.h include/Rtypes.h include/DllImport.h include/Rtypeinfo.h include/TGenericClassInfo.h include/TWaitCondition.h
