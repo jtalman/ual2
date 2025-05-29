@@ -11,3 +11,5 @@ alias lm 'ls -ialt | more'
 alias h  'history'
 
 alias m  'make clean; make >& make.log'
+
+alias s  'pushd examples/E4_typing_of_sxf_elements/; source run_example; popd'
