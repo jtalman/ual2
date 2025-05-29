@@ -4,8 +4,8 @@ echo "xml"
 echo "qt"
 ./qt
 
-echo "root"
-./root
+# echo "root"
+# ./root
 
 echo "mu"
 ./mu

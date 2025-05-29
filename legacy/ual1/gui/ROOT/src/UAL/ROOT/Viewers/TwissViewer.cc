@@ -172,7 +172,9 @@ bool UAL::ROOT::TwissViewer::writeTo()
 void UAL::ROOT::TwissViewer::writeToFile(const QString& fileName)
 {
 
-  std::ofstream out(fileName);
+//std::ofstream out(fileName);
+//std::ofstream out((char*)fileName);
+  std::ofstream out((std::string)fileName);
 
   std::vector<std::string> columns(11);
   columns[0]  = "#";

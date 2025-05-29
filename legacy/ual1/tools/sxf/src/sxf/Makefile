@@ -42,10 +42,10 @@ Perfect_Hash.hh : elements.gperf
 y.tab.h y.tab.cc : sxf.yy
 	@-$(RM) -f $@
 	$(YACC) $(YFLAGS) sxf.yy
-	if [ -f sxf.tab.hh ]; then mv -f sxf.tab.hh y.tab.h; fi;	
-	if [ -f sxf.tab.cc ]; then mv -f sxf.tab.cc y.tab.cc; fi;
-	if [ -f sxf.yy.tab.h ]; then mv -f sxf.yy.tab.h y.tab.h; fi;	
-	if [ -f sxf.yy.tab.c ]; then mv -f sxf.yy.tab.c y.tab.cc; fi;
+	if [ -f sxf.tab.hh ]; then cp -f sxf.tab.hh y.tab.h; fi;	
+	if [ -f sxf.tab.cc ]; then cp -f sxf.tab.cc y.tab.cc; fi;
+	if [ -f sxf.yy.tab.h ]; then cp -f sxf.yy.tab.h y.tab.h; fi;	
+	if [ -f sxf.yy.tab.c ]; then cp -f sxf.yy.tab.c y.tab.cc; fi;
 
 lex.yy.cpp: sxf.ll y.tab.h
 #	$(LEX) $(LFLAGS) sxf.ll > $@

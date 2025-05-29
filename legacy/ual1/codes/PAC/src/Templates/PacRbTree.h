@@ -62,8 +62,8 @@ using std::pair;
     pair<typename PacRbTree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::iterator, bool>
     PacRbTree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val& __v)
     {
-      _Link_type __x = _Base::_M_begin();
-      _Link_type __y = _Base::_M_end();
+      _Link_type __x = (_Rb_tree_node<_Val>*)_Base::_M_begin();
+      _Link_type __y = (_Rb_tree_node<_Val>*)_Base::_M_end();
 
       bool __comp = true;
       while (__x != 0)
