@@ -1,5 +1,0 @@
-// Edit file "parameters"
-   vi $UAL/gui/USPAS/examples/longitudinalWithParametersFile/src/parameters
-
-// Execute
-./run

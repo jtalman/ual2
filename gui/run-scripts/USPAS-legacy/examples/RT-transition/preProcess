@@ -1,8 +1,0 @@
-pushd $UAL/codes/UAL
-pushd src/UAL/APF
- \rm PropagatorFactory.hh
- \ln -s PropagatorFactory_LOOSE.hh PropagatorFactory.hh
-popd
-make clean
-make
-popd

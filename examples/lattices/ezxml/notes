@@ -1,9 +1,0 @@
-This subdirectory is pretty developmental.
-
-The pure ezxml parsing seems to work fine.
-
-A somewhat fleshed out "Experimental UAL" example for PTR_m_nomEQ0p0.32349_sl4.adxf is in
-      ./Ring-PTR_m_nomEQ0p0.32349_sl4.adxf/
-
-Incipient "Experimental UAL" files for "repurposed COSY" are in
-      ./Ring-figure-eight/

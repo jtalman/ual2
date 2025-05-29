@@ -1,5 +1,0 @@
-cp gdb/gdbinit ~/.gdbinit
-
-make clean
-make
-env SHELL=/bin/sh gdb -nx ./typing_of_sxf_elements

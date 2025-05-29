@@ -1,7 +1,0 @@
-<apdf>
-  <propagator id="tibetan" accelerator="ring">
-     <create>
-        <link algorithm="TIBETAN::OneTurnTracker"   sector="Default" />
-     </create>
-  </propagator>
-</apdf>

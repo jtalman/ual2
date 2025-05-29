@@ -1,6 +1,0 @@
-int bunchSize   = 10000;  // ACTIVE - $UAL/gui/USPAS/examples/longitudinalWithParametersFile/src/run.cc +135
-int turns       = 10000;  // ACTIVE
-int plotUpdates = 100;    // ACTIVE
-
-int nbins       = 100;    // NOT ACTIVE
-int nsteps      = 100;    // NOT ACTIVE - hardwired in $UAL/gui/ROOT/src/UAL/ROOT/Viewers/MountainRangeViewer.cc

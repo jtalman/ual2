@@ -1,8 +1,0 @@
-<apdf>
-  <propagator id="tibetan" accelerator="blue">
-     <create>
-        <link algorithm="TIBETAN::SectorTracker"   sector="Default" />
-        <link algorithm="TIBETAN::RfCavityTracker" elements="^(rfac1)" />
-     </create>
-  </propagator>
-</apdf>

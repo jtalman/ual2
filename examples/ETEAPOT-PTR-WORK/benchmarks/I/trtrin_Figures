@@ -1,8 +1,0 @@
-turns      = 10;
-PAC::Bunch bunch(5);
-bunch.setBeamAttributes(ba);
-
-bunch[ 1].getPosition().set( +x1typ,      0,      0,      0,      0,      0 );
-bunch[ 2].getPosition().set( -x1typ,      0,      0,      0,      0,      0 );
-bunch[ 3].getPosition().set(      0,      0, +y1typ,      0,      0,      0 );
-bunch[ 4].getPosition().set(      0,      0, -y1typ,      0,      0,      0 );

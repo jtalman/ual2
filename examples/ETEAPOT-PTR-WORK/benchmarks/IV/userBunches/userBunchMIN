@@ -1,4 +1,0 @@
-PAC::Bunch bunch(1);                               // bunch with 1 particle(s)
-PAC::Spin * spinX   = new PAC::Spin[1];            // the corresponding spins
-bunch.setBeamAttributes(ba);
-
