@@ -1,4 +1,0 @@
-OBJS +=	$(UAL_TIBETAN)/lib/$(UAL_ARCH)/obj/BasicPropagator.o \
-	$(UAL_TIBETAN)/lib/$(UAL_ARCH)/obj/SectorTracker.o \
-	$(UAL_TIBETAN)/lib/$(UAL_ARCH)/obj/RFCavityTracker.o \
-	$(UAL_TIBETAN)/lib/$(UAL_ARCH)/obj/OneTurnTracker.o 

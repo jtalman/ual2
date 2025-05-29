@@ -1,3 +1,0 @@
-OBJS += $(UAL_SIMBAD)/lib/$(UAL_ARCH)/obj/BasicTracker.o \
-	$(UAL_SIMBAD)/lib/$(UAL_ARCH)/obj/MatrixTracker.o 
-

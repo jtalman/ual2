@@ -1,3 +1,0 @@
-OBJS +=	$(UAL)/codes/TIBETAN/lib/$(UAL_ARCH)/obj/BasicJFreeChartProxy.o \
-	$(UAL)/codes/TIBETAN/lib/$(UAL_ARCH)/obj/JRampWindowController.o
-
