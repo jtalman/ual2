@@ -1,0 +1,1 @@
+base/src/Stringio.d base/src/Stringio.o: include/Riostream.h include/RConfig.h include/RVersion.h include/TString.h include/TMath.h include/Rtypes.h include/DllImport.h include/Rtypeinfo.h include/TGenericClassInfo.h include/TRefCnt.h include/Riosfwd.h

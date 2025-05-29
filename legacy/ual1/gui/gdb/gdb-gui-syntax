@@ -1,0 +1,26 @@
+   468	10:54	g++ -Wl,-rpath=. -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT -I/home/ualusr2011/git-gui-2/ual1/gui/libxml2-2.9.7/include/libxml/ -g -fpic -O0 -fno-inline -Wall -Wno-deprecated -c /home/ualusr2011/git-gui-2/ual1/gui/run-scripts/USPAS-legacy/examples/RT-transition/src/run.cc -o /home/ualusr2011/git-gui-2/ual1/gui/run-scripts/USPAS-legacy/examples/RT-transition/lib/linux/obj/run.o -I../../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/ -I../../../../../../ext/UI/src/ -I../../../../../../codes/PAC/src/ -I../../../../../../codes/UAL/src/ -I../../../../../../codes/ZLIB/src/ -I../../../../../QT/src/ -I../../../../../../codes/TIBETAN/src/ -I../../../../../ROOT/src/ -I../../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/include/ -I../../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/qt/inc/ -I../../../../../../ext/ADXF/src/ -I../../../../../../tools/include/ -I../../player/src/ -I../../../../../../codes/ETEAPOT/src/ -I../../../../../../codes/TIBETAN/src/ -Wl,-rpath=/home/ualusr2011/git-gui-2/ual1/gui/libxml2-2.9.7/.libs/libxml2.so.2.9.7:/home/ualusr2011/git-gui-2/ual1/gui/run-scripts/USPAS-legacy/examples/RT-transition/lib/linux/:/home/ualusr2011/git-gui-2/ual1/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/
+   470	10:55	g++ -o ../lib/linux/run /home/ualusr2011/git-gui-2/ual1/gui/run-scripts/USPAS-legacy/examples/RT-transition/lib/linux/obj/run.o /home/ualusr2011/git-gui-2/ual1/gui/run-scripts/USPAS-legacy/examples/RT-transition/lib/linux//obj/run.o /home/ualusr2011/git-gui-2/ual1/gui/libxml2-2.9.7/.libs/libxml2.so.2.9.7 /home/ualusr2011/git-gui-2/ual1/gui/run-scripts/USPAS-legacy/examples/player/lib/linux/libUspasPlayer.so -Wl,-rpath=/home/ualusr2011/git-gui-2/ual1/gui/libxml2-2.9.7/.libs/libxml2.so.2.9.7:/home/ualusr2011/git-gui-2/ual1/gui/run-scripts/USPAS-legacy/examples/RT-transition/lib/linux/:/home/ualusr2011/git-gui-2/ual1/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/ ../../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3.3.4 ../../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libRint.so.4.04 -L../../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/ -lCore -lCint -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lGui -pthread -lm -ldl -rdynamic -lThread ../../../../../../codes/ZLIB/lib/linux/libZTps.so ../../../../../QT/lib/linux/libUalQt.so ../../../../../../ext/UI/lib/linux/libUalUI.so ../../../../../../tools/lib/linux/libxerces-c.so.27.0 ../../../../../ROOT/lib/linux/libUalRootViewers.so ../../../../../../codes/AIM/lib/linux/libAim.so ../../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libGQt.so ../../../../../../codes/UAL/lib/linux/libUal.so ../../../../../../codes/ETEAPOT/lib/linux/libETeapot.so ../../../../../../codes/TIBETAN/lib/linux/libTibetan.so ../../../../../../codes/PAC/lib/linux/libPacSMF.so ../../../../../../codes/PAC/lib/linux/libPacOptics.so ../../../../../../codes/PAC/lib/linux/libPac.so
+   471	10:55	vi compile
+   472	10:55	chmod u+x compile
+   473	10:55	./compile
+   474	10:56	cd ..
+   480	10:59	cd lib/
+   481	10:59	./linux/run ring ../sxf/CLS.sxf ../apdf/tibetan.apdf
+   482	11:05	cp ../src/Makefile /run/media/ualusr2011/STORE\ N\ GO/ualusr2011/12_29_2024/
+   483	11:05	cp ../src/compile /run/media/ualusr2011/STORE\ N\ GO/ualusr2011/12_29_2024/
+   484	11:06	cp ../src/Makefile /run/media/ualusr2011/STORE\ N\ GO/ualusr2011/12_29_2024/src/
+   485	11:06	cp ../src/compile /run/media/ualusr2011/STORE\ N\ GO/ualusr2011/12_29_2024/src/
+   486	11:07	cat ../run-RT-transition
+   487	11:09	vi ../README
+   488	11:11	cp ../README /run/media/ualusr2011/STORE\ N\ GO/ualusr2011/12_29_2024/
+   489	11:34	env QTLIB=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/ QTDIR=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/ QTINC=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/ ROOTSYS=$UAL/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/ LD_LIBRARY_PATH=$UAL/gui/libxml2-2.9.7/.libs/:$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/:$UAL/tools/sxf/lib/linux/:$UAL/tools/lib/linux/:$UAL/ext/ADXF/lib/linux/:$UAL/ext/SXF/lib/linux/:$UAL/ext/UI/lib/linux/:$UAL/ext/ROOT/lib/linux/:$UAL/ext/ALE/lib/linux/:$UAL/codes/SIMBAD/lib/linux/:$UAL/codes/AIM/lib/linux/:$UAL/codes/TIBETAN/lib/linux/:$UAL/codes/SPINK/lib/linux/:$UAL/codes/ACCSIM/lib/linux/:$UAL/codes/ETEAPOT_MltTurn/lib/linux/:$UAL/codes/ETEAPOT2/lib/linux/:$UAL/codes/ETEAPOT/lib/linux/:$UAL/codes/TEAPOT/lib/linux/:$UAL/codes/PAC/lib/linux/:$UAL/codes/ZLIB/lib/linux/:$UAL/codes/UAL/lib/linux/ ./linux/run ring ../sxf/CLS.sxf ../apdf/tibetan.apdf
+   490	11:39	h | grep env
+   491	11:39	cat ~/.gdbinit
+   493	11:42	env --unset=SHELL LD_LIBRARY_PATH /home/ualusr2011/git-gui-2/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib gdb ./linux/run
+   494	11:45	vi /run/media/ualusr2011/STORE\ N\ GO/ualusr2011/12_29_2024/h
+   495	11:45	cp ~/.gdbinit /run/media/ualusr2011/STORE\ N\ GO/ualusr2011/12_29_2024/
+   496	11:46	df env --unset=SHELL LD_LIBRARY_PATH=/home/ualusr2011/git-gui-2/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib gdb ./linux/run
+   498	11:47	ll ..
+   500	12:11	env --unset=SHELL LD_LIBRARY_PATH=/home/ualusr2011/git-gui-2/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib gdb ./linux/run
+   501	10:15	which gdb
+

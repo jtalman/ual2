@@ -1,0 +1,3189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adxf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/home/ualusr/USPAS/ual1/doc/adxf/adxf.xsd">
+<constants>
+    <!--  ************************************************* -->
+    <!--  ************************************************* -->
+    <!--                          Constants                 -->
+    <!--  ************************************************* -->
+    <!--  ************************************************* -->
+    <!--  Physical constants -->
+    <constant name="conv" value="0.0254"/>
+    <!-- !meter per inch -->
+    <constant name="c" value="299792458"/>
+    <!-- !speed of light [m/sec] -->
+    <constant name="e0" value="0.93827231"/>
+    <!-- !proton mass [GeV] -->
+    <constant name="pi" value="3.14159265359"/>
+    <constant name="twopie" value="6.28318530718"/>
+    <!-- AGS parameters -->
+    <constant name="rho" value="85.378"/>
+    <!--  !AGS curv. radius [m] -->
+    <constant name="dipl" value="999"/>
+    <!-- !AGS dipole calibration [T/A] -->
+    <constant name="harm" value="24"/>
+    <!-- !AGS harmonic no. -->
+    <constant name="circ" value="807.075641"/>
+    <!-- !AGS length [m] -->
+    <!-- -->
+    <constant name="ek" value="1.2"/>
+    <constant name="ee" value="2.13827231"/>
+    <constant name="gamma" value="2.2789464073601406"/>
+    <constant name="pc" value="1.9214196688906877"/>
+    <constant name="brho" value="6.409166133494551"/>
+    <constant name="bfield" value="0.07506812215669788"/>
+    <constant name="beta" value="0.8985851146763846"/>
+    <!--  ! from E.Auerbach AGS/AD/Tech. Note No.267, March 7, 19881
+             ! AGS protons, 25 Gev/c (DC machine)
+    -->
+    <constant name="k1af" value="0.04855992"/>
+    <constant name="k1ad" value="-0.0484901"/>
+    <constant name="k1bf" value="0.04855992"/>
+    <constant name="k1bd" value="-0.0484901"/>
+    <constant name="k1cf" value="0.04841473"/>
+    <constant name="k1cd" value="-0.0483322"/>
+    <constant name="k2af" value="-0.01136"/>
+    <constant name="k2ad" value="-0.01148"/>
+    <constant name="k2bf" value="-0.01333"/>
+    <constant name="k2bd" value="-0.01341"/>
+    <constant name="k2cf" value="-0.0132"/>
+    <constant name="k2cd" value="-0.01318"/>
+    <constant name="nseg" value="8"/>
+    <constant name="nsegm" value="7"/>
+    <constant name="nsegp" value="9"/>
+    <constant name="ltiny" value="0.0010"/>
+    <!-- -->
+    <!-- K1 = K1AF  K2 = K2AF  E1 = ANGA/2. E2 = ANGA/2. -->
+    <!-- K1 = K1AD  K2 = K2AD  E1 = ANGA/2. E2 = ANGA/2. -->
+    <!-- K1 = K1BF  K2 = K2BF  E1 = ANGB/2. E2 = ANGB/2. -->
+    <!-- K1 = K1BD  K2 = K2BD  E1 = ANGB/2. E2 = ANGB/2. -->
+    <!-- K1 = K1CF  K2 = K2CF  E1 = ANGC/2. E2 = ANGC/2. -->
+    <!-- K1 = K1CD  K2 = K2CD  E1 = ANGC/2. E2 = ANGC/2. -->
+    <!-- 
+     !*************************************************
+     !*      DATA.Ags for General Purpose s           *
+     !*              Version 0.0  Sanki Oct. 1993     *
+     !*************************************************
+     !* Version 0.1 AUL 10/14/94
+     !************************************************
+    -->
+    <constant name="xoff" value="0"/>
+    <constant name="xon" value="1"/>
+    <!-- 
+     !*************************************************
+     !      Main Magnet Units at P=xx GeV  (from pxxd)      
+     !************************************************* 
+     -->
+    <constant name="lena" value="2.3876"/>
+    <constant name="lenb" value="2.0065999999999997"/>
+    <constant name="lenc" value="2.3876"/>
+    <constant name="anga" value="0.0279650307"/>
+    <constant name="angb" value="0.0235023009"/>
+    <constant name="angc" value="0.0279650307"/>
+    <!--  
+    !*************************************************
+    ! Calculations needed to replace rbend's by segmented sbend's, 
+    ! RT 21 Feb 2005
+    !*************************************************
+    -->
+    <!-- -->
+    <constant name="lenah" value="1.1938"/>
+    <constant name="angah" value="0.01398251535"/>
+    <constant name="rhoa" value="85.38083965033205"/>
+    <constant name="lenas" value="2.3786778020133132"/>
+    <!-- -->
+    <constant name="lenbh" value="1.0032999999999999"/>
+    <constant name="angbh" value="0.01175115045"/>
+    <constant name="rhob" value="85.38083956231462"/>
+    <constant name="lenbs" value="1.9976461824881424"/>
+    <!-- -->
+    <constant name="lench" value="1.1938"/>
+    <constant name="angch" value="0.01398251535"/>
+    <constant name="rhoc" value="85.38083965033205"/>
+    <constant name="lencs" value="2.3786778020133132"/>
+    <!-- -->
+    <constant name="la" value="0.29733472525166416"/>
+    <constant name="aa" value="0.0034956288375"/>
+    <!-- -->
+    <constant name="lb" value="0.2497057728110178"/>
+    <constant name="ab" value="0.0029377876125"/>
+    <!-- -->
+    <constant name="lc" value="0.29733472525166416"/>
+    <constant name="ac" value="0.0034956288375"/>
+    <!--  
+    !*************************************************
+    !     drift parameters
+    !*************************************************
+    -->
+    <constant name="len2s" value="0.609514656"/>
+    <!--  =0.6095 m 2ft ss at 01 09 11 19 -->
+    <constant name="len2t" value="0.609485192"/>
+    <!-- ! =0.6095 m 2ft ss at 04 06 14 16 -->
+    <constant name="len2l" value="0.609454712"/>
+    <!-- ! =0.6095 m 2ft ss at 02 08 12 18 -->
+    <constant name="len2h" value="0.7619273560000001"/>
+    <!-- ! =0.7619 m 1/2 of 5ft ss at 05 15 -->
+    <constant name="len5l" value="1.5238547120000001"/>
+    <!-- ! =1.5239 m 5ft ss at 03 07 13 17 -->
+    <constant name="len10" value="1.523839218"/>
+    <!--! =1.5238 m 1/2 of 10 ft ss at 10 20 -->
+    <!--
+    !*************************************************
+    ! High Field quadrupole parameters
+    !*************************************************
+    -->
+    <constant name="lqd" value="0.39088"/>
+    <!--! from K*L = 17 G/A  -->
+    <constant name="ixqh" value="0"/>
+    <constant name="ixqv" value="0"/>
+    <constant name="ixqs" value="0"/>
+    <!--! [A] -->
+    <constant name="kqh" value="0"/>
+    <!--!; value KQH -->
+    <constant name="kqv" value="0"/>
+    <!--!; value KQS Added by RT, 20 Feb 2005 -->
+    <constant name="kqs" value="0"/>
+    <!--  
+    !*************************************************
+    !      High Field sextupole parameters
+    !*************************************************
+    -->
+    <constant name="lsx" value="0.655"/>
+    <constant name="ixsh" value="0"/>
+    <constant name="ixsv" value="0"/>
+    <constant name="ixsd" value="0"/>
+    <!--  [A] -->
+    <constant name="ixsdf" value="0"/>
+    <constant name="ixsdi" value="0"/>
+    <constant name="ixsdl" value="0"/>
+    <constant name="ixsdc" value="0"/>
+    <!--  
+    !*************************************************
+    !      SEB Orbit bumps and  septa parameters
+    !*************************************************
+    -->
+    <constant name="les" value="2.25"/>
+    <constant name="lf05" value="0.66"/>
+    <constant name="lf10" value="2.03"/>
+    <constant name="xfbw" value="0"/>
+    <constant name="xhbw" value="0"/>
+    <!--   
+    !*************************************************
+    !  (NewFEB2) or Old FEB Orbit bumps and  septa parameters
+    !*************************************************
+    -->
+    <constant name="lg20" value="0"/>
+    <constant name="lh05" value="0.89"/>
+    <constant name="lh10" value="2.134"/>
+    <constant name="xh07bw1" value="0"/>
+    <constant name="xh07bw2" value="0"/>
+    <constant name="xh05" value="0"/>
+    <constant name="xh10" value="0"/>
+    <constant name="xg20" value="0"/>
+    <!--
+    !*************************************************
+    ! It is illegal for "hkicker" elements to have non-zero
+    ! length. They cannot just be replaced by zero angle "rbend"
+    ! because "rbend" elements affect the design orbit while
+    ! "hkicker" do not. They will be replaced by drift-hkicker-drift.
+    ! RT 22 Feb 2005
+    !*************************************************
+    -->
+    <!--  
+        !*************************************************
+        ! SBE  Orbit bumps and Kicker parameters
+        !*************************************************
+        -->
+    <constant name="le05" value="1"/>
+    <constant name="xe05bw" value="0"/>
+    <constant name="xe05" value="0"/>
+    <!--
+     !*************************************************
+     !     Y.Y. Bump BLWGH for NewFEB system parameters
+     !*************************************************
+     -->
+    <constant name="lg10" value="2"/>
+    <constant name="xg10" value="0"/>
+    <constant name="xg09bwa" value="0"/>
+    <constant name="xh11bwa" value="0"/>
+    <constant name="xg09bwb" value="0"/>
+    <constant name="xh11bwb" value="0"/>
+    <constant name="xg09bwc" value="0"/>
+    <constant name="xh11bwc" value="0"/>
+    <!--  
+    !*************************************************
+    !       Lines with pues and low field dipoles   AUL 3/11/95 variables
+    !*************************************************
+    -->
+    <constant name="lenpue" value="0.287"/>
+    <!--  
+    !*************************************************
+    !       SPECIAL Straight Sections parameters
+    !*************************************************
+    !DS03   drift     L = (D5L-LQD)/2.
+    !SS03   Line = (DS03 QDV DS03)
+    !SS17   Line = (DS03 QDH DS03)
+    -->
+    <constant name="ldsptmu" value="1.05099993"/>
+    <!--  ************************************************* -->
+    <!--  ************************************************* -->
+    <!--                          Elements                  -->
+    <!--  ************************************************* -->
+    <!--  ************************************************* -->
+</constants>
+<elements>
+      <marker name="mbegin">
+</marker>
+      <marker name="mend">
+</marker>
+    <!-- 
+         !*************************************************
+         !      Main Magnets
+         !*************************************************
+         -->
+    <!--  
+        !*************************************************
+        ! Replace rbend's by sbend's, RT 21 Feb 2005
+        !*************************************************
+        <element name="AF" type="rbend" l="LENA">
+            <mfield a="0" b="ANGA"/>
+        </element>
+        <element name="AD" type="rbend" l="LENA">
+            <mfield a="0" b="ANGA"/>
+        </element>
+        <element name="BF" type="rbend" l="LENB">
+            <mfield a="0" b="ANGB"/>
+        </element>
+        <element name="BD" type="rbend" l="LENB">
+            <mfield a="0" b="ANGB"/>
+        </element>
+        <element name="CF" type="rbend" l="LENC">
+            <mfield a="0" b="ANGC"/>
+        </element>
+        <element name="CD" type="rbend" l="LENC">
+            <mfield a="0" b="ANGC"/>
+        </element>
+        !*************************************************
+        -->
+    <!-- K1 = K1AF  K2 = K2AF  E1 = ANGA/2. E2 = ANGA/2. -->
+    <!-- K1 = K1AD  K2 = K2AD  E1 = ANGA/2. E2 = ANGA/2. -->
+    <!-- K1 = K1BF  K2 = K2BF  E1 = ANGB/2. E2 = ANGB/2. -->
+    <!-- K1 = K1BD  K2 = K2BD  E1 = ANGB/2. E2 = ANGB/2. -->
+    <!-- K1 = K1CF  K2 = K2CF  E1 = ANGC/2. E2 = ANGC/2. -->
+    <!-- K1 = K1CD  K2 = K2CD  E1 = ANGC/2. E2 = ANGC/2. -->
+      <sbend name="AFp" l="0.29733472525166416" angle="0.0034956288375">
+</sbend>
+      <sbend name="ADp" l="0.29733472525166416" angle="0.0034956288375">
+</sbend>
+      <sbend name="BFp" l="0.2497057728110178" angle="0.0029377876125">
+</sbend>
+      <sbend name="BDp" l="0.2497057728110178" angle="0.0029377876125">
+</sbend>
+      <sbend name="CFp" l="0.29733472525166416" angle="0.0034956288375">
+</sbend>
+      <sbend name="CDp" l="0.29733472525166416" angle="0.0034956288375">
+</sbend>
+    <!--
+        !*************************************************
+        ! Pole face focusing of rbends 
+        ! RT 21 Feb 2005
+        !*************************************************
+        -->
+      <quadrupole name="qAface" l="0.0010" k1="-0.1637771041194945">
+</quadrupole>
+      <quadrupole name="qBface" l="0.0010" k1="-0.13763850816837253">
+</quadrupole>
+      <quadrupole name="qCface" l="0.0010" k1="-0.1637771041194945">
+</quadrupole>
+    <!--
+        !*************************************************
+        ! Thin quadrupoles and sextupoles for combined function bend
+        ! RT 21 Feb 2005
+        !*************************************************
+        -->
+      <quadrupole name="qAFp" l="0.0010" k1="16.50120053879176">
+</quadrupole>
+      <quadrupole name="qADp" l="0.0010" k1="-16.477474926772253">
+</quadrupole>
+      <quadrupole name="qBFp" l="0.0010" k1="13.857934115704229">
+</quadrupole>
+      <quadrupole name="qBDp" l="0.0010" k1="-13.83800902192404">
+</quadrupole>
+      <quadrupole name="qCFp" l="0.0010" k1="16.451863363066863">
+</quadrupole>
+      <quadrupole name="qCDp" l="0.0010" k1="-16.423818751781123">
+</quadrupole>
+    <!-- ************************************************* -->
+      <sextupole name="sAFp" l="0.0010" k2="-3.8602542615530337">
+</sextupole>
+      <sextupole name="sADp" l="0.0010" k2="-3.9010315953018337">
+</sextupole>
+      <sextupole name="sBFp" l="0.0010" k2="-3.8040890875095625">
+</sextupole>
+      <sextupole name="sBDp" l="0.0010" k2="-3.826919329595141">
+</sextupole>
+      <sextupole name="sCFp" l="0.0010" k2="-4.485506712367963">
+</sextupole>
+      <sextupole name="sCDp" l="0.0010" k2="-4.478710490076496">
+</sextupole>
+    <!-- ************************************************* -->
+      <sbend name="MGH12" l="2.3876" angle="0">
+</sbend>
+    <!--  
+        !*************************************************
+        !     drifts
+        !*************************************************
+        -->
+      <drift name="D2S" l="0.609514656">
+</drift>
+      <drift name="D2T" l="0.609485192">
+</drift>
+      <drift name="D2L" l="0.609454712">
+</drift>
+      <drift name="D2H" l="0.7619273560000001">
+</drift>
+      <drift name="D5L" l="1.5238547120000001">
+</drift>
+      <drift name="D10" l="1.523839218">
+</drift>
+    <!--  
+    !*************************************************
+    !     High Field quadrupoles  
+    !*************************************************
+    -->
+      <quadrupole name="QDH" l="0.39088" k1="0">
+</quadrupole>
+      <quadrupole name="QDV" l="0.39088" k1="0">
+</quadrupole>
+      <quadrupole name="QDS" l="0.39088" k1="0" tilt="0.7853981633975">
+</quadrupole>
+    <!-- ! should be updated. Especially SIGN -->
+    <!--  
+        !*************************************************
+        !      High Field sextupoles
+        !*************************************************
+        ! [A]
+        !- See Ags/Tech Note #294 (checked OK 30.Jan.93)
+         -->
+      <sextupole name="SXH" l="0.655" k2="0">
+</sextupole>
+    <!-- !dEh=( 0.138*XSh -0.071*XSv)/p -->
+      <sextupole name="SXV" l="0.655" k2="0">
+</sextupole>
+      <sextupole name="SXC13" l="0.655" k2="0">
+</sextupole>
+      <sextupole name="SXI13" l="0.655" k2="0">
+</sextupole>
+      <sextupole name="SXF13" l="0.655" k2="0">
+</sextupole>
+      <sextupole name="SXL13" l="0.655" k2="0">
+</sextupole>
+    <!--  
+        !*************************************************
+        !      SEB Orbit bumps and  septa
+        !*************************************************
+        -->
+      <hkicker name="BWE06">
+</hkicker>
+      <hkicker name="BWE07">
+</hkicker>
+      <hkicker name="BWE20">
+</hkicker>
+      <hkicker name="BWF01">
+</hkicker>
+      <hkicker name="BWF14">
+</hkicker>
+      <hkicker name="BWF15">
+</hkicker>
+      <hkicker name="BWG08">
+</hkicker>
+      <hkicker name="BWG09">
+</hkicker>
+      <hkicker name="BWG18">
+</hkicker>
+      <hkicker name="BWG19">
+</hkicker>
+      <hkicker name="BWH12">
+</hkicker>
+      <hkicker name="BWH13">
+</hkicker>
+      <hkicker name="BWI06">
+</hkicker>
+      <hkicker name="BWI07">
+</hkicker>
+      <hkicker name="BWI20">
+</hkicker>
+      <hkicker name="BWJ01">
+</hkicker>
+    <!--
+        !*************************************************
+        ! It is illegal for "hkicker" elements to have non-zero
+        ! length. They are to be replaced by drift-hkicker-drift
+        ! at 9 places. e.g. the next three. RT 22 Feb 2005
+        !*************************************************
+        -->
+      <hkicker name="ESH20p">
+</hkicker>
+      <drift name="ESH20dr" l="1.125">
+</drift>
+      <hkicker name="SMF05p">
+</hkicker>
+      <drift name="SMF05dr" l="0.33">
+</drift>
+      <hkicker name="SMF10p">
+</hkicker>
+      <drift name="SMF10dr" l="1.015">
+</drift>
+    <!--  
+        !*************************************************
+        !      PUEs and Low field dipoles  AUL 4/11/95
+        !*************************************************
+
+        !  call file = 'ags_hlfd'
+        !*************************************************
+        !  tune=  8.76599  8.83072  nh=  9  Icos,Isin=  0.11000  0.00000
+        !*************************************************
+        -->
+      <hkicker name="BHA02">
+</hkicker>
+      <hkicker name="BHA04">
+</hkicker>
+      <hkicker name="BHA06">
+</hkicker>
+      <hkicker name="BHA08">
+</hkicker>
+      <hkicker name="BHA12">
+</hkicker>
+      <hkicker name="BHA14">
+</hkicker>
+      <hkicker name="BHA16">
+</hkicker>
+      <hkicker name="BHA18">
+</hkicker>
+      <hkicker name="BHB02">
+</hkicker>
+      <hkicker name="BHB04">
+</hkicker>
+      <hkicker name="BHB06">
+</hkicker>
+      <hkicker name="BHB08">
+</hkicker>
+      <hkicker name="BHB12">
+</hkicker>
+      <hkicker name="BHB14">
+</hkicker>
+      <hkicker name="BHB16">
+</hkicker>
+      <hkicker name="BHB18">
+</hkicker>
+      <hkicker name="BHC02">
+</hkicker>
+      <hkicker name="BHC04">
+</hkicker>
+      <hkicker name="BHC06">
+</hkicker>
+      <hkicker name="BHC08">
+</hkicker>
+      <hkicker name="BHC12">
+</hkicker>
+      <hkicker name="BHC14">
+</hkicker>
+      <hkicker name="BHC16">
+</hkicker>
+      <hkicker name="BHC18">
+</hkicker>
+      <hkicker name="BHD02">
+</hkicker>
+      <hkicker name="BHD04">
+</hkicker>
+      <hkicker name="BHD06">
+</hkicker>
+      <hkicker name="BHD08">
+</hkicker>
+      <hkicker name="BHD12">
+</hkicker>
+      <hkicker name="BHD14">
+</hkicker>
+      <hkicker name="BHD16">
+</hkicker>
+      <hkicker name="BHD18">
+</hkicker>
+      <hkicker name="BHE02">
+</hkicker>
+      <hkicker name="BHE04">
+</hkicker>
+      <hkicker name="BHE06">
+</hkicker>
+      <hkicker name="BHE08">
+</hkicker>
+      <hkicker name="BHE12">
+</hkicker>
+      <hkicker name="BHE14">
+</hkicker>
+      <hkicker name="BHE16">
+</hkicker>
+      <hkicker name="BHE18">
+</hkicker>
+      <hkicker name="BHF02">
+</hkicker>
+      <hkicker name="BHF04">
+</hkicker>
+      <hkicker name="BHF06">
+</hkicker>
+      <hkicker name="BHF08">
+</hkicker>
+      <hkicker name="BHF12">
+</hkicker>
+      <hkicker name="BHF14">
+</hkicker>
+      <hkicker name="BHF16">
+</hkicker>
+      <hkicker name="BHF18">
+</hkicker>
+      <hkicker name="BHG02">
+</hkicker>
+      <hkicker name="BHG04">
+</hkicker>
+      <hkicker name="BHG08">
+</hkicker>
+      <hkicker name="BHG12">
+</hkicker>
+      <hkicker name="BHG14">
+</hkicker>
+      <hkicker name="BHG16">
+</hkicker>
+      <hkicker name="BHG18">
+</hkicker>
+      <hkicker name="BHH02">
+</hkicker>
+      <hkicker name="BHH04">
+</hkicker>
+      <hkicker name="BHH06">
+</hkicker>
+      <hkicker name="BHH08">
+</hkicker>
+      <hkicker name="BHH12">
+</hkicker>
+      <hkicker name="BHH14">
+</hkicker>
+      <hkicker name="BHH16">
+</hkicker>
+      <hkicker name="BHH18">
+</hkicker>
+      <hkicker name="BHI02">
+</hkicker>
+      <hkicker name="BHI04">
+</hkicker>
+      <hkicker name="BHI06">
+</hkicker>
+      <hkicker name="BHI08">
+</hkicker>
+      <hkicker name="BHI12">
+</hkicker>
+      <hkicker name="BHI14">
+</hkicker>
+      <hkicker name="BHI16">
+</hkicker>
+      <hkicker name="BHI18">
+</hkicker>
+      <hkicker name="BHJ02">
+</hkicker>
+      <hkicker name="BHJ04">
+</hkicker>
+      <hkicker name="BHJ06">
+</hkicker>
+      <hkicker name="BHJ08">
+</hkicker>
+      <hkicker name="BHJ12">
+</hkicker>
+      <hkicker name="BHJ14">
+</hkicker>
+      <hkicker name="BHJ16">
+</hkicker>
+      <hkicker name="BHJ18">
+</hkicker>
+      <hkicker name="BHK02">
+</hkicker>
+      <hkicker name="BHK04">
+</hkicker>
+      <hkicker name="BHK06">
+</hkicker>
+      <hkicker name="BHK08">
+</hkicker>
+      <hkicker name="BHK12">
+</hkicker>
+      <hkicker name="BHK14">
+</hkicker>
+      <hkicker name="BHK16">
+</hkicker>
+      <hkicker name="BHK18">
+</hkicker>
+      <hkicker name="BHL02">
+</hkicker>
+      <hkicker name="BHL04">
+</hkicker>
+      <hkicker name="BHL06">
+</hkicker>
+      <hkicker name="BHL08">
+</hkicker>
+      <hkicker name="BHL12">
+</hkicker>
+      <hkicker name="BHL14">
+</hkicker>
+      <hkicker name="BHL16">
+</hkicker>
+      <hkicker name="BHL18">
+</hkicker>
+    <!--  
+        !  call file = 'ags_vlfd'
+        !*************************************************
+        !  tune=  8.76599  8.83072  nh=  9  Icos,Isin=  0.11000  0.00000
+        !*************************************************
+        -->
+      <hkicker name="BVA02">
+</hkicker>
+      <hkicker name="BVA04">
+</hkicker>
+      <hkicker name="BVA06">
+</hkicker>
+      <hkicker name="BVA08">
+</hkicker>
+      <hkicker name="BVA12">
+</hkicker>
+      <hkicker name="BVA14">
+</hkicker>
+      <hkicker name="BVA16">
+</hkicker>
+      <hkicker name="BVA18">
+</hkicker>
+      <hkicker name="BVB02">
+</hkicker>
+      <hkicker name="BVB04">
+</hkicker>
+      <hkicker name="BVB06">
+</hkicker>
+      <hkicker name="BVB08">
+</hkicker>
+      <hkicker name="BVB12">
+</hkicker>
+      <hkicker name="BVB14">
+</hkicker>
+      <hkicker name="BVB16">
+</hkicker>
+      <hkicker name="BVB18">
+</hkicker>
+      <hkicker name="BVC02">
+</hkicker>
+      <hkicker name="BVC04">
+</hkicker>
+      <hkicker name="BVC06">
+</hkicker>
+      <hkicker name="BVC08">
+</hkicker>
+      <hkicker name="BVC12">
+</hkicker>
+      <hkicker name="BVC14">
+</hkicker>
+      <hkicker name="BVC16">
+</hkicker>
+      <hkicker name="BVC18">
+</hkicker>
+      <hkicker name="BVD02">
+</hkicker>
+      <hkicker name="BVD04">
+</hkicker>
+      <hkicker name="BVD06">
+</hkicker>
+      <hkicker name="BVD08">
+</hkicker>
+      <hkicker name="BVD12">
+</hkicker>
+      <hkicker name="BVD14">
+</hkicker>
+      <hkicker name="BVD16">
+</hkicker>
+      <hkicker name="BVD18">
+</hkicker>
+      <hkicker name="BVE02">
+</hkicker>
+      <hkicker name="BVE04">
+</hkicker>
+      <hkicker name="BVE06">
+</hkicker>
+      <hkicker name="BVE08">
+</hkicker>
+      <hkicker name="BVE12">
+</hkicker>
+      <hkicker name="BVE14">
+</hkicker>
+      <hkicker name="BVE16">
+</hkicker>
+      <hkicker name="BVE18">
+</hkicker>
+      <hkicker name="BVF02">
+</hkicker>
+      <hkicker name="BVF04">
+</hkicker>
+      <hkicker name="BVF06">
+</hkicker>
+      <hkicker name="BVF08">
+</hkicker>
+      <hkicker name="BVF12">
+</hkicker>
+      <hkicker name="BVF14">
+</hkicker>
+      <hkicker name="BVF16">
+</hkicker>
+      <hkicker name="BVF18">
+</hkicker>
+      <hkicker name="BVG02">
+</hkicker>
+      <hkicker name="BVG04">
+</hkicker>
+      <hkicker name="BVG06">
+</hkicker>
+      <hkicker name="BVG08">
+</hkicker>
+      <hkicker name="BVG12">
+</hkicker>
+      <hkicker name="BVG14">
+</hkicker>
+      <hkicker name="BVG16">
+</hkicker>
+      <hkicker name="BVG18">
+</hkicker>
+      <hkicker name="BVH02">
+</hkicker>
+      <hkicker name="BVH04">
+</hkicker>
+      <hkicker name="BVH06">
+</hkicker>
+      <hkicker name="BVH08">
+</hkicker>
+      <hkicker name="BVH12">
+</hkicker>
+      <hkicker name="BVH14">
+</hkicker>
+      <hkicker name="BVH16">
+</hkicker>
+      <hkicker name="BVH18">
+</hkicker>
+      <hkicker name="BVI02">
+</hkicker>
+      <hkicker name="BVI04">
+</hkicker>
+      <hkicker name="BVI06">
+</hkicker>
+      <hkicker name="BVI08">
+</hkicker>
+      <hkicker name="BVI12">
+</hkicker>
+      <hkicker name="BVI14">
+</hkicker>
+      <hkicker name="BVI16">
+</hkicker>
+      <hkicker name="BVI18">
+</hkicker>
+      <hkicker name="BVJ02">
+</hkicker>
+      <hkicker name="BVJ04">
+</hkicker>
+      <hkicker name="BVJ06">
+</hkicker>
+      <hkicker name="BVJ08">
+</hkicker>
+      <hkicker name="BVJ12">
+</hkicker>
+      <hkicker name="BVJ14">
+</hkicker>
+      <hkicker name="BVJ16">
+</hkicker>
+      <hkicker name="BVJ18">
+</hkicker>
+      <hkicker name="BVK02">
+</hkicker>
+      <hkicker name="BVK04">
+</hkicker>
+      <hkicker name="BVK06">
+</hkicker>
+      <hkicker name="BVK08">
+</hkicker>
+      <hkicker name="BVK12">
+</hkicker>
+      <hkicker name="BVK14">
+</hkicker>
+      <hkicker name="BVK16">
+</hkicker>
+      <hkicker name="BVK18">
+</hkicker>
+      <hkicker name="BVL02">
+</hkicker>
+      <hkicker name="BVL04">
+</hkicker>
+      <hkicker name="BVL06">
+</hkicker>
+      <hkicker name="BVL08">
+</hkicker>
+      <hkicker name="BVL12">
+</hkicker>
+      <hkicker name="BVL14">
+</hkicker>
+      <hkicker name="BVL16">
+</hkicker>
+      <hkicker name="BVL18">
+</hkicker>
+    <!--  
+        ! call file = 'ags_pue_new'
+        !*************************************************
+            PUEs
+        !*************************************************
+        -->
+      <monitor name="PUEA02">
+</monitor>
+      <monitor name="PUEA04">
+</monitor>
+      <monitor name="PUEA08">
+</monitor>
+      <monitor name="PUEA12">
+</monitor>
+      <monitor name="PUEA14">
+</monitor>
+      <monitor name="PUEA18">
+</monitor>
+      <monitor name="PUEB02">
+</monitor>
+      <monitor name="PUEB04">
+</monitor>
+      <monitor name="PUEB08">
+</monitor>
+      <monitor name="PUEB12">
+</monitor>
+      <monitor name="PUEB14">
+</monitor>
+      <monitor name="PUEB18">
+</monitor>
+      <monitor name="PUEC02">
+</monitor>
+      <monitor name="PUEC04">
+</monitor>
+      <monitor name="PUEC08">
+</monitor>
+      <monitor name="PUEC12">
+</monitor>
+      <monitor name="PUEC14">
+</monitor>
+      <monitor name="PUEC18">
+</monitor>
+      <monitor name="PUED02">
+</monitor>
+      <monitor name="PUED04">
+</monitor>
+      <monitor name="PUED08">
+</monitor>
+      <monitor name="PUED12">
+</monitor>
+      <monitor name="PUED14">
+</monitor>
+      <monitor name="PUED18">
+</monitor>
+      <monitor name="PUEE02">
+</monitor>
+      <monitor name="PUEE04">
+</monitor>
+      <monitor name="PUEE08">
+</monitor>
+      <monitor name="PUEE12">
+</monitor>
+      <monitor name="PUEE14">
+</monitor>
+      <monitor name="PUEE18">
+</monitor>
+      <monitor name="PUEF02">
+</monitor>
+      <monitor name="PUEF04">
+</monitor>
+      <monitor name="PUEF08">
+</monitor>
+      <monitor name="PUEF12">
+</monitor>
+      <monitor name="PUEF14">
+</monitor>
+      <monitor name="PUEF18">
+</monitor>
+      <monitor name="PUEG02">
+</monitor>
+      <monitor name="PUEG04">
+</monitor>
+      <monitor name="PUEG08">
+</monitor>
+      <monitor name="PUEG12">
+</monitor>
+      <monitor name="PUEG14">
+</monitor>
+      <monitor name="PUEG18">
+</monitor>
+      <monitor name="PUEH02">
+</monitor>
+      <monitor name="PUEH04">
+</monitor>
+      <monitor name="PUEH08">
+</monitor>
+      <monitor name="PUEH12">
+</monitor>
+      <monitor name="PUEH14">
+</monitor>
+      <monitor name="PUEH18">
+</monitor>
+      <monitor name="PUEI02">
+</monitor>
+      <monitor name="PUEI04">
+</monitor>
+      <monitor name="PUEI08">
+</monitor>
+      <monitor name="PUEI12">
+</monitor>
+      <monitor name="PUEI14">
+</monitor>
+      <monitor name="PUEI18">
+</monitor>
+      <monitor name="PUEJ02">
+</monitor>
+      <monitor name="PUEJ04">
+</monitor>
+      <monitor name="PUEJ08">
+</monitor>
+      <monitor name="PUEJ12">
+</monitor>
+      <monitor name="PUEJ14">
+</monitor>
+      <monitor name="PUEJ18">
+</monitor>
+      <monitor name="PUEK02">
+</monitor>
+      <monitor name="PUEK04">
+</monitor>
+      <monitor name="PUEK08">
+</monitor>
+      <monitor name="PUEK12">
+</monitor>
+      <monitor name="PUEK14">
+</monitor>
+      <monitor name="PUEK18">
+</monitor>
+      <monitor name="PUEL02">
+</monitor>
+      <monitor name="PUEL04">
+</monitor>
+      <monitor name="PUEL08">
+</monitor>
+      <monitor name="PUEL12">
+</monitor>
+      <monitor name="PUEL14">
+</monitor>
+      <monitor name="PUEL18">
+</monitor>
+    <!--   
+        !*************************************************
+        !  (NewFEB2) or Old FEB Orbit bumps and  septa
+        !*************************************************
+        -->
+    <!-- ! 3/2 LAMDA BUMP  2.0 MRAD AT 700 A -->
+      <hkicker name="BWG06">
+</hkicker>
+      <hkicker name="BWG07">
+</hkicker>
+      <hkicker name="BWG20">
+</hkicker>
+      <hkicker name="BWH01">
+</hkicker>
+      <hkicker name="BWH14">
+</hkicker>
+      <hkicker name="BWH15">
+</hkicker>
+      <hkicker name="BWI08">
+</hkicker>
+      <hkicker name="BWI09">
+</hkicker>
+    <!-- -->
+      <hkicker name="FKG20p">
+</hkicker>
+      <drift name="FKG20dr" l="0">
+</drift>
+    <!--   ! 1.2 MRAD FOR NEWFEB2 -->
+      <hkicker name="FKH05p">
+</hkicker>
+      <drift name="FKH05dr" l="0.445">
+</drift>
+    <!--    ! 1.1 MRAD AT 3. KA -->
+      <hkicker name="SMH10Ap">
+</hkicker>
+      <drift name="SMH10Adr" l="0.5335">
+</drift>
+    <!--   !22.0 MRAD AT 21. KA  -->
+      <hkicker name="SMH10Bp">
+</hkicker>
+      <drift name="SMH10Bdr" l="0.5335">
+</drift>
+    <!--  
+        !*************************************************
+        ! SBE  Orbit bumps and Kicker
+        !*************************************************
+        -->
+    <!-- 
+        ! 3/2 LAMDA BUMP  2.0 MRAD AT 560 A 
+        -->
+      <hkicker name="BWD02">
+</hkicker>
+      <hkicker name="BWD03">
+</hkicker>
+      <hkicker name="BWD16">
+</hkicker>
+      <hkicker name="BWD17">
+</hkicker>
+      <hkicker name="BWE10">
+</hkicker>
+      <hkicker name="BWE11">
+</hkicker>
+      <hkicker name="BWF04">
+</hkicker>
+      <hkicker name="BWF05">
+</hkicker>
+      <hkicker name="FKE05p">
+</hkicker>
+      <drift name="FKE05dr" l="0.5">
+</drift>
+    <!-- !-0.9 MRAD AT  2.8KA -->
+    <!--
+        !*************************************************
+        !     Y.Y. Bump BLWGH for NewFEB system
+        !*************************************************
+        -->
+    <!--
+        !  NEW BUMSP FOR G10 [BLWG09] 1 LAMDA BUMP 2.0 MRAD AT 700 A  
+        !  FKG10A:   hkicker   FKG10A   L = LG10/2 Kick=XG10/2   ! -1.38 mrad 1.075 A
+        !  FKG10B:   hkicker   FKG10B   L = LG10/2 Kick=XG10/2   ! 
+        -->
+      <hkicker name="FKG10Ap">
+</hkicker>
+      <drift name="FKG10Adr" l="0.5">
+</drift>
+    <!--! -1.38 mrad 1.075 A -->
+      <hkicker name="FKG10Bp">
+</hkicker>
+      <drift name="FKG10Bdr" l="0.5">
+</drift>
+    <!-- -->
+      <hkicker name="BWF08">
+</hkicker>
+      <hkicker name="BWF09">
+</hkicker>
+      <hkicker name="BWG02">
+</hkicker>
+      <hkicker name="BWG03">
+</hkicker>
+      <hkicker name="BWG16">
+</hkicker>
+      <hkicker name="BWG17">
+</hkicker>
+      <hkicker name="BWH10">
+</hkicker>
+      <hkicker name="BWH11">
+</hkicker>
+    <!--
+        ! NEW BUMPS FOR H10 [BLWH11] 1 LAMDA
+        -->
+      <hkicker name="BWG10">
+</hkicker>
+      <hkicker name="BWG11">
+</hkicker>
+      <hkicker name="BWH04">
+</hkicker>
+      <hkicker name="BWH05">
+</hkicker>
+      <hkicker name="BWH18">
+</hkicker>
+      <hkicker name="BWH19">
+</hkicker>
+      <hkicker name="BWI12">
+</hkicker>
+      <hkicker name="BWI13">
+</hkicker>
+    <!--
+        !*************************************************
+        !       markers 
+        !*************************************************   
+        -->
+      <marker name="SPTM">
+</marker>
+    <!--  ! L20 injection septum -->
+      <marker name="SPTME">
+</marker>
+    <!--  ! L20 injection septum_end  !AUL 10/24/94 -->
+      <marker name="HKA5">
+</marker>
+    <!--  ! injectionKicker -->
+      <marker name="MB02">
+</marker>
+    <!--  ! beginning of B2 -->
+      <marker name="MB05">
+</marker>
+    <!--  ! IPM_Hoz -->
+      <marker name="MB09">
+</marker>
+    <!--  ! end of B9 -->
+      <marker name="MC05">
+</marker>
+    <!-- ! CT -->
+      <marker name="MF20">
+</marker>
+      <marker name="MG05">
+</marker>
+      <marker name="MG10">
+</marker>
+      <marker name="MG13">
+</marker>
+      <marker name="MG15">
+</marker>
+      <marker name="MG20">
+</marker>
+      <marker name="MH05">
+</marker>
+      <marker name="MH11">
+</marker>
+      <marker name="MH12">
+</marker>
+      <marker name="MH13">
+</marker>
+      <marker name="IPMH">
+</marker>
+    <!-- ! horizontal IPM (C5) -->
+      <marker name="IPMV">
+</marker>
+    <!-- vertical   IPM (E15) -->
+      <marker name="EXTR">
+</marker>
+    <!-- extraction (E20) -->
+    <!-- 
+         !*************************************************
+         !       Lines with pues and low field dipoles   AUL 3/11/95 elements
+         !*************************************************
+         -->
+      <drift name="DPUE" l="0.287">
+</drift>
+      <drift name="D2TP" l="0.322485192">
+</drift>
+      <drift name="D2LP" l="0.32245471200000003">
+</drift>
+    <!--  
+        !*************************************************
+        !       SPECIAL Straight Sections elements
+        !*************************************************
+        !DS03   drift     L = (D5L-LQD)/2.
+        !SS03   Line = (DS03 QDV DS03)
+        !SS17   Line = (DS03 QDH DS03)
+        -->
+      <drift name="DSPTMu" l="1.05099993">
+</drift>
+      <drift name="DSPTMd" l="0.4728392880000001">
+</drift>
+      <drift name="DS03u" l="0.37104735600000005">
+</drift>
+      <drift name="DS03d" l="0.7619273560000001">
+</drift>
+      <drift name="DS07" l="0.43442735600000004">
+</drift>
+      <drift name="DSE05" l="0.26192735600000006">
+</drift>
+      <drift name="DSF05" l="0.43192735600000004">
+</drift>
+      <drift name="DSF10" l="0.5088392180000001">
+</drift>
+      <drift name="DSG10" l="0.523839218">
+</drift>
+      <drift name="DSH05" l="0.31692735600000005">
+</drift>
+      <drift name="DSH10" l="0.45683921800000005">
+</drift>
+      <drift name="DSH20" l="0.398839218">
+</drift>
+      <drift name="D2SP" l="0.322514656">
+</drift>
+    <!--  
+        !*************************************************
+        !   RF CAVITIES
+        !
+        -->
+      <marker name="RFA10">
+</marker>
+      <marker name="RFA20">
+</marker>
+      <marker name="RFB10">
+</marker>
+      <marker name="RFB20">
+</marker>
+      <marker name="RFC10">
+</marker>
+      <marker name="RFC20">
+</marker>
+      <marker name="RFD10">
+</marker>
+      <marker name="RFD20">
+</marker>
+      <marker name="RFE10">
+</marker>
+      <marker name="RFE20">
+</marker>
+      <marker name="RFF10">
+</marker>
+      <marker name="RFF20">
+</marker>
+      <marker name="RFG10">
+</marker>
+      <marker name="RFG20">
+</marker>
+      <marker name="RFH10">
+</marker>
+      <marker name="RFH20">
+</marker>
+      <marker name="RFI10">
+</marker>
+      <marker name="RFI20">
+</marker>
+      <marker name="RFJ10">
+</marker>
+      <marker name="RFJ20">
+</marker>
+      <marker name="RFK10">
+</marker>
+      <marker name="RFK20">
+</marker>
+      <marker name="RFL10">
+</marker>
+      <marker name="RFL20">
+</marker>
+      <marker name="EXTRRFE20">
+</marker></elements>
+    <!--  ************************************************* -->
+    <!--  ************************************************* -->
+    <!--                     Sectors                                             -->
+    <!--  ************************************************* -->
+    <!--  ************************************************* -->
+  <sectors>
+    <!-- -->
+    <sector name="ESH20" line="
+      ESH20dr
+      ESH20p
+      ESH20dr
+    "/>
+    <sector name="SMF05" line="
+      SMF05dr
+      SMF05p
+      SMF05dr
+    "/>
+    <sector name="SMF10" line="
+      SMF10dr
+      SMF10p
+      SMF10dr
+    "/>
+    <!-- -->
+    <sector name="FKG20" line="
+      FKG20dr
+      FKG20p
+      FKG20dr
+    "/>
+    <sector name="FKH05" line="
+      FKH05dr
+      FKH05p
+      FKH05dr
+    "/>
+    <sector name="SMH10A" line="
+      SMH10Adr
+      SMH10Ap
+      SMH10Adr
+    "/>
+    <sector name="SMH10B" line="
+      SMH10Bdr
+      SMH10Bp
+      SMH10Bdr
+    "/>
+    <!-- -->
+    <sector name="FKG10A" line="
+      FKG10Adr
+      FKG10Ap
+      FKG10Adr
+    "/>
+    <sector name="FKG10B" line="
+      FKG10Bdr
+      FKG10Bp
+      FKG10Bdr
+    "/>
+    <sector name="FKE05" line="
+      FKE05dr
+      FKE05p
+      FKE05dr
+    "/>
+    <!--
+        !*************************************************
+        ! Replace rbend's by sbend's, RT 21 Feb 2005
+        ! Note: if "nseg" is changed the following must be 
+        ! changed to correspond.
+        ! DON'T FORGET TO CHECK SIGN OF POLE FACE quadrupoleS !!!!!
+        !*************************************************
+        -->
+    <sector name="AF" line="
+      qAface
+      AFp
+      qAFp
+      sAFp
+      AFp
+      qAFp
+      sAFp
+      AFp
+      qAFp
+      sAFp
+      AFp
+      qAFp
+      sAFp
+      AFp
+      qAFp
+      sAFp
+      AFp
+      qAFp
+      sAFp
+      AFp
+      qAFp
+      sAFp
+      AFp
+      qAface
+    "/>
+    <sector name="AD" line="
+      qAface
+      ADp
+      qADp
+      sADp
+      ADp
+      qADp
+      sADp
+      ADp
+      qADp
+      sADp
+      ADp
+      qADp
+      sADp
+      ADp
+      qADp
+      sADp
+      ADp
+      qADp
+      sADp
+      ADp
+      qADp
+      sADp
+      ADp
+      qAface
+    "/>
+    <sector name="BF" line="
+      qBface
+      BFp
+      qBFp
+      sBFp
+      BFp
+      qBFp
+      sBFp
+      BFp
+      qBFp
+      sBFp
+      BFp
+      qBFp
+      sBFp
+      BFp
+      qBFp
+      sBFp
+      BFp
+      qBFp
+      sBFp
+      BFp
+      qBFp
+      sBFp
+      BFp
+      qBface
+    "/>
+    <sector name="BD" line="
+      qBface
+      BDp
+      qBDp
+      sBDp
+      BDp
+      qBDp
+      sBDp
+      BDp
+      qBDp
+      sBDp
+      BDp
+      qBDp
+      sBDp
+      BDp
+      qBDp
+      sBDp
+      BDp
+      qBDp
+      sBDp
+      BDp
+      qBDp
+      sBDp
+      BDp
+      qBface
+    "/>
+    <sector name="CF" line="
+      qCface
+      CFp
+      qCFp
+      sCFp
+      CFp
+      qCFp
+      sCFp
+      CFp
+      qCFp
+      sCFp
+      CFp
+      qCFp
+      sCFp
+      CFp
+      qCFp
+      sCFp
+      CFp
+      qCFp
+      sCFp
+      CFp
+      qCFp
+      sCFp
+      CFp
+      qCface
+    "/>
+    <sector name="CD" line="
+      qCface
+      CDp
+      qCDp
+      sCDp
+      CDp
+      qCDp
+      sCDp
+      CDp
+      qCDp
+      sCDp
+      CDp
+      qCDp
+      sCDp
+      CDp
+      qCDp
+      sCDp
+      CDp
+      qCDp
+      sCDp
+      CDp
+      qCDp
+      sCDp
+      CDp
+      qCface
+    "/>
+    <!--  
+        !*************************************************
+        !       Lines with pues and low field dipoles   AUL 3/11/95
+        !*************************************************
+        -->
+    <sector name="LPA02" line="
+      DPUE
+      PUEA02
+      BHA02
+      BVA02
+      D2TP
+    "/>
+    <sector name="LPA04" line="
+      DPUE
+      PUEA04
+      BVA04
+      D2LP
+    "/>
+    <sector name="LPA06" line="
+      DPUE
+      BVA06
+      D2LP
+    "/>
+    <sector name="LPA08" line="
+      DPUE
+      PUEA08
+      BHA08
+      BVA08
+      D2TP
+    "/>
+    <sector name="LPA12" line="
+      DPUE
+      PUEA12
+      BHA12
+      BVA12
+      D2TP
+    "/>
+    <sector name="LPA14" line="
+      DPUE
+      PUEA14
+      BVA14
+      D2LP
+    "/>
+    <sector name="LPA16" line="
+      DPUE
+      BVA16
+      D2LP
+    "/>
+    <sector name="LPA18" line="
+      DPUE
+      PUEA18
+      BHA18
+      BVA18
+      D2TP
+    "/>
+    <!--  -->
+    <sector name="LPB02" line="
+      DPUE
+      PUEB02
+      BHB02
+      BVB02
+      D2TP
+    "/>
+    <sector name="LPB04" line="
+      DPUE
+      PUEB04
+      BVB04
+      D2LP
+    "/>
+    <sector name="LPB06" line="
+      DPUE
+      BVB06
+      D2LP
+    "/>
+    <sector name="LPB08" line="
+      DPUE
+      PUEB08
+      BHB08
+      BVB08
+      D2TP
+    "/>
+    <sector name="LPB12" line="
+      DPUE
+      PUEB12
+      BHB12
+      BVB12
+      D2TP
+    "/>
+    <sector name="LPB14" line="
+      MB09
+      DPUE
+      PUEB14
+      BVB14
+      D2LP
+    "/>
+    <sector name="LPB16" line="
+      DPUE
+      BVB16
+      D2LP
+    "/>
+    <sector name="LPB18" line="
+      DPUE
+      PUEB18
+      BHB18
+      BVB18
+      D2TP
+    "/>
+    <!--  -->
+    <sector name="LPC02" line="
+      DPUE
+      PUEC02
+      BHC02
+      BVC02
+      D2TP
+    "/>
+    <sector name="LPC04" line="
+      DPUE
+      PUEC04
+      BVC04
+      D2LP
+    "/>
+    <sector name="LPC06" line="
+      DPUE
+      BVC06
+      D2LP
+    "/>
+    <sector name="LPC08" line="
+      DPUE
+      PUEC08
+      BHC08
+      BVC08
+      D2TP
+    "/>
+    <sector name="LPC12" line="
+      DPUE
+      PUEC12
+      BHC12
+      BVC12
+      D2TP
+    "/>
+    <sector name="LPC14" line="
+      DPUE
+      PUEC14
+      BVC14
+      D2LP
+    "/>
+    <sector name="LPC16" line="
+      DPUE
+      BVC16
+      D2LP
+    "/>
+    <sector name="LPC18" line="
+      DPUE
+      PUEC18
+      BHC18
+      BVC18
+      D2TP
+    "/>
+    <!--  -->
+    <sector name="LPD02" line="
+      DPUE
+      PUED02
+      BHD02
+      BVD02
+      D2TP
+    "/>
+    <sector name="LPD04" line="
+      DPUE
+      PUED04
+      BVD04
+      D2LP
+    "/>
+    <sector name="LPD06" line="
+      DPUE
+      BVD06
+      D2LP
+    "/>
+    <sector name="LPD08" line="
+      DPUE
+      PUED08
+      BHD08
+      BVD08
+      D2TP
+    "/>
+    <sector name="LPD12" line="
+      DPUE
+      PUED12
+      BHD12
+      BVD12
+      D2TP
+    "/>
+    <sector name="LPD14" line="
+      DPUE
+      PUED14
+      BVD14
+      D2LP
+    "/>
+    <sector name="LPD16" line="
+      DPUE
+      BVD16
+      D2LP
+    "/>
+    <sector name="LPD18" line="
+      DPUE
+      PUED18
+      BHD18
+      BVD18
+      D2TP
+    "/>
+    <!--  -->
+    <sector name="LPE02" line="
+      DPUE
+      PUEE02
+      BHE02
+      BVE02
+      D2TP
+    "/>
+    <sector name="LPE04" line="
+      DPUE
+      PUEE04
+      BVE04
+      D2LP
+    "/>
+    <sector name="LPE06" line="
+      DPUE
+      BVE06
+      D2LP
+    "/>
+    <sector name="LPE08" line="
+      DPUE
+      PUEE08
+      BHE08
+      BVE08
+      D2TP
+    "/>
+    <sector name="LPE12" line="
+      DPUE
+      PUEE12
+      BHE12
+      BVE12
+      D2TP
+    "/>
+    <sector name="LPE14" line="
+      DPUE
+      PUEC14
+      BVE14
+      D2LP
+    "/>
+    <sector name="LPE16" line="
+      DPUE
+      BVE16
+      D2LP
+    "/>
+    <sector name="LPE18" line="
+      DPUE
+      PUEE18
+      BHE18
+      BVE18
+      D2TP
+    "/>
+    <!--  -->
+    <sector name="LPF02" line="
+      DPUE
+      PUEF02
+      BHF02
+      BVF02
+      D2TP
+    "/>
+    <sector name="LPF04" line="
+      DPUE
+      PUEF04
+      BVF04
+      D2LP
+    "/>
+    <sector name="LPF06" line="
+      DPUE
+      BVF06
+      D2LP
+    "/>
+    <sector name="LPF08" line="
+      BWF08
+      DPUE
+      PUEF08
+      BHF08
+      BVF08
+      D2TP
+    "/>
+    <sector name="LPF12" line="
+      DPUE
+      PUEF12
+      BHF12
+      BVF12
+      D2TP
+    "/>
+    <sector name="LPF14" line="
+      BWF14
+      DPUE
+      PUEF14
+      BVF14
+      D2LP
+    "/>
+    <sector name="LPF16" line="
+      BWG16
+      DPUE
+      BVF16
+      D2LP
+    "/>
+    <sector name="LPF18" line="
+      DPUE
+      PUEF18
+      BHF18
+      BVF18
+      D2TP
+    "/>
+    <!--  -->
+    <sector name="LPG02" line="
+      BWG02
+      DPUE
+      PUEG02
+      BHG02
+      BVG02
+      D2TP
+    "/>
+    <sector name="LPG04" line="
+      DPUE
+      PUEG04
+      BVG04
+      D2LP
+    "/>
+    <!--   ! LPG06:   Line = (DPUE              BVG06 D2LP) -->
+    <sector name="LPG06" line="
+      DPUE
+      BVG06
+      D2LP
+    "/>
+    <sector name="LPG08" line="
+      BWG08
+      DPUE
+      PUEG08
+      BHG08
+      BVG08
+      D2TP
+    "/>
+    <sector name="LPG12" line="
+      DPUE
+      PUEG12
+      BHG12
+      BVG12
+      D2TP
+    "/>
+    <sector name="LPG14" line="
+      DPUE
+      PUEG14
+      BVG14
+      D2LP
+    "/>
+    <sector name="LPG16" line="
+      DPUE
+      BVG16
+      D2LP
+    "/>
+    <sector name="LPG18" line="
+      DPUE
+      PUEG18
+      BHG18
+      BVG18
+      D2TP
+    "/>
+    <!--  -->
+    <sector name="LPH02" line="
+      DPUE
+      PUEH02
+      BHH02
+      BVH02
+      D2TP
+    "/>
+    <sector name="LPH04" line="
+      BWH04
+      DPUE
+      PUEH04
+      BVH04
+      D2LP
+    "/>
+    <sector name="LPH06" line="
+      DPUE
+      BVH06
+      D2LP
+    "/>
+    <sector name="LPH08" line="
+      DPUE
+      PUEH08
+      BHH08
+      BVH08
+      D2TP
+    "/>
+    <sector name="LPH12" line="
+      DPUE
+      PUEH12
+      BHH12
+      BVH12
+      D2TP
+    "/>
+    <sector name="LPH14" line="
+      BWH14
+      DPUE
+      PUEH14
+      BVH14
+      D2LP
+    "/>
+    <sector name="LPH16" line="
+      DPUE
+      BVH16
+      D2LP
+    "/>
+    <sector name="LPH18" line="
+      BWH18
+      DPUE
+      PUEH18
+      BHH18
+      BVH18
+      D2TP
+    "/>
+    <!--  -->
+    <sector name="LPI02" line="
+      DPUE
+      PUEI02
+      BHI02
+      BVI02
+      D2TP
+    "/>
+    <sector name="LPI04" line="
+      DPUE
+      PUEI04
+      BVI04
+      D2LP
+    "/>
+    <sector name="LPI06" line="
+      BWI06
+      DPUE
+      BVI06
+      D2LP
+    "/>
+    <sector name="LPI08" line="
+      BWI08
+      DPUE
+      PUEI08
+      BHI08
+      BVI08
+      D2TP
+    "/>
+    <sector name="LPI12" line="
+      BWI12
+      DPUE
+      PUEI12
+      BHI12
+      BVI12
+      D2TP
+    "/>
+    <sector name="LPI14" line="
+      DPUE
+      PUEI14
+      BVI14
+      D2LP
+    "/>
+    <sector name="LPI16" line="
+      DPUE
+      BVI16
+      D2LP
+    "/>
+    <sector name="LPI18" line="
+      DPUE
+      PUEI18
+      BHI18
+      BVI18
+      D2TP
+    "/>
+    <!--  -->
+    <sector name="LPJ02" line="
+      DPUE
+      PUEJ02
+      BHJ02
+      BVJ02
+      D2TP
+    "/>
+    <sector name="LPJ04" line="
+      DPUE
+      PUEJ04
+      BVJ04
+      D2LP
+    "/>
+    <sector name="LPJ06" line="
+      DPUE
+      BVJ06
+      D2LP
+    "/>
+    <sector name="LPJ08" line="
+      DPUE
+      PUEJ08
+      BHJ08
+      BVJ08
+      D2TP
+    "/>
+    <sector name="LPJ12" line="
+      DPUE
+      PUEJ12
+      BHJ12
+      BVJ12
+      D2TP
+    "/>
+    <sector name="LPJ14" line="
+      DPUE
+      PUEJ14
+      BVJ14
+      D2LP
+    "/>
+    <sector name="LPJ16" line="
+      DPUE
+      BVJ16
+      D2LP
+    "/>
+    <sector name="LPJ18" line="
+      DPUE
+      PUEJ18
+      BHJ18
+      BVJ18
+      D2TP
+    "/>
+    <!--  -->
+    <sector name="LPK02" line="
+      DPUE
+      PUEK02
+      BHK02
+      BVK02
+      D2TP
+    "/>
+    <sector name="LPK04" line="
+      DPUE
+      PUEK04
+      BVK04
+      D2LP
+    "/>
+    <sector name="LPK06" line="
+      DPUE
+      BVK06
+      D2LP
+    "/>
+    <sector name="LPK08" line="
+      DPUE
+      PUEK08
+      BHK08
+      BVK08
+      D2TP
+    "/>
+    <sector name="LPK12" line="
+      DPUE
+      PUEK12
+      BHK12
+      BVK12
+      D2TP
+    "/>
+    <sector name="LPK14" line="
+      DPUE
+      PUEK14
+      BVK14
+      D2LP
+    "/>
+    <sector name="LPK16" line="
+      DPUE
+      BVK16
+      D2LP
+    "/>
+    <sector name="LPK18" line="
+      DPUE
+      PUEK18
+      BHK18
+      BVK18
+      D2TP
+    "/>
+    <!--  -->
+    <sector name="LPL02" line="
+      DPUE
+      PUEL02
+      BHL02
+      BVL02
+      D2TP
+    "/>
+    <sector name="LPL04" line="
+      DPUE
+      PUEL04
+      BVL04
+      D2LP
+    "/>
+    <sector name="LPL06" line="
+      DPUE
+      BVL06
+      D2LP
+    "/>
+    <sector name="LPL08" line="
+      DPUE
+      PUEL08
+      BHL08
+      BVL08
+      D2TP
+    "/>
+    <sector name="LPL12" line="
+      DPUE
+      PUEL12
+      BHL12
+      BVL12
+      D2TP
+    "/>
+    <sector name="LPL14" line="
+      DPUE
+      PUEL14
+      BVL14
+      D2LP
+    "/>
+    <sector name="LPL16" line="
+      DPUE
+      BVL16
+      D2LP
+    "/>
+    <sector name="LPL18" line="
+      DPUE
+      PUEL18
+      BHL18
+      BVL18
+      D2TP
+    "/>
+    <!--  -->
+    <!--  
+        !*************************************************
+        !       SPECIAL Straight Sections.
+        !*************************************************
+        -->
+    <sector name="SS03" line="
+      DS03u
+      QDV
+      DS03d
+    "/>
+    <sector name="SS07" line="
+      DS07
+      SXV
+      DS07
+    "/>
+    <sector name="SS13" line="
+      DS07
+      SXH
+      DS07
+    "/>
+    <sector name="SS17" line="
+      DS03u
+      QDH
+      DS03d
+    "/>
+    <sector name="SSC13" line="
+      DS07
+      SXC13
+      DS07
+    "/>
+    <sector name="SSE05" line="
+      DSE05
+      FKE05
+    "/>
+    <sector name="SSF05" line="
+      DSF05
+      SMF05
+    "/>
+    <sector name="SSF10" line="
+      DSF10
+      SMF10
+    "/>
+    <sector name="SSF13" line="
+      DS07
+      SXF13
+      DS07
+    "/>
+    <sector name="SSG10" line="
+      DSG10
+      FKG10A
+      FKG10B
+    "/>
+    <sector name="SSH05" line="
+      DSH05
+      FKH05
+    "/>
+    <sector name="SSH10" line="
+      DSH10
+      SMH10A
+      SMH10B
+    "/>
+    <sector name="SSH13" line="
+      DS07
+      MH13
+      SXH
+      DS07
+    "/>
+    <sector name="SSH20" line="
+      DSH20
+      ESH20
+    "/>
+    <sector name="SSI13" line="
+      DS07
+      SXI13
+      DS07
+    "/>
+    <sector name="SSL13" line="
+      DS07
+      SXL13
+      DS07
+    "/>
+    <!--  
+        !*************************************************
+        !      Sub  Lines    1/4 of Superperiods
+        !*************************************************
+        -->
+    <sector name="DB02" line="
+      D10
+      MB02
+    "/>
+    <sector name="DB05" line="
+      MB05
+      D2H
+    "/>
+    <sector name="DB09" line="
+      MB09
+      D2L
+    "/>
+    <sector name="DC05" line="
+      MC05
+      D2H
+    "/>
+    <sector name="DE06" line="
+      BWE06
+      D2L
+    "/>
+    <sector name="DE07" line="
+      BWE07
+      SS07
+    "/>
+    <sector name="DE20" line="
+      BWE20
+      D10
+    "/>
+    <sector name="DF01" line="
+      BWF01
+      D2S
+    "/>
+    <sector name="DF08" line="
+      BWF08
+      D2T
+    "/>
+    <sector name="DF09" line="
+      BWF09
+      D2S
+    "/>
+    <sector name="DF14" line="
+      BWF14
+      D2L
+    "/>
+    <sector name="DF15" line="
+      BWF15
+      D2H
+    "/>
+    <sector name="DF20" line="
+      D10
+      MF20
+    "/>
+    <sector name="DG02" line="
+      BWG02
+      D2T
+    "/>
+    <sector name="DG03" line="
+      BWG03
+      SS03
+    "/>
+    <sector name="DG05" line="
+      MG05
+      D2H
+    "/>
+    <sector name="DG06" line="
+      BWG06
+      D2L
+    "/>
+    <sector name="DG07" line="
+      BWG07
+      SS07
+    "/>
+    <sector name="DG08" line="
+      BWG08
+      D2T
+    "/>
+    <sector name="DG10" line="
+      BWG10
+      SSG10
+    "/>
+    <sector name="DG11" line="
+      BWG11
+      D2S
+    "/>
+    <sector name="DG13" line="
+      MG13
+      SS13
+    "/>
+    <sector name="DG15" line="
+      MG15
+      D2H
+    "/>
+    <sector name="DG16" line="
+      BWG16
+      D2L
+    "/>
+    <sector name="DG17" line="
+      BWG17
+      SS17
+    "/>
+    <sector name="DG19" line="
+      BWG19
+      D2S
+    "/>
+    <sector name="DG20" line="
+      BWG20
+      MG20
+      D10
+    "/>
+    <sector name="DH01" line="
+      BWH01
+      D2S
+    "/>
+    <sector name="DH04" line="
+      BWH04
+      D2L
+    "/>
+    <sector name="DH05" line="
+      BWH05
+      MH05
+      SSH05
+    "/>
+    <sector name="DH95" line="
+      DSH05
+      MH05
+    "/>
+    <sector name="DH10" line="
+      BWH10
+      SSH10
+    "/>
+    <sector name="DH11" line="
+      BWH11
+      D2S
+    "/>
+    <sector name="DH13" line="
+      BWH13
+      SSH13
+    "/>
+    <sector name="DH14" line="
+      BWH14
+      D2L
+    "/>
+    <sector name="DH15" line="
+      BWH15
+      D2H
+    "/>
+    <sector name="DH18" line="
+      BWH18
+      D2T
+    "/>
+    <sector name="DH19" line="
+      BWH19
+      D2S
+    "/>
+    <sector name="DI06" line="
+      BWI06
+      D2L
+    "/>
+    <sector name="DI07" line="
+      BWI07
+      SS07
+    "/>
+    <sector name="DI08" line="
+      BWI08
+      D2T
+    "/>
+    <sector name="DI09" line="
+      BWI09
+      D2S
+    "/>
+    <sector name="DI12" line="
+      BWI12
+      D2T
+    "/>
+    <sector name="DI13" line="
+      BWI13
+      SSI13
+    "/>
+    <sector name="DI20" line="
+      BWI20
+      D10
+    "/>
+    <sector name="DJ01" line="
+      BWJ01
+      D2S
+    "/>
+    <sector name="LSPTM" line="
+      DSPTMu
+      SPTM
+      DSPTMd
+    "/>
+    <!--  -->
+    <!--  !A -->
+    <sector name="L1A" line="
+      LSPTM
+      BF
+      D2S
+      BF
+      LPA02
+      CD
+      SS03
+      CD
+      LPA04
+      AF
+      D2H
+      HKA5
+    "/>
+    <sector name="L2A" line="
+      D2H
+      AF
+      LPA06
+      CD
+      SS07
+      CD
+      LPA08
+      BF
+      D2S
+      BF
+      D10
+      RFA10
+    "/>
+    <sector name="L3A" line="
+      D10
+      BD
+      D2S
+      BD
+      LPA12
+      CF
+      SS13
+      CF
+      LPA14
+      AD
+      D2H
+    "/>
+    <sector name="L4A" line="
+      D2H
+      AD
+      LPA16
+      CF
+      SS17
+      CF
+      LPA18
+      BD
+      D2S
+      BD
+      D10
+      RFA20
+    "/>
+    <!--  !B -->
+    <sector name="L1B" line="
+      DB02
+      BF
+      D2S
+      BF
+      LPB02
+      CD
+      SS03
+      CD
+      LPB04
+      AF
+      D2H
+    "/>
+    <sector name="L2B" line="
+      DB05
+      AF
+      LPB06
+      CD
+      SS07
+      CD
+      LPB08
+      BF
+      D2S
+      BF
+      D10
+      RFB10
+    "/>
+    <sector name="L3B" line="
+      D10
+      BD
+      D2S
+      BD
+      LPB12
+      CF
+      SS13
+      CF
+      LPB14
+      AD
+      D2H
+    "/>
+    <sector name="L4B" line="
+      D2H
+      AD
+      LPB16
+      CF
+      SS17
+      CF
+      LPB18
+      BD
+      D2S
+      BD
+      D10
+      RFB20
+    "/>
+    <!--  !C -->
+    <sector name="L1C" line="
+      D10
+      BF
+      D2S
+      BF
+      LPC02
+      CD
+      SS03
+      CD
+      LPC04
+      AF
+      D2H
+      IPMH
+    "/>
+    <sector name="L2C" line="
+      DC05
+      AF
+      LPC06
+      CD
+      SS07
+      CD
+      LPC08
+      BF
+      D2S
+      BF
+      D10
+      RFC10
+    "/>
+    <sector name="L3C" line="
+      D10
+      BD
+      D2S
+      BD
+      LPC12
+      CF
+      SSC13
+      CF
+      LPC14
+      AD
+      D2H
+    "/>
+    <sector name="L4C" line="
+      D2H
+      AD
+      LPC16
+      CF
+      SS17
+      CF
+      LPC18
+      BD
+      D2S
+      BD
+      D10
+      RFC20
+    "/>
+    <!--  !D -->
+    <sector name="L1D" line="
+      D10
+      BF
+      D2S
+      BF
+      LPD02
+      CD
+      SS03
+      CD
+      LPD04
+      AF
+      D2H
+    "/>
+    <sector name="L2D" line="
+      D2H
+      AF
+      LPD06
+      CD
+      SS07
+      CD
+      LPD08
+      BF
+      D2S
+      BF
+      D10
+      RFD10
+    "/>
+    <sector name="L3D" line="
+      D10
+      BD
+      D2S
+      BD
+      LPD12
+      CF
+      SS13
+      CF
+      LPD14
+      AD
+      D2H
+    "/>
+    <sector name="L4D" line="
+      D2H
+      AD
+      LPD16
+      CF
+      SS17
+      CF
+      LPD18
+      BD
+      D2S
+      BD
+      D10
+      RFD20
+    "/>
+    <!--  !E -->
+    <sector name="L1E" line="
+      D10
+      BF
+      D2S
+      BF
+      LPE02
+      CD
+      SS03
+      CD
+      LPE04
+      AF
+      SSE05
+    "/>
+    <sector name="L2E" line="
+      DSE05
+      AF
+      LPE06
+      CD
+      DE07
+      CD
+      LPE08
+      BF
+      D2S
+      BF
+      D10
+      RFE10
+    "/>
+    <sector name="L3E" line="
+      D10
+      BD
+      D2S
+      BD
+      LPE12
+      CF
+      SS13
+      CF
+      LPE14
+      AD
+      D2H
+      IPMV
+    "/>
+    <sector name="L4E" line="
+      D2H
+      AD
+      LPE16
+      CF
+      SS17
+      CF
+      LPE18
+      BD
+      D2S
+      BD
+      DE20
+      EXTRRFE20
+    "/>
+    <!--  !F -->
+    <sector name="L1F" line="
+      D10
+      BF
+      DF01
+      BF
+      LPF02
+      CD
+      SS03
+      CD
+      LPF04
+      AF
+      SSF05
+    "/>
+    <sector name="L2F" line="
+      DSF05
+      AF
+      LPF06
+      CD
+      SS07
+      CD
+      LPF08
+      BF
+      DF09
+      BF
+      SSF10
+      RFF10
+    "/>
+    <sector name="L3F" line="
+      DSF10
+      BD
+      D2S
+      BD
+      LPF12
+      CF
+      SSF13
+      CF
+      LPF14
+      AD
+      DF15
+    "/>
+    <sector name="L4F" line="
+      D2H
+      AD
+      LPF16
+      CF
+      SS17
+      CF
+      LPF18
+      BD
+      D2S
+      BD
+      DF20
+      RFF20
+    "/>
+    <!--  !G -->
+    <sector name="L1G" line="
+      D10
+      BF
+      D2S
+      BF
+      LPG02
+      CD
+      DG03
+      CD
+      LPG04
+      AF
+      DG05
+    "/>
+    <sector name="L2G" line="
+      D2H
+      AF
+      DG06
+      CD
+      DG07
+      CD
+      LPG08
+      BF
+      D2S
+      BF
+      DG10
+      RFG10
+    "/>
+    <sector name="L3G" line="
+      DSG10
+      BD
+      DG11
+      BD
+      LPG12
+      CF
+      DG13
+      CF
+      LPG14
+      AD
+      DG15
+    "/>
+    <sector name="L4G" line="
+      D2H
+      AD
+      LPG16
+      CF
+      DG17
+      CF
+      LPG18
+      BD
+      DG19
+      BD
+      DG20
+      RFG20
+    "/>
+    <!--  !H -->
+    <sector name="L1H" line="
+      D10
+      BF
+      DH01
+      BF
+      LPH02
+      CD
+      SS03
+      CD
+      LPH04
+      AF
+      DH05
+    "/>
+    <sector name="L2H" line="
+      DH95
+      AF
+      LPH06
+      CD
+      SS07
+      CD
+      LPH08
+      BF
+      D2S
+      BF
+      DH10
+      RFH10
+    "/>
+    <sector name="L3H" line="
+      DSH10
+      BD
+      DH11
+      BD
+      LPH12
+      CF
+      DH13
+      CF
+      LPH14
+      AD
+      DH15
+    "/>
+    <sector name="L4H" line="
+      D2H
+      AD
+      LPH16
+      CF
+      SS17
+      CF
+      LPH18
+      BD
+      DH19
+      BD
+      SSH20
+      RFH20
+    "/>
+    <!--  !I -->
+    <sector name="L1I" line="
+      DSH20
+      BF
+      D2S
+      BF
+      LPI02
+      CD
+      SS03
+      CD
+      LPI04
+      AF
+      D2H
+    "/>
+    <sector name="L2I" line="
+      D2H
+      AF
+      LPI06
+      CD
+      DI07
+      CD
+      LPI08
+      BF
+      DI09
+      BF
+      D10
+      RFI10
+    "/>
+    <sector name="L3I" line="
+      D10
+      BD
+      D2S
+      BD
+      LPI12
+      CF
+      DI13
+      CF
+      LPI14
+      AD
+      D2H
+    "/>
+    <sector name="L4I" line="
+      D2H
+      AD
+      LPI16
+      CF
+      SS17
+      CF
+      LPI18
+      BD
+      D2S
+      BD
+      DI20
+      RFI20
+    "/>
+    <!--  !J -->
+    <sector name="L1J" line="
+      D10
+      BF
+      DJ01
+      BF
+      LPJ02
+      CD
+      SS03
+      CD
+      LPJ04
+      AF
+      D2H
+    "/>
+    <sector name="L2J" line="
+      D2H
+      AF
+      LPJ06
+      CD
+      SS07
+      CD
+      LPJ08
+      BF
+      D2S
+      BF
+      D10
+      RFJ10
+    "/>
+    <sector name="L3J" line="
+      D10
+      BD
+      D2S
+      BD
+      LPJ12
+      CF
+      SS13
+      CF
+      LPJ14
+      AD
+      D2H
+    "/>
+    <sector name="L4J" line="
+      D2H
+      AD
+      LPJ16
+      CF
+      SS17
+      CF
+      LPJ18
+      BD
+      D2S
+      BD
+      D10
+      RFJ20
+    "/>
+    <!--  !K -->
+    <sector name="L1K" line="
+      D10
+      BF
+      D2S
+      BF
+      LPK02
+      CD
+      SS03
+      CD
+      LPK04
+      AF
+      D2H
+    "/>
+    <sector name="L2K" line="
+      D2H
+      AF
+      LPK06
+      CD
+      SS07
+      CD
+      LPK08
+      BF
+      D2S
+      BF
+      D10
+      RFK10
+    "/>
+    <sector name="L3K" line="
+      D10
+      BD
+      D2S
+      BD
+      LPK12
+      CF
+      SS13
+      CF
+      LPK14
+      AD
+      D2H
+    "/>
+    <sector name="L4K" line="
+      D2H
+      AD
+      LPK16
+      CF
+      SS17
+      CF
+      LPK18
+      BD
+      D2S
+      BD
+      D10
+      RFK20
+    "/>
+    <!--  !L -->
+    <sector name="L1L" line="
+      D10
+      BF
+      D2S
+      BF
+      LPL02
+      CD
+      SS03
+      CD
+      LPL04
+      AF
+      D2H
+    "/>
+    <sector name="L2L" line="
+      D2H
+      AF
+      LPL06
+      CD
+      SS07
+      CD
+      LPL08
+      BF
+      D2S
+      BF
+      D10
+      RFL10
+    "/>
+    <sector name="L3L" line="
+      D10
+      BD
+      D2S
+      BD
+      LPL12
+      CF
+      SSL13
+      CF
+      LPL14
+      AD
+      D2H
+    "/>
+    <sector name="L4L" line="
+      D2H
+      AD
+      LPL16
+      CF
+      SS17
+      CF
+      LPL18
+      BD
+      D2S
+      BD
+      D10
+      RFL20
+    "/>
+    <!--  
+        !*************************************************
+        !  SUPERPERIODS - A to L
+        !*************************************************
+        -->
+    <sector name="SPA" line="
+      L1A
+      L2A
+      L3A
+      L4A
+    "/>
+    <sector name="SPB" line="
+      L1B
+      L2B
+      L3B
+      L4B
+    "/>
+    <sector name="SPC" line="
+      L1C
+      L2C
+      L3C
+      L4C
+    "/>
+    <sector name="SPD" line="
+      L1D
+      L2D
+      L3D
+      L4D
+    "/>
+    <sector name="SPE" line="
+      L1E
+      L2E
+      L3E
+      L4E
+    "/>
+    <sector name="SPF" line="
+      L1F
+      L2F
+      L3F
+      L4F
+    "/>
+    <sector name="SPG" line="
+      L1G
+      L2G
+      L3G
+      L4G
+    "/>
+    <sector name="SPH" line="
+      L1H
+      L2H
+      L3H
+      L4H
+    "/>
+    <sector name="SPI" line="
+      L1I
+      L2I
+      L3I
+      L4I
+    "/>
+    <sector name="SPJ" line="
+      L1J
+      L2J
+      L3J
+      L4J
+    "/>
+    <sector name="SPK" line="
+      L1K
+      L2K
+      L3K
+      L4K
+    "/>
+    <sector name="SPL" line="
+      L1L
+      L2L
+      L3L
+      L4L
+    "/>
+    <!--  
+        !*************************************************
+        !  AGS MAIN RING
+        !*************************************************
+        -->
+    <!--  <sector name="AGSA" line=" Rename as "lattice" temporarily -->
+    <sector name="ring" line="
+      mbegin
+      SPA
+      SPB
+      SPC
+      SPD
+      SPE
+      SPF
+      SPG
+      SPH
+      SPI
+      SPJ
+      SPK
+      SPL
+      mend
+    "/>
+    <sector name="AGS" line="
+      L2F
+      L3F
+      L4F
+      SPG
+      SPH
+      SPI
+      SPJ
+      SPK
+      SPL
+      SPA
+      SPB
+      SPC
+      SPD
+      SPE
+      L1F
+    "/>
+    <sector name="AGSO" line="
+      SPG
+      SPH
+      SPI
+      SPJ
+      SPK
+      SPL
+      SPA
+      SPB
+      SPC
+      SPD
+      SPE
+    "/>
+  </sectors>
+</adxf>

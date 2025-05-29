@@ -1,0 +1,217 @@
+\documentstyle{article}
+\author{Nikolay Malitsky}
+
+\title{
+Object-oriented implementation of a differential algebra and its
+application to a RHIC helical dipole.
+}
+
+\begin{document}
+\maketitle
+\date{}
+This paper describes an object-oriented method, that enables one
+to obtain Taylor maps for arbitrary optical elements and include it 
+in different accelerator algorithms. Its application to the RHIC 
+helical dipole is considered.
+
+This approach is based on the differential algebraic (DA) technique, which
+for the first time was suggested by Martin Berz and implemented by him in
+the program 
+COSY INFINITY\footnote{M.Berz."User's Guide and Reference Manual to
+COSY INFINITY v.6"}. 
+In order to make an efficient use of DA operations,
+COSY INFINITY includes a special DA precompiler, which transforms 
+arithmetic operations containing DA variables into a sequence of calls to
+FORTRAN subroutines. 
+In ZLIB++\footnote{N.Malitsky,A.Reshetov, and Y.Yan, SSCL-659, 1994.}, 
+the object-oriented version of the numerical library for differential 
+algebra, truncated power series and Taylor maps are considered as corresponding
+C++ classes ${\bf ZSeries}$ and ${\bf ZMap}$ with overloaded assignment,
+additive and multiplicative 
+operators. These objects can be included directly in the equations of 
+motion instead of the real variables and used in the DA integrators.
+
+The particle motion in the magnetic field is described by the following 
+set of equations, written in terms of the MAD coordinates:  
+\begin{eqnarray} \label{eq:motion}
+\frac{d}{ds}x & = &
+\frac{(1+hx)}{\frac{p_s}{p_0}}\left (\frac{p_x}{p_0}\right) 
+\nonumber \\ 
+\frac{d}{ds} \left (\frac{p_x}{p_0} \right ) & = & \left 
+[\frac{\vec{p}}{p_0}\times \left (\frac{e\vec{B}}{p_0  c}\right ) 
+	  \right ]_x \frac{1+hx}{\frac{p_s}{p_0}} + h\frac{p_s}{p_0}
+\nonumber \\ 
+\frac{d}{ds}y & = &
+	  \frac{(1+hx)}{\frac{p_s}{p_0}}\left (\frac{p_y}{p_0}\right ) \\ 
+\frac{d}{ds} \left (\frac{p_y}{p_0} \right ) & = & \left 
+	  [\frac{\vec{p}}{p_0}\times \left (\frac{e\vec{B}}{p_0 c}\right ) 
+	  \right ]_y \frac{1+hx}{\frac{p_s}{p_0}} 
+\nonumber \\
+\frac{d}{ds} 
+	  \sigma & = & \frac{1}{(v_0/c)} - \frac{l^{'}}{(v/c)}
+\nonumber \\ 
+\frac{d}{ds} \left (\frac{\Delta E}{p_0 c} \right ) & = & 0, 
+\nonumber 
+\end{eqnarray}
+where \\ \\
+$
+\frac{p_s}{p_0}  =  \sqrt{1+\frac{2}{\beta}(\frac{\Delta{E}}{p_0c}) 
++(\frac{\Delta{E}}{p_0c})^2 - (\frac{p_x}{p_0})^2 - (\frac{p_y}{p_0})^2 } 
+$ \\
+A class template {\bf RKIntegrator} was developed
+to perform the numerical integration through arbitrary magnetic field
+simultaneously for real and DA variables. Instances of template class {\bf RKIntegrator} are 
+initialized by some external function $elementField$, which will be used by 
+the Runge-Kutta integrator to calculate the specific magnetic field:
+\begin{eqnarray*}
+& & {\bf RKIntegrator}{<ZSeries, ZMap>}       \\
+& & \hspace{1. cm} elementDAIntegrator(elementField, elementParameters,step);
+\end{eqnarray*}
+These functions can be collected in one library and shared by different users. 
+In accordance with the basic principles of the object-oriented platform for 
+accelerator 
+codes\footnote{N.Malitsky,A.Reshetov,G.Bourianoff,SSCL-675,1994} (PAC++)
+the integration is considered as an action of one object on another and defined 
+as a multiplicative operator:
+\begin{eqnarray*}
+& & {\bf Map} \, m; \, \,\, m = 1; \\
+& & m = elementDAIntegrator*m;              
+\end{eqnarray*}
+This technique has been applied to the RHIC helical dipole.
+The field $\vec{B}$ in the current-free region of a helical magnet can
+be expressed in Cartesian coordinate system
+as\footnote{V.Ptitsin,Note RHIC/AP/41(oct. 10,1994)}:
+\begin{eqnarray} \label{eq:Br}
+B_x & = & B_r cos({\phi}) - B_{\phi} sin({\phi}) \nonumber \\
+B_y & = & B_r sin({\phi}) + B_{\phi} cos({\phi}) \\
+B_z & = & B_z                                    \nonumber 
+\end{eqnarray}
+where
+\begin{eqnarray*} 
+B_r & = & -k\sum_{m=1}^{\infty}m I_m^{'}(mkr)(a_m cos(m\theta) +
+                         b_m sin(m\theta)) \nonumber \\
+B_z & = &  k\sum_{m=1}^{\infty}m I_m(mkr) (b_m cos(m\theta) -
+                         a_m sin(m\theta)) \\
+B_{\phi} & = & -\frac{1}{kr}B_z  \nonumber
+\end{eqnarray*}
+and $\theta = \phi - (kz + \phi_0) $, $x = rcos(\phi )$, $y = rsin(\phi )$.
+Unfortunately, these equations cannot be expressed directly in  DA 
+variables, because the inversion and square root functions for a DA variable
+$r=(r_0,r_1,r_2,...,r_N)$ is defined as truncated power 
+series\footnote{M.Berz,Particle Accelerators,1989,Vol.24,pp.109-124}: 
+\begin{eqnarray*}
+& &  \sqrt{(r_0,r_1,r_2,...,r_N)} \\
+& & =\sqrt{r_0}\sqrt{1+(0,\frac{r_1}{r_0},\frac{r_2}{r_0},...,\frac{r_N}{r_0})} \\
+& & =\sqrt{r_0}\sum_{i=0}^{n}(-1)^{i}
+\frac{1\cdot 3\cdot ...(2i-3)}{2\cdot 4\cdot ...(2i)}
+(0,\frac{r_1}{r_0},\frac{r_2}{r_0},...,\frac{r_N}{r_0})^{i}
+\end{eqnarray*}
+and depends on $r_0$.
+To eliminate this restrictions the expressions (\ref{eq:Br}) were 
+transformed and written in the following form:
+\begin{eqnarray} \label{eq:Bx}
+B_x & = & \~{B}_r x - \~{B}_{\phi} y       \nonumber \\ 
+& & +\sum_{m=1} \frac{(m k/2)^{m}}{(m-1)!}r^{m-1}
+\{ b_m sin(\phi - m\theta) - a_m cos(\phi - m\theta)\} \nonumber \\
+B_y & = & \~{B}_r y + \~{B}_{\phi} x       \nonumber \\ 
+& & -\sum_{m=1} \frac{(m k/2)^{m}}{(m-1)!}r^{m-1}
+\{ b_m cos(\phi - m\theta) + a_m sin(\phi - m\theta)\} \\
+B_z & = & - k\~{B}_{\phi} r^{2} \nonumber \\
+& & +k\sum_{m=1} \frac{(m k/2)^{m}}{(m-1)!}r^{m}
+\{ b_m cos(m\theta) - a_m sin(m\theta) \} \nonumber
+\end{eqnarray}
+where
+\begin{eqnarray*} 
+\~{B}_r & = &  -8 \sum_{m=1} (km/2)^{m+2}
+(\~{I}_{m-1}(mkr) - \frac{m}{2}\~{I}_{m}(mkr))\\
+& & \cdot r^{m} \{ a_m cos(m\theta) + b_m sin(m\theta)\}   \\
+\~{B}_{\phi} & = & -\frac{8}{k} \sum_{m=1} (km/2)^{m+3} \~{I}_m(mkr) \\
+& & \cdot r^{m} \{ b_m cos(m\theta) - a_m sin(m\theta)\}
+\end{eqnarray*}
+and
+\begin{eqnarray*} 
+\~{I}_m(z)   =  \sum_{i=1}^{\infty}\frac{(z/2)^{2(i-1)}}{4\,i!\,(m+i)!} \\
+\end{eqnarray*}
+The two set of equations (\ref{eq:Br}) and (\ref{eq:Bx}) were implemented 
+in C++ and tested together in DOUBLE variables. When a perfect
+agreement between different functions was achieved, the last one was accepted 
+as the template function $helixField$ and located in the file $Field.hh$. 
+The nominal design for the RHIC helical 
+snake\footnote{A.Luccio,Presented at the Spin Accelerator Meeting, BNL,
+October 6,1994}
+consists of 4  helical dipoles of 2.4 m length, the $B_0$ 
+field for the outer modules is 1.458 T and for the inner ones is 4 T. 
+The Taylor map of one helical dipole was obtained by the short program 
+presented in Figure 1.
+As a first step,
+only the influence of the main harmonic $b1$ was considered.
+Results obtained with this approach agree with the first and second order transfer matrices
+derived by the SNIG 
+program\footnote{A.Luccio,Private communication.}
+via numerical integration of particle 
+trajectories (see Figure 2).
+
+The implementation of the DA integrator completes the object-oriented 
+approach for the description of accelerator 
+structure\footnote{N.Malitsky,A.Reshetov,G.Bourianoff,SSCL-675,1994}.
+All lattice elements are considered as instances of a C++ class {\bf Element}
+and divided in three categories: {\bf MAD}, {\bf COSY} and {\bf WILD}.
+\begin{itemize}
+\item
+{\bf MAD} elements form the majority of all elements and can be defined as the 
+superposition of standard MAD parameters: \\
+\begin{tabular}{c} \\
+ {\bf Element} $ hb$ = 1.940*${\bf L}$ + 2*PI/96*${\bf ANGLE}$;\\
+\end{tabular} \\ \\
+\noindent
+where element $hb$ is an object with length equal to  $1.940$ $m$ and 
+bend angle $2*PI/96$ $rad$.
+\item
+{\bf COSY} elements include  "nonstandard" parameters, but can be defined by 
+a Taylor map (e.g. helical dipole): 
+\begin{eqnarray*}
+& & {\bf RKIntegrator}{<ZSeries, ZMap>}       \\
+& & \hspace{0.5 cm} elementDAIntegrator(elementField, elementParameters,step); 
+\\
+& & {\bf Element} \, \, helix = helixDAIntegrator*map;
+\end{eqnarray*}
+The inclusion of the DA integrator in the object-oriented input 
+language enables one to inherit the flexibility of COSY INFINITY.
+On the other hand, we keep the clarity of lattice description, 
+because the accelerator  or transfer line usually contains only a few 
+"nonstandard" elements.
+\item {\bf WILD} elements. This category contains elements, which
+cannot be completely described by the Taylor map (such as internal
+target, splitter magnet etc.) At the optical design level
+they must be replaced by elements of 1st or 2nd categories (e.g. target
+as drift): \\
+$
+\begin{array}{lll} \\
+{\bf Element} & target     & = lengthOfTarget*{\bf L}; \\
+{\bf Teapot}  & ring       & = ...*target*...;   \\
+\end{array}  \\ \\
+$
+where the class {\bf Teapot} is the object-oriented version of the program 
+TEAPOT\footnote{L.Schachinger and R.Talman, Particle Accelerator,22,35(1987)}.
+The particle-target interactions may be described by some external class
+{\bf Target} and included in the general numerical simulation with the 
+overloaded
+multiplicative operator $Target::operator*(Particle\& \, particle)$:
+\begin{eqnarray*}
+& & {\bf Target} \hspace{0.5 cm} tooth(toothParameters);  \\
+& & ring.track(1, numberOfTarget-1, particle);            \\
+& & particle = tooth*particle;                            \\
+& & ring.track(numberOfTarget+1, numberOfLastElement, particle);
+\end{eqnarray*}
+This approach enables one also to use the different object-oriented HEP
+libraries (as GIZMO) or test the new complicated algorithms without  
+changing of the object-oriented accelerator programs. For example, 
+the inclusion of the helical snake in the Teapot tracking procedure is 
+presented in Figure 3. 
+\end{itemize}
+
+The author would like to thank R.Talman, S.Peggs, F.Pilat, and V.Ptitsin
+for many useful discussions.
+
+
+\end{document}

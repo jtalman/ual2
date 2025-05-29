@@ -1,0 +1,27 @@
+/TDecompBK.cxx/1.2/Tue Feb 15 16:17:09 2005//
+/TDecompBase.cxx/1.16/Sat Oct 16 18:09:16 2004//
+/TDecompChol.cxx/1.15/Tue Feb 15 16:17:09 2005//
+/TDecompLU.cxx/1.20/Tue Apr  5 12:47:11 2005//
+/TDecompQRH.cxx/1.17/Tue Feb 15 16:17:09 2005//
+/TDecompSVD.cxx/1.22/Tue Feb 15 16:17:09 2005//
+/TDecompSparse.cxx/1.10/Tue Feb 15 16:17:09 2005//
+/TMatrixD.cxx/1.80/Tue Apr  5 12:47:11 2005//
+/TMatrixDBase.cxx/1.17/Sat Oct 23 20:19:04 2004//
+/TMatrixDCramerInv.cxx/1.9/Wed Apr 27 05:14:15 2005//
+/TMatrixDEigen.cxx/1.10/Tue Feb 15 16:17:09 2005//
+/TMatrixDLazy.cxx/1.5/Fri Sep  3 13:41:34 2004//
+/TMatrixDSparse.cxx/1.18/Thu Jan  6 21:32:46 2005//
+/TMatrixDSym.cxx/1.23/Mon Mar 28 20:38:35 2005//
+/TMatrixDSymCramerInv.cxx/1.1/Sat Oct 16 18:09:16 2004//
+/TMatrixDSymEigen.cxx/1.9/Tue Feb 15 16:17:10 2005//
+/TMatrixDUtils.cxx/1.25/Sat Oct 16 18:09:16 2004//
+/TMatrixF.cxx/1.31/Tue Apr  5 12:47:11 2005//
+/TMatrixFBase.cxx/1.17/Sat Oct 23 20:19:05 2004//
+/TMatrixFCramerInv.cxx/1.9/Wed Apr 27 05:14:15 2005//
+/TMatrixFLazy.cxx/1.5/Fri Sep  3 13:41:34 2004//
+/TMatrixFSym.cxx/1.20/Thu Jan  6 06:37:14 2005//
+/TMatrixFSymCramerInv.cxx/1.1/Sat Oct 16 18:09:17 2004//
+/TMatrixFUtils.cxx/1.8/Sat Oct 16 18:09:17 2004//
+/TVectorD.cxx/1.54/Wed Feb  2 17:42:17 2005//
+/TVectorF.cxx/1.27/Wed Feb  2 17:42:17 2005//
+D

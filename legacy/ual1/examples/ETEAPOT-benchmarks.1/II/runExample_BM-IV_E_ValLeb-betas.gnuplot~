@@ -1,0 +1,35 @@
+source $UAL/setup-linux-ual
+setenv LD_LIBRARY_PATH $SXF/lib/$SXF_ARCH/:$LD_LIBRARY_PATH
+
+make clean
+
+\cp $UAL/examples/ETEAPOT/*.hh .
+\cp $UAL/examples/ETEAPOT/extractParameters.h .
+\cp $UAL/examples/ETEAPOT/simulatedProbeValues .
+\cp $UAL/examples/ETEAPOT/trtrin .
+
+: \cp $UAL/examples/ETEAPOT/trtrout .
+: \cp ../1/trtrout .
+
+\cp $UAL/examples/ETEAPOT/printProbeValues .
+\cp $UAL/examples/ETEAPOT/data/eteapotMARKER.apdf data/eteapot.apdf
+\cp $UAL/examples/ETEAPOT/userBunch data
+\cp $UAL/examples/ETEAPOT/determineTwiss.cc .
+
+\cp $UAL/examples/ETEAPOT/sip* .
+\cp $UAL/examples/ETEAPOT/probeDataForTwiss .
+\cp $UAL/examples/ETEAPOT/transferMatrices.cc .
+
+make
+
+./determineTwiss  data/E_ValLeb2-sl4.sxf-ual1075 0.235 40 >! OUT
+
+: VERIFY   <<<<----
+: ./transferMatrices 0.22 -6.66729e-10 29.0221 1.78154e-10 175.611 982>! betaFunctions
+: ./transferMatrices 0.22 -2.3751e-09 29.0847 -9.46172e-12 139.525 982>! betaFunctions
+  ./transferMatrices 0.235 -6.92888e-10 29.1319 0.667525 128.183 982>! betaFunctions
+: VERIFY   <<<<----
+
+gnuplot
+   load "gnuplot/BM-IV_Figure1r-2r.gnuplot"
+

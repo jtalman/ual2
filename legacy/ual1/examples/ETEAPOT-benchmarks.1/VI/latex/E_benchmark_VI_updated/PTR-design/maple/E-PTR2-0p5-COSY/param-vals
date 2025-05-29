@@ -1,0 +1,4 @@
+
+# lattice name & R_NOMINAL   & L_LONG_STRAIGHT & N_SUPER & M_NOMINAL &    K0    &  m_in   &  Theta  &   r0    &   leh   &   lss    &   llsh  &   lq    &   qF     &    qD    & circum. &  gBy2   &   Q_x   &   Q_y 
+#              &     [m]     &       [m]       &    []   &    []     &  [MeV]   &    []   &    [r]     & [m]  &   [m]   &   [m]    &   [m]   &   [m]   &  [1/m]   &  [1/m]   &  [m]    &   [m]   &   []    &   []  
+EM_45MeV_pEDM  &    10.00    &     6.000       &     4   &   0.0020  &  0.0300  &  0.0020 &  0.7854 & 10.0000 &  3.9270 &  1.0000  &  2.5000 &  0.2500 &   0.0100 &  -0.0100 &   90.83 &  0.0350 &  1.8799 &  0.1247  \\ 

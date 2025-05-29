@@ -1,0 +1,23 @@
+double delGam   = gamma - gammaD;
+
+double vDchk=sqrt(1.-1./gammaD/gammaD);
+double vchk =sqrt(1.-1./gamma/gamma);
+
+double denFac   = gammaD*mpcsq;
+double fac      = g/2./gammaD;
+
+double delAlph1 = +(g/2.-1.)*delGam*th;
+double delAlph2 = g/2./gammaD*delGam/gammaD*th;
+double delAlph3 = g/2./gammaD*Eel0*Rsxf/denFac*(th - sin(Q*th)/Q)*xi_in;
+double delAlph4 = -g/2./gammaD*Eel0*Rsxf/denFac*(1.-cos(Q*th))/Q/Q*xip_in;
+
+double delAlphT = delAlph1+delAlph2+delAlph3+delAlph4;
+
+//std::cin >> dummy;
+
+double toler = 0.001;
+/*
+if( abs( dAl_dThT - delAlphT ) > toler ){
+ std::cout << "excessive disagreement between analytic and perturbative: " << dAl_dThT << " " << delAlphT << "\n";
+}
+*/

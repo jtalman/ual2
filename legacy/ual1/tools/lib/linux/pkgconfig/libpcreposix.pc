@@ -1,0 +1,13 @@
+# Package Information for pkg-config
+
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=/home/ualusr2011/ual1220/ual1/tools/lib/linux
+includedir=/home/ualusr2011/ual1220/ual1/tools/include
+
+Name: libpcreposix
+Description: PCREPosix - Posix compatible interface to libpcre
+Version: 8.02
+Libs: -L${libdir} -lpcreposix
+Cflags: -I${includedir} 
+Requires.private: libpcre

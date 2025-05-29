@@ -1,0 +1,73 @@
+
+// DA
+#include "ZLIB/Tps/Space.hh"
+
+#include "UAL/QT/Player/PlayerShell.hh"
+
+#include "UAL/ADXF/Reader.hh"
+#include "UAL/ADXF/Writer.hh"
+
+#include "UAL/ADXF/ConstantManager.hh"
+#include "BasicPlayer.hh"
+
+#include "PAC/Beam/Bunch.hh"
+#include "Tracker.hh"
+#include "Mapper.hh"
+
+using namespace UAL;
+
+int main(int argc, char *argv[])
+{
+
+  // ************************************************************************
+  std::cout << "Declare Qt, ROOT, DA, UAL environment." << std::endl;
+  // ************************************************************************
+
+  // Declare DA space 
+  ZLIB::Space space(6, 5);
+
+
+  std::cout << "hello USPAS !" << std::endl;
+
+  NM::Tracker tracker;
+
+  // 1. build tracker (by the APDF parser)
+
+  UAL::AcceleratorNode sequence;
+  UAL::AttributeSet attSet;
+
+  tracker.setLatticeElements(sequence, 0, 1, attSet);
+
+  // 2. track bunch
+
+  PAC::Bunch b(1);
+
+  PAC::BeamAttributes ba;
+  ba.setEnergy(1.1*UAL::pmass);
+  b.setBeamAttributes(ba);
+
+  PAC::Position pos;
+  pos.set(0.000, 0.001, 0.001, 0.0, 0.0, 0.01);
+  b[0].setPosition(pos);
+
+  tracker.propagate(b);
+
+  std::cout << "x=" << b[0].getPosition().getX() << std::endl;
+
+  // Mapper example
+
+  // 1. build mapper
+
+  NM::Mapper mapper;
+  mapper.setLatticeElements(sequence, 0, 1, ba);
+
+  // 2. track bunch
+
+  PAC::Bunch bm(1);
+
+  bm[0].setPosition(pos);
+  mapper.propagate(bm);
+
+  std::cout << "x=" << bm[0].getPosition().getX() << std::endl; 
+
+}

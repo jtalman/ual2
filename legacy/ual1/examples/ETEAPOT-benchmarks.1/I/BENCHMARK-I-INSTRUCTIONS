@@ -1,0 +1,45 @@
+Benchmark-I Instructions, 10 Nov. 2019
+------------------------
+1. Assume git download and build have been completed, and environment variables
+   correctly set.
+2. $ cd $UAL/examples/ETEAPOT1/benchmarks/I
+   $ ll run*  #  produces
+           runExample_Figure_3-Z-sl
+           runExample_Figure_3-Z-sl-modQ
+           runExample_Figure_4
+           runExample_Figure_2
+           runExample_Figure_3
+
+3. In each case cut and paste from entire file.
+
+4. The produced pdf files (in /pdf directory) are
+             Fig_I-4b.pdf
+             Fig_I-4t.pdf
+             Fig_I-3-sl-modQ-b.pdf
+             Fig_I-3-sl-modQ-t.pdf
+             Fig_I-3-sl-b.pdf
+             Fig_I-3-sl-t.pdf
+             Fig_I-3b.pdf
+             Fig_I-3t.pdf
+             Fig_I-2b.pdf
+             Fig_I-2t.pdf
+
+6. The latex directory contains files
+         latex/E_benchmark_I.tar
+         E_benchmark_I-updated.pdf
+   and (possibly) directory 
+         E_benchmark_I_updated/
+   (If not this directory can be regenerated using "E_benchmark_I.tar")
+
+7.       $ cd latex
+         $ tar xvf E_benchmark_I.tar
+   produces latex production directory
+         E_benchmark_I_updated/
+  including 
+         E_benchmark_I_updated/pdf
+
+8. (At least in principle) the files produced in step 4 should be 
+   copied to directory "E_benchmark_I_updated/pdf" before issuing
+         $ cd E_benchmark_I_updated
+         $ pdflatex E_benchmark_I-updated.tex
+   to produce chapter "E_benchmark-I.pdf".

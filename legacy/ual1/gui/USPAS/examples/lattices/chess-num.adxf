@@ -1,0 +1,1451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adxf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file:/home/ualusr/USPAS/ual1/doc/adxf-cesr/adxf.xsd"><
+    <constants>
+        <constant name="PI" value="3.1415926536"/>
+        <constant name="pi" value="3.1415926536"/>
+        <constant name="clight" value="299792458"/>
+        <constant name="beam_energy" value="5.289"/>
+        <constant name="s_tee1" value="1.327"/>
+        <constant name="q37W_K1" value="-0.207492"/>
+        <constant name="SEX_35W_K2" value="-0.273833"/>
+        <constant name="SEX_13W_K2" value="-1.98423"/>
+        <constant name="SEX_21W_K2" value="-2.00037"/>
+        <constant name="q43aW_K1" value="0.268177"/>
+        <constant name="q25E_K1" value="-0.309489"/>
+        <constant name="q31E_K1" value="-0.227893"/>
+        <constant name="dT1" value="-0.18196705314249495"/>
+        <constant name="q21E_K1" value="-0.282095"/>
+        <constant name="q18W_K1" value="0.240463"/>
+        <constant name="SEX_09W_K2" value="-0.057738500000000005"/>
+        <constant name="sqrt2" value="0.707107"/>
+        <constant name="k1_00" value="-1.8100000000000003"/>
+        <constant name="dx_drho4e" value="0.707107"/>
+        <constant name="q04w_k1" value="0.4441"/>
+        <constant name="dy_drho4e" value="0.707107"/>
+        <constant name="q48E_K1" value="0.517683"/>
+        <constant name="SEX_24E_K2" value="0.000867377"/>
+        <constant name="SEX_30W_K2" value="0.20480900000000002"/>
+        <constant name="Q08E_K1" value="0.16287600000000002"/>
+        <constant name="SEX_28E_K2" value="0.38023300000000004"/>
+        <constant name="SEX_22E_K2" value="-0.00713488"/>
+        <constant name="Q15W_K1" value="-0.206187"/>
+        <constant name="SEX_13E_K2" value="-1.98423"/>
+        <constant name="q49E_K1" value="-0.398707"/>
+        <constant name="q43E_K1" value="-0.275418"/>
+        <constant name="q49W_K1" value="-0.398707"/>
+        <constant name="q39E_K1" value="-0.247323"/>
+        <constant name="RF_E1_HARMON" value="1281"/>
+        <constant name="Q10E_K1" value="0.265339"/>
+        <constant name="SEX_47W_K2" value="0.40935699999999997"/>
+        <constant name="SEX_17E_K2" value="-1.13156"/>
+        <constant name="SEX_28W_K2" value="0.38023300000000004"/>
+        <constant name="SEX_12E_K2" value="2.29206"/>
+        <constant name="SEX_10W_K2" value="0.40228200000000003"/>
+        <constant name="Q06W_K1" value="0.468823"/>
+        <constant name="q35E_K1" value="-0.161838"/>
+        <constant name="dy_drho3w" value="0.707107"/>
+        <constant name="SEX_40E_K2" value="0.5274650000000001"/>
+        <constant name="RF_W1_VOLT" value="0.0015"/>
+        <constant name="SEX_35E_K2" value="-0.273833"/>
+        <constant name="q37E_K1" value="-0.207492"/>
+        <constant name="dIntercept1" value="2.191256340051169"/>
+        <constant name="SEX_42W_K2" value="-0.12875"/>
+        <constant name="SEX_43E_K2" value="-0.6147490000000001"/>
+        <constant name="Q11W_K1" value="-0.20678200000000002"/>
+        <constant name="sc_q01E_K1" value="-2.2775"/>
+        <constant name="q49aW_K1" value="0.317571"/>
+        <constant name="SEX_37W_K2" value="-0.944835"/>
+        <constant name="q17E_K1" value="-0.23427"/>
+        <constant name="SEX_29W_K2" value="-0.809351"/>
+        <constant name="sc_sk_q01W_K1" value="-0.0001"/>
+        <constant name="q44E_K1" value="-0.202067"/>
+        <constant name="dy_drho1e" value="0.707107"/>
+        <constant name="SEX_39W_K2" value="-2.09046"/>
+        <constant name="SEX_08E_K2" value="-0.110926"/>
+        <constant name="q47aW_K1" value="-0.331776"/>
+        <constant name="dx_drho2e" value="0.707107"/>
+        <constant name="v_sep_48E_VKICK" value="0.00084996"/>
+        <constant name="SEX_45W_K2" value="0.562669"/>
+        <constant name="SEX_25E_K2" value="-0.5741360000000001"/>
+        <constant name="SEX_14W_K2" value="0.714497"/>
+        <constant name="Q08AW_k1" value="-0.0165164"/>
+        <constant name="q25W_K1" value="-0.309489"/>
+        <constant name="SEX_11W_K2" value="0.789151"/>
+        <constant name="h_sep_45E_HKICK" value="0.00060413"/>
+        <constant name="RF_E1_VOLT" value="0.0015"/>
+        <constant name="SEX_20W_K2" value="0.19782500000000003"/>
+        <constant name="q03w_k1" value="-0.207536"/>
+        <constant name="SK_Q04W_k1" value="0"/>
+        <constant name="SEX_41E_K2" value="0.383521"/>
+        <constant name="q16W_K1" value="0.248391"/>
+        <constant name="Q06E_K1" value="0.4777"/>
+        <constant name="SEX_43W_K2" value="-0.6147490000000001"/>
+        <constant name="dQ1_T2" value="-0.14363301763992964"/>
+        <constant name="q04e_k1" value="0.4442650000000001"/>
+        <constant name="q47aE_K1" value="-0.331776"/>
+        <constant name="Q12E_K1" value="0.254765"/>
+        <constant name="SEX_26W_K2" value="0.650047"/>
+        <constant name="SEX_32W_K2" value="1.72406"/>
+        <constant name="SEX_16W_K2" value="1.02182"/>
+        <constant name="q44W_K1" value="-0.202067"/>
+        <constant name="q38W_K1" value="0.227525"/>
+        <constant name="q20E_K1" value="0.230037"/>
+        <constant name="q38E_K1" value="0.227525"/>
+        <constant name="sc_q02E_K1" value="1.31863"/>
+        <constant name="q48W_K1" value="0.517683"/>
+        <constant name="q45E_K1" value="0.318646"/>
+        <constant name="dS1" value="-0.8977063602495624"/>
+        <constant name="SEX_29E_K2" value="-0.809351"/>
+        <constant name="dx_drho2w" value="0.707107"/>
+        <constant name="SEX_45E_K2" value="0.562669"/>
+        <constant name="q23E_K1" value="-0.251332"/>
+        <constant name="RF_W2_VOLT" value="0.0015"/>
+        <constant name="q05w_k1" value="-0.33468000000000003"/>
+        <constant name="q34E_K1" value="0.224936"/>
+        <constant name="SEX_36E_K2" value="-0.0156734"/>
+        <constant name="Q00E_tilt" value="-0.0785"/>
+        <constant name="y_tee3" value="2.547925"/>
+        <constant name="SEX_34E_K2" value="0.8537810000000001"/>
+        <constant name="Q00W_K1" value="-1.8100000000000003"/>
+        <constant name="SEX_23E_K2" value="-0.745218"/>
+        <constant name="dIntercept2" value="-1.191256340051169"/>
+        <constant name="SEX_44W_K2" value="-0.383031"/>
+        <constant name="q21W_K1" value="-0.282095"/>
+        <constant name="dx_drho3e" value="-0.707107"/>
+        <constant name="SEX_33E_K2" value="-1.44895"/>
+        <constant name="Q13E_K1" value="-0.225284"/>
+        <constant name="Q07W_K1" value="-0.316099"/>
+        <constant name="h_sep_45W_HKICK" value="-0.00060413"/>
+        <constant name="dx_drho3w" value="-0.707107"/>
+        <constant name="q31W_K1" value="-0.227893"/>
+        <constant name="SEX_19E_K2" value="-1.75084"/>
+        <constant name="q24E_K1" value="0.245105"/>
+        <constant name="q22W_K1" value="0.258764"/>
+        <constant name="dx_drho1e" value="-0.707107"/>
+        <constant name="SEX_44E_K2" value="-0.383031"/>
+        <constant name="SEX_27W_K2" value="0.15484"/>
+        <constant name="Q15E_K1" value="-0.20533400000000002"/>
+        <constant name="q19W_K1" value="-0.299099"/>
+        <constant name="SEX_34W_K2" value="0.8537810000000001"/>
+        <constant name="q03e_k1" value="-0.20769600000000002"/>
+        <constant name="x_tee3_2" value="1.4636384038780914"/>
+        <constant name="Q08W_K1" value="0.203619"/>
+        <constant name="solenoid_tesla" value="1"/>
+        <constant name="ks_solenoid" value="-0.05668225713745511"/>
+        <constant name="SEX_08W_K2" value="-0.110926"/>
+        <constant name="q47E_K1" value="0.457292"/>
+        <constant name="q40W_K1" value="0.259829"/>
+        <constant name="dx_drho1w" value="-0.707107"/>
+        <constant name="sc_sk_q01E_K1" value="-0.0001"/>
+        <constant name="SEX_19W_K2" value="-1.75084"/>
+        <constant name="q36W_K1" value="0.189022"/>
+        <constant name="SEX_23W_K2" value="-0.745218"/>
+        <constant name="q46W_K1" value="-0.247413"/>
+        <constant name="Q00W_tilt" value="0.0785"/>
+        <constant name="Q14E_K1" value="0.28176700000000005"/>
+        <constant name="sc_sk_q02W_K1" value="0.080075"/>
+        <constant name="q42E_K1" value="0.217731"/>
+        <constant name="q26W_K1" value="0.264921"/>
+        <constant name="Q00E_K1" value="-1.8100000000000003"/>
+        <constant name="H_SEP_08W_HKICK" value="0.000550644"/>
+        <constant name="dy_drho4w" value="0.707107"/>
+        <constant name="q43aE_K1" value="0.268177"/>
+        <constant name="Q13W_K1" value="-0.22264300000000004"/>
+        <constant name="s_Q1" value="1.167"/>
+        <constant name="s_tee2" value="2.44095"/>
+        <constant name="q29E_K1" value="-0.246056"/>
+        <constant name="q32W_K1" value="0.198871"/>
+        <constant name="SEX_11E_K2" value="0.789151"/>
+        <constant name="q33E_K1" value="-0.203545"/>
+        <constant name="RF_W1_HARMON" value="1281"/>
+        <constant name="SEX_47E_K2" value="0.40935699999999997"/>
+        <constant name="SEX_14E_K2" value="0.714497"/>
+        <constant name="q49aE_K1" value="0.317571"/>
+        <constant name="dT2" value="0.5744432838007757"/>
+        <constant name="q18E_K1" value="0.240463"/>
+        <constant name="SEX_32E_K2" value="1.72406"/>
+        <constant name="SEX_22W_K2" value="-0.00713488"/>
+        <constant name="q33W_K1" value="-0.203545"/>
+        <constant name="SEX_31W_K2" value="-1.6874"/>
+        <constant name="SEX_10E_K2" value="0.40228200000000003"/>
+        <constant name="q46E_K1" value="-0.247413"/>
+        <constant name="SEX_21E_K2" value="-2.00037"/>
+        <constant name="SEX_30E_K2" value="0.20480900000000002"/>
+        <constant name="RF_E2_VOLT" value="0.0015"/>
+        <constant name="dT3" value="-0.39247623065828074"/>
+        <constant name="Q09E_K1" value="-0.223447"/>
+        <constant name="q41W_K1" value="-0.268756"/>
+        <constant name="dQ2_T2" value="0.6750751829076713"/>
+        <constant name="q42W_K1" value="0.217731"/>
+        <constant name="RF_E2_HARMON" value="1281"/>
+        <constant name="SEX_15E_K2" value="-2.01689"/>
+        <constant name="sk_q02E_K1" value="0.044534"/>
+        <constant name="q30E_K1" value="0.248886"/>
+        <constant name="q34W_K1" value="0.224936"/>
+        <constant name="SEX_40W_K2" value="0.5274650000000001"/>
+        <constant name="SEX_18W_K2" value="1.17622"/>
+        <constant name="q40E_K1" value="0.259829"/>
+        <constant name="q47W_K1" value="0.457292"/>
+        <constant name="dS2" value="0.8977063602495624"/>
+        <constant name="q27W_K1" value="-0.316006"/>
+        <constant name="Q11E_K1" value="-0.21226500000000004"/>
+        <constant name="q36E_K1" value="0.189022"/>
+        <constant name="dy_drho3e" value="0.707107"/>
+        <constant name="SK_Q03W_K1" value="-0.044534"/>
+        <constant name="sc_q01W_K1" value="-2.2775"/>
+        <constant name="q20W_K1" value="0.230037"/>
+        <constant name="SEX_42E_K2" value="-0.12875"/>
+        <constant name="q30W_K1" value="0.248886"/>
+        <constant name="SEX_39E_K2" value="-2.09046"/>
+        <constant name="SEX_36W_K2" value="-0.0156734"/>
+        <constant name="SEX_16E_K2" value="1.02182"/>
+        <constant name="q35W_K1" value="-0.161838"/>
+        <constant name="Q14W_K1" value="0.281899"/>
+        <constant name="SEX_09E_K2" value="-0.057738500000000005"/>
+        <constant name="v_sep_48W_VKICK" value="0.00084996"/>
+        <constant name="SEX_15W_K2" value="-2.01689"/>
+        <constant name="s_tee3" value="2.95742"/>
+        <constant name="q43W_K1" value="-0.275418"/>
+        <constant name="q45W_K1" value="0.318646"/>
+        <constant name="dx_drho4w" value="0.707107"/>
+        <constant name="RF_W2_HARMON" value="1281"/>
+        <constant name="SEX_27E_K2" value="0.15484"/>
+        <constant name="SEX_38W_K2" value="1.32664"/>
+        <constant name="SEX_41W_K2" value="0.383521"/>
+        <constant name="SEX_18E_K2" value="1.17622"/>
+        <constant name="q26E_K1" value="0.264921"/>
+        <constant name="q29W_K1" value="-0.246056"/>
+        <constant name="q23W_K1" value="-0.251332"/>
+        <constant name="q32E_K1" value="0.198871"/>
+        <constant name="dy_drho2w" value="0.707107"/>
+        <constant name="dQ1_T1" value="1.1436330176399296"/>
+        <constant name="dy_drho1w" value="0.707107"/>
+        <constant name="H_SEP_08E_HKICK" value="-0.00037126100000000006"/>
+        <constant name="Q12W_K1" value="0.269557"/>
+        <constant name="SK_Q04E_K1" value="0"/>
+        <constant name="q28E_K1" value="0.241405"/>
+        <constant name="dy_drho2e" value="0.707107"/>
+        <constant name="q24W_K1" value="0.245105"/>
+        <constant name="Q10W_K1" value="0.25706500000000004"/>
+        <constant name="q41E_K1" value="-0.268756"/>
+        <constant name="Q09W_K1" value="-0.19465900000000003"/>
+        <constant name="q28W_K1" value="0.241405"/>
+        <constant name="q17W_K1" value="-0.23427"/>
+        <constant name="SEX_26E_K2" value="0.650047"/>
+        <constant name="Q07E_K1" value="-0.267149"/>
+        <constant name="SEX_31E_K2" value="-1.6874"/>
+        <constant name="sc_sk_q02E_K1" value="0.080075"/>
+        <constant name="SEX_12W_K2" value="2.29206"/>
+        <constant name="sc_q02W_K1" value="1.31863"/>
+        <constant name="q39W_K1" value="-0.247323"/>
+        <constant name="SEX_37E_K2" value="-0.944835"/>
+        <constant name="s_Q2" value="2.079"/>
+        <constant name="SEX_33W_K2" value="-1.44895"/>
+        <constant name="q19E_K1" value="-0.299099"/>
+        <constant name="SK_Q03E_K1" value="0.044534"/>
+        <constant name="SEX_38E_K2" value="1.32664"/>
+        <constant name="SEX_25W_K2" value="-0.5741360000000001"/>
+        <constant name="q16E_K1" value="0.248391"/>
+        <constant name="q05e_k1" value="-0.335905"/>
+        <constant name="sk_q02W_K1" value="-0.044534"/>
+        <constant name="dQ2_T1" value="0.3249248170923287"/>
+        <constant name="SEX_17W_K2" value="-1.13156"/>
+        <constant name="x_tee3_1" value="-0.46363840387809147"/>
+        <constant name="q22E_K1" value="0.258764"/>
+        <constant name="SEX_20E_K2" value="0.19782500000000003"/>
+        <constant name="SEX_24W_K2" value="0.000867377"/>
+        <constant name="tilt_Q" value="0.0785"/>
+        <constant name="q27E_K1" value="-0.316006"/>
+    </constants>
+    <elements>
+        <marker name="DET_10E"/>
+        <drift name="d079" l="0.0090"/>
+        <drift name="RF_E1" l="1.8" harmon="1281" volt="0.0015"/>
+        <sextupole name="SEX_14E" l="0.272" k2="0.714497"/>
+        <kicker name="BUMP_36W" l="0.225"/>
+        <drift name="d101" l="0.04865"/>
+        <drift name="d038" l="1.19984"/>
+        <drift name="d319" l="0.157163"/>
+        <sextupole name="SK_SEX_23W" l="0.1285" tilt="0.5235987756"/>
+        <sextupole name="SK_SEX_02E" l="0.072" tilt="0.5235987756"/>
+        <quadrupole name="B03in" l="0.000001" k1="-74.466318532542"/>
+        <sbend name="B03mod" l="2.94536783383704" angle="0.020944245"/>
+        <quadrupole name="B03out" l="0.000001" k1="-74.466318532542"/>
+        <drift name="d342" l="1.847382"/>
+        <marker name="DET_43E"/>
+        <drift name="d285" l="0.0641"/>
+        <marker name="IP_L0"/>
+        <drift name="d086" l="0.0576"/>
+        <drift name="d068" l="0.0284"/>
+        <sextupole name="SEX_23W" l="0.272" k2="-0.745218"/>
+        <sextupole name="SK_SEX_29W" l="0.1275" tilt="0.5235987756"/>
+        <quadrupole name="B37Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B37Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B37Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d132" l="0.1432"/>
+        <drift name="d035" l="0.0614"/>
+        <drift name="OCT_48E" l="0.381"/>
+        <drift name="d209" l="0.342485"/>
+        <drift name="d202" l="1.174"/>
+        <quadrupole name="B47AWin" l="0.000001" k1="0"/>
+        <sbend name="B47AWmod" l="3.177222" angle="0.09125466"/>
+        <quadrupole name="B47AWout" l="0.000001" k1="0"/>
+        <drift name="d094" l="0.538152"/>
+        <marker name="DET_30W"/>
+        <drift name="d421" l="0.049"/>
+        <drift name="d305" l="0.0614"/>
+        <drift name="d115" l="0.488952"/>
+        <marker name="DET_06W"/>
+        <quadrupole name="Q05W" l="0.6" k1="-0.33468000000000003"/>
+        <quadrupole name="B05Ein" l="0.000001" k1="0"/>
+        <sbend name="B05Emod" l="3.237903" angle="0.10228927"/>
+        <quadrupole name="B05Eout" l="0.000001" k1="0"/>
+        <drift name="d405" l="2.221"/>
+        <drift name="d354" l="0.157162"/>
+        <marker name="DET_40E"/>
+        <quadrupole name="B25Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B25Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B25Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d107" l="0.157139"/>
+        <marker name="DET_12E"/>
+        <marker name="DET_47E"/>
+        <drift name="d198" l="0.0631"/>
+        <drift name="d092" l="0.0724"/>
+        <drift name="d428" l="0.495172"/>
+        <drift name="d232" l="0.1495"/>
+        <drift name="d336" l="0.0642"/>
+        <quadrupole name="Q40W" l="0.6" k1="0.259829"/>
+        <sextupole name="SK_SEX_07E" l="0.1262" tilt="0.5235987756"/>
+        <quadrupole name="B32Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B32Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B32Eout" l="0.000001" k1="-212.76160545716"/>
+        <sextupole name="SEX_16W" l="0.272" k2="1.02182"/>
+        <marker name="DET_39E"/>
+        <drift name="d388" l="0.604586"/>
+        <drift name="d124" l="0.364542"/>
+        <drift name="d416" l="0.4994"/>
+        <drift name="d329" l="0.360919"/>
+        <drift name="d142" l="0.735858"/>
+        <marker name="DET_25E"/>
+        <drift name="d367" l="0.0627"/>
+        <drift name="d125" l="0.157139"/>
+        <drift name="d432" l="0.495172"/>
+        <quadrupole name="B03AEin" l="0.000001" k1="-106.375035616253"/>
+        <sbend name="B03AEmod" l="1.64354794535774" angle="0.01869933"/>
+        <quadrupole name="B03AEout" l="0.000001" k1="-106.375035616253"/>
+        <quadrupole name="Q10E" l="0.6" k1="0.265339"/>
+        <sextupole name="SEX_41W" l="0.272" k2="0.383521"/>
+        <sextupole name="SEX_37W" l="0.272" k2="-0.944835"/>
+        <drift name="d440" l="0.422383"/>
+        <drift name="d311" l="0.73512"/>
+        <quadrupole name="SK_Q02E" l="0.1727" tilt="0.7853981634" k1="0.044534"/>
+        <quadrupole name="B08in" l="0.000001" k1="-478.64301797229"/>
+        <sbend name="B08mod" l="6.575289" angle="0.11220022"/>
+        <quadrupole name="B08out" l="0.000001" k1="-478.64301797229"/>
+        <drift name="d296" l="0.157132"/>
+        <quadrupole name="B38Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B38Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B38Wout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d090" l="0.128"/>
+        <sextupole name="SEX_28E" l="0.272" k2="0.38023300000000004"/>
+        <marker name="DET_44W"/>
+        <drift name="d023" l="0.221498"/>
+        <marker name="DET_05W"/>
+        <drift name="d377" l="0.538844"/>
+        <drift name="d308" l="0.0477"/>
+        <quadrupole name="Q47E" l="0.6" k1="0.457292"/>
+        <quadrupole name="Q49W" l="0.95" k1="-0.398707"/>
+        <drift name="d005" l="1.192"/>
+        <drift name="d186" l="0.0462"/>
+        <drift name="d161" l="0.65741"/>
+        <quadrupole name="SC_SK_Q01E" l="0.68" k1="-0.0001"/>
+        <kicker name="VKICK_09E" l="0.102"/>
+        <drift name="d276" l="0.0653"/>
+        <quadrupole name="SC_SK_Q02W" l="0.68" k1="0.080075"/>
+        <drift name="d095" l="0.157139"/>
+        <marker name="DET_01E"/>
+        <quadrupole name="Q05E" l="0.6" k1="-0.335905"/>
+        <drift name="d058" l="0.608"/>
+        <quadrupole name="Q35W" l="0.6" k1="-0.161838"/>
+        <quadrupole name="Q27W" l="0.6" k1="-0.316006"/>
+        <drift name="d380" l="0.11278"/>
+        <drift name="d239" l="0.120581"/>
+        <drift name="H_SEP_45E" l="2.3894"/>
+        <marker name="DET_20W"/>
+        <drift name="d100" l="0.06385"/>
+        <drift name="d223" l="0.361958"/>
+        <drift name="d274" l="0.488743"/>
+        <quadrupole name="B12Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B12Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B12Wout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d334" l="0.486244"/>
+        <quadrupole name="SC_SK_Q02E" l="0.68" k1="0.080075"/>
+        <quadrupole name="B29Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B29Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B29Wout" l="0.000001" k1="-212.76160545716"/>
+        <solenoid name="cleo_sol" l="3.51"/>
+        <drift name="d180" l="0.157132"/>
+        <sextupole name="SEX_09W" l="0.272" k2="-0.057738500000000005"/>
+        <drift name="d300" l="0.0254"/>
+        <quadrupole name="Q23E" l="0.6" k1="-0.251332"/>
+        <drift name="d255" l="0.0641"/>
+        <sextupole name="SEX_11E" l="0.272" k2="0.789151"/>
+        <drift name="d442" l="1.7523"/>
+        <quadrupole name="Q06E" l="0.6" k1="0.4777"/>
+        <drift name="d360" l="0.063"/>
+        <drift name="d151" l="0.157139"/>
+        <quadrupole name="Q27E" l="0.6" k1="-0.316006"/>
+        <quadrupole name="Q39W" l="0.6" k1="-0.247323"/>
+        <drift name="d265" l="0.157132"/>
+        <drift name="d034" l="0.493597"/>
+        <kicker name="HVKICK_01E" l="0.1727"/>
+        <quadrupole name="B23Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B23Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B23Eout" l="0.000001" k1="-212.76160545716"/>
+        <marker name="DET_45W"/>
+        <drift name="d047" l="3.887167"/>
+        <sextupole name="SEX_13W" l="0.272" k2="-1.98423"/>
+        <drift name="d197" l="0.182589"/>
+        <drift name="d081" l="0.157143"/>
+        <marker name="DET_13E"/>
+        <drift name="d170" l="0.0457"/>
+        <sextupole name="SEX_35E" l="0.272" k2="-0.273833"/>
+        <quadrupole name="B22Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B22Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B22Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d260" l="0.064"/>
+        <drift name="d266" l="0.488544"/>
+        <drift name="d429" l="0.0614"/>
+        <drift name="d011" l="0.377249"/>
+        <marker name="DET_49E"/>
+        <drift name="d395" l="0.774"/>
+        <drift name="d087" l="0.0278"/>
+        <drift name="WIG_15W" l="1.6"/>
+        <drift name="H_SEP_08E" l="2.442"/>
+        <drift name="d254" l="0.026"/>
+        <marker name="DET_04E"/>
+        <marker name="DET_12W2"/>
+        <quadrupole name="Q03W" l="0.6" k1="-0.207536"/>
+        <sextupole name="SEX_24E" l="0.272" k2="0.000867377"/>
+        <quadrupole name="SK_Q07W" l="0.152" tilt="0.7853981634"/>
+        <quadrupole name="B02in" l="0.000001" k1="0"/>
+        <sbend name="B02mod" l="3.237903" angle="0.10228927"/>
+        <quadrupole name="B02out" l="0.000001" k1="0"/>
+        <sextupole name="SEX_12E" l="0.272" k2="2.29206"/>
+        <sextupole name="SEX_45E" l="0.272" k2="0.562669"/>
+        <drift name="d402" l="0.0502"/>
+        <sextupole name="SEX_09E" l="0.272" k2="-0.057738500000000005"/>
+        <drift name="d207" l="0.0774"/>
+        <drift name="d108" l="0.0654"/>
+        <drift name="d102" l="0.488536"/>
+        <drift name="d160" l="0.03195"/>
+        <drift name="d088" l="0.358"/>
+        <quadrupole name="B21Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B21Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B21Wout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d286" l="0.157132"/>
+        <drift name="d237" l="0.336691"/>
+        <sextupole name="SEX_33W" l="0.272" k2="-1.44895"/>
+        <drift name="RF_W1" l="1.8" volt="0.0015" harmon="1281"/>
+        <drift name="d168" l="0.157132"/>
+        <marker name="DET_44E"/>
+        <drift name="d183" l="0.488442"/>
+        <sextupole name="SEX_43E" l="0.272" k2="-0.6147490000000001"/>
+        <drift name="d039" l="0.739926"/>
+        <quadrupole name="B18Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B18Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B18Wout" l="0.000001" k1="-212.76160545716"/>
+        <marker name="DET_07W"/>
+        <drift name="d387" l="0.123414"/>
+        <kicker name="PINGER_36W" l="0.656"/>
+        <quadrupole name="Q49AW" l="0.44" k1="0.317571"/>
+        <sextupole name="SEX_20W" l="0.272" k2="0.19782500000000003"/>
+        <marker name="DET_09E"/>
+        <drift name="d137" l="0.9622"/>
+        <quadrupole name="B48Win" l="0.000001" k1="-74.466318532542"/>
+        <sbend name="B48Wmod" l="2.94536783383704" angle="0.020944245"/>
+        <quadrupole name="B48Wout" l="0.000001" k1="-74.466318532542"/>
+        <kicker name="VKICK_48W" l="0.127"/>
+        <quadrupole name="Q30E" l="0.6" k1="0.248886"/>
+        <marker name="DET_03W"/>
+        <quadrupole name="B35Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B35Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B35Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d287" l="0.32166"/>
+        <drift name="d190" l="0.0238"/>
+        <quadrupole name="Q07E" l="0.6" k1="-0.267149"/>
+        <quadrupole name="Q48E" l="0.6" k1="0.517683"/>
+        <quadrupole name="Q23W" l="0.6" k1="-0.251332"/>
+        <drift name="d201" l="0.519844"/>
+        <quadrupole name="Q33E" l="0.6" k1="-0.203545"/>
+        <drift name="d337" l="0.157162"/>
+        <quadrupole name="SK_Q06W" l="0.1524" tilt="0.7853981634"/>
+        <drift name="d204" l="0.0645"/>
+        <marker name="DET_10W"/>
+        <quadrupole name="B03AWin" l="0.000001" k1="-106.375035616253"/>
+        <sbend name="B03AWmod" l="1.64354794535774" angle="0.01869933"/>
+        <quadrupole name="B03AWout" l="0.000001" k1="-106.375035616253"/>
+        <drift name="d443" l="0.815"/>
+        <drift name="d381" l="0.490517"/>
+        <quadrupole name="Q28E" l="0.6" k1="0.241405"/>
+        <quadrupole name="Q09W" l="0.6" k1="-0.19465900000000003"/>
+        <drift name="d344" l="0.0289"/>
+        <drift name="d217" l="0.189"/>
+        <marker name="DET_41E"/>
+        <quadrupole name="Q21W" l="0.6" k1="-0.282095"/>
+        <drift name="d247" l="0.182589"/>
+        <drift name="d230" l="0.307958"/>
+        <sextupole name="SEX_44W" l="0.272" k2="-0.383031"/>
+        <drift name="d448" l="0.161"/>
+        <drift name="d259" l="0.0354"/>
+        <drift name="d044" l="0.0984"/>
+        <drift name="d353" l="0.067"/>
+        <drift name="d349" l="0.064"/>
+        <drift name="d054" l="0.268414"/>
+        <drift name="d065" l="0.597"/>
+        <drift name="d422" l="0.2164"/>
+        <quadrupole name="B42Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B42Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B42Wout" l="0.000001" k1="-212.76160545716"/>
+        <sextupole name="SEX_27W" l="0.272" k2="0.15484"/>
+        <drift name="d133" l="0.360773"/>
+        <quadrupole name="Q14E" l="0.6" k1="0.28176700000000005"/>
+        <drift name="d378" l="0.0622"/>
+        <drift name="d273" l="0.157132"/>
+        <drift name="d007" l="0.815"/>
+        <marker name="DET_37W"/>
+        <quadrupole name="Q43W" l="0.6" k1="-0.275418"/>
+        <quadrupole name="B16Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B16Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B16Wout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d411" l="0.7607"/>
+        <drift name="d146" l="0.487451"/>
+        <quadrupole name="Q26W" l="0.6" k1="0.264921"/>
+        <drift name="WIG1_14W" l="1.6"/>
+        <drift name="d162" l="1.286531"/>
+        <drift name="d019" l="0.215499"/>
+        <quadrupole name="Q34W" l="0.6" k1="0.224936"/>
+        <marker name="DET_33E"/>
+        <drift name="d333" l="0.157162"/>
+        <drift name="d022" l="0.324752"/>
+        <drift name="d439" l="0.377242"/>
+        <drift name="d294" l="0.03655"/>
+        <marker name="DET_17E"/>
+        <drift name="d423" l="0.298029"/>
+        <drift name="d295" l="0.06155"/>
+        <drift name="d097" l="0.04615"/>
+        <drift name="d341" l="0.157163"/>
+        <quadrupole name="B30Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B30Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B30Wout" l="0.000001" k1="-212.76160545716"/>
+        <quadrupole name="Q43AE" l="0.6" k1="0.268177"/>
+        <drift name="d175" l="0.73582"/>
+        <quadrupole name="B23Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B23Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B23Wout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d450" l="0.429"/>
+        <kicker name="BUMP_26W" l="0.2295"/>
+        <drift name="d126" l="0.06715"/>
+        <drift name="d075" l="0.536148"/>
+        <drift name="d218" l="0.19932"/>
+        <kicker name="VKICK_08E" l="0.0635"/>
+        <drift name="d431" l="0.223536"/>
+        <marker name="DET_45E"/>
+        <drift name="d167" l="0.32136"/>
+        <drift name="d050" l="0.426639"/>
+        <drift name="d188" l="0.157131"/>
+        <drift name="d444" l="1.791891"/>
+        <drift name="d080" l="0.237639"/>
+        <drift name="d414" l="0.0638"/>
+        <quadrupole name="B15Win" l="0.000001" k1="-478.64301797229"/>
+        <sbend name="B15Wmod" l="6.575289" angle="0.11220022"/>
+        <quadrupole name="B15Wout" l="0.000001" k1="-478.64301797229"/>
+        <sextupole name="SEX_22W" l="0.272" k2="-0.00713488"/>
+        <drift name="d314" l="0.157162"/>
+        <drift name="d017" l="0.1624"/>
+        <quadrupole name="Q20E" l="0.6" k1="0.230037"/>
+        <sextupole name="SEX_36W" l="0.272" k2="-0.0156734"/>
+        <kicker name="VKICK_07E" l="0.064"/>
+        <quadrupole name="Q47W" l="0.6" k1="0.457292"/>
+        <marker name="DET_24E"/>
+        <marker name="DET_26W"/>
+        <drift name="d178" l="0.0487"/>
+        <quadrupole name="B41Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B41Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B41Wout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d361" l="0.1434"/>
+        <drift name="d375" l="0.0638"/>
+        <drift name="d406" l="0.3675"/>
+        <drift name="d208" l="1.248684"/>
+        <drift name="d089" l="0.128"/>
+        <drift name="d077" l="0.06665"/>
+        <quadrupole name="B21Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B21Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B21Eout" l="0.000001" k1="-212.76160545716"/>
+        <sextupole name="SEX_19E" l="0.272" k2="-1.75084"/>
+        <drift name="d438" l="0.5506"/>
+        <drift name="d129" l="0.157139"/>
+        <drift name="d059" l="0.0904"/>
+        <marker name="DET_09W"/>
+        <drift name="d299" l="5.008194"/>
+        <drift name="d036" l="0.292"/>
+        <quadrupole name="B48Ein" l="0.000001" k1="-74.466318532542"/>
+        <sbend name="B48Emod" l="2.94536783383704" angle="0.020944245"/>
+        <quadrupole name="B48Eout" l="0.000001" k1="-74.466318532542"/>
+        <drift name="d445" l="0.588"/>
+        <drift name="d437" l="0.0589"/>
+        <drift name="d241" l="0.767752"/>
+        <drift name="d113" l="0.06355"/>
+        <marker name="DET_38E"/>
+        <sextupole name="SEX_24W" l="0.272" k2="0.000867377"/>
+        <marker name="DET_48E"/>
+        <drift name="d060" l="0.06245"/>
+        <sextupole name="SK_SEX_23E" l="0.1262" tilt="0.5235987756"/>
+        <quadrupole name="SK_Q05W" l="0.1524" tilt="0.7853981634"/>
+        <marker name="DET_16E"/>
+        <quadrupole name="SK_Q04E" l="0.1524" tilt="0.7853981634" k1="0"/>
+        <sextupole name="SK_SEX_29E" l="0.1274" tilt="0.5235987756"/>
+        <drift name="d288" l="0.0262"/>
+        <quadrupole name="Q11E" l="0.6" k1="-0.21226500000000004"/>
+        <drift name="d025" l="0.0704"/>
+        <kicker name="BUMP_26E" l="0.2286"/>
+        <drift name="d409" l="1.645743"/>
+        <kicker name="VKICK_08WA" l="0.0635"/>
+        <sextupole name="SEX_36E" l="0.272" k2="-0.0156734"/>
+        <marker name="DET_19W"/>
+        <drift name="d374" l="0.05"/>
+        <drift name="d238" l="0.669583"/>
+        <quadrupole name="B47Ein" l="0.000001" k1="-212.754085355033"/>
+        <sbend name="B47Emod" l="3.28736259505112" angle="0.03740053"/>
+        <quadrupole name="B47Eout" l="0.000001" k1="-212.754085355033"/>
+        <drift name="d216" l="0.336692"/>
+        <drift name="d159" l="0.06415"/>
+        <drift name="d226" l="0.123436"/>
+        <quadrupole name="B27Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B27Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B27Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d074" l="0.0649"/>
+        <quadrupole name="B39Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B39Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B39Eout" l="0.000001" k1="-212.76160545716"/>
+        <quadrupole name="B16Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B16Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B16Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d275" l="0.047"/>
+        <sextupole name="SEX_45W" l="0.272" k2="0.562669"/>
+        <sextupole name="SEX_13E" l="0.272" k2="-1.98423"/>
+        <quadrupole name="Q43E" l="0.6" k1="-0.275418"/>
+        <quadrupole name="Q44E" l="0.6" k1="-0.202067"/>
+        <drift name="d430" l="0.275"/>
+        <drift name="d214" l="0.11375"/>
+        <drift name="d109" l="0.0252"/>
+        <drift name="d116" l="0.157139"/>
+        <drift name="d066" l="0.494"/>
+        <quadrupole name="SK_Q48W" l="0.254" tilt="0.7853981634"/>
+        <sextupole name="SEX_21E" l="0.272" k2="-2.00037"/>
+        <marker name="DET_41W"/>
+        <drift name="d195" l="2.232101"/>
+        <drift name="d192" l="0.157131"/>
+        <marker name="DET_29W"/>
+        <quadrupole name="Q26E" l="0.6" k1="0.264921"/>
+        <marker name="DET_29E"/>
+        <drift name="d390" l="0.06215"/>
+        <drift name="d385" l="1.6224"/>
+        <drift name="d323" l="0.065"/>
+        <quadrupole name="B40Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B40Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B40Wout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d221" l="0.128"/>
+        <kicker name="HKICK_49E" l="0.127"/>
+        <quadrupole name="Q19W" l="0.6" k1="-0.299099"/>
+        <marker name="DET_48W"/>
+        <drift name="WIG2_14E" l="1.6"/>
+        <drift name="d289" l="0.0637"/>
+        <drift name="d278" l="0.363649"/>
+        <marker name="DET_43W"/>
+        <drift name="d424" l="0.495171"/>
+        <quadrupole name="SC_Q01W" l="0.6615" k1="-2.2775"/>
+        <marker name="DET_06E"/>
+        <quadrupole name="B28Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B28Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B28Eout" l="0.000001" k1="-212.76160545716"/>
+        <marker name="DET_38W"/>
+        <quadrupole name="Q49E" l="0.95" k1="-0.398707"/>
+        <quadrupole name="Q36W" l="0.6" k1="0.189022"/>
+        <sextupole name="SEX_31W" l="0.272" k2="-1.6874"/>
+        <drift name="d140" l="0.0644"/>
+        <drift name="d045" l="0.0654"/>
+        <quadrupole name="B03Win" l="0.000001" k1="-74.466318532542"/>
+        <sbend name="B03Wmod" l="2.94536783383704" angle="0.020944245"/>
+        <quadrupole name="B03Wout" l="0.000001" k1="-74.466318532542"/>
+        <quadrupole name="B47Win" l="0.000001" k1="-212.754085355033"/>
+        <sbend name="B47Wmod" l="3.28736259505112" angle="0.03740053"/>
+        <quadrupole name="B47Wout" l="0.000001" k1="-212.754085355033"/>
+        <drift name="d340" l="0.0651"/>
+        <drift name="d042" l="0.1834"/>
+        <sextupole name="SEX_30W" l="0.272" k2="0.20480900000000002"/>
+        <kicker name="BUMP_38E" l="0.229"/>
+        <drift name="d002" l="0.06225"/>
+        <quadrupole name="Q13E" l="0.6" k1="-0.225284"/>
+        <drift name="d248" l="0.537149"/>
+        <quadrupole name="Q00W" l="0.184" k1="-1.8100000000000003" tilt="0.0785"/>
+        <drift name="d397" l="0.486782"/>
+        <drift name="d369" l="0.489283"/>
+        <drift name="d290" l="0.3227"/>
+        <quadrupole name="Q25E" l="0.6" k1="-0.309489"/>
+        <drift name="d293" l="0.655531"/>
+        <marker name="DET_47W"/>
+        <quadrupole name="Q12E" l="0.6" k1="0.254765"/>
+        <drift name="d037" l="0.75543"/>
+        <drift name="d051" l="0.235969"/>
+        <quadrupole name="Q39E" l="0.6" k1="-0.247323"/>
+        <quadrupole name="B01in" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B01mod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B01out" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d171" l="0.489913"/>
+        <drift name="d136" l="0.02655"/>
+        <drift name="OCT_48W" l="0.381"/>
+        <quadrupole name="B43Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B43Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B43Eout" l="0.000001" k1="-212.76160545716"/>
+        <marker name="DET_33W"/>
+        <marker name="DET_31W"/>
+        <marker name="DET_46W"/>
+        <drift name="d145" l="0.0472"/>
+        <drift name="d043" l="0.258982"/>
+        <drift name="d073" l="0.0674"/>
+        <drift name="d425" l="0.0674"/>
+        <marker name="DET_13W"/>
+        <quadrupole name="SK_Q07E" l="0.152" tilt="0.7853981634"/>
+        <drift name="d056" l="0.782"/>
+        <marker name="DET_01W"/>
+        <marker name="DET_00E"/>
+        <quadrupole name="B17Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B17Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B17Wout" l="0.000001" k1="-212.76160545716"/>
+        <quadrupole name="Q37W" l="0.6" k1="-0.207492"/>
+        <quadrupole name="SC_Q02E" l="0.6615" k1="1.31863"/>
+        <drift name="WIG1_18W" l="1.6"/>
+        <drift name="d016" l="0.3224"/>
+        <quadrupole name="B27Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B27Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B27Wout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d135" l="0.06465"/>
+        <sextupole name="SEX_47E" l="0.272" k2="0.40935699999999997"/>
+        <drift name="d407" l="0.0639"/>
+        <drift name="H_SEP_45W" l="2.3894"/>
+        <drift name="d219" l="0.23232"/>
+        <quadrupole name="B15Ein" l="0.000001" k1="-478.64301797229"/>
+        <sbend name="B15Emod" l="6.575289" angle="0.11220022"/>
+        <quadrupole name="B15Eout" l="0.000001" k1="-478.64301797229"/>
+        <drift name="d436" l="0.235346"/>
+        <drift name="d316" l="0.966"/>
+        <quadrupole name="SK_Q14E" l="0.15" tilt="0.7853981634"/>
+        <quadrupole name="B42Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B42Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B42Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d306" l="0.157162"/>
+        <drift name="OCT_45W" l="0.381"/>
+        <sextupole name="SEX_26E" l="0.272" k2="0.650047"/>
+        <drift name="WIG_W" l="3"/>
+        <sextupole name="SEX_35W" l="0.272" k2="-0.273833"/>
+        <drift name="d024" l="0.268"/>
+        <quadrupole name="Q44W" l="0.6" k1="-0.202067"/>
+        <drift name="d404" l="2.732098"/>
+        <kicker name="BUMP_28E" l="0.2286"/>
+        <drift name="d158" l="0.157131"/>
+        <quadrupole name="Q34E" l="0.6" k1="0.224936"/>
+        <drift name="d335" l="0.0506"/>
+        <drift name="d172" l="0.157131"/>
+        <drift name="d215" l="0.676383"/>
+        <drift name="d166" l="0.02505"/>
+        <drift name="d082" l="0.0633"/>
+        <drift name="d240" l="0.501739"/>
+        <kicker name="HKICK_08E" l="0.0635"/>
+        <drift name="d417" l="0.351"/>
+        <marker name="IP_L0_END"/>
+        <marker name="DET_02W"/>
+        <drift name="d004" l="0.2505"/>
+        <drift name="WIG2_18E" l="1.6"/>
+        <quadrupole name="B26Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B26Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B26Wout" l="0.000001" k1="-212.76160545716"/>
+        <marker name="DET_02E"/>
+        <drift name="d134" l="0.157139"/>
+        <drift name="d376" l="0.157162"/>
+        <drift name="d368" l="0.157162"/>
+        <drift name="d307" l="0.488982"/>
+        <marker name="DET_27W"/>
+        <quadrupole name="Q46E" l="0.6" k1="-0.247413"/>
+        <drift name="d185" l="0.0654"/>
+        <quadrupole name="Q08AW" l="0.6" k1="-0.0165164"/>
+        <drift name="d033" l="0.445"/>
+        <marker name="DET_17W"/>
+        <drift name="d014" l="0.45727"/>
+        <sextupole name="SEX_42E" l="0.272" k2="-0.12875"/>
+        <drift name="d324" l="0.157162"/>
+        <marker name="DET_36E"/>
+        <sextupole name="SEX_18W" l="0.272" k2="1.17622"/>
+        <marker name="DET_22E"/>
+        <quadrupole name="B38Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B38Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B38Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d224" l="0.260958"/>
+        <sextupole name="SEX_22E" l="0.272" k2="-0.00713488"/>
+        <drift name="d139" l="0.157139"/>
+        <drift name="d152" l="0.0644"/>
+        <drift name="d078" l="0.03775"/>
+        <drift name="d067" l="1.630558"/>
+        <sextupole name="SEX_39E" l="0.272" k2="-2.09046"/>
+        <drift name="d313" l="0.065"/>
+        <quadrupole name="B07Ein" l="0.000001" k1="0"/>
+        <sbend name="B07Emod" l="3.237903" angle="0.10228927"/>
+        <quadrupole name="B07Eout" l="0.000001" k1="0"/>
+        <sextupole name="SEX_33E" l="0.272" k2="-1.44895"/>
+        <drift name="d249" l="0.0639"/>
+        <sextupole name="SEX_42W" l="0.272" k2="-0.12875"/>
+        <drift name="d386" l="0.220036"/>
+        <quadrupole name="B39Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B39Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B39Wout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d253" l="0.839614"/>
+        <marker name="DET_25W"/>
+        <drift name="d270" l="0.488743"/>
+        <marker name="DET_24W"/>
+        <drift name="d356" l="0.0468"/>
+        <drift name="d277" l="0.157132"/>
+        <drift name="d069" l="0.06515"/>
+        <quadrupole name="B18Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B18Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B18Eout" l="0.000001" k1="-212.76160545716"/>
+        <quadrupole name="Q22W" l="0.6" k1="0.258764"/>
+        <marker name="DET_18W"/>
+        <quadrupole name="B44Win" l="0.000001" k1="-478.64301797229"/>
+        <sbend name="B44Wmod" l="6.575289" angle="0.11220022"/>
+        <quadrupole name="B44Wout" l="0.000001" k1="-478.64301797229"/>
+        <drift name="OCT_45E" l="0.381"/>
+        <drift name="d398" l="0.04945"/>
+        <drift name="d364" l="0.12769"/>
+        <drift name="d263" l="0.0374"/>
+        <sextupole name="SEX_10W" l="0.272" k2="0.40228200000000003"/>
+        <drift name="d031" l="0.885"/>
+        <drift name="d408" l="0.1094"/>
+        <drift name="d292" l="1.587771"/>
+        <drift name="d148" l="0.06115"/>
+        <drift name="d331" l="0.0277"/>
+        <sextupole name="SEX_21W" l="0.272" k2="-2.00037"/>
+        <drift name="d243" l="0.3794"/>
+        <quadrupole name="B07in" l="0.000001" k1="0"/>
+        <sbend name="B07mod" l="3.177222" angle="0.09125466"/>
+        <quadrupole name="B07out" l="0.000001" k1="0"/>
+        <quadrupole name="B11Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B11Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B11Wout" l="0.000001" k1="-212.76160545716"/>
+        <quadrupole name="B36Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B36Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B36Wout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d213" l="0.501739"/>
+        <drift name="d315" l="0.496199"/>
+        <drift name="d235" l="0.19032"/>
+        <drift name="d325" l="0.486383"/>
+        <drift name="d098" l="0.488536"/>
+        <marker name="DET_39W"/>
+        <sextupole name="SEX_30E" l="0.272" k2="0.20480900000000002"/>
+        <drift name="d199" l="0.0271"/>
+        <marker name="DET_49W"/>
+        <drift name="d156" l="0.0369"/>
+        <sextupole name="SEX_12W" l="0.272" k2="2.29206"/>
+        <drift name="d040" l="0.0035"/>
+        <quadrupole name="B06in" l="0.000001" k1="-212.754085355033"/>
+        <sbend name="B06mod" l="3.28736259505112" angle="0.03740053"/>
+        <quadrupole name="B06out" l="0.000001" k1="-212.754085355033"/>
+        <drift name="d447" l="0.2505"/>
+        <quadrupole name="Q03E" l="0.6" k1="-0.20769600000000002"/>
+        <quadrupole name="Q12W" l="0.6" k1="0.269557"/>
+        <drift name="d435" l="0.266475"/>
+        <drift name="d143" l="0.157139"/>
+        <drift name="d157" l="0.259396"/>
+        <marker name="DET_23E"/>
+        <drift name="d281" l="0.0617"/>
+        <drift name="d072" l="0.215"/>
+        <quadrupole name="Q45W" l="0.6" k1="0.318646"/>
+        <quadrupole name="B04Win" l="0.000001" k1="0"/>
+        <sbend name="B04Wmod" l="3.237903" angle="0.10228927"/>
+        <quadrupole name="B04Wout" l="0.000001" k1="0"/>
+        <drift name="d252" l="0.5253"/>
+        <drift name="d150" l="0.739658"/>
+        <drift name="d372" l="0.157162"/>
+        <sextupole name="SEX_25W" l="0.272" k2="-0.5741360000000001"/>
+        <drift name="d384" l="0.0364"/>
+        <drift name="d027" l="0.318749"/>
+        <drift name="d358" l="0.157162"/>
+        <drift name="d021" l="0.1704"/>
+        <quadrupole name="SK_Q03W" l="0.1727" tilt="0.7853981634" k1="-0.044534"/>
+        <drift name="d015" l="0.237497"/>
+        <drift name="d200" l="0.853"/>
+        <drift name="d174" l="0.0268"/>
+        <drift name="d112" l="0.157139"/>
+        <drift name="d062" l="0.189255"/>
+        <sextupole name="SEX_29E" l="0.272" k2="-0.809351"/>
+        <quadrupole name="Q42W" l="0.6" k1="0.217731"/>
+        <drift name="d104" l="0.0661"/>
+        <quadrupole name="Q14W" l="0.6" k1="0.281899"/>
+        <drift name="d310" l="0.157162"/>
+        <quadrupole name="SC_Q01E" l="0.6615" k1="-2.2775"/>
+        <drift name="d193" l="0.0614"/>
+        <drift name="d008" l="1.7503"/>
+        <marker name="DET_27E"/>
+        <drift name="d250" l="0.0714"/>
+        <sextupole name="SK_SEX_07W" l="0.128" tilt="0.5235987756"/>
+        <drift name="d242" l="0.0659"/>
+        <drift name="d394" l="0.8944"/>
+        <drift name="d359" l="0.537982"/>
+        <quadrupole name="B06Win" l="0.000001" k1="0"/>
+        <sbend name="B06Wmod" l="3.237903" angle="0.10228927"/>
+        <quadrupole name="B06Wout" l="0.000001" k1="0"/>
+        <quadrupole name="Q33W" l="0.6" k1="-0.203545"/>
+        <sextupole name="SK_SEX_12E" l="0.126" tilt="0.5235987756"/>
+        <drift name="d345" l="0.0636"/>
+        <drift name="d114" l="0.04855"/>
+        <drift name="H_SEP_08W" l="2.442"/>
+        <quadrupole name="Q21E" l="0.6" k1="-0.282095"/>
+        <quadrupole name="B13Win" l="0.000001" k1="-478.64301797229"/>
+        <sbend name="B13Wmod" l="6.575289" angle="0.11220022"/>
+        <quadrupole name="B13Wout" l="0.000001" k1="-478.64301797229"/>
+        <marker name="DET_07E"/>
+        <quadrupole name="B20Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B20Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B20Wout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d061" l="0.602622"/>
+        <quadrupole name="B03Ein" l="0.000001" k1="-74.466318532542"/>
+        <sbend name="B03Emod" l="2.94536783383704" angle="0.020944245"/>
+        <quadrupole name="B03Eout" l="0.000001" k1="-74.466318532542"/>
+        <drift name="d030" l="0.097"/>
+        <drift name="d350" l="0.157162"/>
+        <drift name="d083" l="0.0502"/>
+        <quadrupole name="B04in" l="0.000001" k1="-106.375035616253"/>
+        <sbend name="B04mod" l="1.64354794535774" angle="0.01869933"/>
+        <quadrupole name="B04out" l="0.000001" k1="-106.375035616253"/>
+        <quadrupole name="SK_Q03E" l="0.1727" tilt="0.7853981634" k1="0.044534"/>
+        <quadrupole name="SK_Q47W" l="0.152" tilt="0.7853981634"/>
+        <drift name="d181" l="0.0649"/>
+        <drift name="d057" l="0.192"/>
+        <quadrupole name="Q18W" l="0.6" k1="0.240463"/>
+        <drift name="d053" l="0.0634"/>
+        <quadrupole name="Q30W" l="0.6" k1="0.248886"/>
+        <drift name="d304" l="0.0295"/>
+        <quadrupole name="Q06W" l="0.6" k1="0.468823"/>
+        <sextupole name="SEX_38E" l="0.272" k2="1.32664"/>
+        <drift name="d165" l="0.06515"/>
+        <drift name="d177" l="0.0634"/>
+        <sextupole name="SEX_34E" l="0.272" k2="0.8537810000000001"/>
+        <sextupole name="SEX_31E" l="0.272" k2="-1.6874"/>
+        <quadrupole name="Q15E" l="0.6" k1="-0.20533400000000002"/>
+        <sextupole name="SEX_23E" l="0.272" k2="-0.745218"/>
+        <quadrupole name="Q24E" l="0.6" k1="0.245105"/>
+        <quadrupole name="Q11W" l="0.6" k1="-0.20678200000000002"/>
+        <sextupole name="SEX_17W" l="0.272" k2="-1.13156"/>
+        <marker name="DET_23W"/>
+        <quadrupole name="B32Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B32Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B32Wout" l="0.000001" k1="-212.76160545716"/>
+        <marker name="IP_L3"/>
+        <drift name="d355" l="0.487044"/>
+        <drift name="d291" l="0.119"/>
+        <drift name="d362" l="0.10701"/>
+        <sextupole name="SEX_16E" l="0.272" k2="1.02182"/>
+        <sextupole name="SEX_10E" l="0.272" k2="0.40228200000000003"/>
+        <drift name="d326" l="0.0502"/>
+        <drift name="d041" l="0.1064"/>
+        <drift name="d225" l="1.192"/>
+        <drift name="d093" l="0.0629"/>
+        <quadrupole name="B07Win" l="0.000001" k1="0"/>
+        <sbend name="B07Wmod" l="3.237903" angle="0.10228927"/>
+        <quadrupole name="B07Wout" l="0.000001" k1="0"/>
+        <quadrupole name="Q08E" l="0.6" k1="0.16287600000000002"/>
+        <quadrupole name="SK_Q04W" l="0.1524" tilt="0.7853981634" k1="0"/>
+        <kicker name="PINGER_36E" l="0.5112"/>
+        <drift name="d279" l="0.129"/>
+        <drift name="d244" l="0.322484"/>
+        <drift name="d187" l="0.489444"/>
+        <drift name="d032" l="0.238"/>
+        <quadrupole name="B30Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B30Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B30Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d251" l="1.171"/>
+        <marker name="DET_37E"/>
+        <drift name="d111" l="1.827151"/>
+        <drift name="d206" l="0.182588"/>
+        <drift name="d426" l="0.238"/>
+        <quadrupole name="Q32E" l="0.6" k1="0.198871"/>
+        <quadrupole name="Q38E" l="0.6" k1="0.227525"/>
+        <sextupole name="SEX_26W" l="0.272" k2="0.650047"/>
+        <quadrupole name="Q20W" l="0.6" k1="0.230037"/>
+        <quadrupole name="SC_SK_Q01W" l="0.68" k1="-0.0001"/>
+        <sextupole name="SEX_28W" l="0.272" k2="0.38023300000000004"/>
+        <quadrupole name="Q08W" l="0.6" k1="0.203619"/>
+        <drift name="WIG1_14E" l="1.6"/>
+        <drift name="d147" l="0.157139"/>
+        <drift name="d128" l="0.485952"/>
+        <drift name="d222" l="0.276777"/>
+        <sextupole name="SEX_08W" l="0.272" k2="-0.110926"/>
+        <quadrupole name="Q29W" l="0.6" k1="-0.246056"/>
+        <drift name="d155" l="1.9361"/>
+        <marker name="DET_40W"/>
+        <quadrupole name="Q42E" l="0.6" k1="0.217731"/>
+        <quadrupole name="B41Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B41Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B41Eout" l="0.000001" k1="-212.76160545716"/>
+        <kicker name="HKICK_49W" l="0.127"/>
+        <drift name="d282" l="0.157132"/>
+        <marker name="DET_22W"/>
+        <quadrupole name="Q15W" l="0.6" k1="-0.206187"/>
+        <quadrupole name="Q16E" l="0.6" k1="0.248391"/>
+        <drift name="d327" l="0.0644"/>
+        <marker name="DET_15W"/>
+        <marker name="DET_11W"/>
+        <drift name="d434" l="0.2393"/>
+        <marker name="DET_06W1"/>
+        <drift name="d121" l="0.0669"/>
+        <drift name="d196" l="0.449831"/>
+        <quadrupole name="B20Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B20Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B20Eout" l="0.000001" k1="-212.76160545716"/>
+        <quadrupole name="B06Ein" l="0.000001" k1="0"/>
+        <sbend name="B06Emod" l="3.237903" angle="0.10228927"/>
+        <quadrupole name="B06Eout" l="0.000001" k1="0"/>
+        <drift name="d348" l="0.0501"/>
+        <marker name="DET_21W"/>
+        <drift name="d373" l="0.487183"/>
+        <marker name="DET_30E"/>
+        <quadrupole name="B04Ein" l="0.000001" k1="0"/>
+        <sbend name="B04Emod" l="3.237903" angle="0.10228927"/>
+        <quadrupole name="B04Eout" l="0.000001" k1="0"/>
+        <marker name="DET_42E"/>
+        <drift name="d220" l="0.14"/>
+        <sextupole name="SEX_19W" l="0.272" k2="-1.75084"/>
+        <drift name="d415" l="0.0646"/>
+        <drift name="d144" l="0.0664"/>
+        <drift name="d236" l="0.198"/>
+        <drift name="d103" l="0.157139"/>
+        <marker name="DET_12W"/>
+        <drift name="d071" l="0.380501"/>
+        <quadrupole name="Q43AW" l="0.6" k1="0.268177"/>
+        <drift name="d084" l="0.487547"/>
+        <drift name="d320" l="0.358919"/>
+        <sextupole name="SEX_32W" l="0.272" k2="1.72406"/>
+        <kicker name="HKICK_07W" l="0.044"/>
+        <drift name="d269" l="0.157131"/>
+        <drift name="d393" l="0.06015"/>
+        <quadrupole name="B40Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B40Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B40Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d303" l="0.73512"/>
+        <drift name="d298" l="0.0428"/>
+        <drift name="d105" l="0.0456"/>
+        <quadrupole name="B26Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B26Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B26Eout" l="0.000001" k1="-212.76160545716"/>
+        <marker name="DET_19E"/>
+        <marker name="DET_36W"/>
+        <drift name="d026" l="0.1764"/>
+        <quadrupole name="Q41E" l="0.6" k1="-0.268756"/>
+        <quadrupole name="B46Win" l="0.000001" k1="-478.64301797229"/>
+        <sbend name="B46Wmod" l="6.575289" angle="0.11220022"/>
+        <quadrupole name="B46Wout" l="0.000001" k1="-478.64301797229"/>
+        <drift name="d182" l="0.0477"/>
+        <sextupole name="SEX_29W" l="0.272" k2="-0.809351"/>
+        <drift name="d233" l="0.148"/>
+        <drift name="d076" l="0.157143"/>
+        <marker name="DET_35E"/>
+        <drift name="WIG3_18E" l="1.6"/>
+        <quadrupole name="Q49AE" l="0.44" k1="0.317571"/>
+        <quadrupole name="B36Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B36Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B36Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d120" l="0.157139"/>
+        <drift name="d191" l="0.511344"/>
+        <drift name="d309" l="0.0643"/>
+        <drift name="d264" l="0.061"/>
+        <drift name="WIG2_14W" l="1.6"/>
+        <drift name="d258" l="2.223455"/>
+        <quadrupole name="B25Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B25Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B25Wout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d164" l="0.4254"/>
+        <marker name="DET_32W"/>
+        <quadrupole name="Q47AE" l="0.6" k1="-0.331776"/>
+        <drift name="d003" l="0.161"/>
+        <quadrupole name="Q04E" l="0.6" k1="0.4442650000000001"/>
+        <drift name="d363" l="0.12769"/>
+        <drift name="d338" l="0.487743"/>
+        <quadrupole name="B17Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B17Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B17Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d272" l="0.0649"/>
+        <quadrupole name="Q46W" l="0.6" k1="-0.247413"/>
+        <drift name="d234" l="0.23282"/>
+        <drift name="d205" l="0.536548"/>
+        <sextupole name="SEX_43W" l="0.272" k2="-0.6147490000000001"/>
+        <quadrupole name="Q28W" l="0.6" k1="0.241405"/>
+        <drift name="d419" l="0.239638"/>
+        <drift name="d070" l="0.156654"/>
+        <drift name="d280" l="0.0427"/>
+        <quadrupole name="Q22E" l="0.6" k1="0.258764"/>
+        <drift name="RF_W2" l="1.8" volt="0.0015" harmon="1281"/>
+        <drift name="d210" l="0.3594"/>
+        <drift name="d449" l="0.06225"/>
+        <drift name="d117" l="0.0649"/>
+        <quadrupole name="Q07W" l="0.6" k1="-0.316099"/>
+        <drift name="d229" l="0.266958"/>
+        <quadrupole name="Q32W" l="0.6" k1="0.198871"/>
+        <drift name="WIG1_18E" l="1.6"/>
+        <drift name="WIG_15E" l="1.6"/>
+        <drift name="d245" l="1.237414"/>
+        <drift name="d366" l="0.0282"/>
+        <drift name="d138" l="0.500153"/>
+        <sextupole name="SEX_11W" l="0.272" k2="0.789151"/>
+        <drift name="d153" l="0.0268"/>
+        <marker name="DET_42W"/>
+        <quadrupole name="Q47AW" l="0.6" k1="-0.331776"/>
+        <drift name="d110" l="0.5548"/>
+        <drift name="d029" l="0.0984"/>
+        <drift name="d049" l="0.11"/>
+        <sextupole name="SEX_25E" l="0.272" k2="-0.5741360000000001"/>
+        <drift name="d382" l="0.157676"/>
+        <drift name="d328" l="0.157162"/>
+        <drift name="d127" l="0.04795"/>
+        <drift name="d211" l="0.0819"/>
+        <drift name="d154" l="3.070716"/>
+        <sextupole name="SEX_41E" l="0.272" k2="0.383521"/>
+        <drift name="d184" l="0.157132"/>
+        <drift name="d052" l="0.1904"/>
+        <drift name="d396" l="0.223297"/>
+        <drift name="d091" l="0.216207"/>
+        <sextupole name="SEX_38W" l="0.272" k2="1.32664"/>
+        <drift name="d141" l="0.0258"/>
+        <quadrupole name="B22Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B22Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B22Wout" l="0.000001" k1="-212.76160545716"/>
+        <sextupole name="SEX_39W" l="0.272" k2="-2.09046"/>
+        <drift name="d339" l="0.0482"/>
+        <sextupole name="SEX_47W" l="0.272" k2="0.40935699999999997"/>
+        <quadrupole name="B31Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B31Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B31Wout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d267" l="0.0487"/>
+        <drift name="d149" l="0.02525"/>
+        <drift name="d010" l="0.423383"/>
+        <drift name="d013" l="0.1734"/>
+        <drift name="d441" l="0.1023"/>
+        <quadrupole name="B44Ein" l="0.000001" k1="-478.64301797229"/>
+        <sbend name="B44Emod" l="6.575289" angle="0.11220022"/>
+        <quadrupole name="B44Eout" l="0.000001" k1="-478.64301797229"/>
+        <quadrupole name="B29Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B29Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B29Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d018" l="0.33275"/>
+        <quadrupole name="Q25W" l="0.6" k1="-0.309489"/>
+        <sextupole name="SEX_08E" l="0.272" k2="-0.110926"/>
+        <drift name="d379" l="0.0594"/>
+        <drift name="d106" l="0.489337"/>
+        <quadrupole name="Q10W" l="0.6" k1="0.25706500000000004"/>
+        <quadrupole name="Q36E" l="0.6" k1="0.189022"/>
+        <sextupole name="SEX_27E" l="0.272" k2="0.15484"/>
+        <marker name="DET_08E"/>
+        <drift name="d227" l="0.141697"/>
+        <drift name="d122" l="0.0238"/>
+        <marker name="DET_46E"/>
+        <quadrupole name="B05Win" l="0.000001" k1="0"/>
+        <sbend name="B05Wmod" l="3.237903" angle="0.10228927"/>
+        <quadrupole name="B05Wout" l="0.000001" k1="0"/>
+        <drift name="d085" l="0.157143"/>
+        <drift name="d118" l="0.0472"/>
+        <drift name="d403" l="0.064"/>
+        <quadrupole name="Q04W" l="0.6" k1="0.4441"/>
+        <drift name="d413" l="0.264"/>
+        <quadrupole name="SK_Q47E" l="0.152" tilt="0.7853981634"/>
+        <drift name="d179" l="0.488944"/>
+        <sextupole name="SEX_20E" l="0.272" k2="0.19782500000000003"/>
+        <kicker name="HVKICK_01W" l="0.1727"/>
+        <drift name="d283" l="0.488413"/>
+        <quadrupole name="B47AEin" l="0.000001" k1="0"/>
+        <sbend name="B47AEmod" l="3.177222" angle="0.09125466"/>
+        <quadrupole name="B47AEout" l="0.000001" k1="0"/>
+        <quadrupole name="Q19E" l="0.6" k1="-0.299099"/>
+        <drift name="d318" l="0.0647"/>
+        <drift name="d343" l="0.5349"/>
+        <quadrupole name="SK_Q48E" l="0.254" tilt="0.7853981634"/>
+        <drift name="d302" l="0.157162"/>
+        <drift name="V_SEP_48E" l="2.647"/>
+        <marker name="DET_35W"/>
+        <drift name="d055" l="0.217301"/>
+        <quadrupole name="B43Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B43Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B43Wout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d169" l="0.0654"/>
+        <drift name="d410" l="1.1994"/>
+        <sextupole name="SK_SEX_12W" l="0.128" tilt="0.5235987756"/>
+        <drift name="d371" l="0.0669"/>
+        <drift name="d322" l="0.0249"/>
+        <quadrupole name="B33Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B33Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B33Eout" l="0.000001" k1="-212.76160545716"/>
+        <kicker name="BUMP_36E" l="0.2302"/>
+        <drift name="d176" l="0.157131"/>
+        <drift name="d096" l="0.06635"/>
+        <marker name="DET_16W"/>
+        <marker name="DET_08W"/>
+        <sextupole name="SEX_40E" l="0.272" k2="0.5274650000000001"/>
+        <drift name="d261" l="0.157132"/>
+        <drift name="d012" l="0.214192"/>
+        <drift name="d392" l="0.604864"/>
+        <kicker name="VKICK_48E" l="0.127"/>
+        <marker name="DET_26E"/>
+        <drift name="d006" l="1.791896"/>
+        <sextupole name="SEX_18E" l="0.272" k2="1.17622"/>
+        <drift name="d257" l="0.450746"/>
+        <quadrupole name="Q17E" l="0.6" k1="-0.23427"/>
+        <drift name="d131" l="0.0267"/>
+        <quadrupole name="SC_Q02W" l="0.6615" k1="1.31863"/>
+        <drift name="d064" l="0.0196"/>
+        <drift name="d189" l="0.0659"/>
+        <sextupole name="SEX_17E" l="0.272" k2="-1.13156"/>
+        <marker name="DET_00W"/>
+        <drift name="d352" l="0.0455"/>
+        <kicker name="VKICK_16W" l="0.25"/>
+        <drift name="d418" l="0.071"/>
+        <drift name="V_SEP_48W" l="2.647"/>
+        <drift name="d332" l="0.0635"/>
+        <drift name="d365" l="0.391161"/>
+        <drift name="d246" l="0.0887"/>
+        <quadrupole name="SK_Q09E" l="0.152" tilt="0.7853981634"/>
+        <drift name="d420" l="0.8578"/>
+        <drift name="WIG2_18W" l="1.6"/>
+        <sextupole name="SEX_37E" l="0.272" k2="-0.944835"/>
+        <quadrupole name="Q38W" l="0.6" k1="0.227525"/>
+        <quadrupole name="Q24W" l="0.6" k1="0.245105"/>
+        <sextupole name="SEX_14W" l="0.272" k2="0.714497"/>
+        <drift name="d271" l="0.0474"/>
+        <drift name="d163" l="0.178"/>
+        <quadrupole name="Q40E" l="0.6" k1="0.259829"/>
+        <drift name="d048" l="0.0644"/>
+        <drift name="d357" l="0.0672"/>
+        <drift name="d194" l="0.0303"/>
+        <drift name="d020" l="0.3444"/>
+        <quadrupole name="Q37E" l="0.6" k1="-0.207492"/>
+        <marker name="DET_03E"/>
+        <drift name="d001" l="0.429"/>
+        <quadrupole name="B35Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B35Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B35Wout" l="0.000001" k1="-212.76160545716"/>
+        <quadrupole name="B28Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B28Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B28Wout" l="0.000001" k1="-212.76160545716"/>
+        <quadrupole name="SK_Q05E" l="0.1524" tilt="0.7853981634"/>
+        <marker name="DET_21E"/>
+        <drift name="d063" l="0.0628"/>
+        <drift name="WIG_E" l="2.355"/>
+        <sextupole name="SEX_15E" l="0.272" k2="-2.01689"/>
+        <marker name="DET_15E"/>
+        <marker name="DET_28W"/>
+        <drift name="d099" l="0.157139"/>
+        <sextupole name="SEX_32E" l="0.272" k2="1.72406"/>
+        <drift name="d212" l="0.751721"/>
+        <marker name="DET_04W"/>
+        <marker name="DET_18E"/>
+        <quadrupole name="SK_Q02W" l="0.1727" tilt="0.7853981634" k1="-0.044534"/>
+        <marker name="DET_32E"/>
+        <quadrupole name="SK_Q09W" l="0.152" tilt="0.7853981634"/>
+        <marker name="DET_14W"/>
+        <quadrupole name="B12Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B12Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B12Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d028" l="0.298006"/>
+        <quadrupole name="Q16W" l="0.6" k1="0.248391"/>
+        <drift name="d383" l="0.0641"/>
+        <marker name="DET_14E"/>
+        <drift name="d427" l="0.254475"/>
+        <marker name="DET_08AW"/>
+        <sextupole name="SEX_40W" l="0.272" k2="0.5274650000000001"/>
+        <drift name="WIG3_18W" l="1.6"/>
+        <marker name="DET_34W"/>
+        <drift name="d399" l="0.06475"/>
+        <quadrupole name="Q29E" l="0.6" k1="-0.246056"/>
+        <drift name="d046" l="1.534"/>
+        <quadrupole name="B24Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B24Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B24Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d009" l="0.1033"/>
+        <drift name="d203" l="0.0604"/>
+        <quadrupole name="Q13W" l="0.6" k1="-0.22264300000000004"/>
+        <quadrupole name="Q00E" l="0.184" tilt="-0.0785" k1="-1.8100000000000003"/>
+        <drift name="d391" l="0.189272"/>
+        <drift name="d297" l="0.253495"/>
+        <drift name="d312" l="0.0259"/>
+        <drift name="d231" l="0.300777"/>
+        <drift name="d262" l="0.502673"/>
+        <quadrupole name="Q09E" l="0.6" k1="-0.223447"/>
+        <drift name="RF_E2" l="1.8" volt="0.0015" harmon="1281"/>
+        <drift name="d301" l="0.0643"/>
+        <drift name="d412" l="0.7275"/>
+        <drift name="d228" l="1.179"/>
+        <drift name="d347" l="0.486944"/>
+        <drift name="d284" l="0.0485"/>
+        <quadrupole name="B33Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B33Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B33Wout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d433" l="0.0541"/>
+        <drift name="d351" l="0.488483"/>
+        <drift name="d268" l="0.0638"/>
+        <drift name="d317" l="0.0267"/>
+        <quadrupole name="B13Ein" l="0.000001" k1="-478.64301797229"/>
+        <sbend name="B13Emod" l="6.575289" angle="0.11220022"/>
+        <quadrupole name="B13Eout" l="0.000001" k1="-478.64301797229"/>
+        <drift name="d321" l="0.1486"/>
+        <quadrupole name="Q31W" l="0.6" k1="-0.227893"/>
+        <quadrupole name="B11Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B11Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B11Eout" l="0.000001" k1="-212.76160545716"/>
+        <quadrupole name="Q18E" l="0.6" k1="0.240463"/>
+        <drift name="d123" l="0.1413"/>
+        <quadrupole name="B31Ein" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B31Emod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B31Eout" l="0.000001" k1="-212.76160545716"/>
+        <drift name="d346" l="0.157162"/>
+        <drift name="d446" l="0.532"/>
+        <quadrupole name="Q35E" l="0.6" k1="-0.161838"/>
+        <marker name="DET_31E"/>
+        <drift name="d119" l="0.488936"/>
+        <quadrupole name="Q31E" l="0.6" k1="-0.227893"/>
+        <drift name="d256" l="0.182589"/>
+        <marker name="DET_05E"/>
+        <drift name="d400" l="0.157162"/>
+        <quadrupole name="Q48W" l="0.6" k1="0.517683"/>
+        <sextupole name="SEX_44E" l="0.272" k2="-0.383031"/>
+        <quadrupole name="B46Ein" l="0.000001" k1="-478.64301797229"/>
+        <sbend name="B46Emod" l="6.575289" angle="0.11220022"/>
+        <quadrupole name="B46Eout" l="0.000001" k1="-478.64301797229"/>
+        <sextupole name="SEX_15W" l="0.272" k2="-2.01689"/>
+        <drift name="d330" l="0.1453"/>
+        <quadrupole name="B37Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B37Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B37Wout" l="0.000001" k1="-212.76160545716"/>
+        <marker name="DET_20E"/>
+        <marker name="DET_12W1"/>
+        <marker name="DET_28E"/>
+        <kicker name="BUMP_28W" l="0.2295"/>
+        <drift name="d173" l="0.0634"/>
+        <quadrupole name="Q45E" l="0.6" k1="0.318646"/>
+        <drift name="d370" l="0.0448"/>
+        <quadrupole name="Q17W" l="0.6" k1="-0.23427"/>
+        <marker name="DET_11E"/>
+        <sextupole name="SEX_34W" l="0.272" k2="0.8537810000000001"/>
+        <quadrupole name="B24Win" l="0.000001" k1="-212.76160545716"/>
+        <sbend name="B24Wmod" l="6.574262" angle="0.074799746"/>
+        <quadrupole name="B24Wout" l="0.000001" k1="-212.76160545716"/>
+        <quadrupole name="Q41W" l="0.6" k1="-0.268756"/>
+        <drift name="d401" l="0.486783"/>
+        <quadrupole name="SK_Q06E" l="0.1524" tilt="0.7853981634"/>
+        <drift name="d389" l="0.01325"/>
+        <drift name="d130" l="0.0659"/>
+	<monitor name="mbegin" />
+	<marker name="mend" />
+
+    </elements>
+    <sectors>
+        <sector name="B17E" line="B17Ein B17Emod B17Eout"/>
+        <sector name="B01" line="B01in B01mod B01out"/>
+        <sector name="B07W" line="B07Win B07Wmod B07Wout"/>
+        <sector name="B43E" line="B43Ein B43Emod B43Eout"/>
+        <sector name="B15W" line="B15Win B15Wmod B15Wout"/>
+        <sector name="B03" line="B03in B03mod B03out"/>
+        <sector name="B02" line="B02in B02mod B02out"/>
+        <sector name="B36W" line="B36Win B36Wmod B36Wout"/>
+        <sector name="B11W" line="B11Win B11Wmod B11Wout"/>
+        <sector name="B07" line="B07in B07mod B07out"/>
+        <sector name="B30E" line="B30Ein B30Emod B30Eout"/>
+        <sector name="B37E" line="B37Ein B37Emod B37Eout"/>
+        <sector name="B41W" line="B41Win B41Wmod B41Wout"/>
+        <sector name="B21W" line="B21Win B21Wmod B21Wout"/>
+        <sector name="B17W" line="B17Win B17Wmod B17Wout"/>
+        <sector name="B06" line="B06in B06mod B06out"/>
+        <sector name="B21E" line="B21Ein B21Emod B21Eout"/>
+        <sector name="B27W" line="B27Win B27Wmod B27Wout"/>
+        <sector name="B47AW" line="B47AWin B47AWmod B47AWout"/>
+        <sector name="B35W" line="B35Win B35Wmod B35Wout"/>
+        <sector name="B28W" line="B28Win B28Wmod B28Wout"/>
+        <sector name="B48E" line="B48Ein B48Emod B48Eout"/>
+        <sector name="B18W" line="B18Win B18Wmod B18Wout"/>
+        <sector name="B15E" line="B15Ein B15Emod B15Eout"/>
+        <sector name="B41E" line="B41Ein B41Emod B41Eout"/>
+        <sector name="B42E" line="B42Ein B42Emod B42Eout"/>
+        <sector name="B04W" line="B04Win B04Wmod B04Wout"/>
+        <sector name="B48W" line="B48Win B48Wmod B48Wout"/>
+        <sector name="B05E" line="B05Ein B05Emod B05Eout"/>
+        <sector name="B25E" line="B25Ein B25Emod B25Eout"/>
+        <sector name="B20E" line="B20Ein B20Emod B20Eout"/>
+        <sector name="B06E" line="B06Ein B06Emod B06Eout"/>
+        <sector name="B35E" line="B35Ein B35Emod B35Eout"/>
+        <sector name="B12E" line="B12Ein B12Emod B12Eout"/>
+        <sector name="B22W" line="B22Win B22Wmod B22Wout"/>
+        <sector name="B47E" line="B47Ein B47Emod B47Eout"/>
+        <sector name="B04E" line="B04Ein B04Emod B04Eout"/>
+        <sector name="B32E" line="B32Ein B32Emod B32Eout"/>
+        <sector name="B31W" line="B31Win B31Wmod B31Wout"/>
+        <sector name="B27E" line="B27Ein B27Emod B27Eout"/>
+        <sector name="B39E" line="B39Ein B39Emod B39Eout"/>
+        <sector name="B44E" line="B44Ein B44Emod B44Eout"/>
+        <sector name="B16E" line="B16Ein B16Emod B16Eout"/>
+        <sector name="B29E" line="B29Ein B29Emod B29Eout"/>
+        <sector name="B03AW" line="B03AWin B03AWmod B03AWout"/>
+        <sector name="B24E" line="B24Ein B24Emod B24Eout"/>
+        <sector name="B03AE" line="B03AEin B03AEmod B03AEout"/>
+        <sector name="B06W" line="B06Win B06Wmod B06Wout"/>
+        <sector name="B26W" line="B26Win B26Wmod B26Wout"/>
+        <sector name="B05W" line="B05Win B05Wmod B05Wout"/>
+        <sector name="B08" line="B08in B08mod B08out"/>
+        <sector name="B38W" line="B38Win B38Wmod B38Wout"/>
+        <sector name="B13W" line="B13Win B13Wmod B13Wout"/>
+        <sector name="B33W" line="B33Win B33Wmod B33Wout"/>
+        <sector name="B40E" line="B40Ein B40Emod B40Eout"/>
+        <sector name="B42W" line="B42Win B42Wmod B42Wout"/>
+        <sector name="B40W" line="B40Win B40Wmod B40Wout"/>
+        <sector name="B47AE" line="B47AEin B47AEmod B47AEout"/>
+        <sector name="B20W" line="B20Win B20Wmod B20Wout"/>
+        <sector name="B13E" line="B13Ein B13Emod B13Eout"/>
+        <sector name="B26E" line="B26Ein B26Emod B26Eout"/>
+        <sector name="B03E" line="B03Ein B03Emod B03Eout"/>
+        <sector name="B11E" line="B11Ein B11Emod B11Eout"/>
+        <sector name="B16W" line="B16Win B16Wmod B16Wout"/>
+        <sector name="B31E" line="B31Ein B31Emod B31Eout"/>
+        <sector name="B43W" line="B43Win B43Wmod B43Wout"/>
+        <sector name="B38E" line="B38Ein B38Emod B38Eout"/>
+        <sector name="B04" line="B04in B04mod B04out"/>
+        <sector name="B12W" line="B12Win B12Wmod B12Wout"/>
+        <sector name="B46W" line="B46Win B46Wmod B46Wout"/>
+        <sector name="B28E" line="B28Ein B28Emod B28Eout"/>
+        <sector name="B29W" line="B29Win B29Wmod B29Wout"/>
+        <sector name="B33E" line="B33Ein B33Emod B33Eout"/>
+        <sector name="B07E" line="B07Ein B07Emod B07Eout"/>
+        <sector name="B46E" line="B46Ein B46Emod B46Eout"/>
+        <sector name="B37W" line="B37Win B37Wmod B37Wout"/>
+        <sector name="B03W" line="B03Win B03Wmod B03Wout"/>
+        <sector name="B47W" line="B47Win B47Wmod B47Wout"/>
+        <sector name="B36E" line="B36Ein B36Emod B36Eout"/>
+        <sector name="B39W" line="B39Win B39Wmod B39Wout"/>
+        <sector name="B30W" line="B30Win B30Wmod B30Wout"/>
+        <sector name="B23E" line="B23Ein B23Emod B23Eout"/>
+        <sector name="B24W" line="B24Win B24Wmod B24Wout"/>
+        <sector name="B25W" line="B25Win B25Wmod B25Wout"/>
+        <sector name="B23W" line="B23Win B23Wmod B23Wout"/>
+        <sector name="B18E" line="B18Ein B18Emod B18Eout"/>
+        <sector name="B44W" line="B44Win B44Wmod B44Wout"/>
+        <sector name="B22E" line="B22Ein B22Emod B22Eout"/>
+        <sector name="B32W" line="B32Win B32Wmod B32Wout"/>
+        <sector name="ring"
+            line="mbegin IP_L0 d001 Q00W d002 DET_00W d003 SC_Q01W d004 SC_Q02W d005 DET_01W d006 HVKICK_01W d007 DET_02W d008 SK_Q02W d009 SK_Q03W d010 B03W d011 B03AW d012 DET_03W d013 Q03W d014 B04W d015 SK_Q04W d016 Q04W d017 DET_04W d018 B05W d019 SK_Q05W d020 Q05W d021 DET_05W d022 B06W d023 SK_Q06W d024 DET_06W1 d025 Q06W d026 DET_06W d027 B07W d028 Q07W d029 DET_07W d030 HKICK_07W d031 SK_Q07W d032 SK_SEX_07W d033 H_SEP_08W d034 Q08W d035 SEX_08W d036 DET_08W d037 RF_W1 d038 RF_W2 d039 DET_08AW d040 VKICK_08WA d041 Q08AW d042 WIG_W d043 DET_09W d044 Q09W d045 SEX_09W d046 SK_Q09W d047 Q10W d048 SEX_10W d049 DET_10W d050 B11W d051 DET_11W d052 Q11W d053 SEX_11W d054 B12W d055 SK_SEX_12W d056 DET_12W1 d057 DET_12W2 d058 DET_12W d059 Q12W d060 SEX_12W d061 B13W d062 Q13W d063 SEX_13W d064 DET_13W d065 WIG1_14W d066 WIG2_14W d067 DET_14W d068 Q14W d069 SEX_14W d070 B15W d071 WIG_15W d072 DET_15W d073 Q15W d074 SEX_15W d075 B16W d076 Q16W d077 SEX_16W d078 DET_16W d079 VKICK_16W d080 B17W d081 Q17W d082 SEX_17W d083 DET_17W d084 B18W d085 Q18W d086 SEX_18W d087 DET_18W d088 WIG1_18W d089 WIG2_18W d090 WIG3_18W d091 DET_19W d092 Q19W d093 SEX_19W d094 B20W d095 Q20W d096 SEX_20W d097 DET_20W d098 B21W d099 Q21W d100 SEX_21W d101 DET_21W d102 B22W d103 Q22W d104 SEX_22W d105 DET_22W d106 B23W d107 Q23W d108 SEX_23W d109 DET_23W d110 SK_SEX_23W d111 B24W d112 Q24W d113 SEX_24W d114 DET_24W d115 B25W d116 Q25W d117 SEX_25W d118 DET_25W d119 B26W d120 Q26W d121 SEX_26W d122 DET_26W d123 BUMP_26W d124 B27W d125 Q27W d126 SEX_27W d127 DET_27W d128 B28W d129 Q28W d130 SEX_28W d131 DET_28W d132 BUMP_28W d133 B29W d134 Q29W d135 SEX_29W d136 DET_29W d137 SK_SEX_29W d138 B30W d139 Q30W d140 SEX_30W d141 DET_30W d142 B31W d143 Q31W d144 SEX_31W d145 DET_31W d146 B32W d147 Q32W d148 SEX_32W d149 DET_32W d150 B33W d151 Q33W d152 SEX_33W d153 DET_33W d154 DET_34W d155 Q34W d156 SEX_34W d157 B35W d158 Q35W d159 SEX_35W d160 DET_35W d161 B36W d162 PINGER_36W d163 BUMP_36W d164 Q36W d165 SEX_36W d166 DET_36W d167 B37W d168 Q37W d169 SEX_37W d170 DET_37W d171 B38W d172 Q38W d173 SEX_38W d174 DET_38W d175 B39W d176 Q39W d177 SEX_39W d178 DET_39W d179 B40W d180 Q40W d181 SEX_40W d182 DET_40W d183 B41W d184 Q41W d185 SEX_41W d186 DET_41W d187 B42W d188 Q42W d189 SEX_42W d190 DET_42W d191 B43W d192 Q43W d193 SEX_43W d194 DET_43W d195 Q43AW d196 B44W d197 Q44W d198 SEX_44W d199 DET_44W d200 H_SEP_45W d201 OCT_45W d202 DET_45W d203 Q45W d204 SEX_45W d205 B46W d206 Q46W d207 DET_46W d208 B47W d209 SK_Q47W d210 Q47W d211 SEX_47W d212 B47AW d213 Q47AW d214 DET_47W d215 B48W d216 V_SEP_48W d217 DET_48W d218 Q48W d219 VKICK_48W d220 HKICK_49W d221 OCT_48W d222 SK_Q48W d223 Q49W d224 DET_49W d225 Q49AW d226 IP_L3 d227 Q49AE d228 DET_49E d229 Q49E d230 SK_Q48E d231 OCT_48E d232 HKICK_49E d233 VKICK_48E d234 Q48E d235 DET_48E d236 V_SEP_48E d237 B48E d238 DET_47E d239 Q47AE d240 B47AE d241 SEX_47E d242 Q47E d243 SK_Q47E d244 B47E d245 DET_46E d246 Q46E d247 B46E d248 SEX_45E d249 Q45E d250 DET_45E d251 OCT_45E d252 H_SEP_45E d253 DET_44E d254 SEX_44E d255 Q44E d256 B44E d257 Q43AE d258 DET_43E d259 SEX_43E d260 Q43E d261 B43E d262 DET_42E d263 SEX_42E d264 Q42E d265 B42E d266 DET_41E d267 SEX_41E d268 Q41E d269 B41E d270 DET_40E d271 SEX_40E d272 Q40E d273 B40E d274 DET_39E d275 SEX_39E d276 Q39E d277 B39E d278 BUMP_38E d279 DET_38E d280 SEX_38E d281 Q38E d282 B38E d283 DET_37E d284 SEX_37E d285 Q37E d286 B37E d287 DET_36E d288 SEX_36E d289 Q36E d290 BUMP_36E d291 PINGER_36E d292 B36E d293 DET_35E d294 SEX_35E d295 Q35E d296 B35E d297 SEX_34E d298 Q34E d299 DET_33E d300 SEX_33E d301 Q33E d302 B33E d303 DET_32E d304 SEX_32E d305 Q32E d306 B32E d307 DET_31E d308 SEX_31E d309 Q31E d310 B31E d311 DET_30E d312 SEX_30E d313 Q30E d314 B30E d315 SK_SEX_29E d316 DET_29E d317 SEX_29E d318 Q29E d319 B29E d320 BUMP_28E d321 DET_28E d322 SEX_28E d323 Q28E d324 B28E d325 DET_27E d326 SEX_27E d327 Q27E d328 B27E d329 BUMP_26E d330 DET_26E d331 SEX_26E d332 Q26E d333 B26E d334 DET_25E d335 SEX_25E d336 Q25E d337 B25E d338 DET_24E d339 SEX_24E d340 Q24E d341 B24E d342 SK_SEX_23E d343 DET_23E d344 SEX_23E d345 Q23E d346 B23E d347 DET_22E d348 SEX_22E d349 Q22E d350 B22E d351 DET_21E d352 SEX_21E d353 Q21E d354 B21E d355 DET_20E d356 SEX_20E d357 Q20E d358 B20E d359 SEX_19E d360 Q19E d361 DET_19E d362 WIG3_18E d363 WIG2_18E d364 WIG1_18E d365 DET_18E d366 SEX_18E d367 Q18E d368 B18E d369 DET_17E d370 SEX_17E d371 Q17E d372 B17E d373 DET_16E d374 SEX_16E d375 Q16E d376 B16E d377 SEX_15E d378 Q15E d379 DET_15E d380 WIG_15E d381 B15E d382 SEX_14E d383 Q14E d384 DET_14E d385 WIG2_14E d386 SK_Q14E d387 WIG1_14E d388 DET_13E d389 SEX_13E d390 Q13E d391 B13E d392 SEX_12E d393 Q12E d394 DET_12E d395 SK_SEX_12E d396 B12E d397 DET_11E d398 SEX_11E d399 Q11E d400 B11E d401 DET_10E d402 SEX_10E d403 Q10E d404 SK_Q09E d405 VKICK_09E d406 SEX_09E d407 Q09E d408 DET_09E d409 RF_E1 d410 RF_E2 d411 VKICK_08E d412 HKICK_08E d413 DET_08E d414 SEX_08E d415 Q08E d416 H_SEP_08E d417 SK_Q07E d418 VKICK_07E d419 WIG_E d420 SK_SEX_07E d421 DET_07E d422 Q07E d423 B07E d424 Q06E d425 DET_06E d426 SK_Q06E d427 B06E d428 Q05E d429 DET_05E d430 SK_Q05E d431 B05E d432 Q04E d433 DET_04E d434 SK_Q04E d435 B04E d436 Q03E d437 DET_03E d438 B03AE d439 B03E d440 SK_Q03E d441 SK_Q02E d442 DET_02E d443 HVKICK_01E d444 DET_01E d445 SK_SEX_02E d446 SC_Q02E d447 SC_Q01E d448 DET_00E d449 Q00E d450 IP_L0_END mend"
+        />
+    </sectors>
+</adxf>

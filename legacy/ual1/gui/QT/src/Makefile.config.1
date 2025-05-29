@@ -1,0 +1,57 @@
+include $(UAL)/env/linux/Makefile.config
+
+# QT
+
+MOC        = ../../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/bin/moc
+UIC        = ../../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/bin/uic
+
+CCFLAGS  += -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT
+
+QTINC     += -I../../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/default -I../../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include
+QTLIBS    += -Wl,-rpath,../../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib -L../../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib -L/usr/X11R6/lib -lqt-mt -lXext -lX11 
+
+# UAL 
+
+UALINC += -I$(UAL)/gui/QT/src
+UALINC += -I$(UAL)/ext/ADXF/src
+UALINC += -I$(UAL)/ext/UI/include
+UALINC += -I$(UAL_SXF)/src 
+UALINC += -I$(UAL_TIBETAN)/src 
+UALINC += -I$(UAL_AIM)/src 
+UALINC += -I$(UAL_ACCSIM)/src 
+UALINC += -I$(UAL_TEAPOT)/src 
+UALINC += -I$(UAL_PAC)/src 
+UALINC += -I$(UAL_CORE)/include
+UALINC += -I$(UAL_ZLIB)/src
+UALINC += -I$(UAL)/tools/include -I$(UAL)/tools/include/libxml2
+UALINC += -I$(SXF)/src 
+
+UALLIBS  = 
+UALLIBS += -L$(UAL)/ext/UI/lib/linux   -lUalUI
+UALLIBS += -L$(UAL)/ext/ADXF/lib/linux -lUalADXF2
+UALLIBS += -L$(UAL_SXF)/lib/linux      -lUalSXF2
+UALLIBS += -L$(UAL_TIBETAN)/lib/linux  -lTibetan
+UALLIBS += -L$(UAL_AIM)/lib/linux      -lAim
+UALLIBS += -L$(UAL_ACCSIM)/lib/linux   -lAccsim
+UALLIBS += -L$(UAL_TEAPOT)/lib/linux   -lTeapot 
+UALLIBS += -L$(UAL_PAC)/lib/linux      -lPacSMF -lPacOptics -lPacSurvey -lPac
+UALLIBS += -L$(UAL_ZLIB)/lib/linux     -lZTps
+UALLIBS += -L$(UAL_CORE)/lib/linux     -lUal
+UALLIBS += -L$(SXF)/lib/linux          -lSXF
+UALLIBS += -L$(UAL)/tools/linux        -lpcre -lxml2
+
+# Linux with gcc
+
+CCFLAGS += $(QTINC) $(UALINC) $(INC) 
+
+LDFLAGS  += $(QTINC) $(UALINC) $(INC) 
+LDFLAGS  += $(UALLIBS) $(QTLIBS) $(LIBS)
+
+%.hh: %.ui 
+	$(UIC) $< -o $@
+
+moc_%.cc: %.hh
+	$(MOC)  $< -o $@
+
+$(UAL_GUI)/QT/lib/linux/obj/%.o : %.cc
+	$(CC) $(CCFLAGS) $(INC) -c $< -o $@;

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adxf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/home/ualusr/USPAS/ual1/doc/adxf/adxf.xsd">
+    <constants>
+        <constant name="pi" value="3.1415926536"/>
+        <constant name="twopi" value="2.0*pi"/>
+        <constant name="c" value="299792458.0"/>
+        <constant name="energy" value="1.5"/>
+        <constant name="l4l" value="0.222895"/>
+        <constant name="swl" value="0.10"/>
+        <constant name="qf1l" value="0.445"/>
+        <constant name="bangle" value="10.0*2.0*pi/360."/>
+        <constant name="lbend" value="0.854210"/>
+        <constant name="l6l" value="0.1275"/>
+        <constant name="ltiny" value="0.000001"/>
+        <constant name="qpole" value="-bangle*sin(bangle)/lbend/2.0"/>
+        <constant name="kqpole" value="qpole/ltiny"/>
+        <constant name="qbval" value="-0.81947*lbend/4"/>
+        <constant name="kqb" value="qbval/ltiny"/>
+    </constants>
+    <elements>
+        <drift name="L11" l="3.325"/>
+        <drift name="L12" l="0.050"/>
+        <drift name="L21" l="0.175"/>
+        <drift name="L22" l="0.250"/>
+        <drift name="L31" l="0.297850"/>
+        <drift name="L32" l="0.050"/>
+        <drift name="L4" l="l4l"/>
+        <drift name="R4" l="l4l"/>
+        <drift name="SW" l="swl"/>
+        <drift name="L51" l="0.250"/>
+        <drift name="L52" l="0.0775"/>
+        <drift name="L6" l="l6l"/>
+        <drift name="R6" l="l6l"/>
+        <drift name="L71" l="0.747895-swl"/>
+        <drift name="L72" l="0.05"/>
+        <drift name="D1" l="0.05"/>
+        <drift name="D2" l="0.14785"/>
+        <drift name="D3" l="0.55"/>
+        <drift name="D4" l="0.625"/>
+        <drift name="dummy" l="qf1l"/>
+        <quadrupole name="Q1" l="0.35" k1="2.187740773600916"/>
+        <quadrupole name="Q2" l="0.20" k1="-2.024544660438266"/>
+        <quadrupole name="QF1" l="qf1l" k1="2.910302804178290"/>
+        <quadrupole name="bpole" l="ltiny" k1="kqpole"/>
+        <quadrupole name="qb" l="ltiny" k1="kqb"/>
+        <sextupole name="SF" l="ltiny" k2="11.248783/ltiny"/>
+        <sextupole name="SD" l="ltiny" k2="-8.161015/ltiny"/>
+        <marker name="mbegin"/>
+        <marker name="mend"/>
+        <marker name="SYM"/>
+        <marker name="FIN"/>
+        <marker name="CAV"/>
+        <sbend name="BBENDPIECE" l="lbend/5" angle="bangle/5"/>
+        <monitor name="MON"/>
+        <hkicker name="hkick"/>
+        <vkicker name="vkick"/>
+        <hkicker name="COH"/>
+        <vkicker name="COV"/>
+    </elements>
+    <sectors>
+        <sector name="BAREBEND" line="BBENDPIECE qb BBENDPIECE qb BBENDPIECE qb BBENDPIECE qb BBENDPIECE"/>
+        <sector name="BEND" line="bpole BAREBEND bpole"/>
+        <sector name="L1" line="SYM L11 COH MON L12"/>
+        <sector name="R1" line="L12 COH MON L11"/>
+        <sector name="L2" line="L21 COV L22"/>
+        <sector name="R2" line="L22 COV L21"/>
+        <sector name="L3" line="L31 MON L32"/>
+        <sector name="R3" line="L32 MON L31"/>
+        <sector name="L5" line="L51 MON L52"/>
+        <sector name="R5" line="L52 MON L51"/>
+        <sector name="L7" line="L71 MON L72"/>
+        <sector name="R7" line="L72 MON L71"/>
+        <sector name="SDD" line="SW SD COH SW"/>
+        <sector name="SFF" line="SW SF COH COV SW"/>
+        <sector name="ring" line="mbegin L1 Q1 L2 Q2 L3 BEND L4 SDD L5 QF1 L6 SFF L7 BEND  R7 SFF R6 QF1 R5 SDD L4 BEND R3 Q2 R2 Q1 R1 mend"/>
+    </sectors>
+</adxf>

@@ -1,0 +1,23 @@
+echo "xml"
+./xml
+
+echo "qt"
+./qtLOCAL
+
+echo "root"
+./root
+
+echo "mu"
+./mu
+
+echo "ROOT"
+./ROOT
+
+echo "QT"
+./QT
+
+echo "player"
+./player
+
+echo "list"
+./list

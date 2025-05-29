@@ -1,0 +1,495 @@
+This "README" file is from a repository
+      git clone git://github.com/jtalman/ual1
+likely already downloaded from GIT.
+
+This repository must be built as a prerequisite to this gui effort. The equivalent of
+      cd ual1
+      setenv UAL `pwd`
+      source setup-linux-ual
+      make clean
+      make >&! make.log
+needs to be run and verified (no errors in make.log, other than the two doc/html ones).
+Much "in this part" (non gui) of the repository keys off environmental variable: $UAL.
+This is all assumed as familiar and quickly under control.
+
+Almost everything from here keys off environmental variable: $UAL.
+Almost everything from here only applies to "the gui" part of the repository.
+_____________________________________________________________________________________
+_____________________________________________________________________________________
+
+Thus this README really starts here, and really only applies to the gui subdirectory, $UAL/gui/.
+
+There's a hopefully fully explicit RECIPE section after this section. Lines 148 to 340.
+This RECIPE is the only independently verified section.
+Other sections are exploratory.
+This gui build/make RECIPE/subprocess is not nearly as seamless as the larger repository build!
+Thus it should be followed carefully. Possibly it will be improved at some point.
+Most of it can be "copy and pasted", however.
+
+Symbol
+      "------>>>>>>"
+is for noteworthy aspects of the RECIPE. For example it shows where RECIPE step
+      (1) Build qt, and spot check it:                                      (1) <<<<<<------
+                  ...
+      ------>>>>>>      yes                                                 ENTERED MANUALLY!
+                  ...
+can't be copy and pasted.
+Symbol
+      "   <<<<<<------"
+identifies steps (0) to (9) in the RECIPE.
+
+The execute (hence, also build) verification of the code in directory tree
+      $UAL/gui/USPAS/examples/player
+and
+      $UAL/gui/USPAS/examples/longitudinal
+is likely to be the focus for a while.
+They build and run and pop up a GUI. This is described in the last stanza:
+------>>>>>>          Current Focus:
+...
+(10) spot check the UAL USPAS example longitudinal build:
+...
+(11) spot check the UAL USPAS example player build:
+...
+------>>>>>>          Current Focus                                       ENDS HERE!!!
+It is developmental/simple at this point.
+
+Revisiting step (9), with almost everything else built, is likely.
+The essential environment parts covered by/in step (0) is repeated near the end of this document with this in mind.
+This can be viewed as part of the subsequent (DEBUG) stanzas, also near the end of this document.
+
+The last stanza, at the very end of this document, gives some context/history for the debugging effort.
+
+The other gui build, and execute, verifications are even more developmental/simple at this point.
+They should probably be ignored, as they don't even pop up their GUI.
+
+There's two "legacy" tars in $UAL/gui/:
+      (i)  qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod.tar.gz
+                 This is a small modification to qt-x11-free-3.3.4.tar, the free qt code from Trolltech ca 2005.
+                 I use "the legacy" (RT, NM) configuration procedure, dating back 15 years or so.
+                 This may or may not be "current"/optimal.
+                 There is a token license acceptance for the qt3 use.
+                       18360 Jan 21  2005 ../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/LICENSE.GPL
+                        4689 Jan 21  2005 ../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/LICENSE.QPL
+------>>>>>>     Can't be copy and pasted like rest of RECIPE!
+------>>>>>>      yes                                                 ENTERED MANUALLY!
+
+      (ii) root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz
+                 This is a fairly small modification to root_v4.04.02.source.tar, the free root code from CERN ca 2000.
+                       The main mods are:
+                             <iostream.h> -->> <iostream>
+                             cerr         -->> std::cerr
+                             cout         -->> std::cout
+                             endl         -->> std::endl
+                       in 100 files or so.
+                       A few lines/stanzas are simply commented out.
+                 The file
+                       ./config/rootrc.in
+                 is hardwired for qt:
+                       117 Gui.Backend:      qt
+                       118 Gui.Factory:      qt
+                 The subsequent modifications to the configuration, and the build, need to be described (TBD).
+
+                 There is a token license
+                       1604 Feb  9  2004 LICENSE
+                 There is a DEBUG stanza for this code at the very end of this document: "post RECIPE".
+
+These tars would probably work more seamlessly unpacked. Possibly this will be done at some point.
+These tars are pretty slow to build.
+qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod does not depend on environmental variable $UAL.
+root_v4.04.02.source-SL7.6Nitrogen-UAL-mod does depend on environmental variable $UAL.
+
+The awkward names may be improved at some point.
+_____________________________________________________________________________________
+_____________________________________________________________________________________
+
+begin CHRONOLOGY NOTES:
+
+Something like the recipe below has been verified on a Lenovo X201 laptop with SL7.6 (Nitrogen) ca 5/16/2020.
+Something like the recipe below has been verified on a Lenovo X201 laptop with SL7.6 ca 6/2/2020.
+Something like the recipe below has been verified on a Lenovo X201 laptop with SL7.6 ca 6/4/2020.
+Something like the recipe below has been verified on a Lenovo X201 laptop with SL7.6 ca 6/23/2020.
+Something like the recipe below has been verified on a Lenovo X201 laptop with SL7.6 ca 6/29/2020.
+Something like the recipe below has been verified on a Lenovo X201 laptop with SL7.6 ca 7/8/2020.
+Something like the recipe below has been verified on a Lenovo X201 laptop with SL7.6 ca 8/4/2020.
+
+It should be verified on a Lenovo X201 laptop with SL7.6 promptly.
+
+7/8/2020:
+      My current thinking is to "stub out" the malfunctioning code so that a dialog can be started on where
+      to begin to implement new functioning code.
+      This has tentatively been accomplished.
+
+      Hopefully the previously working code can be readily brought to bear!
+      I haven't been able to get this code base working yet, however.
+
+      My sense is the "plumbing" for the underlying TEAPOT/UAL code is in place and working.
+      Thus the sxf file, and apdf file, input and processing, seems to be working.
+
+      My sense is the "plumbing" for the gui is in place and working.
+      Thus the interface is hopefully familiar.
+
+      What is not working is accepting user input in the gui and invoking it.
+      Thus the stubbing.
+      Again, the tentative direction is identifying where to start on new functioning code.
+
+      Another substantive update is the mod to the comments on step (8):
+(257)       Seems to fail on the splitting.                                 TENTATIVELY FIXED 7/8/2020
+(258)       Thus examining this is not recommended at this time.            TENTATIVELY FIXED 7/8/2020
+      Thus step (8) has been added to the Current Focus as step (11) below.
+
+8/4/2020:
+      This file, $UAL/2020_UAL_GUI_README, has been somewhat reworked.
+            The main mod is splitting STEP (0) into STEP (0) and STEP (1).
+      The "Twiss" functionality: double click gives popup GUI seems to work on the dev box.
+
+end CHRONOLOGY NOTES:
+_____________________________________________________________________________________
+_____________________________________________________________________________________
+
+
+RECIPE:
+      steps (0) - (11). The doubly indented lines are all to be executed.
+      This all takes place within $UAL/gui:
+      Thus all steps could begin with
+            cd $UAL/gui
+      but don't at present. The orientation is to to stay in the gui subdirectory.
+
+STEP                                                                 STEP
+(0) Additional gui envirionment:                                      (0) <<<<<<------
+      "Copy and pastable":
+            cd $UAL/gui
+            source env
+            setenv LD_LIBRARY_PATH $UAL/gui/libxml2-2.9.7/.libs/:$LD_LIBRARY_PATH
+:           setenv LD_LIBRARY_PATH $UAL/gui/libxml2-2.9.7/.libs/libxml2.so.2.9.7:$LD_LIBRARY_PATH
+:           setenv LD_LIBRARY_PATH ../../lib/:$LD_LIBRARY_PATH
+
+(1) Build libxml, and spot check it:                                  (1) <<<<<<------
+      Copy and pastable, slow build:
+            rm -rf libxml2-2.9.7
+            tar xvfz libxml2-git-snapshot.tar.gz
+            cd libxml2-2.9.7/
+            ./configure
+            make
+            ll .libs/libxml2.so.2.9.7
+:           5402944
+            cd ..
+
+(2) Build qt, and spot check it:                                      (2) <<<<<<------
+      NOT copy and pastable, slow build:
+            rm -rf qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod
+            tar xvfz qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod.tar.gz
+            cd       qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod
+:           ./configure --thread -no-xft -qt-gif --no-exceptions
+            ./configure -thread -no-xft -qt-gif -no-exceptions
+------>>>>>>      yes                                                 ENTERED MANUALLY!
+            make all >&! make.log
+            ll lib/libqt-mt.so.3.3.4
+:                 9590800
+            cd ..
+Note the explicit license acceptance, yes.
+Note the possibly unfamiliar, make all, syntax!
+"qt" tends to use "make all".
+
+(3) Build root, and spot check it:                                    (3) <<<<<<------
+      Copy and pastable, slow build:
+            rm -rf root_v4.04.02.source-SL7.6Nitrogen-UAL-mod
+            tar xvfz root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz
+            cd       root_v4.04.02.source-SL7.6Nitrogen-UAL-mod
+            ./configure --with-qt-incdir=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/ --with-qt-libdir=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/
+:           make >&! make.log
+:           make rootlibs >&! make.log
+            make clean
+            rm ./lib/*
+            make all >&! make.log
+            cd lib
+            ln -s libRint.so libRint.so.4.04
+            cd ..
+            ll lib/libGQt.so
+:                 1092328
+:                 1097120
+:                 1092328
+            cd ..
+Note the possibly unfamiliar, make all, syntax!
+No explicit license acceptance.
+
+(4) Build muParser, and spot check it:                                (4) <<<<<<------
+      Copy and pastable, quick:
+:           rm -rf muparser_v134
+            cd muparser_v134
+            ./configure
+            make
+            ll lib/libmuparser.so.0.0.0
+:                 366384 
+            cd ..
+
+(5) Build UAL ROOT, and spot check it:                                (5) <<<<<<------
+      Copy and pastable, quick:
+:           rm -rf ROOT
+            cd ROOT
+            make >&! make.log
+            ll lib/linux/libUalRootViewers.so
+:                 661512
+            cd ..
+
+(6) Build UAL QT, and spot check it:                                  (6) <<<<<<------
+      Copy and pastable, quick:
+:           rm -rf QT
+            cd QT
+            make >&! make.log
+            ll lib/linux/libUalQt.so
+:                 2668680 
+:                 2668656 
+:                 2665096 
+:                 2665120 
+:                 2665096 
+:                 2665120 
+:                 2666592 
+:                 2666272 
+:                 2664824 
+            cd ..
+
+(7) Build UAL QT example, spot check it, and try it:                  (7) <<<<<<------
+      Copy and pastable, quick:
+            cd qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/examples/Player
+            \cp XXXMakefileXXX Makefile
+            make clean
+            make all
+            ll Player
+:                 197928
+            setenv LD_LIBRARY_PATH ../../lib/:$LD_LIBRARY_PATH
+            ./Player
+            cd ../../..
+A template GUI should popup.
+An error message
+      "...cannot open shared object file..."
+might appear. The above LD_LIBRARY_PATH mod is one such patch. It is not necessary on the verified box.
+Again, note the modified, make all, syntax.
+Again, this is in a "qt context".
+_____________________________________________________________________________________
+
+Developmental:
+(8) Build UAL USPAS example player, and spot check it:                (8) <<<<<<------
+      Copy and pastable, quick:
+            cd USPAS/examples/player
+            make clean
+            make
+            ll lib/linux/run
+:                 230448
+            cd ../../..
+            ll USPAS/examples/player/NOTES
+File that specifies run procedure and syntax.
+Seems to fail on the splitting.                                       TENTATIVELY FIXED 7/8/2020
+Thus examining this is not recommended at this time.                  TENTATIVELY FIXED 7/8/2020
+This code has been added to the Current Focus section as step (10).
+
+(9) Build UAL USPAS example transverse, and spot check it:            (9) <<<<<<------
+      Copy and pastable, quick:
+            cd USPAS/examples/transverse
+            make clean
+            make
+            ll lib/linux/run
+:                 230448
+            cd ../../..
+            ll USPAS/examples/transverse/NOTES
+File that specifies run procedure and syntax.
+Seems to fail on the splitting.
+Thus examining this is not recommended at this time.      
+
+Recommended for exploration is "The Current Focus":
+_____________________________________________________________________________________
+
+------>>>>>>          The Current Focus:
+
+(10) Build UAL USPAS example longitudinal, spot check, and try:       (10) <<<<<<------
+      Copy and pastable, quick:
+            cd $UAL/gui/USPAS/examples/longitudinal
+            make clean
+            make
+            ll lib/linux/run
+:                 230568
+:                 230560
+            cd lib
+:           ./linux/run ring ../../project/apdf/teapot.apdf   ../../lattices/general_fodo.sxf
+:           ./linux/run ring ../../lattices/eq_tune_fodo.adxf ../../project/apdf/eteapot.apdf
+:           ./linux/run ring ../../lattices/eq_tune_fodo.adxf ../../project/apdf/teapot.apdf
+:           ./linux/run ring ../../lattices/general_fodo.sxf  ../../project/apdf/teapot.apdf
+:           ./linux/run ring ../../lattices/general_fodo.sxf  ../../project/apdf/eteapot.apdf
+:           ./linux/run ring ../../lattices/general_fodo.sxf  ../apdf/tibetan.apdf
+            ./linux/run ring ../../lattices/general_fodo.sxf  $UAL/gui/USPAS/examples/project/apdf/eteapot.apdf
+:           ./linux/run ring ../../lattices/eq_tune_fodo.adxf ../../project/apdf/tibetan.apdf
+
+Pops up a GUI, MainPlayerUI, on the verified machine.
+There's a NOTES file that specifies run procedure and syntax.
+It doesn't try to split.
+Thus examining this, or the next stanza, step (11), is the Current Focus for the time being.
+
+New as of 7/8/2020:
+ 11) Build UAL USPAS example player, spot check ,and try:            (11) <<<<<<------
+      Copy and pastable, quick:
+            cd $UAL/gui/USPAS/examples/player
+            make clean
+            make
+            ll lib/linux/run
+:                 230448
+            cd lib
+            ./linux/run ring ../../lattices/general_fodo.sxf  $UAL/gui/USPAS/examples/project/apdf/eteapot.apdf
+
+Pops up a GUI, MainPlayerUI, on the verified machine.
+There's a NOTES file that specifies run procedure and syntax.
+It doesn't try to split.
+Thus examining this, or the previous stanza, step (10), is the "Current Focus" for the time being.
+
+------>>>>>>          Current Focus                                       ENDS HERE!!!
+
+
+
+_____________________________________________________________________________________
+_____________________________________________________________________________________
+_____________________________________________________________________________________
+
+
+
+From here this document is "exploratory/tentative", as the following code is under development.
+There's a JDT debugging aspect, as well.
+
+The likely scenario is that one is revisiting this last stanza, step (10) or step (11), with the above already verified.
+Then, one typically only needs to reset the environment, STEP (0),
+before (re)trying STEP (10) or STEP (11).
+The steps for this are:
+
+(DEBUG 0  Additional gui envirionment ( w/o libxml2-2.9.7/)           (0) <<<<<<------
+  and
+ DEBUG 10) Build UAL USPAS example longitudinal, spot check, and try: (10) <<<<<<------
+or
+ DEBUG 11) Build UAL USPAS example player, spot check, and try:       (11) <<<<<<------
+      "Copy and pastable", quick:
+            cd $UAL/gui
+            source env
+            setenv LD_LIBRARY_PATH $UAL/gui/libxml2-2.9.7/.libs/:$LD_LIBRARY_PATH
+            cd USPAS/examples
+            make clean
+            make
+:           cd longitudinal/lib/
+:           ./linux/run ring ../../lattices/general_fodo.sxf  $UAL/gui/USPAS/examples/project/apdf/eteapot.apdf
+            cd player/lib/
+            ./linux/run ring ../../lattices/general_fodo.sxf  $UAL/gui/USPAS/examples/project/apdf/eteapot.apdf
+_____________________________________________________________________________________
+
+(DEBUG) Build verbose root, and spot check it:
+      Copy and pastable, slow build:
+            cd $UAL/gui
+            source env
+:           setenv LD_LIBRARY_PATH $UAL/gui/libxml2-2.9.7/.libs/:$LD_LIBRARY_PATH
+            tar xvfz root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz
+            cd       root_v4.04.02.source-SL7.6Nitrogen-UAL-mod
+            ./configure --with-qt-incdir=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/ --with-qt-libdir=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/
+:           make >&! make.log
+:           make rootlibs >&! make.log
+            make clean
+            rm ./lib/*
+            cp ./verbose/TRint.cxx ./rint/src/
+            cp ./verbose/TQtWidget.cxx ./qt/src/
+            cp ./verbose/TGQt.cxx ./qt/src/
+            cp ./verbose/TCanvas.cxx ./gpad/src/
+            cp ./verbose/TVirtualX.cxx ./base/src/
+            cp ./verbose/TROOT.cxx ./base/src/
+            cp ./verbose/TApplication.cxx ./base/src/
+:           cp ./silent/TRint.cxx ./rint/src/
+:           cp ./silent/TQtWidget.cxx ./qt/src/
+:           cp ./silent/TGQt.cxx ./qt/src/
+:           cp ./silent/TCanvas.cxx ./gpad/src/
+:           cp ./silent/TVirtualX.cxx ./base/src/
+:           cp ./silent/TROOT.cxx ./base/src/
+:           cp ./silent/TApplication.cxx ./base/src/
+            make all >&! make.log
+            cd lib
+            ln -s libRint.so libRint.so.4.04
+            cd ..
+            ll lib/libGQt.so
+:                 1092328
+:                 1097120
+:                 1101216
+:                 1101360
+:                 1105456
+:                 1092312
+            cd ..
+_____________________________________________________________________________________
+
+(DEBUG) ROOTandQt_example HelloWord:                                  (*) <<<<<<------
+      "Copy and pastable", quick:
+            cd $UAL/gui
+            source env
+            cd ROOTandQt_examples
+            source env
+            cd HelloWord
+            rm HelloWord
+            g++ `root-config --cflags --glibs` -I$QTDIR/include -L$QTDIR/lib -lqt-mt HelloWord.cxx -o HelloWord
+            setenv LD_LIBRARY_PATH $ROOTSYS/lib/:$LD_LIBRARY_PATH
+            ./HelloWord
+
+(DEBUG) ROOTandQt_example HelloCanvas:                                (*) <<<<<<------
+            cd $UAL/gui
+            source env
+            cd ROOTandQt_examples
+            source env
+            cd HelloCanvas
+            setenv LD_LIBRARY_PATH $ROOTSYS/lib/:$LD_LIBRARY_PATH
+:           qmake -project
+:           qmake
+            make clean
+            make
+            ./HelloCanvas
+
+(DEBUG) ROOTandQt_example Player:                                     (*) <<<<<<------
+            cd $UAL/gui
+            source env
+            cd ROOTandQt_examples
+            source env
+            cd Player
+            setenv LD_LIBRARY_PATH $ROOTSYS/lib/:$LD_LIBRARY_PATH
+            cp XXXMakefileXXX Makefile
+            make clean
+            make
+            ./Player
+
+(DEBUG) ROOTandQt_example main:                                (*) <<<<<<------
+            cd $UAL/gui
+            source env
+            cd ROOTandQt_examples
+            source env
+            cd web/main/
+            setenv LD_LIBRARY_PATH $ROOTSYS/lib/:$LD_LIBRARY_PATH
+            cp XXXMakefileXXX Makefile
+            make clean
+            make
+            ./main
+_____________________________________________________________________________________
+
+Files
+            ./dump4
+            ./dumpLatest5
+            ./one                                                         <<<<<<------ 6/25/2020
+            ./two                                                         <<<<<<------ 6/25/2020
+            ./three                                                       <<<<<<------ 6/29/2020
+are error outputs from trying to launch (double click) the
+            Twiss
+sub selection, from the Tools
+            Preprocessing
+selection in the GUI. A syntax such as
+            Tools/Preprocessing/Twiss
+is probably appropriate.
+            ./dump4 and ./dumpLatest5 are legacy.
+            ./one and ./two are DEBUG near latest, They are similar, but not identical.
+            ./three is DEBUG latest, from the DEBUG root build.
+
+Seemingly (at least mostly) working selections are
+            Tools/Info/Propagators
+            Tools/Info/Parameters
+            Tools/Input/Chrom Fitting
+            Tools/Input/Tune Fitting
+            Tools/Input/Beam
+
+Thus getting
+            Tools/Preprocessing/Twiss
+to work will likely be important progress.
+_____________________________________________________________________________________

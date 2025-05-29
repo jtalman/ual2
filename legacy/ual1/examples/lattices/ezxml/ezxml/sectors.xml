@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+    <sectors>
+        <sector name="lsh_QDcE">
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mQcend"/>
+            <frame ref="QDcMh"/>
+            <frame ref="mQDcM"/>
+            <frame ref="QDcMh"/>
+            <frame ref="DlQch"/>
+            <frame ref="QDcE"/>
+            <frame ref="mQDcE"/>
+        </sector>
+        <sector name="QDcE_lsh">
+            <frame ref="mQDcE"/>
+            <frame ref="QDcE"/>
+            <frame ref="DlQch"/>
+            <frame ref="QDcMh"/>
+            <frame ref="mQDcM"/>
+            <frame ref="QDcMh"/>
+            <frame ref="mQcend"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+        </sector>
+        <sector name="lsh_QFcE">
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mQcend"/>
+            <frame ref="QFcMh"/>
+            <frame ref="mQFcM"/>
+            <frame ref="QFcMh"/>
+            <frame ref="DlQch"/>
+            <frame ref="QFcEh"/>
+            <frame ref="mQFcE"/>
+        </sector>
+        <sector name="QFcE_lsh">
+            <frame ref="mQFcE"/>
+            <frame ref="QFcE"/>
+            <frame ref="DlQch"/>
+            <frame ref="QFcMh"/>
+            <frame ref="mQFcM"/>
+            <frame ref="QFcMh"/>
+            <frame ref="mQcend"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="Dllshsl"/>
+        </sector>
+        <sector name="SBPl">
+            <frame ref="SBPlhsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="SBPlhsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="SBPlhsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="SBPlhsl"/>
+        </sector>
+        <sector name="SBMi">
+            <frame ref="SBMihsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="SBMihsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="SBMihsl"/>
+            <frame ref="mNullSlice"/>
+            <frame ref="SBMihsl"/>
+        </sector>
+        <sector name="octantDF">
+            <frame ref="QDcE_lsh"/>
+            <frame ref="SBPl"/>
+            <frame ref="mSBPlMi"/>
+            <frame ref="mSixteenth"/>
+            <frame ref="SBMi"/>
+            <frame ref="lsh_QFcE"/>
+        </sector>
+        <sector name="octantFD">
+            <frame ref="QFcE_lsh"/>
+            <frame ref="SBMi"/>
+            <frame ref="mSBMiPl"/>
+            <frame ref="mSixteenth"/>
+            <frame ref="SBPl"/>
+            <frame ref="lsh_QDcE"/>
+        </sector>
+        <sector name="ring">
+            <frame ref="mbegin"/>
+            <frame ref="RF1"/> 
+            <frame ref="octantDF"/>
+            <frame ref="octantFD"/>
+            <frame ref="mQuarter"/>
+            <frame ref="octantDF"/>
+            <frame ref="octantFD"/>
+            <frame ref="mHalf"/>
+            <frame ref="octantDF"/>
+            <frame ref="octantFD"/>
+            <frame ref="mQuarter"/>
+            <frame ref="octantDF"/>
+            <frame ref="octantFD"/>
+            <frame ref="mend"/>
+        </sector>
+     </sectors>

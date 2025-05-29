@@ -1,0 +1,145 @@
+http://ftp.scientificlinux.org/linux/scientific/7.9/x86_64/iso/SL-7.9-x86_64-netinst.iso
+       Downloaded file: 620 MB
+       Entire disk: 37 items, totalling 771.6 MB
+
+       Will likely access Fermilab URL files: http://ftp.scientificlinux.org/linux/scientific/7/contexts/
+________________________________________________________________________________________________
+
+Boot off cd with this iso file:
+________________________________________________________________________________________________
+
+WELCOME TO SCIENTIFIC LINUX 7.9
+
+What language would you like to use during the installation process?
+         English / English (United States)
+         Continue
+
+INSTALLATION SUMMARY
+_________________________________________________________________________
+
+     LOCALIZATION
+         DATE & TIME
+               Americas/New York timezone
+
+         LANGUAGE SUPPORT
+               English (United States)
+
+         KEYBOARD
+               English (US)
+_________________________________________________________________________
+     SYSTEM
+
+          NETWORK & HOSTNAME
+              Wireless (wlp2s0)
+                      Network Name
+                               Kendal WiFi
+                                   Password
+                                   Connect
+              Hostname
+                 x201-4
+                    Apply
+         Done
+
+     INSTALLATION DESTINATION
+         Done
+                Reclaim Space
+                         Delete All
+                         Reclaim Space
+
+         Automatic partitioning selected
+
+     KDUMP
+          Kdump is enabled
+
+     SECURITY POLICY
+          No profile selected
+_________________________________________________________________________
+
+SOFTWARE
+
+     CONTEXT
+         None Enabled
+              CONTEXT FRAMEWORK
+                   Enabled     Name            Context URL
+                    yes      fermilab      http://ftp.scientificlinux.org/linux/scientific/7/contexts/
+         Done
+
+     SOFTWARE SELECTION & INSTALLATION SOURCE seem to find the right Fermilab URL after a few minutes
+          (once the NETWORK & HOSTNAME tab is set, see above)
+
+     SOFTWARE SELECTION
+         General Purpose System (1492 packages)   --->>>   Development and Creative Workstation (2014)
+         Done
+
+     SOFTWARE SELECTION & INSTALLATION SOURCE seem to find the right files, again, after a few minutes
+
+     INSTALLATION SOURCE
+         Closest Mirror
+_________________________________________________________________________
+
+Begin Installation (2014 packages)
+_________________________________________________________________________
+
+CONFIGURATION
+
+     USER SETTINGS
+          ROOT PASSWORD
+
+     USER CREATION
+          ADVANCED USER CONFIGURATION
+               Specify a user ID manually: 2000
+                    Save changes
+    Done
+
+Finish Configuration
+_________________________________________________________________________
+
+        Complete!
+
+        Reboot
+
+LICENSING
+        Accept
+        Done
+
+FINISH CONFIGURATION
+
+__________________________________________________________________________________________________
+https://mirrors.cloud.tencent.com/raspbian/raspbian/pool/main/libc/libcerf/libcerf_1.3.orig.tar.gz
+          385600
+
+https://sourceforge.net/projects/gnuplot/files/gnuplot/5.4.6/gnuplot-5.4.6.tar.gz/download
+          5655661
+
+open terminal
+
+[jtalman@x201-4 Desktop]$ 
+tar xvfz libcerf_1.3.orig.tar.gz
+cd libcerf-1.3/
+./configure
+make
+su
+      (root password)
+make install
+exit
+cd ..
+
+[jtalman@x201-4 Desktop]$ 
+tar xvfz gnuplot-5.4.6.tar.gz
+cd gnuplot-5.4.6/
+ ./configure --with-qt=no
+vi Makefile
+        comment out docs:
+               SUBDIRS = config m4 term src man demo share
+make
+su
+      (root password)
+make install
+exit
+
+tcsh
+setenv LD_LIBRARY_PATH /usr/local/lib/
+
+cd demo/
+gnuplot world.dem
+gnuplot cerf.dem

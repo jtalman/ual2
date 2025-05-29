@@ -1,0 +1,59 @@
+<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:saxon="http://icl.com/saxon"
+    xmlns:math="http://exslt.org/math" extension-element-prefixes="saxon math">
+    <xsl:variable name="pi" select="3.14159265359"/>
+    <xsl:variable name="twopi" select="6.283185307"/>
+    <xsl:variable name="tiny" select="0.0000000001"/>
+    <xsl:variable name="mcsq" select="0.93827231"/>
+    <xsl:variable name="G" select="1.7928474"/>
+    <xsl:variable name="c" select="299792458.0"/>
+    <xsl:variable name="g" select="5.5856948"/>
+    <xsl:variable name="R_NOMINAL" select="16.353"/>
+    <xsl:variable name="L_LONG_STRAIGHT" select="9.32121"/>
+    <xsl:variable name="N_SUPER" select="4"/>
+    <xsl:variable name="M_NOMINAL" select="0.002"/>
+    <xsl:variable name="TWEAK_LENGTHS" select="1.0"/>
+    <xsl:variable name="K0" select="0.030"/>
+    <xsl:variable name="Escr0" select="0.96827231"/>
+    <xsl:variable name="gamma0" select="1.03197366"/>
+    <xsl:variable name="p0c" select="0.23915756"/>
+    <xsl:variable name="beta0" select="0.246994113"/>  
+    <xsl:variable name="m_in" select="0.002"/>
+    <xsl:variable name="Nsl" select="4"/>
+    <xsl:variable name="thetah" select="0.392699082"/>
+    <xsl:variable name="thetahsl" select="0.09817477"/>
+
+    <xsl:variable name="etaE" select="1.0"/>
+    <xsl:variable name="etaM" select="(1.0-$etaE)"/>
+    <xsl:variable name="r0" select="16.353"/>
+    <xsl:variable name="leh" select="6.421808088"/>
+    <xsl:variable name="lehsl" select="1.605452022"/>
+
+    <xsl:variable name="lss" select="1.0"/>
+    <xsl:variable name="lssh" select="0.5"/>
+    <xsl:variable name="lssq" select="0.25"/>
+    <xsl:variable name="llstot" select="9.32121"/>
+    <xsl:variable name="llsh" select="4.660605"/>
+    <xsl:variable name="llshsl" select="1.16515125"/>
+    <xsl:variable name="lq" select="0.25"/>
+    <xsl:variable name="lqh" select="0.125"/>
+    <xsl:variable name="qFh" select="-0.00611"/>
+    <xsl:variable name="qDh" select=" 0.00611"/>
+    <xsl:variable name="gross_diam" select="43.441423562"/>
+    <xsl:variable name="totalstraight" select="41.2848"/>
+    <xsl:variable name="circumference" select="144.033729328"/>
+    <xsl:variable name="COSY_circ" select="183.472697"/>
+    <xsl:variable name="ratio" select="0.785041762"/>
+    <xsl:variable name="gBy2" select="0.035"/>
+    <xsl:variable name="rfvolt" select="0.000001"/>
+    <xsl:variable name="rfharmon" select="1"/>
+    <xsl:variable name="rflag" select="0.5"/>
+    <xsl:variable name="Trev0" select="0.000001945"/>
+
+    <xsl:variable name="lqir" select="0.419"/>
+    <xsl:variable name="lir1" select="0.5605"/>
+    <xsl:variable name="lir2" select="0.111"/>
+    <xsl:variable name="lir3" select="2.9011"/>
+    <xsl:variable name="qir1" select="0.050001234"/>
+    <xsl:variable name="qir2" select="-0.0480001234"/>
+</xsl:transform>

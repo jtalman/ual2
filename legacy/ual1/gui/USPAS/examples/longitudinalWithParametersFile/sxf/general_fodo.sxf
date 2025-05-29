@@ -1,0 +1,571 @@
+// 
+ring sequence { 
+   monitor { tag = mbegin
+  };
+   kicker { tag = kickerp
+  };
+   marker { tag = mk1
+  };
+   hmonitor { tag = bpm
+  };
+   quadrupole { tag = quadhf at = 0.0001 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext1 at = 0.00025 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 0.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 0.5
+  };
+   sbend { tag = bendh at = 0.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext2 at = 0.99975 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadvf at = 0.9999 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   hmonitor { tag = bpm at = 1
+  };
+   quadrupole { tag = quadvf at = 1.0001 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext2 at = 1.00025 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 1.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 1.5
+  };
+   sbend { tag = bendh at = 1.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext1 at = 1.99975 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadhf at = 1.9999 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   marker { tag = mk1 at = 2
+  };
+   marker { tag = mk1 at = 2
+  };
+   hmonitor { tag = bpm at = 2
+  };
+   quadrupole { tag = quadhf at = 2.0001 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext1 at = 2.00025 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 2.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 2.5
+  };
+   sbend { tag = bendh at = 2.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext2 at = 2.99975 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadvf at = 2.9999 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   hmonitor { tag = bpm at = 3
+  };
+   quadrupole { tag = quadvf at = 3.0001 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext2 at = 3.00025 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 3.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 3.5
+  };
+   sbend { tag = bendh at = 3.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext1 at = 3.99975 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadhf at = 3.9999 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   marker { tag = mk1 at = 4
+  };
+   marker { tag = mk1 at = 4
+  };
+   hmonitor { tag = bpm at = 4
+  };
+   quadrupole { tag = quadhf at = 4.0001 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext1 at = 4.00025 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 4.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 4.5
+  };
+   sbend { tag = bendh at = 4.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext2 at = 4.99975 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadvf at = 4.9999 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   hmonitor { tag = bpm at = 5
+  };
+   quadrupole { tag = quadvf at = 5.0001 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext2 at = 5.00025 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 5.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 5.5
+  };
+   sbend { tag = bendh at = 5.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext1 at = 5.99975 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadhf at = 5.9999 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   marker { tag = mk1 at = 6
+  };
+   marker { tag = mk1 at = 6
+  };
+   hmonitor { tag = bpm at = 6
+  };
+   quadrupole { tag = quadhf at = 6.0001 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext1 at = 6.00025 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 6.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 6.5
+  };
+   sbend { tag = bendh at = 6.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext2 at = 6.99975 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadvf at = 6.9999 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   hmonitor { tag = bpm at = 7
+  };
+   quadrupole { tag = quadvf at = 7.0001 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext2 at = 7.00025 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 7.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 7.5
+  };
+   sbend { tag = bendh at = 7.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext1 at = 7.99975 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadhf at = 7.9999 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   marker { tag = mk1 at = 8
+  };
+   marker { tag = mk1 at = 8
+  };
+   hmonitor { tag = bpm at = 8
+  };
+   quadrupole { tag = quadhf at = 8.0001 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext1 at = 8.00025 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 8.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 8.5
+  };
+   sbend { tag = bendh at = 8.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext2 at = 8.99975 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadvf at = 8.9999 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   hmonitor { tag = bpm at = 9
+  };
+   quadrupole { tag = quadvf at = 9.0001 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext2 at = 9.00025 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 9.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 9.5
+  };
+   sbend { tag = bendh at = 9.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext1 at = 9.99975 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadhf at = 9.9999 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   marker { tag = mk1 at = 10
+  };
+   marker { tag = mk1 at = 10
+  };
+   hmonitor { tag = bpm at = 10
+  };
+   quadrupole { tag = quadhf at = 10.0001 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext1 at = 10.00025 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 10.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 10.5
+  };
+   sbend { tag = bendh at = 10.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext2 at = 10.99975 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadvf at = 10.9999 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   hmonitor { tag = bpm at = 11
+  };
+   quadrupole { tag = quadvf at = 11.0001 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext2 at = 11.00025 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 11.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 11.5
+  };
+   sbend { tag = bendh at = 11.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext1 at = 11.99975 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadhf at = 11.9999 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   marker { tag = mk1 at = 12
+  };
+   marker { tag = mk1 at = 12
+  };
+   hmonitor { tag = bpm at = 12
+  };
+   quadrupole { tag = quadhf at = 12.0001 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext1 at = 12.00025 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 12.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 12.5
+  };
+   sbend { tag = bendh at = 12.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext2 at = 12.99975 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadvf at = 12.9999 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   hmonitor { tag = bpm at = 13
+  };
+   quadrupole { tag = quadvf at = 13.0001 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext2 at = 13.00025 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 13.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 13.5
+  };
+   sbend { tag = bendh at = 13.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext1 at = 13.99975 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadhf at = 13.9999 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   marker { tag = mk1 at = 14
+  };
+   marker { tag = mk1 at = 14
+  };
+   hmonitor { tag = bpm at = 14
+  };
+   quadrupole { tag = quadhf at = 14.0001 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext1 at = 14.00025 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 14.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 14.5
+  };
+   sbend { tag = bendh at = 14.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext2 at = 14.99975 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadvf at = 14.9999 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   hmonitor { tag = bpm at = 15
+  };
+   quadrupole { tag = quadvf at = 15.0001 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext2 at = 15.00025 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 15.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 15.5
+  };
+   sbend { tag = bendh at = 15.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext1 at = 15.99975 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadhf at = 15.9999 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   marker { tag = mk1 at = 16
+  };
+   marker { tag = mk1 at = 16
+  };
+   hmonitor { tag = bpm at = 16
+  };
+   quadrupole { tag = quadhf at = 16.0001 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext1 at = 16.00025 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 16.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 16.5
+  };
+   sbend { tag = bendh at = 16.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext2 at = 16.99975 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadvf at = 16.9999 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   hmonitor { tag = bpm at = 17
+  };
+   quadrupole { tag = quadvf at = 17.0001 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext2 at = 17.00025 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 17.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 17.5
+  };
+   sbend { tag = bendh at = 17.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext1 at = 17.99975 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadhf at = 17.9999 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   marker { tag = mk1 at = 18
+  };
+   marker { tag = mk1 at = 18
+  };
+   hmonitor { tag = bpm at = 18
+  };
+   quadrupole { tag = quadhf at = 18.0001 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext1 at = 18.00025 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 18.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 18.5
+  };
+   sbend { tag = bendh at = 18.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext2 at = 18.99975 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadvf at = 18.9999 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   hmonitor { tag = bpm at = 19
+  };
+   quadrupole { tag = quadvf at = 19.0001 l = 0.0002
+    body = { kl = [ 0 -0.450054629095 ] kls = [ 0 0 ] 
+    }
+  };
+   sextupole { tag = sext2 at = 19.00025 l = 0.0001
+    body = { kl = [ 0 0 -0.833525322908 ] kls = [ 0 0 0 ] 
+    }
+  };
+   sbend { tag = bendh at = 19.25015 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   hmonitor { tag = mkb at = 19.5
+  };
+   sbend { tag = bendh at = 19.74985 l = 0.4997
+    body = { kl = [ 0.15707963268]}
+  };
+   sextupole { tag = sext1 at = 19.99975 l = 0.0001
+    body = { kl = [ 0 0 0.602968399222 ] kls = [ 0 0 0 ] 
+    }
+  };
+   quadrupole { tag = quadhf at = 19.9999 l = 0.0002
+    body = { kl = [ 0 0.550175649573 ] kls = [ 0 0 ] 
+    }
+  };
+   marker { tag = mk1 at = 20
+  };
+   marker { tag = mend at = 20
+  };
+
+endsequence at = 20
+}

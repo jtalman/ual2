@@ -1,0 +1,69 @@
+#ifndef UAL_USPAS_NOISY_MONITOR_HH
+#define UAL_USPAS_NOISY_MONITOR_HH
+
+#include <fstream>
+#include <list>
+
+#include "UAL/Common/RCIPtr.hh"
+#include "UAL/APF/PropagatorNode.hh"
+#include "SMF/PacLattElement.h"
+#include "PAC/Beam/Position.hh"
+
+#include "AIM/BPM/Monitor.hh"
+
+#define IA 16807
+#define IM 2147483647
+#define AM (1.0/IM)
+#define IQ 127773
+#define IR 2836
+#define NTAB 32
+#define NDIV (1+(IM-1)/NTAB)
+#define EPS 1.2e-7
+#define RNMX (1.0-EPS)
+
+namespace UAL {
+
+  namespace USPAS {
+
+  /**  Noisy Monitor */
+
+  class NoisyMonitor : public AIM::Monitor {
+
+  public:
+
+    /** Constructor */
+    NoisyMonitor();
+
+    /** Copy constructor */
+    NoisyMonitor(const NoisyMonitor& t);
+
+    /** Destructor */
+    virtual ~NoisyMonitor();
+
+    /** Returns a deep copy of this object 
+	(inherited from UAL::PropagatorNode) 
+    */
+    UAL::PropagatorNode* clone();    
+
+    /** Propagates a bunch of particles */
+    void propagate(UAL::Probe& probe);
+
+  protected:
+
+    int m_seed;
+    double ran1(int& iseed);
+
+  };
+
+
+  class NoisyMonitorRegister 
+  {
+    public:
+
+    NoisyMonitorRegister(); 
+  };
+
+  }
+}
+
+#endif

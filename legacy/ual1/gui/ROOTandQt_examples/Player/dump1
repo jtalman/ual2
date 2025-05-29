@@ -1,0 +1,118 @@
+./Player
+base/src/TROOT.cxx 283 enter TROOT::TROOT(const char *name, const char *title, VoidFuncPtr_t *initfunc)
+284
+340
+base/src/TROOT.cxx 475 leave TROOT::TROOT(const char *name, const char *title, VoidFuncPtr_t *initfunc)
+qt/src/TQtWidget.cxx 123 enter TQtWidget::TQtWidget(QWidget* parent, const char* name, WFlags
+127
+129
+132
+134
+base/src/TApplication.cxx 95 enter TApplication::TApplication(const char *appClassName,Int_t *argc, char **argv, void *options,Int_t numOptions)
+96
+155
+base/src/TApplication.cxx 533 enter void TApplication::LoadGraphicsLibs()
+534
+578
+qt/src/TGQt.cxx 604 enter TGQt::TGQt(const char *name, const char *title) : TVirtualX(name,title),fDisplayOpened(kFALSE),fQPainter(0),fCursors(kNumCursors),fQClientFilter(0),fQClientFilterBuffer(0),fPointerGrabber(0),fCodec(0),fSymbolFontFamily(Symbol)
+qt/src/TGQt.cxx 558 enter TQtApplication *TGQt::CreateQtApplicationImp()
+qt/src/TGQt.cxx 569 leave TQtApplication *TGQt::CreateQtApplicationImp()
+qt/src/TGQt.cxx 638 enter Bool_t TGQt::Init(void* /*display*/)
+** $Id: TGQt.cxx,v 1.17 2005/04/15 07:19:50 brun Exp $ this=0x16f4e40
+qt/src/TGQt.cxx 138 enter TQWidgetCollection ()
+qt/src/TGQt.cxx 127 enter inline  Int_t SetMaxId(Int_t newId)
+qt/src/TGQt.cxx 130 leave inline  Int_t SetMaxId(Int_t newId)
+qt/src/TGQt.cxx 154 leave TQWidgetCollection ()
+qt/src/TGQt.cxx 746 leave Bool_t TGQt::Init(void* /*display*/)
+qt/src/TGQt.cxx 615 leave TGQt::TGQt(const char *name, const char *title) : TVirtualX(name,title),fDisplayOpened(kFALSE),fQPainter(0),fCursors(kNumCursors),fQClientFilter(0),fQClientFilterBuffer(0),fPointerGrabber(0),fCodec(0),fSymbolFontFamily(Symbol)
+583 typeid(gVirtualX).name() P9TVirtualX
+589 typeid(gGuiFactory).name() P11TGuiFactory
+base/src/TApplication.cxx 591 leave void TApplication::LoadGraphicsLibs()
+157
+qt/src/TGQt.cxx 558 enter TQtApplication *TGQt::CreateQtApplicationImp()
+qt/src/TGQt.cxx 569 leave TQtApplication *TGQt::CreateQtApplicationImp()
+base/src/TApplication.cxx 224 leave TApplication::TApplication(const char *appClassName,Int_t *argc, char **argv, void *options,Int_t numOptions)
+rint/src/TRint.cxx 115 enter TRint::TRint(const char *appClassName, Int_t *argc, char **argv, void *options,Int_t numOptions, Bool_t noLogo)
+116
+122
+124
+126
+128
+130
+133
+135
+rint/src/TRint.cxx 292 enter void TRint::PrintLogo()
+  *******************************************
+  *                                         *
+  *        W E L C O M E  to  R O O T       *
+  *                                         *
+  *   Version   4.04/02      30 June 2020   *
+  *                                         *
+  *  You are welcome to visit our Web site  *
+  *          http://root.cern.ch            *
+  *                                         *
+  *******************************************
+
+Compiled for linuxx8664gcc with thread support.
+
+CINT/ROOT C/C++ Interpreter version 5.15.169, Mar 14 2005
+Type ? for help. Commands must be C++ statements.
+Enclose multiple statements between { }.
+rint/src/TRint.cxx 344 leave void TRint::PrintLogo()
+rint/src/TRint.cxx 202 leave TRint::TRint(const char *appClassName, Int_t *argc, char **argv, void *options,Int_t numOptions, Bool_t noLogo)
+136
+root [0] 139
+141
+143
+145
+147
+149
+qt/src/TGQt.cxx 760 enter Int_t  TGQt::RegisterWid(QPaintDevice *wid)
+762
+765
+770
+qt/src/TGQt.cxx 771 leave Int_t  TGQt::RegisterWid(QPaintDevice *wid)
+gpad/src/TCanvas.cxx 163 enter TCanvas::TCanvas(const char *name, Int_t ww, Int_t wh, Int_t winid)
+164
+169
+gpad/src/TCanvas.cxx 420 enter void TCanvas::Init()
+421
+430
+440
+447
+450
+gpad/src/TCanvas.cxx 463 leave void TCanvas::Init()
+171
+184
+185 gBatchGuiFactory 0x1173c30
+187 typeid(fCanvasImp).name() P10TCanvasImp
+188
+190
+gpad/src/TCanvas.cxx 469 enter void TCanvas::Build()
+470
+478
+480
+fXsizeReal 5
+fYsizeReal 20
+487
+489
+490 gVirtualX 0x16f4e40
+491 fCanvasID 0
+492 typeid(gVirtualX).name() P9TVirtualX
+qt/src/TGQt.cxx 1692 enter void  TGQt::SelectWindow(int wid)
+1693
+1697
+1699
+1717
+qt/src/TGQt.cxx 1721 leave void  TGQt::SelectWindow(int wid)
+495
+
+ *** Break *** segmentation violation
+ Generating stack trace...
+ 0x00007f7e086a8918 in TCanvas::TCanvas(char const*, int, int, int) + 0x2e8 from /home/talman/Desktop/GIT/download/ual1/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libGpad.so
+ 0x00007f7e06e3ef6e in TQtWidget::TQtWidget(QWidget*, char const*, unsigned int, bool) + 0x29e from /home/talman/Desktop/GIT/download/ual1/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libGQt.so
+ 0x0000000000406816 in main + 0x46 from ./Player
+ 0x00007f7e065263d5 in __libc_start_main + 0xf5 from /lib64/libc.so.6
+ 0x0000000000406939 in <unknown> from ./Player
+Abort (core dumped)
+

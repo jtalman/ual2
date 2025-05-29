@@ -1,0 +1,8 @@
+<apdf>
+  <propagator id="damping" accelerator="ring">
+     <create>
+        <link algorithm="TIBETAN::OneTurnTracker"   sector="Default" />
+        <link algorithm="UAL::USPAS::DampingTracker" elements="mend" />
+     </create>
+  </propagator>
+</apdf>

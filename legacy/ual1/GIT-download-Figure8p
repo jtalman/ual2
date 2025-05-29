@@ -1,0 +1,18 @@
+-----------------------------------------------------------------------------------------
+LATEST
+----------------------------------------------------------------------------------------
+     - cd examples/SXF_TRACKER/data/
+     - rm ring.sxf
+     - ln -s PTR_m_nom=0.32349_sl4-vary-ORIG.sxf ring.sxf
+     -   ( tail ring.sxf should produce "endsequence at = 102.25217... )
+     - cd ..
+     - make clean
+     - make
+     - ./tracker
+     - cd out/cpp/
+     - gnuplot
+     - load "gnuplot/twiss/PTR_m_nom=0.32349_sl4-vary-ORIG.gnuplot"
+     - q
+     - cd pdf
+     - evince PTR_m_nom=0.32349_sl4-vary-ORIG-betas.pdf &
+     - evince PTR_m_nom=0.32349_sl4-vary-ORIG-phase-advances.pdf &

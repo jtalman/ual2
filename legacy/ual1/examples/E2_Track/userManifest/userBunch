@@ -1,0 +1,11 @@
+PAC::Bunch bunch(5);                               // bunch with 5 particle(s) for nonlinear trap
+PAC::Spin * spinX   = new PAC::Spin[5];            // the corresponding spins
+//bunch.setBeamAttributes(ba);
+
+bunch[0].getPosition().set(      0,       0,      0,	   0,      0,      0 );
+bunch[1].getPosition().set( 1.0e-8,       0, 1.0e-5,  1.0e-7,      0,  1.0e-8 );
+bunch[2].getPosition().set( 1.0e-8,       0, 1.0e-4,  1.0e-6,      0,  1.0e-8 );
+bunch[3].getPosition().set( 1.0e-8,       0, 1.0e-3,  1.0e-5,      0,  1.0e-8 );
+bunch[4].getPosition().set( 1.0e-8,       0, 1.0e-2,  1.0e-4,      0,  1.0e-8 );
+
+//pacPmy = &(bunch[0].getPosition());

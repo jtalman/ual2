@@ -1,0 +1,32 @@
+//void selectElementsByNames(const std::string& names,std::vector<int>& elemVector){
+  void selectElementsByNames( const char* names,std::vector<int>& elemVector){
+//if(!m_teapot) ostd::cerrreturn;
+std::cerr << "enter selectElementsByNames\n";
+//std::cerr << "names.c_str() " << names.c_str() << "\n";
+std::cerr << "names " << names << "\n";
+  std::list<int> elemList;
+  regex_t preg;
+  regmatch_t pmatch[1];
+  regcomp(&preg, names, REG_EXTENDED);   
+//regcomp(&preg, names.c_str(), REG_EXTENDED);   
+//regcomp(&r, "qf\.*\d*", REG_EXTENDED);
+  for(int i = 0; i < m_teapot->size(); i++){
+    TeapotElement& anode = m_teapot->element(i);
+    std::string elname = anode.getDesignName();
+    const char* cc_elname=elname.c_str();
+//  const char* cc_elname=(const char*)elname;
+    int rc = regexec(&preg, cc_elname, 1, pmatch, 0); 
+//  int rc = regexec(&preg, elname.c_str(), 1, pmatch, 0); 
+    if(rc == 0) elemList.push_back(i);    
+  }
+
+  regfree(&preg); 
+
+  elemVector.resize(elemList.size());
+  int counter = 0;
+  std::list<int>::iterator ie; 
+  for(ie = elemList.begin(); ie != elemList.end(); ie++){
+    elemVector[counter++] = *ie;
+  }   
+std::cerr << "leave selectElementsByNames\n";
+}

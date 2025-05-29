@@ -1,0 +1,38 @@
+!!!                                                                            !!!
+      "Near script", XX_run_script, alters "server side" code, $UAL/codes/PAC
+!!!                                                                            !!!
+
+It uses sxf file,
+      working.sxf_entry_and_middle,
+...
+   50 QBh
+   51       quadrupole {
+   52             tag = QBh
+   53             at = 20.73296326805
+   54             l = 0.15
+   55      body = {  kl = [ 999 1 4 18 96 600 4320] }
+   56   };
+...
+Which parses to
+
+!!!                                                                  !!!
+kl of 0 *it._data[i]: 0                      syntax slightly off!!
+kl of 1 *it._data[i]: 1
+kl of 2 *it._data[i]: 2
+kl of 3 *it._data[i]: 3
+kl of 4 *it._data[i]: 4
+kl of 5 *it._data[i]: 5
+kl of 6 *it._data[i]: 6
+!!!                                                                  !!!
+These are "deep" in the UAL sxf parsing.
+
+The mapping of this quadrupole family body is
+!!!                                                                  !!!
+999   --->>>   0
+1     --->>>   1
+4     --->>>   2
+18    --->>>   3
+96    --->>>   4
+600   --->>>   5
+4320  --->>>   6
+!!!                                                                  !!!

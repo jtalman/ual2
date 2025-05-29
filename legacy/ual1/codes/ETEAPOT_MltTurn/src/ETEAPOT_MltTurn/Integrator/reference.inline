@@ -1,0 +1,203 @@
+//#define GAMMA_FROZEN_SPIN 1.248107349
+
+//                   probe deviations
+double  dx   = p[0];
+double  dy   = p[2];
+double  dz   = 0.0;
+double dpx   = p[1]*p0;
+double dpy   = p[3]*p0;
+double dpz;
+//                   probe deviations
+
+//                   probe values
+double x     = Rsxf+dx; 
+double y     = dy;
+double z     = dz;
+
+double px    = dpx;
+double py    = dpy;
+double pz;
+//                   probe values
+
+       gamma = gafti;                         // for header methods
+       mass  = m0;                            // for header methods
+
+double rIn   = get_rFromProbe(x,y,z);         //
+       EscM  = gamma*m0*c*c-k/rIn;            //      
+
+double pIn;
+double bin;
+
+bin = sqrt(1.-1./gamma/gamma);
+pIn = gamma*m0*bin*c;
+
+pz = sqrt(pIn*pIn-px*px-py*py);
+
+double Lx    = y*pz-z*py;
+double Ly    = z*px-x*pz;
+double Lz    = x*py-y*px;
+       L     = sqrt(Lx*Lx+Ly*Ly+Lz*Lz);
+
+/*
+if(ip==0){
+ std::cout << "bin " << bin  << "\n";
+ std::cout << "pIn " << pIn << "\n";
+ std::cout << "pz " << pz << "\n";
+ std::cout << "Lx  " << Lx << "\n";
+ std::cout << "Ly  " << Ly << "\n";
+ std::cout << "Lz  " << Lz << "\n";
+ std::cout << "L   " << L  << "\n";
+}
+*/
+
+//                   probe values
+
+#include "ETEAPOT_MltTurn/Integrator/hamilton.inline"
+
+#include "timeOfFlightBendVariables"
+
+double sxIn      = spin[ip][0];
+double syIn      = spin[ip][1];
+double szIn      = spin[ip][2];
+Vector3 sIn(sxIn,syIn,szIn);
+
+#include "nonPrtbtveSpinEvolve"
+
+// At this point the precession in tilde-alpha has been calculated
+// for the bend, irrespective of spin vector of any particular particle.
+// It does, however, depend on the gamma of the individual particle.
+// "dAl_dThT" has just been calculated for particle "ip" using "spinIn".
+// As a check "delAlphT" will be calculated for particle "ip" 
+// using "perturbSpinIn".
+ 
+//Vector3 sTldIn = Rinv * sIn;
+  Vector3 sTldIn = R_in_INV * sIn;
+
+double sTldPerpIn= sTldIn[1];
+
+  double alphTldIn = atan2(-sTldIn[0],sTldIn[2]);
+//double alphTldIn = atan(-sTldIn[0]/sTldIn[2]);
+
+double sTldPrllIn= sqrt(1.-sTldPerpIn*sTldPerpIn);
+
+#include "perturbSpinEvolve"
+
+/*
+if(ip==0){
+std::cerr << "gamma  " << gamma  << "\n";
+std::cerr << "gammaD " << gammaD << "\n";
+std::cerr << "gamma - gammaD " << gamma - gammaD << "\n";
+std::cerr << "g      " << g      << "\n";
+std::cerr << "g/2. - 1. + g/2./gammaD/gammaD      " << g/2. - 1. + g/2./gammaD/gammaD      << "\n";
+std::cerr << "EFD                                 " << EFD << "\n";
+//std::cerr << "ETEAPOT_MltTurn::DipoleTracker::s_algorithm::dZFF " << ETEAPOT_MltTurn::DipoleTracker::s_algorithm::dZFF << "\n";
+std::cerr << "dZFF " << dZFF << "\n";
+}
+*/
+
+//double dAlphFF = (g/2. - 1. + g/2./gammaD/gammaD) * EFD * dZFF / 4. / mpcsqBye / Rsxf;
+//double delGammaFF = EFD * dZFF / 2. / mpcsqBye;
+  double delGammaFF = EFD * p[0] / 2. / mpcsqBye;
+  double dAlphFac = (g/2. - 1. + g/2./gammaD/gammaD);
+  double angFF = dZFF / Rsxf;//th
+  double dAlphFF = dAlphFac * 2. * angFF * delGammaFF;
+//double dAlphFF = (g/2. - 1. + g/2./gammaD/gammaD) * 2. * delGammaFF;
+//double dAlphFF = (g/2. - 1. + g/2./gammaD/gammaD) * EFD * dZFF / mpcsqBye;
+
+/*
+std::cerr << "Rsxf " << Rsxf << "\n";
+std::cerr << "dZFF " << dZFF << "\n";
+std::cerr << "EFD " << EFD << "\n";
+std::cerr << "p[0] " << p[0] << "\n";
+std::cerr << "mpcsqBye " << mpcsqBye << "\n";
+std::cerr << "delGammaFF " << delGammaFF << "\n";
+std::cerr << "g/2. " << g/2. << "\n";
+std::cerr << "gammaD " << gammaD << "\n";
+std::cerr << "dAlphFac " << dAlphFac << "\n";
+std::cerr << "th " << th << "\n";
+std::cerr << "angFF " << angFF << "\n";
+std::cerr << "dAlphFF " << dAlphFF << "\n";
+char junk;
+std::cin >> junk;
+*/
+
+delAlphT = delAlphT + dAlphFF;
+
+double sTldPerpOut= sTldPerpIn;
+double sTldPrllOut= sTldPrllIn;
+//double alphTldOut = alphTldIn + dAl_dThT;
+  double alphTldOut = alphTldIn + delAlphT;
+
+double sxTldOut   = -sTldPrllOut*sin(alphTldOut);
+double syTldOut   =  sTldPerpOut;
+double szTldOut   =  sTldPrllOut*cos(alphTldOut);
+double sTldMag    = sqrt(sxTldOut*sxTldOut + syTldOut*syTldOut + szTldOut*szTldOut);
+
+Vector3 sTldOut(sxTldOut,syTldOut,szTldOut);
+
+//                         TO LINE 166 !!!
+/*
+Matrix3 R_out;
+Matrix3 R_out_INV;
+#include "nonPrtbtveSpinEvolve_OUT"
+
+  Vector3 sOut = R_out * sTldOut;
+//Vector3 sOut = R * sTldOut;
+
+spin[ip][0] = sOut[0];
+spin[ip][1] = sOut[1];
+spin[ip][2] = sOut[2];
+*/
+//                         TO LINE 166 !!!
+
+/*
+ETEAPOT_MltTurn::DipoleTracker::spin[ip][0]=spin[ip][0];
+ETEAPOT_MltTurn::DipoleTracker::spin[ip][1]=spin[ip][1];
+ETEAPOT_MltTurn::DipoleTracker::spin[ip][2]=spin[ip][2];
+*/
+//#include"setMarkerTrackerSpin"
+//#include"setMltTrackerSpin"
+
+/*
+if(ip==0){
+// std::cout << spin[ip][0] << " " << spin[ip][1] << " " << spin[ip][2] << " " << alphTldIn << " JDTRT_PART_0\n";
+   std::cout << "JDTRT_SPIN " << spin[ip][0] << " " << spin[ip][1] << " " << spin[ip][2] << " " << alphTldIn << " " << dAl_dThT << " " << delAlphT << " " << IgiQLowr << " " << IgiQUppr << " " << IgiQ << "\n";
+}
+*/
+
+/*
+if(ip==20){
+ std::cout << spin[ip][0] << " " << spin[ip][1] << " " << spin[ip][2] << " JDTRT_PART_20\n";
+}
+*/
+
+//std::cin >> dummy;
+
+if(ip==0){
+// #include "timeOfFlightBendPrints1"
+}
+
+double tofDev0;
+double tofDev1;
+double tofDev2;
+double tofDevTOT;
+
+#include "timeOfFlightBendVariables2"
+
+#include "ETEAPOT_MltTurn/Integrator/conservedVector.insert"
+
+#include "ETEAPOT_MltTurn/Integrator/rotate.insert"
+
+// MOVED TO POST UPDATE TO MAKE CONSISTENT WITH BEND ENTRY SEQUENCCING
+/*
+Matrix3 R_out;
+Matrix3 R_out_INV;
+#include "nonPrtbtveSpinEvolve_OUT"
+
+  Vector3 sOut = R_out * sTldOut;
+//Vector3 sOut = R * sTldOut;
+
+spin[ip][0] = sOut[0];
+spin[ip][1] = sOut[1];
+spin[ip][2] = sOut[2];
+*/

@@ -1,0 +1,68 @@
+
+mbegin : marker
+mend : marker
+mhalf : marker
+marcin : marker
+mslndcent : marker
+marcout : marker
+RF1 : rfcavity, L = 0.0000000001, VOLT=0.0005, lag=0, HARMON=100 ! HARMON=285
+strh : drift, L = 1
+slndh : drift, L = 0.725
+QAh : quadrupole, L = 0.48333333333333334, K1 = -0.00000005
+QBh : quadrupole, L = 0.48333333333333334, K1 = -0.00000005 ! -0.024475
+QCh : quadrupole, L = 0.48333333333333334, K1 = -0.00000005  ! 0.00206
+SA : sextupole, L = 0.48333333333333334, K2 = 0.0000001 ! -0.019241379310344826
+SB : sextupole, L = 0.48333333333333334, K2 = 0.0000001 ! 0.01046896551724138
+SC : sextupole, L = 0.48333333333333334, K2 = 0.0000001 ! 0.0036413793103448277
+OA : octupole, L = 0.001, K3 = 330.0     ! 0.000016551724137931037
+OB : octupole, L = 0.001, K3 = 330.0 ! 0.000016551724137931037
+OC : octupole, L = 0.001, K3 = 330.0     ! 0.000016551724137931037
+Bh : sbend, L = 15.70796326795, ANGLE = 0.39269908169875
+            ! Sectors
+longsth : LINE = ( strh )
+            slnd : LINE = ( slndh, &
+                    mslndcent, &
+                    slndh )
+            pkgA : LINE = ( QAh, &
+                    SA, &
+                    OA, &
+                    QAh )
+            pkgB : LINE = ( QBh, &
+                    SB, &
+                    OB, &
+                    QBh )
+            pkgC : LINE = ( QCh, &
+                    SC, &
+                    OC, &
+                    QCh )
+            Ebendh : LINE = ( Bh )
+            arc : LINE = ( marcin, &
+                    pkgC, &
+                    Ebendh, &
+                    pkgB, &
+                    Ebendh, &
+                    pkgA, &
+                    Ebendh, &
+                    pkgB, &
+                    Ebendh, &
+                    slnd, &
+                    Ebendh, &
+                    pkgB, &
+                    Ebendh, &
+                    pkgA, &
+                    Ebendh, &
+                    pkgB, &
+                    Ebendh, &
+                    pkgC, &
+                    marcout )
+            ring : LINE = ( mbegin, &
+                    RF1, &
+                    longsth, &
+                    arc, &
+                    longsth, &
+                    mhalf, &
+                    longsth, &
+                    arc, &
+                    longsth, &
+                    mend )
+              

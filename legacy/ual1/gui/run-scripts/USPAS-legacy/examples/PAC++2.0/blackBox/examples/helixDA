@@ -1,0 +1,14 @@
+// ZLIB++ Parameters
+
+  ZLIB_ORDER = 2;
+
+// helixParameters
+
+  order  = 1;
+
+  length = 2.4;
+  k      = 2*PI/length;
+
+  a[1] = 0.0;     b[1] = -2.*1.458*(0.3/27/PROTON)/k; /* -2*B0/BR/k  */
+  a[2] = 0.0;     b[2] = 0.0;
+  a[3] = 0.0;     b[3] = 0.0;

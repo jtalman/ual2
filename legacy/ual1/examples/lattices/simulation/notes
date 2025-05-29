@@ -1,0 +1,4 @@
+gcc i-t-indices-for-x-y-out.c -lm
+./a.out 0.75 100 100 0.0 5 1.0 >&! design
+./a.out 0.75 100 100 10. 5 1.0 >&! simulation
+./a.out 0.75 100 100 10. 5 1.0 >&! simulation2

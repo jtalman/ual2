@@ -1,0 +1,9 @@
+ldd qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3.3.4 | grep xml
+ldd root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libGQt.so | grep xml
+ldd muparser_v134/lib/libmuparser.so.0.0.0 | grep xml
+ldd ROOT/lib/linux/libUalRootViewers.so | grep xml
+ldd QT/lib/linux/libUalQt.so | grep xml
+ldd qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/examples/Player/Player | grep xml
+ldd USPAS/examples/player/lib/linux/run | grep xml
+ldd USPAS/examples/transverse/lib/linux/run | grep xml
+ldd USPAS/examples/longitudinal/lib/linux/run | grep xml

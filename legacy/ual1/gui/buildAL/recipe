@@ -1,0 +1,96 @@
+This is for the AlmaLinux UAL GUI!
+
+You should have already executed
+     $UAL/AlmaLinux/minimal-download-and-build-instructions
+
+Some assumptions that may have to bw tweaked for your installation:
+   - gcc4.8.5
+          installed in
+               /home/talman/gcc/INSTALL-4.8.5/
+   - $UAL/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/config/Makefile.config 
+          has hard coded values for
+               QTLIB          := /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3.3.4
+               QTINCDIR       := $(filter-out /usr/include, /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/)
+               QTMOCEXE       := /home/talman/Desktop/GIT/download/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/bin/moc
+__________________________________________________________________
+__________________________________________________________________
+__________________________________________________________________
+
+./xml
+     ignore build errors
+          ll $UAL/gui/libxml2-2.9.7/.libs/libxml2.so.2.9.7 
+               5,313,136
+__________________________________________________________________
+
+???
+su
+
+dnf -y install libX11-devel
+dnf -y install libXext-devel
+dnf -y install libXpm-devel
+dnf -y install libGLU
+dnf -y install libGLU-devel
+dnf -y install openldap-devel
+dnf -y install libnsl
+dnf -y install rpcgen
+
+/usr/lib64/libXmu.so
+/usr/lib64/libXi.so
+/usr/lib64/libnsl.so
+
+exit
+???
+__________________________________________________________________
+
+./qt
+     9,590,800
+__________________________________________________________________
+
+follow
+     $UAL/gcc/4.8.5/AL94/recipe
+to install
+     gcc4.8.5
+e.g. in
+     /home/talman/gcc/INSTALL-4.8.5/
+__________________________________________________________________
+
+setenv PATH_HOLD $PATH
+echo $PATH
+setenv PATH /home/talman3/gcc/INSTALL-4.8.5/bin:$PATH
+echo $PATH
+
+./root
+     1,092,328
+
+ll ../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/ | wc -l
+     47
+
+setenv PATH $PATH_HOLD
+echo $PATH
+     "system gcc and g++"
+__________________________________________________________________
+
+echo "mu"
+./mu
+     366,384
+__________________________________________________________________
+
+echo "ROOT"
+./ROOT
+     661,512
+__________________________________________________________________
+
+echo "QT"
+./QT
+     2,665,168
+__________________________________________________________________
+
+echo "player"
+./player
+     230,448
+__________________________________________________________________
+
+cd ../run-scripts
+echo "./run-longitudinalWithParametersFile"
+./run-longitudinalWithParametersFile
+__________________________________________________________________

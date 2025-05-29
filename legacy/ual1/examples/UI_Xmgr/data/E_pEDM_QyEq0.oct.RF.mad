@@ -1,0 +1,68 @@
+
+mbegin : marker
+mend : marker
+mhalf : marker
+marcin : marker
+mslndcent : marker
+marcout : marker
+RF1 : rfcavity, L = 0.0000000001, VOLT=0.0005, lag=0, HARMON=100
+strh : drift, L = 1
+slndh : drift, L = 0.725
+QAh : quadrupole, L = 0.3625, K1 = -0.00000005
+QBh : quadrupole, L = 0.3625, K1 = -0.00000005
+QCh : quadrupole, L = 0.3625, K1 = -0.00000005
+SA : sextupole, L = 0.3625, K2 = 0.000027586206896551727
+SB : sextupole, L = 0.3625, K2 = 0.000027586206896551727
+SC : sextupole, L = 0.3625, K2 = 0.000027586206896551727
+OA : octupole, L = 0.3625, K3 = 16.551724137931036
+OB : octupole, L = 0.3625, K3 = 16.551724137931036
+OC : octupole, L = 0.3625, K3 = 16.551724137931036
+Bh : sbend, L = 15.70796326795, ANGLE = 0.39269908169875
+            ! Sectors
+longsth : LINE = ( strh )
+            slnd : LINE = ( slndh, &
+                    mslndcent, &
+                    slndh )
+            pkgA : LINE = ( QAh, &
+                    SA, &
+                    OA, &
+                    QAh )
+            pkgB : LINE = ( QBh, &
+                    SB, &
+                    OB, &
+                    QBh )
+            pkgC : LINE = ( QCh, &
+                    SC, &
+                    OC, &
+                    QCh )
+            Ebendh : LINE = ( Bh )
+            arc : LINE = ( marcin, &
+                    pkgC, &
+                    Ebendh, &
+                    pkgB, &
+                    Ebendh, &
+                    pkgA, &
+                    Ebendh, &
+                    pkgB, &
+                    Ebendh, &
+                    slnd, &
+                    Ebendh, &
+                    pkgB, &
+                    Ebendh, &
+                    pkgA, &
+                    Ebendh, &
+                    pkgB, &
+                    Ebendh, &
+                    pkgC, &
+                    marcout )
+            ring : LINE = ( mbegin, &
+                    RF1, &
+                    longsth, &
+                    arc, &
+                    longsth, &
+                    mhalf, &
+                    longsth, &
+                    arc, &
+                    longsth, &
+                    mend )
+              

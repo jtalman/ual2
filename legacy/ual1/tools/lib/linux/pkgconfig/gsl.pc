@@ -1,0 +1,10 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=/home/ualusr2011/ual1220/ual1/tools/lib/linux
+includedir=/home/ualusr2011/ual1220/ual1/tools/include
+
+Name: GSL
+Description: GNU Scientific Library
+Version: 1.4
+Libs: -L/home/ualusr2011/ual1220/ual1/tools/lib/linux -lgsl -lgslcblas -lm 
+Cflags: -I/home/ualusr2011/ual1220/ual1/tools/include

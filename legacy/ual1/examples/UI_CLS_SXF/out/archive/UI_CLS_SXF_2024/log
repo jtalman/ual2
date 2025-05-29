@@ -1,0 +1,20 @@
+
+analysis
+
+  closed orbit     1720214567
+
+  twiss parameters 1720214567
+
+  end            . 1720214567
+
+make map 
+start = 1720214567
+end   = 1720214567
+
+run 
+start = 1720214567
+
+_revfreq
+ suml                   = 170.882116187407
+ excess circumference   = 3.79374144729877e-14
+ revfreq                = 1754381.67749648end   = 1720214568

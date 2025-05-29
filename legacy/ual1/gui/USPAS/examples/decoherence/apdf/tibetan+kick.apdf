@@ -1,0 +1,9 @@
+<apdf>
+  <propagator id="tibetan+kick" accelerator="ring">
+     <create>
+        <link algorithm="TIBETAN::OneTurnTracker"   sector="Default" />
+        <link algorithm="UAL::USPAS::OneTurnKicker" elements="kicker" />
+        <link algorithm="AIM::Monitor"              elements="mbegin" />
+     </create>
+  </propagator>
+</apdf>

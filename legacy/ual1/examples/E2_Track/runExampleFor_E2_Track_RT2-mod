@@ -1,0 +1,81 @@
+: MAIN SERVER SIDE COMPILE:
+pushd $UAL/codes/ETEAPOT2
+ll lib/linux
+make clean
+ll lib/linux
+make
+ll lib/linux
+popd
+
+: MAIN CLIENT SIDE COMPILE:
+\cp $UAL/examples/E2_Track/Makefile_production $UAL/examples/E2_Track/Makefile
+\cp userManifest/userBunch_RT userManifest/userBunch
+make clean
+make
+
+./E2_Track ./sxf/E_BM_M1.0.RF.sxf 5.4142678e+05 -1 0 200 0.02 1 > ! /dev/null
+
+perl perl/SplitNikolayOut.pl NikolayOut >! IG
+
+gnuplot
+        l 'gnuplot/forGnuplot_Figure2-mod'
+
+--------------------------------------------------------
+# 28 Oct.2015, Nonlinear Trap E_pEDM_QyEq0.oct.RF.sxf
+#  f_0 = 3e8*0.6/281.427 = 0.6396 MHz
+# \cp userManifest/userBunch_NonlinearTrap userManifest/userBunch
+\cp userManifest/userBunch_NonlinearTrap2 userManifest/userBunch
+
+make clean
+make
+
+# ./E2_Track ./sxf/E_pEDM_QyEq0.oct.RF.sxf 0.6396e6 -1 0 1024 0.02 1 > ! /dev/null
+# ./E2_Track ./sxf/E_pEDM_QyEq0.oct.RF.sxf 0.6396e6 -0.0151 0 1024 0.02 1 > ! /dev/null
+# ./E2_Track ./sxf/E_pEDM_QyEq0.oct.RF.sxf 0.6396e6 -0.01 0 1024 0.02 1 > ! /dev/null
+#  ./E2_Track ./sxf/E_pEDM_QyEq0.10xoct.RF.sxf 0.6396e6 -0.0151 0 1024 0.02 1 > ! /dev/null
+#  ./E2_Track ./sxf/E_pEDM_QyEq0.minus_oct.RF.sxf 0.6396e6 -0.0151 0 1024 0.02 1 > ! /dev/null
+#  ./E2_Track ./sxf/E_pEDM_QyEq0.zero_oct.RF.sxf 0.6396e6 -0.0151 0 1024 0.02 1 > ! /dev/null
+#  ./E2_Track ./sxf/E_pEDM_QyEq0.zero_oct.RF.sxf 0.6396e6 -0.01 0 1024 0.02 1 > ! /dev/null
+#  ./E2_Track ./sxf/E_pEDM_QyEq0.zero_oct.RF.sxf 0.6396e6 -0.03 0 1024 0.02 1 > ! /dev/null
+#  ./E2_Track ./sxf/E_pEDM_QyEq0.zero_oct.RF.sxf 0.6396e6 -0.0151 0 1024 0.02 1 > ! /dev/null
+#   ./E2_Track ./sxf/E_pEDM_QyEq0.zero_oct.zero_RF.sxf 0.6396e6 -0.0151 0 1024 0.02 1 > ! /dev/null
+#   ./E2_Track ./sxf/E_pEDM_QyEq0.zero_oct.h100RF.sxf 0.6396e6 -0.0151 0 1024 0.02 1 > ! /dev/null
+#   ./E2_Track ./sxf/E_pEDM_QyEq0.zero_oct.h100RF.sxf 0.6396e6 -0.0151 0 8192 0.02 1 > ! /dev/null
+    ./E2_Track ./sxf/E_pEDM_QyEq0.Huge_oct.RF.sxf 0.6396e6 -0.0151 0 1024 0.02 1 > ! /dev/null
+
+perl perl/SplitNikolayOut-mod.pl NikolayOut 
+
+perl perl/IGtoFort.8.pl IG1 >! out/fort-smsm.8
+perl perl/IGtoFort.8.pl IG2 >! out/fort-sm.8
+perl perl/IGtoFort.8.pl IG3 >! out/fort-med.8
+perl perl/IGtoFort.8.pl IG4 >! out/fort-big.8
+
+pushd out
+\rm fort.8
+\ln -s fort-smsm.8 fort.8
+popd
+xmgrace -noask -b perl/xyzfft.com &
+
+pushd out
+\rm fort.8
+\ln -s fort-sm.8 fort.8
+popd
+xmgrace -noask -b perl/xyzfft.com &
+
+pushd out
+\rm fort.8
+\ln -s fort-med.8 fort.8
+popd
+xmgrace -noask -b perl/xyzfft.com &
+
+pushd out
+\rm fort.8
+\ln -s fort-big.8 fort.8
+popd
+xmgrace -noask -b perl/xyzfft.com &
+
+
+
+
+
+

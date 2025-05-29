@@ -1,0 +1,5 @@
+29 July 2009
+------------
+
+DoNothingTracker.cc and DoNothingTracker.hh are do-nothing trackers, copied
+directly from DampingTracker.cc and DampingTracker.hh, but with no damping.

@@ -1,0 +1,5 @@
+// Edit file "parameters"
+   vi $UAL/gui/USPAS/examples/generic/src/parameters
+
+// Execute
+./run

@@ -1,0 +1,10 @@
+flex count.l
+gcc lex.yy.c
+./a.out < in
+
+__________________________________________________
+
+gcc -ggdb -O0 lex.yy.c
+ll ./a.out
+env SHELL=/bin/sh gdb -nx ./a.out
+      (gdb) run < ./in

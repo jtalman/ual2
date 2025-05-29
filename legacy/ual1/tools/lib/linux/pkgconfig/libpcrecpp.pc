@@ -1,0 +1,12 @@
+# Package Information for pkg-config
+
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=/home/ualusr2011/ual1220/ual1/tools/lib/linux
+includedir=/home/ualusr2011/ual1220/ual1/tools/include
+
+Name: libpcrecpp
+Description: PCRECPP - C++ wrapper for PCRE
+Version: 8.02
+Libs: -L${libdir} -lpcre -lpcrecpp
+Cflags: -I${includedir} 

@@ -1,0 +1,451 @@
+// 
+ring sequence { 
+   drift { tag = drift_rf_trip13x at = 0.02 l = 0.04
+  };
+   quadrupole { tag = q130 at = 0.0679375 l = 0.055875
+    body = { kl = [ 0 0.412170486375 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q130 at = 0.1238125 l = 0.055875
+    body = { kl = [ 0 0.412170486375 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q130 at = 0.1796875 l = 0.055875
+    body = { kl = [ 0 0.412170486375 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q130 at = 0.2355625 l = 0.055875
+    body = { kl = [ 0 0.412170486375 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = drift_q13x at = 0.30075 l = 0.0745
+  };
+   quadrupole { tag = q131 at = 0.3659375 l = 0.055875
+    body = { kl = [ 0 -0.810777037125 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q131 at = 0.4218125 l = 0.055875
+    body = { kl = [ 0 -0.810777037125 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q131 at = 0.4776875 l = 0.055875
+    body = { kl = [ 0 -0.810777037125 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q131 at = 0.5335625 l = 0.055875
+    body = { kl = [ 0 -0.810777037125 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = drift_q13x at = 0.59875 l = 0.0745
+  };
+   quadrupole { tag = q132 at = 0.6639375 l = 0.055875
+    body = { kl = [ 0 0.5090804775 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q132 at = 0.7198125 l = 0.055875
+    body = { kl = [ 0 0.5090804775 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q132 at = 0.7756875 l = 0.055875
+    body = { kl = [ 0 0.5090804775 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q132 at = 0.8315625 l = 0.055875
+    body = { kl = [ 0 0.5090804775 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = drift_trip13x_trip14x at = 0.9038175 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 0.9924525 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 1.0810875 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 1.1697225 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 1.2583575 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 1.3469925 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 1.4356275 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 1.5242625 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 1.6128975 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 1.7015325 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 1.7901675 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 1.8788025 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 1.9674375 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 2.0560725 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 2.1447075 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 2.2333425 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 2.3219775 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 2.4106125 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 2.4992475 l = 0.088635
+  };
+   drift { tag = drift_trip13x_trip14x at = 2.5878825 l = 0.088635
+  };
+   quadrupole { tag = q140 at = 2.6461375 l = 0.027875
+    body = { kl = [ 0 0.07814929075 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q140 at = 2.6740125 l = 0.027875
+    body = { kl = [ 0 0.07814929075 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q140 at = 2.7018875 l = 0.027875
+    body = { kl = [ 0 0.07814929075 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q140 at = 2.7297625 l = 0.027875
+    body = { kl = [ 0 0.07814929075 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = drift_q14x at = 2.781325 l = 0.07525
+  };
+   quadrupole { tag = q141 at = 2.8468875 l = 0.055875
+    body = { kl = [ 0 -0.136043388375 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q141 at = 2.9027625 l = 0.055875
+    body = { kl = [ 0 -0.136043388375 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q141 at = 2.9586375 l = 0.055875
+    body = { kl = [ 0 -0.136043388375 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q141 at = 3.0145125 l = 0.055875
+    body = { kl = [ 0 -0.136043388375 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = drift_q14x at = 3.080075 l = 0.07525
+  };
+   quadrupole { tag = q142 at = 3.1316375 l = 0.027875
+    body = { kl = [ 0 0.07814929075 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q142 at = 3.1595125 l = 0.027875
+    body = { kl = [ 0 0.07814929075 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q142 at = 3.1873875 l = 0.027875
+    body = { kl = [ 0 0.07814929075 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q142 at = 3.2152625 l = 0.027875
+    body = { kl = [ 0 0.07814929075 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = drift_trip14x_bc at = 3.28095 l = 0.1035
+  };
+   sbend { tag = bcbend1h at = 3.38848878172 l = 0.111577563444
+    body = { kl = [ 0.037288959469]}
+  };
+   sbend { tag = bcbend1h at = 3.50006634517 l = 0.111577563444
+    body = { kl = [ 0.037288959469]}
+  };
+   drift { tag = drift_b1_b2 at = 3.58453484631 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 3.64189428514 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 3.69925372398 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 3.75661316282 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 3.81397260166 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 3.87133204049 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 3.92869147933 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 3.98605091817 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 4.04341035701 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 4.10076979584 l = 0.0573594388375
+  };
+   sbend { tag = bcbend2h at = 4.18523829698 l = 0.111577563444
+    body = { kl = [ -0.037288959469]}
+  };
+   sbend { tag = bcbend2h at = 4.29681586043 l = 0.111577563444
+    body = { kl = [ -0.037288959469]}
+  };
+   sbend { tag = bcbend3h at = 4.40839342387 l = 0.111577563444
+    body = { kl = [ -0.037288959469]}
+  };
+   sbend { tag = bcbend3h at = 4.51997098732 l = 0.111577563444
+    body = { kl = [ -0.037288959469]}
+  };
+   drift { tag = drift_b1_b2 at = 4.60443948846 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 4.6617989273 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 4.71915836613 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 4.77651780497 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 4.83387724381 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 4.89123668265 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 4.94859612148 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 5.00595556032 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 5.06331499916 l = 0.0573594388375
+  };
+   drift { tag = drift_b1_b2 at = 5.120674438 l = 0.0573594388375
+  };
+   sbend { tag = bcbend4h at = 5.20514293914 l = 0.111577563444
+    body = { kl = [ 0.037288959469]}
+  };
+   sbend { tag = bcbend4h at = 5.31672050258 l = 0.111577563444
+    body = { kl = [ 0.037288959469]}
+  };
+   drift { tag = drift_bc_trip16x at = 5.4138842843 l = 0.08275
+  };
+   quadrupole { tag = q160 at = 5.4831967843 l = 0.055875
+    body = { kl = [ 0 0.3003690255 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q160 at = 5.5390717843 l = 0.055875
+    body = { kl = [ 0 0.3003690255 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q160 at = 5.5949467843 l = 0.055875
+    body = { kl = [ 0 0.3003690255 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q160 at = 5.6508217843 l = 0.055875
+    body = { kl = [ 0 0.3003690255 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = drift_q16x at = 5.7160092843 l = 0.0745
+  };
+   quadrupole { tag = q161 at = 5.7811967843 l = 0.055875
+    body = { kl = [ 0 -0.6208242195 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q161 at = 5.8370717843 l = 0.055875
+    body = { kl = [ 0 -0.6208242195 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q161 at = 5.8929467843 l = 0.055875
+    body = { kl = [ 0 -0.6208242195 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q161 at = 5.9488217843 l = 0.055875
+    body = { kl = [ 0 -0.6208242195 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = drift_q16x at = 6.0140092843 l = 0.0745
+  };
+   quadrupole { tag = q162 at = 6.0791967843 l = 0.055875
+    body = { kl = [ 0 0.307185624637 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q162 at = 6.1350717843 l = 0.055875
+    body = { kl = [ 0 0.307185624637 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q162 at = 6.1909467843 l = 0.055875
+    body = { kl = [ 0 0.307185624637 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q162 at = 6.2468217843 l = 0.055875
+    body = { kl = [ 0 0.307185624637 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = drift_trip16x_sl at = 6.2896467843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.3194217843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.3491967843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.3789717843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.4087467843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.4385217843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.4682967843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.4980717843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.5278467843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.5576217843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.5873967843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.6171717843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.6469467843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.6767217843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.7064967843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.7362717843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.7660467843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.7958217843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.8255967843 l = 0.029775
+  };
+   drift { tag = drift_trip16x_sl at = 6.8553717843 l = 0.029775
+  };
+   sbend { tag = slbend1 at = 6.9456061664 l = 0.150693764198
+    body = { kl = [ 0.19198621772]}
+  };
+   drift { tag = drift_b4_b5 at = 7.0259530485 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.0359530485 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.0459530485 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.0559530485 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.0659530485 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.0759530485 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.0859530485 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.0959530485 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.1059530485 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.1159530485 l = 0.01
+  };
+   sbend { tag = slbend2 at = 7.19601298676 l = 0.15011987652
+    body = { kl = [ -0.463909213313]}
+  };
+   drift { tag = drift_b5_b6 at = 7.28107292502 l = 0.02
+  };
+   drift { tag = drift_b5_b6 at = 7.30107292502 l = 0.02
+  };
+   drift { tag = drift_b5_b6 at = 7.32107292502 l = 0.02
+  };
+   drift { tag = drift_b5_b6 at = 7.34107292502 l = 0.02
+  };
+   drift { tag = drift_b5_b6 at = 7.36107292502 l = 0.02
+  };
+   drift { tag = drift_b5_b6 at = 7.38107292502 l = 0.02
+  };
+   drift { tag = drift_b5_b6 at = 7.40107292502 l = 0.02
+  };
+   drift { tag = drift_b5_b6 at = 7.42107292502 l = 0.02
+  };
+   drift { tag = drift_b5_b6 at = 7.44107292502 l = 0.02
+  };
+   drift { tag = drift_b5_b6 at = 7.46107292502 l = 0.02
+  };
+   sbend { tag = slbend3 at = 7.54613286328 l = 0.15011987652
+    body = { kl = [ 0.463909213313]}
+  };
+   drift { tag = drift_b4_b5 at = 7.62619280154 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.63619280154 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.64619280154 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.65619280154 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.66619280154 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.67619280154 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.68619280154 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.69619280154 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.70619280154 l = 0.01
+  };
+   drift { tag = drift_b4_b5 at = 7.71619280154 l = 0.01
+  };
+   sbend { tag = slbend4 at = 7.79653968364 l = 0.150693764198
+    body = { kl = [ -0.19198621772]}
+  };
+   marker { tag = m at = 7.87188656574
+  };
+   quadrupole { tag = q0f at = 7.87188706574 l = 1e-06
+    body = { kl = [ 0 -21.80343261 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = dd at = 7.87688756574 l = 0.01
+  };
+   quadrupole { tag = q1f at = 7.88188806574 l = 1e-06
+    body = { kl = [ 0 26.35282097 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = s1f at = 7.97165669514 l = 0.1795362588
+  };
+   quadrupole { tag = q2f at = 8.06142532454 l = 1e-06
+    body = { kl = [ 0 -4.118108108 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = s2f at = 8.10887140592 l = 0.09489116276
+  };
+   quadrupole { tag = q3f at = 8.1563174873 l = 1e-06
+    body = { kl = [ 0 5.928795578 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = l_f at = 8.21462548355 l = 0.1166149925
+  };
+   quadrupole { tag = q11 at = 8.2729334798 l = 1e-06
+    body = { kl = [ 0 -4.882922485 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d at = 8.3229339798 l = 0.1
+  };
+   quadrupole { tag = q12 at = 8.3729344798 l = 1e-06
+    body = { kl = [ 0 3.751110482 ] kls = [ 0 0 ] 
+    }
+  };
+   quadrupole { tag = q21 at = 8.3729354798 l = 1e-06
+    body = { kl = [ 0 3.498557355 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = d at = 8.4229359798 l = 0.1
+  };
+   quadrupole { tag = q22 at = 8.4729364798 l = 1e-06
+    body = { kl = [ 0 -4.235745132 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = l_r at = 8.47742979144 l = 0.008985623286
+  };
+   quadrupole { tag = q3r at = 8.48192310308 l = 1e-06
+    body = { kl = [ 0 -9.203908497 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = s2r at = 8.53103859046 l = 0.09822997475
+  };
+   quadrupole { tag = q2r at = 8.58015407783 l = 1e-06
+    body = { kl = [ 0 4.914314295 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = s1r at = 8.77541341463 l = 0.3905176736
+  };
+   quadrupole { tag = q1r at = 8.97067275143 l = 1e-06
+    body = { kl = [ 0 -1.43658209 ] kls = [ 0 0 ] 
+    }
+  };
+   drift { tag = dd at = 8.97567325143 l = 0.01
+  };
+   quadrupole { tag = q0r at = 8.98067375143 l = 1e-06
+  };
+
+endsequence at = 8.98067425143
+}

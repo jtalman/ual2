@@ -1,0 +1,40 @@
+     9	17:19	grep -n -r Please .
+    10	17:19	vi Makefile
+    11	17:25	cd ..
+    12	17:27	vi root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/config/rootrc.in
+    13	17:33	ll root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/config/
+    14	17:35	touch -t 2000010000 root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/config/rootrc.in
+    15	17:35	touch -t 2000010101 root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/config/rootrc.in
+    16	17:35	man touch
+    17	17:37	touch -t 200000000000 root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/config/rootrc.in
+    18	17:38	touch -t 200001010101 root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/config/rootrc.in
+    20	17:38	mv root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz.7
+    21	17:39	tar cvfz root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz ./root_v4.04.02.source-SL7.6Nitrogen-UAL-mod
+    22	17:39	ls -ld root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz.*
+    23	17:39	ls -ld root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz*
+    24	17:40	cd build/
+    26	17:40	setenv QTLIB $UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/
+    27	17:40	setenv QTDIR $UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/
+    28	17:40	setenv QTINC $UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/
+    29	17:40	setenv ROOTSYS $UAL/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/
+    30	17:40	setenv LD_LIBRARY_PATH $UAL/gui/libxml2-2.9.7/.libs/:$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/:$UAL/tools/sxf/lib/linux/:$UAL/tools/lib/linux/:$UAL/ext/ADXF/lib/linux/:$UAL/ext/SXF/lib/linux/:$UAL/ext/UI/lib/linux/:$UAL/ext/ROOT/lib/linux/:$UAL/ext/ALE/lib/linux/:$UAL/codes/SIMBAD/lib/linux/:$UAL/codes/AIM/lib/linux/:$UAL/codes/TIBETAN/lib/linux/:$UAL/codes/SPINK/lib/linux/:$UAL/codes/ACCSIM/lib/linux/:$UAL/codes/ETEAPOT_MltTurn/lib/linux/:$UAL/codes/ETEAPOT2/lib/linux/:$UAL/codes/ETEAPOT/lib/linux/:$UAL/codes/TEAPOT/lib/linux/:$UAL/codes/PAC/lib/linux/:$UAL/codes/ZLIB/lib/linux/:$UAL/codes/UAL/lib/linux/
+    31	17:40	pushd $UAL/gui
+    32	17:40	rm -rf root_v4.04.02.source-SL7.6Nitrogen-UAL-mod
+    33	17:40	tar xvfz root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz
+    34	17:40	cd root_v4.04.02.source-SL7.6Nitrogen-UAL-mod
+    35	17:40	./configure --with-qt-incdir=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/ --with-qt-libdir=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/
+    36	17:40	ls -l ./config/rootrc.in
+    37	17:40	make clean
+    38	17:40	rm ./lib/*
+    39	17:40	make all
+    40	17:41	exit
+    41	17:41	cd gui/build/
+    42	17:42	./root
+    45	17:50	ll root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/config/rootrc.in
+    48	17:51	touch -t 200001010101 ../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/config/rootrc.in
+    49	17:51	ll ../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/config/rootrc.in
+    55	18:11	vi rootMANUAL
+    56	18:11	cat rootMANUAL
+    57	18:21	h
+    58	18:22	ll
+    59	18:22	h > historyArchive

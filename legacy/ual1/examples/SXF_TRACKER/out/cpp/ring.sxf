@@ -1,0 +1,769 @@
+// 
+ring sequence { 
+  mbegin marker { tag = mbegin
+  };
+  QDMH1 marker { tag = QDMH1
+  };
+  QDMH quadrupole { tag = QDMH at = 0.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH.2 quadrupole { tag = QDMH at = 0.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH2 marker { tag = QDMH2 at = 0.5
+  };
+  QFLH1 marker { tag = QFLH1 at = 7.35
+  };
+  QFLH quadrupole { tag = QFLH at = 7.525 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH.2 quadrupole { tag = QFLH at = 7.875 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH2 marker { tag = QFLH2 at = 8.05
+  };
+  QDCH1 marker { tag = QDCH1 at = 8.45
+  };
+  QDCH quadrupole { tag = QDCH at = 8.5875 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH quadrupole { tag = QDCH at = 8.8625 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH2 marker { tag = QDCH2 at = 9
+  };
+  QDCH1.2 marker { tag = QDCH1 at = 21.5
+  };
+  QDCH quadrupole { tag = QDCH at = 21.6375 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH quadrupole { tag = QDCH at = 21.9125 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH2 marker { tag = QDCH2 at = 22.05
+  };
+  QFLH1.2 marker { tag = QFLH1 at = 22.45
+  };
+  QFLH.3 quadrupole { tag = QFLH at = 22.625 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH.4 quadrupole { tag = QFLH at = 22.975 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH2 marker { tag = QFLH2 at = 23.15
+  };
+  QDMH1.2 marker { tag = QDMH1 at = 30
+  };
+  QDMH.3 quadrupole { tag = QDMH at = 30.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH.4 quadrupole { tag = QDMH at = 30.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH2 marker { tag = QDMH2 at = 30.5
+  };
+  BND sbend { tag = BND at = 32.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QFH1 marker { tag = QFH1 at = 34
+  };
+  QFH quadrupole { tag = QFH at = 34.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH.2 quadrupole { tag = QFH at = 34.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH2 marker { tag = QFH2 at = 34.5
+  };
+  BND.2 sbend { tag = BND at = 36.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QDH1 marker { tag = QDH1 at = 38
+  };
+  QDH quadrupole { tag = QDH at = 38.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH.2 quadrupole { tag = QDH at = 38.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH2 marker { tag = QDH2 at = 38.5
+  };
+  S1D sextupole { tag = S1D at = 38.875 l = 0.15
+  };
+  BND.3 sbend { tag = BND at = 40.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QFBH1 marker { tag = QFBH1 at = 42
+  };
+  QFBH quadrupole { tag = QFBH at = 42.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH.2 quadrupole { tag = QFBH at = 42.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH2 marker { tag = QFBH2 at = 42.5
+  };
+  S2F sextupole { tag = S2F at = 42.875 l = 0.15
+  };
+  BND.4 sbend { tag = BND at = 44.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  S3D sextupole { tag = S3D at = 45.625 l = 0.15
+  };
+  QDH1.2 marker { tag = QDH1 at = 46
+  };
+  QDH.3 quadrupole { tag = QDH at = 46.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH.4 quadrupole { tag = QDH at = 46.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH2.2 marker { tag = QDH2 at = 46.5
+  };
+  BND.5 sbend { tag = BND at = 48.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  S4F sextupole { tag = S4F at = 49.625 l = 0.15
+  };
+  QFBH1.2 marker { tag = QFBH1 at = 50
+  };
+  QFBH.3 quadrupole { tag = QFBH at = 50.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH.4 quadrupole { tag = QFBH at = 50.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH2 marker { tag = QFBH2 at = 50.5
+  };
+  BND.6 sbend { tag = BND at = 52.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  S1D.2 sextupole { tag = S1D at = 53.625 l = 0.15
+  };
+  QDH1.3 marker { tag = QDH1 at = 54
+  };
+  QDH.5 quadrupole { tag = QDH at = 54.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH.6 quadrupole { tag = QDH at = 54.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH2.3 marker { tag = QDH2 at = 54.5
+  };
+  BND.7 sbend { tag = BND at = 56.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QFH1.2 marker { tag = QFH1 at = 58
+  };
+  QFH.3 quadrupole { tag = QFH at = 58.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH.4 quadrupole { tag = QFH at = 58.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH2 marker { tag = QFH2 at = 58.5
+  };
+  BND.8 sbend { tag = BND at = 60.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QDMH1.3 marker { tag = QDMH1 at = 62
+  };
+  QDMH.5 quadrupole { tag = QDMH at = 62.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH.6 quadrupole { tag = QDMH at = 62.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH2 marker { tag = QDMH2 at = 62.5
+  };
+  QFLH1.3 marker { tag = QFLH1 at = 69.35
+  };
+  QFLH.5 quadrupole { tag = QFLH at = 69.525 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH.6 quadrupole { tag = QFLH at = 69.875 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH2 marker { tag = QFLH2 at = 70.05
+  };
+  QDCH1.3 marker { tag = QDCH1 at = 70.45
+  };
+  QDCH quadrupole { tag = QDCH at = 70.5875 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH quadrupole { tag = QDCH at = 70.8625 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH2 marker { tag = QDCH2 at = 71
+  };
+  QDCH1.4 marker { tag = QDCH1 at = 83.5
+  };
+  QDCH quadrupole { tag = QDCH at = 83.6375 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH quadrupole { tag = QDCH at = 83.9125 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH2 marker { tag = QDCH2 at = 84.05
+  };
+  QFLH1.4 marker { tag = QFLH1 at = 84.45
+  };
+  QFLH.7 quadrupole { tag = QFLH at = 84.625 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH.8 quadrupole { tag = QFLH at = 84.975 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH2 marker { tag = QFLH2 at = 85.15
+  };
+  QDMH1.4 marker { tag = QDMH1 at = 92
+  };
+  QDMH.7 quadrupole { tag = QDMH at = 92.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH.8 quadrupole { tag = QDMH at = 92.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH2 marker { tag = QDMH2 at = 92.5
+  };
+  BND.9 sbend { tag = BND at = 94.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QFH1.3 marker { tag = QFH1 at = 96
+  };
+  QFH.5 quadrupole { tag = QFH at = 96.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH.6 quadrupole { tag = QFH at = 96.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH2 marker { tag = QFH2 at = 96.5
+  };
+  BND.10 sbend { tag = BND at = 98.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QDH1.4 marker { tag = QDH1 at = 100
+  };
+  QDH.7 quadrupole { tag = QDH at = 100.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH.8 quadrupole { tag = QDH at = 100.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH2.4 marker { tag = QDH2 at = 100.5
+  };
+  S1D.3 sextupole { tag = S1D at = 100.875 l = 0.15
+  };
+  BND.11 sbend { tag = BND at = 102.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QFBH1.3 marker { tag = QFBH1 at = 104
+  };
+  QFBH.5 quadrupole { tag = QFBH at = 104.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH.6 quadrupole { tag = QFBH at = 104.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH2 marker { tag = QFBH2 at = 104.5
+  };
+  S2F.2 sextupole { tag = S2F at = 104.875 l = 0.15
+  };
+  BND.12 sbend { tag = BND at = 106.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  S3D.2 sextupole { tag = S3D at = 107.625 l = 0.15
+  };
+  QDH1.5 marker { tag = QDH1 at = 108
+  };
+  QDH.9 quadrupole { tag = QDH at = 108.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH.10 quadrupole { tag = QDH at = 108.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH2.5 marker { tag = QDH2 at = 108.5
+  };
+  BND.13 sbend { tag = BND at = 110.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  S4F.2 sextupole { tag = S4F at = 111.625 l = 0.15
+  };
+  QFBH1.4 marker { tag = QFBH1 at = 112
+  };
+  QFBH.7 quadrupole { tag = QFBH at = 112.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH.8 quadrupole { tag = QFBH at = 112.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH2 marker { tag = QFBH2 at = 112.5
+  };
+  BND.14 sbend { tag = BND at = 114.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  S1D.4 sextupole { tag = S1D at = 115.625 l = 0.15
+  };
+  QDH1.6 marker { tag = QDH1 at = 116
+  };
+  QDH.11 quadrupole { tag = QDH at = 116.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH.12 quadrupole { tag = QDH at = 116.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH2.6 marker { tag = QDH2 at = 116.5
+  };
+  BND.15 sbend { tag = BND at = 118.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QFH1.4 marker { tag = QFH1 at = 120
+  };
+  QFH.7 quadrupole { tag = QFH at = 120.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH.8 quadrupole { tag = QFH at = 120.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH2 marker { tag = QFH2 at = 120.5
+  };
+  BND.16 sbend { tag = BND at = 122.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QDMH1.5 marker { tag = QDMH1 at = 124
+  };
+  QDMH.9 quadrupole { tag = QDMH at = 124.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH.10 quadrupole { tag = QDMH at = 124.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH2 marker { tag = QDMH2 at = 124.5
+  };
+  QFLH1.5 marker { tag = QFLH1 at = 131.35
+  };
+  QFLH.9 quadrupole { tag = QFLH at = 131.525 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH.10 quadrupole { tag = QFLH at = 131.875 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH2 marker { tag = QFLH2 at = 132.05
+  };
+  QDCH1.5 marker { tag = QDCH1 at = 132.45
+  };
+  QDCH quadrupole { tag = QDCH at = 132.5875 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH quadrupole { tag = QDCH at = 132.8625 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH2 marker { tag = QDCH2 at = 133
+  };
+  QDCH1.6 marker { tag = QDCH1 at = 145.5
+  };
+  QDCH quadrupole { tag = QDCH at = 145.6375 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH quadrupole { tag = QDCH at = 145.9125 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH2 marker { tag = QDCH2 at = 146.05
+  };
+  QFLH1.6 marker { tag = QFLH1 at = 146.45
+  };
+  QFLH.11 quadrupole { tag = QFLH at = 146.625 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH.12 quadrupole { tag = QFLH at = 146.975 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH2 marker { tag = QFLH2 at = 147.15
+  };
+  QDMH1.6 marker { tag = QDMH1 at = 154
+  };
+  QDMH.11 quadrupole { tag = QDMH at = 154.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH.12 quadrupole { tag = QDMH at = 154.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH2 marker { tag = QDMH2 at = 154.5
+  };
+  BND.17 sbend { tag = BND at = 156.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QFH1.5 marker { tag = QFH1 at = 158
+  };
+  QFH.9 quadrupole { tag = QFH at = 158.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH.10 quadrupole { tag = QFH at = 158.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH2 marker { tag = QFH2 at = 158.5
+  };
+  BND.18 sbend { tag = BND at = 160.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QDH1.7 marker { tag = QDH1 at = 162
+  };
+  QDH.13 quadrupole { tag = QDH at = 162.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH.14 quadrupole { tag = QDH at = 162.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH2.7 marker { tag = QDH2 at = 162.5
+  };
+  S1D.5 sextupole { tag = S1D at = 162.875 l = 0.15
+  };
+  BND.19 sbend { tag = BND at = 164.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QFBH1.5 marker { tag = QFBH1 at = 166
+  };
+  QFBH.9 quadrupole { tag = QFBH at = 166.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH.10 quadrupole { tag = QFBH at = 166.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH2 marker { tag = QFBH2 at = 166.5
+  };
+  S2F.3 sextupole { tag = S2F at = 166.875 l = 0.15
+  };
+  BND.20 sbend { tag = BND at = 168.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  S3D.3 sextupole { tag = S3D at = 169.625 l = 0.15
+  };
+  QDH1.8 marker { tag = QDH1 at = 170
+  };
+  QDH.15 quadrupole { tag = QDH at = 170.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH.16 quadrupole { tag = QDH at = 170.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH2.8 marker { tag = QDH2 at = 170.5
+  };
+  BND.21 sbend { tag = BND at = 172.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  S4F.3 sextupole { tag = S4F at = 173.625 l = 0.15
+  };
+  QFBH1.6 marker { tag = QFBH1 at = 174
+  };
+  QFBH.11 quadrupole { tag = QFBH at = 174.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH.12 quadrupole { tag = QFBH at = 174.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH2 marker { tag = QFBH2 at = 174.5
+  };
+  BND.22 sbend { tag = BND at = 176.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  S1D.6 sextupole { tag = S1D at = 177.625 l = 0.15
+  };
+  QDH1.9 marker { tag = QDH1 at = 178
+  };
+  QDH.17 quadrupole { tag = QDH at = 178.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH.18 quadrupole { tag = QDH at = 178.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH2.9 marker { tag = QDH2 at = 178.5
+  };
+  BND.23 sbend { tag = BND at = 180.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QFH1.6 marker { tag = QFH1 at = 182
+  };
+  QFH.11 quadrupole { tag = QFH at = 182.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH.12 quadrupole { tag = QFH at = 182.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH2 marker { tag = QFH2 at = 182.5
+  };
+  BND.24 sbend { tag = BND at = 184.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QDMH1.7 marker { tag = QDMH1 at = 186
+  };
+  QDMH.13 quadrupole { tag = QDMH at = 186.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH.14 quadrupole { tag = QDMH at = 186.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH2 marker { tag = QDMH2 at = 186.5
+  };
+  QFLH1.7 marker { tag = QFLH1 at = 193.35
+  };
+  QFLH.13 quadrupole { tag = QFLH at = 193.525 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH.14 quadrupole { tag = QFLH at = 193.875 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH2 marker { tag = QFLH2 at = 194.05
+  };
+  QDCH1.7 marker { tag = QDCH1 at = 194.45
+  };
+  QDCH quadrupole { tag = QDCH at = 194.5875 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH quadrupole { tag = QDCH at = 194.8625 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH2 marker { tag = QDCH2 at = 195
+  };
+  QDCH1.8 marker { tag = QDCH1 at = 207.5
+  };
+  QDCH quadrupole { tag = QDCH at = 207.6375 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH quadrupole { tag = QDCH at = 207.9125 l = 0.275 n = 4
+    body = { kl = [ 0 -0.185974181596 ] kls = [ 0 0 ] 
+    }
+  };
+  QDCH2 marker { tag = QDCH2 at = 208.05
+  };
+  QFLH1.8 marker { tag = QFLH1 at = 208.45
+  };
+  QFLH.15 quadrupole { tag = QFLH at = 208.625 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH.16 quadrupole { tag = QFLH at = 208.975 l = 0.35 n = 4
+    body = { kl = [ 0 0.221940383405 ] kls = [ 0 0 ] 
+    }
+  };
+  QFLH2 marker { tag = QFLH2 at = 209.15
+  };
+  QDMH1.8 marker { tag = QDMH1 at = 216
+  };
+  QDMH.15 quadrupole { tag = QDMH at = 216.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH.16 quadrupole { tag = QDMH at = 216.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.125810303253 ] kls = [ 0 0 ] 
+    }
+  };
+  QDMH2 marker { tag = QDMH2 at = 216.5
+  };
+  BND.25 sbend { tag = BND at = 218.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QFH1.7 marker { tag = QFH1 at = 220
+  };
+  QFH.13 quadrupole { tag = QFH at = 220.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH.14 quadrupole { tag = QFH at = 220.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH2 marker { tag = QFH2 at = 220.5
+  };
+  BND.26 sbend { tag = BND at = 222.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QDH1.10 marker { tag = QDH1 at = 224
+  };
+  QDH.19 quadrupole { tag = QDH at = 224.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH.20 quadrupole { tag = QDH at = 224.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH2.10 marker { tag = QDH2 at = 224.5
+  };
+  S1D.7 sextupole { tag = S1D at = 224.875 l = 0.15
+  };
+  BND.27 sbend { tag = BND at = 226.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QFBH1.7 marker { tag = QFBH1 at = 228
+  };
+  QFBH.13 quadrupole { tag = QFBH at = 228.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH.14 quadrupole { tag = QFBH at = 228.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH2 marker { tag = QFBH2 at = 228.5
+  };
+  S2F.4 sextupole { tag = S2F at = 228.875 l = 0.15
+  };
+  BND.28 sbend { tag = BND at = 230.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  S3D.4 sextupole { tag = S3D at = 231.625 l = 0.15
+  };
+  QDH1.11 marker { tag = QDH1 at = 232
+  };
+  QDH.21 quadrupole { tag = QDH at = 232.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH.22 quadrupole { tag = QDH at = 232.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH2.11 marker { tag = QDH2 at = 232.5
+  };
+  BND.29 sbend { tag = BND at = 234.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  S4F.4 sextupole { tag = S4F at = 235.625 l = 0.15
+  };
+  QFBH1.8 marker { tag = QFBH1 at = 236
+  };
+  QFBH.15 quadrupole { tag = QFBH at = 236.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH.16 quadrupole { tag = QFBH at = 236.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFBH2 marker { tag = QFBH2 at = 236.5
+  };
+  BND.30 sbend { tag = BND at = 238.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  S1D.8 sextupole { tag = S1D at = 239.625 l = 0.15
+  };
+  QDH1.12 marker { tag = QDH1 at = 240
+  };
+  QDH.23 quadrupole { tag = QDH at = 240.125 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH.24 quadrupole { tag = QDH at = 240.375 l = 0.25 n = 4
+    body = { kl = [ 0 -0.182260779028 ] kls = [ 0 0 ] 
+    }
+  };
+  QDH2.12 marker { tag = QDH2 at = 240.5
+  };
+  BND.31 sbend { tag = BND at = 242.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  QFH1.8 marker { tag = QFH1 at = 244
+  };
+  QFH.15 quadrupole { tag = QFH at = 244.125 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH.16 quadrupole { tag = QFH at = 244.375 l = 0.25 n = 4
+    body = { kl = [ 0 0.171873032878 ] kls = [ 0 0 ] 
+    }
+  };
+  QFH2 marker { tag = QFH2 at = 244.5
+  };
+  BND.32 sbend { tag = BND at = 246.25 l = 1.5 n = 4
+    body = { kl = [ 0.196349540849]}
+  };
+  mend marker { tag = mend at = 248
+  };
+
+endsequence at = 248
+}

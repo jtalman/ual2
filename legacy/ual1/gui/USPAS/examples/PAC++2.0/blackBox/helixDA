@@ -1,0 +1,34 @@
+# csh script to get Taylor map for helical dipole
+# N.Malitsky
+
+echo "HelixDA:"
+set corePAC = /home/cfsa/malitsky/PAC++2.0
+rm $corePAC/blackBox/tmp/*
+
+# Create include file 
+echo "   1.Links your input file"
+
+set dir = `pwd`
+ln -s $dir/$argv[1] $corePAC/blackBox/tmp/helixParameters.hh
+unset dir
+
+
+# Compile
+echo "   2.Compiles PAC++"
+
+g++ -o $corePAC/blackBox/tmp/helixDA $corePAC/blackBox/src/helixDA.cc   \
+	-I$corePAC/src -I$corePAC/blackBox -L$corePAC/lib               \
+	-lVectorA -lField -lLieMap -lZlib -lMonitor -lBeam -lNumLib -lm
+
+
+# Run
+echo "   3.Runs DA Integrator"
+
+$corePAC/blackBox/tmp/helixDA > $argv[2]
+
+# End
+echo "is done."
+
+rm $corePAC/blackBox/tmp/*
+unset corePAC
+

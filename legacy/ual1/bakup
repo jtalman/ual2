@@ -1,0 +1,10 @@
+cp gui/ROOT/src/UAL/ROOT/Viewers/MountainRangeViewer.cc gui/ROOT/src/UAL/ROOT/Viewers/MountainRangeViewer.cc.1
+
+cp gui/QT/src/UAL/QT/Player/PlayerShell.hh              gui/QT/src/UAL/QT/Player/PlayerShell.hh.1
+cp gui/QT/src/UAL/QT/Player/BeamEditor.cc               gui/QT/src/UAL/QT/Player/BeamEditor.cc.1
+
+cp gui/examples/generic/README                          gui/examples/generic/README.1
+cp gui/examples/generic/run                             gui/examples/generic/run.1
+
+cp gui/USPAS/examples/generic/src/parameters            gui/USPAS/examples/generic/src/parameters.1
+cp gui/USPAS/examples/generic/src/run.cc                gui/USPAS/examples/generic/src/run.cc.1

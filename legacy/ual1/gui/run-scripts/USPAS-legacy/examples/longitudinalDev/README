@@ -1,0 +1,36 @@
+On box Linux X201-9,
+
+      uname -a
+            Linux X201-9 3.10.0-957.el7.x86_64 #1 SMP Tue Oct 30 14:13:26 CDT 2018 x86_64 x86_64 x86_64 GNU/Linux
+      cat /proc/version
+            Linux version 3.10.0-957.el7.x86_64 (mockbuild@sl7-uefisign.fnal.gov) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-36) (GCC) ) #1 SMP Tue Oct 30 14:13:26 CDT 2018,
+
+      ./runLatest
+            seems to run fine.
+
+            it is a "script of scripts":
+                  ./preProcess
+
+                  ./preProcess2
+
+                  ./runInNowModifiedUAL
+ 
+On box
+
+      ./runLatest
+            doesn't seem to work, possibly because of scripts run inside scripts.
+
+            catting out these scripts
+
+                  ./preProcess
+
+                  ./preProcess2
+
+                  ./preProcess3
+
+                  ./runInNowModifiedUAL
+------>>>>>>      ./runManual
+
+            and running them manually is the strategy for now (5/23/2021)
+
+

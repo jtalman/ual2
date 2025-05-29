@@ -1,0 +1,58 @@
+Install AlmaLinux 9.4 with talman as user
+
+Select packages from (file in this directory)
+     workstation_package_list
+
+su
+      dnf -y install emacs 
+      dnf -y install tcsh 
+      dnf -y install openmotif
+      dnf -y install openmotif-devel
+
+exit
+
+mkdir grace_gather
+cd grace_gather
+tar xvfz grace-5.1.25.tar.gz
+cd grace-5.1.25
+
+su
+      ./configure
+      make clean
+      make install
+exit
+
+ll /usr/local/grace/bin/xmgrace
+
+(put in PATH!!?)
+      xmgrace
+or
+      /usr/local/grace/bin/xmgrace
+
+vi ~/.tcshrc
+      alias h 'history'
+      alias ll 'ls -ialt'
+
+su
+      vi /etc/passwd
+            .../usr/bin/tcsh
+exit
+
+reboot
+
+login as talman
+echo $shell
+      /usr/bin/tcsh
+
+echo $SHELL
+      /usr/bin/tcsh
+
+h
+
+ll
+
+su
+      useradd -m -s /usr/bin/tcsh -u 1004 ualusr2011
+      passwd ualusr2011
+            password
+            verify password

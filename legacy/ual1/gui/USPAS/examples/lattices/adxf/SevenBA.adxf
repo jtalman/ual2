@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adxf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/home/ualusr/USPAS/ual1/doc/adxf/adxf.xsd">
+    <constants>
+        <constant name="twopi" value="6.2831853071796"/>
+        <constant name="c" value="299792458.0"/>
+        <constant name="ncells" value="110"/>
+        <constant name="lcell" value="6.0"/>
+        <constant name="ltiny" value="0.000001"/>
+        <constant name="circ" value="lcell*ncells"/>
+        <constant name="theta" value="twopi/ncells"/>
+        <constant name="thetah" value="theta/2.0"/>
+        <constant name="theta8th" value="theta/8.0"/>
+        <constant name="bfrac" value="0.30"/>
+        <constant name="qhfrac" value="0.19"/>
+        <constant name="qvfrac" value="0.10"/>
+        <constant name="shfrac" value="0.0"/>
+        <constant name="svfrac" value="0.0"/>
+        <constant name="ld2frac" value="0.06"/>
+        <constant name="ld3frac" value="0.16"/>
+        <constant name="lb" value="lcell*bfrac/2.0"/>
+        <constant name="lb8th" value="lcell*bfrac/8.0"/>
+        <constant name="lqh" value="lcell*qhfrac/2.0"/>
+        <constant name="lqv" value="lcell*qvfrac/2.0"/>
+        <constant name="lsh" value="lcell*shfrac/2.0"/>
+        <constant name="lsv" value="lcell*svfrac/2.0"/>
+        <constant name="ld2" value="lcell*ld2frac/2.0"/>
+        <constant name="ld3" value="lcell*ld3frac/2.0"/>
+        <constant name="ld1" value="lcell/2.0 - (lb+lsv+lqv+lsh+lqh+ld2+ld3)"/>
+        <constant name="l2" value="lb+ld2+lqh/2.0"/>
+        <constant name="d" value="lqh/2.0+lsh+ld1+lsv+lqv/2"/>
+        <constant name="l1" value="lcell/2.0-l2-d"/>
+        <constant name="q1" value="-0.664*6.0/lcell"/>
+        <constant name="q2" value="1.337*6.0/lcell"/>
+        <constant name="kqv" value="q1/lqv"/>
+        <constant name="kqh" value="q2/lqh"/>
+        <constant name="ldsb" value="2*lb8th"/>
+        <constant name="dsdeltafrac" value="-lcell*0.02329"/>
+        <constant name="ldsnob1" value="3*lb8th+dsdeltafrac"/>
+        <constant name="ldsnob2" value="4*lb8th-ldsnob1"/>
+    </constants>
+    <elements>
+        <drift name="d1" l="ld1"/>
+        <drift name="d2" l="ld2"/>
+        <drift name="d3" l="ld3"/>
+        <marker name="mkb"/>
+        <marker name="mkc"/>
+        <marker name="mke"/>
+        <sbend name="b" l="lb8th" angle="theta8th"/>
+        <drift name="nb" l="lb8th"/>
+        <drift name="dsnob1" l="ldsnob1"/>
+        <drift name="dsnob2" l="ldsnob2"/>
+        <sbend name="bds" l="lb8th" angle="theta8th"/>
+        <quadrupole name="qh" l="lqh" k1="kqh"/>
+        <quadrupole name="qv" l="lqv" k1="kqv"/>
+        <!-- <sextupole name="sh" l="lsh" k2="ksh"/> -->
+        <!-- <sextupole name="sv" l="lsv" k2="ksv"/> -->
+        <drift name="sh" l="lsh"/>
+        <drift name="sv" l="lsv"/>
+        <marker name="mbegin"/>
+        <marker name="mend"/>
+        <!-- q = 1/rt(bmax*bmin) = 0.142 -->
+        <!-- l = pi nu rt(bmax*bmin) =e.g. 3.14 0.2 7 = 4.4 -->
+        <drift name="dend1" l="2.6"/>
+        <drift name="dend2" l="ld3"/>
+        <quadrupole name="qve1" l="ltiny" k1=" 0.2*kqv*lqv/ltiny"/>
+        <quadrupole name="qve2" l="ltiny" k1="-0.25*kqv*lqv/ltiny"/>
+    </elements>
+    <sectors>
+        <sector name="cell"    line="mkb d3 qv sv d1 sh qh d2 b b b b mkc b b b b d2 qh sh d1 sv qv d3 mke"/>
+        <sector name="cellnb"    line="mkb d3 qv sv d1 sh qh d2 nb nb nb nb mkc nb nb nb nb d2 qh sh d1 sv qv d3 mke"/>
+        <sector name="cellin"  line="d3 qv sv d1 sh qh d2 dsnob1 bds bds bds bds dsnob2 d2 qh sh d1 sv qv d3"/>
+        <sector name="cellout" line="d3 qv sv d1 sh qh d2 dsnob2 bds bds bds bds dsnob1 d2 qh sh d1 sv qv d3"/>
+        <sector name="ring" line="mbegin cellnb cellin cell cell cell cell cell cellout cellnb mend"/>
+    </sectors>
+</adxf>

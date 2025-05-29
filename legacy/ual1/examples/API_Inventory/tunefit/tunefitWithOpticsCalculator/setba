@@ -1,0 +1,12 @@
+PAC::BeamAttributes ba;
+
+ba.setMass       (0.938);
+ba.setEnergy     (0.938);         //   (1.e20);
+ba.setCharge     (1);
+//ba.setMacrosize();
+//ba.setL        ();
+//ba.setE        ();
+//ba.setR        ();
+//ba.setRevfreq  ();
+//ba.setG        ();
+//ba.set_g       ();

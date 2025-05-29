@@ -1,0 +1,107 @@
+10/3/2024
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Workstation (1424 packages)
+( 1) Gnome Applications
+
+( 2) Headless Management
+
+( 3) Office Suite and Productivity
+
+( 4) Legacy UNIX Compatibility
+
+( 5) Console Internet Tools
+
+( 6) Container Management
+
+( 7) Development Tools
+
+( 8) Graphical Administration Tools
+
+( 9) Scientific Support
+
+(10) System Tools
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Workstation (1303 RPM packages)
+      GNOME Applications
+      Office Suite and Productivity
+    
+login root
+perl -v
+      5.32
+dnf -y install bison      XXXXXX
+dnf -y install bison      <<<<----   YES!!!
+dnf -y install emacs
+dnf -y install tcsh
+dnf -y install make
+dnf -y install gcc
+dnf -y install g++
+
+exit
+
+UPDATES!!!   <<<<<<------
+
+login talman
+git clone https://github.com/jtalman/ual1
+cd ual1
+
+vi ~/.tcshrc
+
+su
+usermod -s /usr/bin/tcsh talman
+exit
+
+power off
+power on
+login talman
+tcsh
+
+// in .tcshrc file!
+// setenv UAL `pwd`
+// source setup-linux-ual
+
+setenv
+      ...
+      UAL
+      ...
+      UAL
+      ...
+
+make clean
+cp AlmaLinux/codes_PAC_src_Templates_PacRbTree.h codes/PAC/src/Templates/PacRbTree.h
+cp AlmaLinux/tools_sxf_src_sxf_Makefile tools/sxf/src/sxf/Makefile
+make >&! make.log
+      check make.log
+
+dnf -y install perl
+      perl -v
+            5.32
+dnf -y install perl-devel
+      perl -v
+            5.32
+            
+dnf -y install openmotif
+dnf -y install openmotif-devel 
+
+mkdir ~/xmgrace
+cd xmgrace
+cp /run/media/talman3/STORE\ N\ GO/grace-5.1.22.tar.gz .
+tar xvfz grace-5.1.22.tar.gz
+cd xmgrace
+vi ./src/rstdrv.c +888
+vi ./src/rstdrv.c +1032
+su
+./configure
+make 
+make install
+exit
+
+ll /usr/local/grace/bin/xmgrace
+
+cd $UAL/perl
+follow README
+
+cd $UAL/examples/UI_CLS_SXF
+perl UI_CLS_SXF-256.pl
+      xmgrace popup window

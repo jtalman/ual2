@@ -1,0 +1,56 @@
+// SXF version 2.0
+ring sequence
+ {
+   rf
+     rfcavity {
+         tag = rf
+         at = 0
+         };
+   sbenbe
+     sbend {
+         tag = sbenbe
+         arc = 7.85398163397
+         at = 3.92699081699
+         body = {
+                 kl = [ 1.57079632679]
+                 kl = [ 0 -0.0408407044967]
+                }
+         };
+   sbenbe.2
+     sbend {
+         tag = sbenbe
+         arc = 7.85398163397
+         at = 11.780972451
+         body = {
+                 kl = [ 1.57079632679]
+                 kl = [ 0 -0.0408407044967]
+                }
+         };
+   sbenbe.3
+     sbend {
+         tag = sbenbe
+         arc = 7.85398163397
+         at = 19.6349540849
+         body = {
+                 kl = [ 1.57079632679]
+                 kl = [ 0 -0.0408407044967]
+                }
+         };
+   sbenbe.4
+     sbend {
+         tag = sbenbe
+         arc = 7.85398163397
+         at = 27.4889357189
+         body = {
+                 kl = [ 1.57079632679]
+                 kl = [ 0 -0.0408407044967]
+                }
+         };
+   mend
+     marker {
+         tag = mend
+         at = 31.4159265359
+         };
+ endsequence at = 31.4159265359
+}
+// SXF end

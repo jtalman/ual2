@@ -1,0 +1,848 @@
+// 
+ring sequence { 
+  tum marker { tag = tum
+  };
+  qu23 quadrupole { tag = qu23 at = 0.31 l = 0.372 n = 4
+    body = { kl = [ 0 0.129812967852 ] kls = [ 0 0 ] 
+    }
+  };
+  msh41 hkicker { tag = msh41 at = 0.6493 l = 0.2
+  };
+  qbe24i multipole { tag = qbe24i at = 0.9350075
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be24 sbend { tag = be24 at = 1.8513055 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 -6.59452589449e-05 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe24e multipole { tag = qbe24e at = 2.7676035
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  qu24 quadrupole { tag = qu24 at = 3.392504 l = 0.372 n = 4
+    body = { kl = [ 0 -0.106390093128 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos01h hmonitor { tag = dpos01h at = 3.661999
+  };
+  dpos01v vmonitor { tag = dpos01v at = 3.818999
+  };
+  msh43 hkicker { tag = msh43 at = 4.079499 l = 0.227
+  };
+  ttstart marker { tag = ttstart at = 5.017497
+  };
+  qt1 quadrupole { tag = qt1 at = 9.873797 l = 0.62 n = 4
+    body = { kl = [ 0 -0.34396645758 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos02h hmonitor { tag = dpos02h at = 10.303999
+  };
+  dpos02v vmonitor { tag = dpos02v at = 10.463999
+  };
+  qt2 quadrupole { tag = qt2 at = 10.873797 l = 0.62 n = 4
+    body = { kl = [ 0 0.31738567746 ] kls = [ 0 0 ] 
+    }
+  };
+  bstop marker { tag = bstop at = 11.298797
+  };
+  qt3 quadrupole { tag = qt3 at = 11.733797 l = 0.62 n = 4
+    body = { kl = [ 0 0.31738567746 ] kls = [ 0 0 ] 
+    }
+  };
+  mx01 sextupole { tag = mx01 at = 12.233797 l = 0.243
+  };
+  qt4 quadrupole { tag = qt4 at = 12.733797 l = 0.62 n = 4
+    body = { kl = [ 0 -0.34396645758 ] kls = [ 0 0 ] 
+    }
+  };
+  msh01 hkicker { tag = msh01 at = 13.242299 l = 0.227
+  };
+  msv02 vkicker { tag = msv02 at = 13.534299 l = 0.227
+  };
+  mbu1 hkicker { tag = mbu1 at = 14.733799 l = 0.52
+  };
+  dpos03h hmonitor { tag = dpos03h at = 16.169999
+  };
+  dpos03v vmonitor { tag = dpos03v at = 16.319999
+  };
+  cavity2 marker { tag = cavity2 at = 16.965797
+  };
+  bct2 marker { tag = bct2 at = 18.160106
+  };
+  msv04 vkicker { tag = msv04 at = 19.005599 l = 0.227
+  };
+  msh03 hkicker { tag = msh03 at = 19.279599 l = 0.227
+  };
+  qt5 quadrupole { tag = qt5 at = 19.810106 l = 0.62 n = 4
+    body = { kl = [ 0 0.4545636175 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos04h hmonitor { tag = dpos04h at = 20.239999
+  };
+  dpos04v vmonitor { tag = dpos04v at = 20.389999
+  };
+  qt6 quadrupole { tag = qt6 at = 20.810106 l = 0.62 n = 4
+    body = { kl = [ 0 -0.41981218164 ] kls = [ 0 0 ] 
+    }
+  };
+  qt7 quadrupole { tag = qt7 at = 21.670107 l = 0.62 n = 4
+    body = { kl = [ 0 -0.41981218164 ] kls = [ 0 0 ] 
+    }
+  };
+  mx02 sextupole { tag = mx02 at = 22.173107 l = 0.243
+  };
+  qt8 quadrupole { tag = qt8 at = 22.670107 l = 0.62 n = 4
+    body = { kl = [ 0 0.4545636175 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos05h hmonitor { tag = dpos05h at = 24.221999
+  };
+  dpos05v vmonitor { tag = dpos05v at = 24.364999
+  };
+  tp1 marker { tag = tp1 at = 24.620107
+  };
+  qt9 quadrupole { tag = qt9 at = 27.110209 l = 0.62 n = 4
+    body = { kl = [ 0 0.4545636175 ] kls = [ 0 0 ] 
+    }
+  };
+  mx03 sextupole { tag = mx03 at = 27.607209 l = 0.243
+  };
+  qt10 quadrupole { tag = qt10 at = 28.110209 l = 0.62 n = 4
+    body = { kl = [ 0 -0.41981218164 ] kls = [ 0 0 ] 
+    }
+  };
+  qt11 quadrupole { tag = qt11 at = 28.97021 l = 0.62 n = 4
+    body = { kl = [ 0 -0.41981218164 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos06h hmonitor { tag = dpos06h at = 29.394999
+  };
+  dpos06v vmonitor { tag = dpos06v at = 29.544999
+  };
+  qt12 quadrupole { tag = qt12 at = 29.97021 l = 0.62 n = 4
+    body = { kl = [ 0 0.4545636175 ] kls = [ 0 0 ] 
+    }
+  };
+  msh05 hkicker { tag = msh05 at = 30.503699 l = 0.227
+  };
+  msv06 vkicker { tag = msv06 at = 30.773699 l = 0.227
+  };
+  tp2 marker { tag = tp2 at = 32.19921
+  };
+  dpos07h hmonitor { tag = dpos07h at = 34.652999
+  };
+  dpos07v vmonitor { tag = dpos07v at = 34.801999
+  };
+  msv08 vkicker { tag = msv08 at = 36.251999 l = 0.227
+  };
+  msh07 hkicker { tag = msh07 at = 36.515999 l = 0.227
+  };
+  qt13 quadrupole { tag = qt13 at = 37.04651 l = 0.62 n = 4
+    body = { kl = [ 0 -0.34396645758 ] kls = [ 0 0 ] 
+    }
+  };
+  mx04 sextupole { tag = mx04 at = 37.54851 l = 0.243
+  };
+  qt14 quadrupole { tag = qt14 at = 38.04651 l = 0.62 n = 4
+    body = { kl = [ 0 0.31738567746 ] kls = [ 0 0 ] 
+    }
+  };
+  qt15 quadrupole { tag = qt15 at = 38.906509 l = 0.62 n = 4
+    body = { kl = [ 0 0.31738567746 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos08h hmonitor { tag = dpos08h at = 39.336999
+  };
+  dpos08v vmonitor { tag = dpos08v at = 39.481999
+  };
+  qt16 quadrupole { tag = qt16 at = 39.906509 l = 0.62 n = 4
+    body = { kl = [ 0 -0.34396645758 ] kls = [ 0 0 ] 
+    }
+  };
+  ttend marker { tag = ttend at = 44.762809
+  };
+  msh09 hkicker { tag = msh09 at = 45.680099 l = 0.227
+  };
+  dpos09h hmonitor { tag = dpos09h at = 45.949999
+  };
+  dpos09v vmonitor { tag = dpos09v at = 46.104999
+  };
+  qu1 quadrupole { tag = qu1 at = 46.387799 l = 0.372 n = 4
+    body = { kl = [ 0 -0.106390093128 ] kls = [ 0 0 ] 
+    }
+  };
+  qbe1i multipole { tag = qbe1i at = 47.0128065
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be1 sbend { tag = be1 at = 47.9291045 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000455683315386 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe1e multipole { tag = qbe1e at = 48.8454025
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos10h hmonitor { tag = dpos10h at = 48.994998
+  };
+  dpos10v vmonitor { tag = dpos10v at = 49.159998
+  };
+  qu2 quadrupole { tag = qu2 at = 49.470394 l = 0.372 n = 4
+    body = { kl = [ 0 0.129812967852 ] kls = [ 0 0 ] 
+    }
+  };
+  msv10 vkicker { tag = msv10 at = 49.770998 l = 0.132
+  };
+  qbe2i multipole { tag = qbe2i at = 50.0954005
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be2 sbend { tag = be2 at = 51.0116985 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000531462103773 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe2e multipole { tag = qbe2e at = 51.9279965
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  jq1 quadrupole { tag = jq1 at = 53.499997 l = 0.6 n = 4
+  };
+  qbe3i multipole { tag = qbe3i at = 54.9279955
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be3 sbend { tag = be3 at = 55.8442935 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000668341440576 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe3e multipole { tag = qbe3e at = 56.7605915
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  msh11 hkicker { tag = msh11 at = 57.047596 l = 0.2
+  };
+  qu3 quadrupole { tag = qu3 at = 57.385599 l = 0.372 n = 4
+    body = { kl = [ 0 0.129812967852 ] kls = [ 0 0 ] 
+    }
+  };
+  mx05 sextupole { tag = mx05 at = 57.703599 l = 0.14
+  };
+  qbe4i multipole { tag = qbe4i at = 58.0105905
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be4 sbend { tag = be4 at = 58.9268885 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 -8.06229438218e-05 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe4e multipole { tag = qbe4e at = 59.8431865
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos11h hmonitor { tag = dpos11h at = 59.989995
+  };
+  dpos11v vmonitor { tag = dpos11v at = 60.149995
+  };
+  qu4 quadrupole { tag = qu4 at = 60.468194 l = 0.372 n = 4
+    body = { kl = [ 0 -0.106390093128 ] kls = [ 0 0 ] 
+    }
+  };
+  msv12 vkicker { tag = msv12 at = 61.153395 l = 0.227
+  };
+  jq2 quadrupole { tag = jq2 at = 61.999995 l = 0.6 n = 4
+  };
+  mx06 sextupole { tag = mx06 at = 63.342194 l = 0.243
+  };
+  qu5 quadrupole { tag = qu5 at = 63.718194 l = 0.372 n = 4
+    body = { kl = [ 0 -0.106390093128 ] kls = [ 0 0 ] 
+    }
+  };
+  msh13 hkicker { tag = msh13 at = 64.039695 l = 0.2
+  };
+  qbe5i multipole { tag = qbe5i at = 64.3432005
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be5 sbend { tag = be5 at = 65.2594985 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 -9.2137490484e-05 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe5e multipole { tag = qbe5e at = 66.1757965
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos12h hmonitor { tag = dpos12h at = 66.317994
+  };
+  dpos12v vmonitor { tag = dpos12v at = 66.482994
+  };
+  qu6 quadrupole { tag = qu6 at = 66.800788 l = 0.372 n = 4
+    body = { kl = [ 0 0.166682069388 ] kls = [ 0 0 ] 
+    }
+  };
+  msv14 vkicker { tag = msv14 at = 67.109194 l = 0.132
+  };
+  qbe6i multipole { tag = qbe6i at = 67.4257955
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be6 sbend { tag = be6 at = 68.3420935 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000623125643698 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe6e multipole { tag = qbe6e at = 69.2583915
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  mx07 sextupole { tag = mx07 at = 69.705293 l = 0.328
+  };
+  qbe7i multipole { tag = qbe7i at = 72.2583905
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be7 sbend { tag = be7 at = 73.1746885 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000400360441858 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe7e multipole { tag = qbe7e at = 74.0909865
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos13h hmonitor { tag = dpos13h at = 74.231992
+  };
+  dpos13v vmonitor { tag = dpos13v at = 74.396992
+  };
+  qu7 quadrupole { tag = qu7 at = 74.715993 l = 0.372 n = 4
+    body = { kl = [ 0 0.166682069388 ] kls = [ 0 0 ] 
+    }
+  };
+  tp3 marker { tag = tp3 at = 75.265984
+  };
+  qbe8i multipole { tag = qbe8i at = 75.3409855
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be8 sbend { tag = be8 at = 76.2572835 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000344987085809 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe8e multipole { tag = qbe8e at = 77.1735815
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos14h hmonitor { tag = dpos14h at = 77.333991
+  };
+  qu8 quadrupole { tag = qu8 at = 77.799092 l = 0.372 n = 4
+    body = { kl = [ 0 -0.106390093128 ] kls = [ 0 0 ] 
+    }
+  };
+  mx08 sextupole { tag = mx08 at = 78.182092 l = 0.243
+  };
+  msh16 hkicker { tag = msh16 at = 78.473791 l = 0.132
+  };
+  dkicker marker { tag = dkicker at = 79.748791
+  };
+  msh17 hkicker { tag = msh17 at = 80.681591 l = 0.132
+  };
+  qu9 quadrupole { tag = qu9 at = 81.049092 l = 0.372 n = 4
+    body = { kl = [ 0 -0.106390093128 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos15v vmonitor { tag = dpos15v at = 81.352991
+  };
+  dpos15h hmonitor { tag = dpos15h at = 81.512991
+  };
+  qbe9i multipole { tag = qbe9i at = 81.6736415
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be9 sbend { tag = be9 at = 82.5899395 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000165773405492 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe9e multipole { tag = qbe9e at = 83.5062375
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  mx09 sextupole { tag = mx09 at = 83.815183 l = 0.14
+  };
+  qu10 quadrupole { tag = qu10 at = 84.131183 l = 0.372 n = 4
+    body = { kl = [ 0 0.129812967852 ] kls = [ 0 0 ] 
+    }
+  };
+  msv18 vkicker { tag = msv18 at = 84.43599 l = 0.132
+  };
+  qbe10i multipole { tag = qbe10i at = 84.7561745
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be10 sbend { tag = be10 at = 85.6724725 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.00103586881394 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe10e multipole { tag = qbe10e at = 86.5887705
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  rpol marker { tag = rpol at = 87.872472
+  };
+  qbe11i multipole { tag = qbe11i at = 89.5887695
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be11 sbend { tag = be11 at = 90.5050675 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000818093499789 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe11e multipole { tag = qbe11e at = 91.4213655
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  msh19 hkicker { tag = msh19 at = 91.707188 l = 0.132
+  };
+  qu11 quadrupole { tag = qu11 at = 92.046373 l = 0.372 n = 4
+    body = { kl = [ 0 0.129812967852 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos16v vmonitor { tag = dpos16v at = 92.349988
+  };
+  dpos16h hmonitor { tag = dpos16h at = 92.512988
+  };
+  qbe12i multipole { tag = qbe12i at = 92.6713645
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be12 sbend { tag = be12 at = 93.5876625 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 -0.000192466516489 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe12e multipole { tag = qbe12e at = 94.5039605
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  qu12 quadrupole { tag = qu12 at = 95.128968 l = 0.372 n = 4
+    body = { kl = [ 0 -0.106390093128 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos17v vmonitor { tag = dpos17v at = 95.401987
+  };
+  dpos17h hmonitor { tag = dpos17h at = 95.551987
+  };
+  msv20 vkicker { tag = msv20 at = 95.820187 l = 0.227
+  };
+  ctstart marker { tag = ctstart at = 96.753945
+  };
+  qt17 quadrupole { tag = qt17 at = 99.610245 l = 0.62 n = 4
+    body = { kl = [ 0 -0.38455818246 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos18h hmonitor { tag = dpos18h at = 100.034987
+  };
+  dpos18v vmonitor { tag = dpos18v at = 100.184987
+  };
+  qt18 quadrupole { tag = qt18 at = 100.610245 l = 0.62 n = 4
+    body = { kl = [ 0 0.35667404144 ] kls = [ 0 0 ] 
+    }
+  };
+  qt19 quadrupole { tag = qt19 at = 101.470246 l = 0.62 n = 4
+    body = { kl = [ 0 0.35667404144 ] kls = [ 0 0 ] 
+    }
+  };
+  mx10 sextupole { tag = mx10 at = 101.981246 l = 0.243
+  };
+  qt20 quadrupole { tag = qt20 at = 102.470246 l = 0.62 n = 4
+    body = { kl = [ 0 -0.38455818246 ] kls = [ 0 0 ] 
+    }
+  };
+  msh21 hkicker { tag = msh21 at = 102.993787 l = 0.227
+  };
+  msv22 vkicker { tag = msv22 at = 103.270787 l = 0.227
+  };
+  cavity marker { tag = cavity at = 105.268246
+  };
+  bct marker { tag = bct at = 107.668246
+  };
+  msv24 vkicker { tag = msv24 at = 108.770087 l = 0.227
+  };
+  msh23 hkicker { tag = msh23 at = 109.038087 l = 0.227
+  };
+  qt21 quadrupole { tag = qt21 at = 109.54654 l = 0.62 n = 4
+    body = { kl = [ 0 -0.37606462886 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos19h hmonitor { tag = dpos19h at = 109.971987
+  };
+  dpos19v vmonitor { tag = dpos19v at = 110.121987
+  };
+  qt22 quadrupole { tag = qt22 at = 110.54654 l = 0.62 n = 4
+    body = { kl = [ 0 0.34699082006 ] kls = [ 0 0 ] 
+    }
+  };
+  qt23 quadrupole { tag = qt23 at = 111.40654 l = 0.62 n = 4
+    body = { kl = [ 0 0.34699082006 ] kls = [ 0 0 ] 
+    }
+  };
+  mx11 sextupole { tag = mx11 at = 111.91054 l = 0.243
+  };
+  qt24 quadrupole { tag = qt24 at = 112.40654 l = 0.62 n = 4
+    body = { kl = [ 0 -0.37606462886 ] kls = [ 0 0 ] 
+    }
+  };
+  gun kicker { tag = gun at = 114.19854 l = 0.35
+  };
+  toroid1 hkicker { tag = toroid1 at = 115.12854 l = 0.6
+  };
+  dposec1h hmonitor { tag = dposec1h at = 115.89454
+  };
+  dposec1v vmonitor { tag = dposec1v at = 115.91054
+  };
+  ecool marker { tag = ecool at = 116.62854
+  };
+  dposec2h hmonitor { tag = dposec2h at = 117.34654
+  };
+  dposec2v vmonitor { tag = dposec2v at = 117.36254
+  };
+  toroid2 hkicker { tag = toroid2 at = 118.12854 l = 0.6
+  };
+  col kicker { tag = col at = 119.05854 l = 0.35
+  };
+  qt25 quadrupole { tag = qt25 at = 120.846543 l = 0.62 n = 4
+    body = { kl = [ 0 -0.37606462886 ] kls = [ 0 0 ] 
+    }
+  };
+  mx12 sextupole { tag = mx12 at = 121.337543 l = 0.243
+  };
+  qt26 quadrupole { tag = qt26 at = 121.846543 l = 0.62 n = 4
+    body = { kl = [ 0 0.34699082006 ] kls = [ 0 0 ] 
+    }
+  };
+  qt27 quadrupole { tag = qt27 at = 122.706543 l = 0.62 n = 4
+    body = { kl = [ 0 0.34699082006 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos20h hmonitor { tag = dpos20h at = 123.126987
+  };
+  dpos20v vmonitor { tag = dpos20v at = 123.281987
+  };
+  qt28 quadrupole { tag = qt28 at = 123.706543 l = 0.62 n = 4
+    body = { kl = [ 0 -0.37606462886 ] kls = [ 0 0 ] 
+    }
+  };
+  msv26 vkicker { tag = msv26 at = 124.016543
+  };
+  dipole1 sbend { tag = dipole1 at = 124.635533 l = 0.7276 n = 4
+    body = { fint = 0.6 e1 = 0.0628318530718 e2 = -0.0628318530718 }
+  };
+  dposanke1h hmonitor { tag = dposanke1h at = 125.853333
+  };
+  tpa marker { tag = tpa at = 126.244533
+  };
+  dipole2 sbend { tag = dipole2 at = 127.244533 l = 1.4847 n = 4
+    body = { fint = 0.6 }
+  };
+  dposanke2h hmonitor { tag = dposanke2h at = 128.538027
+  };
+  dipole3 sbend { tag = dipole3 at = 129.853533 l = 0.7276 n = 4
+    body = { fint = 0.6 e1 = -0.0628318530718 e2 = 0.0628318530718 }
+  };
+  qt29 quadrupole { tag = qt29 at = 130.782827 l = 0.62 n = 4
+    body = { kl = [ 0 -0.38455818246 ] kls = [ 0 0 ] 
+    }
+  };
+  mx13 sextupole { tag = mx13 at = 131.279827 l = 0.243
+  };
+  qt30 quadrupole { tag = qt30 at = 131.782827 l = 0.62 n = 4
+    body = { kl = [ 0 0.35667404144 ] kls = [ 0 0 ] 
+    }
+  };
+  qt31 quadrupole { tag = qt31 at = 132.642828 l = 0.62 n = 4
+    body = { kl = [ 0 0.35667404144 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos21h hmonitor { tag = dpos21h at = 133.062977
+  };
+  dpos21v vmonitor { tag = dpos21v at = 133.217977
+  };
+  qt32 quadrupole { tag = qt32 at = 133.642828 l = 0.62 n = 4
+    body = { kl = [ 0 -0.38455818246 ] kls = [ 0 0 ] 
+    }
+  };
+  msv28 vkicker { tag = msv28 at = 133.952828
+  };
+  ctend marker { tag = ctend at = 136.499118
+  };
+  msh29 hkicker { tag = msh29 at = 137.415167 l = 0.227
+  };
+  dpos22h hmonitor { tag = dpos22h at = 137.685967
+  };
+  dpos22v vmonitor { tag = dpos22v at = 137.845967
+  };
+  qu13 quadrupole { tag = qu13 at = 138.124126 l = 0.372 n = 4
+    body = { kl = [ 0 -0.106390093128 ] kls = [ 0 0 ] 
+    }
+  };
+  qbe13i multipole { tag = qbe13i at = 138.7490875
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be13 sbend { tag = be13 at = 139.6653855 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000164262185989 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe13e multipole { tag = qbe13e at = 140.5816835
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos23h hmonitor { tag = dpos23h at = 140.728966
+  };
+  dpos23v vmonitor { tag = dpos23v at = 140.893966
+  };
+  qu14 quadrupole { tag = qu14 at = 141.206721 l = 0.372 n = 4
+    body = { kl = [ 0 0.129812967852 ] kls = [ 0 0 ] 
+    }
+  };
+  msv30 vkicker { tag = msv30 at = 141.504766 l = 0.132
+  };
+  qbe14i multipole { tag = qbe14i at = 141.8316815
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be14 sbend { tag = be14 at = 142.7479795 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.00090157075458 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe14e multipole { tag = qbe14e at = 143.6642775
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  esmp marker { tag = esmp at = 145.193075
+  };
+  msh31 hkicker { tag = msh31 at = 145.963065 l = 0.227
+  };
+  qbe15i multipole { tag = qbe15i at = 146.6642765
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be15 sbend { tag = be15 at = 147.5805745 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000992251390803 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe15e multipole { tag = qbe15e at = 148.4968725
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  qu15 quadrupole { tag = qu15 at = 149.12188 l = 0.372 n = 4
+    body = { kl = [ 0 0.129812967852 ] kls = [ 0 0 ] 
+    }
+  };
+  mx14 sextupole { tag = mx14 at = 149.43988 l = 0.14
+  };
+  qbe16i multipole { tag = qbe16i at = 149.7469025
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be16 sbend { tag = be16 at = 150.6632005 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000349837815316 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe16e multipole { tag = qbe16e at = 151.5794985
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos24h hmonitor { tag = dpos24h at = 151.725963
+  };
+  dpos24v vmonitor { tag = dpos24v at = 151.890963
+  };
+  qu16 quadrupole { tag = qu16 at = 152.20449 l = 0.372 n = 4
+    body = { kl = [ 0 -0.106390093128 ] kls = [ 0 0 ] 
+    }
+  };
+  msv32 vkicker { tag = msv32 at = 152.833163 l = 0.2
+  };
+  esep marker { tag = esep at = 153.17139
+  };
+  es0 marker { tag = es0 at = 153.17139
+  };
+  msh33 hkicker { tag = msh33 at = 154.443063 l = 0.132
+  };
+  mx15 sextupole { tag = mx15 at = 155.067375 l = 0.243
+  };
+  qu17 quadrupole { tag = qu17 at = 155.454375 l = 0.372 n = 4
+    body = { kl = [ 0 -0.106390093128 ] kls = [ 0 0 ] 
+    }
+  };
+  qbe17i multipole { tag = qbe17i at = 156.0793965
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be17 sbend { tag = be17 at = 156.9956945 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000332803250897 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe17e multipole { tag = qbe17e at = 157.9119925
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  qu18 quadrupole { tag = qu18 at = 158.536985 l = 0.372 n = 4
+    body = { kl = [ 0 0.166682069388 ] kls = [ 0 0 ] 
+    }
+  };
+  msv34 vkicker { tag = msv34 at = 158.833562 l = 0.2
+  };
+  qbe18i multipole { tag = qbe18i at = 159.1619615
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be18 sbend { tag = be18 at = 160.0782595 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000496173395127 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe18e multipole { tag = qbe18e at = 160.9945575
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos25h hmonitor { tag = dpos25h at = 161.081861
+  };
+  mx16 sextupole { tag = mx16 at = 161.418459 l = 0.328
+  };
+  msep marker { tag = msep at = 161.623459
+  };
+  dpos26v vmonitor { tag = dpos26v at = 163.428861
+  };
+  dpos26h hmonitor { tag = dpos26h at = 163.581861
+  };
+  qbe19i multipole { tag = qbe19i at = 163.9945715
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be19 sbend { tag = be19 at = 164.9108695 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000566371488871 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe19e multipole { tag = qbe19e at = 165.8271675
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  msh35 hkicker { tag = msh35 at = 166.11526 l = 0.132
+  };
+  qu19 quadrupole { tag = qu19 at = 166.45219 l = 0.372 n = 4
+    body = { kl = [ 0 0.166682069388 ] kls = [ 0 0 ] 
+    }
+  };
+  qbe20i multipole { tag = qbe20i at = 167.0771665
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be20 sbend { tag = be20 at = 167.9934645 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 -0.000188477922608 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe20e multipole { tag = qbe20e at = 168.9097625
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos27h hmonitor { tag = dpos27h at = 169.057859
+  };
+  dpos27v vmonitor { tag = dpos27v at = 169.217859
+  };
+  qu20 quadrupole { tag = qu20 at = 169.534784 l = 0.372 n = 4
+    body = { kl = [ 0 -0.106390093128 ] kls = [ 0 0 ] 
+    }
+  };
+  mx17 sextupole { tag = mx17 at = 169.916784 l = 0.243
+  };
+  msv36 vkicker { tag = msv36 at = 170.704459 l = 0.227
+  };
+  msh37 hkicker { tag = msh37 at = 171.842259 l = 0.132
+  };
+  mbu2 hkicker { tag = mbu2 at = 172.228259 l = 0.27
+  };
+  qu21 quadrupole { tag = qu21 at = 172.784769 l = 0.372 n = 4
+    body = { kl = [ 0 -0.106390093128 ] kls = [ 0 0 ] 
+    }
+  };
+  dpos28h hmonitor { tag = dpos28h at = 172.970769
+  };
+  dpos28v vmonitor { tag = dpos28v at = 173.145769
+  };
+  qbe21i multipole { tag = qbe21i at = 173.4096865
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be21 sbend { tag = be21 at = 174.3259845 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000283662535518 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe21e multipole { tag = qbe21e at = 175.2422825
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  mx18 sextupole { tag = mx18 at = 175.564289 l = 0.14
+  };
+  qu22 quadrupole { tag = qu22 at = 175.867289 l = 0.372 n = 4
+    body = { kl = [ 0 0.129812967852 ] kls = [ 0 0 ] 
+    }
+  };
+  msv38 vkicker { tag = msv38 at = 176.173168 l = 0.2
+  };
+  qbe22i multipole { tag = qbe22i at = 176.4922805
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be22 sbend { tag = be22 at = 177.4085785 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.000769946357485 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe22e multipole { tag = qbe22e at = 178.3248765
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  msh39 hkicker { tag = msh39 at = 178.662067 l = 0.2
+  };
+  mbu3 hkicker { tag = mbu3 at = 179.906067 l = 0.52
+  };
+  dpos29h hmonitor { tag = dpos29h at = 180.849767
+  };
+  dpos29v vmonitor { tag = dpos29v at = 181.004767
+  };
+  qbe23i multipole { tag = qbe23i at = 181.3248755
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  be23 sbend { tag = be23 at = 182.2411735 l = 1.832596 n = 4
+    body = { kl = [ 0.261799387799]}
+    body.dev = { kl = [ 0 0.00104704330446 0 ] kls = [ 0 0 0 ] 
+    }
+  };
+  qbe23e multipole { tag = qbe23e at = 183.1574715
+    body = { kl = [ 0 -0.0188074967263 ] kls = [ 0 0 ] 
+    }
+  };
+  endm marker { tag = endm at = 183.472463
+  };
+
+endsequence at = 183.472463
+}

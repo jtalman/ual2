@@ -1,0 +1,19 @@
+echo "UAL"
+echo $UAL
+
+set QTLIB           $UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/
+set QTDIR           $UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/
+set QTINC           $UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/
+set ROOTSYS         $UAL/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/
+set LD_LIBRARY_PATH $UAL/gui/libxml2-2.9.7/.libs/:$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/:$UAL/tools/sxf/lib/linux/:$UAL/tools/lib/linux/:$UAL/ext/ADXF/lib/linux/:$UAL/ext/SXF/lib/linux/:$UAL/ext/UI/lib/linux/:$UAL/ext/ROOT/lib/linux/:$UAL/ext/ALE/lib/linux/:$UAL/codes/SIMBAD/lib/linux/:$UAL/codes/AIM/lib/linux/:$UAL/codes/TIBETAN/lib/linux/:$UAL/codes/SPINK/lib/linux/:$UAL/codes/ACCSIM/lib/linux/:$UAL/codes/ETEAPOT_MltTurn/lib/linux/:$UAL/codes/ETEAPOT2/lib/linux/:$UAL/codes/ETEAPOT/lib/linux/:$UAL/codes/TEAPOT/lib/linux/:$UAL/codes/PAC/lib/linux/:$UAL/codes/ZLIB/lib/linux/:$UAL/codes/UAL/lib/linux/
+
+pushd $UAL/gui/USPAS/examples/transverse
+
+make clean
+make
+
+stat --format=%s:%n:%y ./lib/linux/run
+echo "230448"
+
+cd ./lib
+env QTLIB=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/ QTDIR=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/ QTINC=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/ ROOTSYS=$UAL/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/ LD_LIBRARY_PATH=$UAL/gui/libxml2-2.9.7/.libs/:$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/:$UAL/tools/sxf/lib/linux/:$UAL/tools/lib/linux/:$UAL/ext/ADXF/lib/linux/:$UAL/ext/SXF/lib/linux/:$UAL/ext/UI/lib/linux/:$UAL/ext/ROOT/lib/linux/:$UAL/ext/ALE/lib/linux/:$UAL/codes/SIMBAD/lib/linux/:$UAL/codes/AIM/lib/linux/:$UAL/codes/TIBETAN/lib/linux/:$UAL/codes/SPINK/lib/linux/:$UAL/codes/ACCSIM/lib/linux/:$UAL/codes/ETEAPOT_MltTurn/lib/linux/:$UAL/codes/ETEAPOT2/lib/linux/:$UAL/codes/ETEAPOT/lib/linux/:$UAL/codes/TEAPOT/lib/linux/:$UAL/codes/PAC/lib/linux/:$UAL/codes/ZLIB/lib/linux/:$UAL/codes/UAL/lib/linux/ ./linux/run ring ../../lattices/general_fodo.sxf ../../project/apdf/teapot.apdf

@@ -1,0 +1,13 @@
+cd examples/E3
+make clean
+make
+copy and paste from "semi script" Z-X-row
+copy and paste from "semi script" Z-PX-row
+cat matrix
+gcc det-double.c
+./a.out
+    2 2
+    -9.3112427518e-07 -1.0201347796e-08
+    +1.3324296340e-05 -9.2799521179e-07
+          (copy and pasted matrix file)
+          determinant = 1E-12

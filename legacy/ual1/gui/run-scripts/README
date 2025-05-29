@@ -1,0 +1,15 @@
+12/29/2024:
+
+I'm focussing on the example in directory
+       $UAL/gui/run-scripts/USPAS-legacy/examples/RT-transition/
+
+cd into this directory, and execute
+       run-RT-transition
+once.
+
+The full path is
+       $UAL/gui/run-scripts/USPAS-legacy/examples/RT-transition/run-RT-transition
+
+Subsequently, one can just execute it's last stanza.
+
+This is probly most natural for a user, and debugging.

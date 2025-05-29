@@ -1,0 +1,11 @@
+qtgui Installation notes: 15 June, 2005
+1. Copy and open qtgui.tar in the USPAS/tools directory.
+2. cd qtgui
+3. qmake
+   notes: qmake is part of QT which generates/updates Makefile.
+          warning message "Failure to find ... " can be ignored
+4. make clean
+5. make
+
+6. Update LD_LIBRARY_PATH with the qtgui directory
+7. update .rootrc to file rootrc file in this directory.

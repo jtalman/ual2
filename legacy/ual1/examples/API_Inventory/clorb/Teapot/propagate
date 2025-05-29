@@ -1,0 +1,23 @@
+//int TeapotClOrbitService::propagate(PAC::Position& p, const PAC::BeamAttributes& att, int index1, int index2)
+int propagate(PAC::Position& p, const PAC::BeamAttributes& att, int index1, int index2)
+{
+
+  PAC::Position tmp(p);
+  PAC::BeamAttributes beam = att;
+
+  double e = att.getEnergy(), m = att.getMass();
+  double v0byc = sqrt(e*e - m*m)/e;
+
+  TeapotIntegrator integrator;
+
+  integrator.makeVelocity(p, tmp, v0byc);
+  integrator.makeRV(att, p, tmp);
+
+  int flag = 0;
+  for(int j = index1; j < index2; j ++) {
+    flag = integrator.propagate(m_teapot->_telements[j], p, tmp, beam, &v0byc);
+//  flag = integrator.propagate(code_._telements[j], p, tmp, beam, &v0byc);
+    if(flag) break;
+  }
+  return flag;
+}

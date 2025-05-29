@@ -1,0 +1,68 @@
+Insert e.g. Verbatim 16G in functioning box with iso, e.g. AlmaLinux-9.4-x86_64-boot.iso
+       it should mount
+su
+                      // "e.g."
+umount /dev/sdc1         
+                      // "e.g."
+
+mkfs.vfat -I /dev/sdc
+dd if=AlmaLinux-9.4-x86_64-boot.iso of=/dev/sdc bs=4M status= progress && sync
+
+Insert Verbatim 16G on box on which AL94 is to be installed
+Boot
+F1
+Startup
+      Network Boot
+                      // make this first in boot order
+           USB HDD: Verbatim
+                      // make this first in boot order
+F10 Save and Exit
+      Yes
+Save Configuration
+ 
+WELCOME TO ALMALINUX9.4.
+      English
+      English (United States)
+            Continue
+Network & Host Name
+                      // "e.g."
+      SpectrumSetup-59
+            passwd
+                      // "e.g."
+      Host Name
+                      // "e.g."
+            x220-1
+                      // "e.g."
+Installation Destination
+      Reclaim All
+Installation Source
+      https://linuxsoft.cern.ch/cern/alma/9/BaseOS/x86_64/os/
+                      // wait till url shows
+                      // wait till url shows
+Software Selection
+      Workstation++
+            GNOME Applications
+            Legacy UNIX Compatibility
+            Console Internet Tools
+            Container Management
+            Development Tools
+            Graphical Administration Tools
+            Scientific Support  
+                  Done
+Root Password
+       passwd
+                      // configure, and run python just as root (hopefully)
+User Creation
+       passwd
+                      // configure, and run python just as root (hopefully)
+Begin Installation
+      1345 RPMs
+     (1345 packages)
+
+Reboot System
+      I manually unplug thumb drive, watching for just when screen goes blank.
+      This may be a bit of a "race condition".
+      I get a couple "GRUB lines", on reboot, in passing.
+            GRUB Install      // or such
+            Welcome to GRUB   // or such
+      It seems to work, however.

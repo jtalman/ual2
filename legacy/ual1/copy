@@ -1,0 +1,10 @@
+cp /home/talman/UAL_Latest/12_15_2020/MountainRangeViewer.cc gui/ROOT/src/UAL/ROOT/Viewers/MountainRangeViewer.cc
+
+cp /home/talman/UAL_Latest/12_15_2020/PlayerShell.hh         gui/QT/src/UAL/QT/Player/PlayerShell.hh
+cp /home/talman/UAL_Latest/12_15_2020/BeamEditor.cc          gui/QT/src/UAL/QT/Player/BeamEditor.cc
+
+cp /home/talman/UAL_Latest/12_15_2020/README                 gui/examples/generic/README
+cp /home/talman/UAL_Latest/12_15_2020/run                    gui/examples/generic/run
+
+cp /home/talman/UAL_Latest/12_15_2020/parameters             gui/USPAS/examples/generic/src/parameters
+cp /home/talman/UAL_Latest/12_15_2020/run.cc                 gui/USPAS/examples/generic/src/run.cc

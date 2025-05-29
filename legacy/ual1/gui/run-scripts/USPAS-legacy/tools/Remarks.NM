@@ -1,0 +1,32 @@
+
+ln -s ../qtRoot/MyModules.mk .
+ln -s ../qtRoot/MyMakefile.depend .  
+ln -s ../qtRoot/root.diff .
+mv qt qt.FromRoot
+ln -s ../qtRoot/qt .
+ln -s ../qtRoot/qtgui .
+ln -s ../qtRoot/qtx3d .
+ln -s ../qtRoot/qtged .
+ln -s ../qtRoot/qtgl .
+ln -s ../qtRoot/qtimage .
+
+cd gl/src
+ln -s ../../root.diff/gl/src/TRootOIViewer.cxx .
+cd ../../
+
+cd test
+ln -s ../../qtRoot/test/qt .
+ln -s ../../qtRoot/test/qtRootShower .
+cd ..
+
+          cd tutorials
+          $copycommand  ../../$qtRootDir/root.diff/tutorials/rootlogon.C .
+          $copycommand  ../../$qtRootDir/root.diff/tutorials/shapes.C .
+          $copycommand  ../../$qtRootDir/root.diff/tutorials/rootgeom.C .
+          $copycommand  ../../$qtRootDir/root.diff/tutorials/geoshapes.C .
+
+./configure linux  
+--enable-shared --enable-thread --enable-soversion --enable-table --enable-qt
+
+
+

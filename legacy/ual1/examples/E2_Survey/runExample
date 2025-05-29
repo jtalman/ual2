@@ -1,0 +1,4 @@
+make clean
+make
+./E2_Survey 1.24810735 >! /dev/null
+: ./E2_Survey 1.25 >! /dev/null

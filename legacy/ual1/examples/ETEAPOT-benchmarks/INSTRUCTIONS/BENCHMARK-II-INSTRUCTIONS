@@ -1,0 +1,40 @@
+Benchmark-II Instructions, 3 Dec., 2022
+-----------------------------------------------------
+1. Assume git download and build have been completed, and environment variables
+   correctly set.
+2. $ cd $UAL/examples/ETEAPOT-benchmarks/II
+    $ ll run*   // produces files
+           runExample_Figure_5_7
+           runExample_Figure_9_11
+           runExample_Figure_1_3
+           runExample_BM-IV_E_ValLeb-betas.gnuplot
+
+3. In each case cut and paste from entire file. 
+
+4. The produced pdf files (in /pdf directory) are
+          Fig_II-7.pdf
+          Fig_II-5.pdf
+          Fig_II-11.pdf
+          Fig_II-9.pdf
+          Fig_II-3.pdf
+          Fig_II-1.pdf
+
+5. The latex directory contains files
+         latex/E_benchmark_II.tar
+         E_benchmark_II-updated.pdf
+   and (possibly) directory 
+         E_benchmark_II_updated/
+   (If not this directory can be regenerated using "E_benchmark_II.tar")
+
+6.      $ cd latex
+         $ tar xvf E_benchmark_II.tar
+   produces latex production directory
+         E_benchmark_II_updated/
+  including 
+         E_benchmark_II_updated/pdf
+
+7. "pdf" Files produced in step 4 should be copied to directory "E_benchmark_II_updated/pdf".
+    Two (previously-produced) figures are already present).  Then issue
+         $ cd latex/E_benchmark_II_updated
+         $ pdflatex E_benchmark_II.tex
+   to produce chapter "E_benchmark-II.pdf".

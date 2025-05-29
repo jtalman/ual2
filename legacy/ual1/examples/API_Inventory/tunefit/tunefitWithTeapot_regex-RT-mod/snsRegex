@@ -1,0 +1,4 @@
+
+const char* b1f="^QFH.2$|^QFH.3$|^QFH.4$|^QFH.5$|^QFH.6$|^QFH.7$|^QFH.8$|^QFH.9$|^QFH.10$|^QFH.11$|^QFH.12$|^QFH.13$|^QFH.14$|^QFH.15$|^QFH.16$";
+
+const char* b1d="^QDH.1$|^QDH.2$|^QDH.3$|^QDH.4$|^QDH.5$|^QDH.6$|^QDH.7$|^QDH.8$|^QDH.9$|^QDH.10$|^QDH.11$|^QDH.12$|QDH.13$|^QDH.14$|^QDH.15$|^QDH.16$";

@@ -1,0 +1,57 @@
+source $UAL/setup-linux-ual
+setenv LD_LIBRARY_PATH $SXF/lib/$SXF_ARCH/:$LD_LIBRARY_PATH
+
+make clean
+
+\cp $UAL/examples/ETEAPOT/*.hh .
+\cp $UAL/examples/ETEAPOT/extractParameters.h .
+\cp $UAL/examples/ETEAPOT/simulatedProbeValues .
+\cp $UAL/examples/ETEAPOT/trtrin .
+
+: \cp $UAL/examples/ETEAPOT/trtrout .
+: \cp ../1/trtrout .
+
+\cp $UAL/examples/ETEAPOT/printProbeValues .
+\cp $UAL/examples/ETEAPOT/data/eteapotMARKER.apdf data/eteapot.apdf
+\cp $UAL/examples/ETEAPOT/userBunch data
+\cp $UAL/examples/ETEAPOT/determineTwiss.cc .
+
+\cp $UAL/examples/ETEAPOT/sip* .
+\cp $UAL/examples/ETEAPOT/probeDataForTwiss .
+\cp $UAL/examples/ETEAPOT/transferMatrices.cc .
+
+make
+
+source $UAL/setup-linux-ual
+setenv LD_LIBRARY_PATH $SXF/lib/$SXF_ARCH/:$LD_LIBRARY_PATH
+
+make clean
+
+\cp $UAL/examples/ETEAPOT/*.hh .
+\cp $UAL/examples/ETEAPOT/extractParameters.h .
+\cp $UAL/examples/ETEAPOT/simulatedProbeValues .
+\cp $UAL/examples/ETEAPOT/trtrin .
+
+: \cp $UAL/examples/ETEAPOT/trtrout .
+: \cp ../1/trtrout .
+
+\cp $UAL/examples/ETEAPOT/printProbeValues .
+\cp $UAL/examples/ETEAPOT/data/eteapotMARKER.apdf data/eteapot.apdf
+: \cp $UAL/examples/ETEAPOT/data/E-PTR2-0p75-COSY.sxf data
+\cp $UAL/examples/ETEAPOT/userBunch data
+\cp $UAL/examples/ETEAPOT/determineTwiss.cc .
+
+\cp $UAL/examples/ETEAPOT/sip* .
+\cp $UAL/examples/ETEAPOT/probeDataForTwiss .
+\cp $UAL/examples/ETEAPOT/transferMatrices.cc .
+
+make
+
+: NOTE !! first command-line input "fake quad" strength has been adjusted empirically
+
+ ./determineTwiss  data/E_PTR2_0p80_COSY_4PAX_INJ_sl4.sxf -0.0 16.353 >! OUT
+
+./transferMatrices -0 -5.14414e-10 22.8327 1.69042e-09 122.486 241>! betaFunctions
+
+gnuplot
+      load "gnuplot/E-PTR2-0p80-COSY-4PAX-INJ-sl4-BM-VI-Figure9-11.gnuplot"

@@ -1,0 +1,17 @@
+dnf -y install emacs
+dnf -y install tcsh
+dnf -y install openmotif
+dnf -y install openmotif-devel
+
+dnf -y install libX11-devel
+dnf -y install libXext-devel
+dnf -y install libXpm-devel
+dnf -y install libGLU
+dnf -y install libGLU-devel
+dnf -y install openldap-devel
+dnf -y install libnsl
+dnf -y install rpcgen
+
+ls -l /usr/lib64/libXmu.so
+ls -l /usr/lib64/libXi.so
+ls -l /usr/lib64/libnsl.so

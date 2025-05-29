@@ -1,0 +1,156 @@
+    1  ln -s python3 python
+    2  ll python
+    3  exit
+    4  man dnf
+    5  dnf install -y -v tcsh
+    6  exit
+    7  dnf install -y -v emacs
+    8  exit
+    9  history
+   10  exit
+   11  usermod -s /usr/bin/tcsh talman
+   12  exit
+   13  dnf install -y -v xfig
+   14  mv /home/talman/Downloads/xfig+fig2dev-3.2.9.tar.xz .
+   15  ll
+   16  file xfig+fig2dev-3.2.9.tar.xz 
+   17  unxz xfig+fig2dev-3.2.9.tar.xz 
+   18  ll
+   19  tar xvf xfig+fig2dev-3.2.9.tar 
+   20  cd xfig-3.2.9/
+   21  ll
+   22  ./configure 
+   23  make
+   24  ll ..
+   25  dnf install -y -v xmgrace
+   26  locate X11
+   27  dnf install -y -v libXt-devel
+   28  dnf install -y -v xfig
+   29  h
+   30  history
+   31  make
+   32  dnf install -y -v X11-xft
+   33  dnf install -y -v xft
+   34  make
+   35  dnf install -y -v Xft
+   36  dnf install -y -v libXft-devel
+   37  make
+   38  dnf install -y -v Xaw3d
+   39  make
+   40  make clean
+   41  make
+   42  dnf install -y -v Xaw3d-devel
+   43  find . -name e_compound.c
+   44  vi src/e_compound.c
+   45  make
+   46  find . -name figx.h +34
+   47  find . -name figx.h
+   48  vi src/figx.h +34
+   49  make
+   50  vi src/figx.h +34
+   51  locate Xaw3d
+   52  dnf install -y -v Xaw
+   53  dnf install -y -v Xaw-devel
+   54  dnf install -y -v Xaw3d-devel
+   55  dnf install -y -v Xaw3d
+   56  locate Xaw3d
+   57  dnf install -y -v Xaw3d-devel
+   58  vi src/figx.h +34
+   59  make
+   60  vi src/figx.h +34
+   61  cp src/figx.h ..
+   62  ll ..
+   63  vi src/figx.h +34
+   64  make
+   65  vi src/figx.h +34
+   66  make
+   67  ll Makefile
+   68  ./configure
+   69  ll Makefile
+   70  make
+   71  vi src/e_compound.c +65
+   72  make
+   73  vi src/e_compound.c +265
+   74  make
+   75  vi src/e_compound.c +233
+   76  cd ..
+   77  ll
+   78  rm -rf xfig-3.2.9
+   79  ll
+   80  tar xvf xfig+fig2dev-3.2.9.tar
+   81  ll
+   82  cd xfig-3.2.9/
+   83  ll
+   84  grep -n -r Xaw3d .
+   85  ./configure --help
+   86  grep -n -r Xaw3d .
+   87  ./configure --without-xaw3d1_5e
+   88  ll Makefile
+   89  make
+   90  dnf install -y -v Xaw3d-devel
+   91  dnf install -y -v Xaw3d
+   92  locate Xaw3d
+   93  ll /usr/
+   94  ll /usr/share/
+   95  ll /usr/share/X11/
+   96  vi src/figx.h +34
+   97  make
+   98  ll /usr/share/X11/
+   99  locate Xaw
+  100  dnf install -y -v Xaw
+  101  dnf install -y -v Xaw-devel
+  102  dnf install -y -v libXaw-devel
+  103  make
+  104  ll /usr/share/X11/
+  105  locate Xaw
+  106  locate Xaw.h
+  107  dnf install -y -v Xaw3d
+  108  dnf install -y -v libXaw3d
+  109  dnf install -y -v libXaw3d-devel
+  110  cd ..
+  111  rm -rf xfig-3.2.9
+  112  ll
+  113  tar xvf xfig+fig2dev-3.2.9.tar
+  114  ll
+  115  cd xfig-3.2.9/
+  116  vi configure
+  117  ./configure --without-xaw3d1_5e --without-xaw3d
+  118  ll Makefile
+  119  make
+  120  which xfig
+  121  make install
+  122  which xfig
+  123  exit
+  124  dnf install -y -v Motif
+  125  dnf install -y -v libMotif
+  126  dnf install -y -v libMotif-devel
+  127  dnf install -y -v libmotif-devel
+  128  dnf install -y -v libmotifdevel
+  129  dnf install -y -v motif
+  130  exit
+  131  dnf install -y -v libmotif
+  132  dnf install -y -v libXm
+  133  exit
+  134  dnf install -y -v motif
+  135  dnf install -y -v motif-devel
+  136  exit
+  137  make install
+  138  ll /usr/local/grace/bin/
+  139  exit
+  140  dnf install -y -v maple
+  141  cat .tcshrc
+  142  lm
+  143  exit
+  144  ll /usr/src/
+  145  cp grace-latest.tar.gz /usr/src
+  146  cp xfig+fig2dev-3.2.9.tar /usr/src/
+  147  ll /usr/src/
+  148  tar cvfz grace-5.1.25.tar.gz ./grace-5.1.25/
+  149  mv grace-5.1.25.tar.gz /usr/src/
+  150  ll /usr/src/
+  151  tar cvfz xfig-3.2.9.tar.gz ./xfig-3.2.9/
+  152  mv xfig-3.2.9.tar.gz /usr/src/
+  153  ll /usr/src/
+  154  ll
+  155  h
+  156  history>/usr/src/historyArchive

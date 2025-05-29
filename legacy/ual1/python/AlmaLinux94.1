@@ -1,0 +1,41 @@
+Insert e.g. Verbatim 16G in functioning box with iso, e.g. AlmaLinux-9.4-x86_64-boot.iso
+       it should mount
+su
+                      // "e.g."
+umount /dev/sdc1         
+                      // "e.g."
+
+mkfs.vfat -I /dev/sdc
+dd if=AlmaLinux-9.4-x86_64-boot.iso of=/dev/sdc bs=4M status= progress && sync
+
+Insert Verbatim 16G on install box
+Boot
+F1
+Network Boot
+                      // make this first in boot order
+          USB HDD: Verbatim
+                      // make this first in boot order
+F10 Save and Exit
+Save Configuration
+ 
+Network & Host Name
+                      // "e.g."
+      SpectrumSetup-59
+            passwd
+                      // "e.g."
+Installation Destination
+      Reclaim All
+Installation Source
+      https://linuxsoft.cern.ch/cern/alma/9/BaseOS/x86_64/os/
+Software Selection
+      Workstation++
+Root Password
+       passwd
+User Creation
+      passwd
+Begin Installation
+      ca 1500 packages
+
+Reboot
+      I unplug thumb drive when screen goes blank
+      this may be a bit of a "race condition"

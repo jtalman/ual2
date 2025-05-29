@@ -1,0 +1,73 @@
+typedef struct marker{
+ char tag[11];
+ double length;
+ double strength;
+ void(*marker_track)(struct marker *);
+} marker;
+
+void marker_track (marker *mp){
+ printf("   %s:AT:: %+e %+e %+e %+e %+e %+e %+e\n", mp->tag,AT,dx,dxp,dy,dyp,dct,de);
+}
+
+typedef struct drift{
+ char tag[11];
+ double length;
+ double strength;
+ void(*drift_track)(struct drift *);
+} drift;
+
+void drift_track (drift *dp){
+ double l = dp->length;
+ dx = dx + l * dxp;
+ dy = dy + l * dyp;
+
+ AT = AT + l;
+ printf("   %s:AT:: %+e %+e %+e %+e %+e %+e %+e\n", dp->tag,AT,dx,dxp,dy,dyp,dct,de);
+}
+
+typedef struct quadrupole{
+ char tag[11];
+ double length;
+ double strength;
+ void(*quadrupole_track)(struct quadrupole *);
+} quadrupole;
+
+void quadrupole_track (quadrupole *qp){
+ double l = qp->length;
+ double q = qp->strength;
+ dxp = q * dx + dxp;
+ dyp = q * dy + dyp;
+
+ AT = AT + l;
+ printf("   %s:AT:: %+e %+e %+e %+e %+e %+e %+e\n", qp->tag,AT,dx,dxp,dy,dyp,dct,de);
+}
+
+typedef struct sbend{
+ char tag[11];
+ double length;
+ double strength;
+ void(*sbend_track)(struct sbend *);
+} sbend;
+
+void sbend_track (sbend *sp){
+ double l = sp->length;
+ double q = sp->strength;
+
+ AT = AT + l;
+ printf("   %s:AT:: %+e %+e %+e %+e %+e %+e %+e\n", sp->tag,AT,dx,dxp,dy,dyp,dct,de);
+}
+
+typedef struct rfcavity{
+ char tag[11];
+ double length;
+ double strength;
+ void(*rfcavity_track)(struct rfcavity *);
+} rfcavity;
+
+void rfcavity_track (rfcavity *rp){
+ double l = rp->length;
+ double q = rp->strength;
+
+ AT = AT + l;
+ printf("   %s:AT:: %+e %+e %+e %+e %+e %+e %+e\n", rp->tag,AT,dx,dxp,dy,dyp,dct,de);
+}

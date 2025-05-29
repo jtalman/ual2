@@ -1,0 +1,174 @@
+!0/2/2024:
+AL94
+
+https://linuxsoft.cern.ch/cern/alma/9/BaseOS/x86_64/os
+
+Custom Operating System
+      Standard
+
+XXX
+ 
+Custom Operating System
+      Standard
+      Legacy UNIX Compatibility
+      Development Tools
+      Graphical Administration Tools
+
+XXX
+
+Custom Operating System
+      Standard
+      Legacy UNIX Compatibility
+      Development Tools
+      Graphical Administration Tools
+      Console Internet Tools
+
+XXX
+
+Workstation (1303 packages)
+      GNOME Applications
+      Office Suite and Productivity
+       
+Login Richard Talman
+
+git clone https://github.com/jtalman/ual1
+
+perl -V
+      perl5.32
+
+su
+
+dnf -y install perl
+dnf -y install tcsh
+
+exit
+
+tcsh
+setenv UAL `pwd`
+source setup-linux-ual
+
+make clean
+make >&! make.log
+      bison not found
+
+su
+
+dnf -y install bison
+
+exit
+
+follow AlmaLinux/minimal...
+      cp AlmaLinux/codes_PAC_src_Templates_PacRbTree.h codes/PAC/src/Templates/PacRbTree.h
+      cp AlmaLinux/tools_sxf_src_sxf_Makefile tools/sxf/src/sxf/Makefile
+       
+make clean
+make >&! make.log
+      clean build
+
+cd perl
+make clean
+make
+./list_libs
+      eleven ".so" files
+      
+_________________________________________________________________________________
+
+10/3/2024
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Workstation (1424 packages)
+( 1) Gnome Applications
+
+( 2) Headless Management
+
+( 3) Office Suite and Productivity
+
+( 4) Legacy UNIX Compatibility
+
+( 5) Console Internet Tools
+
+( 6) Container Management
+
+( 7) Development Tools
+
+( 8) Graphical Administration Tools
+
+( 9) Scientific Support
+
+(10) System Tools
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Workstation (1303 RPM packages)
+      GNOME Applications
+      Office Suite and Productivity
+    
+login root
+perl -v
+      5.32
+dnf -y install bison      XXXXXX
+dnf -y install bison      <<<<----
+dnf -y install emacs
+dnf -y install tcsh
+dnf -y install make
+dnf -y install gcc
+dnf -y install g++
+
+exit
+
+UPDATES!!!   <<<<<<------
+
+login talman
+git clone https://github.com/jtalman/ual1
+cd ual1
+
+~/.tcshrc
+tcsh
+usermod -s /usr/bin/tcsh talman
+power off
+power on
+login talman
+// setenv UAL `pwd`
+// source setup-linux-ual
+setenv
+      ...
+      UAL
+      ...
+      UAL
+      ...
+
+make clean
+cp AlmaLinux/codes_PAC_src_Templates_PacRbTree.h codes/PAC/src/Templates/PacRbTree.h
+cp AlmaLinux/tools_sxf_src_sxf_Makefile tools/sxf/src/sxf/Makefile
+make >&! make.log
+      check make.log
+
+//dnf -y install perl
+//      perl -v
+//            5.32
+//dnf -y install perl-devel
+//      perl -v
+//            5.32
+            
+dnf -y install openmotif
+dnf -y install openmotif-devel 
+
+mkdir ~/xmgrace
+cd xmgrace
+cp /run/media/talman3/STORE\ N\ GO/grace-5.1.22.tar.gz .
+tar xvfz grace-5.1.22.tar.gz
+cd xmgrace
+vi ./src/rstdrv.c +888
+vi ./src/rstdrv.c +1032
+su
+./configure
+make 
+make install
+ll /usr/local/grace/bin/xmgrace
+
+cd $UAL/perl
+follow README
+
+cd $UAL/examples/UI_CLS_SXF
+
+
+

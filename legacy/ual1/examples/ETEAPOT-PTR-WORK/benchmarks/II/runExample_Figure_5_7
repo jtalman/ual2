@@ -1,0 +1,34 @@
+source $UAL/setup-linux-ual
+setenv LD_LIBRARY_PATH $SXF/lib/$SXF_ARCH/:$LD_LIBRARY_PATH
+
+make clean
+
+\cp $UAL/examples/ETEAPOT/*.hh .
+\cp $UAL/examples/ETEAPOT/extractParameters.h .
+\cp $UAL/examples/ETEAPOT/simulatedProbeValues .
+\cp $UAL/examples/ETEAPOT/trtrin .
+
+: \cp $UAL/examples/ETEAPOT/trtrout .
+: \cp ../1/trtrout .
+
+\cp $UAL/examples/ETEAPOT/printProbeValues .
+\cp $UAL/examples/ETEAPOT/data/eteapotMARKER.apdf data/eteapot.apdf
+\cp $UAL/examples/ETEAPOT/userBunch data
+\cp $UAL/examples/ETEAPOT/determineTwiss.cc .
+
+\cp $UAL/examples/ETEAPOT/sip* .
+\cp $UAL/examples/ETEAPOT/probeDataForTwiss .
+\cp $UAL/examples/ETEAPOT/transferMatrices.cc .
+
+make
+
+./determineTwiss  data/PTR_m_nom=0.32349_sl4.sxf  0.32349 11 >! OUT
+
+: VERIFY   <<<<----
+./transferMatrices 0.32349 -5.84572e-10 10.8255 1.24631e-10 23.2658 345>! betaFunctions
+
+: VERIFY   <<<<----
+
+gnuplot
+   load "gnuplot/PTR-II_Figure5_7.gnuplot"
+

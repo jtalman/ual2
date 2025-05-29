@@ -1,0 +1,38 @@
+
+reads the MAD input file ./data/E_pEDM_QyEq0.RF.mad
+start = 1445363284
+end   = 1445363284
+
+writes the SMF data into the FTPOT file 
+
+ start           . 1445363284
+
+ end             . 1445363284
+
+survey 
+start = 1445363284
+end   = 1445363284
+
+twiss 
+start = 1445363284
+end   = 1445363284
+
+analysis
+
+  closed orbit     1445363284
+
+  twiss parameters 1445363284
+
+  end            . 1445363284
+
+make map 
+start = 1445363284
+end   = 1445363284
+
+run 
+start = 1445363284
+
+_revfreq
+ suml                   = 284.707830246079
+ excess circumference   = 8.01958638821786e-14
+ revfreq                = 943289.453346831end   = 1445363284

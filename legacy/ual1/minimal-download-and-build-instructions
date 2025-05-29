@@ -1,0 +1,44 @@
+--------------------------------------------------------------------------------------
+           Scientific Linux!!!
+        (7.9 and possibly lower 7.x)
+
+Scientific Linux:
+           GIT minimal download and build instructions
+
+           Scientific Linux!!!
+--------------------------------------------------------------------------------------
+
+AlmaLinux has it's own, similar, recipe:
+   https://github.com/jtalman/ual1/blob/master/AlmaLinux/minimal-download-and-build-instructions
+
+--------------------------------------------------------------------------------------
+
+You may already have a version of the bits in e.g. directory "~/UAL/ual1" (or something similar)
+If so, rm -rf them, or rename it.
+
+In e.g. directory "~/git-gui2" (or something similar), using SHELL tcsh, execute the following indented commands, one at a time
+
+--------------------------------------------------------------------------------------
+Get Bits:
+      git clone https://github.com/jtalman/ual1
+--------------------------------------------------------------------------------------
+Setup Environment:
+      cd ual1
+      setenv UAL `pwd`
+      source setup-linux-ual
+--------------------------------------------------------------------------------------
+Build:
+      make clean
+      make >&! make.log
+--------------------------------------------------------------------------------------
+Verify:
+      emacs make.log
+              check for errors
+              (hopefully just two unimportant vestigial "html errors" that are ignored by make)
+--------------------------------------------------------------------------------------
+
+Comment:
+      You'll likely fine tune this with familiarity.
+      A personalized ~/.tcshrc for example.
+
+      Online documentation is available. A README is in directory $UAL/doc/

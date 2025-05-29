@@ -1,0 +1,8 @@
+std::cerr << "map\n";
+for(int i=0;i<6;i++){
+ for(int j=0;j<6;j++){
+  std::cerr << map(i,j) << " ";
+ }
+ std::cerr << "\n";
+}
+std::cerr << "\n";

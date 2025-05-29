@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{ifthen}
+\usetikzlibrary{math}
+\usepackage{xfp}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable} % For \pgfplotstableread
+\pgfplotsset{compat=1.18}
+
+\pgfplotstableread[header=true]{design}\design
+\pgfplotstablegetrowsof{\design}
+\pgfmathsetmacro{\O}{\pgfplotsretval}  
+
+\pgfplotstableread[header=false]{simulation}\simulation
+\pgfplotstablegetrowsof{\simulation}
+\pgfmathsetmacro{\N}{\pgfplotsretval}  
+\pgfmathsetmacro{\Nm}{\N-1}  
+
+\pgfplotstableread[header=false]{simulation2}\simulationTWO
+\pgfplotstablegetrowsof{\simulationTWO}
+\pgfmathsetmacro{\M}{\pgfplotsretval}  
+
+\newcommand{\findmax}[3]{
+    \pgfplotstablevertcat{\datatable}{#1}
+    \pgfplotstablecreatecol[
+    create col/expr={%
+    \pgfplotstablerow
+    }]{rownumber}\datatable
+    \pgfplotstablesort[sort key={#2},sort cmp={float >}]{\sorted}{\datatable}%
+    \pgfplotstablegetelem{0}{rownumber}\of{\sorted}%
+    \pgfmathtruncatemacro#3{\pgfplotsretval}
+    \pgfplotstableclear{\datatable}
+}
+
+\begin{document}
+\pgfmathsetmacro{\xmax}{-9999}
+\pgfmathsetmacro{\x}{-9999}
+\pgfmathsetmacro{\D}{-9999}
+\begin{tikzpicture}
+\begin{axis}[axis equal,axis lines=none]
+ \addplot [black,mark=o,           mark size=0.75pt] table  {\design};
+ \addplot+[red,  mark=*,only marks,mark size=0.5pt]  table  {\simulation};
+ \addplot+[green,mark=*,only marks,mark size=0.5pt]  table  {\simulationTWO};
+ \pgfplotstablegetelem{0}{0}\of\simulation
+ \let\x=\pgfplotsretval
+ \pgfplotstablegetelem{0}{1}\of\simulation
+ \let\y=\pgfplotsretval
+ \node[draw,red] (H) at (\x,\y) {};
+ \node[draw,white] (H) at (-\x,\y) {};
+\end{axis}
+\foreach \row in {0,1,...,\Nm}{
+ \pgfplotstablegetelem{\row}{0}\of\simulation
+ \pgfmathsetmacro{\x}{\pgfplotsretval}%
+ \edef\D{\fpeval{\x-\xmax}}; 
+ \ifdim \D pt > 0 pt{
+  \let\xmax pt{\x pt};
+  \global\let\xmax = \x
+ }
+ \fi
+}
+ 
+\end{tikzpicture}
+
+ xmax \xmax
+\end{document}

@@ -1,0 +1,59 @@
+#include <time.h>
+#include "Zlib/ZMap.hh"
+
+main()
+{
+ ZLIB_ORDER = 3;
+ ZLIB_DIM   = 4;
+
+// Zseries
+ 
+ ZSeries u, v;
+ 
+ u = u(ZLIB_ORDER);
+ int i;
+ for(i=1; i <= ZSeriesSize(u); i++) 
+          u[i] = i;
+ v = u;
+
+// Inversion
+
+ ofstream IFile("AInversion"); 
+ IFile << 1/u(3);
+ IFile.close();
+
+// Maps
+
+ ZMap uu, vv, ww;
+
+ uu = uu(ZLIB_ORDER);
+ int sizeM = ZMapSize(uu)/ZLIB_DIM;
+ for(i=1; i <= ZLIB_DIM; i++)
+    for(int j=1; j <= sizeM; j++)
+            uu[i][j] = j+2*(i-1);
+ vv = uu;
+
+// Multiplication
+
+ time_t now;
+ now = time(NULL); printf("%s\n", ctime(&now));
+ for(i=1; i <= 10; i++) ww = uu * vv;
+ now = time(NULL); printf("%s\n", ctime(&now));
+ 
+ ofstream MFile("AMultiplication"); 
+ MFile << uu * vv;
+ MFile.close();
+
+// Tracking
+
+Particle x, y;
+for(i = 1; i <= ZLIB_DIM; i++)
+   x[i] =0.01*i;
+
+   y = uu(3) * x; 
+
+ ofstream TFile("ATracking"); 
+ TFile << y;
+ TFile.close();
+ exit(1);
+}

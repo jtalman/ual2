@@ -1,0 +1,36 @@
+[Breakpoint 0]
+Enabled=true
+File=run.cc
+Line=23
+Temporary=false
+
+[Breakpoint 1]
+Enabled=true
+File=ElementHandler.cc
+Line=26
+Temporary=false
+
+[Breakpoint 2]
+Enabled=true
+File=ElementsWriter.cc
+Line=48
+Temporary=false
+
+[Breakpoint 3]
+Enabled=true
+File=handlers/RfCavityHandler.cc
+Line=28
+Temporary=false
+
+[General]
+DebuggerCmdStr=
+DriverName=GDB
+FileVersion=1
+OptionsSelected=
+ProgramArgs=ring /home/ualusr2007/USPAS/examples/lattices/general_fodo-rf.adxf /home/ualusr2007/USPAS/examples/transverse/apdf/teapot.apdf
+TTYLevel=7
+WorkingDirectory=
+
+[Memory]
+ColumnWidths=80,0
+NumExprs=0

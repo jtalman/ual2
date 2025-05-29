@@ -1,0 +1,12 @@
+//PAC::BeamAttributes std::cerr << "" << ba;
+
+std::cerr << "energy "    << ba.getEnergy   () << "\n";
+std::cerr << "mass "      << ba.getMass     () << "\n";;
+std::cerr << "charge "    << ba.getCharge   () << "\n";;
+std::cerr << "macrosize " << ba.getMacrosize() << "\n";;
+std::cerr << "L "         << ba.getL        () << "\n";;
+std::cerr << "E "         << ba.getE        () << "\n";;
+std::cerr << "R "         << ba.getR        () << "\n";;
+std::cerr << "F "         << ba.getRevfreq  () << "\n";;
+std::cerr << "G "         << ba.getG        () << "\n";;
+std::cerr << "g "         << ba.get_g       () << "\n";;

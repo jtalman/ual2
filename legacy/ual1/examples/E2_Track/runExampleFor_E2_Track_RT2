@@ -1,0 +1,59 @@
+: MAIN SERVER SIDE COMPILE:
+pushd $UAL/codes/ETEAPOT2
+ll lib/linux
+make clean
+ll lib/linux
+make
+ll lib/linux
+popd
+
+: MAIN CLIENT SIDE COMPILE:
+\cp $UAL/examples/E2_Track/Makefile_production $UAL/examples/E2_Track/Makefile
+\cp userManifest/userBunch_RT userManifest/userBunch
+make clean
+make
+
+./E2_Track ./sxf/E_BM_M1.0.RF.sxf 5.4142678e+05 -1 0 200 0.02 1 > ! /dev/null
+
+perl perl/SplitNikolayOut.pl NikolayOut >! IG
+
+gnuplot
+        l 'gnuplot/forGnuplot_Figure2-mod'
+
+--------------------------------------------------------
+# 28 Oct.2015, Nonlinear Trap E_pEDM_QyEq0.oct.RF.sxf
+#  f_0 = 3e8*0.6/281.427 = 0.6396 MHz
+\cp userManifest/userBunch_NonlinearTrap userManifest/userBunch
+
+make clean
+make
+
+# ./E2_Track ./sxf/E_pEDM_QyEq0.oct.RF.sxf 0.6396e6 -1 0 1024 0.02 1 > ! /dev/null
+# ./E2_Track ./sxf/E_pEDM_QyEq0.oct.RF.sxf 0.6396e6 -0.0151 0 1024 0.02 1 > ! /dev/null
+./E2_Track ./sxf/E_pEDM_QyEq0.oct.RF.sxf 0.6396e6 -0.01 0 1024 0.02 1 > ! /dev/null
+
+perl perl/SplitNikolayOut.pl NikolayOut >! IG
+cp IG IG-smsm
+
+gnuplot
+        l 'gnuplot/forGnuplot_Figure2-mod'
+
+perl perl/IGtoFort.8.pl IG-smsm >! out/fort-smsm.8
+pushd ./out
+     ln -s fort-smsm.8 fort.8
+popd
+
+xmgrace -noask -b perl/xyzfft.com
+
+make clean
+make
+./E2_Track ./sxf/E_pEDM_QyEq0.oct.RF.sxf 0.6396e6 -0.0151 0 8192 0.02 1 > ! /dev/null
+perl perl/SplitNikolayOut.pl NikolayOut >! IG
+cp IG IG-big
+
+perl perl/IGtoFort.8.pl IG-big >! out/fort-big.8
+
+pushd ./out
+     ln -s fort-med.8 fort.8
+popd
+xmgrace -noask -b perl/xyzfft.com

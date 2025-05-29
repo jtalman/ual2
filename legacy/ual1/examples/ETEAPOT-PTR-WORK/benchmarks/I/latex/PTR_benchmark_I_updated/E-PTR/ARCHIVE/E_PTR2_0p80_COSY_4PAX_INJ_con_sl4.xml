@@ -1,0 +1,60 @@
+<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:saxon="http://icl.com/saxon"
+    xmlns:math="http://exslt.org/math" extension-element-prefixes="saxon math">
+    <xsl:variable name="pi" select="3.14159265359"/>
+    <xsl:variable name="twopi" select="2*$pi"/>
+    <xsl:variable name="tiny" select="0.0000000001"/>
+    <xsl:variable name="mcsq" select="0.93827231"/>
+    <xsl:variable name="G" select="1.7928474"/>
+    <xsl:variable name="c" select="299792458.0"/>
+    <xsl:variable name="g" select="2*$G + 2"/>
+    <xsl:variable name="R_NOMINAL" select="16.353"/>
+    <xsl:variable name="L_LONG_STRAIGHT" select="0.57*$R_NOMINAL"/>
+    <xsl:variable name="N_SUPER" select="4"/>
+    <xsl:variable name="M_NOMINAL" select="0.002"/>
+    <xsl:variable name="TWEAK_LENGTHS" select="1.0"/>
+    <xsl:variable name="K0" select="0.030"/>
+    <xsl:variable name="Escr0" select="$mcsq + $K0"/>
+    <xsl:variable name="gamma0" select="$Escr0 div $mcsq"/>
+    <xsl:variable name="p0c" select="math:sqrt($Escr0*$Escr0 - $mcsq*$mcsq)"/>
+    <xsl:variable name="beta0" select="$p0c div $Escr0"/>  
+    <xsl:variable name="m_in" select="4*$M_NOMINAL div $N_SUPER"/>
+    <xsl:variable name="Nsl" select="4"/>
+    <xsl:variable name="thetah" select="$pi div $N_SUPER div 2"/>
+    <xsl:variable name="thetahsl" select="$pi div $N_SUPER div 2 div $Nsl"/>
+
+    <xsl:variable name="etaE" select="1.0"/>
+    <xsl:variable name="etaM" select="(1.0-$etaE)"/>
+    <xsl:variable name="r0" select="$R_NOMINAL*$TWEAK_LENGTHS"/>
+    <xsl:variable name="leh" select="$thetah*$r0"/>
+    <xsl:variable name="lehsl" select="$thetah*$r0 div $Nsl"/>
+
+    <xsl:variable name="lss" select="1.0*$TWEAK_LENGTHS"/>
+    <xsl:variable name="lssh" select="$lss div 2"/>
+    <xsl:variable name="lssq" select="$lss div 4"/>
+    <xsl:variable name="llstot" select="$L_LONG_STRAIGHT*$TWEAK_LENGTHS"/>
+    <xsl:variable name="llsh" select="($llstot - $lss) div 2"/>
+    <xsl:variable name="llshsl" select="($llstot - $lss) div 2 div 4"/>
+    <xsl:variable name="lq" select="$lss div 4"/>
+    <xsl:variable name="lqh" select="$lq div 2"/>
+    <xsl:variable name="qFh" select="-0.00611"/>
+    <xsl:variable name="qDh" select=" 0.00611"/>
+    <xsl:variable name="gross_diam" select="2*$r0 + $llstot + 1.4142*$lss"/>
+    <xsl:variable name="totalstraight" select="$N_SUPER*($llstot + $lss)"/>
+    <xsl:variable name="circumference" select="2*$pi*$r0 + $totalstraight"/>
+    <xsl:variable name="COSY_circ" select="183.472697"/>
+    <xsl:variable name="ratio" select="$circumference div $COSY_circ"/>
+    <xsl:variable name="gBy2" select="0.035"/>
+    <xsl:variable name="rfvolt" select="0.000001"/>
+    <xsl:variable name="rfharmon" select="1"/>
+    <xsl:variable name="rflag" select="0.5"/>
+    <xsl:variable name="Trev0" select="$circumference div $beta0 div $c"/>
+
+    <xsl:variable name="qfac" select="1.0"/>
+    <xsl:variable name="lqir" select="0.419"/>
+    <xsl:variable name="lir1" select="0.5605"/>
+    <xsl:variable name="lir2" select="0.111"/>
+    <xsl:variable name="lir3" select="2.9011"/>
+    <xsl:variable name="qir1" select="0.0001*$qfac"/>
+    <xsl:variable name="qir2" select="-0.0001*$qfac"/>
+</xsl:transform>

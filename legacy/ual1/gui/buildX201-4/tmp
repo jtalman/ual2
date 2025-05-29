@@ -1,0 +1,282 @@
+make[3]: Entering directory `/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/plugins/src/imageformats/jpeg'
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/main.o main.cpp
+In file included from ../../../../src/kernel/qjpegio.cpp:42:0,
+                 from main.cpp:11:
+../../../../src/kernel/qimage.h: In member function ‘bool QImageTextKeyLang::operator<(const QImageTextKeyLang&) const’:
+../../../../src/kernel/qimage.h:58:45: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  { return key < other.key || key==other.key && lang < other.lang; }
+                                             ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jcapimin.o ../../../../src/3rdparty/libjpeg/jcapimin.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jcapistd.o ../../../../src/3rdparty/libjpeg/jcapistd.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jccoefct.o ../../../../src/3rdparty/libjpeg/jccoefct.c
+../../../../src/3rdparty/libjpeg/jccoefct.c: In function ‘compress_output’:
+../../../../src/3rdparty/libjpeg/jccoefct.c:341:51: warning: unused parameter ‘input_buf’ [-Wunused-parameter]
+ compress_output (j_compress_ptr cinfo, JSAMPIMAGE input_buf)
+                                                   ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jccolor.o ../../../../src/3rdparty/libjpeg/jccolor.c
+../../../../src/3rdparty/libjpeg/jccolor.c: In function ‘null_method’:
+../../../../src/3rdparty/libjpeg/jccolor.c:341:29: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ null_method (j_compress_ptr cinfo)
+                             ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jcdctmgr.o ../../../../src/3rdparty/libjpeg/jcdctmgr.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jchuff.o ../../../../src/3rdparty/libjpeg/jchuff.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jcinit.o ../../../../src/3rdparty/libjpeg/jcinit.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jcmainct.o ../../../../src/3rdparty/libjpeg/jcmainct.c
+../../../../src/3rdparty/libjpeg/jcmainct.c: In function ‘start_pass_main’:
+../../../../src/3rdparty/libjpeg/jcmainct.c:71:15: warning: ‘main’ is usually a function [-Wmain]
+   my_main_ptr main = (my_main_ptr) cinfo->main;
+               ^
+../../../../src/3rdparty/libjpeg/jcmainct.c: In function ‘process_data_simple_main’:
+../../../../src/3rdparty/libjpeg/jcmainct.c:117:15: warning: ‘main’ is usually a function [-Wmain]
+   my_main_ptr main = (my_main_ptr) cinfo->main;
+               ^
+../../../../src/3rdparty/libjpeg/jcmainct.c: In function ‘jinit_c_main_controller’:
+../../../../src/3rdparty/libjpeg/jcmainct.c:247:15: warning: ‘main’ is usually a function [-Wmain]
+   my_main_ptr main;
+               ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jcmarker.o ../../../../src/3rdparty/libjpeg/jcmarker.c
+../../../../src/3rdparty/libjpeg/jcmarker.c: In function ‘emit_dac’:
+../../../../src/3rdparty/libjpeg/jcmarker.c:222:26: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ emit_dac (j_compress_ptr cinfo)
+                          ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jcmaster.o ../../../../src/3rdparty/libjpeg/jcmaster.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jcomapi.o ../../../../src/3rdparty/libjpeg/jcomapi.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jcparam.o ../../../../src/3rdparty/libjpeg/jcparam.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jcphuff.o ../../../../src/3rdparty/libjpeg/jcphuff.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jcprepct.o ../../../../src/3rdparty/libjpeg/jcprepct.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jcsample.o ../../../../src/3rdparty/libjpeg/jcsample.c
+../../../../src/3rdparty/libjpeg/jcsample.c: In function ‘start_pass_downsample’:
+../../../../src/3rdparty/libjpeg/jcsample.c:75:39: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ start_pass_downsample (j_compress_ptr cinfo)
+                                       ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jctrans.o ../../../../src/3rdparty/libjpeg/jctrans.c
+../../../../src/3rdparty/libjpeg/jctrans.c: In function ‘compress_output’:
+../../../../src/3rdparty/libjpeg/jctrans.c:278:51: warning: unused parameter ‘input_buf’ [-Wunused-parameter]
+ compress_output (j_compress_ptr cinfo, JSAMPIMAGE input_buf)
+                                                   ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdapimin.o ../../../../src/3rdparty/libjpeg/jdapimin.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdapistd.o ../../../../src/3rdparty/libjpeg/jdapistd.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdatadst.o ../../../../src/3rdparty/libjpeg/jdatadst.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdatasrc.o ../../../../src/3rdparty/libjpeg/jdatasrc.c
+../../../../src/3rdparty/libjpeg/jdatasrc.c: In function ‘term_source’:
+../../../../src/3rdparty/libjpeg/jdatasrc.c:169:31: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ term_source (j_decompress_ptr cinfo)
+                               ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdcoefct.o ../../../../src/3rdparty/libjpeg/jdcoefct.c
+../../../../src/3rdparty/libjpeg/jdcoefct.c: In function ‘dummy_consume_data’:
+../../../../src/3rdparty/libjpeg/jdcoefct.c:228:38: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ dummy_consume_data (j_decompress_ptr cinfo)
+                                      ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdcolor.o ../../../../src/3rdparty/libjpeg/jdcolor.c
+../../../../src/3rdparty/libjpeg/jdcolor.c: In function ‘start_pass_dcolor’:
+../../../../src/3rdparty/libjpeg/jdcolor.c:293:37: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ start_pass_dcolor (j_decompress_ptr cinfo)
+                                     ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jddctmgr.o ../../../../src/3rdparty/libjpeg/jddctmgr.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdhuff.o ../../../../src/3rdparty/libjpeg/jdhuff.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdinput.o ../../../../src/3rdparty/libjpeg/jdinput.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdmainct.o ../../../../src/3rdparty/libjpeg/jdmainct.c
+../../../../src/3rdparty/libjpeg/jdmainct.c: In function ‘alloc_funny_pointers’:
+../../../../src/3rdparty/libjpeg/jdmainct.c:162:15: warning: ‘main’ is usually a function [-Wmain]
+   my_main_ptr main = (my_main_ptr) cinfo->main;
+               ^
+../../../../src/3rdparty/libjpeg/jdmainct.c: In function ‘make_funny_pointers’:
+../../../../src/3rdparty/libjpeg/jdmainct.c:203:15: warning: ‘main’ is usually a function [-Wmain]
+   my_main_ptr main = (my_main_ptr) cinfo->main;
+               ^
+../../../../src/3rdparty/libjpeg/jdmainct.c: In function ‘set_wraparound_pointers’:
+../../../../src/3rdparty/libjpeg/jdmainct.c:243:15: warning: ‘main’ is usually a function [-Wmain]
+   my_main_ptr main = (my_main_ptr) cinfo->main;
+               ^
+../../../../src/3rdparty/libjpeg/jdmainct.c: In function ‘set_bottom_pointers’:
+../../../../src/3rdparty/libjpeg/jdmainct.c:272:15: warning: ‘main’ is usually a function [-Wmain]
+   my_main_ptr main = (my_main_ptr) cinfo->main;
+               ^
+../../../../src/3rdparty/libjpeg/jdmainct.c: In function ‘start_pass_main’:
+../../../../src/3rdparty/libjpeg/jdmainct.c:309:15: warning: ‘main’ is usually a function [-Wmain]
+   my_main_ptr main = (my_main_ptr) cinfo->main;
+               ^
+../../../../src/3rdparty/libjpeg/jdmainct.c: In function ‘process_data_simple_main’:
+../../../../src/3rdparty/libjpeg/jdmainct.c:349:15: warning: ‘main’ is usually a function [-Wmain]
+   my_main_ptr main = (my_main_ptr) cinfo->main;
+               ^
+../../../../src/3rdparty/libjpeg/jdmainct.c: In function ‘process_data_context_main’:
+../../../../src/3rdparty/libjpeg/jdmainct.c:389:15: warning: ‘main’ is usually a function [-Wmain]
+   my_main_ptr main = (my_main_ptr) cinfo->main;
+               ^
+../../../../src/3rdparty/libjpeg/jdmainct.c: In function ‘jinit_d_main_controller’:
+../../../../src/3rdparty/libjpeg/jdmainct.c:478:15: warning: ‘main’ is usually a function [-Wmain]
+   my_main_ptr main;
+               ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdmarker.o ../../../../src/3rdparty/libjpeg/jdmarker.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdmaster.o ../../../../src/3rdparty/libjpeg/jdmaster.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdmerge.o ../../../../src/3rdparty/libjpeg/jdmerge.c
+../../../../src/3rdparty/libjpeg/jdmerge.c: In function ‘merged_2v_upsample’:
+../../../../src/3rdparty/libjpeg/jdmerge.c:146:18: warning: unused parameter ‘in_row_groups_avail’ [-Wunused-parameter]
+       JDIMENSION in_row_groups_avail,
+                  ^
+../../../../src/3rdparty/libjpeg/jdmerge.c: In function ‘merged_1v_upsample’:
+../../../../src/3rdparty/libjpeg/jdmerge.c:195:18: warning: unused parameter ‘in_row_groups_avail’ [-Wunused-parameter]
+       JDIMENSION in_row_groups_avail,
+                  ^
+../../../../src/3rdparty/libjpeg/jdmerge.c:197:18: warning: unused parameter ‘out_rows_avail’ [-Wunused-parameter]
+       JDIMENSION out_rows_avail)
+                  ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdphuff.o ../../../../src/3rdparty/libjpeg/jdphuff.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdpostct.o ../../../../src/3rdparty/libjpeg/jdpostct.c
+../../../../src/3rdparty/libjpeg/jdpostct.c: In function ‘post_process_prepass’:
+../../../../src/3rdparty/libjpeg/jdpostct.c:161:20: warning: unused parameter ‘output_buf’ [-Wunused-parameter]
+         JSAMPARRAY output_buf, JDIMENSION *out_row_ctr,
+                    ^
+../../../../src/3rdparty/libjpeg/jdpostct.c:162:20: warning: unused parameter ‘out_rows_avail’ [-Wunused-parameter]
+         JDIMENSION out_rows_avail)
+                    ^
+../../../../src/3rdparty/libjpeg/jdpostct.c: In function ‘post_process_2pass’:
+../../../../src/3rdparty/libjpeg/jdpostct.c:203:18: warning: unused parameter ‘input_buf’ [-Wunused-parameter]
+       JSAMPIMAGE input_buf, JDIMENSION *in_row_group_ctr,
+                  ^
+../../../../src/3rdparty/libjpeg/jdpostct.c:203:41: warning: unused parameter ‘in_row_group_ctr’ [-Wunused-parameter]
+       JSAMPIMAGE input_buf, JDIMENSION *in_row_group_ctr,
+                                         ^
+../../../../src/3rdparty/libjpeg/jdpostct.c:204:18: warning: unused parameter ‘in_row_groups_avail’ [-Wunused-parameter]
+       JDIMENSION in_row_groups_avail,
+                  ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdsample.o ../../../../src/3rdparty/libjpeg/jdsample.c
+../../../../src/3rdparty/libjpeg/jdsample.c: In function ‘sep_upsample’:
+../../../../src/3rdparty/libjpeg/jdsample.c:91:19: warning: unused parameter ‘in_row_groups_avail’ [-Wunused-parameter]
+        JDIMENSION in_row_groups_avail,
+                   ^
+../../../../src/3rdparty/libjpeg/jdsample.c: In function ‘fullsize_upsample’:
+../../../../src/3rdparty/libjpeg/jdsample.c:157:37: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ fullsize_upsample (j_decompress_ptr cinfo, jpeg_component_info * compptr,
+                                     ^
+../../../../src/3rdparty/libjpeg/jdsample.c:157:66: warning: unused parameter ‘compptr’ [-Wunused-parameter]
+ fullsize_upsample (j_decompress_ptr cinfo, jpeg_component_info * compptr,
+                                                                  ^
+../../../../src/3rdparty/libjpeg/jdsample.c: In function ‘noop_upsample’:
+../../../../src/3rdparty/libjpeg/jdsample.c:170:33: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ noop_upsample (j_decompress_ptr cinfo, jpeg_component_info * compptr,
+                                 ^
+../../../../src/3rdparty/libjpeg/jdsample.c:170:62: warning: unused parameter ‘compptr’ [-Wunused-parameter]
+ noop_upsample (j_decompress_ptr cinfo, jpeg_component_info * compptr,
+                                                              ^
+../../../../src/3rdparty/libjpeg/jdsample.c:171:20: warning: unused parameter ‘input_data’ [-Wunused-parameter]
+         JSAMPARRAY input_data, JSAMPARRAY * output_data_ptr)
+                    ^
+../../../../src/3rdparty/libjpeg/jdsample.c: In function ‘h2v1_upsample’:
+../../../../src/3rdparty/libjpeg/jdsample.c:233:62: warning: unused parameter ‘compptr’ [-Wunused-parameter]
+ h2v1_upsample (j_decompress_ptr cinfo, jpeg_component_info * compptr,
+                                                              ^
+../../../../src/3rdparty/libjpeg/jdsample.c: In function ‘h2v2_upsample’:
+../../../../src/3rdparty/libjpeg/jdsample.c:261:62: warning: unused parameter ‘compptr’ [-Wunused-parameter]
+ h2v2_upsample (j_decompress_ptr cinfo, jpeg_component_info * compptr,
+                                                              ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jdtrans.o ../../../../src/3rdparty/libjpeg/jdtrans.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jerror.o ../../../../src/3rdparty/libjpeg/jerror.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jfdctflt.o ../../../../src/3rdparty/libjpeg/jfdctflt.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jfdctfst.o ../../../../src/3rdparty/libjpeg/jfdctfst.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jfdctint.o ../../../../src/3rdparty/libjpeg/jfdctint.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jidctflt.o ../../../../src/3rdparty/libjpeg/jidctflt.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jidctfst.o ../../../../src/3rdparty/libjpeg/jidctfst.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jidctint.o ../../../../src/3rdparty/libjpeg/jidctint.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jidctred.o ../../../../src/3rdparty/libjpeg/jidctred.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jmemmgr.o ../../../../src/3rdparty/libjpeg/jmemmgr.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jquant1.o ../../../../src/3rdparty/libjpeg/jquant1.c
+../../../../src/3rdparty/libjpeg/jquant1.c: In function ‘output_value’:
+../../../../src/3rdparty/libjpeg/jquant1.c:245:32: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ output_value (j_decompress_ptr cinfo, int ci, int j, int maxj)
+                                ^
+../../../../src/3rdparty/libjpeg/jquant1.c:245:43: warning: unused parameter ‘ci’ [-Wunused-parameter]
+ output_value (j_decompress_ptr cinfo, int ci, int j, int maxj)
+                                           ^
+../../../../src/3rdparty/libjpeg/jquant1.c: In function ‘largest_input_value’:
+../../../../src/3rdparty/libjpeg/jquant1.c:259:39: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ largest_input_value (j_decompress_ptr cinfo, int ci, int j, int maxj)
+                                       ^
+../../../../src/3rdparty/libjpeg/jquant1.c:259:50: warning: unused parameter ‘ci’ [-Wunused-parameter]
+ largest_input_value (j_decompress_ptr cinfo, int ci, int j, int maxj)
+                                                  ^
+../../../../src/3rdparty/libjpeg/jquant1.c: In function ‘start_pass_1_quant’:
+../../../../src/3rdparty/libjpeg/jquant1.c:741:53: warning: unused parameter ‘is_pre_scan’ [-Wunused-parameter]
+ start_pass_1_quant (j_decompress_ptr cinfo, boolean is_pre_scan)
+                                                     ^
+../../../../src/3rdparty/libjpeg/jquant1.c: In function ‘finish_pass_1_quant’:
+../../../../src/3rdparty/libjpeg/jquant1.c:798:39: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ finish_pass_1_quant (j_decompress_ptr cinfo)
+                                       ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jquant2.o ../../../../src/3rdparty/libjpeg/jquant2.c
+../../../../src/3rdparty/libjpeg/jquant2.c: In function ‘prescan_quantize’:
+../../../../src/3rdparty/libjpeg/jquant2.c:225:16: warning: unused parameter ‘output_buf’ [-Wunused-parameter]
+     JSAMPARRAY output_buf, int num_rows)
+                ^
+../../../../src/3rdparty/libjpeg/jquant2.c: In function ‘finish_pass2’:
+../../../../src/3rdparty/libjpeg/jquant2.c:1156:32: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ finish_pass2 (j_decompress_ptr cinfo)
+                                ^
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jutils.o ../../../../src/3rdparty/libjpeg/jutils.c
+gcc -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT -fPIC  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_PLUGIN -DQT_SHARED -I/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/mkspecs/linux-g++ -I. -I../../../../src/3rdparty/libjpeg -I../../../../include -I.moc/release-shared-mt/ -o .obj/release-shared-mt/jmemnobs.o ../../../../src/3rdparty/libjpeg/jmemnobs.c
+../../../../src/3rdparty/libjpeg/jmemnobs.c: In function ‘jpeg_get_small’:
+../../../../src/3rdparty/libjpeg/jmemnobs.c:35:30: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ jpeg_get_small (j_common_ptr cinfo, size_t sizeofobject)
+                              ^
+../../../../src/3rdparty/libjpeg/jmemnobs.c: In function ‘jpeg_free_small’:
+../../../../src/3rdparty/libjpeg/jmemnobs.c:41:31: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ jpeg_free_small (j_common_ptr cinfo, void * object, size_t sizeofobject)
+                               ^
+../../../../src/3rdparty/libjpeg/jmemnobs.c:41:60: warning: unused parameter ‘sizeofobject’ [-Wunused-parameter]
+ jpeg_free_small (j_common_ptr cinfo, void * object, size_t sizeofobject)
+                                                            ^
+../../../../src/3rdparty/libjpeg/jmemnobs.c: In function ‘jpeg_get_large’:
+../../../../src/3rdparty/libjpeg/jmemnobs.c:55:30: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ jpeg_get_large (j_common_ptr cinfo, size_t sizeofobject)
+                              ^
+../../../../src/3rdparty/libjpeg/jmemnobs.c: In function ‘jpeg_free_large’:
+../../../../src/3rdparty/libjpeg/jmemnobs.c:61:31: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ jpeg_free_large (j_common_ptr cinfo, void FAR * object, size_t sizeofobject)
+                               ^
+../../../../src/3rdparty/libjpeg/jmemnobs.c:61:64: warning: unused parameter ‘sizeofobject’ [-Wunused-parameter]
+ jpeg_free_large (j_common_ptr cinfo, void FAR * object, size_t sizeofobject)
+                                                                ^
+../../../../src/3rdparty/libjpeg/jmemnobs.c: In function ‘jpeg_mem_available’:
+../../../../src/3rdparty/libjpeg/jmemnobs.c:73:34: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ jpeg_mem_available (j_common_ptr cinfo, long min_bytes_needed,
+                                  ^
+../../../../src/3rdparty/libjpeg/jmemnobs.c:73:46: warning: unused parameter ‘min_bytes_needed’ [-Wunused-parameter]
+ jpeg_mem_available (j_common_ptr cinfo, long min_bytes_needed,
+                                              ^
+../../../../src/3rdparty/libjpeg/jmemnobs.c:74:35: warning: unused parameter ‘already_allocated’ [-Wunused-parameter]
+       long max_bytes_needed, long already_allocated)
+                                   ^
+../../../../src/3rdparty/libjpeg/jmemnobs.c: In function ‘jpeg_open_backing_store’:
+../../../../src/3rdparty/libjpeg/jmemnobs.c:87:64: warning: unused parameter ‘info’ [-Wunused-parameter]
+ jpeg_open_backing_store (j_common_ptr cinfo, backing_store_ptr info,
+                                                                ^
+../../../../src/3rdparty/libjpeg/jmemnobs.c:88:10: warning: unused parameter ‘total_bytes_needed’ [-Wunused-parameter]
+     long total_bytes_needed)
+          ^
+../../../../src/3rdparty/libjpeg/jmemnobs.c: In function ‘jpeg_mem_init’:
+../../../../src/3rdparty/libjpeg/jmemnobs.c:100:29: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ jpeg_mem_init (j_common_ptr cinfo)
+                             ^
+../../../../src/3rdparty/libjpeg/jmemnobs.c: In function ‘jpeg_mem_term’:
+../../../../src/3rdparty/libjpeg/jmemnobs.c:106:29: warning: unused parameter ‘cinfo’ [-Wunused-parameter]
+ jpeg_mem_term (j_common_ptr cinfo)
+                             ^
+test -d ../../../imageformats/ || mkdir -p ../../../imageformats/
+rm -f libqjpeg.so
+g++ -fno-exceptions  -Wl,-rpath,/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib -shared -Wl,-rpath,/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/plugins/imageformats -o libqjpeg.so .obj/release-shared-mt/main.o .obj/release-shared-mt/jcapimin.o .obj/release-shared-mt/jcapistd.o .obj/release-shared-mt/jccoefct.o .obj/release-shared-mt/jccolor.o .obj/release-shared-mt/jcdctmgr.o .obj/release-shared-mt/jchuff.o .obj/release-shared-mt/jcinit.o .obj/release-shared-mt/jcmainct.o .obj/release-shared-mt/jcmarker.o .obj/release-shared-mt/jcmaster.o .obj/release-shared-mt/jcomapi.o .obj/release-shared-mt/jcparam.o .obj/release-shared-mt/jcphuff.o .obj/release-shared-mt/jcprepct.o .obj/release-shared-mt/jcsample.o .obj/release-shared-mt/jctrans.o .obj/release-shared-mt/jdapimin.o .obj/release-shared-mt/jdapistd.o .obj/release-shared-mt/jdatadst.o .obj/release-shared-mt/jdatasrc.o .obj/release-shared-mt/jdcoefct.o .obj/release-shared-mt/jdcolor.o .obj/release-shared-mt/jddctmgr.o .obj/release-shared-mt/jdhuff.o .obj/release-shared-mt/jdinput.o .obj/release-shared-mt/jdmainct.o .obj/release-shared-mt/jdmarker.o .obj/release-shared-mt/jdmaster.o .obj/release-shared-mt/jdmerge.o .obj/release-shared-mt/jdphuff.o .obj/release-shared-mt/jdpostct.o .obj/release-shared-mt/jdsample.o .obj/release-shared-mt/jdtrans.o .obj/release-shared-mt/jerror.o .obj/release-shared-mt/jfdctflt.o .obj/release-shared-mt/jfdctfst.o .obj/release-shared-mt/jfdctint.o .obj/release-shared-mt/jidctflt.o .obj/release-shared-mt/jidctfst.o .obj/release-shared-mt/jidctint.o .obj/release-shared-mt/jidctred.o .obj/release-shared-mt/jmemmgr.o .obj/release-shared-mt/jquant1.o .obj/release-shared-mt/jquant2.o .obj/release-shared-mt/jutils.o .obj/release-shared-mt/jmemnobs.o   -L/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib -L/usr/X11R6/lib -lqt-mt -lXext -lX11 -lm -ldl -lpthread 
+/usr/bin/ld: cannot find -lXext
+collect2: error: ld returned 1 exit status
+make[3]: *** [../../../imageformats/libqjpeg.so] Error 1
+make[3]: Leaving directory `/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/plugins/src/imageformats/jpeg'
+make[2]: *** [sub-jpeg] Error 2
+make[2]: Leaving directory `/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/plugins/src/imageformats'
+make[1]: *** [sub-imageformats] Error 2
+make[1]: Leaving directory `/home/ualusr2011/git-gui/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/plugins/src'
+make: *** [sub-plugins] Error 2
+finish make all
+9584880:lib/libqt-mt.so.3.3.4:2021-05-03 16:35:43.411159868 -0400
+9590800
+~/git-gui/ual1/gui/build
+[ualusr2011@x201-4 build]$ 
+

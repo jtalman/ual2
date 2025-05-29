@@ -1,0 +1,33 @@
+bh       : sbend      , l = 15.70796326795, angle = 0.39269908169875
+marcin   : marker     
+marcout  : marker     
+mbegin   : marker     
+mend     : marker     
+mhalf    : marker     
+mslndcent : marker     
+qah      : quadrupole , l = 0.483333333333333, k1 = 9.9e-06
+qbh      : quadrupole , l = 0.483333333333333, k1 = -1e-05
+qch      : quadrupole , l = 0.483333333333333, k1 = 9.9e-06
+rf1      : rfcavity   , l = 1e-10, volt = 5e-07, freq = 100
+sa       : sextupole  , l = 0.483333333333333, k2 = 1e-07
+sb       : sextupole  , l = 0.483333333333333, k2 = 1e-07
+sc       : sextupole  , l = 0.483333333333333, k2 = 1e-07
+slndh    : drift      , l = 0.725
+strh     : drift      , l = 1
+
+
+ring : line = ( & 
+  mbegin  , rf1     , strh    , marcin  , qch     , sc       & 
+, qch     , bh      , qbh     , sb      , qbh     , bh       & 
+, qah     , sa      , qah     , bh      , qbh     , sb       & 
+, qbh     , bh      , slndh   , mslndcent, slndh   , bh       & 
+, qbh     , sb      , qbh     , bh      , qah     , sa       & 
+, qah     , bh      , qbh     , sb      , qbh     , bh       & 
+, qch     , sc      , qch     , marcout , strh    , mhalf    & 
+, strh    , marcin  , qch     , sc      , qch     , bh       & 
+, qbh     , sb      , qbh     , bh      , qah     , sa       & 
+, qah     , bh      , qbh     , sb      , qbh     , bh       & 
+, slndh   , mslndcent, slndh   , bh      , qbh     , sb       & 
+, qbh     , bh      , qah     , sa      , qah     , bh       & 
+, qbh     , sb      , qbh     , bh      , qch     , sc       & 
+, qch     , marcout , strh    , mend    ) 

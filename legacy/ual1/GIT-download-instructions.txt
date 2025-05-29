@@ -1,0 +1,41 @@
+GIT download instructions
+----------------------------------
+
+You may already have "~/UAL/ual1" (or similar)
+If so, rm -rf it, or rename it.
+
+VERIFY new UAL
+In "~/UAL" (or similar) type the following, one line at a time (without the - )
+--------------------------------------------------------------------------------------
+      - git clone https://github.com/jtalman/ual1
+---------------------
+      - cd ual1
+      - setenv UAL `pwd`
+      - source setup-linux-ual
+-------------------
+      - pushd tools/tars
+      - mv libxml2-sources-2.6.22.tar.gz libxml2-sources-2.6.22.tar.gzORIG
+      - cp libxml2-sources-2.6.22-32-bit-patch.tar.gz libxml2-sources-2.6.22.tar.gz
+      - popd
+      - make clean
+      - make >&! make.log
+      - emacs make.log
+              check for (just 2 html) errors
+------------------------------------------------------------------------------------
+The "Environment lines"
+        setenv UAL `pwd`
+        source setup-linux-ual
+can be put in
+          ~/.tcshrc
+------------------------------------------------------------------------------------
+SPOT CHECK
+In theory, all of the $UAL/examples directories have self explanatory "READMEs"
+In practice, it's a bit disorganized.
+
+For now,
+          $UAL/examples/E2_typing_of_sxf_elements/run_example
+is a good start.
+
+Ditto for
+          $UAL/examples/E4_typing_of_sxf_elements/run_example
+------------------------------------------------------------------------------------

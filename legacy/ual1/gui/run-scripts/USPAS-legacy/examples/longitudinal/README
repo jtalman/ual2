@@ -1,0 +1,15 @@
+Execute
+          run
+first, to set up the full environment.
+
+Subsequently, one can just run it's last stanza:
+env QTLIB=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/ QTDIR=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/ QTINC=$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/ ROOTSYS=$UAL/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/ LD_LIBRARY_PATH=$UAL/gui/libxml2-2.9.7/.libs/:$UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/:$UAL/tools/sxf/lib/linux/:$UAL/tools/lib/linux/:$UAL/ext/ADXF/lib/linux/:$UAL/ext/SXF/lib/linux/:$UAL/ext/UI/lib/linux/:$UAL/ext/ROOT/lib/linux/:$UAL/ext/ALE/lib/linux/:$UAL/codes/SIMBAD/lib/linux/:$UAL/codes/AIM/lib/linux/:$UAL/codes/TIBETAN/lib/linux/:$UAL/codes/SPINK/lib/linux/:$UAL/codes/ACCSIM/lib/linux/:$UAL/codes/ETEAPOT_MltTurn/lib/linux/:$UAL/codes/ETEAPOT2/lib/linux/:$UAL/codes/ETEAPOT/lib/linux/:$UAL/codes/TEAPOT/lib/linux/:$UAL/codes/PAC/lib/linux/:$UAL/codes/ZLIB/lib/linux/:$UAL/codes/UAL/lib/linux/ ./linux/run ring ../../lattices/racetrack.sxf ../../decoherence/apdf/tibetan+kick.apdf
+
+(in ./lib).
+
+Debugging is partially working.
+
+One can run it via:
+          env --unset=SHELL LD_LIBRARY_PATH=/home/ualusr2011/git-gui-2/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib gdb ./linux/run
+or
+          env --unset=SHELL LD_LIBRARY_PATH=/home/ualusr2011/git-gui-2/ual1/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib ddd ./linux/run

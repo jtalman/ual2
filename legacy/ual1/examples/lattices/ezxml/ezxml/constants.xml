@@ -1,0 +1,25 @@
+  <constants>
+    <constant name="brho" value="5.6573735" />
+    <constant name="qh" value="6.3" />
+    <constant name="qv" value="5.8" />
+    <constant name="muh" value="qh/4.0" />
+    <constant name="muv" value="qv/4.0" />
+    <constant name="bexd" value="2.428" />
+    <constant name="beyd" value="13.047" />
+    <constant name="o1l" value="6.85" />
+    <constant name="o3l"  value="6.25" />
+    <constant name="twopi" value="2*3.1415926536" />
+    <constant name="ang"  value="twopi/32" />
+    <constant name="ee" value="ang/2" />
+    <constant name="lbnd" value="1.5" />
+    <constant name="kf" value="4.66011/1.1981566" />
+    <constant name="kd" value="-4.94176/1.1981566" />
+    <constant name="kmat" value="-3.41118/1.1981566" />
+    <constant name="ks2" value="4.29830/1.1981566" />
+    <constant name="ks3" value="-4.58404/1.1981566" />
+    <constant name="lq" value="0.5" />
+    <constant name="lq1" value="0.25/2" />
+    <constant name="lq2" value="0.7" />
+    <constant name="lq3" value="0.55" />
+    <constant name="lref" value="1.7" />
+</constants>

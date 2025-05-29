@@ -1,0 +1,82 @@
+// compromise_quad file
+void propagate(UAL::Probe& probe)
+{
+std::cout << __FILE__ << " enter compromise_quad propagate\n";
+std::cout << "line: " << __LINE__ << "\n";
+std::cout << "m_L:  " << m_L      << "\n";
+std::cout << "vD:   " << vD       << "\n";
+
+std::cout << "verify input ===============================\n";
+std::cout << "m_NhD    " << m_NhD    << "\n";
+std::cout << "m_Nb in  " << m_Nb     << "\n";
+std::cout << "m_NQ     " << m_NQ     << "\n";
+
+std::cout << "m_MhD    " << m_MhD    << "\n";
+std::cout << "m_Mb  in " << m_Mb     << "\n";
+std::cout << "m_MQ     " << m_MQ     << "\n";
+
+std::cout << "m_XhD    " << m_XhD    << "\n";
+std::cout << "m_Xb in  " << m_Xb     << "\n";
+std::cout << "m_XQ     " << m_XQ     << "\n";
+std::cout << "verify input ===============================\n";
+m_XhD=m_NhD;
+m_Xb= m_Nb;
+m_XL= m_NL;
+m_XQ= m_NQ;
+std::cout << "verify symmetry ===============================\n";
+std::cout << "m_XhD    " << m_XhD    << "\n";
+std::cout << "m_Xb in  " << m_Xb     << "\n";
+std::cout << "m_XQ     " << m_XQ     << "\n";
+std::cout << "verify symmetry ===============================\n";
+m_Nb=0;               //   kick!
+m_Mb=0;               //   kick!
+m_Xb=0;               //   kick!
+std::cout << "verify kick ===============================\n";
+std::cout << "m_Nb     " << m_Nb     << "\n";
+std::cout << "m_Mb     " << m_Mb     << "\n";
+std::cout << "m_Xb     " << m_Xb     << "\n";
+std::cout << "verify kick ===============================\n";
+m_NL=m_NhD+m_Nb+m_NhD;
+m_ML=m_MhD+m_Mb+m_MhD;
+m_XL=m_NL;
+m_L=m_NL+m_ML+m_XL;
+std::cout << "m_NL     " << m_NL     << "\n";
+std::cout << "m_ML     " << m_ML     << "\n";
+std::cout << "m_XL     " << m_XL     << "\n";
+std::cout << "m_L      " << m_L      << "\n";
+
+ PAC::Bunch& bunch      = static_cast<PAC::Bunch&>(probe);
+//std::cout << "line  " << __LINE__ << "\n";
+ tofD                   = m_L/vD;
+//std::cout << "line  " << __LINE__ << "\n";
+// PacElemMultipole* mult;
+//std::cout << "line  " << __LINE__ << "\n";
+// double q               = data[2];
+ for(int ip = 1; ip < bunch.size(); ip++) {
+  PAC::Position& pacP   = bunch[ip].getPosition();
+  pacPmy                = &pacP;
+
+  passDrift( m_NhD, tofD*m_NhD/m_L );
+  pacP[1]              -= m_NQ*pacP[0];
+  pacP[3]              += m_NQ*pacP[2];
+//#include"compromise_quadSpinEvolve"
+  passDrift( m_NhD, tofD*m_NhD/m_L );
+
+  passDrift( m_MhD, tofD*m_MhD/m_L );
+  pacP[1]              -= m_NQ*pacP[0];
+  pacP[3]              += m_NQ*pacP[2];
+//#include"compromise_quadSpinEvolve"
+  passDrift( m_MhD, tofD*m_MhD/m_L );
+
+  passDrift( m_XhD, tofD*m_XhD/m_L );
+  pacP[1]              -= m_XQ*pacP[0];
+  pacP[3]              += m_XQ*pacP[2];
+//#include"compromise_quadSpinEvolve"
+  passDrift( m_XhD, tofD*m_XhD/m_L );
+  
+ }
+ tofDT                 +=tofD;
+ sDT                   += m_L;
+std::cout << "line: " << __LINE__ << "\n";
+std::cout << __FILE__ << " leave compromise_quad propagate\n";
+}

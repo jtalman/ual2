@@ -1,0 +1,19 @@
+setenv UAL_ARCH linux
+setenv USE_GPU TRUE
+
+setenv LD_LIBRARY_PATH
+# /usr/local/pgiCDK-11.5/linux86-64/2011/cuda/3.1/lib64:$LD_LIBRARY_PATH
+
+setenv UAL `pwd`
+###########################################################
+# Paths to UAL Components
+###########################################################
+
+unsetenv ROOTSYS
+source $UAL/env/common/setup-ual-env
+
+###########################################################
+# System-Specific Variables
+###########################################################
+
+# source $UAL/env/$UAL_ARCH/setup-arch-env

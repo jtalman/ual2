@@ -1,0 +1,89 @@
+ string sip5 = "out/TWISS/StndrdPrtcl5";
+//      sip5+=m;
+ cerr << "sip5 " << sip5 << "\n";
+ fstream filestrFIV_IN;
+ filestrFIV_IN.open (sip5.c_str(), fstream::in );
+  for(i=0;i<sElems ;i++){
+   filestrFIV_IN >> name[i] >> s[i] >> p5[i][0] >> p5[i][1] >> p5[i][2] >> p5[i][3] >> p5[i][4] >> p5[i][5] >> dummy[i] >> alp;
+  }
+ filestrFIV_IN.close();
+
+ string sop5 = "out/VERIF/StndrdPrtcl5__m=";
+        sop5+=m;
+ cerr << "sop5 " << sop5       << "\n";
+ fstream filestrFIV_OUT;
+ filestrFIV_OUT.open (sop5.c_str(), fstream::out | fstream::app );
+ filestrFIV_OUT << setiosflags( ios::showpos    );
+ filestrFIV_OUT << setiosflags( ios::uppercase  );
+ filestrFIV_OUT << setiosflags( ios::scientific );
+ filestrFIV_OUT << setfill( ' ' );
+ filestrFIV_OUT << setiosflags( ios::left );
+ filestrFIV_OUT << setprecision(13) ;
+
+ for(i=0;i<sElems ;i++){
+  if( name[i].length()==1 ){
+   filestrFIV_OUT << name[i] << "            ";
+  }
+  if( name[i].length()==2 ){
+   filestrFIV_OUT << name[i] << "           ";
+  }
+  if( name[i].length()==3 ){
+   filestrFIV_OUT << name[i] << "          ";
+  }
+  if( name[i].length()==4 ){
+   filestrFIV_OUT << name[i] << "         ";
+  }
+  if( name[i].length()==5 ){
+   filestrFIV_OUT << name[i] << "        ";
+  }
+  if( name[i].length()==6 ){
+   filestrFIV_OUT << name[i] << "       ";
+  }
+  if( name[i].length()==7 ){
+   filestrFIV_OUT << name[i] << "      ";
+  }
+  if( name[i].length()==8 ){
+   filestrFIV_OUT << name[i] << "     ";
+  }
+  if( name[i].length()==9 ){
+   filestrFIV_OUT << name[i] << "    ";
+  }
+  if( name[i].length()==10 ){
+   filestrFIV_OUT << name[i] << "   ";
+  }
+  if( name[i].length()==11 ){
+   filestrFIV_OUT << name[i] << "  ";
+  }
+   filestrFIV_OUT << s[i] << " " << p5[i][0] << " " << p5[i][1] << " " << p5[i][2] << " " << p5[i][3] << " " << p5[i][4] << " " << p5[i][5] << " " << dummy[i];
+// filestrFIV_OUT << s[i] << " " << p5[i][0] << " " << p5[i][1] << " " << p5[i][2] << " " << p5[i][3] << " " << p5[i][4] << " " << p5[i][5] << " " << dummy[i] << "    " << alp << "\n";
+  if( dummy[i].length()==6 ){
+   filestrFIV_OUT << "    ";
+  }
+  if( dummy[i].length()==7 ){
+   filestrFIV_OUT << "   ";
+  }
+  if( dummy[i].length()==8 ){
+   filestrFIV_OUT << "  ";
+  }
+  if( dummy[i].length()==9 ){
+   filestrFIV_OUT << " ";
+  }
+
+  filestrFIV_OUT << alp;
+
+  if( alp.length()==3 ){
+   filestrFIV_OUT << "   ";
+  }
+  if( alp.length()==4 ){
+   filestrFIV_OUT << "  ";
+  }
+  if( alp.length()==5 ){
+   filestrFIV_OUT << " ";
+  }
+  if( alp.length()==6 ){
+   filestrFIV_OUT << "";
+  }
+  filestrFIV_OUT << "\n";
+
+ }
+ filestrFIV_OUT.close();

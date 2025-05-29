@@ -1,0 +1,207 @@
+    1  whoami
+    2  exit
+    3  dnf -y install tcsh
+    4  exit
+    5  ll /etc/passwd*
+    6  cp /etc/passwd /etc/passwd.1
+    7  ll /etc/passwd*
+    8  vi /etc/passwd
+    9  which tcsh
+   10  vi /etc/passwd
+   11  exit
+   12  pwd
+   13  vi /home/jtalman/.tcshrc 
+   14  vi /home/jtalman/Desktop/GIT/download/ual1/setup-linux-ual 
+   15  vi /etc/passwd
+   16  ll /usr/bin/tcsh
+   17  echo $SHELL
+   18  which tcsh
+   19  tcsh
+   20  exit
+   21  cd ~talman
+   22  ll ..
+   23  ll ../home/jtalman/
+   24  cd ~jtalman
+   25  ll
+   26  vi .tcshrc 
+   27  su jtalman
+   28  exit
+   29  cat /etc/shells 
+   30  usermod -s /usr/bin/tcsh jtalman
+   31  vi /etc/passwd
+   32  which tcsh
+   33  vi /etc/group
+   34  exit
+   35  which adduser
+   36  which useradd
+   37  man user add
+   38  man useradd
+   39  useradd -s /usr/bin/tcsh talman
+   40  cat /etc/passwd
+   41  man useradd
+   42  crypt OneOver137
+   43  encrypt OneOver137
+   44  cat /etc/passwd
+   45  useradd -s /usr/bin/tcsh talman2
+   46  passwd talman2
+   47  exit
+   48  cp ../jtalman/.tcshrc .
+   49  exit
+   50  chown talman2 .tcshrc 
+   51  ll .tcshrc 
+   52  chgrp talman2 .tcshrc 
+   53  ll .tcshrc 
+   54  exit
+   55  vi /home/talman2/.tcshrc 
+   56  vi /home/talman2/Desktop/GIT/download/ual1/setup-linux-ual 
+   57  evince /home/talman2/Desktop/GIT/download/ual1/Okamoto/okamoto-talman-CBN-80-13b.pdf 
+   58  vi /home/talman2/.tcshrc 
+   59  exit
+   60  ll /home/talman2
+   61  ls -ilat /home/talman2
+   62  ls -ailt /home/talman2
+   63  ls -ailt /home/talman2/.tcshrc 
+   64  vi /home/talman2/.tcshrc 
+   65  ls -ailt /home/talman2/.tcshrc 
+   66  cat /home/talman2/.tcshrc 
+   67  exit
+   68  cat /etc/shells 
+   69  ll /bin/tcsh
+   70  ll /usr/bin/tcsh
+   71  alias ll
+   72  ls -ialt /bin/tcsh
+   73  ls -ialt /usr/bin/tcsh 
+   74  tail /etc/passwd
+   75  useradd -s /bin/tcsh talman3
+   76  passwd talman3
+   77  shutdown now
+   78  ll /home/jtalman/Desktop/GIT/download/ual1/tools/sxf/src/sxf/Makefile*
+   79  cp /home/jtalman/Desktop/GIT/download/ual1/tools/sxf/src/sxf/Makefile tools_sxf_src_sxf_Makefile
+   80  exit
+   81  dnf -y install perl
+   82  dnf -y install perl-devel
+   83  exit
+   84  dnf list installed
+   85  dnf list installed|grep perl
+   86  dnf list installed|grep perl|wc -l
+   87  exit
+   88  dnf -y install openmotif
+   89  dnf -y install openmotif-devel
+   90  h
+   91  history>root_archive
+    1  whoami
+    2  exit
+    3  dnf -y install tcsh
+    4  exit
+    5  ll /etc/passwd*
+    6  cp /etc/passwd /etc/passwd.1
+    7  ll /etc/passwd*
+    8  vi /etc/passwd
+    9  which tcsh
+   10  vi /etc/passwd
+   11  exit
+   12  pwd
+   13  vi /home/jtalman/.tcshrc 
+   14  vi /home/jtalman/Desktop/GIT/download/ual1/setup-linux-ual 
+   15  vi /etc/passwd
+   16  ll /usr/bin/tcsh
+   17  echo $SHELL
+   18  which tcsh
+   19  tcsh
+   20  exit
+   21  cd ~talman
+   22  ll ..
+   23  ll ../home/jtalman/
+   24  cd ~jtalman
+   25  ll
+   26  vi .tcshrc 
+   27  su jtalman
+   28  exit
+   29  cat /etc/shells 
+   30  usermod -s /usr/bin/tcsh jtalman
+   31  vi /etc/passwd
+   32  which tcsh
+   33  vi /etc/group
+   34  exit
+   35  which adduser
+   36  which useradd
+   37  man user add
+   38  man useradd
+   39  useradd -s /usr/bin/tcsh talman
+   40  cat /etc/passwd
+   41  man useradd
+   42  crypt OneOver137
+   43  encrypt OneOver137
+   44  cat /etc/passwd
+   45  useradd -s /usr/bin/tcsh talman2
+   46  passwd talman2
+   47  exit
+   48  cp ../jtalman/.tcshrc .
+   49  exit
+   50  chown talman2 .tcshrc 
+   51  ll .tcshrc 
+   52  chgrp talman2 .tcshrc 
+   53  ll .tcshrc 
+   54  exit
+   55  vi /home/talman2/.tcshrc 
+   56  vi /home/talman2/Desktop/GIT/download/ual1/setup-linux-ual 
+   57  evince /home/talman2/Desktop/GIT/download/ual1/Okamoto/okamoto-talman-CBN-80-13b.pdf 
+   58  vi /home/talman2/.tcshrc 
+   59  exit
+   60  ll /home/talman2
+   61  ls -ilat /home/talman2
+   62  ls -ailt /home/talman2
+   63  ls -ailt /home/talman2/.tcshrc 
+   64  vi /home/talman2/.tcshrc 
+   65  ls -ailt /home/talman2/.tcshrc 
+   66  cat /home/talman2/.tcshrc 
+   67  exit
+   68  cat /etc/shells 
+   69  ll /bin/tcsh
+   70  ll /usr/bin/tcsh
+   71  alias ll
+   72  ls -ialt /bin/tcsh
+   73  ls -ialt /usr/bin/tcsh 
+   74  tail /etc/passwd
+   75  useradd -s /bin/tcsh talman3
+   76  passwd talman3
+   77  shutdown now
+   78  ll /home/jtalman/Desktop/GIT/download/ual1/tools/sxf/src/sxf/Makefile*
+   79  cp /home/jtalman/Desktop/GIT/download/ual1/tools/sxf/src/sxf/Makefile tools_sxf_src_sxf_Makefile
+   80  exit
+   81  dnf -y install perl
+   82  dnf -y install perl-devel
+   83  exit
+   84  dnf list installed
+   85  dnf list installed|grep perl
+   86  dnf list installed|grep perl|wc -l
+   87  exit
+   88  dnf -y install openmotif
+   89  dnf -y install openmotif-devel
+   90  h
+   91  history>root_archive
+   92  exit
+   93  ll /usr/local/grace
+   94  ./configure 
+   95  make
+   96  find . -name rstdrv.c
+   97  vi ./src/rstdrv.c +888
+   98  make
+   99  vi ./src/rstdrv.c +1032
+  100  make
+  101  ll /usr/local/grace
+  102  make install
+  103  ll /usr/local/grace
+  104  ll /usr/local/grace/bin/
+  105  ll /usr/local/grace/bin/xmgrace 
+  106   /usr/local/grace/bin/xmgrace 
+  107  which xmgrace
+  108  history >> ../root_archive 
+  
+  
+  cp /run/media/talman3/STORE\ N\ GO/grace-5.1.22.tar.gz .
+  
+  
+  follow root_archive
+  
+  

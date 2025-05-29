@@ -1,0 +1,12 @@
+Run on command line:
+      make clean
+      make
+      ./fnctnw-slightly-modified
+
+This generates file
+      ./wexct
+with line
+      ...
+ 35    1.00  1.00   0.304744150133933   0.208218830492453
+      ...
+which John Talman and Richard Talman have been using as a "benchmark".

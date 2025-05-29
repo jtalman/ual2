@@ -1,0 +1,9 @@
+<apdf>
+  <propagator id="mapping" accelerator="ring">
+     <create>
+	<link algorithm="UAL::USPAS::MapTracker"    sector="Default" />
+        <link algorithm="AIM::PoincareMonitor"      elements="mbegin" />
+        <link algorithm="AIM::Monitor"              elements="mend" />
+     </create>
+  </propagator>
+</apdf>

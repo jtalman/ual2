@@ -1,0 +1,31 @@
+OBJS +=	$(UAL)/gui/ROOT/lib/linux/obj/BasicViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/moc_BasicViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/Svd1DViewUI.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/moc_Svd1DViewUI.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/BpmSvd1DViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/moc_BpmSvd1DViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/SVDWorker.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/BunchXPxViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/moc_BunchXPxViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/BunchYPyViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/moc_BunchYPyViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/BunchCtDeViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/moc_BunchCtDeViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/MountainRangeViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/moc_MountainRangeViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/TwissViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/moc_TwissViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/OrbitViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/moc_OrbitViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/PoincareViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/moc_PoincareViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/PoincareXPxViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/moc_PoincareXPxViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/PoincareYPyViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/moc_PoincareYPyViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/PoincareCtDeViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/moc_PoincareCtDeViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/BunchTBTViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/moc_BunchTBTViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/MonitorFFTViewer.o \
+	$(UAL)/gui/ROOT/lib/linux/obj/moc_MonitorFFTViewer.o

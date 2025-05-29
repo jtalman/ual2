@@ -1,0 +1,27 @@
+marker mbegin = {.tag="mbegin",.length=0,.strength=0,.marker_track=&marker_track};
+marker mend = {.tag="mend",.length=0,.strength=0,.marker_track=&marker_track};
+marker mQDcM = {.tag="mQDcM",.length=0,.strength=0,.marker_track=&marker_track};
+marker mQDcE = {.tag="mQDcE",.length=0,.strength=0,.marker_track=&marker_track};
+marker mQFcM = {.tag="mQFcM",.length=0,.strength=0,.marker_track=&marker_track};
+marker mQFcE = {.tag="mQFcE",.length=0,.strength=0,.marker_track=&marker_track};
+marker mSBPlMi = {.tag="mSBPlMi",.length=0,.strength=0,.marker_track=&marker_track};
+marker mSixteenth = {.tag="mSixteenth",.length=0,.strength=0,.marker_track=&marker_track};
+marker mSBMiPl = {.tag="mSBMiPl",.length=0,.strength=0,.marker_track=&marker_track};
+marker mHalf = {.tag="mHalf",.length=0,.strength=0,.marker_track=&marker_track};
+marker mQuarter = {.tag="mQuarter",.length=0,.strength=0,.marker_track=&marker_track};
+marker mQcend = {.tag="mQcend",.length=0,.strength=0,.marker_track=&marker_track};
+marker mllshnom = {.tag="mllshnom",.length=0,.strength=0,.marker_track=&marker_track};
+
+drift Dllshsl = {.tag="Dllshsl",.length=0.46776750000000006,.strength=0,.drift_track=&drift_track};
+drift DlQch = {.tag="DlQch",.length=0.2,.strength=0,.drift_track=&drift_track};
+
+quadrupole mNullSlice = {.tag="mNullSlice",.length=0.0000000001,.strength=+0.0000000001,.quadrupole_track=&quadrupole_track};
+quadrupole QFcMh = {.tag="QFcMh",.length=0.0000000001,.strength=-0.0000004545499999999499,.quadrupole_track=&quadrupole_track};
+quadrupole QFcE = {.tag="QFcE",.length=0.0000000001,.strength=-0.0090900909,.quadrupole_track=&quadrupole_track};
+quadrupole QDcMh = {.tag="QDcMh",.length=0.0000000001,.strength=+0.0000004545499999999499,.quadrupole_track=&quadrupole_track};
+quadrupole QDcE = {.tag="QDcE",.length=0.0000000001,.strength=+0.0090900909,.quadrupole_track=&quadrupole_track};
+
+sbend SBPlhsl = {.tag="SBPlhsl",.length=1.0799228,.strength=0.09816498252000001,.sbend_track=&sbend_track};
+sbend SBMihsl = {.tag="SBMihsl",.length=1.0799228,.strength=0.09816498252000001,.sbend_track=&sbend_track};
+
+rfcavity RF1 = {.tag="RF1",.length=0.0000000001,.strength=0,.rfcavity_track=&rfcavity_track};

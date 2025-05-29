@@ -1,0 +1,5 @@
+This is the current working program directory. It is based on PTR_m_nomEQ0p0.32349_sl4.adxf
+
+New development, with a new adxf file, is outlined in ../create-Ring/
+
+Useful utilities for this, and generally, are in ../ezxml/. ../ezxml/notes may be of interest. Possibly interesting legacy info is also in ../ezxml/.
