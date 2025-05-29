@@ -1,3 +1,0 @@
-flex count.l
-gcc lex.yy.c
-./a.out < in

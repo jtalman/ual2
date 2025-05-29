@@ -1,6 +1,0 @@
-
-compile :
-	doxygen CORAANT.cfg
-
-clean:
-	rm -rf html latex
