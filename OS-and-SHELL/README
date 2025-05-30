@@ -1,0 +1,12 @@
+AlmaLinux 9 is assumed installed.
+
+A "work station" install is likely a good start.
+
+As mentioned elsewhere, the user for this work is "ualusr2011", assumed created.
+
+Running
+          cd OS-and-SHELL
+          su
+                    root password
+          source OS-extras
+as root might make sense for your installation.
