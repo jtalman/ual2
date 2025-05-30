@@ -1,0 +1,795 @@
+../../bin/uic -L /home/ualusr2007/UAL_GUI/ual1/gui/qt-x11-free-3.3.4/plugins MainPlayerUI.ui -o MainPlayerUI.h
+cp XXXMainPlayerUI.hXXX MainPlayerUI.h
+../../bin/uic -L /home/ualusr2007/UAL_GUI/ual1/gui/qt-x11-free-3.3.4/plugins PlayerUI.ui -o PlayerUI.h
+../../bin/uic -L /home/ualusr2007/UAL_GUI/ual1/gui/qt-x11-free-3.3.4/plugins TablePageUI.ui -o TablePageUI.h
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/BasicEditor.o BasicEditor.cc
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/BasicPlayer.o BasicPlayer.cc
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorNode.hh:13:0,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from BasicPlayer.hh:11,
+                 from BasicPlayer.cc:2:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10:0,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from BasicPlayer.hh:11,
+                 from BasicPlayer.cc:2:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:5,
+                 from BasicPlayer.hh:11,
+                 from BasicPlayer.cc:2:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from BasicPlayer.hh:13:0,
+                 from BasicPlayer.cc:2:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh: At global scope:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+BasicPlayer.cc:99:6: warning: unused parameter ‘item’ [-Wunused-parameter]
+ void UAL::QT::BasicPlayer::showPage(QListViewItem* item)
+      ^
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/BasicViewer.o BasicViewer.cc
+In file included from BasicViewer.cc:6:0:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+BasicViewer.cc:70:6: warning: unused parameter ‘fileName’ [-Wunused-parameter]
+ void UAL::QT::BasicViewer::saveFile(const QString& fileName)
+      ^
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/BeamEditor.o BeamEditor.cc
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorNode.hh:13:0,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from ../../../QT/src/UAL/QT/Player/BeamEditor.hh:7,
+                 from BeamEditor.cc:10:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10:0,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from ../../../QT/src/UAL/QT/Player/BeamEditor.hh:7,
+                 from BeamEditor.cc:10:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/BeamEditor.hh:7,
+                 from BeamEditor.cc:10:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from ../../../QT/src/UAL/QT/Player/BasicPlayer.hh:12:0,
+                 from ../../../QT/src/UAL/QT/Player/BeamEditor.hh:8,
+                 from BeamEditor.cc:10:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh: At global scope:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+BeamEditor.cc:108:6: warning: unused parameter ‘row’ [-Wunused-parameter]
+ void UAL::QT::BeamEditor::setValue(int row, int col)
+      ^
+BeamEditor.cc:108:6: warning: unused parameter ‘col’ [-Wunused-parameter]
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/ChromfitEditor.o ChromfitEditor.cc
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorNode.hh:13:0,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from ../../../QT/src/UAL/QT/Player/ChromfitEditor.hh:7,
+                 from ChromfitEditor.cc:11:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10:0,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from ../../../QT/src/UAL/QT/Player/ChromfitEditor.hh:7,
+                 from ChromfitEditor.cc:11:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/ChromfitEditor.hh:7,
+                 from ChromfitEditor.cc:11:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from ../../../QT/src/UAL/QT/Player/BasicPlayer.hh:12:0,
+                 from ../../../QT/src/UAL/QT/Player/ChromfitEditor.hh:8,
+                 from ChromfitEditor.cc:11:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh: At global scope:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+ChromfitEditor.cc:75:6: warning: unused parameter ‘row’ [-Wunused-parameter]
+ void UAL::QT::ChromfitEditor::setValue(int row, int col)
+      ^
+ChromfitEditor.cc:75:6: warning: unused parameter ‘col’ [-Wunused-parameter]
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/main.o main.cc
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/ParameterViewer.o ParameterViewer.cc
+In file included from ../../../tools/include/muParser.h:22:0,
+                 from ../../../../ext/ADXF/src/UAL/ADXF/ConstantManager.hh:12,
+                 from ParameterViewer.cc:9:
+../../../tools/include/muParserBase.h:208:57: warning: overflow in implicit constant conversion [-Woverflow]
+                  int a_iPos = traits_type::string_type::npos, 
+                                                         ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorNode.hh:13:0,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from ../../../QT/src/UAL/QT/Player/ParameterViewer.hh:7,
+                 from ParameterViewer.cc:11:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10:0,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from ../../../QT/src/UAL/QT/Player/ParameterViewer.hh:7,
+                 from ParameterViewer.cc:11:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/ParameterViewer.hh:7,
+                 from ParameterViewer.cc:11:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from ../../../QT/src/UAL/QT/Player/BasicPlayer.hh:12:0,
+                 from ../../../QT/src/UAL/QT/Player/ParameterViewer.hh:8,
+                 from ParameterViewer.cc:11:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh: At global scope:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+ParameterViewer.cc:61:6: warning: unused parameter ‘row’ [-Wunused-parameter]
+ void UAL::QT::ParameterViewer::setValue(int row, int col)
+      ^
+ParameterViewer.cc:61:6: warning: unused parameter ‘col’ [-Wunused-parameter]
+In file included from ../../../tools/include/muParserBase.h:30:0,
+                 from ../../../tools/include/muParser.h:22,
+                 from ../../../../ext/ADXF/src/UAL/ADXF/ConstantManager.hh:12,
+                 from ParameterViewer.cc:9:
+../../../tools/include/muBasicParserTokenReader.h: In instantiation of ‘void mu::BasicParserTokenReader<TVal, TStr>::Assign(const mu::BasicParserTokenReader<TVal, TStr>&) [with TVal = double; TStr = std::basic_string<char>]’:
+ParameterViewer.cc:67:1:   required from here
+../../../tools/include/muBasicParserTokenReader.h:95:18: warning: unused parameter ‘a_Reader’ [-Wunused-parameter]
+     virtual void Assign(const BasicParserTokenReader &a_Reader) { }
+                  ^
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/PlayerEvent.o PlayerEvent.cc
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/PlayerShell.o PlayerShell.cc
+In file included from ../../../../codes/PAC/src/SMF/PacElemKeys.h:4:0,
+                 from ../../../../codes/PAC/src/SMF/PacSmf.h:10,
+                 from ../../../../ext/SXF/src/UAL/SXF/Def.hh:4,
+                 from ../../../../ext/SXF/src/UAL/SXF/Parser.hh:9,
+                 from PlayerShell.cc:2:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from ../../../../codes/PAC/src/SMF/PacLattice.h:12:0,
+                 from ../../../../codes/PAC/src/SMF/PacLattices.h:6,
+                 from ../../../../codes/PAC/src/SMF/PacSmf.h:14,
+                 from ../../../../ext/SXF/src/UAL/SXF/Def.hh:4,
+                 from ../../../../ext/SXF/src/UAL/SXF/Parser.hh:9,
+                 from PlayerShell.cc:2:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh: At global scope:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/PAC/src/SMF/PacLattices.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacSmf.h:14,
+                 from ../../../../ext/SXF/src/UAL/SXF/Def.hh:4,
+                 from ../../../../ext/SXF/src/UAL/SXF/Parser.hh:9,
+                 from PlayerShell.cc:2:
+../../../../codes/PAC/src/SMF/PacLattice.h:40:53: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+    UAL::AcceleratorNode* const  getNodeAt(int indx) const { return &(_ptr->_vector[indx]);}
+                                                     ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10:0,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from PlayerShell.cc:9:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+PlayerShell.cc: In member function ‘virtual bool UAL::QT::PlayerShell::initRun(const UAL::Arguments&)’:
+PlayerShell.cc:75:10: warning: unused variable ‘charge’ [-Wunused-variable]
+   double charge  = m_ba.getCharge();
+          ^
+PlayerShell.cc: At global scope:
+PlayerShell.cc:64:6: warning: unused parameter ‘arguments’ [-Wunused-parameter]
+ bool UAL::QT::PlayerShell::initRun(const UAL::Arguments& arguments)
+      ^
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/PlayerWorker.o PlayerWorker.cc
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorNode.hh:13:0,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from PlayerWorker.cc:3:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10:0,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from PlayerWorker.cc:3:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:5,
+                 from PlayerWorker.cc:3:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from ../../../QT/src/UAL/QT/Player/BasicPlayer.hh:12:0,
+                 from PlayerWorker.cc:4:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh: At global scope:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/PropagatorViewer.o PropagatorViewer.cc
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorNode.hh:13:0,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorFactory.hh:10,
+                 from PropagatorViewer.cc:9:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorFactory.hh:10:0,
+                 from PropagatorViewer.cc:9:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PropagatorViewer.hh:7,
+                 from PropagatorViewer.cc:11:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from ../../../QT/src/UAL/QT/Player/BasicPlayer.hh:12:0,
+                 from ../../../QT/src/UAL/QT/Player/PropagatorViewer.hh:8,
+                 from PropagatorViewer.cc:11:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh: At global scope:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+PropagatorViewer.cc:55:6: warning: unused parameter ‘row’ [-Wunused-parameter]
+ void UAL::QT::PropagatorViewer::setValue(int row, int col)
+      ^
+PropagatorViewer.cc:55:6: warning: unused parameter ‘col’ [-Wunused-parameter]
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/RFEditor.o RFEditor.cc
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorNode.hh:13:0,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from ../../../QT/src/UAL/QT/Player/RFEditor.hh:7,
+                 from RFEditor.cc:10:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10:0,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from ../../../QT/src/UAL/QT/Player/RFEditor.hh:7,
+                 from RFEditor.cc:10:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/RFEditor.hh:7,
+                 from RFEditor.cc:10:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from ../../../QT/src/UAL/QT/Player/BasicPlayer.hh:12:0,
+                 from ../../../QT/src/UAL/QT/Player/RFEditor.hh:8,
+                 from RFEditor.cc:10:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh: At global scope:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+RFEditor.cc:73:6: warning: unused parameter ‘row’ [-Wunused-parameter]
+ void UAL::QT::RFEditor::setValue(int row, int col)
+      ^
+RFEditor.cc:73:6: warning: unused parameter ‘col’ [-Wunused-parameter]
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/RightAlignedTableItem.o RightAlignedTableItem.cc
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/SectorTracker.o SectorTracker.cc
+SectorTracker.cc: In member function ‘void UAL_RHIC::SectorTracker::propagate(PAC::Bunch&)’:
+SectorTracker.cc:75:10: warning: unused variable ‘revFreq’ [-Wunused-variable]
+   double revFreq = bunch.getBeamAttributes().getRevfreq();
+          ^
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/SeparatrixCalculator.o SeparatrixCalculator.cc
+In file included from ../../../../codes/PAC/src/SMF/PacLattElement.h:10:0,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/SeparatrixCalculator.hh:7,
+                 from SeparatrixCalculator.cc:7:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/SeparatrixCalculator.hh:7,
+                 from SeparatrixCalculator.cc:7:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+SeparatrixCalculator.cc: In member function ‘bool UAL::SeparatrixCalculator::calculate()’:
+SeparatrixCalculator.cc:61:10: warning: unused variable ‘v0byc’ [-Wunused-variable]
+   double v0byc  = sqrt(v0byc2);
+          ^
+SeparatrixCalculator.cc:62:10: warning: unused variable ‘p2’ [-Wunused-variable]
+   double p2     = e*e - m*m;
+          ^
+SeparatrixCalculator.cc:68:10: warning: unused variable ‘harmon’ [-Wunused-variable]
+   double harmon = m_rfTracker.getHarmon();
+          ^
+SeparatrixCalculator.cc: In member function ‘double UAL::SeparatrixCalculator::getDeMax(double)’:
+SeparatrixCalculator.cc:308:10: warning: unused variable ‘p2’ [-Wunused-variable]
+   double p2     = energy*energy - m*m;
+          ^
+SeparatrixCalculator.cc:309:25: warning: ‘p’ is used uninitialized in this function [-Wuninitialized]
+   double p      = sqrt(p);
+                         ^
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/TunefitEditor.o TunefitEditor.cc
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorNode.hh:13:0,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from ../../../QT/src/UAL/QT/Player/TunefitEditor.hh:7,
+                 from TunefitEditor.cc:11:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10:0,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from ../../../QT/src/UAL/QT/Player/TunefitEditor.hh:7,
+                 from TunefitEditor.cc:11:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/TunefitEditor.hh:7,
+                 from TunefitEditor.cc:11:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from ../../../QT/src/UAL/QT/Player/BasicPlayer.hh:12:0,
+                 from ../../../QT/src/UAL/QT/Player/TunefitEditor.hh:8,
+                 from TunefitEditor.cc:11:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh: At global scope:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+TunefitEditor.cc:75:6: warning: unused parameter ‘row’ [-Wunused-parameter]
+ void UAL::QT::TunefitEditor::setValue(int row, int col)
+      ^
+TunefitEditor.cc:75:6: warning: unused parameter ‘col’ [-Wunused-parameter]
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/TurnCounter.o TurnCounter.cc
+../../bin/uic -L /home/ualusr2007/UAL_GUI/ual1/gui/qt-x11-free-3.3.4/plugins MainPlayerUI.ui -i MainPlayerUI.h -o MainPlayerUI.cpp
+cp XXXMainPlayerUI.cppXXX MainPlayerUI.cpp
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/MainPlayerUI.o MainPlayerUI.cpp
+../../bin/uic -L /home/ualusr2007/UAL_GUI/ual1/gui/qt-x11-free-3.3.4/plugins PlayerUI.ui -i PlayerUI.h -o PlayerUI.cpp
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/PlayerUI.o PlayerUI.cpp
+../../bin/uic -L /home/ualusr2007/UAL_GUI/ual1/gui/qt-x11-free-3.3.4/plugins TablePageUI.ui -i TablePageUI.h -o TablePageUI.cpp
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/TablePageUI.o TablePageUI.cpp
+../..//bin/moc BasicEditor.hh -o .moc/release-shared-mt/moc_BasicEditor.cpp
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/moc_BasicEditor.o .moc/release-shared-mt/moc_BasicEditor.cpp
+../..//bin/moc BasicPlayer.hh -o .moc/release-shared-mt/moc_BasicPlayer.cpp
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/moc_BasicPlayer.o .moc/release-shared-mt/moc_BasicPlayer.cpp
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorNode.hh:13:0,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from .moc/release-shared-mt/../../BasicPlayer.hh:11,
+                 from .moc/release-shared-mt/moc_BasicPlayer.cpp:11:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10:0,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from .moc/release-shared-mt/../../BasicPlayer.hh:11,
+                 from .moc/release-shared-mt/moc_BasicPlayer.cpp:11:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:5,
+                 from .moc/release-shared-mt/../../BasicPlayer.hh:11,
+                 from .moc/release-shared-mt/moc_BasicPlayer.cpp:11:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from .moc/release-shared-mt/../../BasicPlayer.hh:13:0,
+                 from .moc/release-shared-mt/moc_BasicPlayer.cpp:11:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh: At global scope:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+../..//bin/moc BasicViewer.hh -o .moc/release-shared-mt/moc_BasicViewer.cpp
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/moc_BasicViewer.o .moc/release-shared-mt/moc_BasicViewer.cpp
+In file included from .moc/release-shared-mt/moc_BasicViewer.cpp:11:0:
+.moc/release-shared-mt/../../BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+../..//bin/moc BeamEditor.hh -o .moc/release-shared-mt/moc_BeamEditor.cpp
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/moc_BeamEditor.o .moc/release-shared-mt/moc_BeamEditor.cpp
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorNode.hh:13:0,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from .moc/release-shared-mt/../../BeamEditor.hh:7,
+                 from .moc/release-shared-mt/moc_BeamEditor.cpp:11:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10:0,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from .moc/release-shared-mt/../../BeamEditor.hh:7,
+                 from .moc/release-shared-mt/moc_BeamEditor.cpp:11:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:5,
+                 from .moc/release-shared-mt/../../BeamEditor.hh:7,
+                 from .moc/release-shared-mt/moc_BeamEditor.cpp:11:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from ../../../QT/src/UAL/QT/Player/BasicPlayer.hh:12:0,
+                 from .moc/release-shared-mt/../../BeamEditor.hh:8,
+                 from .moc/release-shared-mt/moc_BeamEditor.cpp:11:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh: At global scope:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+../..//bin/moc ChromfitEditor.hh -o .moc/release-shared-mt/moc_ChromfitEditor.cpp
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/moc_ChromfitEditor.o .moc/release-shared-mt/moc_ChromfitEditor.cpp
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorNode.hh:13:0,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from .moc/release-shared-mt/../../ChromfitEditor.hh:7,
+                 from .moc/release-shared-mt/moc_ChromfitEditor.cpp:11:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10:0,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from .moc/release-shared-mt/../../ChromfitEditor.hh:7,
+                 from .moc/release-shared-mt/moc_ChromfitEditor.cpp:11:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:5,
+                 from .moc/release-shared-mt/../../ChromfitEditor.hh:7,
+                 from .moc/release-shared-mt/moc_ChromfitEditor.cpp:11:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from ../../../QT/src/UAL/QT/Player/BasicPlayer.hh:12:0,
+                 from .moc/release-shared-mt/../../ChromfitEditor.hh:8,
+                 from .moc/release-shared-mt/moc_ChromfitEditor.cpp:11:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh: At global scope:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+../..//bin/moc ParameterViewer.hh -o .moc/release-shared-mt/moc_ParameterViewer.cpp
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/moc_ParameterViewer.o .moc/release-shared-mt/moc_ParameterViewer.cpp
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorNode.hh:13:0,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from .moc/release-shared-mt/../../ParameterViewer.hh:7,
+                 from .moc/release-shared-mt/moc_ParameterViewer.cpp:11:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10:0,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from .moc/release-shared-mt/../../ParameterViewer.hh:7,
+                 from .moc/release-shared-mt/moc_ParameterViewer.cpp:11:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:5,
+                 from .moc/release-shared-mt/../../ParameterViewer.hh:7,
+                 from .moc/release-shared-mt/moc_ParameterViewer.cpp:11:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from ../../../QT/src/UAL/QT/Player/BasicPlayer.hh:12:0,
+                 from .moc/release-shared-mt/../../ParameterViewer.hh:8,
+                 from .moc/release-shared-mt/moc_ParameterViewer.cpp:11:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh: At global scope:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+../..//bin/moc PropagatorViewer.hh -o .moc/release-shared-mt/moc_PropagatorViewer.cpp
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/moc_PropagatorViewer.o .moc/release-shared-mt/moc_PropagatorViewer.cpp
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorNode.hh:13:0,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from .moc/release-shared-mt/../../PropagatorViewer.hh:7,
+                 from .moc/release-shared-mt/moc_PropagatorViewer.cpp:11:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10:0,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from .moc/release-shared-mt/../../PropagatorViewer.hh:7,
+                 from .moc/release-shared-mt/moc_PropagatorViewer.cpp:11:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:5,
+                 from .moc/release-shared-mt/../../PropagatorViewer.hh:7,
+                 from .moc/release-shared-mt/moc_PropagatorViewer.cpp:11:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from ../../../QT/src/UAL/QT/Player/BasicPlayer.hh:12:0,
+                 from .moc/release-shared-mt/../../PropagatorViewer.hh:8,
+                 from .moc/release-shared-mt/moc_PropagatorViewer.cpp:11:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh: At global scope:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+../..//bin/moc RFEditor.hh -o .moc/release-shared-mt/moc_RFEditor.cpp
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/moc_RFEditor.o .moc/release-shared-mt/moc_RFEditor.cpp
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorNode.hh:13:0,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from .moc/release-shared-mt/../../RFEditor.hh:7,
+                 from .moc/release-shared-mt/moc_RFEditor.cpp:11:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10:0,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from .moc/release-shared-mt/../../RFEditor.hh:7,
+                 from .moc/release-shared-mt/moc_RFEditor.cpp:11:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:5,
+                 from .moc/release-shared-mt/../../RFEditor.hh:7,
+                 from .moc/release-shared-mt/moc_RFEditor.cpp:11:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from ../../../QT/src/UAL/QT/Player/BasicPlayer.hh:12:0,
+                 from .moc/release-shared-mt/../../RFEditor.hh:8,
+                 from .moc/release-shared-mt/moc_RFEditor.cpp:11:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh: At global scope:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+../..//bin/moc TunefitEditor.hh -o .moc/release-shared-mt/moc_TunefitEditor.cpp
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/moc_TunefitEditor.o .moc/release-shared-mt/moc_TunefitEditor.cpp
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorNode.hh:13:0,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from .moc/release-shared-mt/../../TunefitEditor.hh:7,
+                 from .moc/release-shared-mt/moc_TunefitEditor.cpp:11:
+../../../../codes/UAL/src/UAL/SMF/AcceleratorNode.hh:59:56: warning: type qualifiers ignored on function return type [-Wignored-qualifiers]
+     virtual AcceleratorNode* const getNodeAt(int indx) const;
+                                                        ^
+In file included from ../../../../codes/UAL/src/UAL/APF/PropagatorSequence.hh:10:0,
+                 from ../../../../codes/UAL/src/UAL/APF/AcceleratorPropagator.hh:9,
+                 from ../../../../ext/UI/src/UAL/UI/Shell.hh:5,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:4,
+                 from .moc/release-shared-mt/../../TunefitEditor.hh:7,
+                 from .moc/release-shared-mt/moc_TunefitEditor.cpp:11:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh: In destructor ‘virtual UAL::PropagatorNodePtr::CountHolder::~CountHolder()’:
+../../../../codes/UAL/src/UAL/APF/PropagatorNodePtr.hh:50:31: warning: deleting object of abstract class type ‘UAL::PropagatorNode’ which has non-virtual destructor will cause undefined behaviour [-Wdelete-non-virtual-dtor]
+       ~CountHolder() { delete m_pointee; }
+                               ^
+In file included from ../../../../codes/PAC/src/Templates/PacOrderedList.h:6:0,
+                 from ../../../../codes/PAC/src/SMF/PacElemAttributes.h:12,
+                 from ../../../../codes/PAC/src/SMF/PacElemPart.h:10,
+                 from ../../../../codes/PAC/src/SMF/PacGenElement.h:16,
+                 from ../../../../codes/PAC/src/SMF/PacLattElement.h:12,
+                 from ../../../../codes/TIBETAN/src/TIBETAN/Propagator/RFCavityTracker.hh:11,
+                 from ../../../QT/src/UAL/QT/Player/PlayerShell.hh:5,
+                 from .moc/release-shared-mt/../../TunefitEditor.hh:7,
+                 from .moc/release-shared-mt/moc_TunefitEditor.cpp:11:
+../../../../codes/PAC/src/Templates/PacRbTree.h: In member function ‘std::pair<std::_Rb_tree_iterator<_Val>, bool> PacRbTree<_Key, _Value, _KeyOfValue, _Compare, _Alloc>::insert_unique(const _Val&)’:
+../../../../codes/PAC/src/Templates/PacRbTree.h:76:10: warning: suggest explicit braces to avoid ambiguous ‘else’ [-Wparentheses]
+       if (__comp)
+          ^
+In file included from ../../../QT/src/UAL/QT/Player/BasicPlayer.hh:12:0,
+                 from .moc/release-shared-mt/../../TunefitEditor.hh:8,
+                 from .moc/release-shared-mt/moc_TunefitEditor.cpp:11:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh: At global scope:
+../../../QT/src/UAL/QT/Player/BasicViewer.hh:22:18: warning: unused parameter ‘turn’ [-Wunused-parameter]
+     virtual void updateViewer(int turn) { }
+                  ^
+../..//bin/moc MainPlayerUI.h -o .moc/release-shared-mt/moc_MainPlayerUI.cpp
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/moc_MainPlayerUI.o .moc/release-shared-mt/moc_MainPlayerUI.cpp
+../..//bin/moc PlayerUI.h -o .moc/release-shared-mt/moc_PlayerUI.cpp
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/moc_PlayerUI.o .moc/release-shared-mt/moc_PlayerUI.cpp
+../..//bin/moc TablePageUI.h -o .moc/release-shared-mt/moc_TablePageUI.cpp
+g++ -c -pipe -fno-exceptions -Wall -W -O2 -D_REENTRANT  -DQT_NO_DEBUG -DQT_THREAD_SUPPORT -DQT_SHARED -I. -I../../include -I/usr/X11R6/include -I../../../QT/src/ -I../../../../codes/TIBETAN/src/ -I../../../../ext/UI/src/ -I../../../../codes/UAL/src/ -I../../../../codes/PAC/src/ -I../../../../codes/ZLIB/src/ -I../../../../ext/ADXF/src/ -I../../../../ext/SXF/src/ -I../../../../codes/ACCSIM/src/ -I../../../../codes/AIM/src/ -I../../../../tools/sxf/src/ -I../../../../gui/tools/USPAS/ual1/tools/include/ -I.moc/release-shared-mt/ -I../../../tools/include -o .obj/release-shared-mt/moc_TablePageUI.o .moc/release-shared-mt/moc_TablePageUI.cpp
+g++ -fno-exceptions  -Wl,-rpath,/home/ualusr2007/UAL_GUI/ual1/gui/qt-x11-free-3.3.4/lib -o Player ../../../../ext/UI/lib/linux/libUalUI.so .obj/release-shared-mt/BasicEditor.o .obj/release-shared-mt/BasicPlayer.o .obj/release-shared-mt/BasicViewer.o .obj/release-shared-mt/BeamEditor.o .obj/release-shared-mt/ChromfitEditor.o .obj/release-shared-mt/main.o .obj/release-shared-mt/ParameterViewer.o .obj/release-shared-mt/PlayerEvent.o .obj/release-shared-mt/PlayerShell.o .obj/release-shared-mt/PlayerWorker.o .obj/release-shared-mt/PropagatorViewer.o .obj/release-shared-mt/RFEditor.o .obj/release-shared-mt/RightAlignedTableItem.o .obj/release-shared-mt/SectorTracker.o .obj/release-shared-mt/SeparatrixCalculator.o .obj/release-shared-mt/TunefitEditor.o .obj/release-shared-mt/TurnCounter.o .obj/release-shared-mt/MainPlayerUI.o .obj/release-shared-mt/PlayerUI.o .obj/release-shared-mt/TablePageUI.o .obj/release-shared-mt/moc_BasicEditor.o .obj/release-shared-mt/moc_BasicPlayer.o .obj/release-shared-mt/moc_BasicViewer.o .obj/release-shared-mt/moc_BeamEditor.o .obj/release-shared-mt/moc_ChromfitEditor.o .obj/release-shared-mt/moc_ParameterViewer.o .obj/release-shared-mt/moc_PropagatorViewer.o .obj/release-shared-mt/moc_RFEditor.o .obj/release-shared-mt/moc_TunefitEditor.o .obj/release-shared-mt/moc_MainPlayerUI.o .obj/release-shared-mt/moc_PlayerUI.o .obj/release-shared-mt/moc_TablePageUI.o  -L../../lib -L/usr/X11R6/lib -lqt-mt -lGLU -lGL -lXmu -lXrender -lXrandr -lXcursor -lXinerama -lXext -lX11 -lm -lSM -lICE -ldl -lpthread ../../../../tools/lib/linux/libgsl.so.0.5.0
+/usr/bin/ld: .obj/release-shared-mt/ParameterViewer.o: undefined reference to symbol '_ZN3UAL19ADXFConstantManager11getInstanceEv'
+/home/talman/Desktop/GIT/download/ual1/ext/ADXF/lib/linux//libUalADXF2.so: error adding symbols: DSO missing from command line
+collect2: error: ld returned 1 exit status
+make: *** [Player] Error 1
