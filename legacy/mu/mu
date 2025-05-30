@@ -1,0 +1,6 @@
+rm -rf muparser_v134
+tar xvfz muparser_v134.tar.gz
+cd muparser_v134
+./configure
+make clean
+make

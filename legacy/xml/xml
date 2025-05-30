@@ -1,0 +1,7 @@
+rm -rf libxml2-2.9.7
+tar xvfz libxml2-git-snapshot.tar.gz
+cd libxml2-2.9.7/
+./configure
+make
+
+ ll .libs/libxml2.so.2.9.7
