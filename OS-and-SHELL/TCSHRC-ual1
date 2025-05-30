@@ -1,6 +1,9 @@
 cd
 cd git-gui-2/
 cd ual2/
+
+setenv UAL2 `pwd`
+
 cd legacy/
 cd ual1/
 
@@ -12,4 +15,4 @@ alias h  'history'
 
 alias m  'make clean; make >& make.log'
 
-alias s  'pushd examples/E4_typing_of_sxf_elements/; source run_example; popd'
+alias s  'pushd examples/E4_typing_of_sxf_elements/; source run_example; popd; cd $UAL2'
