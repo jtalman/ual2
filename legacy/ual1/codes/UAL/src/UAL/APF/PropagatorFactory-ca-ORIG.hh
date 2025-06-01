@@ -39,8 +39,6 @@ namespace UAL {
 
     /** Returns an iterator pointing to one-past-last element. */
     Iterator end();
-
-    std::map<std::string, PropagatorNodePtr > m_registry;
  
   private:
 
@@ -48,7 +46,7 @@ namespace UAL {
     static PropagatorFactory* s_theInstance;
 
     // Registry
-//  std::map<std::string, PropagatorNodePtr > m_registry;
+    std::map<std::string, PropagatorNodePtr > m_registry;
 
   private:
 
