@@ -1,0 +1,14 @@
+setenv PATH_HOLD $PATH
+echo $PATH
+setenv PATH $UAL2/legacy/gcc/INSTALL-4.8.5/bin/:$PATH
+echo $PATH
+
+./root
+     1,092,328
+
+ll ../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/ | wc -l
+     47
+
+setenv PATH $PATH_HOLD
+echo $PATH
+     "system gcc and g++"
