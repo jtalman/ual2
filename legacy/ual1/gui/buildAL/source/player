@@ -1,4 +1,4 @@
-pushd ../..//gui/run-scripts/USPAS-legacy/examples/player
+pushd $UAL/gui/run-scripts/USPAS-legacy/examples/player
 
 make clean
 make
