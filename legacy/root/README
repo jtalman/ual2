@@ -1,6 +1,6 @@
 Run
-          source root
-(rather than
+          source ./root
+(rather than just
           ./root)
 
 This handles command
