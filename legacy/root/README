@@ -1,0 +1,8 @@
+Run
+          source root
+(rather than
+          ./root)
+
+This handles command
+          setenv
+correctly.
