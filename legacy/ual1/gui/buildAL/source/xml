@@ -1,0 +1,11 @@
+pushd $UAL/gui
+
+rm -rf libxml2-2.9.7
+tar xvfz libxml2-git-snapshot.tar.gz
+cd libxml2-2.9.7/
+./configure
+make
+
+popd
+
+ls -l ../../libxml2-2.9.7/.libs/libxml2.so.2.9.7

@@ -1,0 +1,9 @@
+pushd $UAL/gui
+
+cd ROOT
+make clean
+make
+
+popd
+
+ls -l ../../ROOT/lib/linux/libUalRootViewers.so

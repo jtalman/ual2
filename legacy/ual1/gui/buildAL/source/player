@@ -1,0 +1,8 @@
+pushd $UAL/gui/run-scripts/USPAS-legacy/examples/player
+
+make clean
+make
+
+popd
+
+ls -l ../../run-scripts/USPAS-legacy/examples/player/lib/linux/libUspasPlayer.so

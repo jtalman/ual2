@@ -1,0 +1,9 @@
+pushd $UAL/gui
+
+cd QT
+make clean
+make
+
+popd
+
+ls -l ../../QT/lib/linux/libUalQt.so
