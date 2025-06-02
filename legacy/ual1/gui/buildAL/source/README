@@ -1,3 +1,0 @@
-source ./all
-pushd ../../run-scripts/USPAS-legacy/examples/RT-transition/
-./run-RT-transition
