@@ -10,9 +10,12 @@ cd ual1/
 setenv UAL `pwd`
 source setup-linux-ual
 
+alias m  'pushd $UAL; make clean; make >& make.log'
+
+alias E4  'pushd $UAL/examples/E4_typing_of_sxf_elements/; source run_example; popd; cd $UAL2'
+
+alias g  'pushd $UAL/gui/buildAL/source'
+alias g  'pushd $UAL/gui/run-scripts/USPAS-legacy/examples/RT-transition/'
+
 alias lm 'ls -ialt | more'
 alias h  'history'
-
-alias m  'make clean; make >& make.log'
-
-alias s  'pushd examples/E4_typing_of_sxf_elements/; source run_example; popd; cd $UAL2'
