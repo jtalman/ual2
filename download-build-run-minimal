@@ -1,0 +1,29 @@
+This "syntax is to be followed exactly!
+__________________________________________________
+
+cd /home/ualusr2011/git-gui-2/
+      (Comment: note the implied user, ualusr2011)
+
+git clone https://github.com/jtalman/ual2
+
+cd ual2/legacy/ual1
+      (Comment: possibly a little unfamiliar)
+
+setenv UAL `pwd`
+source setup-linux-ual
+
+make clean
+make >& make.log
+      (Comment: check for errors
+       5 warnings, 2 ignorable, vestigial "html errors)
+
+cd gui/buildAL/source/
+
+source ./all
+      (Comment: error check of this follows)
+
+cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
+
+./run-RT-transition
+      launch CT - DE plot
+            (verify transition, and RF phase change notification)
