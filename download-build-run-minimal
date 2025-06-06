@@ -25,5 +25,5 @@ source ./all
 cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 
 ./run-RT-transition
-      launch CT - DE plot
+      launch "Bunch CT-DE" Animated Graph
             (verify transition, and RF phase change notification)
