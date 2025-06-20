@@ -1,0 +1,11 @@
+if(argc!=6){
+   std::cout << "usage: ./bend-transfer ./sxf/PTR_lsnomEQ4.142_NsEq8_Toroidal_sl4.sxf 7.2426851e+05 +0.0 0 0.02 >! /dev/null (>&! OUT)\n";
+// std::cout << "usage: ./bend-transfer ./sxf/PTR_lsnomEQ4.142_NsEq8_Toroidal_sl4.sxf 2.2351674e+05 0.0 0 0.02 >! /dev/null (>&! OUT)\n";
+ std::cout << "argv[0] is this executable         - ./bend-transfer                               \n";
+ std::cout << "argv[1] is the input sxf file      - ./sxf/PTR_lsnomEQ4.142_NsEq8_Toroidal_sl4.sxf \n";
+ std::cout << "argv[2] is the design frequency, fD, - 2.2351674e+05                               \n";
+ std::cout << "argv[3] is the nominal electrode m - -0.0                                          \n";
+ std::cout << "argv[4] is the initialSpin file creation type - 0                                  \n";
+ std::cout << "argv[5] is the fringe field length - 0.02                                          \n";
+ exit(0);
+}

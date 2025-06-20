@@ -1,0 +1,25 @@
+: COPY AND PASTE BOTH THIS STANZA
+: MAIN SERVER SIDE COMPILE:
+\cp $UAL/env/linux/Makefile.configDEBUG $UAL/env/linux/Makefile.config
+cp propagate-transfer.method $UAL/codes/ETEAPOT2/src/ETEAPOT2/Integrator/bendMethods/propagate.method
+pushd $UAL/codes/ETEAPOT2
+ll lib/linux
+make clean
+ll lib/linux
+make
+ll lib/linux
+popd
+
+: AND THIS STANZA
+: MAIN CLIENT SIDE COMPILE AND RUN:
+cp userBunch1-X userBunch
+make clean
+make
+\rm stdcout
+\rm stdcerr
+  (./E3-client ./E_BM_Z.sxf +5.4142677801e+05 +0.0 0 0.02 >! stdcout) >&! stdcerr
+
+\rm DATA
+\rm matrix
+cat stdcout | grep DATA >! DATA
+cat DATA | tail -1 | tr -s ' ' | cut -d' ' -f2-3 > matrix
