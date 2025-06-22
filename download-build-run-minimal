@@ -21,8 +21,8 @@ make >& make.log
 cd gui/buildAL/source/
 
 source ./all
-      (Comment: error check of this follows, via a gui run script example.)
-                this takes the better part of an hour! "Legacy qt", and "legacy root" must be built.)
+      (Comment: this takes the better part of an hour! "Legacy qt", and "legacy root", ... must be built.
+                error check of these builds follows via a gui run script example.)
 
 cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 
