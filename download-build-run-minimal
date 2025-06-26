@@ -5,7 +5,10 @@ cd /home/ualusr2011/git-gui-2/
       (Comment: note the implied user, ualusr2011)
 
 git clone https://github.com/jtalman/ual2
-      (Comment: this directory may already exist! Remove it, or rename it.)
+      (Comment: this directory may already exist! Remove it, or rename it. You may want to restore it.)
+
+cp ual2/OS-and-SHELL/TCSHRC-ual2 ~/.tcshrc
+      (Comment: this file may already exist! Remove it, or rename it. You may want to restore it.)
 
 cd ual2/legacy/ual1
       (Comment: possibly a little unfamiliar)
