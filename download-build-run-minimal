@@ -10,6 +10,8 @@ git clone https://github.com/jtalman/ual2
 cp ual2/OS-and-SHELL/TCSHRC-ual2 ~/.tcshrc
       (Comment: this file may already exist! Remove it, or rename it. You may want to restore it.)
 
+(Comment: noclobber?)
+
 source ~/.tcshrc
       (Comment: possibly a little unfamiliar)
 
