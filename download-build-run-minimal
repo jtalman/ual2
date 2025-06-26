@@ -19,7 +19,7 @@ source setup-linux-ual
 make clean
 make >& make.log
       (Comment: check for errors with search string "rror " (note the trailing space, " "). This should give
-       5 warnings, 2 ignorable, vestigial, "html errors.)
+       5 warnings, 2 ignorable, vestigial, "html errors".)
 
 cd gui/buildAL/source/
 
