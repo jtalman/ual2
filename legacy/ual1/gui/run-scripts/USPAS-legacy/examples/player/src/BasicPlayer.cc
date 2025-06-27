@@ -63,6 +63,7 @@ std::cerr << __FILE__ << ": " << __LINE__ << "enter void UAL::USPAS::BasicPlayer
   listView->setRootIsDecorated(true);
   listView->setSortColumn(-1);
 
+/*
   QFont font;
   font.setFamily(QString::fromUtf8("DejaVu Sans"));
   font.setPointSize(12);
@@ -70,6 +71,14 @@ std::cerr << __FILE__ << ": " << __LINE__ << "enter void UAL::USPAS::BasicPlayer
   font.setWeight(75);
   listView->setFont( font );
   listView->setFont( font );
+*/
+
+  QFont font;
+  font.setFamily(QString::fromUtf8("Courier"));
+  font.setPointSize(18);
+  font.setBold(true);
+  font.setWeight(75);
+  listview->setFont( font );
 
   QListViewItem* infoDir            = new QListViewItem(listView, tr("Info"));
   infoDir->setOpen(true);

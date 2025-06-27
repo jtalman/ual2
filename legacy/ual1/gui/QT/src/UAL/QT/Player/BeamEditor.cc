@@ -64,8 +64,8 @@ void UAL::QT::BeamEditor::initTable()
   label->setText( tr( "Beam Parameters" ) );
 
   QFont font;
-  font.setFamily(QString::fromUtf8("DejaVu Sans"));
-  font.setPointSize(16);
+  font.setFamily(QString::fromUtf8("Courier"));
+  font.setPointSize(18);
   font.setBold(true);
   font.setWeight(75);
   label->setFont( font );
