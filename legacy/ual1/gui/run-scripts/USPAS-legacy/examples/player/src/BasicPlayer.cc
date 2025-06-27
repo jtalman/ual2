@@ -78,7 +78,7 @@ std::cerr << __FILE__ << ": " << __LINE__ << "enter void UAL::USPAS::BasicPlayer
   font.setPointSize(18);
   font.setBold(true);
   font.setWeight(75);
-  listview->setFont( font );
+  listView->setFont( font );
 
   QListViewItem* infoDir            = new QListViewItem(listView, tr("Info"));
   infoDir->setOpen(true);
