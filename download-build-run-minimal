@@ -1,4 +1,14 @@
 This "syntax" is to be followed exactly!
+
+Running as user ualusr2011 is required!
+
+Historically, ualusr2011 has used ual1. These instructions are for ual2.
+
+Also, ualusr2011 has run many other applications. A highly specialized ~/.tcshrc file likely exists!
+
+These instructions overwrite the ~/.tcshrc file.
+
+Very likely, ualusr2011 will want to restore it, with his own augmentation.
 __________________________________________________
 
 cd /home/ualusr2011/git-gui-2/
