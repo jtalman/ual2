@@ -2,13 +2,15 @@ This "syntax" is to be followed exactly!
 
 Running as user ualusr2011 is required!
 
-Historically, ualusr2011 has used ual1. These instructions are for ual2.
+Historically, ualusr2011 has used ual1.
 
-Also, ualusr2011 has run many other applications. A highly specialized ~/.tcshrc file likely exists!
+These instructions are for ual2.
 
-These instructions overwrite the ~/.tcshrc file.
+Also, ualusr2011 has likely run many other applications.
 
-Very likely, ualusr2011 will want to restore it, with his own augmentation.
+These instructions overwrite the SHELL, tcsh, configuration file ~/.tcshrc.
+
+You may want to save the current ~/.tcshrc file, to restore it after the ual2 install.
 __________________________________________________
 
 cd /home/ualusr2011/git-gui-2/
