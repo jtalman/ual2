@@ -1,4 +1,4 @@
-This "syntax" is to be followed exactly! The parenthesized Comments should be read.
+This "syntax" is to be followed exactly! The parenthesized Comments should be read first.
 
 Running as user ualusr2011 is required!
 
@@ -7,50 +7,37 @@ Historically, ualusr2011 has used ual1.
 These instructions are for ual2.
 
 Also, ualusr2011 has likely run many other applications.
-
-These instructions overwrite the SHELL, tcsh, configuration file ~/.tcshrc.
-
-You may want to save the current ~/.tcshrc file, to restore it after the ual2 install.
 __________________________________________________
 
-(Comment: note the implied user, ualusr2011)
 cd /home/ualusr2011/git-gui-2/
+      (Comment: note the implied user, ualusr2011)
 
-(Comment: noclobber?)
-
-(Comment: this directory may already exist! Remove it, or rename it. You may want to restore it, later.)
 git clone https://github.com/jtalman/ual2
+      (Comment: this directory may already exist! Remove it, or rename it. You may want to restore it, later.)
 
-(Comment: this file may already exist! Remove it, or rename it. You may want to restore it, later.)
-cp ual2/OS-and-SHELL/TCSHRC-ual2 ~/.tcshrc
+#cp ual2/OS-and-SHELL/TCSHRC-ual2 ~/.tcshrc
+#     (Comment: this file may already exist! Remove it, or rename it. You may want to restore it, later.)
 
-(Comment: noclobber?)
+cd ual2/legacy/ual1
+      (Comment: possibly a little unfamiliar)
 
-(Comment: possibly a little unfamiliar)
-source ~/.tcshrc
+setenv UAL `pwd`
+source setup-linux-ual
 
-# these next commented lines are "sourced".
-# cd ual2/legacy/ual1
-#     (Comment: possibly a little unfamiliar)
-
-# setenv UAL `pwd`
-# source setup-linux-ual
-
-(Comment: check for errors with search string "rror " (note the trailing space, " "). This should give
- 5 warnings, 2 ignorable, vestigial, "html errors".)
 make clean
 make >& make.log
+      (Comment: check for errors with search string "rror " (note the trailing space, " "). This should give
+       5 warnings, 2 ignorable, vestigial, "html errors".)
 
 cd gui/buildAL/source/
 
 source ./all
-      (Comment: this takes the better part of an hour! "Legacy qt", and "legacy root", ... must be built.
-                error check of these builds follows via a gui run script example.)
+      (Comment: this can take the better part of an hour on a slow box!
+                "legacy qt", and "legacy root", ... must be built.
+                error check of these builds is next via a gui run script example.)
 
 cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 
 ./run-RT-transition
       launch "Bunch CT-DE" Animated Graph
             (verify transition, and RF phase change notification)
-
-(Comment: Restore ~/.tcshrc?)
