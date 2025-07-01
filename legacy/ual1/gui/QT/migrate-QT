@@ -1,0 +1,15 @@
+cp src/UAL/QT/Player/MainPlayerUI.hh-NEW src/UAL/QT/Player/MainPlayerUI.hh
+
+cp src/UAL/QT/Player/MainPlayerUI.ui-NEW src/UAL/QT/Player/MainPlayerUI.ui
+
+cp src/UAL/QT/Player/Makefile-NEW src/UAL/QT/Player/Makefile
+
+cp src/UAL/QT/Player/PlayerUI.ui-NEW src/UAL/QT/Player/PlayerUI.ui
+
+cp src/UAL/QT/Player/TablePageUI.ui-NEW src/UAL/QT/Player/TablePageUI.ui
+
+ls -l src/UAL/QT/Player/MainPlayerUI.hh*
+ls -l src/UAL/QT/Player/MainPlayerUI.ui*
+ls -l src/UAL/QT/Player/Makefile*
+ls -l src/UAL/QT/Player/PlayerUI.ui*
+ls -l src/UAL/QT/Player/TablePageUI.ui*
