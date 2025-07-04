@@ -12,35 +12,53 @@ The parenthesized c(C)omments should be read before executing the corresponding 
 __________________________________________________
 
 cd /home/ualusr2011/git-gui-2/
-      (Comment: note the implied user, ualusr2011)
+#     (Comment: note the implied user, ualusr2011)
 
 git clone https://github.com/jtalman/ual2
-      (Comment: this directory may already exist! Remove it, or rename it. You may want to restore it, later.)
+#     (Comment: this directory may already exist! Remove it, or rename it. You may want to restore it, later.)
 
 #cp ual2/OS-and-SHELL/TCSHRC-ual2 ~/.tcshrc
 #     (Comment: this file may already exist! Remove it, or rename it. You may want to restore it, later.
 #               This line is optional. You're likely to have your own ~/.tcshrc file!)
 
 cd ual2/legacy/ual1
-      (Comment: possibly a little unfamiliar)
+#     (Comment: possibly a little unfamiliar)
 
 setenv UAL `pwd`
 source setup-linux-ual
 
 make clean
 make >& make.log
-      (Comment: check for errors with search string "rror " (note the trailing space, " "). This should give
-       5 warnings, 2 ignorable, vestigial, "html errors".)
+#     (Comment: check for errors with search string "rror " (note the trailing space, " "). This should give
+#      5 warnings, 2 ignorable, vestigial, "html errors".)
 
 cd gui/buildAL/source/
 
 source ./all
-      (Comment: this can take the better part of an hour on a slow box!
-                "legacy qt", and "legacy root", ... must be built.
+#     (Comment: this can take the better part of an hour on a slow box!
+#               "legacy qt", and "legacy root", ... must be built.
                 error check of these builds is next via a gui run script example.)
+__________________________________________________
+# GUI ORIGINAL
 
 cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 
 ./run-RT-transition
-      launch "Bunch CT-DE" Animated Graph
-            (verify transition, and RF phase change notification)
+#     launch "Bunch CT-DE" Animated Graph
+#           (verify transition, and RF phase change notification)
+__________________________________________________
+# GUI LATEST
+
+cd $UAL2/legacy/ual1/gui/QT/
+
+./migrate-QT
+
+cd ../buildAL/source/
+
+./post-legacy
+
+cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
+
+./run-RT-transition
+#     launch "Bunch CT-DE" Animated Graph
+#           (verify transition, and RF phase change notification)

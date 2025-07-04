@@ -144,9 +144,9 @@ int main(int argc, char *argv[])
   // SoQt::init(gtPlayer);
 
   qtApp.setMainWidget(player);
-  int w = QApplication::desktop()->width();
-  int h = QApplication::desktop()->height();
-  player->resize(w,h);
+//int w = QApplication::desktop()->width();
+//int h = QApplication::desktop()->height();
+//player->resize(w,h);
   player->show();
 
   qtApp.exec();
