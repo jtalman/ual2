@@ -8,13 +8,14 @@
         <font>
             <family>Courier</family>
             <pointsize>16</pointsize>
+            <bold>true</bold>
         </font>
     </property>
     <property name="geometry">
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>600</width>
+            <width>650</width>
             <height>500</height>
         </rect>
     </property>
@@ -259,7 +260,7 @@
                             </property>
                             <property name="minimumSize">
                                 <size>
-                                    <width>400</width>
+                                    <width>500</width>
                                     <height>0</height>
                                 </size>
                             </property>
