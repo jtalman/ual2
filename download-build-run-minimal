@@ -37,7 +37,8 @@ cd gui/buildAL/source/
 source ./all
 #     (Comment: this can take the better part of an hour on a slow box!
 #               "legacy qt", and "legacy root", ... must be built.
-                error check of these builds is next via a gui run script example.)
+#               A list of the built libraries is provided.
+#               Error check of these builds is next via a gui run script example.)
 __________________________________________________
 # GUI ORIGINAL
 
