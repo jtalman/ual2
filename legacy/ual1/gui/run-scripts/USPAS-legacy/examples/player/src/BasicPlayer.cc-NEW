@@ -73,12 +73,14 @@ std::cerr << __FILE__ << ": " << __LINE__ << "enter void UAL::USPAS::BasicPlayer
   listView->setFont( font );
 */
 
+/*
   QFont font;
   font.setFamily(QString::fromUtf8("Courier"));
   font.setPointSize(18);
   font.setBold(true);
   font.setWeight(75);
   listView->setFont( font );
+*/
 
   QListViewItem* infoDir            = new QListViewItem(listView, tr("Info"));
   infoDir->setOpen(true);
