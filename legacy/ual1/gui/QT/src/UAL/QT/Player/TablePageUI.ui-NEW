@@ -8,6 +8,7 @@
         <font>
             <family>Courier</family>
             <pointsize>16</pointsize>
+            <bold>true</bold>
         </font>
     </property>
     <property name="geometry">
