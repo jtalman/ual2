@@ -1,6 +1,8 @@
 This "syntax" is to be followed exactly!
 
-Running as user ualusr2011 is required! A specific directory, ~/git-gui-2/, as well.
+Running as user ualusr2011 is required! A specific directory
+      /home/ualusr2011/git-gui-2/
+as well.
 
 Historically, ualusr2011 has used ual1. These instructions are for ual2.
 
