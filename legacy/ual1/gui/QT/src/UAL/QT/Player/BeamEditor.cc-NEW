@@ -63,85 +63,88 @@ void UAL::QT::BeamEditor::initTable()
 {
   label->setText( tr( "Beam Parameters" ) );
 
+/*
   QFont font;
   font.setFamily(QString::fromUtf8("Courier"));
-  font.setPointSize(18);
+  font.setPointSize(16);
   font.setBold(true);
-  font.setWeight(75);
+//font.setWeight(75);
   label->setFont( font );
   table->setFont( font );
+*/
 
   table->setNumCols(3);
 
   table->horizontalHeader()->setLabel(0, tr("Parameter"));
+  table->setColumnWidth(0, 350);
   table->setColumnReadOnly(0, true);
-  table->setColumnWidth(0, 175);
 
   table->horizontalHeader()->setLabel(1, tr("Value"));
-  table->setColumnReadOnly(1, false);
   table->setColumnWidth(1, 100);
+  table->setColumnReadOnly(1, false);
 
   table->horizontalHeader()->setLabel(2, tr("Unit"));
+  table->setColumnWidth(2, 150);
   table->setColumnReadOnly(2, true);
 
   table->setColumnStretchable(0, false);
   table->setColumnStretchable(1, false);
-  table->setColumnStretchable(2, true);
+  table->setColumnStretchable(2, false);
 
 //table->setNumRows(9);
 //table->setNumRows(10);
 //table->setNumRows(12);
   table->setNumRows(13);                 // plot updates
 
-  table->setText(0, 0, tr("type:"));
+  table->setText(0, 0, tr("Type:"));
   table->setText(0, 1, tr(""));
   table->setText(0, 2, tr(""));
 
-  table->setText(1, 0, tr("particles per bunch:"));
+  table->setText(1, 0, tr("Particles per bunch:"));
   table->setText(1, 1, tr(""));
   table->setText(1, 2, tr(""));
 
-  table->setText(2, 0, tr("gamma:"));
+  table->setText(2, 0, tr("Gamma:"));
   table->setText(2, 1, tr(""));
   table->setText(2, 2, tr(""));
 
-  table->setText(3, 0, tr("mass:"));
+  table->setText(3, 0, tr("Mass:"));
   table->setText(3, 1, tr(""));
   table->setText(3, 2, tr("GeV/c2"));
 
-  table->setText(4, 0, tr("charge:"));
+  table->setText(4, 0, tr("Charge:"));
   table->setText(4, 1, tr(""));
   table->setText(4, 2, tr(""));
 
-  table->setText(5, 0, tr("enx:"));
+  table->setText(5, 0, tr("Enx:"));
   table->setText(5, 1, tr(""));
   table->setText(5, 2, tr("pi*m*rad"));
 
-  table->setText(6, 0, tr("eny:"));
+  table->setText(6, 0, tr("Eny:"));
   table->setText(6, 1, tr(""));
   table->setText(6, 2, tr("pi*m*rad"));
 
-  table->setText(7, 0, tr("half bunch length, ct max:"));
+  table->setText(7, 0, tr("Half bunch length, ct max:"));
   table->setText(7, 1, tr(""));
   table->setText(7, 2, tr("m"));
 
-  table->setText(8, 0, tr("half energy spread, de/p0c:"));
+  table->setText(8, 0, tr("Half energy spread, de/p0c:"));
   table->setText(8, 1, tr(""));
   table->setText(8, 2, tr(""));
 
-  table->setText(9, 0, tr("turns:"));
+  table->setText(9, 0, tr("Turns:"));
   table->setText(9, 1, tr(""));
   table->setText(9, 2, tr(""));
 
-  table->setText(10, 0, tr("plot updates:"));
+  table->setText(10, 0, tr("Plot updates:"));
   table->setText(10, 1, tr(""));
   table->setText(10, 2, tr(""));
 
-  table->setText(11, 0, tr("steps:"));
+  table->setText(11, 0, tr("Steps:"));
   table->setText(11, 1, tr(""));
   table->setText(11, 2, tr(""));
 
-  table->setText(12, 0, tr("bins:"));
+  table->setText(12, 0, tr("Bins:"));
   table->setText(12, 1, tr(""));
   table->setText(12, 2, tr(""));
 
