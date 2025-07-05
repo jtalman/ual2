@@ -1,16 +1,30 @@
 This "syntax" is to be followed exactly!
 
 Running as user ualusr2011 is required! A specific directory
+
       /home/ualusr2011/git-gui-2/
+
 as well.
 
-Historically, ualusr2011 has used ual1. These instructions are for ual2.
+Shell tcsh must be used!
+
+Historically, ualusr2011 has used ual1.
+
+These instructions are for ual2.
 
 Also, ualusr2011 has likely run many other applications.
+
+A suggested "run commands" file is in
+
+      /home/ualusr2011/git-gui-2/ual2/OS-and-SHELL/TCSHRC-ual2
+
+and can be copied to ~/.tcshrc
 
 As usual, one should be careful about overwriting important files. The "noclobber" option may be relevant.
 
 The parenthesized c(C)omments should be read before executing the corresponding command.
+
+The pound sign, #, also designates a comment line.
 __________________________________________________
 
 cd /home/ualusr2011/git-gui-2/
