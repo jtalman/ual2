@@ -39,7 +39,7 @@ git clone https://github.com/jtalman/ual2
 
 #cp ual2/OS-and-SHELL/TCSHRC-ual2 ~/.tcshrc
 #     (Comment: this file may already exist! Remove it, or rename it. You may want to restore it, later.
-#               This line is optional. You're likely to have your own ~/.tcshrc file!)
+#               This line is optional. You're likely to have your own ~/.tcshrc file!
 #               These next 5 commands are pulled into this example.)
 
 cd ual2/legacy/ual1
