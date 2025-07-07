@@ -6,11 +6,15 @@ as well.
 
 Shell tcsh must be used!
 
-A suggested "run commands" file is in
+A suggested "run commands" file is on the web at
+
+      https://github.com/jtalman/ual2/blob/main/download-build-run-minimal
+
+and in the download at
 
       /home/ualusr2011/git-gui-2/ual2/OS-and-SHELL/TCSHRC-ual2
 
-and can be copied to ~/.tcshrc
+It can be copied to ~/.tcshrc
 
 As usual, one should be careful about overwriting important files. The "noclobber" option may be relevant.
 
