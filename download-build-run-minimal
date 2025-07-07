@@ -8,9 +8,9 @@ Shell tcsh must be used!
 
 A suggested "run commands" file is on the web at
 
-      https://github.com/jtalman/ual2/blob/main/download-build-run-minimal
+      https://github.com/jtalman/ual2/blob/main/OS-and-SHELL/TCSHRC-ual2
 
-and in the download at
+and in the cloned download at
 
       /home/ualusr2011/git-gui-2/ual2/OS-and-SHELL/TCSHRC-ual2
 
