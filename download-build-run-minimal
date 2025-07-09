@@ -28,7 +28,7 @@ The parenthesized c(C)omments should be read before executing the corresponding 
 
 The pound sign, #, also designates a comment line.
 
-This "command line syntax" is to be followed exactly!
+This "command line syntax" is to be followed exactly! A direct "copy and paste" might be best.
 __________________________________________________
 
 cd /home/ualusr2011/git-gui-2/
