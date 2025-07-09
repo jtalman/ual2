@@ -14,7 +14,7 @@ and in the cloned download at
 
       /home/ualusr2011/git-gui-2/ual2/OS-and-SHELL/TCSHRC-ual2
 
-It can be copied to ~/.tcshrc
+It can be copied to ~/.tcshrc for subsequent use. It relies on an earlier clone of ual2.
 
 As usual, one should be careful about overwriting important files.
 
@@ -62,11 +62,12 @@ make clean
 make >& make.log
 #     (Comment: check for errors with search string "rror " (note the trailing space, " "). This should give
 #      5 warnings, 2 ignorable, vestigial, "html errors".)
+#     (Comment: this takes ca 15 minutes on a W530 Thinkpad.)
 
 cd gui/buildAL/source/
 
 source ./all
-#     (Comment: this can take the better part of an hour on a slow box!
+#     (Comment: this can take the better part of an hour on a slow box! It takes ca half hour on W530.
 #               "legacy qt", and "legacy root", ... must be built.
 #               A list of the built libraries is provided.
 #               Error check of these builds is next via a gui run script example.)
