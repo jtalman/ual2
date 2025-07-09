@@ -22,6 +22,8 @@ Also, ualusr2011 may have run many other applications.
 
 Historically, ualusr2011 has used ual1.
 
+The current ~/.tcshrc file may very well be for ual1!
+
 These instructions are for ual2.
 
 The parenthesized c(C)omments should be read before executing the corresponding command.
