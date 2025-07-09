@@ -16,7 +16,9 @@ and in the cloned download at
 
 It can be copied to ~/.tcshrc
 
-As usual, one should be careful about overwriting important files. The "noclobber" option may be relevant.
+As usual, one should be careful about overwriting important files.
+
+The "noclobber" option may be relevant. It is unset here.
 
 Also, ualusr2011 may have run many other applications.
 
@@ -32,6 +34,12 @@ The pound sign, #, also designates a comment line.
 
 This "command line syntax" is to be followed exactly! A direct "copy and paste" might be best.
 __________________________________________________
+
+#     (Comment: open terminal
+#               this should come up in the TENEX schell, tcsh.
+#               this in turn is initialized from file ~/.tcshrc)
+
+unset noclobber
 
 cd /home/ualusr2011/git-gui-2/
 #     (Comment: note the implied user, ualusr2011)
@@ -73,7 +81,7 @@ cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 __________________________________________________
 # GUI LATEST
 
-cd $UAL2/legacy/ual1/gui/QT/
+cd /home/ualusr2011/git-gui-2/legacy/ual1/gui/QT/
 
 ./migrate-QT
 
