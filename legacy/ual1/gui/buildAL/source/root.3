@@ -4,15 +4,15 @@ setenv PATH /home/ualusr2011/git-gui-2/ual2/legacy/gcc/INSTALL-4.8.5/bin/:$PATH
 pushd $UAL/gui
 
 rm -rf root_v4.04.02.source-SL7.6Nitrogen-UAL-mod*
-\cp ./buildAL/ualusr2011/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz .
+cp ./buildAL/ualusr2011/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz .
 tar xvfz root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz
 cd root_v4.04.02.source-SL7.6Nitrogen-UAL-mod
 
-\cp ./config/Makefile.config my-makefile.config
-\mv ./ldap/Module.mk ./ldap/Module.mkHOLD
+cp ./config/Makefile.config my-makefile.config
+mv ./ldap/Module.mk ./ldap/Module.mkHOLD
 ./configure
-\cp ./my-makefile.config ./config/Makefile.config
-\mv ./ldap/Module.mkHOLD ./ldap/Module.mk
+cp ./my-makefile.config ./config/Makefile.config
+mv ./ldap/Module.mkHOLD ./ldap/Module.mk
 make clean
 make all >& make.log
 cd lib
