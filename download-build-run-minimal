@@ -83,7 +83,10 @@ cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 __________________________________________________
 # GUI LATEST
 
-cd /home/ualusr2011/git-gui-2/legacy/ual1/gui/QT/
+cd /home/ualusr2011/git-gui-2/ual2/legacy/ual1/gui/QT/
+#     (Comment: setenv UAL2 /home/ualusr2011/git-gui-2/ual2/
+#               cd $UAL2/legacy/ual1/gui/QT/
+#               is equivalent.)
 
 ./migrate-QT
 
