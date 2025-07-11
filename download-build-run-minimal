@@ -50,7 +50,11 @@ git clone https://github.com/jtalman/ual2
 #               These next 5 commands are pulled into this example.)
 
 cd ual2/legacy/ual1
-#     (Comment: possibly a little unfamiliar)
+#     (Comment: possibly a little unfamiliar.
+#               ual2 is intended to facilitate the latest developments.
+#               ual1 is now viewed as "legacy", hence a subdirectory.
+#               $UAL used to be the central environmental variable.
+#               $UAL2 is intended to be the new central environmental variable.)
 
 setenv UAL `pwd`
 source setup-linux-ual
