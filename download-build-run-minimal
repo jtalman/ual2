@@ -15,7 +15,7 @@ OVERVIEW:
 
    As usual, one should be careful about overwriting important files.
 
-   The "noclobber" option may be relevant. It is unset here.
+   The "noclobber" option may be relevant.
 
    Also, ualusr2011 may have run many other applications.
 
