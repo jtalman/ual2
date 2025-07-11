@@ -1,45 +1,48 @@
-OVERVIEW:
-   Running as user ualusr2011 is required!
+Running as user ualusr2011 is required! A specific directory
 
-   A specific directory
-         /home/ualusr2011/git-gui-2/
-   is required, as well.
+      /home/ualusr2011/git-gui-2/
 
-   Shell tcsh must be used!
+as well.
 
-   A suggested "run commands" file is on the web at
-         https://github.com/jtalman/ual2/blob/main/OS-and-SHELL/TCSHRC-ual2
-   and in the cloned download at
-         /home/ualusr2011/git-gui-2/ual2/OS-and-SHELL/TCSHRC-ual2
-   It can be copied to ~/.tcshrc for subsequent use. It relies on an earlier clone of ual2.
+Shell tcsh must be used!
 
-   As usual, one should be careful about overwriting important files.
+A suggested "run commands" file is on the web at
 
-   The "noclobber" option may be relevant. It is unset here.
+      https://github.com/jtalman/ual2/blob/main/OS-and-SHELL/TCSHRC-ual2
 
-   Also, ualusr2011 may have run many other applications.
+and in the cloned download at
 
-   Historically, ualusr2011 has used ual1.
+      /home/ualusr2011/git-gui-2/ual2/OS-and-SHELL/TCSHRC-ual2
 
-   The current ~/.tcshrc file may very well be for ual1!
+It can be copied to ~/.tcshrc for subsequent use. It relies on an earlier clone of ual2.
 
-   These instructions are for ual2.
+As usual, one should be careful about overwriting important files.
 
-   The parenthesized c(C)omments should be read before executing the corresponding command.
+The "noclobber" option may be relevant. It is unset here.
 
-   The pound sign, #, also designates a comment line.
+Also, ualusr2011 may have run many other applications.
 
-   This "command line syntax" is to be followed exactly! A direct "copy and paste" might be best.
+Historically, ualusr2011 has used ual1.
+
+The current ~/.tcshrc file may very well be for ual1!
+
+These instructions are for ual2.
+
+The parenthesized c(C)omments should be read before executing the corresponding command.
+
+The pound sign, #, also designates a comment line.
+
+This "command line syntax" is to be followed exactly! A direct "copy and paste" might be best.
 __________________________________________________
-
-COMMAND LINE SYNTAX:
 
 #     (Comment: open terminal
 #               this should come up in the TENEX schell, tcsh.
 #               this in turn is initialized from file ~/.tcshrc)
 
+unset noclobber
+
 cd /home/ualusr2011/git-gui-2/
-#     (Comment: note the implied user, ualusr2011, and directory, ~/git-gui-2/)
+#     (Comment: note the implied user, ualusr2011)
 
 git clone https://github.com/jtalman/ual2
 #     (Comment: this directory may already exist! Remove it, or rename it. You may want to restore it, later.)
