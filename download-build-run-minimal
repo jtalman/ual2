@@ -35,15 +35,16 @@ __________________________________________________
 COMMAND LINE SYNTAX:
 
 #     (Comment: open terminal
-#               this should come up in the TENEX schell, tcsh.
+#               this should come up in the TENEX shell, tcsh.
 #               this in turn is initialized from file ~/.tcshrc)
 
-cd /home/ualusr2011/git-gui-2/
 #     (Comment: note the implied user, ualusr2011, and directory, ~/git-gui-2/)
+cd /home/ualusr2011/git-gui-2/
 
-git clone https://github.com/jtalman/ual2
 #     (Comment: this directory may already exist! Remove it, or rename it. You may want to restore it, later.)
+git clone https://github.com/jtalman/ual2
 
+#     (Commented out)
 #cp ual2/OS-and-SHELL/TCSHRC-ual2 ~/.tcshrc
 #     (Comment: this file may already exist! Remove it, or rename it. You may want to restore it, later.
 #               This line is optional. You're likely to have your own ~/.tcshrc file!
@@ -51,7 +52,7 @@ git clone https://github.com/jtalman/ual2
 
 cd ual2/legacy/ual1
 #     (Comment: possibly a little unfamiliar.
-#               ual2 is intended to facilitate the latest developments.
+#               ual2 is intended to facilitate the latest developments on AlmaLinux 9.
 #               ual1 is now viewed as "legacy", hence a subdirectory.
 #               $UAL used to be the central environmental variable.
 #               $UAL2 is intended to be the new central environmental variable.)
@@ -63,13 +64,13 @@ make clean
 make >& make.log
 #     (Comment: check for errors with search string "rror " (note the trailing space, " "). This should give
 #      5 warnings, 2 ignorable, vestigial, "html errors".)
-#     (Comment: this takes ca 15 minutes on a W530 Thinkpad.)
+#     (Comment: this takes ca 10 - 15 minutes on a W530 Thinkpad.)
 
 cd gui/buildAL/source/
 
 source ./all
-#     (Comment: this can take the better part of an hour on a slow box! It takes ca half hour on W530.
-#               "legacy qt", and "legacy root", ... must be built.
+#     (Comment: this can take the better part of an hour on a slow box! It takes ca 25 minutes to half an hour on W530.
+#               "legacy qt", and "legacy root", ... are being built.
 #               A list of the built libraries is provided.
 #               Error check of these builds is next via a gui run script example.)
 __________________________________________________
@@ -78,8 +79,10 @@ __________________________________________________
 cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 
 ./run-RT-transition
-#     launch "Bunch CT-DE" Animated Graph
-#           (verify transition, and RF phase change notification)
+#     Identify the Animated Graphics section.
+#     Launch the "Bunch CT-DE" Animated Graph
+#     by clicking the Setup "button", then the Run "button" in lower left
+#           (verify transition, and RF phase change notification, both at step 4500)
 __________________________________________________
 # GUI LATEST
 
@@ -97,5 +100,7 @@ cd ../buildAL/source/
 cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 
 ./run-RT-transition
-#     launch "Bunch CT-DE" Animated Graph
-#           (verify transition, and RF phase change notification)
+#     Identify the Animated Graphics section.
+#     Launch the "Bunch CT-DE" Animated Graph
+#     by clicking the Setup "button", then the Run "button" in lower left
+#           (verify transition, and RF phase change notification, both at step 4500)
