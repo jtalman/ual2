@@ -1,78 +1,18 @@
-OVERVIEW:
-   Running as user ualusr2011 is required!
-
-   A specific directory
-         /home/ualusr2011/git-gui-2/
-   is required, as well.
-
-   Shell tcsh must be used!
-
-   A suggested "run commands" file is on the web at
-         https://github.com/jtalman/ual2/blob/main/OS-and-SHELL/TCSHRC-ual2
-   and in the cloned download at
-         /home/ualusr2011/git-gui-2/ual2/OS-and-SHELL/TCSHRC-ual2
-   It can be copied to ~/.tcshrc for subsequent use. It relies on an earlier clone of ual2.
-
-   As usual, one should be careful about overwriting important files.
-
-   The "noclobber" option may be relevant.
-
-   Also, ualusr2011 may have run many other applications.
-
-   Historically, ualusr2011 has used ual1.
-
-   The current ~/.tcshrc file may very well be for ual1!
-
-   These instructions are for ual2.
-
-   The parenthesized c(C)omments should be read before executing the corresponding command.
-
-   The pound sign, #, also designates a comment line.
-
-   This "command line syntax" is to be followed exactly! A direct "copy and paste" might be best.
-__________________________________________________
-
-COMMAND LINE SYNTAX:
-
-#     (Comment: open terminal
-#               this should come up in the TENEX shell, tcsh.
-#               this in turn is initialized from file ~/.tcshrc)
-
-#     (Comment: note the implied user, ualusr2011, and directory, ~/git-gui-2/)
 cd /home/ualusr2011/git-gui-2/
 
-#     (Comment: this directory may already exist! Remove it, or rename it. You may want to restore it, later.)
 git clone https://github.com/jtalman/ual2
 
-#     (Commented out)
-#cp ual2/OS-and-SHELL/TCSHRC-ual2 ~/.tcshrc
-#     (Comment: this file may already exist! Remove it, or rename it. You may want to restore it, later.
-#               This line is optional. You're likely to have your own ~/.tcshrc file!
-#               These next 5 commands are pulled into this example.)
-
 cd ual2/legacy/ual1
-#     (Comment: possibly a little unfamiliar.
-#               ual2 is intended to facilitate the latest developments on AlmaLinux 9.
-#               ual1 is now viewed as "legacy", hence a subdirectory.
-#               $UAL used to be the central environmental variable.
-#               $UAL2 is intended to be the new central environmental variable.)
 
 setenv UAL `pwd`
 source setup-linux-ual
 
 make clean
 make >& make.log
-#     (Comment: check for errors with search string "rror " (note the trailing space, " "). This should give
-#      5 warnings, 2 ignorable, vestigial, "html errors".)
-#     (Comment: this takes ca 10 - 15 minutes on a W530 Thinkpad.)
 
 cd gui/buildAL/source/
 
 source ./all
-#     (Comment: this can take the better part of an hour on a slow box! It takes ca 25 minutes to half an hour on W530.
-#               "legacy qt", and "legacy root", ... are being built.
-#               A list of the built libraries is provided.
-#               Error check of these builds is next via a gui run script example.)
 __________________________________________________
 # GUI ORIGINAL
 
