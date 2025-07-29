@@ -42,5 +42,6 @@ cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 ./run-RT-transition
 #     Identify the Animated Graphics section.
 #     Launch the "Bunch CT-DE" Animated Graph
-#     by clicking the Setup "button", then the Run "button" in lower left
+#     Verify Timestamp
+#     Click the Setup "button", then the Run "button" in lower left
 #           (verify transition, and RF phase change notification, both at step 4500)
