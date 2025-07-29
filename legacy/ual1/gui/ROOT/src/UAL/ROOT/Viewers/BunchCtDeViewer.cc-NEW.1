@@ -45,14 +45,9 @@ std::cerr << __FILE__ << " " << __LINE__ << " enter UAL::ROOT::BunchCtDeViewer::
 
   std::cerr << "datetime: " << datetime << "\n";
 
-  std::string ctdetime(30,0);
-  ctdetime.resize(std::strftime(&ctdetime[0], ctdetime.size(), "ctde: %x", info));
-
 //ctde = new TH2F("ctde", "Longitudinal Phase Space", 
 //ctde = new TH2F("ctde", (char*)datetime,
-//ctde = new TH2F("ctde", datetime.c_str(),
-//ctde = new TH2F(ctdetime.c_str(), datetime.c_str(),
-  ctde = new TH2F(ctdetime.c_str(), "Lngtdnl Phase Space",
+  ctde = new TH2F("ctde", datetime.c_str(),
   		  m_ctbins, phaseS - 180., phaseS + 180. , 
   		  m_debins, -deMax, +deMax);
 
