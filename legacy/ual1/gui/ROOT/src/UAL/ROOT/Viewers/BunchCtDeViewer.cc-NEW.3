@@ -51,22 +51,13 @@ std::cerr << __FILE__ << " " << __LINE__ << " enter UAL::ROOT::BunchCtDeViewer::
 
 //ctde = new TH2F("ctde", "Longitudinal Phase Space", 
 //ctde = new TH2F("ctde", (char*)datetime,
-
-//ctde = new TH2F("ctde", datetime.c_str(),
-//ctde = new TH2F("ctde", "Bunch CT-DE",
-
+  ctde = new TH2F("ctde", datetime.c_str(),
 //ctde = new TH2F(ctdetime.c_str(), datetime.c_str(),
 //ctde = new TH2F(ctdetime.c_str(), "Lngtdnl Phase Space",
-//		  m_ctbins, phaseS - 180., phaseS + 180. , 
-//		  m_debins, -deMax, +deMax);
-
-  ctde = new TH2F("ctde", "Bunch CT-DE", 
   		  m_ctbins, phaseS - 180., phaseS + 180. , 
   		  m_debins, -deMax, +deMax);
 
-std::cerr << "++++++++++==========   BEFORE   ctde->Draw();   ++++++++++==========\n";
   ctde->Draw();
-std::cerr << "++++++++++==========   AFTER    ctde->Draw();   ++++++++++==========\n";
   ctde->SetBit(kCanDelete);
 
   std::string Timestamp_GetXaxis(150,0);
