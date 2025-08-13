@@ -21,7 +21,7 @@ UAL::ROOT::BunchCtDeViewer::BunchCtDeViewer(UAL::QT::BasicPlayer* player,
 
   m_ctbins = 100;
   m_debins = 100;
-  ctde = new TH2F("ctde", "Longitudinal Phase Space", 
+  ctde = new TH2F("ctde", "Bunch CT-DE", 
   		  m_ctbins, phaseS - 180., phaseS + 180. , 
   		  m_debins, -deMax, +deMax);
 
