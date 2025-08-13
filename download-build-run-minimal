@@ -14,7 +14,7 @@ cd gui/buildAL/source/
 
 source ./all
 __________________________________________________
-# GUI ORIGINAL
+# "GUI ORIGINAL"
 
 cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 
@@ -24,7 +24,8 @@ cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 #
 #     Launch the "Bunch CT-DE" animation
 #     by clicking the Setup "button", then the Run "button" in lower left
-#           (verify transition, and RF phase change notification, both at step 4500)
+#           (Verify transition.
+#           RF phase change notification, at step 4500, is obscured by debugging info.)
 __________________________________________________
 # GUI LATEST
 
@@ -47,5 +48,5 @@ cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 #     Verify Timestamp by maximizing this graph.
 #
 #     Launch the "Bunch CT-DE" animation
-#     by clicking the Setup "button", then the Run "button" in lower left
-#           (verify transition, and RF phase change notification, both at step 4500)
+#           (Verify transition.
+#           RF phase change notification, at step 4500, is obscured by debugging info.)
