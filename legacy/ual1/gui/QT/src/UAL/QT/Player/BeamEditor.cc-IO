@@ -44,7 +44,7 @@ void UAL::QT::BeamEditor::setShell(UAL::QT::PlayerShell* shell)
   table->setText( 11, 1, QString::number( p_shell->getNbins() ) );
   table->setText( 12, 1, QString::number( p_shell->getNsteps() ) );
 
-  table->setText( 13, 1, "Transition!" );
+  table->setText( 13, 1, "GIT-ual2-tibetan+kick-" );
 
 //table->setText(  9, 1, QString::number( -9999 ) );
 //table->setText( 10, 1, QString::number( -8888 ) );
@@ -152,7 +152,7 @@ void UAL::QT::BeamEditor::initTable()
   table->setText(12, 1, tr(""));
   table->setText(12, 2, tr(""));
 
-  table->setText(13, 0, tr("Time Stamp Comment:"));
+  table->setText(13, 0, tr("Time Stamp Title:"));
   table->setText(13, 1, tr(""));
   table->setText(13, 2, tr(""));
 }
