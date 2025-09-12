@@ -14,7 +14,7 @@ cd gui/buildAL/source/
 
 source ./all
 __________________________________________________
-# GUI EARLYish (but 64 bit)
+# "GUI ORIGINAL"
 
 cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 
@@ -27,7 +27,7 @@ cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 #           (Verify transition.
 #           RF phase change notification, at step 4500, is obscured by debugging info.)
 __________________________________________________
-# GUI INTERMEDIATE - GUI layout looks good
+# GUI LATEST
 
 cd /home/ualusr2011/git-gui-2/ual2/legacy/ual1/gui/QT/
 #     (Comment: setenv UAL2 /home/ualusr2011/git-gui-2/ual2/
@@ -39,25 +39,6 @@ cd /home/ualusr2011/git-gui-2/ual2/legacy/ual1/gui/QT/
 cd ../buildAL/source/
 
 ./post-legacy
-
-cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
-
-./run-RT-transition
-#     Identify the Animated Graphics section.
-#     Open the "Bunch CT-DE" Animated Graph by double clicking.
-#     Verify Timestamp by maximizing this graph.
-#
-#     Launch the "Bunch CT-DE" animation
-#           (Verify transition.
-#           RF phase change notification, at step 4500, is obscured by debugging info.)
-__________________________________________________
-# GUI LATEST - TIMESTAMP TITLE
-
-cd /home/ualusr2011/git-gui-2/ual2/legacy/ual1/gui/buildAL/source/
-
-./migrate-IO
-
-source ./all
 
 cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 
