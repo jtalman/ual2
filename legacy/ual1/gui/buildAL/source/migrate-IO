@@ -1,0 +1,18 @@
+cp root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz-IO root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz
+
+cp $UAL/gui/ROOT/src/UAL/ROOT/Viewers/BunchCtDeViewer.hh-NEW $UAL/gui/ROOT/src/UAL/ROOT/Viewers/BunchCtDeViewer.hh
+cp $UAL/gui/ROOT/src/UAL/ROOT/Viewers/BunchCtDeViewer.cc-NEW $UAL/gui/ROOT/src/UAL/ROOT/Viewers/BunchCtDeViewer.cc
+
+cp $UAL/gui/run-scripts/USPAS-legacy/examples/player/src/BasicPlayer.cc-NEW $UAL/gui/run-scripts/USPAS-legacy/examples/player/src/BasicPlayer.cc
+
+cp $UAL/gui/QT/src/UAL/QT/Player/BeamEditor.cc-IO $UAL/gui/QT/src/UAL/QT/Player/BeamEditor.cc
+
+cp $UAL/gui/QT/src/UAL/QT/Player/MainPlayerUI.hh-NEW $UAL/gui/QT/src/UAL/QT/Player/MainPlayerUI.hh
+
+cp $UAL/gui/QT/src/UAL/QT/Player/MainPlayerUI.ui-NEW $UAL/gui/QT/src/UAL/QT/Player/MainPlayerUI.ui
+
+cp $UAL/gui/QT/src/UAL/QT/Player/Makefile-NEW $UAL/gui/QT/src/UAL/QT/Player/Makefile
+
+cp $UAL/gui/QT/src/UAL/QT/Player/PlayerUI.ui-NEW $UAL/gui/QT/src/UAL/QT/Player/PlayerUI.ui
+
+cp $UAL/gui/QT/src/UAL/QT/Player/TablePageUI.ui-NEW $UAL/gui/QT/src/UAL/QT/Player/TablePageUI.ui
