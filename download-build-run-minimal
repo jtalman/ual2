@@ -9,6 +9,8 @@ source setup-linux-ual
 
 make clean
 make >& make.log
+#     search for string "rror "
+#           sequence: 3 warnings, 2 ignorable, vestigial, html errors, 2 more warnings
 
 cd gui/buildAL/source/
 
