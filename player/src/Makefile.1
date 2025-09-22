@@ -1,0 +1,54 @@
+#include $(UAL)/gui/USPAS/Makefile.config
+ include $(UAL)/env/linux/Makefile.config
+
+APP_DIR  = $(UAL)/gui/USPAS/examples/player/
+SRC_DIR  = .
+LIB_DIR  = $(APP_DIR)/lib/linux
+OBJ_DIR  = $(LIB_DIR)/obj
+
+# Files
+
+HEADERS  =
+
+OBJS     = 
+
+UICDECLS = 
+
+UICIMPLS = 
+
+SRCMOC   = moc_BasicPlayer.cc 
+
+OBJMOC   = $(OBJ_DIR)/BasicPlayer.o $(OBJ_DIR)/moc_BasicPlayer.o 
+
+DICT    := $(OBJ_DIR)/UspasPlayerDict.o 
+
+all: $(LIB_DIR)/libUspasPlayer.so # $(APP_DIR)/linux/run
+
+qt: $(UICDECLS) $(UICIMPLS) $(SRCMOC)
+
+compile: $(LIB_DIR)/libUspasPlayer.so # $(APP_DIR)/linux/run
+
+clean:
+	rm  -rf $(OBJMOC)
+	rm  -f  $(LIB_DIR)/libUspasPlayer.so  $(OBJ_DIR)/*
+	rm  -rf UspasPlayerDict.*
+
+$(APP_DIR)/linux/run: $(LIB_DIR)/libUspasPlayer.so $(OBJ_DIR)/run.o
+	$(LD) -o $@  $(OBJ_DIR)/run.o $(LIB_DIR)/libUspasPlayer.so $(LDFLAGS)
+	rm -rf UspasPlayerDict.*
+
+$(LIB_DIR)/%.so: $(OBJMOC) $(OBJS) # $(DICT)
+	$(DLD) $(DLDFLAGS) -Wl,-soname,$@ $(LDFLAGS) $(OBJMOC) $(OBJS)  -o $@
+
+$(OBJ_DIR)/%.o : $(SRC_DIR)/%.cc
+	$(CC) -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT $(CCFLAGS) -c $< -o $@ -I../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/ -I../../../../../ext/UI/src/ -I../../../../../codes/PAC/src/ -I../../../../../codes/UAL/src/ -I../../../../../codes/ZLIB/src/ -I../../../../QT/src/ -I../../../../../codes/TIBETAN/src/ -I../../../../ROOT/src/ -I../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/include/ -I../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/qt/inc/
+
+%.hh: %.ui 
+	$(UIC) $< -o $@
+
+moc_%.cc: %.hh
+	$(MOC)  $< -o $@
+
+UspasPlayerDict.cc: $(HEADERS) LinkDef.h
+	@echo "Generating dictionary $@..."
+	$(ROOTSYS)/bin/rootcint -f $@ -c $(INCD) $^ 

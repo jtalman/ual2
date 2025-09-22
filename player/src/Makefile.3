@@ -1,0 +1,65 @@
+#include $(UAL)/gui/USPAS/Makefile.config
+ include $(UAL)/env/linux/Makefile.config
+
+LDFLAGS  =
+LDFLAGS += -Wl,-rpath=$(UAL)/gui/libxml2-2.9.7/.libs/libxml2.so.2.9.7:$(UAL)/gui/USPAS/examples/player/lib/linux/:$(UAL)/gui/root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/:$(UAL)/codes/ZLIB/lib/linux/
+
+APP_DIR  = $(UAL)/gui/USPAS/examples/player/
+SRC_DIR  = .
+LIB_DIR  = $(APP_DIR)/lib/linux/
+OBJ_DIR  = $(LIB_DIR)/obj/
+
+# Files
+
+HEADERS  =
+
+OBJS     = 
+
+UICDECLS = 
+
+UICIMPLS = 
+
+SRCMOC   = moc_BasicPlayer.cc 
+
+OBJMOC   = $(OBJ_DIR)/BasicPlayer.o $(OBJ_DIR)/moc_BasicPlayer.o 
+
+DICT    := $(OBJ_DIR)/UspasPlayerDict.o 
+
+all: $(LIB_DIR)/libUspasPlayer.so $(APP_DIR)/linux/run
+
+qt: $(UICDECLS) $(UICIMPLS) $(SRCMOC)
+
+compile: $(LIB_DIR)/libUspasPlayer.so $(APP_DIR)/linux/run
+
+clean:
+	rm  -rf $(OBJMOC)
+	rm  -f  $(LIB_DIR)/libUspasPlayer.so  $(OBJ_DIR)/*
+	rm  -rf UspasPlayerDict.*
+
+$(APP_DIR)/linux/run: $(LIB_DIR)/libUspasPlayer.so $(OBJ_DIR)/run.o
+	@echo "LDFLAGS"
+	@echo $(LDFLAGS)
+	@echo "LDFLAGS"
+	$(LD) -o ../lib/linux/run $(OBJ_DIR)/run.o $(UAL)/gui/libxml2-2.9.7/.libs/libxml2.so.2.9.7 $(LIB_DIR)/libUspasPlayer.so $(LDFLAGS) ../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3.3.4 ../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libRint.so.4.04 -L../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/ -lCore -lCint -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lGui -pthread -lm -ldl -rdynamic -lThread ../../../../../codes/ZLIB/lib/linux/libZTps.so ../../../../QT/lib/linux/libUalQt.so ../../../../../ext/UI/lib/linux/libUalUI.so ../../../../../tools/lib/linux/libxerces-c.so.27.0 ../../../../ROOT/lib/linux/libUalRootViewers.so ../../../../../codes/AIM/lib/linux/libAim.so ../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libGQt.so ../../../../../codes/ETEAPOT/lib/linux/libETeapot.so
+#	$(LD) -o ../lib/linux/run $(OBJ_DIR)/run.o $(UAL)/gui/libxml2-2.9.7/.libs/libxml2.so.2.9.7 $(LIB_DIR)/libUspasPlayer.so $(LDFLAGS) ../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3.3.4 ../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libRint.so.4.04 -L../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/ -lCore -lCint -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lGui -pthread -lm -ldl -rdynamic -lThread -lTable ../../../../../codes/ZLIB/lib/linux/libZTps.so ../../../../QT/lib/linux/libUalQt.so ../../../../../ext/UI/lib/linux/libUalUI.so ../../../../../tools/lib/linux/libxerces-c.so.27.0 ../../../../ROOT/lib/linux/libUalRootViewers.so ../../../../../codes/AIM/lib/linux/libAim.so ../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libGQt.so ../../../../../codes/ETEAPOT/lib/linux/libETeapot.so
+#	$(LD) -o ../lib/linux/run $(OBJ_DIR)/run.o $(LIB_DIR)/libUspasPlayer.so $(LDFLAGS) ../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3.3.4 ../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libRint.so.4.04 -L../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/ -lCore -lCint -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lGui -pthread -lm -ldl -rdynamic -lThread -lTable ../../../../../codes/ZLIB/lib/linux/libZTps.so ../../../../QT/lib/linux/libUalQt.so ../../../../../ext/UI/lib/linux/libUalUI.so ../../../../../tools/lib/linux/libxerces-c.so.27.0 ../../../../ROOT/lib/linux/libUalRootViewers.so ../../../../../codes/AIM/lib/linux/libAim.so ../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libGQt.so.4.04
+#	$(LD) -o ../lib/linux/run $(OBJ_DIR)/run.o $(LIB_DIR)/libUspasPlayer.so $(LDFLAGS) ../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/lib/libqt-mt.so.3.3.4 ../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/libRint.so.4.04 -L../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/lib/ -lCore -lCint -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lGui -pthread -lm -ldl -rdynamic -lThread -lTable -lGQt
+	rm -rf UspasPlayerDict.*
+
+$(LIB_DIR)/%.so: $(OBJMOC) $(OBJS) # $(DICT)
+	$(DLD) $(DLDFLAGS) -Wl,-soname,$@ $(LDFLAGS) $(OBJMOC) $(OBJS)  -o $@
+
+$(OBJ_DIR)/%.o : $(SRC_DIR)/%.cc
+	$(CC) -Wl,-rpath=. -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT $(CCFLAGS) -c $< -o $@ -I$(UAL)/gui/libxml2-2.9.7/include/libxml/ -I../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/ -I../../../../../ext/UI/src/ -I../../../../../codes/PAC/src/ -I../../../../../codes/UAL/src/ -I../../../../../codes/ZLIB/src/ -I../../../../QT/src/ -I../../../../../codes/TIBETAN/src/ -I../../../../ROOT/src/ -I../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/include/ -I../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/qt/inc/ -I../../../../../ext/ADXF/src/ -I../../../../../tools/include/ -I../../../../../codes/ETEAPOT/src/
+#	$(CC) -Wl,-rpath=. -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT $(CCFLAGS) -c $< -o $@ -I$(UAL)/gui/libxml2-2.9.7/include/libxml/ -I../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/ -I../../../../../ext/UI/src/ -I../../../../../codes/PAC/src/ -I../../../../../codes/UAL/src/ -I../../../../../codes/ZLIB/src/ -I../../../../QT/src/ -I../../../../../codes/TIBETAN/src/ -I../../../../ROOT/src/ -I../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/include/ -I../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/qt/inc/ -I../../../../../ext/ADXF/src/ -I../../../../../tools/include/
+#	$(CC) -pipe -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT $(CCFLAGS) -c $< -o $@ -I../../../../qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/include/ -I../../../../../ext/UI/src/ -I../../../../../codes/PAC/src/ -I../../../../../codes/UAL/src/ -I../../../../../codes/ZLIB/src/ -I../../../../QT/src/ -I../../../../../codes/TIBETAN/src/ -I../../../../ROOT/src/ -I../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/include/ -I../../../../root_v4.04.02.source-SL7.6Nitrogen-UAL-mod/qt/inc/ -I../../../../../ext/ADXF/src/ -I../../../../../tools/include/
+
+%.hh: %.ui 
+	$(UIC) $< -o $@
+
+moc_%.cc: %.hh
+	$(MOC)  $< -o $@
+
+UspasPlayerDict.cc: $(HEADERS) LinkDef.h
+	@echo "Generating dictionary $@..."
+	$(ROOTSYS)/bin/rootcint -f $@ -c $(INCD) $^ 
