@@ -23,5 +23,9 @@ alias E4  'pushd $UAL/examples/E4_typing_of_sxf_elements/; source run_example; p
 
 alias g  'pushd $UAL/gui/run-scripts/USPAS-legacy/examples/RT-transition/;./run-RT-transition; popd'
 
+alias s  'pushd $UAL/gui/buildAL/source/'
+
+touch $UAL/gui/buildAL/source/timestampComment.txt
+
 alias lm 'ls -ialt | more'
 alias h  'history'
