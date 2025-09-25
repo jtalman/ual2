@@ -25,8 +25,9 @@ ________________________________________________________________________
 UAL has a "latest" component that requires the previous step, a fully built legacy component. It is gui based. It is intended to be (fairly) easily configurable. A suggested run mode follows.
 
 "GUI-LATEST":
-          cp $UAL2/OS-and-SHELL/TCSHRC-ual2 ~/.tcshrc
-          source ~/.tcshrc
+
+          cd /home/ualusr2011/git-gui-2/ual2
+          source OS-and-SHELL/TCSHRC-ual2
           ./run-script
 
 
