@@ -16,7 +16,7 @@ UAL has a "legacy" component. It is is primarily command line based. It must be 
 
           https://github.com/jtalman/ual2/tree/main/bootstrap-instructions/minimal
 
-Following this syntax exactly is probably best.
+Following this syntax exactly is recommended.
 
 ________________________________________________________________________
 
