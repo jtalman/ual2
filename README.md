@@ -12,7 +12,7 @@ This detail, and others are covered in more depth later.
 
 ________________________________________________________________________
 
-UAL software goes back ca 30 years.
+UAL software goes back ca 30 years, and is quite extensive.
 
 There's a "legacy" component. It is is primarily text based. It is "bootstrapped" into existence. Following
 
@@ -21,3 +21,7 @@ There's a "legacy" component. It is is primarily text based. It is "bootstrapped
 is probably best.
 
 There's a "latest" component. It is gui based. It is, perhaps, more configurable. A suggested run mode follows.
+________________________________________________________________________
+
+"GUI-LATEST":
+
