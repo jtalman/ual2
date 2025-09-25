@@ -6,9 +6,9 @@ AlmaLinux 10 is probably ok.
 
 An important issue is the C/C++ compiler gcc/g++.
 
-The latest, 11.5.0, as of 6/1/2025, is mostly ok. A legacy root (CERN) build requires gcc 4.8.5 or so.
+The latest, 11.5.0, as of 6/1/2025, is mostly ok. A legacy root (CERN) build requires gcc 4.8.5 or so. This is provided in the git clone.
 
-This detail, and others are covered in more depth later.
+This detail, and others, are covered in more depth later.
 
 UAL software goes back ca 30 years, and is quite extensive.
 
