@@ -14,8 +14,10 @@ ________________________________________________________________________
 
 UAL software goes back ca 30 years.
 
-There's a "legacy" component. It is is primarily text based. It is "bootstrapped" into existence. Follow
+There's a "legacy" component. It is is primarily text based. It is "bootstrapped" into existence. Following
+
           https://github.com/talman/ual2/tree/main/bootstrap-instructions
+
 is probably best.
 
 There's a "latest" component. It is gui based. It is, perhaps, more configurable. A suggested run mode follows.
