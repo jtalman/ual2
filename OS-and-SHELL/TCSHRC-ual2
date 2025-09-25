@@ -1,6 +1,4 @@
-unset noclobber
-
-cd
+cd /home/ualusr2011/
 cd git-gui-2/
 cd ual2/
 setenv UAL2 `pwd`
@@ -10,6 +8,14 @@ cd ual1/
 setenv UAL `pwd`
 
 source setup-linux-ual
+
+cd $UAL2
+
+setenv sxfFileDirname  /home/ualusr2011/git-gui-2/ual2/legacy/ual1/gui/run-scripts/USPAS-legacy/examples/lattices/
+setenv apdfFileDirname /home/ualusr2011/git-gui-2/ual2/legacy/ual1/gui/run-scripts/USPAS-legacy/examples/decoherence/apdf/
+
+setenv sxfFile racetrack.sxf
+setenv apdfFile tibetan+kick.apdf
 
 alias m  'pushd $UAL; make clean; make >& make.log; popd'
 
