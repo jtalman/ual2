@@ -10,19 +10,23 @@ The latest, 11.5.0, as of 6/1/2025, is mostly ok. A legacy root (CERN) build req
 
 This detail, and others are covered in more depth later.
 
-________________________________________________________________________
-
 UAL software goes back ca 30 years, and is quite extensive.
 
-There's a "legacy" component. It is is primarily text based. It must be built first. It can be "bootstrapped" into existence:
+________________________________________________________________________
 
-          https://github.com/talman/ual2/tree/main/bootstrap-instructions/minimal
+UAL has a "legacy" component. It is is primarily text based. It must be built first. It can be "bootstrapped" into existence:
+
+          https://github.com/jtalman/ual2/tree/main/bootstrap-instructions/minimal
 
 Following this syntax exactly is probably best.
 
 ________________________________________________________________________
 
-There's a "latest" component that requires the legacy component. It is gui based. It is intended to be (fairly) easily configurable. A suggested run mode follows.
+UAL has a "latest" component that requires the previous step, a fully built legacy component. It is gui based. It is intended to be (fairly) easily configurable. A suggested run mode follows.
 
 "GUI-LATEST":
           cp $UAL2/OS-and-SHELL/TCSHRC-ual2 ~/.tcshrc
+          source ~/.tcshrc
+          ./run-script
+
+
