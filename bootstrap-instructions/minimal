@@ -59,6 +59,8 @@ __________________________________________________
 
 cd /home/ualusr2011/git-gui-2/ual2/legacy/ual1/gui/buildAL/source/
 
+touch timestampComment.txt
+
 ./migrate-IO
 
 source ./all
