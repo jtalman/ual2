@@ -25,12 +25,7 @@ alias g  'pushd $UAL/gui/run-scripts/USPAS-legacy/examples/RT-transition/;./run-
 
 alias s  'pushd $UAL/gui/buildAL/source/'
 
-\rm timestampComment.txt
-setenv TS `date +"%m-%d-%Y"`" github.com/jtalman/ual2 "
-#setenv MY_VARIABLE "${MY_VARIABLE}:new_string_to_add"
-setenv TS "${TS}${sxfFile} ${apdfFile}"
-#setenv TS $TS $apdfFile
-echo $TS > timestampComment.txt
+touch $UAL/gui/buildAL/source/timestampComment.txt
 
 alias lm 'ls -ialt | more'
 alias h  'history'
