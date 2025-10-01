@@ -55,7 +55,7 @@ cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 #           (Verify transition.
 #           RF phase change notification, at step 4500, is obscured by debugging info.)
 __________________________________________________
-# GUI LATEST - TIMESTAMP TITLE
+# GUI ca LATEST - TIMESTAMP TITLE
 
 cd /home/ualusr2011/git-gui-2/ual2/legacy/ual1/gui/buildAL/source/
 
@@ -75,3 +75,15 @@ cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 #     Launch the "Bunch CT-DE" animation
 #           (Verify transition.
 #           RF phase change notification, at step 4500, is obscured by debugging info.)
+__________________________________________________
+# GUI LATEST - FULL TIMESTAMP in Editor
+
+cd /home/ualusr2011/git-gui-2/ual2/legacy/ual1/gui/buildAL/source/
+
+./migrate-TS
+
+source ./all
+
+cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
+
+./run-RT-transition
