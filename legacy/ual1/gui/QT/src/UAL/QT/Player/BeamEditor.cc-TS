@@ -177,7 +177,7 @@ std::cout << __LINE__ << " row col " << row << " " << col << "\n";
 std::cout << __LINE__ << " table->text(13, 1) " << table->text(13, 1) << "\n";
 
 std::ofstream outputFile;
-outputFile.open("/home/ualusr2011/git-gui-2/ual2/legacy/ual1/gui/buildAL/source/timestampComment.txt");
+outputFile.open("/home/ualusr2011/git-gui-2/ual2/timestampComment.txt");
 outputFile << table->text(13, 1) << "\n";
 outputFile.close();
 
