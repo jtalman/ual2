@@ -16,7 +16,7 @@ make >& make.log
 
 cd gui/buildAL/source/
 
-touch $UAL2/timestampComment.txt
+date +%F > $UAL2/timestampComment.txt
 
 ./migrate-QT
 ./migrate-IO
