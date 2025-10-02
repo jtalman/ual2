@@ -33,11 +33,13 @@ UAL has a "latest" component that requires the previous step, a fully built lega
           make
           popd
           ./run-script
-________________________________________________________________________
+
 NOTE:
 
     NOTE that the sxf file and apdf file are set via the source command! 
-    NOTE that this sets the timestamp .
+              This, in turn, sets the initial timestamp.
+              This initial timestamp can be edited.
+                        Don't leave a blank space after "apdf"!
 
 ________________________________________________________________________
 
