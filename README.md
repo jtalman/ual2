@@ -36,8 +36,8 @@ UAL has a "latest" component that requires the previous step, a fully built lega
 ________________________________________________________________________
 NOTE:
 
-#   NOTE that the sxf file and apdf file are set via the source command! 
-#   NOTE that this sets the timestamp .
+    NOTE that the sxf file and apdf file are set via the source command! 
+    NOTE that this sets the timestamp .
 
 ________________________________________________________________________
 
