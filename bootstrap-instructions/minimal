@@ -16,9 +16,13 @@ make >& make.log
 
 cd gui/buildAL/source/
 
+touch timestampComment.txt
+
+./migrate-QT
+./migrate-IO
+./migrate-TS
+
 source ./all
-__________________________________________________
-# GUI EARLYish (but 64 bit)
 
 cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 
@@ -30,60 +34,3 @@ cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 #     by clicking the Setup "button", then the Run "button" in lower left
 #           (Verify transition.
 #           RF phase change notification, at step 4500, is obscured by debugging info.)
-__________________________________________________
-# GUI INTERMEDIATE - GUI layout looks good
-
-cd /home/ualusr2011/git-gui-2/ual2/legacy/ual1/gui/QT/
-#     (Comment: setenv UAL2 /home/ualusr2011/git-gui-2/ual2/
-#               cd $UAL2/legacy/ual1/gui/QT/
-#               is equivalent.)
-
-./migrate-QT
-
-cd ../buildAL/source/
-
-./post-legacy
-
-cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
-
-./run-RT-transition
-#     Identify the Animated Graphics section.
-#     Open the "Bunch CT-DE" Animated Graph by double clicking.
-#     Verify Timestamp by maximizing this graph.
-#
-#     Launch the "Bunch CT-DE" animation
-#           (Verify transition.
-#           RF phase change notification, at step 4500, is obscured by debugging info.)
-__________________________________________________
-# GUI ca LATEST - TIMESTAMP TITLE
-
-cd /home/ualusr2011/git-gui-2/ual2/legacy/ual1/gui/buildAL/source/
-
-touch timestampComment.txt
-
-./migrate-IO
-
-source ./all
-
-cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
-
-./run-RT-transition
-#     Identify the Animated Graphics section.
-#     Open the "Bunch CT-DE" Animated Graph by double clicking.
-#     Verify Timestamp by maximizing this graph.
-#
-#     Launch the "Bunch CT-DE" animation
-#           (Verify transition.
-#           RF phase change notification, at step 4500, is obscured by debugging info.)
-__________________________________________________
-# GUI LATEST - FULL TIMESTAMP in Editor
-
-cd /home/ualusr2011/git-gui-2/ual2/legacy/ual1/gui/buildAL/source/
-
-./migrate-TS
-
-source ./all
-
-cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
-
-./run-RT-transition
