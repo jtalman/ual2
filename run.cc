@@ -162,6 +162,4 @@ int main(int argc, char *argv[])
   player->show();                               //   $QTDIR/src/kernel/qwidget.cpp +3912
 
   qtApp.exec();                                 //   $QTDIR/src/kernel/qapplication.cpp +2764
-
-
 }
