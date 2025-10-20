@@ -37,7 +37,10 @@ int main(int argc, char *argv[])
   // ************************************************************************
 
   // Declare GUI Interface
-  QApplication qtApp(argc, argv);
+// Of course environmental variable "QTDIR" should reflect the active Trolltech qt3 code
+// Here, for now,
+// QTDIR = $UAL/gui/qt-x11-free-3.3.4-SL7.6Nitrogen-UAL-mod/
+  QApplication qtApp(argc, argv);               //   $QTDIR/src/kernel/qapplication.cpp +730
 
   // Declare ROOT application
   TRint *rint = new TRint("Rint", &argc, qApp->argv());
@@ -143,12 +146,14 @@ int main(int argc, char *argv[])
 
   // SoQt::init(gtPlayer);
 
-  qtApp.setMainWidget(player);
+  qtApp.setMainWidget(player);                  //   $QTDIR/src/kernel/qapplication_x11.cpp +2648
+
 //int w = QApplication::desktop()->width();
 //int h = QApplication::desktop()->height();
 //player->resize(w,h);
-  player->show();
+  player->show();                               //   $QTDIR/src/kernel/qwidget.cpp +3912
 
-  qtApp.exec();
+  qtApp.exec();                                 //   $QTDIR/src/kernel/qapplication.cpp +2764
+
 
 }
