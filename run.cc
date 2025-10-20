@@ -139,11 +139,11 @@ int main(int argc, char *argv[])
   shell.setNsteps(nsteps);
 
   UAL::USPAS::BasicPlayer* player = new UAL::USPAS::BasicPlayer();
-//                         player <<----
+//                         UAL::USPAS::BasicPlayer <<----
 //                         UAL::QT::BasicPlayer <<----
 //                         UAL::QT::MainPlayerUI <<----
 //                         QMainWindow <<----
-//                         QWidget <<----
+//                         QWidget <<----                   ( show() )
 //                         QObject, QPaintDevice
                            
 
