@@ -139,6 +139,14 @@ int main(int argc, char *argv[])
   shell.setNsteps(nsteps);
 
   UAL::USPAS::BasicPlayer* player = new UAL::USPAS::BasicPlayer();
+//                         player <<----
+//                         UAL::QT::BasicPlayer <<----
+//                         UAL::QT::MainPlayerUI <<----
+//                         QMainWindow <<----
+//                         QWidget <<----
+//                         QObject, QPaintDevice
+                           
+
   player->setShell(&shell);
 //player->setTurns(10000);
   player->setTurns(turns);
