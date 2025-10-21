@@ -174,57 +174,12 @@ void UAL::QT::BeamEditor::setValue(int row, int col)
 {
 std::cout << __FILE__ << ": " << __LINE__ << " enter void UAL::QT::BeamEditor::setValue(int row, int col)\n";
 std::cout << __LINE__ << " row col " << row << " " << col << "\n";
-std::cout << __LINE__ << " table->text(row, col) " << table->text(row, col) << "\n";
+std::cout << __LINE__ << " table->text(13, 1) " << table->text(13, 1) << "\n";
 
-bool ok=1;
-
-switch(row){
- case 0:
-  break;
- case 1:
-  break;
- case 2:
-  break;
- case 3:
-  break;
- case 4:
-  break;
- case 5:
-  break;
- case 6:
-  break;
- case 7:
-  break;
- case 8:
-  break;
- case 9:
-std::cout << __LINE__ << " TURNS!\n";
- p_shell->setTurns(table->text(row, col).toInt(&ok));
-p_player->setTurns(table->text(row, col).toInt(&ok));
-  break;
- case 10:
-  break;
- case 11:
-  break;
- case 12:
-  break;
- case 13:
-std::cout << __LINE__ << " TIMESTAMP!\n";
 std::ofstream outputFile;
 outputFile.open("/home/ualusr2011/git-gui-2/ual2/timestampComment.txt");
 outputFile << table->text(13, 1) << "\n";
 outputFile.close();
-  break;
-}
-
-/*
-if(row==13){
-std::ofstream outputFile;
-outputFile.open("/home/ualusr2011/git-gui-2/ual2/timestampComment.txt");
-outputFile << table->text(13, 1) << "\n";
-outputFile.close();
-}
-*/
 
   /*
   bool ok;
