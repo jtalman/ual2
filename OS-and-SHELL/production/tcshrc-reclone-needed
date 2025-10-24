@@ -1,0 +1,96 @@
+setenv LD_PRELOAD /usr/lib64/libxml2.so.2.9.13
+
+cd git-gui-2
+
+echo ""
+echo "      Now follow minimal instructions from web"
+echo "  https://github.com/jtalman/ual2/blob/main/bootstrap-instructions/minimal"
+
+# follow the minimal instructions in bootstrap
+# setenv UAL2 `pwd`
+# cd legacy/ual1/        # 2nd step
+
+# setenv UAL `pwd`
+# source setup-linux-ual
+
+alias lm 'ls -ialt | more'
+alias h  'history'
+
+alias store 'echo \!:1 | cat >! \!:2'
+# alias xfig "xfig -dontsw \!*"
+alias xterm 'xterm -geometry 80x24+10+10 -mb -sb -sl 1000 -cb -cn -n `hostname` &'
+
+alias find_maple "find . -name maple -print | xargs ls -ldt"
+alias find_xfig "find . -name xfig -print | xargs ls -ldt"
+alias find_pdf "find . -name pdf -print | xargs ls -ldt"
+alias find_waist "find . -name '*aist*' -print | xargs ls -ldt"
+alias find_.mw "find . -name '*.mw*' -print | xargs ls -ldt"
+alias find_IR "find . -name 'IR*' -print | xargs ls -ldt"
+
+alias printtree_orig "find . -name '*' -print"
+alias printtree "find . -name '*' -print | xargs ls -ldt"
+
+alias greptree "find . -name '*' -print |xargs grep \!* "
+alias greptree_cc "find . -name '*.cc' -print |xargs grep \!* "
+alias greptree_hh "find . -name '*.hh' -print |xargs grep \!* "
+alias greptree_pl "find . -name '*.pl' -print |xargs grep \!* "
+alias greptree_pm "find . -name '*.pm' -print |xargs grep \!* "
+alias greptree_p  "find . -name '*.p[lm]' -print |xargs grep \!* "
+alias greptree_xs "find . -name '*.xs' -print |xargs grep \!* "
+
+alias greptreefile "find . -name '*' -exec grep -l \!* {} \;"
+
+alias findfiles_pl "find . -name '*.pl' -print"
+alias findfiles_pm "find . -name '*.pm' -print"
+alias findfiles_cc "find . -name '*.cc' -print"
+alias findfiles_hh "find . -name '*.hh' -print"
+alias findfiles_xs "find . -name '*.xs' -print"
+alias findfiles_so "find . -name '*.so' -print"
+
+alias headtree "find . -name '*' -print |xargs head \!* \;"
+
+#----------------------------------------------------
+
+set noclobber
+limit coredump 0
+
+alias grepRT 'grep -r -n' 
+
+alias gv kghostview
+
+alias rmtex         '\rm *.dvi *.log *% *.aux *.ref *.toc *.snm *.out *.nav'
+alias rmfor         '\rm for*[0-9] ftn*[0-9]'
+alias rm~         '\rm *~'
+
+alias cd           'cd \!*;echo $cwd'
+alias cp           'cp -i'
+alias mv           'mv -i'
+alias rm           'rm -i'
+
+set history=2000
+set ignoreeof
+set savehist=500
+alias h  'history'
+
+alias ..            'set dot=$cwd;cd ..'
+
+alias la            'ls -atF'
+alias ll            'ls -ltF'
+alias lh            'ls -ltF | head'
+alias lam            'ls -atlFgGh | more'
+alias lm            'ls -ltFgGhB --color | more'
+
+alias pm	    'ps -uax | more'
+
+# First time only establishment of teapot environment
+# alias SetTpotEnv 'pushd ~tpot; setenv TPOTDIR `echo $cwd`; popd; setenv STUDENTDIR `echo $cwd`; mkdir scripts; cp $TPOTDIR/ftpot-linux/test/scripts/* scripts; 
+# source scripts/Setenv_vars; scripts/build_dirs'
+
+# Subsequent setting of environment variables on returning to pre-established
+# alias ResetTpotEnv 'pushd ~tpot; setenv TPOTDIR `echo $cwd`; popd; setenv STUDENTDIR `echo $cwd`; source scripts/Setenv_vars'
+
+# setenv TPOTDIR /home/tpot
+# setenv CODEDIR $TPOTDIR
+# setenv FTPOTDIR $CODEDIR/ftpot-linux
+# setenv XPOTDIR $CODEDIR/xpot-linux
+
