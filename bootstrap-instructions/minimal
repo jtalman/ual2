@@ -1,4 +1,5 @@
 #     BACKUP anything you might overwrite!!
+#     MIND your ~/.tcshrc files!!
 
 cd /home/ualusr2011/git-gui-2/
 
@@ -11,7 +12,7 @@ setenv UAL `pwd`
 source setup-linux-ual
 
 make clean
-make >& make.log
+make >& make.log                 # ca 12 minutes on W530
 #     search for string "rror "
 #           sequence: 3 warnings, 2 ignorable, vestigial, html errors, 2 more warnings
 
@@ -23,8 +24,11 @@ date +%F > $UAL2/timestampComment.txt
 ./migrate-IO
 ./migrate-TS
 
-source ./all
+source ./all                     # ca 26 minutes on W530
 
+# The "legacy" component is now built.
+_________________________________________________________________________________________________
+# this stanza is "fallback code", not needed now, but perhaps useful for debugging at some point?
 cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 
 ./run-RT-transition
@@ -35,3 +39,9 @@ cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 #     by clicking the Setup "button", then the Run "button" in lower left
 #           (Verify transition.
 #           RF phase change notification, at step 4500, is obscured by debugging info.)
+_________________________________________________________________________________________________
+
+# The "latest" component can now be run.
+# see file
+# https://github.com/jtalman/ual2/blob/main/README.md
+# an implicit ~/.tcshrc file is invoked. YMMV!
