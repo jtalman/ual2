@@ -1,0 +1,3 @@
+# cp root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz-TS root_v4.04.02.source-SL7.6Nitrogen-UAL-mod.tar.gz
+
+cp $UAL/gui/QT/src/UAL/QT/Player/BeamEditor.cc-m_fprint $UAL/gui/QT/src/UAL/QT/Player/BeamEditor.cc
