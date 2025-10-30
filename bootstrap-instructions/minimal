@@ -1,5 +1,7 @@
 #     BACKUP anything you might overwrite!!
-#     MIND your ~/.tcshrc files!!
+#     MIND your environmental variables and ~/.tcshrc files!!
+#
+#     LEGACY BUILD
 
 cd /home/ualusr2011/git-gui-2/
 
@@ -15,6 +17,7 @@ make clean
 make >& make.log                 # ca 12 minutes on W530
 #     search for string "rror "
 #           sequence: 3 warnings, 2 ignorable, vestigial, html errors, 2 more warnings
+# "spot check" on the command line code
 
 cd gui/buildAL/source/
 
@@ -23,12 +26,16 @@ date +%F > $UAL2/timestampComment.txt
 ./migrate-QT
 ./migrate-IO
 ./migrate-TS
+./migrate-m_fprint
 
 source ./all                     # ca 26 minutes on W530
 
 # The "legacy" component is now built.
 _________________________________________________________________________________________________
-# this stanza is "fallback code", not needed now, but perhaps useful for debugging at some point?
+# The "legacy" component can now be run.
+# This stanza is "fallback code", probably not needed now, but perhaps useful for debugging at some point.
+# Running this stanza can be also be thought of as a "spot check" on the gui,
+# similar to the spot check on command line above.
 cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 
 ./run-RT-transition
@@ -41,7 +48,19 @@ cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 #           RF phase change notification, at step 4500, is obscured by debugging info.)
 _________________________________________________________________________________________________
 
-# The "latest" component can now be run.
+#     LATEST BUILD
+
+# The "latest" component can now be built and run:
+
+#         cd /home/ualusr2011/git-gui-2/ual2
+#         source OS-and-SHELL/TCSHRC-ual2
+#         pushd player
+#         make clean
+#         make
+#         popd
+#         ./run-script
+_________________________________________________________________________________________________
+
 # see file
 # https://github.com/jtalman/ual2/blob/main/README.md
-# an implicit ~/.tcshrc file is invoked. YMMV!
+# Note implicit "~/.tcshrc file", TCSHRC-ual2, is invoked. YMMV!
