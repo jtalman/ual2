@@ -13,8 +13,6 @@
 UAL::QT::BeamEditor::BeamEditor(QWidget* parent, const char *name)
   : UAL::QT::BasicEditor(parent, name)
 {
-turns=0;
-turnsOver100=0;
   // Parent table
   initTable();
 }
@@ -54,10 +52,7 @@ fclose(ptr);
   table->setText(8, 1, QString::number(p_shell->getDeHalfWidth()));
 
   table->setText( 9, 1, QString::number( p_shell->getTurns() ) );
-
   table->setText( 10, 1, QString::number( p_shell->getPlotUpdates() ) );
-  table->setRowReadOnly( 10, true );
-
   table->setText( 11, 1, QString::number( p_shell->getNbins() ) );
   table->setText( 12, 1, QString::number( p_shell->getNsteps() ) );
 
@@ -204,14 +199,8 @@ switch(row){
   break;
  case 9:
 std::cout << __LINE__ << " TURNS!\n";
-turns=table->text(row, col).toInt(&ok);
-turnsOver100=turns/100;
  p_shell->setTurns(table->text(row, col).toInt(&ok));
 p_player->setTurns(table->text(row, col).toInt(&ok));
-p_player->setFprint( turnsOver100 );
-table->setText( 10, 1, std::to_string(turnsOver100) );
-  std::cout << __LINE__ << " turns = " << turns << "\n";
-//std::cout << __LINE__ << " table->text(row, col).toInt(&ok) = " << table->text(row, col).toInt(&ok) << "\n";
   break;
  case 10:
 std::cout << __LINE__ << " m_fprint!\n";
@@ -302,6 +291,7 @@ int turns=table->text(9, 1).toInt(&ok);
 std::cerr << __FILE__ << ": " << __LINE__ << " leave void UAL::QT::BeamEditor::activateChanges\n";
 }
 
+
 void UAL::QT::BeamEditor::setOldValue(int row)
 {
   double oldValue = 0;
@@ -331,3 +321,6 @@ void UAL::QT::BeamEditor::setOldValue(int row)
   table->setText(row, 1, QString::number(oldValue));
   table->update();
 }
+
+
+
