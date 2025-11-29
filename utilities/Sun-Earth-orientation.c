@@ -116,7 +116,8 @@ int main(int argc, char*argv[]){
  for(Thta=0.;Thta<tau;Thta+=delThta){
   ThtM=Thta+delThtH;
 //r=lambda/( 1.L+L*h0*cos(kappa*ThtM/E/k) );
-  r=lambda/( 1.L+epsilon*(kappa*ThtM/E/k) );
+//r=lambda/( 1.L+epsilon*(kappa*ThtM/E/k) );
+  r=lambda/( 1.L+epsilon*cos(kappa*ThtM) );
   x=r*cos(Thta);
   y=r*sin(Thta);
 //dt=r/k*(L-mp*r*ht)*delThta;
