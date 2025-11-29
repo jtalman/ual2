@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
-#include"../clr"
+#include"./clr"
 
   long double PI = 3.14159265359; // 'nuff said!                              // ca 3.14
   long double c  = 2.9979e+08;    // speed of light                           // ca 3e8
