@@ -1,0 +1,5 @@
+gcc Sun-Earth-orientation.c -lm
+
+./a.out 3 0.99 1.5e11 360
+
+./a.out 3 0.99 1.5e12 3600

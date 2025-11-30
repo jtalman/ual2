@@ -7,14 +7,14 @@
   long double c  = 2.9979e+08;    // speed of light                           // ca 3e8
 
 // NON LEAP YEAR !!!
-  long double T = 365;            // days in a calendar year     [days]       // NON LEAP YEAR !!!
+  long double T = 365;           // days in a calendar year     [days]       // NON LEAP YEAR !!!
 // NON LEAP YEAR !!!
 //
-  long double S = 86400;          // seconds in a day            [s]          // 60 * 60 * 24
-  long double A = 1.4960e+11;     // Astronomical Unit in meters [m]          // definition based on observation
-//long double R = A;              // representative value for Sun-Earth distance
-//#define D  1.4960e+11;          // Sun to Earth distance       [m]          // varies
-//#define V  2.9785e+04;          // speed of earth              [m/s]        // derived !
+  long double S = 86400;         // seconds in a day            [s]          // 60 * 60 * 24
+  long double A = 1.4960e+11;    // Astronomical Unit in meters [m]          // definition based on observation
+//long double R = A;             // representative value for Sun-Eart distance
+//#define D  1.4960e+11;    // Sun to Earth distance       [m]          // varies
+//#define V  2.9785e+04;    // speed of earth              [m/s]        // derived !
 
   long double G  = 6.6743e-11;    // Gravitational constant      [Nt m^2 / kg^2]
   long double M  = 1.9885e+30;    // Mass of the Sun             [kg]
@@ -24,14 +24,15 @@
 
 int main(int argc, char*argv[]){
 
- long double R = A;               // representative value for Sun-Earth distance
+ long double R = A;             // representative value for Sun-Eart distance
 
- long double cLoverkX    =atof(argv[1]);
- long double EovermcSquX =atof(argv[2]);
- long double lambdaX     =atof(argv[3]);
+ long double gammaX   =atof(argv[1]);
+ long double lambdaX  =atof(argv[2]);
+ long double epsilonX =atof(argv[3]);
+ long double kappaX   =atof(argv[4]);
 
- if(argc!=5){
-  printf("Usage: e.g. ./a.out cLoverkX EovermcSquX lambdaX Ngrid\n");
+ if(argc!=6){
+  printf("Usage: e.g. ./precess-ellipse gamma lambda epsilon kappa Ngrid\n");
   exit(1);
  }
 
@@ -81,25 +82,23 @@ int main(int argc, char*argv[]){
  printf("                    gammaDC   %+25.15Le         typical Earth gamma (double checked via Munoz eqn 8)\n\n",gammaDC); 
 
  long double kappaSqu = 1.L-(k/L/c)*(k/L/c);
- printf("                    kappaSqu  %+25.15Le         typical Earth kappa squared\n",kappaSqu); 
+ printf("                    kappaSqu  %+25.15Le         typical kappa squared\n",kappaSqu); 
 
  long double kappa = sqrt(kappaSqu);
- printf("                    kappa     %+25.15Le         typical Earth kappa\n\n",kappa); 
+ printf("                    kappa     %+25.15Le         typical kappa\n\n",kappa); 
 
  long double lambda = (kappa*L*c)*(kappa*L*c)/k/E;
- printf("                    lambda    %+25.15Le         typical Earth lambda\n",lambda); 
+ printf("                    lambda    %+25.15Le         typical lambda\n",lambda); 
 
  long double h0 = c*sqrt( EovermcSqu - kappaSqu );
- printf("                    h0        %+25.15Le         typical Earth h0\n\n",h0); 
+ printf("                    h0        %+25.15Le         typical h0\n\n",h0); 
 
  long double epsilon = Lcoverk*sqrt( 1.L-(kappa/EovermcSqu)*(kappa/EovermcSqu) );
- printf("                    epsilon   %+25.15Le         typical Earth epsilon\n\n",epsilon); 
-
- printf("          ________________________________________________________________________________________\n\n"); 
+ printf("                    epsilon   %+25.15Le         typical epsilon\n",epsilon); 
 
  printf(RESET);
 
- long double Ngrid=atof(argv[4]);
+ long double Ngrid=atof(argv[5]);
  long double delThta=2.*PI/Ngrid;
  long double delThtH=delThta/2.L;
  long double tau=2.*M_PI;
@@ -128,26 +127,6 @@ int main(int argc, char*argv[]){
   fprintf(fptr, "%+25.15Le, %+25.15Le\n",x,y);
  }
  fclose(fptr);
-
- long double koverLcX   = 1.L/cLoverkX;
- long double kappaSquX  = 1.L-koverLcX*koverLcX;        // Munoz Eq. (11)
- long double kappaX     = sqrt(kappaSquX);
- printf("                    kappaX    %+25.15Le                 kappaX\n\n",kappaX); 
- long double mcSquoverE = 1.L/EovermcSquX;
- long double epsilonX   = cLoverkX*sqrt(1.L-mcSquoverE*mcSquoverE*kappaSquX);
- printf("                    epsilonX  %+25.15Le                epsilonX\n\n",epsilonX); 
-
- FILE *fptr2;
- fptr2 = fopen("precess", "w");
- long double tau2=30.*M_PI;
- for(Thta=0.;Thta<tau2;Thta+=delThta){
-  ThtM=Thta+delThtH;
-  r=lambdaX/( 1.L+epsilonX*cos(kappaX*ThtM) );
-  x=r*cos(Thta);
-  y=r*sin(Thta);
-  fprintf(fptr2, "%+25.15Le, %+25.15Le\n",x,y);
- }
- fclose(fptr2);
 
 //printf("T (simple sum)      %+25.15Le [s]\n",T); 
 
