@@ -1,5 +1,10 @@
 gcc Sun-Earth-orientation.c -lm
 
-./a.out 3 0.99 1.5e11 360
-
 ./a.out 3 0.99 1.5e12 3600
+
+gnuplot
+
+       gnuplot> l 'orbit.gnuplot'              // Earth orbit in a "Munoz context"
+
+       gnuplot> l 'precess.gnuplot'            // Precessing orbit (Munoz - Pavic)
+                                               // see Figure 3 in 0143-0807_27_5_001MunozHamilton.pdf
