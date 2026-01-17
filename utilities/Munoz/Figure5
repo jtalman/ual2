@@ -1,0 +1,9 @@
+gcc Sun-Earth-orientation.c -lm
+
+./a.out 1.0005 0.17 1.5e12 3600 34
+
+gnuplot
+       gnuplot>                        
+                l 'precess.gnuplot'
+                                               // Precessing orbit (Munoz - Pavic)
+                                               // Figure 5 in 0143-0807_27_5_001MunozHamilton.pdf
