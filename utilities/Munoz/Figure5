@@ -4,6 +4,4 @@ gcc Sun-Earth-orientation.c -lm
 
 gnuplot
        gnuplot>                        
-                l 'precess.gnuplot'
-                                               // Precessing orbit (Munoz - Pavic)
-                                               // Figure 5 in 0143-0807_27_5_001MunozHamilton.pdf
+                l 'Figure5.gnuplot'
