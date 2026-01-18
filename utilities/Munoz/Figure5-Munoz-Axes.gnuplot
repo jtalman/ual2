@@ -12,4 +12,7 @@ set xlabel "x[m]"
 set yrange [-AxisMax:+AxisMax]
 set ylabel "y[m]"
 
-plot [-1e14:+1e14] "precess"
+#set style line 1 linewidth 0.25
+ set style line 1 linecolor rgb "black" linewidth 1
+
+plot [-1e14:+1e14] "precess" ls 1 w l
