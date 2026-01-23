@@ -13,3 +13,8 @@ gnuplot
                 l 'precess.gnuplot'
                                                // Precessing orbit (Munoz - Pavic)
                                                // see Figure 3 in 0143-0807_27_5_001MunozHamilton.pdf
+
+       gnuplot>                        
+                l 'precess-with-osculating-circle.gnuplot'
+                                               // Precessing orbit (Munoz - Pavic)
+                                               // see Figure 3 in 0143-0807_27_5_001MunozHamilton.pdf
