@@ -1,0 +1,6 @@
+Running
+      python 3bp.py
+gives a plot pretty similar to the figures on page 14, section 4.1 The Earth-Moon-Sun System, 
+of Andrew_Dylan_Three_Body_Problem.pdf
+
+The color discrepancy is disconcerting.
