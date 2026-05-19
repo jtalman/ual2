@@ -1,0 +1,17 @@
+void Sun_Gravity_on_Moon_MKS(){
+
+// vector from Moon to Sun
+    RM_S.x=sun.x-moon.x;
+    RM_S.y=sun.y-moon.y;
+    RM_S.z=sun.z-moon.z;
+// vector from Moon to Sun
+
+    long double d_MS = sqrt(RM_S.x * RM_S.x + RM_S.y * RM_S.y + RM_S.z * RM_S.z);
+
+    long double fS_M = (G_MKS * sun.m * moon.m) / (d_MS * d_MS * d_MS);
+
+    moon.ax += fS_M * RM_S.x / moon.m;
+    moon.ay += fS_M * RM_S.y / moon.m;
+    moon.az += fS_M * RM_S.z / moon.m;
+
+}

@@ -1,0 +1,19 @@
+
+gcc Sun-Earth-Moon-MKS.c -lm
+
+ls -l Sun-Earth-Moon-MKS.out
+
+\rm Sun-Earth-Moon-MKS.out
+
+./a.out 1e+3 3000 1.496e11 29780 3.844e8 1022
+
+ls -l Sun-Earth-Moon-MKS.out
+
+gnuplot
+          gnuplot>
+                    l 'Sun-Earth-Moon-MKS.gnuplot'    
+                    l 'Sun-Earth-Moon-MKS-2D-Orbits.gnuplot'    
+                    l 'Earth-Angle-MKS.gnuplot'
+                  q
+
+tail -50 Sun-Earth-Moon-MKS.out

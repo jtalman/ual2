@@ -1,0 +1,17 @@
+void Earth_Gravity_on_Sun_MKS(){
+
+// vector from Sun to Earth
+    RS_E.x = earth.x-sun.x;
+    RS_E.y = earth.y-sun.y;
+    RS_E.z = earth.z-sun.z;
+// vector from Sun to Earth
+
+    long double d_SE = sqrt(RS_E.x * RS_E.x + RS_E.y * RS_E.y + RS_E.z * RS_E.z);
+
+    long double fE_S = (G_MKS * earth.m * sun.m) / (d_SE * d_SE * d_SE);
+
+    sun.ax += fE_S * RS_E.x / sun.m;
+    sun.ay += fE_S * RS_E.y / sun.m;
+    sun.az += fE_S * RS_E.z / sun.m;
+
+}

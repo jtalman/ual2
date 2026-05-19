@@ -1,0 +1,17 @@
+void Moon_Gravity_on_Earth_MKS(){
+
+// vector from Earth to Moon
+    RE_M.x=moon.x-earth.x;
+    RE_M.y=moon.y-earth.y;
+    RE_M.z=moon.z-earth.z;
+// vector from Earth to Moon
+
+    long double d_EM = sqrt(RE_M.x * RE_M.x + RE_M.y * RE_M.y + RE_M.z * RE_M.z);
+
+    long double fM_E = (G_MKS * moon.m * earth.m) / (d_EM * d_EM * d_EM);
+
+    earth.ax += fM_E * RE_M.x / earth.m;
+    earth.ay += fM_E * RE_M.y / earth.m;
+    earth.az += fM_E * RE_M.z / earth.m;
+
+}
