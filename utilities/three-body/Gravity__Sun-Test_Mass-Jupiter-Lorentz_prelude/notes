@@ -1,0 +1,15 @@
+
+gcc Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.c -lm
+
+ls -l Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+
+./a.out  8.64e4  4.5e3  1.496e11  0  0  0  2.978e4  0  0  0  0  1  1 > Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+
+ls -l Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+
+gnuplot
+          gnuplot>
+                    l 'Sun.gnuplot'    
+                    l 'Test_Mass.gnuplot'
+                    l 'Jupiter.gnuplot'    
+                  q
