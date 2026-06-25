@@ -1,0 +1,17 @@
+
+ll *.o spheres
+
+\rm *.o spheres
+
+ll *.o spheres
+
+g++ -c Bmp.cpp -o Bmp.o
+
+g++ -c Sphere.cpp -o Sphere.o
+
+g++ main.cpp -o spheres -lGL -lGLU -lglut ./glui-2.36/src/lib/libglui.a Bmp.o Sphere.o
+
+ll *.o spheres
+
+./spheres
+
