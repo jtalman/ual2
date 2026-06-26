@@ -1,0 +1,6 @@
+python for-then-and-now.py
+          2026 6 26 11 13 23
+
+python then.py 2026 6 26 11 13 23
+
+python now.py
