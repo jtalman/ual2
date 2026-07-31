@@ -1,0 +1,23 @@
+
+ll *.o a.out Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+
+\rm *.o a.out Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+
+ll *.o a.out Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+
+g++ -c Bmp.cpp -o Bmp.o
+
+g++ -c Sphere.cpp -o Sphere.o
+
+g++ main.cpp -lGL -lGLU -lglut ./glui-2.36/src/lib/libglui.a Bmp.o Sphere.o
+
+ll *.o a.out Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+
+./a.out 86400  4500  1.496e11  0    0    0   29780   0     0     0     0     1    1
+
+gnuplot
+          gnuplot>
+                    l 'Sun.gnuplot'    
+                    l 'Test_Mass.gnuplot'
+                    l 'Jupiter.gnuplot'    
+                  q

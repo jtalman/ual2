@@ -1,0 +1,13 @@
+http://www.csc.villanova.edu/~mdamian/Past/graphicssp13/notes/GLTextures/Checkerboard.htm
+
+
+
+dnf -y install epel-release
+Last metadata expiration check: 1:52:05 ago on Sun 19 Jul 2026 11:40:17 AM EDT.
+Package epel-release-9-11.el9.noarch is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[root@T14-0 Sun-Test_Charge-Jupiter]# dnf config-manager --set-enabled crb
+[root@T14-0 Sun-Test_Charge-Jupiter]# dnf -y install glm-devel
+

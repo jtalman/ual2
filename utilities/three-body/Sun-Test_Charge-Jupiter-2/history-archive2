@@ -1,0 +1,100 @@
+    22	14:07	cp expt-3.c expt-3.c.3
+    23	14:09	cp expt-3.c expt-3.c.4
+    24	14:11	cp expt-3.c expt-3.c.5
+    25	14:27	gcc expt-3.c -lX11
+    26	14:28	mv /home/jtalman/Downloads/expt-3.c /home/jtalman/Downloads/expt-3.c.3
+    27	14:28	diff expt-3.c /home/jtalman/Downloads/expt-3.c
+    28	13:37	locate Sun-Earth-Moon-3D
+    29	13:37	cp .tcshrc .tcshrc.6
+    30	13:37	ll .tcshrc*
+    31	12:48	./simulator
+    32	12:57	vi three_body_sim4.sim
+    33	12:57	ll ..
+    34	15:53	ls -l Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+    35	16:46	vi ~/.tcshrc
+    36	16:47	cat ~/.tcshrc
+    37	12:53	gcc Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.c -lm
+    38	13:47	vi Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.c
+    39	14:13	g++ Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.c -lmvi notes
+    40	14:13	vi notes
+    41	17:10	diff notes /home/jtalman/Downloads/notes
+    42	11:57	cd Desktop/GIT/downloads/ual2/utilities/three-body/
+    43	12:01	ll utilities/three-body/
+    44	12:20	cd ../downloads/ual2/utilities/three-body/Sun-Earth-Moon-3D/
+    45	12:21	ll *.o spheres
+    46	12:21	./spheres
+    47	12:52	vi .tcshrc
+    48	13:07	mv Sun-Test_Charge-Jupiter.tar.gz Sun-Test_Charge-Jupiter.tar.gz.1
+    49	13:08	tar cvfz Sun-Test_Charge-Jupiter.tar.gz ./Sun-Test_Charge-Jupiter
+    50	13:08	ls -ld Sun-Test_Charge-Jupiter*
+    51	13:08	cd ual2/
+    52	13:08	ll /home/jtalman/3-body-gather/sun-earth-moon/C/Three-Body/Sun-Earth-Moon-MKS/songho/sphere/Sun-Test_Charge-Jupiter.tar.gz
+    53	13:10	popd
+    54	13:11	git commit
+    55	13:12	git push
+    56	13:13	git status -s
+    57	15:47	mv /home/jtalman/Downloads/main.cpp /home/jtalman/Downloads/main.cpp.5
+    58	17:07	h > history-archive
+    59	11:46	vi Bmp.cpp
+    60	11:56	g++ plot.cpp -lGL -lGLU -lglut
+    61	12:00	vi plot.cpp
+    62	18:16	diff Buttons.cpp /home/jtalman/3-body-gather/sun-earth-moon/C/Three-Body/Sun-Earth-Moon-MKS/songho/sphere/Sun-Test_Charge-Jupiter/Buttons.cpp
+    63	18:17	diff displayCB.cpp /home/jtalman/3-body-gather/sun-earth-moon/C/Three-Body/Sun-Earth-Moon-MKS/songho/sphere/Sun-Test_Charge-Jupiter/displayCB.cpp
+    65	13:54	g++ main.cpp -o spheres -lGL -lGLU -lglut ./glui-2.36/src/lib/libglui.a Bmp.o Sphere.o
+    66	15:49	./a.out 8.64e4 4.5e3 1.496e11 0 0 0 2.978e4 0 0 0 0 1 1 > Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+    67	15:17	g++ populate_array.cpp
+    68	16:19	diff main.cpp /home/jtalman/3-body-gather/sun-earth-moon/C/Three-Body/Sun-Earth-Moon-MKS/songho/sphere/Sun-Test_Charge-Jupiter/main.cpp
+    69	12:48	cd
+    70	12:48	cd 3-body-gather/
+    71	12:48	cd ..
+    72	12:49	mkdir City
+    73	12:49	git clone my-glfw.c:1:10: fatal error: glad/glad.h: No such file or directory
+    74	12:49	git clone https://github.com/tuxerr/City.git
+    75	12:49	cd City/
+    77	12:49	make
+    78	12:56	locate OpenGL
+    81	14:10	exit
+    82	12:20	diff main.cpp /home/jtalman/Downloads/main.c
+    83	12:21	mv /home/jtalman/Downloads/main.cpp /home/jtalman/Downloads/main.cpp.9
+    84	15:47	pwd
+    85	15:47	diff displayCB.cpp /run/media/jtalman/USB20FD/3-body-gather/sun-earth-moon/C/Three-Body/Sun-Earth-Moon-MKS/songho/sphere/Sun-Test_Charge-Jupiter/displayCB.cpp
+    86	15:48	diff main.cpp /run/media/jtalman/USB20FD/3-body-gather/sun-earth-moon/C/Three-Body/Sun-Earth-Moon-MKS/songho/sphere/Sun-Test_Charge-Jupiter/main.cpp
+    87	15:48	diff Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out /run/media/jtalman/USB20FD/3-body-gather/sun-earth-moon/C/Three-Body/Sun-Earth-Moon-MKS/songho/sphere/Sun-Test_Charge-Jupiter/Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+    88	15:48	h
+    89	15:48	diff display_S_TM_J.h /run/media/jtalman/USB20FD/3-body-gather/sun-earth-moon/C/Three-Body/Sun-Earth-Moon-MKS/songho/sphere/Sun-Test_Charge-Jupiter/display_S_TM_J.h
+    90	15:48	df -h
+    91	15:49	umount /dev/sda1
+    92	9:09	lcc ./a.out
+    93	9:09	ldd ./a.out
+    95	16:12	vi plot_parameters.h
+    96	16:15	cp displayCB.cpp displayCB.cpp.13
+    97	16:15	ll displayCB.cpp*
+    98	16:19	vi displayCB.cpp
+   106	10:31	5
+   116	10:33	gnuplot
+   117	10:50	ll main.cpp*
+   118	10:51	diff main.cpp main.cpp.9
+   119	10:51	cat plot_parameters.h
+   120	10:53	vi main.cpp
+   121	10:56	ll
+   122	10:57	ls
+   123	10:57	grep -n -r Body1_Force_from_Body2 .
+   125	11:00	vi Structures-MKS.h
+   126	11:39	cat notes
+   128	11:39	\rm *.o a.out Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+   130	11:39	g++ -c Bmp.cpp -o Bmp.o
+   131	11:39	g++ -c Sphere.cpp -o Sphere.o
+   132	11:39	g++ main.cpp -lGL -lGLU -lglut ./glui-2.36/src/lib/libglui.a Bmp.o Sphere.o
+   133	11:39	ll *.o a.out Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+   134	11:39	./a.out 86400 4500 1.496e11 0 0 0 29780 0 0 0 0 1 1
+   135	12:07	vi lorentz.c
+   136	12:07	gcc lorentz.c
+   139	12:37	gcc faraday.c
+   140	12:37	gcc faraday.c -lm
+   142	12:42	vi faraday.c
+   144	13:03	gcc faraday-2.c -lm
+   146	13:05	vi faraday-2.c
+   147	13:17	vi faraday-3.c
+   148	13:17	gcc faraday-3.c
+   149	13:17	./a.out
+   150	13:26	h > history-archive2

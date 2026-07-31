@@ -1,0 +1,100 @@
+    34	11:00	cd 3-body-gather/
+    35	16:07	ll utilities/python/
+    36	14:12	ls
+    37	14:14	diff Plot-Sun-magnetic-field.c /home/jtalman/Downloads/Plot-Sun-magnetic-field.c
+    38	14:44	cp Plot-Sun-magnetic-field.c Plot-Sun-magnetic-field.c.1
+    39	15:38	diff RMT-Sun-magnetic-field.c /home/jtalman/Downloads/RMT-Sun-magnetic-field.c
+    40	15:38	mv /home/jtalman/Downloads/notes /home/jtalman/Downloads/notes.4
+    41	9:23	s
+    42	16:34	mkdir mhd
+    43	16:34	cd mhd/
+    44	16:34	gcc mhd.c
+    45	16:34	gcc mhd.c -lm
+    46	13:43	cd 3-body-gather/sun
+    47	13:43	mkdir A
+    48	13:43	cd A
+    49	13:44	gcc A.c -lm
+    50	14:07	cp expt-3.c expt-3.c.3
+    51	14:09	cp expt-3.c expt-3.c.4
+    52	14:11	cp expt-3.c expt-3.c.5
+    53	14:27	gcc expt-3.c -lX11
+    54	14:28	mv /home/jtalman/Downloads/expt-3.c /home/jtalman/Downloads/expt-3.c.3
+    55	14:28	diff expt-3.c /home/jtalman/Downloads/expt-3.c
+    56	13:37	locate Sun-Earth-Moon-3D
+    57	13:37	cp .tcshrc .tcshrc.6
+    58	13:37	ll .tcshrc*
+    59	15:09	vi displayCB.cpp
+    61	12:47	make
+    62	12:48	./simulator
+    63	12:57	vi three_body_sim4.sim
+    64	12:57	ll ..
+    66	15:53	./a.out 8.64e4 4.5e3 1.496e11 0 0 0 2.978e4 0 0 0 0 1 1 > Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+    67	15:53	ls -l Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+    68	16:46	vi ~/.tcshrc
+    69	16:47	cat ~/.tcshrc
+    70	12:53	gcc Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.c -lm
+    71	13:47	vi Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.c
+    72	14:13	g++ Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.c -lmvi notes
+    73	14:13	vi notes
+    74	16:51	umount /dev/sda1
+    75	16:51	df -h
+    77	17:10	diff notes /home/jtalman/Downloads/notes
+    79	11:57	cd Desktop/GIT/downloads/ual2/utilities/three-body/
+    80	12:01	ll utilities/three-body/
+    81	12:20	cd ../downloads/ual2/utilities/three-body/Sun-Earth-Moon-3D/
+    82	12:21	g++ main.cpp -o spheres -lGL -lGLU -lglut ./glui-2.36/src/lib/libglui.a Bmp.o Sphere.o
+    83	12:21	ll *.o spheres
+    84	12:21	./spheres
+    85	12:50	cd
+    86	12:52	vi .tcshrc
+    88	13:07	h
+    89	13:07	cd ..
+    90	13:07	mv Sun-Test_Charge-Jupiter.tar.gz Sun-Test_Charge-Jupiter.tar.gz.1
+    91	13:08	tar cvfz Sun-Test_Charge-Jupiter.tar.gz ./Sun-Test_Charge-Jupiter
+    92	13:08	ls -ld Sun-Test_Charge-Jupiter*
+    93	13:08	cd ual2/
+    94	13:08	ll /home/jtalman/3-body-gather/sun-earth-moon/C/Three-Body/Sun-Earth-Moon-MKS/songho/sphere/Sun-Test_Charge-Jupiter.tar.gz
+    96	13:11	git commit
+    97	13:12	git push
+    98	13:13	git status -s
+   103	13:17	exit
+   105	13:18	popd
+   106	13:18	pwd
+   107	13:18	5
+   119	13:22	vi Reset.cpp
+   121	13:45	cp main.cpp get-position.cpp
+   127	13:51	cp main.cpp main.cpp.1
+   134	13:53	mv get-position.cpp get_position.cpp
+   138	13:53	vi get-position.cpp
+   143	14:02	diff main.cpp main.cpp.1
+   158	14:10	cp main.cpp main.cpp.2
+   160	14:10	cmp main.cpp main.cpp.2
+   165	14:12	vi get_position.cpp
+   181	14:18	mv main.cpp main.cppHUH
+   183	14:18	co main.cpp.2 main.cpp
+   184	14:18	cp main.cpp.2 main.cpp
+   187	14:30	grep -n -r Body1_Force_from_Body2 .
+   202	14:56	cat Structures-MKS.h
+   204	15:04	diff main.cpp main.cpp.2
+   205	15:04	cp main.cpp main.cpp.3
+   240	15:18	gdb ./a.out
+   333	15:47	mv /home/jtalman/Downloads/main.cpp /home/jtalman/Downloads/main.cpp.5
+   335	15:48	diff main.cpp /home/jtalman/Downloads/main.cpp
+   339	16:17	\rm *.o a.out Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+   341	16:17	g++ -c Bmp.cpp -o Bmp.o
+   342	16:17	g++ -c Sphere.cpp -o Sphere.o
+   347	16:18	ll *.o a.out Gravity__Sun-Test_Mass-Jupiter-Lorentz_prelude.out
+   351	16:23	vi plot.c
+   352	16:23	mv plot.c plot.cpp
+   354	16:24	g++ plot.cpp -lGL -lGLU -lglut
+   357	16:40	./a.out
+   358	16:54	vi plot.cpp
+   360	17:01	cp main.cpp main.cpp.4
+   361	17:01	ll main.cpp*
+   362	17:01	vi main.cpp
+   363	17:02	cat notes
+   364	17:02	g++ main.cpp -lGL -lGLU -lglut ./glui-2.36/src/lib/libglui.a Bmp.o Sphere.o
+   365	17:02	./a.out 86400 4500 1.496e11 0 0 0 29780 0 0 0 0 1 1
+   366	17:02	gnuplot
+   367	17:07	ll
+   368	17:07	h > history-archive

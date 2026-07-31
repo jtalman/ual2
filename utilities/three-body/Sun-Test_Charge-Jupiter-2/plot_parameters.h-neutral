@@ -1,0 +1,7 @@
+#define SUN_X0 0
+#define SUN_Y0 0
+#define SUN_Z0 0
+
+#define JUPITER_X0 0
+#define JUPITER_Y0 0
+#define JUPITER_Z0 0

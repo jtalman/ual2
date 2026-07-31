@@ -1,0 +1,321 @@
+void displayCB(){
+//fprintf(stderr, "enter void displayCB()\n");
+//fprintf(stderr, "WhichObject %d\n", WhichObject);
+
+/*
+if(WhichObject==1){
+ fprintf(stderr, "Iconic\n");
+    glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE | GLUT_STENCIL);
+*/
+
+/*
+    for( size_t i = 0; i < 1000; ++i )
+    {
+        Point pt;
+        pt.x = -50 + (rand() % 100);
+        pt.y = -50 + (rand() % 100);
+        pt.r = rand() % 255;
+        pt.g = rand() % 255;
+        pt.b = rand() % 255;
+        pt.a = 255;
+        points.push_back(pt);
+    }    
+*/
+/*
+  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT               );
+//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GLUT_STENCIL);
+    glDisable(GL_LIGHTING);
+    glDisable(GL_TEXTURE_2D);
+
+ glMatrixMode(GL_PROJECTION);
+ glLoadIdentity();
+ glOrtho(-50, 50, -50, 50, -1, 1);
+
+ glMatrixMode(GL_MODELVIEW);
+ glLoadIdentity();
+
+ // draw
+ glColor3ub( 255, 255, 255 );
+ glEnableClientState( GL_VERTEX_ARRAY );
+ glEnableClientState( GL_COLOR_ARRAY );
+ glVertexPointer( 2, GL_FLOAT, sizeof(Point), &points[0].x );
+ glColorPointer( 4, GL_UNSIGNED_BYTE, sizeof(Point), &points[0].r );
+ glPointSize( 3.0 );
+ glDrawArrays( GL_POINTS, 0, points.size() );
+ glDisableClientState( GL_VERTEX_ARRAY );
+ glDisableClientState( GL_COLOR_ARRAY );
+
+ glFlush();
+ glutSwapBuffers();
+return;
+}
+*/
+
+/*
+bool condtion = true;
+while (condtion)
+{
+    glutMainLoopEvent(); // handle the main loop once
+    glutPostRedisplay(); // cause `display` to be called in `glutMainLoopEvent`
+
+    condtion = ...;
+}
+*/
+
+//if(WhichObject==1){
+while(WhichObject==1){
+ step++;
+// display_burkhardt();
+
+//fprintf(stderr, "enter void display_burkhardt(void)\n");
+
+  float p[2];
+  float XX[2] = {0};
+  int point;
+//
+//  Clear the window.
+//
+//glClear ( GL_COLOR_BUFFER_BIT );
+  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT               );
+//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GLUT_STENCIL);
+    glDisable(GL_LIGHTING);
+    glDisable(GL_TEXTURE_2D);
+
+ glMatrixMode(GL_PROJECTION);
+ glLoadIdentity();
+ glOrtho(-50, 50, -50, 50, -1, 1);
+
+ glMatrixMode(GL_MODELVIEW);
+ glLoadIdentity();
+//
+//  Draw the generator points in BLUE.
+//  Note that OpenGL is using FLOAT's for real numbers, while we prefer DOUBLE's.
+//
+  glColor3f ( 0.0, 0.0, 1.0 );
+  glPointSize(5);
+  glBegin (GL_POINTS);
+    p[0] = ( float ) JX[step] / 1e11;
+    p[1] = ( float ) JY[step] / 1e11;
+    glVertex2fv ( p ); 
+  glEnd ( ); 
+
+//for ( point = 0; point < point_num; point++ )
+//for ( int i = 0; i < point_num; i++ )
+//for (int i = 0; i < point_num; i++){
+//for (int i = 0; i < step; i++){
+//  glBegin (GL_POINTS);
+/*
+      p[0] = ( float ) xy[0+point*2];
+      p[1] = ( float ) xy[1+point*2];
+*/
+/*
+      p[0] = ( float ) JX[0+point*2] / 1e11;
+      p[1] = ( float ) JY[1+point*2] / 1e11;
+*/
+/*
+      p[0] = ( float ) SX[i] / 1e8;
+      p[1] = ( float ) SY[i] / 1e8;
+*/
+/*
+      p[0] = ( float ) TM_X[i] / 1e10;
+      p[1] = ( float ) TM_Y[i] / 1e10;
+*/
+/*
+      p[0] = ( float ) JX[i] / 1e11;
+      p[1] = ( float ) JY[i] / 1e11;
+*/
+
+//    glVertex2fv ( p ); 
+
+// glEnd ( ); 
+//}
+
+  glColor3f ( 1.0, 0.0, 0.0 );
+  glPointSize(10);
+  glBegin (GL_POINTS);
+  glVertex2fv ( XX ); 
+  glEnd ( ); 
+
+
+//
+//  Clear all the buffers.
+//
+  glFlush ( ); 
+  glutSwapBuffers();
+
+  glutMainLoopEvent(); // handle the main loop once
+//glutMainLoop(); // handle the main loop once
+
+//fprintf(stderr, "leave void display_burkhardt(void)\n");
+//return;
+}
+
+    // clear buffer
+    glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH | GLUT_STENCIL);   // display mode
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+
+	GLsizei vx, vy, v;		// viewport dimensions
+	GLint xl, yb;		// lower-left corner of viewport
+	GLfloat scale2;		// real glui scale factor
+
+    // save the initial ModelView matrix before modifying ModelView matrix
+    glPushMatrix();
+
+    // tramsform modelview matrix
+    glTranslatef(0, 0, -cameraDistance);
+
+    // set material
+    float ambient[]  = {0.5f, 0.5f, 0.5f, 1};
+    float diffuse[]  = {0.7f, 0.7f, 0.7f, 1};
+    float specular[] = {1.0f, 1.0f, 1.0f, 1};
+    float shininess  = 128;
+    glMaterialfv(GL_FRONT, GL_AMBIENT,   ambient);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE,   diffuse);
+    glMaterialfv(GL_FRONT, GL_SPECULAR,  specular);
+    glMaterialf(GL_FRONT, GL_SHININESS, shininess);
+
+	// set the viewport to a square centered in the window:
+
+	vx = glutGet( GLUT_WINDOW_WIDTH );
+	vy = glutGet( GLUT_WINDOW_HEIGHT );
+//	vx = glutGet( SCREEN_WIDTH );
+//	vy = glutGet( SCREEN_HEIGHT );
+//	vx = SCREEN_WIDTH;
+//	vy = SCREEN_HEIGHT;
+//	vx = (GLsizei) SCREEN_WIDTH;
+//	vy = (GLsizei) SCREEN_HEIGHT;
+
+/*
+	v = vx < vy ? vx : vy;			// minimum dimension
+	xl = ( vx - v ) / 2;
+	yb = ( vy - v ) / 2;
+	glViewport( xl, yb,  v, v );
+*/
+
+	glTranslatef( (GLfloat)TransXYZ[0], (GLfloat)TransXYZ[1], -(GLfloat)TransXYZ[2] );
+
+	// uniformly scale the scene:
+
+	glScalef( (GLfloat)Scale, (GLfloat)Scale, (GLfloat)Scale );
+	scale2 = 1. + Scale2;		// because glui translation starts at 0.
+	if( scale2 < MINSCALE )
+		scale2 = MINSCALE;
+	glScalef( (GLfloat)scale2, (GLfloat)scale2, (GLfloat)scale2 );
+
+/*
+	if( AxesOn ){
+		fprintf( stderr, "Axes\n" );
+		glColor3fv( AXES_COLOR );
+		glLineWidth( AXES_WIDTH );
+			Axes( 1.2 );
+		glLineWidth( 1. );
+        }
+*/
+
+    // line color
+    float lineColor[] = {0.2f, 0.2f, 0.2f, 1};
+
+    // draw left flat sphere with lines
+    glPushMatrix();
+
+    glTranslatef(S_x0, S_y0, S_z0);
+
+    glRotatef(cameraAngleX, 1, 0, 0);   // pitch
+    glRotatef(cameraAngleY, 0, 1, 0);   // heading
+    glBindTexture(GL_TEXTURE_2D, texId_Sun);
+    sphere1.drawWithLines(lineColor);
+    //sphere1.drawLines(lineColor);
+    glPopMatrix();
+
+    // draw centre smooth sphere with line
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, diffuse); // reset diffuse
+    glPushMatrix();
+
+//  glTranslatef(0.0f, 0, 0);
+    glTranslatef(M_x0, M_y0, M_z0);
+
+    glRotatef(cameraAngleX, 1, 0, 0);
+    glRotatef(cameraAngleY, 0, 1, 0);
+    glBindTexture(GL_TEXTURE_2D, texId_TC);
+//  glBindTexture(GL_TEXTURE_2D, texId_Moon);
+	if( AxesOn ){
+//		fprintf( stderr, "Axes\n" );
+		glColor3fv( AXES_COLOR );
+		glLineWidth( AXES_WIDTH );
+			Axes( 1.2 );
+		glLineWidth( 1. );
+        }
+
+    sphere2.draw();
+//  sphere2.drawWithLines(lineColor);
+
+    glPopMatrix();
+
+    // draw right sphere with texture
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, diffuse); // reset diffuse
+    glPushMatrix();
+
+//  glTranslatef(2.5f, 0, 0);
+    glTranslatef(E_x0, E_y0, E_z0);
+
+    glRotatef(cameraAngleX, 1, 0, 0);
+    glRotatef(cameraAngleY, 0, 1, 0);
+    glBindTexture(GL_TEXTURE_2D, texId_Jupiter);        //    texId_Earth;
+    sphere2.draw();
+    glPopMatrix();
+
+    /*
+    // using GLU quadric object
+    GLUquadricObj* obj = gluNewQuadric();
+    gluQuadricDrawStyle(obj, GLU_FILL); // GLU_FILL, GLU_LINE, GLU_SILHOUETTE, GLU_POINT
+    gluQuadricNormals(obj, GL_SMOOTH);
+    gluQuadricTexture(obj, GL_TRUE);
+    glTexGeni(GL_S, GL_TEXTURE_GEN_MODE, GL_SPHERE_MAP);
+    glTexGeni(GL_T, GL_TEXTURE_GEN_MODE, GL_SPHERE_MAP);
+    gluSphere(obj, 2.0, 50, 50); // radius, slice, stack
+    */
+
+    glBindTexture(GL_TEXTURE_2D, 0);
+
+//  showInfo();     // print max range of glDrawRangeElements
+
+//  glPushMatrix();
+//  glMatrixMode(GL_MODELVIEW);      // switch to modelview matrix
+/*
+	if( AxesOn ){
+		fprintf( stderr, "Axes\n" );
+		glColor3fv( AXES_COLOR );
+		glLineWidth( AXES_WIDTH );
+			Axes( 1.2 );
+		glLineWidth( 1. );
+        }
+*/
+
+    glPopMatrix();
+
+if( WhichProjection ){
+ toPerspective();
+}else{
+ toOrtho();
+}
+
+        if( DepthCueOn )
+        {
+                glEnable( GL_FOG );
+                glFogi( GL_FOG_MODE, FOGMODE );
+                glFogfv( GL_FOG_COLOR, FOGCOLOR );
+                glFogf( GL_FOG_DENSITY, FOGDENSITY );
+                glFogf( GL_FOG_START, FOGSTART );
+                glFogf( GL_FOG_END, FOGEND );
+                glEnable( GL_FOG );
+        }
+        else
+        {
+                glDisable( GL_FOG );
+        }
+//  glPopMatrix();
+
+ glFlush();
+    glutSwapBuffers();
+//fprintf(stderr, "leave void displayCB()\n");
+}
