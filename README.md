@@ -2,6 +2,8 @@ Unified Accelerator Libraries (UAL) for Alma Linux 9.
 
 AlmaLinux 8 is probably ok. AlmaLinux 10 is probably ok.
 
+Any current linux flavor is likely to be readily tractable.
+
 An important issue is the C/C++ compiler gcc/g++.
 
 The ca latest, gcc version 11.5.0, as of ca 2025, is mostly ok. A legacy root (CERN) build requires gcc version 4.8.5 or so. This is provided in this git clone download.
@@ -44,3 +46,37 @@ NOTE:
 ________________________________________________________________________
 
 ENJOY!!
+________________________________________________________________________
+________________________________________________________________________
+________________________________________________________________________
+
+
+UAL has a newish, "developmental / exploratory", component.
+
+This is oriented towards Solar System physics, most prominently the Sun's magnetic field.
+
+Away from the solid and gaseous regions, spatial low pressure makes coherent "accelerator processes" feasible.
+
+Probly not at the level of granularity assumed for the legacy and latest codebases!
+
+It's not clear where this newest codebase is headed. Possibly just an archive where tentative code can be recovered for different project(s).
+
+John Talman wishes to gratefully acknowledge:
+
+     Song Ho Ahn (안성호)!
+          https://www.songho.ca/index.html
+     Thanks for some wonderful code!
+
+     Paul Rademacher:
+          https://github.com/libglui/glui
+     Thanks for some wonderful code!
+
+     Mike Bailey:
+          https://web.engr.oregonstate.edu/~mjb/WebMjb/mjb.html
+     Thanks for some wonderful code!
+     Thanks for some brilliant instruction!
+          glut, with glui, is a nice combo!!
+
+
+YMMV!!   ;-)
+________________________________________________________________________
