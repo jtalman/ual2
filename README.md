@@ -61,6 +61,10 @@ Probly not at the level of granularity assumed for the legacy and latest codebas
 
 It's not clear where this newest codebase is headed. Possibly just an archive where tentative code can be recovered for different project(s).
 
+For now, this newish code is all in directory:
+     https://github.com/jtalman/ual2/tree/main/utilities/
+
+
 John Talman wishes to gratefully acknowledge:
 
      Song Ho Ahn (안성호)!
