@@ -1,0 +1,1040 @@
+#include<GL/freeglut.h>
+
+#include<cstdlib>
+#include<iostream>
+#include<sstream>
+#include<iomanip>
+#include"OrbitCamera.h"
+#include"Matrices.h"
+#include"Vectors.h"
+#include"Quaternion.h"
+#include"Timer.h"
+
+float zoom = 1.0f;
+void mouseWheel(int wheel, int direction, int x, int y) {
+    if (direction > 0) {
+        zoom += 0.03f; // Zoom in
+    } else {
+        zoom -= 0.03f; // Zoom out
+    }
+    if (zoom < 0.1f) zoom = 0.1f; // Prevent inversion/disappearance
+    glutPostRedisplay();
+}
+/*
+void mouseWheel(int wheel, int direction, int x, int y) {
+    printf("Wheel %d scrolled %s at coords (%d, %d)\n", 
+           wheel, (direction > 0) ? "UP" : "DOWN", x, y);
+if (direction > 0) {
+        zoom += 0.1f; // Zoom in
+    } else {
+        zoom -= 0.1f; // Zoom out
+    }
+    if (zoom < 0.1f) zoom = 0.1f; // Prevent inversion/disappearance
+}
+*/
+
+// GLUT CALLBACK functions
+void displayCB();
+void reshapeCB(int w, int h);
+void timerCB(int millisec);
+void idleCB();
+void keyboardCB(unsigned char key, int x, int y);
+void keyboardUpCB(unsigned char key, int x, int y);
+void mouseCB(int button, int stat, int x, int y);
+void mouseMotionCB(int x, int y);
+void specialCB(int key, int x, int y);
+void specialUpCB(int key, int x, int y);
+
+// CALLBACK function when exit() called ///////////////////////////////////////
+void exitCB();
+
+void initGL();
+int  initGLUT(int argc, char **argv);
+bool initSharedMem();
+void clearSharedMem();
+void initLights();
+void drawString(const char *str, int x, int y, float color[4], void *font);
+void drawString3D(const char *str, float pos[3], float color[4], void *font);
+void showInfo();
+void showFPS();
+void toOrtho();
+void toPerspective();
+void drawAxis(float size=2.5f);
+void drawGridXZ(float size=10.0f, float step=1.0f);
+void drawGridXY(float size=10.0f, float step=1.0f);
+void drawPoint(float size);
+void drawModel();
+void resetCamera();
+
+// constants
+const int   SCREEN_WIDTH    = 1700;//600;
+const int   SCREEN_HEIGHT   = 1000;//600;
+const float CAMERA_DISTANCE = 10.0f;
+const int   TEXT_WIDTH      = 8;
+const int   TEXT_HEIGHT     = 13;
+const float DEG2RAD         = 3.141593f / 180;
+const float MOVE_SPEED      = 3.0f;             // units per sec
+const float MOVE_ACCEL      = 10.0f;            // units per squared sec
+
+// global variables
+void *font = GLUT_BITMAP_8_BY_13;
+int screenWidth;
+int screenHeight;
+bool mouseLeftDown;
+bool mouseRightDown;
+bool plusKeyDown;
+bool minusKeyDown;
+bool leftKeyDown;
+bool rightKeyDown;
+bool upKeyDown;
+bool downKeyDown;
+float mouseX, mouseY;
+float mouseDownX, mouseDownY;
+int drawMode;
+
+OrbitCamera camera;
+Vector3 cameraAngle;
+Quaternion cameraQuat;
+
+Timer timer;
+float playTime;     // sec
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+int main(int argc, char **argv)
+{
+    // init global vars
+    initSharedMem();
+
+    // register exit callback
+    atexit(exitCB);
+
+    // init GLUT and GL
+    initGLUT(argc, argv);
+    initGL();
+
+    // the last GLUT call (LOOP)
+    // window will be shown and display callback is triggered by events
+    // NOTE: this call never return main().
+    glutMainLoop(); /* Start GLUT event-processing loop */
+
+    return 0;
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// draw a grid on XZ-plane
+///////////////////////////////////////////////////////////////////////////////
+void drawGridXZ(float size, float step)
+{
+    // disable lighting
+    glDisable(GL_LIGHTING);
+
+    glBegin(GL_LINES);
+
+    glColor4f(0.5f, 0.5f, 0.5f, 0.5f);
+    for(float i=step; i <= size; i+= step)
+    {
+        glVertex3f(-size, 0,  i);   // lines parallel to X-axis
+        glVertex3f( size, 0,  i);
+        glVertex3f(-size, 0, -i);   // lines parallel to X-axis
+        glVertex3f( size, 0, -i);
+
+        glVertex3f( i, 0, -size);   // lines parallel to Z-axis
+        glVertex3f( i, 0,  size);
+        glVertex3f(-i, 0, -size);   // lines parallel to Z-axis
+        glVertex3f(-i, 0,  size);
+    }
+
+    // x-axis
+    glColor3f(1, 0, 0);
+    glVertex3f(-size, 0, 0);
+    glVertex3f( size, 0, 0);
+
+    // z-axis
+    glColor3f(0,0,1);
+    glVertex3f(0, 0, -size);
+    glVertex3f(0, 0,  size);
+
+    glEnd();
+
+    // enable lighting back
+    glEnable(GL_LIGHTING);
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// draw a grid on XY-plane
+///////////////////////////////////////////////////////////////////////////////
+void drawGridXY(float size, float step)
+{
+    // disable lighting
+    glDisable(GL_LIGHTING);
+
+    // 20x20 grid
+    glBegin(GL_LINES);
+
+    glColor4f(0.5f, 0.5f, 0.5f, 0.5f);
+    for(float i=step; i <= size; i+= step)
+    {
+        glVertex3f(-size,  i, 0);   // lines parallel to X-axis
+        glVertex3f( size,  i, 0);
+        glVertex3f(-size, -i, 0);   // lines parallel to X-axis
+        glVertex3f( size, -i, 0);
+
+        glVertex3f( i, -size, 0);   // lines parallel to Y-axis
+        glVertex3f( i,  size, 0);
+        glVertex3f(-i, -size, 0);   // lines parallel to Y-axis
+        glVertex3f(-i,  size, 0);
+    }
+
+    // x-axis
+    glColor3f(1, 0, 0);
+    glVertex3f(-size, 0, 0);
+    glVertex3f( size, 0, 0);
+
+    // y-axis
+    glColor3f(0, 1, 0);
+    glVertex3f(0, -size, 0);
+    glVertex3f(0,  size, 0);
+
+    glEnd();
+
+    // enable lighting back
+    glEnable(GL_LIGHTING);
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// draw the local axis of an object
+///////////////////////////////////////////////////////////////////////////////
+void drawAxis(float size)
+{
+    glDepthFunc(GL_ALWAYS);     // to avoid visual artifacts with grid lines
+    glDisable(GL_LIGHTING);
+
+    // draw axis
+    glLineWidth(5);
+    glBegin(GL_LINES);
+        glColor3f(1, 0, 0);
+        glVertex3f(0, 0, 0);
+        glVertex3f(size, 0, 0);
+        glColor3f(0, 1, 0);
+        glVertex3f(0, 0, 0);
+        glVertex3f(0, size, 0);
+        glColor3f(0, 0, 1);
+        glVertex3f(0, 0, 0);
+        glVertex3f(0, 0, size);
+    glEnd();
+    glLineWidth(1);
+
+    // draw arrows(actually big square dots)
+    glPointSize(10);
+    glBegin(GL_POINTS);
+        glColor3f(1, 0, 0);
+        glVertex3f(size, 0, 0);
+        glColor3f(0, 1, 0);
+        glVertex3f(0, size, 0);
+        glColor3f(0, 0, 1);
+        glVertex3f(0, 0, size);
+    glEnd();
+    glPointSize(1);
+
+    // restore default settings
+    glEnable(GL_LIGHTING);
+    glDepthFunc(GL_LEQUAL);
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// draw a point with a given size
+///////////////////////////////////////////////////////////////////////////////
+void drawPoint(float size)
+{
+    glDepthFunc(GL_ALWAYS);     // to avoid visual artifacts with grid lines
+    glDisable(GL_LIGHTING);
+
+    glPointSize(size);
+    glColor3f(1, 1, 0);
+
+    Vector3 cameraTarget = camera.getTarget();
+    glBegin(GL_POINTS);
+    glVertex3f(cameraTarget.x, cameraTarget.y, cameraTarget.z);
+    glEnd();
+
+    glPointSize(1);
+
+    // restore default settings
+    glEnable(GL_LIGHTING);
+    glDepthFunc(GL_LEQUAL);
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// draw a model (tetrahedron)
+///////////////////////////////////////////////////////////////////////////////
+void drawModel()
+{
+    glColor3f(1, 1, 1);
+    glBegin(GL_TRIANGLES);
+    glNormal3f(0.6667f, 0.6667f, 0.3334f);
+    glVertex3f(1, 0, 0);
+    glVertex3f(0, 1, 0);
+    glVertex3f(0, 0, 2);
+
+    glNormal3f(-0.6667f, 0.6667f, 0.3334f);
+    glVertex3f(-1, 0, 0);
+    glVertex3f(0, 0, 2);
+    glVertex3f(0, 1, 0);
+
+    glNormal3f(0, 0, -1);
+    glVertex3f(1, 0, 0);
+    glVertex3f(0, 0, 2);
+    glVertex3f(-1, 0, 0);
+
+    glNormal3f(0, -1, 0);
+    glVertex3f(1, 0, 0);
+    glVertex3f(-1, 0, 0);
+    glVertex3f(0, 1, 0);
+    glEnd();
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// initialize GLUT for windowing
+///////////////////////////////////////////////////////////////////////////////
+int initGLUT(int argc, char **argv)
+{
+    // GLUT stuff for windowing
+    // initialization openGL window.
+    // it is called before any other GLUT routine
+    glutInit(&argc, argv);
+
+    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH | GLUT_STENCIL);   // display mode
+
+    glutInitWindowSize(screenWidth, screenHeight);  // window size
+
+    glutInitWindowPosition(100, 100);           // window location
+
+    // finally, create a window with openGL context
+    // Window will not displayed until glutMainLoop() is called
+    // it returns a unique ID
+    int handle = glutCreateWindow(argv[0]);     // param is the title of window
+
+    // register GLUT callback functions
+    glutDisplayFunc(displayCB);
+    glutTimerFunc(33, timerCB, 33);             // redraw only every given millisec
+    //glutIdleFunc(idleCB);                       // redraw whenever system is idle
+    glutReshapeFunc(reshapeCB);
+    glutKeyboardFunc(keyboardCB);
+    glutKeyboardUpFunc(keyboardUpCB);
+    glutMouseFunc(mouseCB);
+    glutMotionFunc(mouseMotionCB);
+    glutSpecialFunc(specialCB);
+    glutSpecialUpFunc(specialUpCB);
+    glutMouseWheelFunc(mouseWheel);
+
+    return handle;
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// initialize OpenGL
+// disable unused features
+///////////////////////////////////////////////////////////////////////////////
+void initGL()
+{
+    glShadeModel(GL_SMOOTH);                    // shading mathod: GL_SMOOTH or GL_FLAT
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 4);      // 4-byte pixel alignment
+
+    // enable /disable features
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_TEXTURE_2D);
+    glEnable(GL_CULL_FACE);
+
+    // enable /disable features
+    glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
+    glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
+    glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_TEXTURE_2D);
+    glEnable(GL_CULL_FACE);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable(GL_LINE_SMOOTH);
+
+     // track material ambient and diffuse from surface color, call it before glEnable(GL_COLOR_MATERIAL)
+    glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
+    glEnable(GL_COLOR_MATERIAL);
+
+    glClearColor(0, 0, 0, 0);                   // background color
+    glClearStencil(0);                          // clear stencil buffer
+    glClearDepth(1.0f);                         // 0 is near, 1 is far
+    glDepthFunc(GL_LEQUAL);
+
+    initLights();
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// write 2d text using GLUT
+// The projection matrix must be set to orthogonal before call this function.
+///////////////////////////////////////////////////////////////////////////////
+void drawString(const char *str, int x, int y, float color[4], void *font)
+{
+    glPushAttrib(GL_LIGHTING_BIT | GL_CURRENT_BIT); // lighting and color mask
+    glDisable(GL_LIGHTING);     // need to disable lighting for proper text color
+    glDisable(GL_TEXTURE_2D);
+
+    glColor4fv(color);          // set text color
+    glRasterPos2i(x, y);        // place text position
+
+    // loop all characters in the string
+    while(*str)
+    {
+        glutBitmapCharacter(font, *str);
+        ++str;
+    }
+
+    glEnable(GL_TEXTURE_2D);
+    glEnable(GL_LIGHTING);
+    glPopAttrib();
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// draw a string in 3D space
+///////////////////////////////////////////////////////////////////////////////
+void drawString3D(const char *str, float pos[3], float color[4], void *font)
+{
+    glPushAttrib(GL_LIGHTING_BIT | GL_CURRENT_BIT); // lighting and color mask
+    glDisable(GL_LIGHTING);     // need to disable lighting for proper text color
+    glDisable(GL_TEXTURE_2D);
+
+    glColor4fv(color);          // set text color
+    glRasterPos3fv(pos);        // place text position
+
+    // loop all characters in the string
+    while(*str)
+    {
+        glutBitmapCharacter(font, *str);
+        ++str;
+    }
+
+    glDisable(GL_TEXTURE_2D);
+    glEnable(GL_LIGHTING);
+    glPopAttrib();
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// initialize global variables
+///////////////////////////////////////////////////////////////////////////////
+bool initSharedMem()
+{
+    // init timer
+    timer.start();
+    playTime = 0;
+
+    screenWidth = SCREEN_WIDTH;
+    screenHeight = SCREEN_HEIGHT;
+
+    mouseLeftDown = mouseRightDown = false;
+    mouseDownX = mouseDownY = 0;
+    mouseX = mouseY = 0;
+
+    // for +/- keys
+    plusKeyDown = minusKeyDown = false;
+
+    // for arrow keys
+    leftKeyDown = rightKeyDown = upKeyDown = downKeyDown = false;
+
+    // init camera
+    resetCamera();
+
+    drawMode = 0; // 0:fill, 1: wireframe, 2:points
+
+    return true;
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// clean up shared memory
+///////////////////////////////////////////////////////////////////////////////
+void clearSharedMem()
+{
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// reset camera to default
+///////////////////////////////////////////////////////////////////////////////
+void resetCamera()
+{
+    Vector3 cameraPosition(0, 0, CAMERA_DISTANCE);
+    Vector3 cameraTarget(0, 0, 0);
+    Vector3 cameraUp(0, 1, 0);
+    camera.lookAt(cameraPosition, cameraTarget);
+    //camera.lookAt(cameraPosition, cameraTarget, cameraUp);
+    std::cout << camera.getMatrix() << std::endl;
+    std::cout << "distance: " << camera.getDistance() << std::endl;
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// initialize lights
+///////////////////////////////////////////////////////////////////////////////
+void initLights()
+{
+    // set up light colors (ambient, diffuse, specular)
+    GLfloat lightKa[] = {.2f, .2f, .2f, 1.0f};  // ambient light
+    GLfloat lightKd[] = {.7f, .7f, .7f, 1.0f};  // diffuse light
+    GLfloat lightKs[] = {1, 1, 1, 1};           // specular light
+    glLightfv(GL_LIGHT0, GL_AMBIENT, lightKa);
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, lightKd);
+    glLightfv(GL_LIGHT0, GL_SPECULAR, lightKs);
+
+    // position the light
+    float lightPos[4] = {0, 1, 1, 0}; // directional light
+    glLightfv(GL_LIGHT0, GL_POSITION, lightPos);
+
+    glEnable(GL_LIGHT0);                        // MUST enable each light source after configuration
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// display info messages
+///////////////////////////////////////////////////////////////////////////////
+void showInfo()
+{
+    // backup current model-view matrix
+    glPushMatrix();                     // save current modelview matrix
+    glLoadIdentity();                   // reset modelview matrix
+
+    // set to 2D orthogonal projection
+    glMatrixMode(GL_PROJECTION);        // switch to projection matrix
+    glPushMatrix();                     // save current projection matrix
+    glLoadIdentity();                   // reset projection matrix
+    gluOrtho2D(0, screenWidth, 0, screenHeight); // set to orthogonal projection
+
+    float color[4] = {1, 1, 1, 1};
+
+    std::stringstream ss;
+    ss << std::fixed << std::setprecision(1);
+
+    // print camera info
+    ss << "     Angle: " << camera.getAngle();
+    drawString(ss.str().c_str(), 1, screenHeight - TEXT_HEIGHT, color, font);
+
+    ss.str("");
+    ss << "Quaternion: " << camera.getQuaternion();
+    drawString(ss.str().c_str(), 1, screenHeight - 2*TEXT_HEIGHT, color, font);
+
+    ss.str("");
+    ss << "  Position: " << camera.getPosition();
+    drawString(ss.str().c_str(), 1, screenHeight - 3*TEXT_HEIGHT, color, font);
+
+    ss.str("");
+    ss << "    Target: " << camera.getTarget();
+    drawString(ss.str().c_str(), 1, screenHeight - 4*TEXT_HEIGHT, color, font);
+
+    ss.str("");
+    ss << "   Left Axis: " << camera.getLeftAxis();
+    drawString(ss.str().c_str(), 1, screenHeight - 5*TEXT_HEIGHT, color, font);
+
+    ss.str("");
+    ss << "     Up Axis: " << camera.getUpAxis();
+    drawString(ss.str().c_str(), 1, screenHeight - 6*TEXT_HEIGHT, color, font);
+
+    ss.str("");
+    ss << "Forward Axis: " << camera.getForwardAxis();
+    drawString(ss.str().c_str(), 1, screenHeight - 7*TEXT_HEIGHT, color, font);
+
+    ss.str("");
+    ss << "Distance: " << camera.getDistance();
+    drawString(ss.str().c_str(), 1, screenHeight - 8*TEXT_HEIGHT, color, font);
+
+    ss.str("");
+    ss << "Use arrow keys to shift camera.";
+    drawString(ss.str().c_str(), 1, TEXT_HEIGHT + 1, color, font);
+
+    ss.str("");
+    ss << "Use +/- keys to move forward/backward.";
+    drawString(ss.str().c_str(), 1, 1, color, font);
+
+    // unset floating format
+    ss << std::resetiosflags(std::ios_base::fixed | std::ios_base::floatfield);
+
+    // draw focal guide lines ===================
+    /*
+    glDisable(GL_LIGHTING);
+    glDisable(GL_DEPTH_TEST);
+    glLineWidth(0.5f);
+    glColor3f(1,1,0);
+    glBegin(GL_LINES);
+    glVertex2f(0,           screenHeight*0.5f);
+    glVertex2f(screenWidth, screenHeight*0.5f);
+    glVertex2f(screenWidth*0.5f, 0);
+    glVertex2f(screenWidth*0.5f, screenHeight);
+    glEnd();
+    glLineWidth(1);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_DEPTH_TEST);
+*/
+
+    // restore projection matrix
+    glPopMatrix();                   // restore to previous projection matrix
+
+    // restore modelview matrix
+    glMatrixMode(GL_MODELVIEW);      // switch to modelview matrix
+    glPopMatrix();                   // restore to previous modelview matrix
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// display frame rates
+///////////////////////////////////////////////////////////////////////////////
+void showFPS()
+{
+    static Timer timer;
+    static int count = 0;
+    static std::string fps = "0.0 FPS";
+    double elapsedTime = 0.0;;
+
+    ++count;
+
+    // backup current model-view matrix
+    glPushMatrix();                     // save current modelview matrix
+    glLoadIdentity();                   // reset modelview matrix
+
+    // set to 2D orthogonal projection
+    glMatrixMode(GL_PROJECTION);        // switch to projection matrix
+    glPushMatrix();                     // save current projection matrix
+    glLoadIdentity();                   // reset projection matrix
+    gluOrtho2D(0, screenWidth, 0, screenHeight); // set to orthogonal projection
+
+    float color[4] = {1, 1, 0, 1};
+
+    // update fps every second
+    elapsedTime = timer.getElapsedTime();
+    if(elapsedTime >= 1.0)
+    {
+        std::stringstream ss;
+        ss << std::fixed << std::setprecision(1);
+        ss << (count / elapsedTime) << " FPS" << std::ends; // update fps string
+        ss << std::resetiosflags(std::ios_base::fixed | std::ios_base::floatfield);
+        fps = ss.str();
+        count = 0;                      // reset counter
+        timer.start();                  // restart timer
+    }
+    int textWidth = (int)fps.size() * TEXT_WIDTH;
+    drawString(fps.c_str(), screenWidth-textWidth, screenHeight-TEXT_HEIGHT, color, font);
+
+    // restore projection matrix
+    glPopMatrix();                      // restore to previous projection matrix
+
+    // restore modelview matrix
+    glMatrixMode(GL_MODELVIEW);         // switch to modelview matrix
+    glPopMatrix();                      // restore to previous modelview matrix
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// set projection matrix as orthogonal
+///////////////////////////////////////////////////////////////////////////////
+void toOrtho()
+{
+    // set viewport to be the entire window
+    glViewport(0, 0, (GLsizei)screenWidth, (GLsizei)screenHeight);
+
+    // set orthographic viewing frustum
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glOrtho(0, screenWidth, 0, screenHeight, -1, 1);
+
+    // switch to modelview matrix in order to set scene
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// set the projection matrix as perspective
+///////////////////////////////////////////////////////////////////////////////
+void toPerspective()
+{
+    // set viewport to be the entire window
+    glViewport(0, 0, (GLsizei)screenWidth, (GLsizei)screenHeight);
+
+    // set perspective viewing frustum
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluPerspective(60.0f, (float)(screenWidth)/screenHeight, 1.0f, 1000.0f); // FOV, AspectRatio, NearClip, FarClip
+
+    // switch to modelview matrix in order to set scene
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//=============================================================================
+// CALLBACKS
+//=============================================================================
+
+void displayCB()
+{
+    // update times
+    float elapsedTime = timer.getElapsedTime();
+    float frameTime =  elapsedTime - playTime;
+    playTime = elapsedTime;
+
+    // update camera
+    camera.update(frameTime);
+
+    // clear buffer
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+
+    // save the initial ModelView matrix before modifying ModelView matrix
+    glPushMatrix();
+
+    // transform camera (view matrix)
+    glLoadMatrixf(camera.getMatrix().get());
+
+    // draw the camera rotation pivot (target point)
+//  drawPoint(10);
+
+    // draw models
+
+    glScalef(zoom, zoom, 1.0f);
+
+    drawAxis();                         // for origin (0,0,0)
+//  drawGridXZ(20);                     // draw XZ-grid at origin (world space)
+    drawGridXY(20);                     // draw XY-grid at origin (world space)
+    drawModel();
+
+    // draw info messages
+    showInfo();
+    showFPS();
+
+    glPopMatrix();
+
+    glutSwapBuffers();
+}
+
+
+
+void reshapeCB(int w, int h)
+{
+    screenWidth = w;
+    screenHeight = h;
+    toPerspective();
+}
+
+
+void timerCB(int millisec)
+{
+    glutTimerFunc(millisec, timerCB, millisec);
+    glutPostRedisplay();
+}
+
+
+void idleCB()
+{
+    glutPostRedisplay();
+}
+
+
+void keyboardCB(unsigned char key, int x, int y)
+{
+    switch(key)
+    {
+    case 27: // ESCAPE
+        exit(0);
+        break;
+
+    case ' ':
+        break;
+
+    case 'r':
+    case 'R':
+        resetCamera();
+        break;
+
+    case 'd': // switch rendering modes (fill -> wire -> point)
+    case 'D':
+        drawMode = ++drawMode % 3;
+        if(drawMode == 0)        // fill mode
+        {
+            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+            glEnable(GL_DEPTH_TEST);
+            glEnable(GL_CULL_FACE);
+        }
+        else if(drawMode == 1)  // wireframe mode
+        {
+            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+            glDisable(GL_DEPTH_TEST);
+            glDisable(GL_CULL_FACE);
+        }
+        else                    // point mode
+        {
+            glPolygonMode(GL_FRONT_AND_BACK, GL_POINT);
+            glDisable(GL_DEPTH_TEST);
+            glDisable(GL_CULL_FACE);
+        }
+        break;
+
+    case '+':
+    case '=':
+        //camera.moveForward( 1.0f);
+        //camera.moveForward( 1.0f, 0.5f, Gil::EASE_OUT);
+        if(!plusKeyDown)
+        {
+            plusKeyDown = true;
+            camera.startForward(MOVE_SPEED, MOVE_ACCEL);
+        }
+        break;
+
+    case '-':
+    case '_':
+        //camera.moveForward(-1.0f);
+        //camera.moveForward(-1.0f, 0.5f, Gil::EASE_OUT);
+        if(!minusKeyDown)
+        {
+            minusKeyDown = true;
+            camera.startForward(-MOVE_SPEED, MOVE_ACCEL);
+        }
+        break;
+
+    default:
+        ;
+    }
+}
+
+
+void keyboardUpCB(unsigned char key, int x, int y)
+{
+    switch(key)
+    {
+    case '+':
+    case '=':
+        plusKeyDown = false;
+        camera.stopForward();
+        break;
+    case '-':
+    case '_':
+        minusKeyDown = false;
+        camera.stopForward();
+        break;
+
+    default:
+        ;
+    }
+}
+
+
+void mouseCB(int button, int state, int x, int y)
+{
+    mouseX = x;
+    mouseY = y;
+
+    if(button == GLUT_LEFT_BUTTON)
+    {
+        if(state == GLUT_DOWN)
+        {
+            cameraAngle = camera.getAngle(); // get current camera angle
+            cameraQuat = camera.getQuaternion();
+            mouseDownX = x;
+            mouseDownY = y;
+            mouseLeftDown = true;
+        }
+        else if(state == GLUT_UP)
+        {
+            mouseLeftDown = false;
+        }
+    }
+
+    else if(button == GLUT_RIGHT_BUTTON)
+    {
+        if(state == GLUT_DOWN)
+        {
+            mouseDownX = x;
+            mouseDownY = y;
+            mouseRightDown = true;
+        }
+        else if(state == GLUT_UP)
+        {
+            mouseRightDown = false;
+        }
+    }
+}
+
+
+void mouseMotionCB(int x, int y)
+{
+    const float SCALE_ANGLE = 0.2f;
+    const float SCALE_SHIFT = 0.2f;
+    float prevX = mouseX;
+    float prevY = mouseY;
+    mouseX = x;
+    mouseY = y;
+
+    if(mouseLeftDown)
+    {
+        Vector3 delta;
+        delta.y = (mouseX - mouseDownX) * SCALE_ANGLE;
+        delta.x = (mouseY - mouseDownY) * SCALE_ANGLE;
+
+        // re-compute camera matrix
+        /*
+        //@@ using Euler angles
+        Vector3 angle;
+        angle.x = cameraAngle.x + delta.x;
+        angle.y = cameraAngle.y - delta.y;  // must negate for camera
+        //camera.rotateTo(angle);
+        camera.rotateTo(angle, 0.5f, Gil::EASE_OUT);
+        */
+
+        //@@ using quaternion
+        Quaternion qx = Quaternion(Vector3(1,0,0), delta.x * DEG2RAD * 0.5f);   // rotate along X-axis
+        Quaternion qy = Quaternion(Vector3(0,1,0), delta.y * DEG2RAD * 0.5f);   // rotate along Y-axis
+        Quaternion q = qx * qy * cameraQuat;
+        //Quaternion q = Quaternion::getQuaternion(delta * DEG2RAD * 0.5f); // quat from angles
+        //q *= cameraQuat;
+        //camera.rotateTo(q);
+        camera.rotateTo(q, 0.5f, Gil::EASE_OUT);
+
+        /*
+        //@@ using delta angle
+        //camera.rotate(delta);
+        //camera.rotate(delta, 0.5f, Gil::EASE_OUT);
+        */
+    }
+    if(mouseRightDown)
+    {
+        Vector2 delta;
+        delta.x = (mouseX - prevX) * SCALE_SHIFT;
+        delta.y = (mouseY - prevY) * SCALE_SHIFT;
+        camera.shift(delta, 0.5f, Gil::EASE_OUT);
+    }
+
+}
+
+
+void specialCB(int key, int x, int y)
+{
+    Vector2 shiftVector;
+    bool shifting = false;
+    switch(key)
+    {
+    case GLUT_KEY_LEFT:
+        if(!leftKeyDown)
+        {
+            shiftVector.x = 1;          // shift camera to left
+            leftKeyDown = true;
+            shifting = true;
+        }
+        break;
+
+    case GLUT_KEY_RIGHT:
+        if(!rightKeyDown)
+        {
+            shiftVector.x = -1;         // shift camera to right
+            rightKeyDown = true;
+            shifting = true;
+        }
+        break;
+
+    case GLUT_KEY_UP:
+        if(!upKeyDown)
+        {
+            shiftVector.y = 1;          // shift camera upward
+            upKeyDown = true;
+            shifting = true;
+        }
+        break;
+
+    case GLUT_KEY_DOWN:
+        if(!downKeyDown)
+        {
+            shiftVector.y = -1;         // shiftcamera downward
+            downKeyDown = true;
+            shifting = true;
+        }
+        break;
+
+    default:
+        ;
+    }
+
+    // pan camera to adjust camera's target point
+    if(shifting)
+    {
+        shiftVector.normalize();
+        shiftVector *= MOVE_SPEED;
+        camera.startShift(shiftVector, MOVE_ACCEL);
+        //camera.shift(shiftVector, 0.5f, Gil::EASE_OUT);
+    }
+}
+
+
+void specialUpCB(int key, int x, int y)
+{
+    switch(key)
+    {
+    case GLUT_KEY_LEFT:
+        leftKeyDown = false;
+        break;
+
+    case GLUT_KEY_RIGHT:
+        rightKeyDown = false;
+        break;
+
+    case GLUT_KEY_UP:
+        upKeyDown = false;
+        break;
+
+    case GLUT_KEY_DOWN:
+        downKeyDown = false;
+        break;
+
+    default:
+        ;
+    }
+    // stop shifting
+    camera.stopShift();
+}
+
+
+void exitCB()
+{
+    clearSharedMem();
+}
