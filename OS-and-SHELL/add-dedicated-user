@@ -23,3 +23,7 @@ su
 cat /etc/passwd | grep ualusr2011
      // should show:
           ualusr2011:x:1004:1004:UAL User in 2011:/home/ualusr2011:/usr/bin/tcsh
+
+man passwd
+
+passwd ualusr2011
