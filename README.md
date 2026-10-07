@@ -4,11 +4,16 @@ AlmaLinux 8 is probably ok. AlmaLinux 10 is probably ok.
 
 Any current linux flavor is likely to be readily tractable.
 
-An important issue is the C/C++ compiler gcc/g++.
+An important issue is the "Dedicated User", ualusr2011.
 
-The ca latest, gcc version 11.5.0, as of ca 2025, is mostly ok. A legacy root (CERN) build requires gcc version 4.8.5 or so. This is provided in this git clone download.
+Instructions to add this user are in file
+          $UAL2/OS-and-SHELL/add-dedicated-user
 
-This detail, and others, are covered in more depth elsewhere. Hopefully, they can be mostly transparent to the user.
+Another important issue is the C/C++ compiler gcc/g++.
+
+The ca latest, gcc version 11.5.0, as of ca 2025, is mostly ok. A legacy root (CERN) build requires gcc version 4.8.5 or so. This code is provided in this git clone download.
+
+These details, and others, are covered in more depth elsewhere. Hopefully, they can be mostly transparent to the user, till he/she gets up to speed.
 
 UAL software goes back ca 25 years, and is multifaceted.
 
