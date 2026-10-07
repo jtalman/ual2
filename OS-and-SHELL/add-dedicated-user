@@ -1,0 +1,25 @@
+man groupadd
+
+cat /etc/group|grep 1004
+     // should show nothing
+
+su
+     [root@...]# groupadd -g 1004 ualusr2011
+     [root@...]# exit
+
+cat /etc/group | grep 1004
+     // should show:
+          ualusr2011:x:1004:
+
+cat /etc/passwd | grep ualusr2011
+     // should show nothing
+
+man useradd
+
+su
+     [root@...]# useradd -m -s /usr/bin/tcsh -u 1004 -g 1004 ualusr2011 -c "UAL User in 2011"
+     [root@...]# exit
+
+cat /etc/passwd | grep ualusr2011
+     // should show:
+          ualusr2011:x:1004:1004:UAL User in 2011:/home/ualusr2011:/usr/bin/tcsh
