@@ -6,11 +6,14 @@ Any current linux flavor is likely to be readily tractable.
 
 An important issue is the "Dedicated User", ualusr2011.
 
-Instructions to add this user are in file \
+Instructions to add this user are in file
+
           $UAL2/OS-and-SHELL/add-dedicated-user
 
-Dedicated directory,\
-          /home/ualusr2011/git-gui-2/ \
+Dedicated directory,
+
+          /home/ualusr2011/git-gui-2/
+
 is implied, as well.
 
 Another important issue is the C/C++ compiler gcc/g++.
