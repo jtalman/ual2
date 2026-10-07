@@ -10,7 +10,7 @@ Instructions to add this user are in file
           $UAL2/OS-and-SHELL/add-dedicated-user
 
 Dedicated directory,
-          /home/ualusr2011/git-gui-2/
+          /home/ualusr2011/git-gui-2/,
 is implied, as well.
 
 Another important issue is the C/C++ compiler gcc/g++.
