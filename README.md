@@ -13,7 +13,7 @@ Another important issue is the C/C++ compiler gcc/g++.
 
 The ca latest, gcc version 11.5.0, as of ca 2025, is mostly ok. A legacy root (CERN) build requires gcc version 4.8.5 or so. This code is provided in this git clone download.
 
-These details, and others, are covered in more depth elsewhere. Hopefully, they can be mostly transparent to the user, till he/she gets up to speed.
+These details, and others, are covered in more depth elsewhere. Hopefully, they can be mostly transparent to the user (ualusr2011), till he/she gets adequate traction.
 
 UAL software goes back ca 25 years, and is multifaceted.
 
