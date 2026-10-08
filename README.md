@@ -48,12 +48,16 @@ UAL has a "latest" component that requires the previous step, a fully built lega
           popd
           ./run-script
 
-NOTE:
+NOTES:
 
-    NOTE that the sxf file and apdf file are set via the source command! 
+    The sxf file and apdf file are set via the source command! 
               This, in turn, sets the initial timestamp.
               This initial timestamp can be edited.
                         Don't leave a blank space after "apdf"!
+
+    Making the "temporary ~/.tcshrc file", /home/ualusr2011/git-gui-2/ual2/OS-and-SHELL/TCSHRC-ual2, permanent, might makes sense.
+    One can then login and run the above ./run-script as a quick spot test.
+    Be mindful of overwriting an existing ~/.tcshrc file!
 
 ________________________________________________________________________
 
