@@ -56,7 +56,7 @@ NOTES:
                         Don't leave a blank space after "apdf"!
 
     Making the "temporary ~/.tcshrc file", /home/ualusr2011/git-gui-2/ual2/OS-and-SHELL/TCSHRC-ual2, permanent, might makes sense.
-    One can then login and run the above ./run-script as a quick spot test.
+    One can then login and run $UAL2/run-script as a quick spot check.
     Be mindful of overwriting an existing ~/.tcshrc file!
 
 ________________________________________________________________________
