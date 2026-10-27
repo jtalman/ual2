@@ -20,6 +20,10 @@ Note the dedicated directory,
 
 is implied, as well.
 
+The .../ual2/ suffix is populated with the command
+
+          git clone https://github.com/jtalman/ual2
+
 Another important issue is the C/C++ compiler gcc/g++.
 
 The ca latest, gcc version 11.5.0, as of ca 2025, is mostly ok. A legacy root (CERN) build requires gcc version 4.8.5 or so. This code is provided in this git clone download.
