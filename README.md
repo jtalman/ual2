@@ -10,7 +10,11 @@ Instructions to add this user are in file
 
           $UAL2/OS-and-SHELL/add-dedicated-user
 
-Dedicated directory,
+where
+
+          $UAL2 is /home/ualusr2011/git-gui-2/ual2/
+
+Note the dedicated directory,
 
           /home/ualusr2011/git-gui-2/
 
