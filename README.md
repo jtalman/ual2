@@ -76,7 +76,7 @@ Away from the solid and gaseous regions, spatial low pressure makes coherent "ac
 
 Probly not at the level of granularity assumed for the legacy and latest codebases!
 
-It's not clear where this newest codebase is headed. Possibly just an archive where tentative code can be recovered for different project(s).
+It's not clear where this newest codebase is headed. Possibly just an archive where tentative code can be recovered for different, possibly new, project(s).
 
 For now, this newish code is all in directory:
      https://github.com/jtalman/ual2/tree/main/utilities/
