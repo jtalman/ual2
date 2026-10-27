@@ -1,0 +1,67 @@
+\documentclass[tikz, border=10mm]{standalone}
+\usetikzlibrary{calc}
+
+\begin{document}
+\begin{tikzpicture}
+
+    % -------------------------------------------------------------
+    % 1. DEFINE COORDINATES & SYSTEM VARIABLES
+    % -------------------------------------------------------------
+    % Adjust these values to scale the diagram as needed
+    \def\dm{5.0}    % Earth distance from Moon along x-axis
+    \def\de{4.0}    % Earth distance from Moon along x-axis
+    \def\ds{0}   % Sun x-coordinate
+    \def\dt{7.0}    % Sun y-coordinate
+
+    % Define positions based on your vector layout
+    \coordinate (Moon)  at (\dm,0);
+    \coordinate (Earth) at (0, 0);
+    \coordinate (Sun)   at (\ds, \dt);
+
+    % Body sizes (radii)
+    \def\rMoon{0.3}
+    \def\rEarth{0.6}
+    \def\rSun{1.2}
+
+    % -------------------------------------------------------------
+    % 2. DRAW LIGHT RAYS / ORBITS / GUIDES (Optional)
+    % -------------------------------------------------------------
+    % Dashed line indicating the Earth-Moon axis (x-axis)
+%   \draw[dashed, gray!60] (-1,0) -- (\dm + 1, 0);
+    
+    % Rays from Sun to Moon and Earth
+%   \draw[orange!40, dashed] (Sun) -- (Moon);
+%   \draw[orange!40, dashed] (Sun) -- (Earth);
+
+    % -------------------------------------------------------------
+    % 3. DRAW THE CELESTIAL BODIES & LABELS
+    % -------------------------------------------------------------
+    
+    % --- SUN ---
+    % Shaded orange/yellow sphere
+%   \shading[ball color=orange!80!yellow] (Sun) circle (\rSun);
+    % Outer glow/rays effect
+    \draw[yellow!90!orange, ultra thick, opacity=0.6] (Sun) circle (\rSun + 0.1);
+    \node[above=1.3cm, font=\sffamily\bfseries] at (Sun) {Sun $(0, 1.5e11)$};
+    \node[above=0.6cm, font=\sffamily\bfseries] at (Sun) {$2.0e30$};
+
+    % --- EARTH ---
+    % Shaded blue/cyan sphere
+%   \shading[ball color=blue!70!cyan] (Earth) circle (\rEarth);
+    \draw[blue!70!cyan, ultra thick, opacity=0.6] (Earth) circle (\rEarth + 0.1);
+    \node[below=0.8cm, font=\sffamily\bfseries] at (Earth) {Earth $(0, 0)$};
+    \node[above left=0.5cm, font=\sffamily\bfseries] at (Earth) {$6.4e6$};
+    \node[below=0.05cm, font=\sffamily\bfseries] at (Earth) {$6.0e24$};
+
+    % --- MOON ---
+    % Shaded gray sphere at the origin
+%   \shading[ball color=black!30!white] (Moon) circle (\rMoon);
+    \draw[black!30!white, ultra thick, opacity=0.6] (Moon) circle (\rMoon + 0.1);
+    \node[below=0.5cm, font=\sffamily\bfseries] at (Moon) {Moon $(3.8e8,0)$};
+    \node[above=7.5cm, font=\sffamily\bfseries] at (Moon) {$G=6.7e-11$};
+    \node[above left=0.3cm, font=\sffamily\bfseries] at (Moon) {$7.3e22$};
+
+    \node[font=\sffamily\bfseries] at (0.5,2.5) {$\frac{G M_M}{M_D M_D}=\frac{6.7e-11\cdot 3.8e8}{3.8e8\cdot 3.8e8}=3.4e-5[m/s^2]$};
+
+\end{tikzpicture}
+\end{document}
