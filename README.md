@@ -22,7 +22,7 @@ where
 
           $UAL2 is /home/ualusr2011/git-gui-2/ual2/
 
-Note the dedicated directory,
+Note that dedicated directory,
 
           /home/ualusr2011/git-gui-2/
 
