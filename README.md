@@ -1,10 +1,18 @@
-Unified Accelerator Libraries (UAL) for Alma Linux 9.
+UAL software goes back ca 25 years, and is multifaceted.
+
+The "Cornell USPAS Manual"
+
+          https://github.com/jtalman/ual2/blob/main/legacy/ual1/examples/ETEAPOT/legacyAndFoundation/CornellUSPAS.pdf
+
+is probably the best source for the capabilities of this software.
+
+Unified Accelerator Libraries (UAL) currently targets Alma Linux 9.
 
 AlmaLinux 8 is probably ok. AlmaLinux 10 is probably ok.
 
 Any current linux flavor is likely to be readily tractable.
 
-An important issue is the "Dedicated User", ualusr2011.
+An important detail / issue is the "Dedicated User", ualusr2011.
 
 Instructions to add this user are in file
 
@@ -24,19 +32,13 @@ The .../ual2/ suffix is populated with the command
 
           git clone https://github.com/jtalman/ual2
 
-The "Cornell USPAS Manual"
-
-          https://github.com/jtalman/ual2/blob/main/legacy/ual1/examples/ETEAPOT/legacyAndFoundation/CornellUSPAS.pdf
-
-mentions "unnecessary specificaton". This is still the case.
-
 Another important issue is the C/C++ compiler gcc/g++.
 
 The ca latest, gcc version 11.5.0, as of ca 2025, is mostly ok. A legacy root (CERN) build requires gcc version 4.8.5 or so. This code is provided in this git clone download.
 
 These details, and others, are covered in more depth elsewhere. Hopefully, they can be mostly transparent to the user (ualusr2011), till he/she gets adequate traction.
 
-UAL software goes back ca 25 years, and is multifaceted.
+The Cornell USPAS Manual mentions unnecessary specificaton. This is still the case. The steep learning curve makes this the best approach.
 
 ________________________________________________________________________
 
