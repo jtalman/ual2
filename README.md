@@ -1,9 +1,10 @@
 Unified Accelerator Libraries (UAL) software goes back ca 25 years, and is multifaceted.
 
-This document for the USPAS (U.S. Particle Accelerator School) course held n 2005 at Cornell University, in Ithaca, N.Y.
+This document
 
           https://github.com/jtalman/ual2/blob/main/legacy/ual1/examples/ETEAPOT/legacyAndFoundation/CornellUSPAS.pdf
 
+for the USPAS (U.S. Particle Accelerator School) course held in 2005 at Cornell University, in Ithaca, N.Y.
 is probably the best source for the capabilities of this software.
 
 UAL currently targets Alma Linux 9.
