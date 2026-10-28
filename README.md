@@ -1,4 +1,4 @@
-UAL software goes back ca 25 years, and is multifaceted.
+Unified Accelerator Libraries (UAL) software goes back ca 25 years, and is multifaceted.
 
 The "Cornell USPAS Manual"
 
@@ -6,7 +6,7 @@ The "Cornell USPAS Manual"
 
 is probably the best source for the capabilities of this software.
 
-Unified Accelerator Libraries (UAL) currently targets Alma Linux 9.
+UAL currently targets Alma Linux 9.
 
 AlmaLinux 8 is probably ok. AlmaLinux 10 is probably ok.
 
