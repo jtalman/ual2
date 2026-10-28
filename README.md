@@ -1,6 +1,6 @@
 Unified Accelerator Libraries (UAL) software goes back ca 25 years, and is multifaceted.
 
-The "Cornell USPAS Manual"
+The 2005 Cornell U.S. Particle Accelerator School document
 
           https://github.com/jtalman/ual2/blob/main/legacy/ual1/examples/ETEAPOT/legacyAndFoundation/CornellUSPAS.pdf
 
