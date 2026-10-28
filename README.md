@@ -4,7 +4,7 @@ This document,
 
           https://github.com/jtalman/ual2/blob/main/legacy/ual1/examples/ETEAPOT/legacyAndFoundation/CornellUSPAS.pdf
 
-the USPAS (U.S. Particle Accelerator School) course held in 2005 at Cornell University, in Ithaca, N.Y., 
+created for the USPAS (U.S. Particle Accelerator School) course held in 2005 at Cornell University, in Ithaca, N.Y., 
 is probably the best source for the capabilities of this software.
 
 UAL currently targets Alma Linux 9.
