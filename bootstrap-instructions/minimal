@@ -19,6 +19,10 @@ make >& make.log                 # ca 12 minutes on W530
 #           sequence: 3 warnings, 2 ignorable, vestigial, html errors, 2 more warnings
 # "spot check" on the command line code
 
+# The "legacy" component is now built, and can be run.
+# many "examples" exist.
+_________________________________________________________________________________________________
+
 cd gui/buildAL/source/
 
 date +%F > $UAL2/timestampComment.txt
@@ -30,15 +34,17 @@ date +%F > $UAL2/timestampComment.txt
 
 source ./all                     # ca 26 minutes on W530
 
-# The "legacy" component is now built.
+# "GUI-LATEST" is now built, and can be run.
+# "examples" exist.
 _________________________________________________________________________________________________
-# The "legacy" component can now be run.
+
 # This stanza is "fallback code", probably not needed now, but perhaps useful for debugging at some point.
 # Running this stanza can be also be thought of as a "spot check" on the gui,
 # similar to the spot check on command line above.
-cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
 
-./run-RT-transition
+#cd ../../run-scripts/USPAS-legacy/examples/RT-transition/
+
+#./run-RT-transition
 #     Identify the Animated Graphics section.
 #     Open the "Bunch CT-DE" Animated Graph by double clicking.
 #
