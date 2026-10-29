@@ -9,9 +9,9 @@ is probably the best source for the capabilities of this software.
 
 UAL currently targets Alma Linux 9.
 
-AlmaLinux 8 is probably ok. AlmaLinux 10 is probably ok.
+AlmaLinux 8 is probably ok. AlmaLinux 10 is probably ok. Any current linux flavor is likely to be readily tractable.
 
-Any current linux flavor is likely to be readily tractable.
+Such details are usually pretty minor. UAL has "full fledged" details!
 
 An important detail / issue is the "Dedicated User", ualusr2011.
 
