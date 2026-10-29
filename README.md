@@ -29,9 +29,11 @@ Note that dedicated directory,
 
 is implied, as well.
 
-The .../ual2/ suffix is populated with the command
+The .../ual2/ suffix is populated with the command,
 
           git clone https://github.com/jtalman/ual2
+
+executed in the dedicated directory.
 
 Another important issue is the C/C++ compiler gcc/g++.
 
