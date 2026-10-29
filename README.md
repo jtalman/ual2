@@ -19,11 +19,11 @@ Instructions to add this user are in file
 
           $UAL2/OS-and-SHELL/add-dedicated-user
 
-where UAL2 is an environmental variable in shell tcshrc.
+where UAL2 is an environmental variable in shell tcshrc,
 
           $UAL2 is /home/ualusr2011/git-gui-2/ual2/
 
-Note that dedicated directory,
+Note that "Dedicated Directory",
 
           /home/ualusr2011/git-gui-2/
 
