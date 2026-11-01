@@ -6,7 +6,7 @@ The document,
 
 created for the USPAS (U.S. Particle Accelerator School) course held in 2005 at Cornell University, in Ithaca, N.Y., 
 is probably the best single source for an overview of the capabilities of this software. Limited Electric Field tracking
-has been added. A book is planned. Many documents intermediate to this exist. "GUI-LATEST" code capability, mostly lost by 2005, is now substantially present as of 2025.
+has been added. A book is planned. Many documents intermediate to this exist. "GUI-LATEST" **code** capability, mostly lost by 2005, is now substantially present as of 2025.
 Graphical User Interface display has become a primary focus.
 
 UAL currently targets Alma Linux 9.
