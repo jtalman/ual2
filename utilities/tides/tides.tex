@@ -1,0 +1,53 @@
+\documentclass[tikz, border=10mm]{standalone}
+\usetikzlibrary{calc}
+
+\begin{document}
+\begin{tikzpicture}
+
+    \def\dm{5.0}    % Earth distance from Moon along x-axis
+    \def\de{4.0}    % Earth distance from Moon along x-axis
+    \def\ds{0}   % Sun x-coordinate
+    \def\dt{7.0}    % Sun y-coordinate
+
+    \coordinate (Moon)  at (\dm,-1);
+
+    \coordinate (Earth) at (-4, -1);
+%   \coordinate (Earth) at (0, 0);
+
+    \coordinate (Sun)   at (-4, \dt);
+%   \coordinate (Sun)   at (\ds, \dt);
+
+    \coordinate (Ed)   at (4, 8);
+
+    \def\rMoon{0.3}
+    \def\rEarth{0.6}
+    \def\rSun{1.2}
+
+%   \def\eqSz{10}
+    \def\eqSz{6}
+
+    % --- SUN ---
+    \draw[yellow!90!orange, ultra thick, opacity=0.6] (Sun) circle (\rSun + 0.1);
+    \node[above=1.3cm, font=\fontsize{\eqSz}{12pt}\selectfont\sffamily\bfseries] at (Sun) {Sun $(0, 1.5e11)$};
+    \node[below left=1cm, font=\fontsize{\eqSz}{12pt}\selectfont\sffamily\bfseries] at (Sun) {$2.0e30$};
+
+    % --- EARTH ---
+    \draw[blue!70!cyan, ultra thick, opacity=0.6] (Earth) circle (\rEarth + 0.1);
+    \node[below=0.8cm, font=\fontsize{\eqSz}{12pt}\selectfont\sffamily\bfseries] at (Earth) {Earth $(0, 0)$};
+    \node[above left=0.5cm, font=\fontsize{\eqSz}{12pt}\selectfont\sffamily\bfseries] at (Earth) {$6.4e6$};
+    \node[below=0.05cm, font=\fontsize{\eqSz}{12pt}\selectfont\sffamily\bfseries] at (Earth) {$6.0e24$};
+
+    % --- MOON ---
+    \draw[black!30!white, ultra thick, opacity=0.6] (Moon) circle (\rMoon + 0.1);
+    \node[below=0.5cm, font=\fontsize{\eqSz}{12pt}\selectfont\sffamily\bfseries] at (Moon) {Moon $(3.8e8,0)$};
+    \node[above right=0.3cm, font=\fontsize{\eqSz}{12pt}\selectfont\sffamily\bfseries] at (Moon) {$7.4e22$};
+
+    \node[font=\fontsize{\eqSz}{12pt}\selectfont\sffamily\bfseries] at (Ed) {$G=6.7e-11$};
+    \node[below=0.5cm, font=\fontsize{\eqSz}{6pt}\selectfont\sffamily\bfseries] at (Ed) {$\scriptstyle F=\frac{G M_1 M_2}{{D_{12}}^2}$};
+
+    \node[font=\fontsize{\eqSz}{6pt}\selectfont\sffamily\bfseries] at (0.5,4.5-6) {$\scriptstyle\frac{G M_M M_E}{D_M D_M}=\frac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}7.4e22\hspace{0.75mm}\cdot\hspace{0.75mm}6.0e24}{3.8e8\hspace{0.75mm}\cdot\hspace{0.75mm}3.8e8}=2.1e20\hspace{0.75mm}[kg\hspace{0.75mm}m/s^2]$};
+
+    \node[font=\fontsize{\eqSz}{6pt}\selectfont\sffamily\bfseries] at (0.5,2.5-5) {$\scriptstyle\frac{G M_M}{D_M D_M}=\frac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}7.4e22}{3.8e8\hspace{0.75mm}\cdot\hspace{0.75mm}3.8e8}=3.4e{-}5\hspace{0.75mm}[m/s^2]$};
+
+\end{tikzpicture}
+\end{document}
