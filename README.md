@@ -51,7 +51,7 @@ The Cornell USPAS Manual mentions unnecessary specificaton. This is still the ca
 
 ________________________________________________________________________
 
-UAL has a "Legacy" component. It is is primarily command line based. It must be built first. It can be "bootstrapped" into existence:
+Again, UAL's "Legacy" component is primarily command line based. This must be built first. It can be "bootstrapped" into existence:
 
           https://github.com/jtalman/ual2/tree/main/bootstrap-instructions/minimal
 
@@ -61,7 +61,7 @@ Following this syntax exactly is recommended.
 
 ________________________________________________________________________
 
-UAL has a "latest" component that requires the previous step, a fully built legacy component. It is gui based. It is intended to be (fairly) easily configurable. A suggested run mode follows.
+UAL's "GUI-LATEST" component requires the previous step, a fully built legacy component. Again, it is gui based. It is intended to be (fairly) easily configurable. A suggested run mode follows.
 
 "GUI-LATEST":
 
