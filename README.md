@@ -5,7 +5,7 @@ This document,
           https://github.com/jtalman/ual2/blob/main/legacy/ual1/examples/ETEAPOT/legacyAndFoundation/CornellUSPAS.pdf
 
 is called the "Manual" here. It was created for the USPAS (U.S. Particle Accelerator School) course held in 2005 at Cornell University, in Ithaca, N.Y. 
-It is probably the best single source for an overview of the capabilities of this software. Limited Electric Field tracking
+It is probably the best single source for an overview of the capabilities of this software. Limited electric field tracking
 has been added since. A book is planned, the "Book".
 
 Many documents intermediate between the Manual and the Book exist. Code examples, as well. These are mostly command line based, "Legacy". Code examples that are graphical user interface based, and generate sophisticated graphs are pretty new. They are partially documented in the Manual, however.
