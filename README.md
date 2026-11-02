@@ -8,7 +8,7 @@ is called the "Manual" here. It was created for the USPAS (U.S. Particle Acceler
 It is probably the best single source for an overview of the capabilities of this software. Limited electric field tracking
 has been added since. A book is planned, the "Book".
 
-Many documents intermediate between the Manual and the Book exist. Code examples, as well. These are mostly command line based, here called "Legacy". Code examples that are graphical user interface based, and generate sophisticated graphs are pretty new. They are partially documented in the Manual, however.
+Many documents intermediate between the Manual and the Book exist. Code examples, as well. These are mostly command line based, here called "Legacy". Code examples that are graphical user interface based, and generate sophisticated graphs have been ported. The originals are partially documented in the Manual.
 
 "GUI-LATEST" **code** capability, mostly lost in 2005, is now substantially present as of 2026.
 This is a primary focus.
