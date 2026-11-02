@@ -1,4 +1,4 @@
-Unified Accelerator Libraries (UAL) software goes back ca 25 years, and is multifaceted.
+Unified Accelerator Libraries (UAL) software goes back ca 25 years, and is multifaceted. It has a tangle chronology, as well.
 
 This document,
 
