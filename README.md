@@ -13,13 +13,17 @@ Many documents intermediate between the Manual and the Book exist. Code examples
 "GUI-LATEST" **code** capability, mostly lost as of 2005, is now substantially present as of 2026.
 This is a primary current focus.
 
+"ual2" is the successor to "ual1", both short hand for a UAL repository.
+
 UAL currently targets Alma Linux 9.
 
 AlmaLinux 8 is probably ok. AlmaLinux 10 is probably ok. Any current linux flavor is likely to be readily tractable.
 
 Such details are usually pretty minor. UAL has "full fledged" details, however!
 
-An important detail / issue is the "Dedicated User", ualusr2011.
+The environmental variables set in shell tcshrc are a signficant detail.
+
+Another important detail / issue is the "Dedicated User", ualusr2011.
 
 Instructions to add this user are in file
 
@@ -57,7 +61,9 @@ Again, UAL's "Legacy" component is primarily command line based. This must be bu
 
 Following this syntax exactly is recommended.
 
-"ual2" is the successor to "ual1", both short hand for a UAL repository.
+The command line examples can now be run, with care.
+
+Continuing to the graphical example of the next stanza is recommended. Again, the environmental variables set in shell tcshrc are a signficant detail.
 
 ________________________________________________________________________
 
