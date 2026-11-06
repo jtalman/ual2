@@ -10,7 +10,7 @@ has been added since. A book is planned, the "Book".
 
 Many documents intermediate between the Manual and the Book exist. Code examples, as well. These are mostly command line based, here called "Legacy". Code examples that are graphical user interface based, and generate sophisticated graphs have been ported. The originals are partially documented in the Manual.
 
-"GUI-LATEST" **code** capability, mostly lost in 2005, is now substantially present as of 2026.
+"GUI-LATEST" **code** capability, mostly lost as of 2005, is now substantially present as of 2026.
 This is a primary focus.
 
 UAL currently targets Alma Linux 9.
