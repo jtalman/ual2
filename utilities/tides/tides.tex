@@ -21,11 +21,11 @@
     \def\ds{0}   % Sun x-coordinate
     \def\dt{7.0}    % Sun y-coordinate
 
-    \coordinate (moon)  at (\dm,-1);
+    \coordinate (moon)  at (3,-2);
 
-    \coordinate (Earth) at (-6, -1);
+    \coordinate (Earth) at (-6, -2);
 
-    \coordinate (Sun)   at (-6, \dt);
+    \coordinate (Sun)   at (-6, 8);
 
     \coordinate (Ed)   at (4, 8);
 
@@ -54,13 +54,17 @@
     \node[] at (Ed) {$G=6.7e-11$};
     \node[below=0.5cm] at (Ed) {$F=\dfrac{G m_1 m_2}{{d_{12}}^2}$};
 
-    \node[] at (-4.5,3.5) {$\dfrac{G m_{_S} m_{_E}}{d_{_S} d_{_{S}}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30\hspace{0.75mm}\cdot\hspace{0.75mm}6.0e24}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=3.6e22\hspace{0.75mm}[kg\hspace{0.75mm}m/s^2]$};
+    \node[] at (-4.5,4.5) {$\dfrac{G m_{_S} m_{_E}}{d_{_S} d_{_{S}}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30\hspace{0.75mm}\cdot\hspace{0.75mm}6.0e24}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=3.6e22\hspace{0.75mm}[kg\hspace{0.75mm}m/s^2]$};
 
-    \node[] at (-4.5,1.5) {$\dfrac{G m_{_S}}{d_{_S} d_{_S}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=6.0e-3\hspace{0.75mm}[m/s^2]$};
+    \node[] at (-4.5,2.5) {$S_0\equiv\dfrac{G m_{_S}}{d_{_S} d_{_S}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=6.0e-3\hspace{0.75mm}[m/s^2]$};
 
-    \node[] at (0.0,2.5-5) {$\dfrac{G m_{_M} m_{_E}}{d_{_M} d_{_M}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}7.4e22\hspace{0.75mm}\cdot\hspace{0.75mm}6.0e24}{3.8e8\hspace{0.75mm}\cdot\hspace{0.75mm}3.8e8}=2.1e20\hspace{0.75mm}[kg\hspace{0.75mm}m/s^2]$};
+    \node[] at (-4.5,0.5) {$S_{near}-S_0=\dfrac{G m_{_S}}{(d_{_S}-r_E) (d_{_S}-r_E)}-S_0\approx 2 S_0\dfrac{r_E}{d_S}=5.1e-7[m/s^2]$};
 
-    \node[] at (0.0,2.5-6) {$\dfrac{G m_{_M}}{d_{_M} d_{_M}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}7.4e22}{3.8e8\hspace{0.75mm}\cdot\hspace{0.75mm}3.8e8}=3.4e{-}5\hspace{0.75mm}[m/s^2]$};
+    \node[] at (0.0,-3.5) {$\dfrac{G m_{_M} m_{_E}}{d_{_M} d_{_M}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}7.4e22\hspace{0.75mm}\cdot\hspace{0.75mm}6.0e24}{3.8e8\hspace{0.75mm}\cdot\hspace{0.75mm}3.8e8}=2.1e20\hspace{0.75mm}[kg\hspace{0.75mm}m/s^2]$};
+
+    \node[] at (0.0,-4.5) {$M_0\equiv\dfrac{G m_{_M}}{d_{_M} d_{_M}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}7.4e22}{3.8e8\hspace{0.75mm}\cdot\hspace{0.75mm}3.8e8}=3.4e{-}5\hspace{0.75mm}[m/s^2]$};
+
+    \node[] at (0.0,-5.5) {$M_{near}-M_0=\dfrac{G m_{_M}}{(d_{_M}-r_E) (d_{_M}-r_E)}-M_0\approx2 M_0\dfrac{r_E}{d_M}=1.1e-6[m/s^2]$};
 
 \end{tikzpicture}
 \end{document}
