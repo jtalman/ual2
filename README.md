@@ -21,7 +21,7 @@ AlmaLinux 8 is probably ok. AlmaLinux 10 is probably ok. Any current linux flavo
 
 Such details are usually pretty minor. UAL has "full fledged" details, however!
 
-The environmental variables set in shell tcshrc are a signficant detail.
+The environmental variables set in "Dedicated Shell", tcshrc, are a signficant detail.
 
 Another important detail / issue is the "Dedicated User", ualusr2011.
 
