@@ -45,20 +45,34 @@
     \node[below=0.8cm] at (Earth) {Earth $(0, 0)$};
     \node[above left=0.5cm] at (Earth) {$6.0e24$};
     \node[below=0.05cm] at (Earth) {$6.4e6$};
+%   \node[above=0.5cm] at (Earth) {$\Large\cdot$};
+    \draw[black, fill] (-6.0,-1.3) circle (0.05);
+    \node[above=0.7cm] at (Earth) {$S_{near}$};
+    \node[above=1.0cm] at (Earth) {$M_{mid},$};
 
     % --- mOON ---
     \draw[black!30!white, ultra thick, opacity=0.6] (moon) circle (\rmoon + 0.1);
     \node[below=0.5cm] at (moon) {moon $(3.8e8,0)$};
     \node[above right=0.3cm] at (moon) {$7.4e22$};
 
+    \draw[->, thick] (-4.0,-2.0) -- (1,-2) node[midway, below, sloped] {$M_0$};
+    \draw[->, thick] (-4.0,-1.5) -- (1,-2.0) node[midway, above, sloped] {$M_{mid}$};
+%   \draw[->, thick] (-6.0,-1.3) -- (moon.center) node[midway, above, sloped] {$M_{mid}$};
+
+    \node[] at (-4.0,0) {$M_{mid}-M_0\approx M_0 \dfrac{r_E}{d_M}$};
+
     \node[] at (Ed) {$G=6.7e-11$};
     \node[below=0.5cm] at (Ed) {$F=\dfrac{G m_1 m_2}{{d_{12}}^2}$};
 
-    \node[] at (-4.5,4.5) {$\dfrac{G m_{_S} m_{_E}}{d_{_S} d_{_{S}}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30\hspace{0.75mm}\cdot\hspace{0.75mm}6.0e24}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=3.6e22\hspace{0.75mm}[kg\hspace{0.75mm}m/s^2]$};
+    \node[] at (-4.5,5) {$\dfrac{G m_{_S} m_{_E}}{d_{_S} d_{_{S}}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30\hspace{0.75mm}\cdot\hspace{0.75mm}6.0e24}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=3.6e22\hspace{0.75mm}[kg\hspace{0.75mm}m/s^2]$};
 
-    \node[] at (-4.5,2.5) {$S_0\equiv\dfrac{G m_{_S}}{d_{_S} d_{_S}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=6.0e-3\hspace{0.75mm}[m/s^2]$};
+    \node[] at (-4.5,4) {$S_0\equiv\dfrac{G m_{_S}}{d_{_S} d_{_S}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=6.0e-3\hspace{0.75mm}[m/s^2]$};
 
-    \node[] at (-4.5,0.5) {$S_{near}-S_0=\dfrac{G m_{_S}}{(d_{_S}-r_E) (d_{_S}-r_E)}-S_0\approx 2 S_0\dfrac{r_E}{d_S}=5.1e-7[m/s^2]$};
+    \node[] at (-4.5,3) {$S_{near}-S_0=\dfrac{G m_{_S}}{(d_{_S}-r_E) (d_{_S}-r_E)}-S_0\approx 2 S_0\dfrac{r_E}{d_S}=5.1e-7[m/s^2]$};
+
+    \node[] at (-4.5,2) {$S_{mid}\equiv\dfrac{G m_{_S}}{d_{_{mid}} d_{_{mid}}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=6.0e-3\hspace{0.75mm}[m/s^2]$};
+
+    \node[] at (-7.5,1) {$S_{mid}-S_0\approx M_0 \dfrac{r_E}{d_S}$};
 
     \node[] at (0.0,-3.5) {$\dfrac{G m_{_M} m_{_E}}{d_{_M} d_{_M}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}7.4e22\hspace{0.75mm}\cdot\hspace{0.75mm}6.0e24}{3.8e8\hspace{0.75mm}\cdot\hspace{0.75mm}3.8e8}=2.1e20\hspace{0.75mm}[kg\hspace{0.75mm}m/s^2]$};
 
