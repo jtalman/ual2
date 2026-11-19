@@ -8,6 +8,7 @@
 \usepackage{amsmath}
 \usepackage{lmodern} % Enforces continuous scaling for math/subscripts
 \usetikzlibrary{calc}
+\usetikzlibrary{arrows.meta}
 
 %\DeclareMathSizes{8}{6}{2}{2} % Adjust these points to your preferred scale
 %\newcommand{\mysb}[3]{\text{\fontsize{#1}{#2}\selectfont #3}}
@@ -21,13 +22,19 @@
     \def\ds{0}   % Sun x-coordinate
     \def\dt{7.0}    % Sun y-coordinate
 
-    \coordinate (moon)  at (3,-2);
+%   \def\SY{7}    % Sun y-coordinate
+    \def\SY{2}    % Sun y-coordinate
+    \def\EY{8}
+%   \def\EY{-2.0}
+%   \def\EY{8.0}
 
-    \coordinate (Earth) at (-6, -2);
+    \coordinate (moon)  at (3,\EY);
 
-    \coordinate (Sun)   at (-6, 8);
+    \coordinate (Earth) at (-6, \EY);
 
-    \coordinate (Ed)   at (4, 8);
+    \coordinate (Sun)   at (-6, \SY);
+
+    \coordinate (Ed)   at (4, \EY);
 
     \def\rmoon{0.3}
     \def\rEarth{0.6}
@@ -37,48 +44,60 @@
 
     % --- SUN ---
     \draw[yellow!90!orange, ultra thick, opacity=0.6] (Sun) circle (\rSun + 0.1);
-    \node[above=1.3cm] at (Sun) {Sun $(0, 1.5e11)$};
-    \node[below left=1cm] at (Sun) {$2.0e30$};
+    \node[above=1.3cm] at (Sun) {Sun $(0, 1.5e11)$ Not to scale!};
+    \node[above=1.8cm] at (Sun) {$2.0e30$};
 
     % --- EARTH ---
     \draw[blue!70!cyan, ultra thick, opacity=0.6] (Earth) circle (\rEarth + 0.1);
-    \node[below=0.8cm] at (Earth) {Earth $(0, 0)$};
-    \node[above left=0.5cm] at (Earth) {$6.0e24$};
+    \node[above=0.8cm] at (Earth) {Earth $(0, 0)$};
+    \node[above left=0.3cm] at (-5.1,\EY+1) {$6.0e24$};
     \node[below=0.05cm] at (Earth) {$6.4e6$};
 %   \node[above=0.5cm] at (Earth) {$\Large\cdot$};
-    \draw[black, fill] (-6.0,-1.3) circle (0.05);
-    \node[above=0.7cm] at (Earth) {$S_{near}$};
-    \node[above=1.0cm] at (Earth) {$M_{mid},$};
+    \draw[black, fill] (-6.0,\EY-0.7) circle (0.05);
+    \node[below=0.7cm] at (Earth) {\tiny{Moon midpoint,}};
+    \node[below=1.0cm] at (Earth) {\tiny{Sun nearpoint}};
 
-    % --- mOON ---
+    % --- MOON ---
     \draw[black!30!white, ultra thick, opacity=0.6] (moon) circle (\rmoon + 0.1);
-    \node[below=0.5cm] at (moon) {moon $(3.8e8,0)$};
-    \node[above right=0.3cm] at (moon) {$7.4e22$};
+    \node[above=0.5cm] at (moon) {Moon $(3.8e8,0)$};
+    \node[above=1cm] at (moon) {$7.4e22$};
 
-    \draw[->, thick] (-4.0,-2.0) -- (1,-2) node[midway, below, sloped] {$M_0$};
-    \draw[->, thick] (-4.0,-1.5) -- (1,-2.0) node[midway, above, sloped] {$M_{mid}$};
+%   \draw[->, thick] (-4.0,-2.0) -- (1,-2) node[midway, below, sloped] {$M_0$};
+    \draw[<-, thick] (-6.0,\EY) -- (3,\EY) node[midway, above, sloped] {$\overleftarrow{D_M}$};
+    \draw[thin, dashed] (-8,\EY) -- (-6.0,\EY) {};
+    \draw[<-, thick] (-6.0,\EY-0.7) -- (3,\EY) node[midway, below, sloped] {$\overleftarrow{D_{mid}}$};
+    \draw[thin, dashed] (-8,\EY-0.8) -- (-6.0,\EY-0.7) {};
 %   \draw[->, thick] (-6.0,-1.3) -- (moon.center) node[midway, above, sloped] {$M_{mid}$};
+%   \draw[] (-8,-2) arc[start angle=125, end angle=50, radius=0.8];
+%   \draw[-{Stealth[length=4pt, width=3pt]}] (-8,-2) arc[start angle=50, end angle=0, radius=0.8];
+    \draw[] (-7.5,\EY) to[bend right=35] (-7.5,\EY-0.8);   % Bulges upward (+y)
+    \node[left=0.3cm] at (-7.3,\EY-.4) {$\dfrac{R_{_E}}{D_{_M}}\approx\alpha_{_M}$};
+%   \node[left=0.3cm] at (-7.3,-1.6) {$\dfrac{R_{_E}}{D_{_M}}\approx\alpha_{_M}$};
 
-    \node[] at (-4.0,0) {$M_{mid}-M_0\approx M_0 \dfrac{r_E}{d_M}$};
+    \node[] at (-2.5,\EY+1.5) {$M_{mid}-M_0\approx M_0 \dfrac{r_E}{d_M}$};
 
-    \node[] at (Ed) {$G=6.7e-11$};
-    \node[below=0.5cm] at (Ed) {$F=\dfrac{G m_1 m_2}{{d_{12}}^2}$};
+    \draw[thin] (-2.5,\EY-4.7) -- (0.5,\EY-4.7) {};
+    \draw[thin] (-2.5,\EY-4.7) -- (-2.5,\EY-6.7) {};
+    \draw[thin] (-2.5,\EY-6.7) -- (0.5,\EY-6.7){};
+    \draw[thin] (0.5,\EY-4.7) -- (0.5,\EY-6.7){};
+    \node[] at (-1,\EY-5) {$G=6.7e-11$};
+    \node[] at (-1,\EY-6) {$F=\dfrac{G M_1 M_2}{{D_{12}}^2}$};
 
-    \node[] at (-4.5,5) {$\dfrac{G m_{_S} m_{_E}}{d_{_S} d_{_{S}}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30\hspace{0.75mm}\cdot\hspace{0.75mm}6.0e24}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=3.6e22\hspace{0.75mm}[kg\hspace{0.75mm}m/s^2]$};
+    \node[] at (-4.5,\SY-2) {$\dfrac{G m_{_S} m_{_E}}{d_{_S} d_{_{S}}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30\hspace{0.75mm}\cdot\hspace{0.75mm}6.0e24}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=3.6e22\hspace{0.75mm}[kg\hspace{0.75mm}m/s^2]$};
 
-    \node[] at (-4.5,4) {$S_0\equiv\dfrac{G m_{_S}}{d_{_S} d_{_S}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=6.0e-3\hspace{0.75mm}[m/s^2]$};
+    \node[] at (-4.5,\SY-3) {$S_0\equiv\dfrac{G m_{_S}}{d_{_S} d_{_S}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=6.0e-3\hspace{0.75mm}[m/s^2]$};
 
-    \node[] at (-4.5,3) {$S_{near}-S_0=\dfrac{G m_{_S}}{(d_{_S}-r_E) (d_{_S}-r_E)}-S_0\approx 2 S_0\dfrac{r_E}{d_S}=5.1e-7[m/s^2]$};
+    \node[] at (-4.5,\SY-4) {$S_{near}-S_0=\dfrac{G m_{_S}}{(d_{_S}-r_E) (d_{_S}-r_E)}-S_0\approx 2 S_0\dfrac{r_E}{d_S}=5.1e-7[m/s^2]$};
 
-    \node[] at (-4.5,2) {$S_{mid}\equiv\dfrac{G m_{_S}}{d_{_{mid}} d_{_{mid}}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=6.0e-3\hspace{0.75mm}[m/s^2]$};
+    \node[] at (-4.5,\SY-5) {$S_{mid}\equiv\dfrac{G m_{_S}}{d_{_{mid}} d_{_{mid}}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=6.0e-3\hspace{0.75mm}[m/s^2]$};
 
-    \node[] at (-7.5,1) {$S_{mid}-S_0\approx M_0 \dfrac{r_E}{d_S}$};
+    \node[] at (-7.5,\SY-6) {$S_{mid}-S_0\approx S_0 \dfrac{r_E}{d_S}$};
 
-    \node[] at (0.0,-3.5) {$\dfrac{G m_{_M} m_{_E}}{d_{_M} d_{_M}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}7.4e22\hspace{0.75mm}\cdot\hspace{0.75mm}6.0e24}{3.8e8\hspace{0.75mm}\cdot\hspace{0.75mm}3.8e8}=2.1e20\hspace{0.75mm}[kg\hspace{0.75mm}m/s^2]$};
+    \node[] at (0.0,\EY-1.5) {$\dfrac{G m_{_M} m_{_E}}{d_{_M} d_{_M}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}7.4e22\hspace{0.75mm}\cdot\hspace{0.75mm}6.0e24}{3.8e8\hspace{0.75mm}\cdot\hspace{0.75mm}3.8e8}=2.1e20\hspace{0.75mm}[kg\hspace{0.75mm}m/s^2]$};
 
-    \node[] at (0.0,-4.5) {$M_0\equiv\dfrac{G m_{_M}}{d_{_M} d_{_M}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}7.4e22}{3.8e8\hspace{0.75mm}\cdot\hspace{0.75mm}3.8e8}=3.4e{-}5\hspace{0.75mm}[m/s^2]$};
+    \node[] at (0.0,\EY-2.5) {$M_0\equiv\dfrac{G m_{_M}}{d_{_M} d_{_M}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}7.4e22}{3.8e8\hspace{0.75mm}\cdot\hspace{0.75mm}3.8e8}=3.4e{-}5\hspace{0.75mm}[m/s^2]$};
 
-    \node[] at (0.0,-5.5) {$M_{near}-M_0=\dfrac{G m_{_M}}{(d_{_M}-r_E) (d_{_M}-r_E)}-M_0\approx2 M_0\dfrac{r_E}{d_M}=1.1e-6[m/s^2]$};
+    \node[] at (0.0,\EY-3.5) {$M_{near}-M_0=\dfrac{G m_{_M}}{(d_{_M}-r_E) (d_{_M}-r_E)}-M_0\approx2 M_0\dfrac{r_E}{d_M}=1.1e-6[m/s^2]$};
 
 \end{tikzpicture}
 \end{document}
