@@ -52,11 +52,14 @@
 
     \def\eqSz{6}
 
+    \def\MBLX{1.6}
+    \def\MBUY{9.5}
+
 %   \draw[->, ultra thick, black!30!white, ultra thick, opacity=0.6] (\Z-1,\EY+2) -- (\Z,\EY+2) node[midway, above] {$\hat{x}$};
 %   \draw[->, #E6E1D3] (\Z-1,\EY+2) -- (\Z,\EY+2) node[midway, above] {$\hat{x}$};
 %   \draw[->, myMoonColor] (\Z-1,\EY+2) -- (\Z,\EY+2) node[midway, above] {$\hat{x}$};
-    \draw[->, ultra thick, myMoonSilver, opacity=1.0] (\Z-1,\EY+2) -- (\Z,\EY+2) node[midway, above] {$\hat{x}$};
-%   \draw[->, ultra thick, black!40!white, opacity=1.0] (\Z-1,\EY+2) -- (\Z,\EY+2) node[midway, above] {$\hat{x}$};
+%   \draw[->, ultra thick, myMoonSilver, opacity=1.0] (\Z-1,\EY+2) -- (\Z,\EY+2) node[midway, above] {$\hat{x}$};
+    \draw[->, ultra thick, black!20!white, opacity=1.0] (\Z-1,\EY+2) -- (\Z,\EY+2) node[midway, above] {$\hat{x}$};
 %   \draw[->, ultra thick, myMoonColor, opacity=1.0] (\Z-1,\EY+2) -- (\Z,\EY+2) node[midway, above] {$\hat{x}$};
 
     \draw[->, ultra thick, yellow] (\Z-1,\EY+2) -- (\Z-1,\EY+1) node[midway, left] {$\hat{y}$};
@@ -67,17 +70,29 @@
 
     % --- SUN ---
     \draw[yellow!90!orange, ultra thick, opacity=0.6] (Sun) circle (\rSun + 0.1);
-    \node[above left=0.8cm] at (SunLU) {$M_S=2.0e30$};
+
+    \draw[-, thick, yellow!90!orange] (-10.1,\SY+1.0) -- (-7.6,\SY+1.0) {};
+    \draw[-, thick, yellow!90!orange] (-10.1,\SY+1.0) -- (-10.1,\SY-0.2) {};
+    \node[above left=0.8cm] at (-7.0, \SY-0.4) {$M_S=2.0e30$};
     \node[left=1.5cm] at (Sun) {\textbf{S}un $(0, 1.5e11)$};
-    \node[below left=0.3cm] at (SunLD) {Not to scale!};
+
+%   \node[below left=0.3cm] at (SunLD) {Not to scale!};
+    \node[below left=0.3cm] at (-4.6, \SY+0.3) {Not to scale!};
+
+    \draw[-, thick, yellow!90!orange] (-10.1,\SY-0.2) -- (-7.6,\SY-0.2){};
+    \draw[-, thick, yellow!90!orange] (-7.6,\SY-0.2) -- (-7.6,\SY+1.0) {};
 
     % --- EARTH ---
-    \draw[blue!70!cyan, ultra thick, opacity=0.6] (Earth) circle (\rEarth + 0.1);
-    \node[above=0.8cm] at (\EX-1, \EY) {\textbf{E}arth $(0, 0)$};
-%   \node[above=0.8cm] at (Earth) {\textbf{E}arth $(0, 0)$};
+    \draw[blue, ultra thick, opacity=0.6] (Earth) circle (\rEarth + 0.1);
 
-    \node[above left=0.3cm] at (-5.7,\EY+1) {$M_E=6.0e24$};
-    \node[above left=0.8cm] at (-5.3,\EY+1) {$R_E=6.4e6$};
+    \draw[-, thick, blue] (-8.3,\EY+3.5) -- (-6.,\EY+3.5) {};
+    \draw[-, thick, blue] (-8.3,\EY+3.5) -- (-8.3,\EY+1.8) {};
+    \node[above left=0.8cm] at (-5.3,\EY+2) {$R_E=6.4e6$};
+    \node[above left=0.3cm] at (-5.7,\EY+2) {$M_E=6.0e24$};
+    \node[above=0.8cm] at (\EX-1, \EY+1) {\textbf{E}arth $(0, 0)$};
+%   \node[above=0.8cm] at (Earth) {\textbf{E}arth $(0, 0)$};
+    \draw[-, thick, blue] (-8.3,\EY+1.8) -- (-6.,\EY+1.8) {};
+    \draw[-, thick, blue] (-6.,\EY+1.8) -- (-6.,\EY+3.5){};
 
 %   \node[below=0.05cm] at (Earth) {$6.4e6$};
 %   \node[above=0.5cm] at (Earth) {$\Large\cdot$};
@@ -89,9 +104,13 @@
     \node[below=0.9cm] at (Earth) {\tiny{Sun nearpoint}};
 
     % --- MOON ---
+    \draw[-, thick, black!20!white] (\MBLX, \MBUY) -- (\MBLX+2.8, \MBUY) {};
+    \draw[-, thick, black!20!white] (\MBLX, \MBUY) -- (\MBLX, \MBUY-1) {};
+    \draw[-, thick, black!20!white] (\MBLX, \MBUY-1) -- (\MBLX+2.8, \MBUY-1) {};
+    \draw[-, thick, black!20!white] (\MBLX+2.8, \MBUY-1) -- (\MBLX+2.8, \MBUY) {};
     \node[above=1cm] at (moon) {$M_L=7.4e22$};
     \node[above=0.5cm] at (moon) {Moon $(3.8e8,0)$};
-    \draw[ultra thick, black!40!white] (moon) circle (\rmoon + 0.1);
+    \draw[ultra thick, black!20!white, opacity=1.0] (moon) circle (\rmoon + 0.1);
 %   \draw[ultra thick, myMoonColor, opacity=1.0] (moon) circle (\rmoon + 0.1);
 %   \draw[black!30!white, ultra thick, opacity=0.6] (moon) circle (\rmoon + 0.1);
     \node[right=0.5cm] at (moon) {"\textbf{L}una"};
@@ -145,7 +164,7 @@
 
     \node[] at (-4.5,\SY-4) {$S_{near}-S_0=\dfrac{G M_{_S}}{(D_{_S}-R_E) (D_{_S}-R_E)}-S_0\approx 2 S_0\dfrac{R_E}{D_S}=5.1e-7[m/s^2]$};
 
-    \node[] at (-4.5,\SY-5) {$\overrightarrow{S_{mid}}-\overrightarrow{S_0}=\dfrac{G M_{_S}}{(D_{mid}) (D_{mid})}(cos\alpha_S, -sin\alpha_S)-L_0(1,0)\approx S_0(1,-\alpha_S)-S_0(1,0)$};
+    \node[] at (-4.5,\SY-5) {$\overrightarrow{S_{mid}}-\overrightarrow{S_0}=\dfrac{G M_{_S}}{(D_{S_{mid}}) (D_{S_{mid}})}(cos\alpha_S, -sin\alpha_S)-L_0(1,0)\approx S_0(1,-\alpha_S)-S_0(1,0)$};
     \node[] at (-7.5,\SY-6) {$=-S_0\dfrac{R_E}{D_S}\hat{y}$};
 
 %   \node[] at (-4.5,\SY-5) {$S_{mid}\equiv\dfrac{G M_{_S}}{D_{_{mid}} D_{_{mid}}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=6.0e-3\hspace{0.75mm}[m/s^2]$};
