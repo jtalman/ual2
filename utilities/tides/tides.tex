@@ -136,18 +136,21 @@
 
     \node[] at (-1.0,\EY-1.9) {$L_{near}-L_0=\dfrac{G M_{_L}}{(D_{_L}-R_E) (D_{_L}-R_E)}-L_0\approx2 L_0\dfrac{R_E}{D_L}=1.1e-6[m/s^2]$};
 
-    \node[] at (-3.0,\EY-2.9) {$\overrightarrow{L_{mid}}-\overrightarrow{L_0}=\dfrac{G M_{_L}}{(D_{mid}) (D_{mid})}(cos\alpha, -sin\alpha)-L_0(1,0)\approx L_0(1,-sin\alpha)-L_0(1,0)$};
-    \node[] at (-5.7,\EY-3.9) {$\approx L_0(0,-\alpha)=-L_0\dfrac{R_E}{D_L}\hat{y}$};
+    \node[] at (-3.0,\EY-2.9) {$\overrightarrow{L_{mid}}-\overrightarrow{L_0}=\dfrac{G M_{_L}}{(D_{mid}) (D_{mid})}(cos\alpha_L, -sin\alpha_L)-L_0(1,0)\approx L_0(1,-\alpha_L)-L_0(1,0)$};
+    \node[] at (-6.5,\EY-3.9) {$=-L_0\dfrac{R_E}{D_L}\hat{y}$};
 
-    \node[] at (-4.5,\SY-2) {$\dfrac{G m_{_S} m_{_E}}{d_{_S} d_{_{S}}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30\hspace{0.75mm}\cdot\hspace{0.75mm}6.0e24}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=3.6e22\hspace{0.75mm}[kg\hspace{0.75mm}m/s^2]$};
+    \node[] at (-4.5,\SY-2) {$\dfrac{G M_{_S} M_{_E}}{D_{_S} D_{_{S}}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30\hspace{0.75mm}\cdot\hspace{0.75mm}6.0e24}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=3.6e22\hspace{0.75mm}[kg\hspace{0.75mm}m/s^2]$};
 
-    \node[] at (-4.5,\SY-3) {$S_0\equiv\dfrac{G m_{_S}}{d_{_S} d_{_S}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=6.0e-3\hspace{0.75mm}[m/s^2]$};
+    \node[] at (-4.5,\SY-3) {$S_0\equiv\dfrac{G M_{_S}}{D_{_S} D_{_S}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=6.0e-3\hspace{0.75mm}[m/s^2]$};
 
-    \node[] at (-4.5,\SY-4) {$S_{near}-S_0=\dfrac{G m_{_S}}{(d_{_S}-r_E) (d_{_S}-r_E)}-S_0\approx 2 S_0\dfrac{r_E}{d_S}=5.1e-7[m/s^2]$};
+    \node[] at (-4.5,\SY-4) {$S_{near}-S_0=\dfrac{G M_{_S}}{(D_{_S}-R_E) (D_{_S}-R_E)}-S_0\approx 2 S_0\dfrac{R_E}{D_S}=5.1e-7[m/s^2]$};
 
-    \node[] at (-4.5,\SY-5) {$S_{mid}\equiv\dfrac{G m_{_S}}{d_{_{mid}} d_{_{mid}}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=6.0e-3\hspace{0.75mm}[m/s^2]$};
+    \node[] at (-4.5,\SY-5) {$\overrightarrow{S_{mid}}-\overrightarrow{S_0}=\dfrac{G M_{_S}}{(D_{mid}) (D_{mid})}(cos\alpha_S, -sin\alpha_S)-L_0(1,0)\approx S_0(1,-\alpha_S)-S_0(1,0)$};
+    \node[] at (-7.5,\SY-6) {$=-S_0\dfrac{R_E}{D_S}\hat{y}$};
 
-    \node[] at (-7.5,\SY-6) {$S_{mid}-S_0\approx S_0 \dfrac{r_E}{d_S}$};
+%   \node[] at (-4.5,\SY-5) {$S_{mid}\equiv\dfrac{G M_{_S}}{D_{_{mid}} D_{_{mid}}}=\dfrac{6.7e-11\hspace{0.75mm}\cdot\hspace{0.75mm}2.0e30}{1.5e11\hspace{0.75mm}\cdot\hspace{0.75mm}1.5e11}=6.0e-3\hspace{0.75mm}[m/s^2]$};
+
+%   \node[] at (-7.5,\SY-6) {$S_{mid}-S_0\approx S_0 \dfrac{R_E}{D_S}$};
 
 \end{tikzpicture}
 \end{document}
